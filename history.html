@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-CA" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heroes System Tactical Scale historical reference</title>
+<meta name="description" content="Heroes System Tactical Scale historical reference. Short, searchable background on the real units, weapons and vehicles in Heroes of Normandie Big Red One.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="upage hpage">
+<header class="top">
+  <div class="brand">
+    <h1>Heroes System Tactical Scale</h1>
+    <p class="sub" id="subtitle">Historical reference, Heroes of Normandie, Big Red One</p>
+  </div>
+  <div class="top-actions">
+    <a class="btn ghost" href="index.html">Army builder</a>
+    <a class="btn ghost" href="units.html">Unit index</a>
+    <a class="btn ghost" href="rules.html">Rules</a>
+    <button id="btnTheme" class="ghost" type="button" aria-label="Switch light or dark mode">Dark</button>
+  </div>
+</header>
+
+<section class="setup" aria-label="Search">
+  <div class="field">
+    <span class="label">Game box</span>
+    <div id="boxes" class="seg" role="group" aria-label="Game box"></div>
+  </div>
+  <div class="field">
+    <span class="label">Side</span>
+    <div id="sides" class="seg" role="group" aria-label="Side"></div>
+  </div>
+  <div class="field grow">
+    <label class="label" for="q">Search the history</label>
+    <input id="q" type="search" placeholder="Try: Sherman, Omaha, Panzerfaust" autocomplete="off">
+  </div>
+</section>
+<section class="setup filters2" aria-label="Category">
+  <div class="field">
+    <span class="label">Category</span>
+    <div id="cats" class="chips" role="group" aria-label="Category"></div>
+  </div>
+</section>
+<p id="stat" class="ustat" aria-live="polite"></p>
+
+<main id="out" class="umain hmain"></main>
+
+<footer class="foot">
+  <p>Fan-made tool for Heroes of Normandie, Devil Pig Games. These are short summaries of real-world history, written from the linked sources (mostly Wikipedia), which have their own copyright terms. They cover the real units, weapons and vehicles behind the game, not the hero characters. Check the sources before relying on a detail.</p>
+  <p>Corrections and feedback: <a href="mailto:games@staroversky.com">games@staroversky.com</a></p>
+</footer>
+
+<script src="data/hon-bro-history.js"></script>
+<script src="js/history.js"></script>
+</body>
+</html>

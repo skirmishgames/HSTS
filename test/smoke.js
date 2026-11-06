@@ -138,6 +138,42 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await rp.waitForTimeout(300);
   ok(await rp.locator('.empty2').count() === 1, 'rules no-match message');
   ok(rerrs.length === 0, 'rules page: no console errors ' + rerrs.join('|'));
+  // historical reference page
+  const hp = await b.newPage({ viewport: { width: 1100, height: 900 } });
+  const herrs = []; hp.on('pageerror', e => herrs.push(e.message)); hp.on('console', m => { if (m.type() === 'error') herrs.push(m.text()); });
+  const hurl = url.replace('index.html', 'history.html');
+  await hp.goto(hurl);
+  const hn = await hp.locator('.hcard').count();
+  ok(hn >= 50, 'history lists entries (' + hn + ')');
+  await hp.fill('#q', 'sherman');
+  await hp.waitForTimeout(300);
+  ok((await hp.locator('.hcard h3').first().textContent()).includes('Sherman'), 'history search ranks Sherman first');
+  ok(await hp.locator('.hcard mark').count() >= 1, 'history matches highlighted');
+  await hp.fill('#q', 'omaha');
+  await hp.waitForTimeout(300);
+  ok(await hp.locator('.hcard').count() >= 5, 'history search omaha');
+  await hp.fill('#q', 'mauser');
+  await hp.waitForTimeout(300);
+  ok(await hp.locator('.hcard').count() >= 1, 'history alias search (Mauser)');
+  await hp.fill('#q', '');
+  await hp.click('[data-side="ge"]');
+  ok(await hp.locator('.hb-us').count() === 0, 'German filter hides American entries');
+  await hp.click('[data-cat="Aircraft"]');
+  ok(await hp.locator('.hcard').count() === 2, 'German aircraft filter gives 2');
+  await hp.fill('#q', 'zzzzqq');
+  await hp.waitForTimeout(300);
+  ok(await hp.locator('.empty2').count() === 1, 'history no-match message');
+  ok(herrs.length === 0, 'history page: no console errors ' + herrs.join('|'));
+  // every "Find in the game" link returns at least one tile
+  const data = JSON.parse(await hp.evaluate(() => JSON.stringify(window.HTS_HISTORY['hon-bro'].entries.filter(e => e.find).map(e => [e.id, e.find.n, e.find.q]))));
+  const bad = [];
+  const lp = await b.newPage({ viewport: { width: 1280, height: 900 } });
+  for (const [id, n, q] of data) {
+    await lp.goto(url.replace('index.html', 'units.html') + '?n=' + n + '&q=' + encodeURIComponent(q));
+    await lp.waitForTimeout(150);
+    if (await lp.locator('.ucard').count() < 1) bad.push(id + ':' + q);
+  }
+  ok(bad.length === 0, 'history find links all return tiles ' + bad.join(','));
   await rp.close();
   // images load
   const broken = await pg.evaluate(() => Array.from(document.images).filter(i => i.getAttribute('src') && i.complete && i.naturalWidth === 0).length);
