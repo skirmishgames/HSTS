@@ -4,7 +4,7 @@
   var BOXES = [{ id: 'bro', name: 'Big Red One' }];
   var SIDES = [{ id: 'all', name: 'Both' }, { id: 'us', name: 'American' }, { id: 'ge', name: 'German' }];
   var SIDE_NAME = { us: 'American', ge: 'German', both: 'Both sides' };
-  var S = { b: 'bro', q: '', side: 'all', cat: 'all', theme: 'light' };
+  var S = { b: 'bro', q: '', side: 'all', cat: 'all', open: {}, theme: 'light' };
   var cache = {};
 
   function $(id) { return document.getElementById(id); }
@@ -49,13 +49,25 @@
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
   }
 
-  function card(e, mk) {
+  function body(e) {
     var find = e.find ? '<a class="btn ghost hfind" href="units.html?n=' + e.find.n + '&q=' + encodeURIComponent(e.find.q) + '">Find in the game</a>' : '';
-    return '<article class="hcard" id="h-' + esc(e.id) + '"><header><h3>' + mk(e.name) + '</h3>' +
-      '<span class="hbadges"><span class="hb hb-' + e.side + '">' + SIDE_NAME[e.side] + '</span><span class="hb">' + esc(e.cat) + '</span></span></header>' +
-      '<p class="htext">' + mk(e.text) + '</p>' +
-      '<ul class="hfacts">' + e.facts.map(function (f) { return '<li>' + mk(f) + '</li>'; }).join('') + '</ul>' +
-      '<footer>' + find + '<a class="hsrc" href="' + esc(e.src[1]) + '" target="_blank" rel="noopener">Source: ' + esc(e.src[0]) + '</a></footer></article>';
+    return '<p class="htext">' + esc(e.text) + '</p>' +
+      '<ul class="hfacts">' + e.facts.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>' +
+      '<div class="hfoot">' + find + '<a class="hsrc" href="' + esc(e.src[1]) + '" target="_blank" rel="noopener">Source: ' + esc(e.src[0]) + '</a></div>';
+  }
+  function row(e, mk, toks) {
+    var isOpen = S.open[e.id] === 1, snip = '';
+    if (toks.length && !toks.every(function (t) { return hit(e.head, ' ' + e.head + ' ', t); })) {
+      var t = (e.text + ' ' + e.facts.join(' ')), low = t.toLowerCase(), at = -1;
+      toks.forEach(function (k) { var i = low.indexOf(k); if (i >= 0 && (at < 0 || i < at)) at = i; });
+      if (at >= 0) { var a = Math.max(0, at - 50); snip = '<span class="hsnip">' + (a > 0 ? '... ' : '') + mk(t.slice(a, a + 120)) + ' ...</span>'; }
+    }
+    return '<div class="hrow' + (isOpen ? ' open' : '') + '" id="h-' + esc(e.id) + '">' +
+      '<button type="button" class="hhead" data-toggle="' + esc(e.id) + '" aria-expanded="' + isOpen + '" aria-controls="hb-' + esc(e.id) + '">' +
+      '<span class="hname">' + mk(e.name) + snip + '</span>' +
+      '<span class="hbadges"><span class="hb hb-' + e.side + '">' + SIDE_NAME[e.side] + '</span><span class="hb hcat">' + esc(e.cat) + '</span></span>' +
+      '<span class="hchev" aria-hidden="true"></span></button>' +
+      '<div class="hbody" id="hb-' + esc(e.id) + '"' + (isOpen ? '' : ' hidden') + '>' + (isOpen ? body(e) : '') + '</div></div>';
   }
 
   function render() {
@@ -78,10 +90,28 @@
     if (!res.length) {
       $('out').innerHTML = '<p class="empty2">Nothing matches. Try fewer or simpler words, or clear a filter.</p>';
       $('stat').textContent = '0 entries.';
+    } else if (toks.length) {
+      $('out').innerHTML = '<div class="hlist">' + res.map(function (x) { return row(x.e, mk, toks); }).join('') + '</div>';
+      $('stat').textContent = res.length + ' of ' + d.entries.length + ' entries. Click one to read it.';
     } else {
-      $('out').innerHTML = '<div class="hgrid">' + res.map(function (x) { return card(x.e, mk); }).join('') + '</div>';
-      $('stat').textContent = res.length + ' of ' + d.entries.length + ' entries.';
+      $('out').innerHTML = d.cats.map(function (c) {
+        var inCat = res.filter(function (x) { return x.e.cat === c; });
+        if (!inCat.length) return '';
+        return '<section class="hgroup"><h2>' + esc(c) + ' <small>' + inCat.length + '</small></h2><div class="hlist">' + inCat.map(function (x) { return row(x.e, mk, toks); }).join('') + '</div></section>';
+      }).join('');
+      $('stat').textContent = res.length + ' of ' + d.entries.length + ' entries. Click one to read it.';
     }
+    url();
+  }
+
+  function toggle(id) {
+    var d = load(), e = d.entries.filter(function (x) { return x.id === id; })[0], r = $('h-' + id);
+    if (!e || !r) return;
+    var open = S.open[id] !== 1;
+    if (open) S.open[id] = 1; else delete S.open[id];
+    var b = r.querySelector('.hbody'), h = r.querySelector('.hhead');
+    if (open && !b.firstChild) b.innerHTML = body(e);
+    b.hidden = !open; h.setAttribute('aria-expanded', String(open)); r.classList.toggle('open', open);
     url();
   }
 
@@ -89,6 +119,7 @@
     try {
       var p = new URLSearchParams(); p.set('b', S.b);
       if (S.q) p.set('q', S.q); if (S.side !== 'all') p.set('n', S.side); if (S.cat !== 'all') p.set('c', S.cat);
+      var o = Object.keys(S.open); if (o.length) p.set('e', o.join(','));
       history.replaceState(null, '', location.pathname + '?' + p.toString());
     } catch (e) { /* ignore */ }
   }
@@ -98,7 +129,8 @@
       var t = ev.target, el;
       if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; render(); return; }
       if ((el = t.closest('[data-side]'))) { S.side = el.dataset.side; render(); return; }
-      if ((el = t.closest('[data-cat]'))) { S.cat = el.dataset.cat; render(); }
+      if ((el = t.closest('[data-cat]'))) { S.cat = el.dataset.cat; render(); return; }
+      if ((el = t.closest('[data-toggle]'))) toggle(el.dataset.toggle);
     });
     var timer;
     $('q').oninput = function () {
@@ -120,7 +152,9 @@
     if (p.get('n') === 'us' || p.get('n') === 'ge') S.side = p.get('n');
     var d = load();
     if (p.get('c') && d.cats.indexOf(p.get('c')) >= 0) S.cat = p.get('c');
+    if (p.get('e')) p.get('e').split(',').forEach(function (id) { if (/^[a-z0-9]+$/.test(id)) S.open[id] = 1; });
     bind(); render();
+    var first = Object.keys(S.open)[0]; if (first && $('h-' + first)) $('h-' + first).scrollIntoView({ block: 'center' });
   }
   init();
   window.HTS_HISTORY_UI = { state: S, load: load };
