@@ -103,6 +103,28 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(ub === 0, 'unit index: no broken images');
   ok(uerrs.length === 0, 'unit index: no console errors ' + uerrs.join('|'));
   await up.close();
+  // rules search page
+  const rp = await b.newPage({ viewport: { width: 1100, height: 900 } });
+  const rerrs = []; rp.on('pageerror', e => rerrs.push(e.message)); rp.on('console', m => { if (m.type() === 'error') rerrs.push(m.text()); });
+  await rp.goto(url.replace('index.html', 'rules.html'));
+  ok(await rp.locator('.rlink').count() > 30, 'rules contents list sections');
+  await rp.fill('#q', 'suppressed marker');
+  await rp.waitForTimeout(300);
+  ok(await rp.locator('.rcard').count() >= 3, 'rules search finds suppressed marker');
+  ok(await rp.locator('.rcard mark').count() >= 1, 'rules matches are highlighted');
+  await rp.fill('#q', 'opportunity fire');
+  await rp.waitForTimeout(300);
+  ok((await rp.locator('.rcard').first().textContent()).toLowerCase().includes('opportunity'), 'rules search finds opportunity fire');
+  await rp.locator('.rtitle').first().click();
+  ok(await rp.locator('.rsec .rchunk').count() >= 1, 'rules result opens the section');
+  await rp.click('[data-back]');
+  await rp.click('[data-ch="3"]');
+  ok(await rp.locator('.rcard').count() >= 1, 'chapter filter keeps matches');
+  await rp.fill('#q', 'zzzzqq');
+  await rp.waitForTimeout(300);
+  ok(await rp.locator('.empty2').count() === 1, 'rules no-match message');
+  ok(rerrs.length === 0, 'rules page: no console errors ' + rerrs.join('|'));
+  await rp.close();
   // images load
   const broken = await pg.evaluate(() => Array.from(document.images).filter(i => i.getAttribute('src') && i.complete && i.naturalWidth === 0).length);
   ok(broken === 0, 'no broken images');

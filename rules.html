@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-CA" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heroes System Tactical Scale rules search</title>
+<meta name="description" content="Heroes System Tactical Scale rules search. Search the Heroes of Normandie Big Red One rulebook by word, rule, special ability or keyword.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="upage rpage">
+<header class="top">
+  <div class="brand">
+    <h1>Heroes System Tactical Scale</h1>
+    <p class="sub" id="subtitle">Rules search, Heroes of Normandie, Big Red One</p>
+  </div>
+  <div class="top-actions">
+    <a class="btn ghost" href="index.html">Army builder</a>
+    <a class="btn ghost" href="units.html">Unit index</a>
+    <button id="btnTheme" class="ghost" type="button" aria-label="Switch light or dark mode">Dark</button>
+  </div>
+</header>
+
+<section class="setup" aria-label="Search">
+  <div class="field">
+    <span class="label">Game box</span>
+    <div id="boxes" class="seg" role="group" aria-label="Game box"></div>
+  </div>
+  <div class="field grow">
+    <label class="label" for="q">Search the rules</label>
+    <input id="q" type="search" placeholder="Try: suppressed marker, opportunity fire, bluff, line of sight" autocomplete="off">
+  </div>
+</section>
+<section class="setup filters2" aria-label="Chapter">
+  <div class="field">
+    <span class="label">Chapter</span>
+    <div id="chapters" class="chips" role="group" aria-label="Chapter"></div>
+  </div>
+</section>
+<p id="stat" class="ustat" aria-live="polite"></p>
+
+<main id="out" class="umain rmain"></main>
+
+<footer class="foot">
+  <p>Fan-made tool for Heroes of Normandie, Devil Pig Games. Rules text comes from Rulebook V4.1 (Big Red One), copyright Devil Pig Games. It was extracted by machine, so check the printed rulebook for exact wording and diagrams.</p>
+  <p>Corrections and feedback: <a href="mailto:games@staroversky.com">games@staroversky.com</a></p>
+</footer>
+
+<script src="data/hon-bro-rules.js"></script>
+<script src="js/rules.js"></script>
+</body>
+</html>

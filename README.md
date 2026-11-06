@@ -12,6 +12,7 @@ You need the rulebook to play. This project is not affiliated with or endorsed b
 - **Roster summary.** Costs per tile and option, plus the breaking points shown as red squares.
 - **Included units as text.** Every tile and every support option lists the units it brings (for example Bazooka Squad: Support Team, Gunners, Bazooka). The roster ends with a tally of all units in the army.
 - **Unit index.** `units.html` is a separate searchable page. Search "Rifle Platoon 1st Inf. Div. 16th Inf. Reg. A" and it shows that platoon with every unit on the tile and in each option that comes with it. A second view lists every unit and where it comes from. Every tile in the builder links to it.
+- **Rules search.** `rules.html` searches the Big Red One rulebook (V4.1) by word. Results show the section, sub-heading and page, with matches highlighted. Open any result to read the whole section, or browse the contents. The keyword glossary is included.
 - **Save, share, print.** Save armies on your device, copy a link, export or import a file, print a roster sheet.
 
 Content so far: Big Red One, United States and Germany, 33 Recruitment Tiles and 127 options across the core box and the extra sets listed on the tile sheets.
@@ -29,7 +30,10 @@ img/hon/bro/us/tiles/ one image per Recruitment Tile
 img/hon/bro/us/options/
 js/app.js             the builder
 js/units.js           the unit index page
+js/rules.js           the rules search page
+data/hon-bro-rules.js the rulebook text by section and page
 units.html
+rules.html
 css/style.css
 test/smoke.js         Playwright smoke test
 ```
