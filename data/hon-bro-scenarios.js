@@ -112,7 +112,43 @@ window.HTS_SCEN["hon-bro"] = {
 "Tips",
 "Heavy vehicles can block access to the objective. The game can end very fast if a player stops paying attention."
 ]
+],
+"armies": {
+"us": {
+"limit": 175,
+"printed": 175,
+"tiles": [
+[
+"rifle_platoon_1id_18c",
+[
+"bazooka_squad_18c",
+null,
+null,
+"m5_stuart"
 ]
+]
+],
+"note": "",
+"pts": 175
+},
+"ge": {
+"limit": 175,
+"printed": 175,
+"tiles": [
+[
+"panzergrenadiere_2",
+[
+"panzerschreck_group_2",
+null,
+null,
+"luchs"
+]
+]
+],
+"note": "",
+"pts": 170
+}
+}
 },
 {
 "id": "chicken",
@@ -151,7 +187,59 @@ window.HTS_SCEN["hon-bro"] = {
 "Victory levels",
 "Minor: exit 1 more halftrack than your opponent. Major: exit 2 more. Equal numbers is a draw."
 ]
+],
+"armies": {
+"us": {
+"limit": 185,
+"printed": 185,
+"tiles": [
+[
+"field_command_taylor",
+[
+null,
+null,
+"veteran"
 ]
+],
+[
+"rifle_platoon_1id_18c",
+[
+null,
+null,
+"rifle_grenade",
+"mechanised_m3a1"
+]
+]
+],
+"note": "",
+"pts": 185
+},
+"ge": {
+"limit": 190,
+"printed": 190,
+"tiles": [
+[
+"feldkommando_brassert",
+[
+null,
+"zundapp",
+null
+]
+],
+[
+"panzergrenadiere_2",
+[
+null,
+null,
+"grenade",
+"mech_sdkfz251"
+]
+]
+],
+"note": "",
+"pts": 190
+}
+}
 },
 {
 "id": "night",
@@ -194,7 +282,63 @@ window.HTS_SCEN["hon-bro"] = {
 "Campaign",
 "The German places 3 secondary objectives, one of them American. Finding the American one earns the Silver Star, and eliminating Blean earns the Eisernes Kreuz."
 ]
+],
+"armies": {
+"us": {
+"limit": 235,
+"printed": 235,
+"tiles": [
+[
+"rifle_platoon_1id_16a",
+[
+"cal30_squad_16a",
+"grenade",
+"at_gun_57mm",
+null
 ]
+],
+[
+"oddball",
+[
+"overwatch"
+]
+]
+],
+"note": "",
+"pts": 235
+},
+"ge": {
+"limit": 325,
+"printed": 325,
+"tiles": [
+[
+"feldkommando_brassert",
+[
+"panzer_iv",
+"concealed",
+"planning"
+]
+],
+[
+"panzergrenadiere_1",
+[
+"pzgren_squad_1",
+"grenade",
+"panzerfaust",
+"assault_group"
+]
+],
+[
+"ludwig",
+[
+null
+]
+]
+],
+"note": "",
+"pts": 325
+}
+}
 },
 {
 "id": "caumont",
@@ -229,7 +373,78 @@ window.HTS_SCEN["hon-bro"] = {
 "How to win",
 "The American player must make as much progress as possible in the first round. At the end of turn 5, headquarters gives a new order based on how far the American infantry has advanced: finish clearing the area (Major American victory), push on with a second 5-turn round, fall back, or flee (Major German victory)."
 ]
+],
+"armies": {
+"us": {
+"limit": 360,
+"printed": 360,
+"tiles": [
+[
+"field_command_taylor",
+[
+"m5_stuart",
+"improvisation",
+"veteran"
 ]
+],
+[
+"rifle_platoon_1id_16a",
+[
+"rifle_squad_16a",
+"grenade",
+null,
+null
+]
+],
+[
+"oddball",
+[
+"hedgerow_cutter"
+]
+],
+[
+"the_rock",
+[
+"ammo"
+]
+]
+],
+"note": "",
+"pts": 360
+},
+"ge": {
+"limit": 255,
+"printed": 255,
+"tiles": [
+[
+"panzergrenadiere_1",
+[
+null,
+"grenade",
+"pak40",
+null
+]
+],
+[
+"panzergrenadiere_1",
+[
+null,
+"puma",
+"flak38",
+null
+]
+],
+[
+"helmut",
+[
+"ammo"
+]
+]
+],
+"note": "",
+"pts": 255
+}
+}
 },
 {
 "id": "quesnay",
@@ -268,7 +483,72 @@ window.HTS_SCEN["hon-bro"] = {
 "Victory levels",
 "Minor: 1 more objective than the opponent. Normal: 2 more. Major: all 3."
 ]
+],
+"armies": {
+"us": {
+"limit": 340,
+"printed": 340,
+"tiles": [
+[
+"rifle_platoon_1id_16a",
+[
+"bazooka_squad_16a",
+"grenade",
+"at_gun_57mm",
+null
 ]
+],
+[
+"clint",
+[
+"bazooka_c"
+]
+],
+[
+"rifle_platoon_1id_18c",
+[
+null,
+null,
+"ammo",
+"m4_sherman"
+]
+]
+],
+"note": "Group 1: Rifle Platoon 16th Regiment A and Clint. Group 2: Rifle Platoon 18th Regiment C.",
+"pts": 340
+},
+"ge": {
+"limit": 340,
+"printed": 340,
+"tiles": [
+[
+"feldkommando_brassert",
+[
+null,
+"panzerfaust_c",
+"bluff"
+]
+],
+[
+"panzergrenadiere_2",
+[
+"pzgren_squad_2",
+"puma",
+"grenade",
+"mech_sdkfz251"
+]
+],
+[
+"otto",
+[
+null
+]
+]
+],
+"note": "The booklet picture shows the American Bluff card (10 points) on the German Feldkommando. This link uses the German Bluff card, which costs 5.",
+"pts": 335
+}
+}
 },
 {
 "id": "surrounded",
@@ -307,7 +587,87 @@ window.HTS_SCEN["hon-bro"] = {
 "Campaign",
 "The German can take the Radio marker and use it to place an explosion template anywhere on the battlefield. The winner takes 3 Traction Mats markers into the next scenario, and controlling both secondary objectives earns the Silver Star or Eisernes Kreuz."
 ]
+],
+"armies": {
+"us": {
+"limit": 450,
+"printed": 450,
+"tiles": [
+[
+"rifle_platoon_1id_16a",
+[
+"cal30_squad_16a",
+"grenade",
+"mortar_60mm",
+null
 ]
+],
+[
+"rifle_platoon_1id_18c",
+[
+"rifle_squad_18c",
+"m8_greyhound",
+"ammo",
+"mechanised_m3a1"
+]
+],
+[
+"clint",
+[
+"willys_50cal"
+]
+],
+[
+"the_rock",
+[
+null
+]
+]
+],
+"note": "Group 1: Rifle Platoon 16th Regiment A. Group 2: Rifle Platoon 18th Regiment C, Clint and The Rock.",
+"pts": 450
+},
+"ge": {
+"limit": 450,
+"printed": 450,
+"tiles": [
+[
+"feldkommando_brassert",
+[
+null,
+"mp40",
+"ammo"
+]
+],
+[
+"panzergrenadiere_2",
+[
+"pzgren_squad_2",
+"flak38",
+"grenade",
+"panzerschreck_group_2"
+]
+],
+[
+"panzergrenadiere_1",
+[
+"pzgren_squad_1",
+null,
+null,
+"assault_group"
+]
+],
+[
+"ludwig",
+[
+"overwatch"
+]
+]
+],
+"note": "",
+"pts": 440
+}
+}
 },
 {
 "id": "windy",
@@ -346,7 +706,101 @@ window.HTS_SCEN["hon-bro"] = {
 "Special rules",
 "\"In deeps\": a vehicle that starts a move on open ground (not terrain or road) rolls a die for how many squares it can cover and gets a Skidding marker. A second marker makes it Stuck, and it can no longer move. The previous scenario's winner can spend a Traction Mats marker to ignore it."
 ]
+],
+"armies": {
+"us": {
+"limit": 455,
+"printed": 455,
+"tiles": [
+[
+"field_command_taylor",
+[
+null,
+null,
+"sticky_bomb"
 ]
+],
+[
+"rifle_platoon_1id_16a",
+[
+"bazooka_squad_16a",
+"at_gun_57mm",
+"grenade",
+"m4_sherman"
+]
+],
+[
+"rifle_platoon_1id_18c",
+[
+null,
+null,
+"ammo",
+null
+]
+],
+[
+"oddball",
+[
+null
+]
+],
+[
+"clint",
+[
+"bazooka_c"
+]
+]
+],
+"note": "",
+"pts": 455
+},
+"ge": {
+"limit": 455,
+"printed": 455,
+"tiles": [
+[
+"feldkommando_brassert",
+[
+null,
+"planning",
+"panzerfaust"
+]
+],
+[
+"panzergrenadiere_2",
+[
+"panzerschreck_group_2",
+null,
+"grenade",
+"panzer_iv"
+]
+],
+[
+"panzergrenadiere_1",
+[
+null,
+"pak40",
+"ammo",
+null
+]
+],
+[
+"otto",
+[
+null
+]
+],
+[
+"helmut",
+[
+"overwatch"
+]
+]
+],
+"note": "",
+"pts": 455
+}
+}
 },
 {
 "id": "pass",
@@ -385,7 +839,107 @@ window.HTS_SCEN["hon-bro"] = {
 "Campaign",
 "Controlling the primary objective at the end of the game earns the American the Silver Star."
 ]
+],
+"armies": {
+"us": {
+"limit": 600,
+"printed": 600,
+"tiles": [
+[
+"field_command_taylor",
+[
+"m5_stuart",
+"mortar_81mm",
+"veteran"
 ]
+],
+[
+"rifle_platoon_1id_16a",
+[
+"cal30_squad_16a",
+"grenade",
+"at_gun_57mm",
+"bazooka_squad_16a"
+]
+],
+[
+"rifle_platoon_1id_18c",
+[
+"rifle_squad_18c",
+"ammo",
+"rifle_grenade",
+"bazooka_squad_18c"
+]
+],
+[
+"clint",
+[
+"sticky_bomb"
+]
+],
+[
+"the_rock",
+[
+"overwatch"
+]
+]
+],
+"note": "",
+"pts": 600
+},
+"ge": {
+"limit": 675,
+"printed": 675,
+"tiles": [
+[
+"feldkommando_brassert",
+[
+"luchs",
+"concealed",
+"veteran"
+]
+],
+[
+"panzergrenadiere_2",
+[
+"pzgren_squad_2",
+"schwimmwagen",
+"grenade",
+"mech_sdkfz251"
+]
+],
+[
+"panzergrenadiere_1",
+[
+"assault_group",
+"puma",
+"ammo",
+"panzer_iv"
+]
+],
+[
+"ludwig",
+[
+"mp40"
+]
+],
+[
+"helmut",
+[
+"mp40"
+]
+],
+[
+"otto",
+[
+"mp40"
+]
+]
+],
+"note": "",
+"pts": 665
+}
+}
 },
 {
 "id": "tracker",

@@ -194,6 +194,28 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await sp.waitForTimeout(300);
   ok(await sp.locator('.empty2').count() === 1, 'scenarios no-match message');
   ok(serrs.length === 0, 'scenarios page: no console errors ' + serrs.join('|'));
+  // scenario armies open in the builder with the right points and no slot warnings
+  const armyInfo = JSON.parse(await sp.evaluate(() => JSON.stringify(window.HTS_SCEN['hon-bro'].entries.filter(e => e.armies).map(e => [e.id, e.armies]))));
+  ok(armyInfo.length === 8, 'eight scenarios carry armies');
+  await sp.fill('#q', ''); await sp.click('[data-type="all"]');
+  await sp.locator('.hhead', { hasText: 'Surrounded' }).click();
+  const hrefs = await sp.locator('#s-surrounded [data-army]').evaluateAll(a => a.map(x => x.getAttribute('href')));
+  ok(hrefs.length === 2 && hrefs.every(h => h.startsWith('index.html#b=')), 'open row shows American and German builder links');
+  const ap = await b.newPage({ viewport: { width: 1280, height: 900 } });
+  const aerrs = []; ap.on('pageerror', e => aerrs.push(e.message));
+  for (const [id, ar] of armyInfo) {
+    for (const side of ['us', 'ge']) {
+      const a = ar[side];
+      const j = { n: side, l: a.limit, nm: id, a: a.tiles };
+      const h = Buffer.from(JSON.stringify(j)).toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+      await ap.goto(url + '#b=' + h);
+      await ap.reload();
+      const used = await ap.textContent('#ptsUsed');
+      ok(Number(used) === a.pts, id + ' ' + side + ' loads ' + a.pts + ' points (got ' + used + ')');
+      ok(await ap.locator('.warnings p:not(.bad)').count() === 0, id + ' ' + side + ' has no slot warnings');
+    }
+  }
+  ok(aerrs.length === 0, 'builder: no errors loading scenario armies ' + aerrs.join('|'));
   // every "Find in the game" link returns at least one tile
   const data = JSON.parse(await hp.evaluate(() => JSON.stringify(window.HTS_HISTORY['hon-bro'].entries.filter(e => e.find).map(e => [e.id, e.find.n, e.find.q]))));
   const bad = [];
@@ -205,6 +227,53 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   }
   ok(bad.length === 0, 'history find links all return tiles ' + bad.join(','));
   await rp.close();
+  // tokens page
+  const base = url.replace('index.html', '');
+  const tp = await b.newPage({ viewport: { width: 1100, height: 900 } });
+  const terrs = []; tp.on('pageerror', e => terrs.push(e.message)); tp.on('console', m => { if (m.type() === 'error') terrs.push(m.text()); });
+  await tp.goto(base + 'tokens.html');
+  ok(await tp.locator('.hrow').count() === 11, 'tokens page lists 11 entries');
+  ok(await tp.locator('.hbody p').count() === 0, 'token text not loaded until opened');
+  await tp.locator('.hhead', { hasText: 'Vehicle damage' }).click();
+  ok(await tp.locator('.hrow.open .tface').count() === 5, 'vehicle damage shows 5 marker faces');
+  await tp.fill('#q', 'suppressed'); await tp.waitForTimeout(300);
+  ok((await tp.locator('.hname').first().textContent()).includes('Suppressed'), 'token search finds Suppressed first');
+  await tp.fill('#q', ''); await tp.click('[data-group="Turn chart"]');
+  ok(await tp.locator('.hrow').count() === 4, 'turn chart group has 4 entries');
+  await tp.fill('#q', 'zzzzqq'); await tp.waitForTimeout(300);
+  ok(await tp.locator('.empty2').count() === 1, 'tokens no-match message');
+  const tlinks = JSON.parse(await tp.evaluate(() => JSON.stringify(window.HTS_TOKENS['hon-bro'].entries.reduce((a, e) => a.concat(e.links.map(l => l.href)), []))));
+  const badL = [];
+  for (const h of Array.from(new Set(tlinks))) {
+    if (!h.startsWith('rules.html')) continue;
+    await lp.goto(base + h); await lp.waitForTimeout(250);
+    if (await lp.locator('.rrow, .result, .rcard').count() < 1) badL.push(h);
+  }
+  ok(badL.length === 0, 'token rules links return results ' + badL.join(','));
+  ok(terrs.length === 0, 'tokens page: no console errors ' + terrs.join('|'));
+  const broken2 = await tp.evaluate(async () => { await new Promise(r => setTimeout(r, 400)); return Array.from(document.images).filter(i => i.complete && i.naturalWidth === 0).length; });
+  ok(broken2 === 0, 'tokens page: no broken images');
+  // heroes page
+  const hrp = await b.newPage({ viewport: { width: 1100, height: 900 } });
+  const hrerrs = []; hrp.on('pageerror', e => hrerrs.push(e.message)); hrp.on('console', m => { if (m.type() === 'error') hrerrs.push(m.text()); });
+  await hrp.goto(base + 'heroes.html');
+  ok(await hrp.locator('.hrow').count() === 8, 'US heroes page lists 8 hero tiles');
+  ok(await hrp.locator('.eqcard').count() === 7, 'equipment shows 7 cards');
+  await hrp.click('[data-nation="ge"]');
+  ok(await hrp.locator('.hrow').count() === 4, 'German heroes page lists 4 hero tiles');
+  await hrp.locator('.hhead', { hasText: 'Ludwig' }).click();
+  ok(await hrp.locator('.hrow.open .tchip', { hasText: 'Overwatch' }).count() === 1, 'Ludwig can take Overwatch');
+  ok(await hrp.locator('.hrow.open .htile').count() === 1, 'hero tile image shown');
+  await hrp.click('[data-nation="us"]');
+  await hrp.locator('.hhead', { hasText: 'Oddball' }).click();
+  ok(await hrp.locator('.hrow.open .tchip', { hasText: 'Culin' }).count() === 1, 'Oddball can take the Culin Hedgerow Cutter (scenario booklet)');
+  await hrp.fill('#q', 'knife'); await hrp.waitForTimeout(300);
+  ok(await hrp.locator('.eqcard').count() === 1 && await hrp.locator('.hrow').count() === 0, 'heroes search narrows equipment and heroes');
+  ok(hrerrs.length === 0, 'heroes page: no console errors ' + hrerrs.join('|'));
+  const hlinks2 = ['rules.html?q=' + encodeURIComponent('heroes characters'), 'rules.html?q=flamethrower', 'rules.html?q=opportunity'];
+  const badH = [];
+  for (const h of hlinks2) { await lp.goto(base + h); await lp.waitForTimeout(250); if (await lp.locator('.rrow, .result, .rcard').count() < 1) badH.push(h); }
+  ok(badH.length === 0, 'heroes rules links return results ' + badH.join(','));
   // images load
   const broken = await pg.evaluate(() => Array.from(document.images).filter(i => i.getAttribute('src') && i.complete && i.naturalWidth === 0).length);
   ok(broken === 0, 'no broken images');

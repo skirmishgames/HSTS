@@ -28,7 +28,7 @@
     var d = window.HTS_SCEN['hon-' + S.b];
     d.entries.forEach(function (e) {
       e.head = norm(e.title);
-      e.hay = norm(e.title + ' ' + e.type + ' ' + e.date + ' page ' + e.pages + ' ' + e.summary + ' ' + e.facts.map(function (f) { return f[0] + ' ' + f[1]; }).join(' '));
+      e.hay = norm((e.armies ? 'army builder armies ' : '') + e.title + ' ' + e.type + ' ' + e.date + ' page ' + e.pages + ' ' + e.summary + ' ' + e.facts.map(function (f) { return f[0] + ' ' + f[1]; }).join(' '));
     });
     cache[S.b] = d;
     return d;
@@ -46,9 +46,26 @@
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
   }
 
+  function encode(j) { return btoa(unescape(encodeURIComponent(JSON.stringify(j)))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); }
+  var SIDE = { us: ['us', 'American', '1st Infantry Division'], ge: ['ge', 'German', '2. Panzer Division'] };
+  function armyHref(e, side) {
+    var a = e.armies[side];
+    return 'index.html#b=' + encode({ n: side, l: a.limit, nm: e.title + ', ' + SIDE[side][1], a: a.tiles });
+  }
+  function armies(e) {
+    if (!e.armies) return '';
+    return '<div class="sarmy"><h4>Open the armies in the builder</h4>' +
+      ['us', 'ge'].filter(function (k) { return e.armies[k]; }).map(function (k) {
+        var a = e.armies[k];
+        return '<p class="sarow"><a class="btn" href="' + esc(armyHref(e, k)) + '" data-army="' + k + '">' + SIDE[k][1] + ' army</a>' +
+          '<span class="sameta">' + SIDE[k][2] + ', ' + a.pts + ' of ' + a.limit + ' points, ' + a.tiles.length + ' tile' + (a.tiles.length === 1 ? '' : 's') + '</span>' +
+          (a.note ? '<span class="sanote">' + esc(a.note) + '</span>' : '') + '</p>';
+      }).join('') +
+      '<p class="hsrc">This replaces the army now in the builder. Save yours first if you want to keep it. Armies follow the recruitment pictures in the booklet.</p></div>';
+  }
   function body(e) {
     return '<p class="htext">' + esc(e.summary) + '</p>' +
-      '<dl class="sfacts">' + e.facts.map(function (f) { return '<dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd>'; }).join('') + '</dl>' +
+      '<dl class="sfacts">' + e.facts.map(function (f) { return '<dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd>'; }).join('') + '</dl>' + armies(e) +
       '<p class="hsrc">Scenario Booklet, ' + esc(pg(e)) + '</p>';
   }
   function row(e, mk, toks) {

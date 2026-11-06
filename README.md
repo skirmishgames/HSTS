@@ -15,6 +15,9 @@ You need the rulebook to play. This project is not affiliated with or endorsed b
 - **Rules search.** `rules.html` searches the Big Red One rulebook (V4.1) by word. Results show the section, sub-heading and page, with matches highlighted. Open any result to read the whole section, or browse the contents. The keyword glossary is included.
 - **Historical reference.** `history.html` has 65 short, searchable entries on the real formations, weapons, vehicles, aircraft and defences behind the Big Red One units. Entries are a collapsed index: click one to read it. Filter by side and category, and jump to the matching tiles in the unit index. Each entry links to its source. Data lives in `data/hon-bro-history.js`.
 - **Scenarios index.** `scenarios.html` lists every scenario in the Big Red One Scenario Booklet (V2.4) with its booklet page number, a summary and the key facts: date, armies and points, setup, length, how to win and special rules. It also lists the booklet's rules chapters with page numbers. Entries are a collapsed index you click to read. Data lives in `data/hon-bro-scenarios.js`.
+- **Scenario armies.** Eight scenarios (Plain Carnage, Chicken Game, A Rough Night, Caumont-l'Éventé, Le Quesnay, Surrounded!, Windy at Sept-Vents! and We Shall Pass!) have "Open the armies in the builder" buttons, one per side. Armies follow the booklet recruitment pictures. Twelve of the sixteen match the booklet points exactly. The four German armies in Plain Carnage, Le Quesnay, Surrounded! and We Shall Pass! come out 5 to 10 points under the printed figure. Armies are stored in `data/hon-bro-scenarios.js` as tile ids and one option id per slot.
+- **Tokens and markers.** `tokens.html` shows the scans of the objective, tactical bonus, turn chart, event, suppressed, vehicle damage, destruction and flamethrower markers with what each does, linked to the rules search. Data lives in `data/hon-bro-tokens.js`.
+- **Heroes and equipment.** `heroes.html` lists every hero tile for both sides, the units on it, and every option that fits its slot, worked out with the same rule as the builder. It also shows the weapon cards and markers (Bazooka, Panzerfaust, Knife, MP40, Thompson, Flamer, Overwatch). Data lives in `data/hon-bro-heroes.js`.
 - **Save, share, print.** Save armies on your device, copy a link, export or import a file, print a roster sheet.
 
 Content so far: Big Red One, United States and Germany, 33 Recruitment Tiles and 127 options across the core box and the extra sets listed on the tile sheets.
@@ -35,6 +38,10 @@ js/units.js           the unit index page
 js/rules.js           the rules search page
 js/history.js         the historical reference page
 js/scenarios.js       the scenarios index page
+js/tokens.js          the tokens and markers page
+js/heroes.js          the heroes and equipment page
+data/hon-bro-tokens.js the marker entries
+data/hon-bro-heroes.js the equipment cards
 data/hon-bro-scenarios.js the scenario summaries
 data/hon-bro-history.js the historical entries
 data/hon-bro-rules.js the rulebook text by section and page
@@ -42,6 +49,8 @@ units.html
 rules.html
 history.html
 scenarios.html
+tokens.html
+heroes.html
 css/style.css
 test/smoke.js         Playwright smoke test
 ```
@@ -52,7 +61,7 @@ An option has a `size`, `stripes` and a `cat` (support, gear, trait, order, cust
 
 Stripe codes: R red, Y yellow, B blue, LB light blue, W white, K black, G green, T tan, O orange, `cmd` command stripes, `custom` customization, `any` common option with no stripes.
 
-An option fits a slot when the sizes match and at least one stripe is shared. `any` options fit every slot except the single slot on a hero tile.
+An option fits a slot when the sizes match and at least one stripe is shared. `any` options fit every slot of the right size, including the single slot on a hero tile, because the Scenario Booklet puts common gear and support cards on heroes.
 
 To add another box, add a `data/hon-<box>-<country>.js` file in the same shape, add the images, and register the country in `js/app.js`.
 

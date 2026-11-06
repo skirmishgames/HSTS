@@ -54,7 +54,7 @@
     var why = [];
     if (slot.size !== opt.size) why.push('size');
     var ok;
-    if (opt.stripes.indexOf('any') >= 0) ok = !(slot.stripes.length === 1 && slot.stripes[0] === 'custom');
+    if (opt.stripes.indexOf('any') >= 0) ok = true;
     else ok = opt.stripes.some(function (s) { return slot.stripes.indexOf(s) >= 0; });
     if (!ok) why.push('stripes');
     return why;
