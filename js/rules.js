@@ -2,7 +2,7 @@
   'use strict';
   var LSK = 'hts.hon.bro.v1';
   var BOXES = [{ id: 'bro', name: 'Big Red One' }];
-  var S = { b: 'bro', q: '', ch: 'all', open: null, chunk: null, theme: 'light' };
+  var S = { b: 'bro', q: '', ch: 'all', open: null, chunk: null, full: false, theme: 'light' };
   var cache = {};
 
   function $(id) { return document.getElementById(id); }
@@ -103,47 +103,84 @@
     $('stat').textContent = res.length + ' match' + (res.length === 1 ? '' : 'es') + (res.length > 60 ? ', showing the best 60' : '') + '.';
   }
 
-  function renderSection(R) {
+  var lastFocus = null;
+  function openModal(R) {
     var s = R.secs[S.open];
-    if (!s) { S.open = null; render(); return; }
+    if (!s) { S.open = null; closeModal(); return; }
     var toks = tokens(S.q), mk = markFn(toks);
-    var chunks = R.d.chunks.filter(function (c) { return c.sec === s.id; });
+    var all = R.d.chunks.filter(function (c) { return c.sec === s.id; });
+    var focus = null;
+    all.forEach(function (c) { if (c.id === S.chunk) focus = c; });
+    var partial = !!focus && !S.full && all.length > 1;
+    var chunks = partial ? all.filter(function (c) { return c.sub === focus.sub; }) : all;
     var idx = R.d.sections.map(function (x) { return x.id; }).indexOf(s.id);
     var prev = R.d.sections[idx - 1], next = R.d.sections[idx + 1];
-    var html = '<div class="rbar"><button type="button" class="ghost" data-back="1">' + (S.q ? 'Back to results' : 'Back to contents') + '</button>' +
-      '<span class="rnav">' + (prev ? '<button type="button" class="ghost" data-open="' + esc(prev.id) + '">Previous</button>' : '') + (next ? '<button type="button" class="ghost" data-open="' + esc(next.id) + '">Next</button>' : '') + '</span></div>' +
-      '<article class="rsec"><h2>' + esc((/^icons/.test(s.id) ? '' : s.id + ' ') + s.title) + '</h2>';
-    var lastSub = null, lastPage = null;
+    var ch = R.d.chapters.filter(function (c) { return c.n === s.chapter; })[0];
+    var subs = [];
+    all.forEach(function (c) { if (c.sub && subs.indexOf(c.sub) < 0) subs.push(c.sub); });
+    var secName = (/^icons/.test(s.id) ? '' : s.id + ' ') + s.title;
+
+    var head = '<div class="rdh"><div class="rdt"><small>' + (ch ? esc((ch.n < 9 ? ch.n + ' ' : '') + ch.title) : '') + '</small>' +
+      '<h2 id="rdtitle">' + esc(partial && focus.sub ? focus.sub : secName) + '</h2>' +
+      (partial && focus.sub ? '<small>In ' + esc(secName) + '</small>' : '') + '</div>' +
+      '<button type="button" class="ghost rclose" data-close="1" aria-label="Close">Close</button></div>';
+
+    var body = '<div class="rdb" id="rdbody">';
+    if (!partial && subs.length > 1) {
+      body += '<nav class="rjump" aria-label="Jump to">' + subs.map(function (x, i) { return '<button type="button" class="chip" data-jump="' + i + '">' + esc(x) + '</button>'; }).join('') + '</nav>';
+    }
+    var lastSub = null, lastPage = null, si = -1;
     chunks.forEach(function (c) {
-      html += '<section class="rchunk' + (S.chunk === c.id ? ' focus' : '') + '" id="k' + c.id + '">';
-      if (c.sub && c.sub !== lastSub) html += '<h3>' + mk(c.sub) + '</h3>';
-      html += c.text.split('\n').map(function (p) { return '<p>' + mk(p) + '</p>'; }).join('');
-      if (c.page !== lastPage) html += '<small class="rpg">Rulebook p.' + c.page + '</small>';
-      html += '</section>';
+      if (c.sub && c.sub !== lastSub && !(partial && c.sub === focus.sub)) { si = subs.indexOf(c.sub); body += '<h3 class="rsub" id="rs' + si + '">' + mk(c.sub) + '</h3>'; }
+      body += '<section class="rchunk' + (S.chunk === c.id && !partial ? ' focus' : '') + '" id="k' + c.id + '">' +
+        c.text.split('\n').map(function (p) { return '<p>' + mk(p) + '</p>'; }).join('') + '</section>';
+      if (c.page !== lastPage) body += '<small class="rpg">Rulebook p.' + c.page + '</small>';
       lastSub = c.sub; lastPage = c.page;
     });
-    html += '</article>';
-    $('out').innerHTML = html;
-    $('stat').textContent = chunks.length + ' part' + (chunks.length === 1 ? '' : 's') + ' in this section.';
-    var f = document.querySelector('.rchunk.focus');
-    if (f && f.scrollIntoView) f.scrollIntoView({ block: 'center' });
-    else window.scrollTo(0, 0);
+    body += '</div>';
+
+    var foot = '<div class="rdf"><span class="rnav">' +
+      (prev ? '<button type="button" class="ghost" data-open="' + esc(prev.id) + '" data-full="1">Previous section</button>' : '') +
+      (next ? '<button type="button" class="ghost" data-open="' + esc(next.id) + '" data-full="1">Next section</button>' : '') + '</span>' +
+      (partial ? '<button type="button" data-full-open="1">Read whole section (' + all.length + ' parts)</button>' : '') + '</div>';
+
+    var m = $('rmodal');
+    if (!m) {
+      m = document.createElement('div'); m.id = 'rmodal'; m.className = 'rmodal'; m.hidden = true;
+      m.setAttribute('role', 'dialog'); m.setAttribute('aria-modal', 'true'); m.setAttribute('aria-labelledby', 'rdtitle');
+      document.body.appendChild(m);
+    }
+    if (m.hidden) lastFocus = document.activeElement;
+    m.innerHTML = '<div class="rdlg">' + head + body + foot + '</div>';
+    m.hidden = false;
+    document.body.classList.add('rlock');
+    var bodyEl = $('rdbody'), f = document.querySelector('#rmodal .rchunk.focus');
+    if (f && f.scrollIntoView) f.scrollIntoView({ block: 'center' }); else bodyEl.scrollTop = 0;
+    var cb = m.querySelector('.rclose'); if (cb && cb.focus) cb.focus({ preventScroll: true });
+  }
+  function closeModal() {
+    var m = $('rmodal');
+    if (m && !m.hidden) {
+      m.hidden = true; m.innerHTML = '';
+      if (lastFocus && lastFocus.focus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true });
+    }
+    document.body.classList.remove('rlock');
   }
 
   function url() {
     try {
       var p = new URLSearchParams(); p.set('b', S.b);
       if (S.q) p.set('q', S.q); if (S.ch !== 'all') p.set('ch', S.ch);
-      if (S.open) p.set('s', S.open); if (S.chunk != null) p.set('k', S.chunk);
+      if (S.open) p.set('s', S.open); if (S.chunk != null) p.set('k', S.chunk); if (S.open && S.full) p.set('full', '1');
       history.replaceState(null, '', location.pathname + '?' + p.toString());
     } catch (e) { /* ignore */ }
   }
   function render() {
     renderControls();
     var R = load();
-    if (S.open) renderSection(R);
-    else if (tokens(S.q).length) renderResults(R);
+    if (tokens(S.q).length) renderResults(R);
     else renderToc(R);
+    if (S.open) openModal(R); else closeModal();
     url();
   }
 
@@ -152,12 +189,17 @@
       var t = ev.target, el;
       if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; S.open = null; render(); return; }
       if ((el = t.closest('[data-ch]'))) { S.ch = el.dataset.ch === 'all' ? 'all' : Number(el.dataset.ch); S.open = null; render(); return; }
-      if ((el = t.closest('[data-open]'))) { S.open = el.dataset.open; S.chunk = el.dataset.chunk != null ? Number(el.dataset.chunk) : null; render(); if (S.chunk == null) window.scrollTo(0, 0); return; }
-      if (t.closest('[data-back]')) { S.open = null; S.chunk = null; render(); }
+      if ((el = t.closest('[data-jump]'))) { var h = document.getElementById('rs' + el.dataset.jump); if (h) h.scrollIntoView({ block: 'start' }); return; }
+      if (t.closest('[data-full-open]')) { S.full = true; render(); return; }
+      if ((el = t.closest('[data-open]'))) { S.open = el.dataset.open; S.chunk = el.dataset.chunk != null ? Number(el.dataset.chunk) : null; S.full = el.dataset.full === '1' || S.chunk == null; render(); return; }
+      if (t.closest('[data-close]') || t.id === 'rmodal') { S.open = null; S.chunk = null; S.full = false; render(); }
+    });
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape' && S.open) { S.open = null; S.chunk = null; S.full = false; render(); }
     });
     var timer;
     $('q').oninput = function () {
-      S.q = this.value; S.open = null; S.chunk = null;
+      S.q = this.value; S.open = null; S.chunk = null; S.full = false; closeModal();
       clearTimeout(timer); timer = setTimeout(function () { var R = load(); renderControlsLight(); if (tokens(S.q).length) renderResults(R); else renderToc(R); url(); }, 120);
     };
     $('btnTheme').onclick = function () {
@@ -179,6 +221,7 @@
     if (p.get('ch') && !isNaN(Number(p.get('ch')))) S.ch = Number(p.get('ch'));
     if (p.get('s')) S.open = p.get('s');
     if (p.get('k') != null && p.get('k') !== '') S.chunk = Number(p.get('k'));
+    if (p.get('full') === '1') S.full = true;
     bind(); render();
   }
   init();
