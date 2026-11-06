@@ -11,7 +11,7 @@
 <header class="top">
   <div class="brand">
     <h1>Unit index</h1>
-    <p class="sub">Heroes of Normandie, Big Red One</p>
+    <p class="sub" id="subtitle">Heroes of Normandie</p>
   </div>
   <div class="top-actions">
     <a class="btn ghost" href="index.html">Army builder</a>
@@ -20,6 +20,10 @@
 </header>
 
 <section class="setup" aria-label="Search">
+  <div class="field">
+    <span class="label">Game box</span>
+    <div id="boxes" class="seg" role="group" aria-label="Game box"></div>
+  </div>
   <div class="field">
     <span class="label">Country</span>
     <div id="nations" class="seg" role="group" aria-label="Country"></div>
@@ -33,8 +37,16 @@
     <div id="views" class="seg view-seg" role="group" aria-label="View"></div>
   </div>
 </section>
-<section class="setup" id="kindRow" aria-label="Unit type" hidden style="padding-top:0">
-  <div id="kinds" class="chips" role="group" aria-label="Unit type"></div>
+<section class="setup filters2" aria-label="Filters">
+  <div class="field">
+    <span class="label">Tile type</span>
+    <div id="ttypes" class="chips" role="group" aria-label="Tile type"></div>
+  </div>
+  <div class="field">
+    <span class="label">Unit type</span>
+    <div id="kinds" class="chips" role="group" aria-label="Unit type"></div>
+  </div>
+  <div class="field"><button id="btnReset" class="ghost" type="button">Clear filters</button></div>
 </section>
 <p id="stat" class="ustat" aria-live="polite"></p>
 

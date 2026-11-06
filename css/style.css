@@ -240,3 +240,6 @@ a.btn{text-decoration:none}
 .ctrs .u{align-self:center}
 .note2{font-style:italic}
 @media (min-width:640px){.ctr{width:104px}}
+.filters2{padding-top:0;align-items:flex-start}
+.filters2 .field{min-width:0}
+.field .seg{align-self:flex-start}

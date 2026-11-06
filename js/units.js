@@ -2,6 +2,8 @@
   'use strict';
 
   var LSK = 'hts.hon.bro.v1';
+  var BOXES = [{ id: 'bro', name: 'Big Red One' }];
+  var TTYPES = [['all', 'All'], ['platoon', 'Platoons'], ['command', 'Command'], ['hero', 'Heroes'], ['landing', 'Landing'], ['special', 'Other']];
   var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }];
   var VIEWS = [['tile', 'By tile'], ['unit', 'Unit list']];
   var KINDS = [['all', 'All'], ['officer', 'Officers'], ['character', 'Characters'], ['infantry', 'Infantry'], ['weapon', 'Weapons'], ['vehicle', 'Vehicles'], ['marker', 'Markers'], ['aircraft', 'Aircraft']];
@@ -11,7 +13,7 @@
   var TYPE_NAME = { platoon: 'Platoon', command: 'Command tile', hero: 'Hero', landing: 'Landing', special: 'Other' };
   var TYPE_ORDER = { command: 0, platoon: 1, hero: 2, landing: 3, special: 4 };
 
-  var S = { n: 'us', q: '', view: 'tile', kind: 'all', theme: 'light' };
+  var S = { b: 'bro', n: 'us', q: '', view: 'tile', kind: 'all', tt: 'all', theme: 'light' };
   var cache = {};
 
   function $(id) { return document.getElementById(id); }
@@ -47,8 +49,9 @@
 
   /* ---------- index ---------- */
   function index(n) {
-    if (cache[n]) return cache[n];
-    var d = window.HTS_DATA['hon-bro-' + n];
+    var ck = S.b + ':' + n;
+    if (cache[ck]) return cache[ck];
+    var d = window.HTS_DATA['hon-' + S.b + '-' + n];
     var O = {}, owned = {};
     d.options.forEach(function (o) { O[o.id] = o; });
     var tiles = d.tiles.slice().sort(function (a, b) {
@@ -66,19 +69,19 @@
 
     // unit list
     var U = {};
-    function add(units, label, extra, qty) {
+    function add(units, label, extra, tt) {
       (units || []).forEach(function (u) {
         var k = u[0];
         if (!U[k]) U[k] = { name: u[0], kind: u[2], from: [] };
-        U[k].from.push({ label: label, q: extra, qty: u[1] });
+        U[k].from.push({ label: label, q: extra, qty: u[1], tt: tt });
       });
     }
-    d.tiles.forEach(function (t) { add(t.units, t.name + (t.sub && t.type !== 'special' ? ', ' + t.sub : '') + ' (tile)', t.name + ' ' + (t.sub && t.type !== 'special' ? t.sub : '')); });
+    d.tiles.forEach(function (t) { add(t.units, t.name + (t.sub && t.type !== 'special' ? ', ' + t.sub : '') + ' (tile)', t.name + ' ' + (t.sub && t.type !== 'special' ? t.sub : ''), t.type); });
     d.options.forEach(function (o) {
       if (!o.units) return;
       var tid = owned[o.id], tl = tid && T[tid];
       var label = o.name + (tl ? ' (on ' + (tl.sub && tl.type !== 'special' ? tl.sub : tl.name) + ')' : ' (common option)');
-      add(o.units, label, tl ? tl.name + ' ' + (tl.sub || '') : o.name);
+      add(o.units, label, tl ? tl.name + ' ' + (tl.sub || '') : o.name, tl ? tl.type : 'common');
     });
     var units = Object.keys(U).map(function (k) {
       var u = U[k];
@@ -86,12 +89,19 @@
       return u;
     }).sort(function (a, b) { return a.name.localeCompare(b.name); });
 
-    cache[n] = { d: d, tiles: tiles, common: common, units: units };
-    return cache[n];
+    cache[ck] = { d: d, tiles: tiles, common: common, units: units };
+    return cache[ck];
   }
 
   /* ---------- rendering ---------- */
   function renderControls() {
+    $('boxes').innerHTML = BOXES.map(function (b) {
+      return '<button type="button" data-box="' + b.id + '" class="' + (S.b === b.id ? 'on' : '') + '" aria-pressed="' + (S.b === b.id) + '">' + b.name + '</button>';
+    }).join('');
+    $('subtitle').textContent = 'Heroes of Normandie, ' + BOXES.filter(function (b) { return b.id === S.b; })[0].name;
+    $('ttypes').innerHTML = TTYPES.map(function (k) {
+      return '<button type="button" class="chip' + (S.tt === k[0] ? ' on' : '') + '" data-tt="' + k[0] + '">' + k[1] + '</button>';
+    }).join('');
     $('nations').innerHTML = NATIONS.map(function (n) {
       return '<button type="button" data-nation="' + n.id + '" class="' + (S.n === n.id ? 'on' : '') + '" aria-pressed="' + (S.n === n.id) + '">' + n.name + '</button>';
     }).join('');
@@ -101,7 +111,6 @@
     $('kinds').innerHTML = KINDS.map(function (k) {
       return '<button type="button" class="chip' + (S.kind === k[0] ? ' on' : '') + '" data-kind="' + k[0] + '">' + k[1] + '</button>';
     }).join('');
-    $('kindRow').hidden = S.view !== 'unit';
     $('q').value = S.q;
     document.documentElement.setAttribute('data-theme', S.theme);
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
@@ -115,9 +124,17 @@
       '<span class="opts">' + right + '</span></li>';
   }
 
+  function hasKind(units, k) { return (units || []).some(function (u) { return u[2] === k; }); }
+
   function renderTiles(I) {
-    var list = I.tiles.filter(function (x) { return match(x.hay, S.q); });
-    var com = I.common.filter(function (x) { return match(x.hay, S.q); });
+    var list = I.tiles.filter(function (x) {
+      if (S.tt !== 'all' && x.t.type !== S.tt) return false;
+      if (S.kind !== 'all' && !hasKind(x.t.units, S.kind) && !x.own.some(function (o) { return hasKind(o.units, S.kind); })) return false;
+      return match(x.hay, S.q);
+    });
+    var com = S.tt !== 'all' ? [] : I.common.filter(function (x) {
+      return (S.kind === 'all' || hasKind(x.o.units, S.kind)) && match(x.hay, S.q);
+    });
     var html = '';
     if (list.length) {
       html += '<div class="ugrid">' + list.map(function (x) {
@@ -141,7 +158,11 @@
   }
 
   function renderUnits(I) {
-    var list = I.units.filter(function (u) { return (S.kind === 'all' || u.kind === S.kind) && match(u.hay, S.q); });
+    var list = I.units.filter(function (u) {
+      if (S.kind !== 'all' && u.kind !== S.kind) return false;
+      if (S.tt !== 'all' && !u.from.some(function (f) { return f.tt === S.tt; })) return false;
+      return match(u.hay, S.q);
+    });
     var html = KIND_ORDER.map(function (k) {
       var items = list.filter(function (u) { return u.kind === k; });
       if (!items.length) return '';
@@ -162,7 +183,8 @@
     if (S.view === 'unit') renderUnits(I); else renderTiles(I);
     try {
       var p = new URLSearchParams();
-      p.set('n', S.n); if (S.q) p.set('q', S.q); if (S.view !== 'tile') p.set('v', S.view);
+      p.set('b', S.b); p.set('n', S.n); if (S.q) p.set('q', S.q); if (S.view !== 'tile') p.set('v', S.view);
+      if (S.tt !== 'all') p.set('tt', S.tt); if (S.kind !== 'all') p.set('k', S.kind);
       history.replaceState(null, '', location.pathname + '?' + p.toString());
     } catch (e) { /* ignore */ }
   }
@@ -178,6 +200,10 @@
   function bind() {
     document.addEventListener('click', function (ev) {
       var t = ev.target, el;
+      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; render(); return; }
+      if ((el = t.closest('[data-tt]'))) { S.tt = el.dataset.tt; render(); return; }
+      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; render(); return; }
+      if ((el = t.closest('[data-tt]'))) { S.tt = el.dataset.tt; render(); return; }
       if ((el = t.closest('[data-nation]'))) { S.n = el.dataset.nation; render(); return; }
       if ((el = t.closest('[data-view]'))) { S.view = el.dataset.view; render(); return; }
       if ((el = t.closest('[data-kind]'))) { S.kind = el.dataset.kind; render(); return; }
@@ -195,11 +221,13 @@
       clearTimeout(timer);
       timer = setTimeout(function () { renderResults(); render_url(); }, 120);
     };
+    $('btnReset').onclick = function () { S.tt = 'all'; S.kind = 'all'; S.q = ''; render(); };
     $('btnTheme').onclick = function () { S.theme = S.theme === 'dark' ? 'light' : 'dark'; saveTheme(); renderControls(); };
   }
   function render_url() {
     try {
-      var p = new URLSearchParams(); p.set('n', S.n); if (S.q) p.set('q', S.q); if (S.view !== 'tile') p.set('v', S.view);
+      var p = new URLSearchParams(); p.set('b', S.b); p.set('n', S.n); if (S.q) p.set('q', S.q); if (S.view !== 'tile') p.set('v', S.view);
+      if (S.tt !== 'all') p.set('tt', S.tt); if (S.kind !== 'all') p.set('k', S.kind);
       history.replaceState(null, '', location.pathname + '?' + p.toString());
     } catch (e) { /* ignore */ }
   }
@@ -212,6 +240,9 @@
     } catch (e) { /* ignore */ }
     var p = new URLSearchParams(location.search);
     if (NATIONS.some(function (n) { return n.id === p.get('n'); })) S.n = p.get('n');
+    if (BOXES.some(function (b) { return b.id === p.get('b'); })) S.b = p.get('b');
+    if (TTYPES.some(function (t) { return t[0] === p.get('tt'); })) S.tt = p.get('tt');
+    if (KINDS.some(function (k) { return k[0] === p.get('k'); })) S.kind = p.get('k');
     if (p.get('q')) S.q = p.get('q');
     if (p.get('v') === 'unit') S.view = 'unit';
     bind();
