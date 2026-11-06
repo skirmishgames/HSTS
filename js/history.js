@@ -70,8 +70,18 @@
       '<div class="hbody" id="hb-' + esc(e.id) + '"' + (isOpen ? '' : ' hidden') + '>' + (isOpen ? body(e) : '') + '</div></div>';
   }
 
+  var NCOL = 0;
+  function ncol() { return window.innerWidth >= 900 ? 2 : 1; }
+  function list(items, mk, toks) {
+    var n = ncol(), cols = [];
+    for (var k = 0; k < n; k++) cols.push('');
+    items.forEach(function (x, i) { cols[i % n] += row(x.e, mk, toks); });
+    return '<div class="hlist">' + cols.map(function (c) { return '<div class="hcol">' + c + '</div>'; }).join('') + '</div>';
+  }
+
   function render() {
     var d = load();
+    NCOL = ncol();
     renderControls(d);
     var toks = tokens(S.q), mk = markFn(toks), res = [];
     d.entries.forEach(function (e) {
@@ -91,13 +101,13 @@
       $('out').innerHTML = '<p class="empty2">Nothing matches. Try fewer or simpler words, or clear a filter.</p>';
       $('stat').textContent = '0 entries.';
     } else if (toks.length) {
-      $('out').innerHTML = '<div class="hlist">' + res.map(function (x) { return row(x.e, mk, toks); }).join('') + '</div>';
+      $('out').innerHTML = list(res, mk, toks);
       $('stat').textContent = res.length + ' of ' + d.entries.length + ' entries. Click one to read it.';
     } else {
       $('out').innerHTML = d.cats.map(function (c) {
         var inCat = res.filter(function (x) { return x.e.cat === c; });
         if (!inCat.length) return '';
-        return '<section class="hgroup"><h2>' + esc(c) + ' <small>' + inCat.length + '</small></h2><div class="hlist">' + inCat.map(function (x) { return row(x.e, mk, toks); }).join('') + '</div></section>';
+        return '<section class="hgroup"><h2>' + esc(c) + ' <small>' + inCat.length + '</small></h2>' + list(inCat, mk, toks) + '</section>';
       }).join('');
       $('stat').textContent = res.length + ' of ' + d.entries.length + ' entries. Click one to read it.';
     }
@@ -132,6 +142,7 @@
       if ((el = t.closest('[data-cat]'))) { S.cat = el.dataset.cat; render(); return; }
       if ((el = t.closest('[data-toggle]'))) toggle(el.dataset.toggle);
     });
+    window.addEventListener('resize', function () { if (ncol() !== NCOL) render(); });
     var timer;
     $('q').oninput = function () {
       S.q = this.value; clearTimeout(timer); timer = setTimeout(render, 120);

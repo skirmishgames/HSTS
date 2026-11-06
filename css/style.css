@@ -283,8 +283,8 @@ body.rlock{overflow:hidden}
 .hgroup .hcat{display:none}
 .hgroup h2{font-size:1.05rem;margin:1rem 0 .4rem}
 .hgroup h2 small{color:var(--muted);font-weight:400;font-size:.85rem}
-.hlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,440px),1fr));gap:.4rem .6rem;align-items:start}
-.hrow.open{grid-column:1/-1}
+.hlist{display:flex;gap:.6rem;align-items:flex-start}
+.hcol{flex:1;min-width:0;display:flex;flex-direction:column;gap:.4rem}
 .hrow{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .hrow.open{border-color:var(--accent);box-shadow:var(--shadow)}
 button.hhead{width:100%;background:transparent;color:var(--ink);border:0;border-radius:0;display:flex;align-items:center;justify-content:flex-start;gap:.7rem;text-align:left;padding:.55rem .8rem;min-height:48px;font-weight:600}
