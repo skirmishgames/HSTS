@@ -32,6 +32,16 @@
       return '<span class="u k-' + esc(u[2]) + '" title="' + esc(KIND_NAME[u[2]] || '') + '">' + esc(u[0]) + (u[1] > 1 ? ' <i>x' + u[1] + '</i>' : '') + '</span>';
     }).join('') + '</span>';
   }
+  // counter art: tile-specific first, then the nation default
+  function tokens(units, tile, nat, small) {
+    if (!units || !units.length) return '';
+    return '<span class="' + (small ? 'ctrs small' : 'ctrs') + '">' + units.map(function (u) {
+      var src = (tile && tile.uimg && tile.uimg[u[0]]) || (nat && nat.uimg && nat.uimg[u[0]]);
+      var qty = u[1] > 1 ? ' <i>x' + u[1] + '</i>' : '';
+      if (!src) return '<span class="u k-' + esc(u[2]) + '" title="' + esc(KIND_NAME[u[2]] || '') + '">' + esc(u[0]) + qty + '</span>';
+      return '<figure class="ctr k-' + esc(u[2]) + '"><button type="button" data-zoom="' + src + '" data-cap="' + esc(u[0] + (u[1] > 1 ? ' x' + u[1] : '')) + '" aria-label="Zoom ' + esc(u[0]) + '"><img src="' + src + '" alt="" loading="lazy"></button><figcaption>' + esc(u[0]) + qty + '</figcaption></figure>';
+    }).join('') + '</span>';
+  }
   function pips(n) { var s = ''; for (var i = 0; i < n; i++) s += '■'; return s; }
   function costLabel(c) { return c == null ? 'SP' : String(c); }
 
@@ -97,9 +107,9 @@
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
   }
 
-  function optionRow(o) {
+  function optionRow(o, tile, nat) {
     var right = costLabel(o.cost) + ' pts';
-    var body = o.units ? chips(o.units) : '<span class="cat">' + esc(CAT_NAME[o.cat] || o.cat) + ', adds no units</span>';
+    var body = o.units ? tokens(o.units, tile, nat, true) : '<span class="cat">' + esc(CAT_NAME[o.cat] || o.cat) + ', adds no units</span>';
     return '<li><button type="button" class="th" data-zoom="' + o.img + '" data-cap="' + esc(o.name + ', ' + right) + '" aria-label="Zoom ' + esc(o.name) + '"><img src="' + o.img + '" alt="" loading="lazy" width="' + o.w + '" height="' + o.h + '"></button>' +
       '<div><div class="on">' + esc(o.name) + (o.units ? ' <span class="cat">' + esc(CAT_NAME[o.cat] || '') + '</span>' : '') + '</div>' + body + (o.note ? '<span class="note">' + esc(o.note) + '</span>' : '') + '</div>' +
       '<span class="opts">' + right + '</span></li>';
@@ -115,14 +125,14 @@
         return '<article class="ucard" id="t-' + t.id + '"><button type="button" class="imgbtn" data-zoom="' + t.img + '" data-cap="' + esc(t.name + ', ' + t.cost + ' pts') + '" aria-label="Zoom ' + esc(t.name) + '"><img src="' + t.img + '" alt="' + esc(t.name) + ' tile" loading="lazy" width="' + t.w + '" height="' + t.h + '"></button>' +
           '<div class="ubody"><h3>' + esc(t.name) + (t.sub && t.type !== 'special' ? '<small>' + esc(t.sub) + '</small>' : '') + '</h3>' +
           '<p class="umeta">' + esc(TYPE_NAME[t.type]) + ', ' + t.cost + ' pts, ' + t.slots.length + ' slot' + (t.slots.length === 1 ? '' : 's') + (t.squares ? ', breaking point <span class="pips">' + pips(t.squares) + '</span>' : '') + '</p>' +
-          '<h4>Units on the tile</h4>' + chips(t.units) +
-          (x.own.length ? '<h4>Options that come with this tile</h4><ul class="oplist">' + x.own.map(optionRow).join('') + '</ul>' : '') +
+          (t.note ? '<p class="umeta note2">' + esc(t.note) + '</p>' : '') + '<h4>Units on the tile</h4>' + tokens(t.units, t, I.d) +
+          (x.own.length ? '<h4>Options that come with this tile</h4><ul class="oplist">' + x.own.map(function (o) { return optionRow(o, t, I.d); }).join('') + '</ul>' : '') +
           '</div></article>';
       }).join('') + '</div>';
     }
     if (com.length) {
       html += '<section class="usec"><h2>Common and shared options</h2><div class="ugrid">' + com.map(function (x) {
-        return '<article class="ucard"><div class="ubody"><ul class="oplist">' + optionRow(x.o) + '</ul></div></article>';
+        return '<article class="ucard"><div class="ubody"><ul class="oplist">' + optionRow(x.o, null, I.d) + '</ul></div></article>';
       }).join('') + '</div></section>';
     }
     if (!html) html = '<p class="empty2">Nothing matches. Try fewer words, for example "rifle" or "bazooka".</p>';

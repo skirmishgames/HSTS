@@ -44,6 +44,12 @@ An option fits a slot when the sizes match and at least one stripe is shared. `a
 
 To add another box, add a `data/hon-<box>-<country>.js` file in the same shape, add the images, and register the country in `js/app.js`.
 
+## Art sources
+
+The 12 core box tiles (US: Field Command, Clint, Oddball, The Rock, both Rifle Platoons; Germany: Feldkommando, Helmut, Otto, Ludwig, both Panzergrenadiere) and the core box options come from the individual print-ready files, about 2.4 times the resolution of the rest. Everything else was cropped from the Vol PDFs and is lower resolution. Unit counter pictures in the unit index come from the same print files, so only units with a published counter file show a picture.
+
+Known printing inconsistencies in the source files: Oddball and Stillman are used for the same hero, and Lt. J.W. Will is printed as W.J. Will on his counter.
+
 ## Sets
 
 The `set` code on each tile is the code printed on the sheet it came from: CB, BO, KS-9, SOLO, WS#0, P500. Use the set chips in the library to filter by them.

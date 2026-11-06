@@ -227,3 +227,16 @@ a.btn{text-decoration:none}
 @media (max-width:640px){.urow{grid-template-columns:1fr}}
 @media print{.incl .uchips,.ul{color:#000}}
 [hidden]{display:none!important}
+
+/* unit counters */
+.ctrs{display:flex;flex-wrap:wrap;gap:.45rem;align-items:flex-start;margin-top:.2rem}
+.ctr{margin:0;width:92px;display:flex;flex-direction:column;gap:.2rem;align-items:center;text-align:center}
+.ctr button{padding:0;border:0;background:transparent;min-height:0;display:block;width:100%;border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.ctr img{display:block;width:100%;height:auto}
+.ctr figcaption{font-size:.74rem;line-height:1.15;color:var(--ink)}
+.ctr figcaption i{font-style:normal;font-weight:700}
+.ctrs.small .ctr{width:56px}
+.ctrs.small .ctr figcaption{font-size:.68rem}
+.ctrs .u{align-self:center}
+.note2{font-style:italic}
+@media (min-width:640px){.ctr{width:104px}}

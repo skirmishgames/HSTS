@@ -69,6 +69,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(await up.locator('.ucard').count() === 1, 'exact platoon search returns one tile');
   const ut = await up.textContent('.ucard');
   ok(['Lt. Blean', 'Recon Team', 'Rifle Squad', '.30 Cal', 'Bazooka'].every(w => ut.includes(w)), 'platoon shows tile units and own options units');
+  ok(await up.locator('.ucard figure.ctr').count() >= 4, 'unit counters shown for the platoon');
   await up.fill('#q', 'bazooka');
   await up.waitForTimeout(300);
   ok(await up.locator('.ucard').count() >= 3, 'search bazooka finds several tiles');

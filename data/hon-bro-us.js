@@ -4,6 +4,22 @@ HTS_DATA["hon-bro-us"] = {
  "box": "bro",
  "nation": "us",
  "name": "United States",
+ "uimg": {
+  "Col. Taylor": "img/hon/bro/us/units/us-hq-g-taylor-a.webp",
+  "81mm Mortar": "img/hon/bro/us/units/us-hq-81mm-mortar-a.webp",
+  "Clint": "img/hon/bro/us/units/us-heroes-clint-a.webp",
+  "Oddball": "img/hon/bro/us/units/us-heroes-odball-a.webp",
+  "Oddball's M4 Sherman": "img/hon/bro/us/units/us-heroes-odball-m4-sherman-02-a.webp",
+  "The Rock": "img/hon/bro/us/units/us-heroes-the-rock-a.webp",
+  "Sam Fueller": "img/hon/bro/us/units/18th-inf-reg-c-sam-fueller-a.webp",
+  "60mm Mortar": "img/hon/bro/us/units/us-options-60mm-mortar-a.webp",
+  "Willys .50 Cal": "img/hon/bro/us/units/us-options-wilys-50cal-a.webp",
+  "57mm AT Gun": "img/hon/bro/us/units/us-options-57mm-at-gun.webp",
+  "M8 AC Greyhound": "img/hon/bro/us/units/us-options-m8-ac-greyhound-01-a.webp",
+  "M5 Stuart": "img/hon/bro/us/units/us-options-m5-stuart-01-a.webp",
+  "M4 Sherman": "img/hon/bro/us/units/us-options-m4-sherman-01-a.webp",
+  "M3A1 Halftrack": "img/hon/bro/us/units/18th-inf-reg-c-m3a1-halftrack-01-a.webp"
+ },
  "tiles": [
   {
    "id": "field_command_taylor",
@@ -14,8 +30,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "CB",
    "squares": 0,
    "img": "img/hon/bro/us/tiles/field_command_taylor.webp",
-   "w": 690,
-   "h": 250,
+   "w": 1670,
+   "h": 589,
    "sheet": "US-Vol1-p1",
    "units": [
     [
@@ -26,10 +42,10 @@ HTS_DATA["hon-bro-us"] = {
    ],
    "slots": [
     {
-     "x": 0.0348,
-     "y": 0.232,
-     "w": 0.2493,
-     "h": 0.688,
+     "x": 0.0295,
+     "y": 0.2251,
+     "w": 0.2527,
+     "h": 0.7165,
      "size": "w",
      "stripes": [
       "cmd",
@@ -37,10 +53,10 @@ HTS_DATA["hon-bro-us"] = {
      ]
     },
     {
-     "x": 0.5652,
-     "y": 0.232,
-     "w": 0.1942,
-     "h": 0.688,
+     "x": 0.5672,
+     "y": 0.225,
+     "w": 0.1969,
+     "h": 0.7165,
      "size": "n",
      "stripes": [
       "cmd",
@@ -48,10 +64,10 @@ HTS_DATA["hon-bro-us"] = {
      ]
     },
     {
-     "x": 0.7681,
-     "y": 0.232,
-     "w": 0.1942,
-     "h": 0.688,
+     "x": 0.7729,
+     "y": 0.2249,
+     "w": 0.1969,
+     "h": 0.7165,
      "size": "n",
      "stripes": [
       "cmd",
@@ -75,8 +91,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "CB",
    "squares": 1,
    "img": "img/hon/bro/us/tiles/clint.webp",
-   "w": 335,
-   "h": 252,
+   "w": 800,
+   "h": 589,
    "sheet": "US-Vol1-p2",
    "units": [
     [
@@ -87,10 +103,10 @@ HTS_DATA["hon-bro-us"] = {
    ],
    "slots": [
     {
-     "x": 0.5194,
-     "y": 0.2063,
-     "w": 0.403,
-     "h": 0.5635,
+     "x": 0.5176,
+     "y": 0.1968,
+     "w": 0.4143,
+     "h": 0.5918,
      "size": "n",
      "stripes": [
       "custom"
@@ -108,8 +124,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "CB",
    "squares": 2,
    "img": "img/hon/bro/us/tiles/oddball.webp",
-   "w": 337,
-   "h": 252,
+   "w": 800,
+   "h": 589,
    "sheet": "US-Vol1-p2",
    "units": [
     [
@@ -123,12 +139,13 @@ HTS_DATA["hon-bro-us"] = {
      "vehicle"
     ]
    ],
+   "note": "The printed pieces disagree on this hero's name: Oddball on the tank and one side of the hero, Stillman on the other side (known printing inconsistency).",
    "slots": [
     {
-     "x": 0.5163,
-     "y": 0.2063,
-     "w": 0.4006,
-     "h": 0.5635,
+     "x": 0.5225,
+     "y": 0.1942,
+     "w": 0.4142,
+     "h": 0.5917,
      "size": "n",
      "stripes": [
       "custom"
@@ -146,8 +163,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "CB",
    "squares": 1,
    "img": "img/hon/bro/us/tiles/the_rock.webp",
-   "w": 335,
-   "h": 246,
+   "w": 800,
+   "h": 589,
    "sheet": "US-Vol1-p2",
    "units": [
     [
@@ -158,10 +175,10 @@ HTS_DATA["hon-bro-us"] = {
    ],
    "slots": [
     {
-     "x": 0.5194,
-     "y": 0.2114,
-     "w": 0.403,
-     "h": 0.5772,
+     "x": 0.5274,
+     "y": 0.1987,
+     "w": 0.4141,
+     "h": 0.5917,
      "size": "n",
      "stripes": [
       "custom"
@@ -179,8 +196,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "CB",
    "squares": 3,
    "img": "img/hon/bro/us/tiles/rifle_platoon_1id_16a.webp",
-   "w": 832,
-   "h": 252,
+   "w": 2030,
+   "h": 589,
    "sheet": "US-Vol1-p3",
    "units": [
     [
@@ -204,12 +221,20 @@ HTS_DATA["hon-bro-us"] = {
      "infantry"
     ]
    ],
+   "uimg": {
+    "Lt. Blean": "img/hon/bro/us/units/16th-inf-reg-a-blean-a.webp",
+    "Recon Team": "img/hon/bro/us/units/16th-inf-reg-a-recon-team.webp",
+    "Fire Team": "img/hon/bro/us/units/16th-inf-reg-a-fire-team-a.webp",
+    "Support Team": "img/hon/bro/us/units/16th-inf-reg-a-support-team-a.webp",
+    ".30 Cal": "img/hon/bro/us/units/16th-inf-reg-a-30-cal-a.webp",
+    "Bazooka": "img/hon/bro/us/units/16th-inf-reg-a-bazooka.webp"
+   },
    "slots": [
     {
-     "x": 0.03,
-     "y": 0.2302,
-     "w": 0.2079,
-     "h": 0.6825,
+     "x": 0.0278,
+     "y": 0.2174,
+     "w": 0.2116,
+     "h": 0.7172,
      "size": "w",
      "stripes": [
       "R",
@@ -217,10 +242,10 @@ HTS_DATA["hon-bro-us"] = {
      ]
     },
     {
-     "x": 0.2464,
-     "y": 0.2302,
-     "w": 0.1623,
-     "h": 0.6825,
+     "x": 0.2461,
+     "y": 0.2175,
+     "w": 0.1655,
+     "h": 0.7172,
      "size": "n",
      "stripes": [
       "R",
@@ -228,10 +253,10 @@ HTS_DATA["hon-bro-us"] = {
      ]
     },
     {
-     "x": 0.5913,
-     "y": 0.2302,
-     "w": 0.1635,
-     "h": 0.6825,
+     "x": 0.5942,
+     "y": 0.2178,
+     "w": 0.1667,
+     "h": 0.7172,
      "size": "n",
      "stripes": [
       "R",
@@ -239,10 +264,10 @@ HTS_DATA["hon-bro-us"] = {
      ]
     },
     {
-     "x": 0.7596,
-     "y": 0.2302,
-     "w": 0.2043,
-     "h": 0.6825,
+     "x": 0.764,
+     "y": 0.218,
+     "w": 0.208,
+     "h": 0.7172,
      "size": "w",
      "stripes": [
       "R",
@@ -265,8 +290,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "CB",
    "squares": 3,
    "img": "img/hon/bro/us/tiles/rifle_platoon_1id_18c.webp",
-   "w": 832,
-   "h": 252,
+   "w": 2030,
+   "h": 589,
    "sheet": "US-Vol1-p4",
    "units": [
     [
@@ -290,12 +315,22 @@ HTS_DATA["hon-bro-us"] = {
      "weapon"
     ]
    ],
+   "uimg": {
+    "Lt. J.W. Will": "img/hon/bro/us/units/18th-inf-reg-c-w-j-will-a.webp",
+    "Recon Team": "img/hon/bro/us/units/18th-inf-reg-c-recon-team.webp",
+    "Fire Team": "img/hon/bro/us/units/18th-inf-reg-c-fire-team-a.webp",
+    "Support Team": "img/hon/bro/us/units/18th-inf-reg-c-support-team-a.webp",
+    ".30 Cal": "img/hon/bro/us/units/18th-inf-reg-c-30-cal-a.webp",
+    "Bazooka": "img/hon/bro/us/units/18th-inf-reg-c-bazooka.webp",
+    "M3A1 Halftrack": "img/hon/bro/us/units/18th-inf-reg-c-m3a1-halftrack-01-a.webp"
+   },
+   "note": "The officer is printed as Lt. J.W. Will on the tile and W.J. Will on his own counter (known printing inconsistency).",
    "slots": [
     {
-     "x": 0.03,
-     "y": 0.2302,
-     "w": 0.2079,
-     "h": 0.6825,
+     "x": 0.0279,
+     "y": 0.2229,
+     "w": 0.2114,
+     "h": 0.7174,
      "size": "w",
      "stripes": [
       "R",
@@ -303,10 +338,10 @@ HTS_DATA["hon-bro-us"] = {
      ]
     },
     {
-     "x": 0.2464,
-     "y": 0.2302,
-     "w": 0.1623,
-     "h": 0.6825,
+     "x": 0.2462,
+     "y": 0.2225,
+     "w": 0.1653,
+     "h": 0.7173,
      "size": "n",
      "stripes": [
       "R",
@@ -314,10 +349,10 @@ HTS_DATA["hon-bro-us"] = {
      ]
     },
     {
-     "x": 0.5913,
-     "y": 0.2302,
-     "w": 0.1635,
-     "h": 0.6825,
+     "x": 0.5943,
+     "y": 0.2218,
+     "w": 0.1665,
+     "h": 0.7173,
      "size": "n",
      "stripes": [
       "R",
@@ -325,10 +360,10 @@ HTS_DATA["hon-bro-us"] = {
      ]
     },
     {
-     "x": 0.7596,
-     "y": 0.2302,
-     "w": 0.2043,
-     "h": 0.6825,
+     "x": 0.7642,
+     "y": 0.2214,
+     "w": 0.2077,
+     "h": 0.7174,
      "size": "w",
      "stripes": [
       "R",
@@ -1077,8 +1112,8 @@ HTS_DATA["hon-bro-us"] = {
     "cmd"
    ],
    "img": "img/hon/bro/us/options/bluff.webp",
-   "w": 104,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p1",
    "note": "1 additional Bluff Order Token. Maximum 2 Bluff Order Tokens."
   },
@@ -1094,8 +1129,8 @@ HTS_DATA["hon-bro-us"] = {
     "cmd"
    ],
    "img": "img/hon/bro/us/options/planning.webp",
-   "w": 104,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p1",
    "note": "1 additional Numbered Order Token. Maximum 10 Numbered Order Tokens."
   },
@@ -1111,8 +1146,8 @@ HTS_DATA["hon-bro-us"] = {
     "cmd"
    ],
    "img": "img/hon/bro/us/options/improvisation.webp",
-   "w": 104,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p1",
    "note": "Draw 1 more Action Card than your maximum, then discard 1."
   },
@@ -1128,8 +1163,8 @@ HTS_DATA["hon-bro-us"] = {
     "cmd"
    ],
    "img": "img/hon/bro/us/options/mortar_81mm.webp",
-   "w": 112,
-   "h": 154,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p1",
    "units": [
     [
@@ -1271,8 +1306,8 @@ HTS_DATA["hon-bro-us"] = {
     "Y"
    ],
    "img": "img/hon/bro/us/options/rifle_squad_16a.webp",
-   "w": 148,
-   "h": 144,
+   "w": 352,
+   "h": 352,
    "sheet": "US-Vol1-p3",
    "units": [
     [
@@ -1305,8 +1340,8 @@ HTS_DATA["hon-bro-us"] = {
     "Y"
    ],
    "img": "img/hon/bro/us/options/cal30_squad_16a.webp",
-   "w": 148,
-   "h": 146,
+   "w": 352,
+   "h": 352,
    "sheet": "US-Vol1-p3",
    "units": [
     [
@@ -1339,8 +1374,8 @@ HTS_DATA["hon-bro-us"] = {
     "Y"
    ],
    "img": "img/hon/bro/us/options/bazooka_squad_16a.webp",
-   "w": 148,
-   "h": 144,
+   "w": 352,
+   "h": 352,
    "sheet": "US-Vol1-p3",
    "units": [
     [
@@ -1373,8 +1408,8 @@ HTS_DATA["hon-bro-us"] = {
     "LB"
    ],
    "img": "img/hon/bro/us/options/rifle_squad_18c.webp",
-   "w": 148,
-   "h": 144,
+   "w": 352,
+   "h": 352,
    "sheet": "US-Vol1-p4",
    "units": [
     [
@@ -1407,8 +1442,8 @@ HTS_DATA["hon-bro-us"] = {
     "LB"
    ],
    "img": "img/hon/bro/us/options/bazooka_squad_18c.webp",
-   "w": 148,
-   "h": 146,
+   "w": 352,
+   "h": 352,
    "sheet": "US-Vol1-p4",
    "units": [
     [
@@ -1441,8 +1476,8 @@ HTS_DATA["hon-bro-us"] = {
     "LB"
    ],
    "img": "img/hon/bro/us/options/mechanised_m3a1.webp",
-   "w": 148,
-   "h": 146,
+   "w": 352,
+   "h": 352,
    "sheet": "US-Vol1-p4",
    "units": [
     [
@@ -1464,8 +1499,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/mortar_60mm.webp",
-   "w": 114,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p5",
    "units": [
     [
@@ -1487,8 +1522,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/willys_50cal.webp",
-   "w": 114,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p5",
    "units": [
     [
@@ -1510,8 +1545,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/at_gun_57mm.webp",
-   "w": 114,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p5",
    "units": [
     [
@@ -1533,8 +1568,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/m8_greyhound.webp",
-   "w": 114,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p5",
    "units": [
     [
@@ -1556,8 +1591,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/veteran.webp",
-   "w": 114,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p5",
    "note": "3 Veteran markers. Each lets you reroll any one roll, yours or your opponent's."
   },
@@ -1573,8 +1608,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/grenade.webp",
-   "w": 110,
-   "h": 146,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p5",
    "note": "3 Grenade markers. Alternate Firing Action, max range 2 interspaces. Infantry only."
   },
@@ -1590,8 +1625,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/ammo.webp",
-   "w": 110,
-   "h": 146,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p5",
    "note": "3 Ammo markers. Each gives +1 Combat Value in a Firing Action against Infantry. Infantry only."
   },
@@ -1607,8 +1642,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/rifle_grenade.webp",
-   "w": 112,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p5",
    "note": "3 Rifle Grenade markers. Alternate Firing Action, max range 7 interspaces, Indirect Fire. Infantry only."
   },
@@ -1624,8 +1659,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/sticky_bomb.webp",
-   "w": 122,
-   "h": 154,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p5",
    "note": "3 Sticky Bomb markers. Placed on a Vehicle in the Unit's ZoC, resolved at the end of the Supply Phase. Infantry only."
   },
@@ -1641,8 +1676,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/hedgerow_cutter.webp",
-   "w": 110,
-   "h": 148,
+   "w": 256,
+   "h": 352,
    "sheet": "US-Vol1-p6",
    "note": "2 Passage markers. A Heavy Vehicle can move through a hedgerow. Heavy Vehicles only."
   },
@@ -1658,8 +1693,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/m5_stuart.webp",
-   "w": 148,
-   "h": 148,
+   "w": 352,
+   "h": 352,
    "sheet": "US-Vol1-p6",
    "units": [
     [
@@ -1681,8 +1716,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/m4_sherman.webp",
-   "w": 148,
-   "h": 148,
+   "w": 352,
+   "h": 352,
    "sheet": "US-Vol1-p6",
    "units": [
     [

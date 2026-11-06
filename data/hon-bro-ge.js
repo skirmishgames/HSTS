@@ -4,6 +4,22 @@ HTS_DATA["hon-bro-ge"] = {
  "box": "bro",
  "nation": "ge",
  "name": "Germany",
+ "uimg": {
+  "Major Karl Brassert": "img/hon/bro/ge/units/german-hq-brassert-a.webp",
+  "Helmut": "img/hon/bro/ge/units/german-heroes-helmut-a.webp",
+  "Otto": "img/hon/bro/ge/units/german-heroes-otto-a.webp",
+  "Otto's Panzer IV": "img/hon/bro/ge/units/german-heroes-otto-panzer-iv-02-a.webp",
+  "Ludwig": "img/hon/bro/ge/units/german-heroes-ludwig-a.webp",
+  "Schwimmwagen": "img/hon/bro/ge/units/german-options-schimmwagen-a.webp",
+  "Zündapp": "img/hon/bro/ge/units/german-options-zundapp.webp",
+  "Flak 38": "img/hon/bro/ge/units/german-options-flak-38.webp",
+  "Pak 40": "img/hon/bro/ge/units/german-options-pak-40-a.webp",
+  "SdKfz 234/2 Puma": "img/hon/bro/ge/units/german-options-sd-kfz-234-2-puma-a.webp",
+  "Panzer II Luchs": "img/hon/bro/ge/units/german-options-panzer-ii-luchs-a.webp",
+  "Panzer IV": "img/hon/bro/ge/units/german-options-panzer-iv-01-a.webp",
+  "MG 42": "img/hon/bro/ge/units/1st-batallion-mg-42-a.webp",
+  "Panzerschreck": "img/hon/bro/ge/units/1st-batallion-panzerschreck.webp"
+ },
  "tiles": [
   {
    "id": "feldkommando_brassert",
@@ -14,8 +30,8 @@ HTS_DATA["hon-bro-ge"] = {
    "set": "CB",
    "squares": 0,
    "img": "img/hon/bro/ge/tiles/feldkommando_brassert.webp",
-   "w": 690,
-   "h": 250,
+   "w": 1670,
+   "h": 589,
    "sheet": "GE-Vol1-p1",
    "units": [
     [
@@ -26,10 +42,10 @@ HTS_DATA["hon-bro-ge"] = {
    ],
    "slots": [
     {
-     "x": 0.0362,
-     "y": 0.232,
-     "w": 0.2464,
-     "h": 0.688,
+     "x": 0.0328,
+     "y": 0.224,
+     "w": 0.2499,
+     "h": 0.7164,
      "size": "w",
      "stripes": [
       "cmd",
@@ -37,10 +53,10 @@ HTS_DATA["hon-bro-ge"] = {
      ]
     },
     {
-     "x": 0.5652,
-     "y": 0.232,
-     "w": 0.1957,
-     "h": 0.688,
+     "x": 0.5692,
+     "y": 0.224,
+     "w": 0.1984,
+     "h": 0.7164,
      "size": "n",
      "stripes": [
       "cmd",
@@ -48,10 +64,10 @@ HTS_DATA["hon-bro-ge"] = {
      ]
     },
     {
-     "x": 0.7681,
-     "y": 0.232,
-     "w": 0.1957,
-     "h": 0.688,
+     "x": 0.7749,
+     "y": 0.224,
+     "w": 0.1984,
+     "h": 0.7164,
      "size": "n",
      "stripes": [
       "cmd",
@@ -75,8 +91,8 @@ HTS_DATA["hon-bro-ge"] = {
    "set": "CB",
    "squares": 1,
    "img": "img/hon/bro/ge/tiles/helmut.webp",
-   "w": 335,
-   "h": 250,
+   "w": 800,
+   "h": 589,
    "sheet": "GE-Vol1-p2",
    "units": [
     [
@@ -87,10 +103,10 @@ HTS_DATA["hon-bro-ge"] = {
    ],
    "slots": [
     {
-     "x": 0.5194,
-     "y": 0.208,
-     "w": 0.403,
-     "h": 0.568,
+     "x": 0.5187,
+     "y": 0.1883,
+     "w": 0.4141,
+     "h": 0.5917,
      "size": "n",
      "stripes": [
       "custom"
@@ -108,8 +124,8 @@ HTS_DATA["hon-bro-ge"] = {
    "set": "CB",
    "squares": 1,
    "img": "img/hon/bro/ge/tiles/otto.webp",
-   "w": 335,
-   "h": 250,
+   "w": 800,
+   "h": 589,
    "sheet": "GE-Vol1-p2",
    "units": [
     [
@@ -126,9 +142,9 @@ HTS_DATA["hon-bro-ge"] = {
    "slots": [
     {
      "x": 0.5194,
-     "y": 0.208,
-     "w": 0.403,
-     "h": 0.568,
+     "y": 0.1884,
+     "w": 0.4142,
+     "h": 0.5915,
      "size": "n",
      "stripes": [
       "custom"
@@ -146,8 +162,8 @@ HTS_DATA["hon-bro-ge"] = {
    "set": "CB",
    "squares": 1,
    "img": "img/hon/bro/ge/tiles/ludwig.webp",
-   "w": 335,
-   "h": 246,
+   "w": 800,
+   "h": 589,
    "sheet": "GE-Vol1-p2",
    "units": [
     [
@@ -158,10 +174,10 @@ HTS_DATA["hon-bro-ge"] = {
    ],
    "slots": [
     {
-     "x": 0.5194,
-     "y": 0.2114,
-     "w": 0.403,
-     "h": 0.5772,
+     "x": 0.5236,
+     "y": 0.1983,
+     "w": 0.4149,
+     "h": 0.5917,
      "size": "n",
      "stripes": [
       "custom"
@@ -179,8 +195,8 @@ HTS_DATA["hon-bro-ge"] = {
    "set": "CB",
    "squares": 3,
    "img": "img/hon/bro/ge/tiles/panzergrenadiere_1.webp",
-   "w": 830,
-   "h": 248,
+   "w": 2028,
+   "h": 589,
    "sheet": "GE-Vol1-p3",
    "units": [
     [
@@ -204,12 +220,19 @@ HTS_DATA["hon-bro-ge"] = {
      "weapon"
     ]
    ],
+   "uimg": {
+    "Ob. Berger": "img/hon/bro/ge/units/1st-batallion-berger-a.webp",
+    "Recon Group": "img/hon/bro/ge/units/1st-batallion-recon-group.webp",
+    "Fire Group": "img/hon/bro/ge/units/1st-batallion-fire-group-a.webp",
+    "MG 42": "img/hon/bro/ge/units/1st-batallion-mg-42-a.webp",
+    "Panzerschreck": "img/hon/bro/ge/units/1st-batallion-panzerschreck.webp"
+   },
    "slots": [
     {
-     "x": 0.0301,
-     "y": 0.2339,
-     "w": 0.2048,
-     "h": 0.6935,
+     "x": 0.0295,
+     "y": 0.2268,
+     "w": 0.2058,
+     "h": 0.7175,
      "size": "w",
      "stripes": [
       "W",
@@ -217,10 +240,10 @@ HTS_DATA["hon-bro-ge"] = {
      ]
     },
     {
-     "x": 0.247,
-     "y": 0.2339,
-     "w": 0.1566,
-     "h": 0.6935,
+     "x": 0.2473,
+     "y": 0.2267,
+     "w": 0.1574,
+     "h": 0.7175,
      "size": "n",
      "stripes": [
       "W",
@@ -228,10 +251,10 @@ HTS_DATA["hon-bro-ge"] = {
      ]
     },
     {
-     "x": 0.5904,
-     "y": 0.2339,
-     "w": 0.1627,
-     "h": 0.6935,
+     "x": 0.5922,
+     "y": 0.2265,
+     "w": 0.1634,
+     "h": 0.7175,
      "size": "n",
      "stripes": [
       "W",
@@ -239,10 +262,10 @@ HTS_DATA["hon-bro-ge"] = {
      ]
     },
     {
-     "x": 0.7651,
-     "y": 0.2339,
-     "w": 0.2048,
-     "h": 0.6935,
+     "x": 0.7677,
+     "y": 0.2263,
+     "w": 0.2058,
+     "h": 0.7175,
      "size": "w",
      "stripes": [
       "W",
@@ -265,8 +288,8 @@ HTS_DATA["hon-bro-ge"] = {
    "set": "CB",
    "squares": 3,
    "img": "img/hon/bro/ge/tiles/panzergrenadiere_2.webp",
-   "w": 830,
-   "h": 248,
+   "w": 2028,
+   "h": 589,
    "sheet": "GE-Vol1-p4",
    "units": [
     [
@@ -285,12 +308,20 @@ HTS_DATA["hon-bro-ge"] = {
      "infantry"
     ]
    ],
+   "uimg": {
+    "Ob. Reiter": "img/hon/bro/ge/units/2nd-batallion-reiter-a.webp",
+    "Recon Group": "img/hon/bro/ge/units/2nd-batallion-recon-group.webp",
+    "Fire Group": "img/hon/bro/ge/units/2nd-batallion-fire-group-a.webp",
+    "MG 42": "img/hon/bro/ge/units/2nd-batallion-mg-42-a.webp",
+    "Panzerschreck": "img/hon/bro/ge/units/2nd-batallion-panzerschreck.webp",
+    "SdKfz 251/1": "img/hon/bro/ge/units/2nd-batallion-sd-kfz-251-1-01-a.webp"
+   },
    "slots": [
     {
-     "x": 0.0301,
-     "y": 0.2339,
-     "w": 0.2048,
-     "h": 0.6935,
+     "x": 0.0305,
+     "y": 0.2265,
+     "w": 0.2058,
+     "h": 0.7167,
      "size": "w",
      "stripes": [
       "T",
@@ -298,10 +329,10 @@ HTS_DATA["hon-bro-ge"] = {
      ]
     },
     {
-     "x": 0.247,
-     "y": 0.2339,
-     "w": 0.1566,
-     "h": 0.6935,
+     "x": 0.2483,
+     "y": 0.2264,
+     "w": 0.1574,
+     "h": 0.7167,
      "size": "n",
      "stripes": [
       "T",
@@ -309,10 +340,10 @@ HTS_DATA["hon-bro-ge"] = {
      ]
     },
     {
-     "x": 0.5904,
-     "y": 0.2339,
-     "w": 0.1627,
-     "h": 0.6935,
+     "x": 0.5932,
+     "y": 0.2264,
+     "w": 0.1635,
+     "h": 0.7167,
      "size": "n",
      "stripes": [
       "T",
@@ -320,10 +351,10 @@ HTS_DATA["hon-bro-ge"] = {
      ]
     },
     {
-     "x": 0.7651,
-     "y": 0.2339,
-     "w": 0.2048,
-     "h": 0.6935,
+     "x": 0.7686,
+     "y": 0.2263,
+     "w": 0.2058,
+     "h": 0.7167,
      "size": "w",
      "stripes": [
       "T",
@@ -851,8 +882,8 @@ HTS_DATA["hon-bro-ge"] = {
     "cmd"
    ],
    "img": "img/hon/bro/ge/options/bluff.webp",
-   "w": 124,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p1",
    "note": "1 additional Bluff Order Token. Maximum 2 Bluff Order Tokens."
   },
@@ -868,8 +899,8 @@ HTS_DATA["hon-bro-ge"] = {
     "cmd"
    ],
    "img": "img/hon/bro/ge/options/planning.webp",
-   "w": 126,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p1",
    "note": "1 additional Numbered Order Token. Maximum 10 Numbered Order Tokens."
   },
@@ -885,8 +916,8 @@ HTS_DATA["hon-bro-ge"] = {
     "cmd"
    ],
    "img": "img/hon/bro/ge/options/mg_nest.webp",
-   "w": 126,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p1",
    "note": "Once per game, at the end of any Supply Phase, place the MG Nest on the board."
   },
@@ -902,8 +933,8 @@ HTS_DATA["hon-bro-ge"] = {
     "cmd"
    ],
    "img": "img/hon/bro/ge/options/concealed.webp",
-   "w": 126,
-   "h": 176,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p1",
    "note": "2 Concealed markers that work like the Ambush ability. Infantry only."
   },
@@ -1039,8 +1070,8 @@ HTS_DATA["hon-bro-ge"] = {
     "O"
    ],
    "img": "img/hon/bro/ge/options/pzgren_squad_1.webp",
-   "w": 148,
-   "h": 144,
+   "w": 352,
+   "h": 352,
    "sheet": "GE-Vol1-p3",
    "units": [
     [
@@ -1073,8 +1104,8 @@ HTS_DATA["hon-bro-ge"] = {
     "O"
    ],
    "img": "img/hon/bro/ge/options/assault_group.webp",
-   "w": 148,
-   "h": 146,
+   "w": 352,
+   "h": 352,
    "sheet": "GE-Vol1-p3",
    "units": [
     [
@@ -1102,8 +1133,8 @@ HTS_DATA["hon-bro-ge"] = {
     "O"
    ],
    "img": "img/hon/bro/ge/options/panzerschreck_group_1.webp",
-   "w": 148,
-   "h": 146,
+   "w": 352,
+   "h": 352,
    "sheet": "GE-Vol1-p3",
    "units": [
     [
@@ -1136,8 +1167,8 @@ HTS_DATA["hon-bro-ge"] = {
     "W"
    ],
    "img": "img/hon/bro/ge/options/pzgren_squad_2.webp",
-   "w": 148,
-   "h": 144,
+   "w": 352,
+   "h": 352,
    "sheet": "GE-Vol1-p4",
    "units": [
     [
@@ -1170,8 +1201,8 @@ HTS_DATA["hon-bro-ge"] = {
     "W"
    ],
    "img": "img/hon/bro/ge/options/panzerschreck_group_2.webp",
-   "w": 148,
-   "h": 146,
+   "w": 352,
+   "h": 352,
    "sheet": "GE-Vol1-p4",
    "units": [
     [
@@ -1204,8 +1235,8 @@ HTS_DATA["hon-bro-ge"] = {
     "W"
    ],
    "img": "img/hon/bro/ge/options/mech_sdkfz251.webp",
-   "w": 148,
-   "h": 148,
+   "w": 352,
+   "h": 352,
    "sheet": "GE-Vol1-p4",
    "units": [
     [
@@ -1227,8 +1258,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/schwimmwagen.webp",
-   "w": 112,
-   "h": 152,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p5",
    "units": [
     [
@@ -1250,8 +1281,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/zundapp.webp",
-   "w": 112,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p5",
    "units": [
     [
@@ -1273,8 +1304,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/flak38.webp",
-   "w": 112,
-   "h": 146,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p5",
    "units": [
     [
@@ -1296,8 +1327,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/pak40.webp",
-   "w": 112,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p5",
    "units": [
     [
@@ -1319,8 +1350,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/veteran.webp",
-   "w": 112,
-   "h": 150,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p5",
    "note": "3 Veteran markers. Each lets you reroll any one roll, yours or your opponent's."
   },
@@ -1336,8 +1367,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/grenade.webp",
-   "w": 110,
-   "h": 146,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p5",
    "note": "3 Grenade markers. Alternate Firing Action, max range 2 interspaces. Infantry only."
   },
@@ -1353,8 +1384,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/ammo.webp",
-   "w": 110,
-   "h": 146,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p5",
    "note": "3 Ammo markers. Each gives +1 Combat Value in a Firing Action against Infantry. Infantry only."
   },
@@ -1370,8 +1401,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/panzerfaust.webp",
-   "w": 110,
-   "h": 132,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p5",
    "note": "3 Panzerfaust markers. Alternate Firing Action, max range 4 squares, Destruction 2. Infantry only."
   },
@@ -1387,8 +1418,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/puma.webp",
-   "w": 110,
-   "h": 152,
+   "w": 256,
+   "h": 352,
    "sheet": "GE-Vol1-p6",
    "units": [
     [
@@ -1410,8 +1441,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/luchs.webp",
-   "w": 146,
-   "h": 148,
+   "w": 352,
+   "h": 352,
    "sheet": "GE-Vol1-p6",
    "units": [
     [
@@ -1433,8 +1464,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/panzer_iv.webp",
-   "w": 146,
-   "h": 146,
+   "w": 352,
+   "h": 352,
    "sheet": "GE-Vol1-p6",
    "units": [
     [
