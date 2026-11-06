@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en-CA" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heroes of Normandie army builder</title>
+<meta name="description" content="Build a Heroes of Normandie army from the actual Recruitment Tiles and Options. Choose a country, set a points limit, fill the slots, print your roster.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>Heroes of Normandie army builder</h1>
+    <p class="sub">Big Red One</p>
+  </div>
+  <div class="top-actions">
+    <a id="lnkUnits" class="btn ghost" href="units.html">Unit index</a>
+    <button id="btnHelp" class="ghost" type="button">Rules</button>
+    <button id="btnTheme" class="ghost" type="button" aria-label="Switch light or dark mode">Dark</button>
+  </div>
+</header>
+
+<section class="setup" aria-label="Army setup">
+  <div class="field">
+    <span class="label">Country</span>
+    <div id="nations" class="seg" role="group" aria-label="Country"></div>
+  </div>
+  <div class="field">
+    <label class="label" for="limitSel">Points limit</label>
+    <div class="limit-row">
+      <select id="limitSel"></select>
+      <input id="limitNum" type="number" min="0" step="5" inputmode="numeric" aria-label="Custom points limit">
+    </div>
+  </div>
+  <div class="field grow">
+    <label class="label" for="armyName">Army name</label>
+    <input id="armyName" type="text" placeholder="Name this army" maxlength="60" autocomplete="off">
+  </div>
+</section>
+
+<section class="points" aria-live="polite">
+  <div class="bar"><div id="barFill" class="fill"></div></div>
+  <div class="points-text">
+    <strong id="ptsUsed">0</strong> of <span id="ptsLimit">250</span> points
+    <span id="ptsLeft" class="left"></span>
+  </div>
+  <div id="warnings" class="warnings"></div>
+</section>
+
+<nav class="tabs" aria-label="Views">
+  <button id="tabArmy" class="on" type="button">Army</button>
+  <button id="tabLib" type="button">Add tiles</button>
+</nav>
+
+<main class="layout">
+  <section id="armyPane" class="pane">
+    <div class="pane-head">
+      <h2>Your army</h2>
+      <div class="actions">
+        <button id="btnNew" class="ghost" type="button">New</button>
+        <button id="btnSave" type="button">Save</button>
+        <button id="btnPrint" class="ghost" type="button">Print</button>
+        <button id="btnLink" class="ghost" type="button">Copy link</button>
+        <button id="btnExport" class="ghost" type="button">Export</button>
+        <label class="btn ghost" for="fileImport">Import</label>
+        <input id="fileImport" type="file" accept="application/json,.json" hidden>
+      </div>
+    </div>
+    <div class="saved" id="savedRow"></div>
+    <div id="board" class="board"></div>
+    <div id="summary" class="summary"></div>
+  </section>
+
+  <aside id="libPane" class="pane lib">
+    <div class="pane-head">
+      <h2>Recruitment tiles</h2>
+    </div>
+    <div class="filters">
+      <input id="search" type="search" placeholder="Search tiles" aria-label="Search tiles">
+      <div id="typeChips" class="chips" role="group" aria-label="Tile type"></div>
+      <div id="setChips" class="chips" role="group" aria-label="Content set"></div>
+    </div>
+    <div id="library" class="library"></div>
+  </aside>
+</main>
+
+<div id="picker" class="overlay" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="pickTitle">
+    <header>
+      <div>
+        <h3 id="pickTitle">Choose an option</h3>
+        <p id="pickMeta" class="meta"></p>
+      </div>
+      <button id="pickClose" class="ghost" type="button">Close</button>
+    </header>
+    <div class="pick-tools">
+      <label class="check"><input id="pickAll" type="checkbox"> Show options that do not fit this slot</label>
+      <button id="pickClear" class="ghost danger" type="button">Empty this slot</button>
+    </div>
+    <div id="pickList" class="pick-list"></div>
+  </div>
+</div>
+
+<div id="zoom" class="overlay zoom" hidden>
+  <figure>
+    <img id="zoomImg" alt="">
+    <figcaption id="zoomCap"></figcaption>
+  </figure>
+</div>
+
+<div id="help" class="overlay" hidden>
+  <div class="sheet help" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+    <header><h3 id="helpTitle">How recruitment works</h3><button id="helpClose" class="ghost" type="button">Close</button></header>
+    <div class="prose">
+      <p>You build an army by spending Army points on Recruitment Tiles, then spending more on Recruitment Options that fill the slots on those tiles. Each tile and option shows its cost in the bottom corner.</p>
+      <h4>Slots</h4>
+      <ul>
+        <li>An option must match the slot size. Wide slots take wide options (squads and medium vehicles). Narrow slots take narrow options (single units, gear, traits, customizations, small orders).</li>
+        <li>At least one colour stripe on the option must match a stripe around the slot.</li>
+        <li>Common options have no colour stripes and fit any army slot, except the single slot on a hero tile.</li>
+        <li>Order options carry command stripes. They only fit Command and High Command tiles.</li>
+        <li>Customizations are for Characters. They fit the slot on a hero tile and the Command tile slots.</li>
+        <li>Gear, trait and customization markers only help units shown on the tile that holds them. On a Command tile they help the whole army.</li>
+      </ul>
+      <h4>Army size</h4>
+      <ul>
+        <li>Free Battle Mode suggests 150 to 250 points for a small game and 500 or more for a large one. Championship games use 250 points and a maximum of 4 Order Tokens.</li>
+        <li>Do not spend every point on tiles. Options are what give an army its edge.</li>
+      </ul>
+      <h4>Breaking points</h4>
+      <p>The small red squares on a tile or option show how many of its units must be destroyed before it breaks. The tile art shows them, and the builder counts them for you.</p>
+      <h4>If a slot looks wrong</h4>
+      <p>The size and stripe data was read from the tile art. If your physical tiles disagree, tick "Show options that do not fit this slot" and place the option anyway. It will be flagged in amber.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="foot">
+  <p>Fan-made tool for Heroes of Normandie, Devil Pig Games. Tile art and names belong to their owners. You need the rulebook to play.</p>
+</footer>
+
+<script src="data/hon-bro-us.js"></script>
+<script src="data/hon-bro-ge.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

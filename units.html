@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-CA" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heroes of Normandie unit index</title>
+<meta name="description" content="Search every Recruitment Tile and Option in Heroes of Normandie Big Red One and see which units come with each one.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="upage">
+<header class="top">
+  <div class="brand">
+    <h1>Unit index</h1>
+    <p class="sub">Heroes of Normandie, Big Red One</p>
+  </div>
+  <div class="top-actions">
+    <a class="btn ghost" href="index.html">Army builder</a>
+    <button id="btnTheme" class="ghost" type="button" aria-label="Switch light or dark mode">Dark</button>
+  </div>
+</header>
+
+<section class="setup" aria-label="Search">
+  <div class="field">
+    <span class="label">Country</span>
+    <div id="nations" class="seg" role="group" aria-label="Country"></div>
+  </div>
+  <div class="field grow">
+    <label class="label" for="q">Search tiles, options and units</label>
+    <input id="q" type="search" placeholder="Rifle Platoon 1st Inf. Div. 16th Inf. Reg. A" autocomplete="off">
+  </div>
+  <div class="field">
+    <span class="label">View</span>
+    <div id="views" class="seg view-seg" role="group" aria-label="View"></div>
+  </div>
+</section>
+<section class="setup" id="kindRow" aria-label="Unit type" hidden style="padding-top:0">
+  <div id="kinds" class="chips" role="group" aria-label="Unit type"></div>
+</section>
+<p id="stat" class="ustat" aria-live="polite"></p>
+
+<main id="out" class="umain"></main>
+
+<div id="zoom" class="overlay zoom" hidden>
+  <figure>
+    <img id="zoomImg" alt="">
+    <figcaption id="zoomCap"></figcaption>
+  </figure>
+</div>
+
+<footer class="foot">
+  <p>Fan-made tool for Heroes of Normandie, Devil Pig Games. Tile art and names belong to their owners. You need the rulebook to play.</p>
+  <p>Unit lists were read from the tile and option art. Corrections and feedback: <a href="mailto:games@staroversky.com">games@staroversky.com</a></p>
+</footer>
+
+<script src="data/hon-bro-us.js"></script>
+<script src="data/hon-bro-ge.js"></script>
+<script src="js/units.js"></script>
+</body>
+</html>
