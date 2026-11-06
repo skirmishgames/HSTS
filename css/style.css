@@ -279,10 +279,12 @@ body.rlock{overflow:hidden}
 @media(max-width:600px){.rjump{flex-wrap:nowrap;overflow-x:auto}.rjump .chip{flex:none}.rmodal{padding:0}.rdlg{max-height:100%;height:100%;border-radius:0;border:0}.rdh{padding:.8rem 1rem .6rem}.rdb{padding:.8rem 1.1rem 1.4rem;font-size:1.04rem}.rdf{padding:.6rem 1rem}}
 .rpg{display:block;color:var(--muted);font-size:.75rem;text-align:right;margin-top:.3rem}
 /* history page */
-.hmain{max-width:900px}
+.hmain{max-width:none}
+.hgroup .hcat{display:none}
 .hgroup h2{font-size:1.05rem;margin:1rem 0 .4rem}
 .hgroup h2 small{color:var(--muted);font-weight:400;font-size:.85rem}
-.hlist{display:flex;flex-direction:column;gap:.35rem}
+.hlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,440px),1fr));gap:.4rem .6rem;align-items:start}
+.hrow.open{grid-column:1/-1}
 .hrow{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .hrow.open{border-color:var(--accent);box-shadow:var(--shadow)}
 button.hhead{width:100%;background:transparent;color:var(--ink);border:0;border-radius:0;display:flex;align-items:center;justify-content:flex-start;gap:.7rem;text-align:left;padding:.55rem .8rem;min-height:48px;font-weight:600}
