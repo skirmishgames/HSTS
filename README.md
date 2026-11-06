@@ -1,4 +1,4 @@
-# Heroes of Normandie army builder
+# Heroes System Tactical Scale
 
 A free fan-made army builder for Heroes of Normandie by Devil Pig Games. It runs in the browser with no account and no server. Everything is saved on your own device.
 

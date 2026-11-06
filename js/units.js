@@ -98,7 +98,7 @@
     $('boxes').innerHTML = BOXES.map(function (b) {
       return '<button type="button" data-box="' + b.id + '" class="' + (S.b === b.id ? 'on' : '') + '" aria-pressed="' + (S.b === b.id) + '">' + b.name + '</button>';
     }).join('');
-    $('subtitle').textContent = 'Heroes of Normandie, ' + BOXES.filter(function (b) { return b.id === S.b; })[0].name;
+    $('subtitle').textContent = 'Unit index, Heroes of Normandie, ' + BOXES.filter(function (b) { return b.id === S.b; })[0].name;
     $('ttypes').innerHTML = TTYPES.map(function (k) {
       return '<button type="button" class="chip' + (S.tt === k[0] ? ' on' : '') + '" data-tt="' + k[0] + '">' + k[1] + '</button>';
     }).join('');
