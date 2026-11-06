@@ -174,6 +174,26 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await hp.waitForTimeout(300);
   ok(await hp.locator('.empty2').count() === 1, 'history no-match message');
   ok(herrs.length === 0, 'history page: no console errors ' + herrs.join('|'));
+  // scenarios index page
+  const sp = await b.newPage({ viewport: { width: 1100, height: 900 } });
+  const serrs = []; sp.on('pageerror', e => serrs.push(e.message)); sp.on('console', m => { if (m.type() === 'error') serrs.push(m.text()); });
+  await sp.goto(url.replace('index.html', 'scenarios.html'));
+  ok(await sp.locator('.hrow').count() === 12, 'scenarios index lists 12 entries');
+  ok(await sp.locator('.hbody p').count() === 0, 'scenario text not loaded until opened');
+  const firstScen = (await sp.locator('.hrow .spg').allTextContents());
+  ok(firstScen.includes('p.10-14') && firstScen.includes('p.15') && firstScen.includes('p.26-27'), 'scenario page numbers shown');
+  await sp.locator('.hhead', { hasText: 'Plain Carnage' }).click();
+  ok((await sp.locator('.hrow.open').textContent()).includes('175 points'), 'scenario opens with details');
+  await sp.fill('#q', 'halftrack');
+  await sp.waitForTimeout(300);
+  ok((await sp.locator('.hname').first().textContent()).includes('Chicken Game'), 'scenario search finds Chicken Game');
+  await sp.fill('#q', '');
+  await sp.click('[data-type="Campaign"]');
+  ok(await sp.locator('.hrow').count() === 6, 'campaign filter shows 6');
+  await sp.fill('#q', 'zzzzqq');
+  await sp.waitForTimeout(300);
+  ok(await sp.locator('.empty2').count() === 1, 'scenarios no-match message');
+  ok(serrs.length === 0, 'scenarios page: no console errors ' + serrs.join('|'));
   // every "Find in the game" link returns at least one tile
   const data = JSON.parse(await hp.evaluate(() => JSON.stringify(window.HTS_HISTORY['hon-bro'].entries.filter(e => e.find).map(e => [e.id, e.find.n, e.find.q]))));
   const bad = [];

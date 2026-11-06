@@ -14,6 +14,7 @@ You need the rulebook to play. This project is not affiliated with or endorsed b
 - **Unit index.** `units.html` is a separate searchable page. Search "Rifle Platoon 1st Inf. Div. 16th Inf. Reg. A" and it shows that platoon with every unit on the tile and in each option that comes with it. A second view lists every unit and where it comes from. Every tile in the builder links to it.
 - **Rules search.** `rules.html` searches the Big Red One rulebook (V4.1) by word. Results show the section, sub-heading and page, with matches highlighted. Open any result to read the whole section, or browse the contents. The keyword glossary is included.
 - **Historical reference.** `history.html` has 65 short, searchable entries on the real formations, weapons, vehicles, aircraft and defences behind the Big Red One units. Entries are a collapsed index: click one to read it. Filter by side and category, and jump to the matching tiles in the unit index. Each entry links to its source. Data lives in `data/hon-bro-history.js`.
+- **Scenarios index.** `scenarios.html` lists every scenario in the Big Red One Scenario Booklet (V2.4) with its booklet page number, a summary and the key facts: date, armies and points, setup, length, how to win and special rules. It also lists the booklet's rules chapters with page numbers. Entries are a collapsed index you click to read. Data lives in `data/hon-bro-scenarios.js`.
 - **Save, share, print.** Save armies on your device, copy a link, export or import a file, print a roster sheet.
 
 Content so far: Big Red One, United States and Germany, 33 Recruitment Tiles and 127 options across the core box and the extra sets listed on the tile sheets.
@@ -33,11 +34,14 @@ js/app.js             the builder
 js/units.js           the unit index page
 js/rules.js           the rules search page
 js/history.js         the historical reference page
+js/scenarios.js       the scenarios index page
+data/hon-bro-scenarios.js the scenario summaries
 data/hon-bro-history.js the historical entries
 data/hon-bro-rules.js the rulebook text by section and page
 units.html
 rules.html
 history.html
+scenarios.html
 css/style.css
 test/smoke.js         Playwright smoke test
 ```
