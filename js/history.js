@@ -2,8 +2,8 @@
   'use strict';
   var LSK = 'hts.hon.bro.v1';
   var BOXES = [{ id: 'bro', name: 'Big Red One' }];
-  var SIDES = [{ id: 'all', name: 'Both' }, { id: 'us', name: 'American' }, { id: 'ge', name: 'German' }];
-  var SIDE_NAME = { us: 'American', ge: 'German', both: 'Both sides' };
+  var SIDES = [{ id: 'all', name: 'Both' }, { id: 'us', name: 'American' }, { id: 'ge', name: 'German' }, { id: 'uk', name: 'Commonwealth' }];
+  var SIDE_NAME = { us: 'American', ge: 'German', uk: 'Commonwealth', both: 'Both sides' };
   var S = { b: 'bro', q: '', side: 'all', cat: 'all', open: {}, theme: 'light' };
   var cache = {};
 
@@ -29,7 +29,7 @@
     var d = window.HTS_HISTORY['hon-' + S.b];
     d.entries.forEach(function (e) {
       e.head = norm(e.name + ' ' + (e.aka || []).join(' '));
-      e.hay = norm(e.name + ' ' + (e.aka || []).join(' ') + ' ' + e.cat + ' ' + SIDE_NAME[e.side] + ' ' + e.text + ' ' + e.facts.join(' '));
+      e.hay = norm(e.name + ' ' + (e.aka || []).join(' ') + ' ' + e.cat + ' ' + SIDE_NAME[e.side] + ' ' + (e.also || []).map(function (a) { return SIDE_NAME[a]; }).join(' ') + ' ' + e.text + ' ' + e.facts.join(' '));
     });
     cache[S.b] = d;
     return d;
@@ -65,7 +65,7 @@
     return '<div class="hrow' + (isOpen ? ' open' : '') + '" id="h-' + esc(e.id) + '">' +
       '<button type="button" class="hhead" data-toggle="' + esc(e.id) + '" aria-expanded="' + isOpen + '" aria-controls="hb-' + esc(e.id) + '">' +
       '<span class="hname">' + mk(e.name) + snip + '</span>' +
-      '<span class="hbadges"><span class="hb hb-' + e.side + '">' + SIDE_NAME[e.side] + '</span><span class="hb hcat">' + esc(e.cat) + '</span></span>' +
+      '<span class="hbadges"><span class="hb hb-' + e.side + '">' + SIDE_NAME[e.side] + '</span>' + (e.also || []).map(function (a) { return '<span class="hb hb-' + a + '">' + SIDE_NAME[a] + '</span>'; }).join('') + '<span class="hb hcat">' + esc(e.cat) + '</span></span>' +
       '<span class="hchev" aria-hidden="true"></span></button>' +
       '<div class="hbody" id="hb-' + esc(e.id) + '"' + (isOpen ? '' : ' hidden') + '>' + (isOpen ? body(e) : '') + '</div></div>';
   }
@@ -85,7 +85,7 @@
     renderControls(d);
     var toks = tokens(S.q), mk = markFn(toks), res = [];
     d.entries.forEach(function (e) {
-      if (S.side !== 'all' && e.side !== S.side && e.side !== 'both') return;
+      if (S.side !== 'all' && e.side !== S.side && e.side !== 'both' && (e.also || []).indexOf(S.side) < 0) return;
       if (S.cat !== 'all' && e.cat !== S.cat) return;
       var score = 0;
       if (toks.length) {
@@ -160,7 +160,7 @@
     var p = new URLSearchParams(location.search);
     if (BOXES.some(function (b) { return b.id === p.get('b'); })) S.b = p.get('b');
     if (p.get('q')) S.q = p.get('q');
-    if (p.get('n') === 'us' || p.get('n') === 'ge') S.side = p.get('n');
+    if (p.get('n') === 'us' || p.get('n') === 'ge' || p.get('n') === 'uk') S.side = p.get('n');
     var d = load();
     if (p.get('c') && d.cats.indexOf(p.get('c')) >= 0) S.cat = p.get('c');
     if (p.get('e')) p.get('e').split(',').forEach(function (id) { if (/^[a-z0-9]+$/.test(id)) S.open[id] = 1; });

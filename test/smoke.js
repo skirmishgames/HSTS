@@ -260,7 +260,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(await hrp.locator('.hrow').count() === 8, 'US heroes page lists 8 hero tiles');
   ok(await hrp.locator('.eqcard').count() === 12, 'equipment shows 12 cards across boxes');
   await hrp.click('[data-nation="ge"]');
-  ok(await hrp.locator('.hrow').count() === 4, 'German heroes page lists 4 hero tiles');
+  ok(await hrp.locator('.hrow').count() === 5, 'German heroes page lists 5 hero tiles');
   await hrp.locator('.hhead', { hasText: 'Ludwig' }).click();
   ok(await hrp.locator('.hrow.open .tchip', { hasText: 'Overwatch' }).count() === 1, 'Ludwig can take Overwatch');
   ok(await hrp.locator('.hrow.open .htile').count() === 1, 'hero tile image shown');

@@ -4,7 +4,7 @@
   var LSK = 'hts.hon.bro.v1';
   var BOXES = [{ id: 'bro', name: 'Big Red One' }];
   var TTYPES = [['all', 'All'], ['platoon', 'Platoons'], ['command', 'Command'], ['hero', 'Heroes'], ['landing', 'Landing'], ['special', 'Other']];
-  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }];
+  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }];
   var VIEWS = [['tile', 'By tile'], ['unit', 'Unit list']];
   var KINDS = [['all', 'All'], ['officer', 'Officers'], ['character', 'Characters'], ['infantry', 'Infantry'], ['weapon', 'Weapons'], ['vehicle', 'Vehicles'], ['marker', 'Markers'], ['aircraft', 'Aircraft']];
   var KIND_ORDER = ['officer', 'character', 'infantry', 'weapon', 'vehicle', 'marker', 'aircraft'];

@@ -16,9 +16,22 @@ HTS_DATA["hon-bro-ge"] = {
   "Pak 40": "img/hon/bro/ge/units/german-options-pak-40-a.webp",
   "SdKfz 234/2 Puma": "img/hon/bro/ge/units/german-options-sd-kfz-234-2-puma-a.webp",
   "Panzer II Luchs": "img/hon/bro/ge/units/german-options-panzer-ii-luchs-a.webp",
-  "Panzer IV": "img/hon/bro/ge/units/german-options-panzer-iv-01-a.webp",
+  "Panzer IV": "img/hon/bro/ge/units/ecg-panzer-iv.webp",
   "MG 42": "img/hon/bro/ge/units/1st-batallion-mg-42-a.webp",
-  "Panzerschreck": "img/hon/bro/ge/units/1st-batallion-panzerschreck.webp"
+  "Panzerschreck": "img/hon/bro/ge/units/ecg-panzerschreck.webp",
+  "Emil Dürr": "img/hon/bro/ge/units/ecg-emil-durr.webp",
+  "Hstuf. Milius": "img/hon/bro/ge/units/ecg-hstuf-milius.webp",
+  "Tiger I": "img/hon/bro/ge/units/ecg-tiger-i.webp",
+  "Panther Ausf. A Command": "img/hon/bro/ge/units/ecg-panther-ausf-a-command.webp",
+  "Panther Ausf. A": "img/hon/bro/ge/units/ecg-panther-ausf-a.webp",
+  "StuG IV": "img/hon/bro/ge/units/ecg-stug-iv.webp",
+  "Stubaf. Waldmüller": "img/hon/bro/ge/units/ecg-stubaf-waldmuller.webp",
+  "SS Fire Group": "img/hon/bro/ge/units/ecg-ss-fire-group.webp",
+  "SS MG Group": "img/hon/bro/ge/units/ecg-ss-mg-group.webp",
+  "SS Recon Group": "img/hon/bro/ge/units/ecg-ss-recon-group.webp",
+  "SS Flamer": "img/hon/bro/ge/units/ecg-ss-flamer.webp",
+  "8cm Granatwerfer": "img/hon/bro/ge/units/ecg-8cm-granatwerfer.webp",
+  "MG 42 HMG": "img/hon/bro/ge/units/ecg-mg-42-hmg.webp"
  },
  "tiles": [
   {
@@ -866,6 +879,273 @@ HTS_DATA["hon-bro-ge"] = {
     "assault_group_ss",
     "magnetic_mine",
     "panzerschreck_ss"
+   ]
+  },
+  {
+   "id": "feldkommando_milius",
+   "name": "Feldkommando",
+   "sub": "Hauptsturmführer Karl-Heinz Milius",
+   "cost": 30,
+   "type": "command",
+   "set": "ECG",
+   "squares": 0,
+   "img": "img/hon/bro/ge/tiles/feldkommando_milius.webp",
+   "w": 1679,
+   "h": 589,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "Hstuf. Milius",
+     1,
+     "officer"
+    ]
+   ],
+   "uimg": {
+    "Hstuf. Milius": "img/hon/bro/ge/units/ecg-hstuf-milius.webp",
+    "Tiger I": "img/hon/bro/ge/units/ecg-tiger-i.webp"
+   },
+   "slots": [
+    {
+     "x": 0.0295,
+     "y": 0.2174,
+     "w": 0.2527,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    },
+    {
+     "x": 0.5672,
+     "y": 0.2174,
+     "w": 0.1969,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    },
+    {
+     "x": 0.7729,
+     "y": 0.2174,
+     "w": 0.1969,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    }
+   ],
+   "own": [
+    "fanatic",
+    "fortified",
+    "initiative_ge",
+    "tiger_i"
+   ]
+  },
+  {
+   "id": "emil_durr",
+   "name": "Emil Dürr",
+   "sub": "Death Joker",
+   "cost": 35,
+   "type": "hero",
+   "set": "ECG",
+   "squares": 1,
+   "img": "img/hon/bro/ge/tiles/emil_durr.webp",
+   "w": 800,
+   "h": 589,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "Emil Dürr",
+     1,
+     "character"
+    ]
+   ],
+   "uimg": {
+    "Emil Dürr": "img/hon/bro/ge/units/ecg-emil-durr.webp"
+   },
+   "slots": [
+    {
+     "x": 0.5176,
+     "y": 0.1968,
+     "w": 0.4143,
+     "h": 0.5918,
+     "size": "n",
+     "stripes": [
+      "custom"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "ss_panzergruppe",
+   "name": "SS-Panzergruppe",
+   "sub": "I. SS-Panzerregiment 12, 12. SS-Pz-Div",
+   "cost": 160,
+   "type": "platoon",
+   "set": "ECG",
+   "squares": 2,
+   "img": "img/hon/bro/ge/tiles/ss_panzergruppe.webp",
+   "w": 1590,
+   "h": 589,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "Panther Ausf. A Command",
+     1,
+     "vehicle"
+    ],
+    [
+     "Panther Ausf. A",
+     1,
+     "vehicle"
+    ]
+   ],
+   "uimg": {
+    "Panther Ausf. A Command": "img/hon/bro/ge/units/ecg-panther-ausf-a-command.webp",
+    "Panther Ausf. A": "img/hon/bro/ge/units/ecg-panther-ausf-a.webp",
+    "StuG IV": "img/hon/bro/ge/units/ecg-stug-iv.webp",
+    "Panzer IV": "img/hon/bro/ge/units/ecg-panzer-iv.webp"
+   },
+   "slots": [
+    {
+     "x": 0.0386,
+     "y": 0.2174,
+     "w": 0.2623,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "Y",
+      "K"
+     ]
+    },
+    {
+     "x": 0.5432,
+     "y": 0.2174,
+     "w": 0.2052,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "Y",
+      "K"
+     ]
+    },
+    {
+     "x": 0.7639,
+     "y": 0.2174,
+     "w": 0.2006,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "Y",
+      "K"
+     ]
+    }
+   ],
+   "own": [
+    "tank_gear_ss",
+    "tank_ammo_ss",
+    "stug_iv_ss",
+    "panzer_iv_ss",
+    "panther_ausf_a_ss"
+   ]
+  },
+  {
+   "id": "ss_panzergrenadiere_hj",
+   "name": "SS-Panzergrenadiere",
+   "sub": "I. Battalion, Reg. 25, 12. SS Pz Div Hitlerjugend",
+   "cost": 90,
+   "type": "platoon",
+   "set": "ECG",
+   "squares": 3,
+   "img": "img/hon/bro/ge/tiles/ss_panzergrenadiere_hj.webp",
+   "w": 2028,
+   "h": 589,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "Stubaf. Waldmüller",
+     1,
+     "officer"
+    ],
+    [
+     "SS Fire Group",
+     2,
+     "infantry"
+    ],
+    [
+     "SS MG Group",
+     1,
+     "infantry"
+    ]
+   ],
+   "uimg": {
+    "Stubaf. Waldmüller": "img/hon/bro/ge/units/ecg-stubaf-waldmuller.webp",
+    "SS Fire Group": "img/hon/bro/ge/units/ecg-ss-fire-group.webp",
+    "SS MG Group": "img/hon/bro/ge/units/ecg-ss-mg-group.webp",
+    "SS Recon Group": "img/hon/bro/ge/units/ecg-ss-recon-group.webp",
+    "SS Flamer": "img/hon/bro/ge/units/ecg-ss-flamer.webp",
+    "Panzerschreck": "img/hon/bro/ge/units/ecg-panzerschreck.webp",
+    "8cm Granatwerfer": "img/hon/bro/ge/units/ecg-8cm-granatwerfer.webp",
+    "MG 42 HMG": "img/hon/bro/ge/units/ecg-mg-42-hmg.webp"
+   },
+   "slots": [
+    {
+     "x": 0.0295,
+     "y": 0.2174,
+     "w": 0.2058,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "K",
+      "Y"
+     ]
+    },
+    {
+     "x": 0.2473,
+     "y": 0.2174,
+     "w": 0.1574,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "K",
+      "Y"
+     ]
+    },
+    {
+     "x": 0.5922,
+     "y": 0.2174,
+     "w": 0.1634,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "K",
+      "Y"
+     ]
+    },
+    {
+     "x": 0.7677,
+     "y": 0.2174,
+     "w": 0.2058,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "K",
+      "Y"
+     ]
+    }
+   ],
+   "own": [
+    "assault_group_hj",
+    "flamer_group_hj",
+    "panzerschreck_group_hj",
+    "granatwerfer_8cm_hj",
+    "mg42_hmg_hj"
    ]
   }
  ],
@@ -2236,6 +2516,328 @@ HTS_DATA["hon-bro-ge"] = {
    "units": [
     [
      "SS Panzerschreck",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "fanatic",
+   "name": "Fanatic",
+   "cat": "trait",
+   "cost": 15,
+   "squares": 0,
+   "set": "ECG",
+   "size": "n",
+   "stripes": [
+    "cmd"
+   ],
+   "img": "img/hon/bro/ge/options/fanatic.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "ECG-GE"
+  },
+  {
+   "id": "fortified",
+   "name": "Fortified",
+   "cat": "order",
+   "cost": 15,
+   "squares": 0,
+   "set": "ECG",
+   "size": "n",
+   "stripes": [
+    "cmd"
+   ],
+   "img": "img/hon/bro/ge/options/fortified.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "ECG-GE"
+  },
+  {
+   "id": "initiative_ge",
+   "name": "Initiative",
+   "cat": "order",
+   "cost": 10,
+   "squares": 0,
+   "set": "ECG",
+   "size": "n",
+   "stripes": [
+    "cmd"
+   ],
+   "img": "img/hon/bro/ge/options/initiative_ge.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "ECG-GE"
+  },
+  {
+   "id": "tiger_i",
+   "name": "Tiger I",
+   "cat": "support",
+   "cost": 90,
+   "squares": 1,
+   "set": "ECG",
+   "size": "w",
+   "stripes": [
+    "cmd"
+   ],
+   "img": "img/hon/bro/ge/options/tiger_i.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "Tiger I",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "panther_ausf_a_ss",
+   "name": "Panther Ausf. A",
+   "cat": "support",
+   "cost": 80,
+   "squares": 1,
+   "set": "ECG",
+   "size": "w",
+   "stripes": [
+    "Y",
+    "K"
+   ],
+   "img": "img/hon/bro/ge/options/panther_ausf_a_ss.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "Panther Ausf. A",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "panzer_iv_ss",
+   "name": "Panzer IV",
+   "cat": "support",
+   "cost": 65,
+   "squares": 1,
+   "set": "ECG",
+   "size": "w",
+   "stripes": [
+    "Y",
+    "K"
+   ],
+   "img": "img/hon/bro/ge/options/panzer_iv_ss.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "Panzer IV",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "stug_iv_ss",
+   "name": "StuG IV",
+   "cat": "support",
+   "cost": 65,
+   "squares": 1,
+   "set": "ECG",
+   "size": "w",
+   "stripes": [
+    "Y",
+    "K"
+   ],
+   "img": "img/hon/bro/ge/options/stug_iv_ss.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "StuG IV",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "tank_gear_ss",
+   "name": "Tank Gear",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "ECG",
+   "size": "n",
+   "stripes": [
+    "Y",
+    "K"
+   ],
+   "img": "img/hon/bro/ge/options/tank_gear_ss.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "ECG-GE"
+  },
+  {
+   "id": "tank_ammo_ss",
+   "name": "Tank Ammo",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "ECG",
+   "size": "n",
+   "stripes": [
+    "Y",
+    "K"
+   ],
+   "img": "img/hon/bro/ge/options/tank_ammo_ss.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "ECG-GE"
+  },
+  {
+   "id": "assault_group_hj",
+   "name": "Assault Group",
+   "cat": "support",
+   "cost": 65,
+   "squares": 2,
+   "set": "ECG",
+   "size": "w",
+   "stripes": [
+    "K",
+    "Y"
+   ],
+   "img": "img/hon/bro/ge/options/assault_group_hj.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "SS Fire Group",
+     2,
+     "infantry"
+    ],
+    [
+     "SS MG Group",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "flamer_group_hj",
+   "name": "Flamer Group",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "ECG",
+   "size": "w",
+   "stripes": [
+    "K",
+    "Y"
+   ],
+   "img": "img/hon/bro/ge/options/flamer_group_hj.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "SS Recon Group",
+     1,
+     "infantry"
+    ],
+    [
+     "SS Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "SS Flamer",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "panzerschreck_group_hj",
+   "name": "Panzerschreck Group",
+   "cat": "support",
+   "cost": 55,
+   "squares": 2,
+   "set": "ECG",
+   "size": "w",
+   "stripes": [
+    "K",
+    "Y"
+   ],
+   "img": "img/hon/bro/ge/options/panzerschreck_group_hj.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "SS Recon Group",
+     1,
+     "infantry"
+    ],
+    [
+     "SS Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Panzerschreck",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "granatwerfer_8cm_hj",
+   "name": "8cm Granatwerfer",
+   "cat": "support",
+   "cost": 20,
+   "squares": 1,
+   "set": "ECG",
+   "size": "n",
+   "stripes": [
+    "K",
+    "Y"
+   ],
+   "img": "img/hon/bro/ge/options/granatwerfer_8cm_hj.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "8cm Granatwerfer",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "mg42_hmg_hj",
+   "name": "MG 42 HMG",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "ECG",
+   "size": "n",
+   "stripes": [
+    "K",
+    "Y"
+   ],
+   "img": "img/hon/bro/ge/options/mg42_hmg_hj.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "ECG-GE",
+   "units": [
+    [
+     "MG 42 HMG",
      1,
      "weapon"
     ]

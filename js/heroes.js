@@ -1,13 +1,13 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'promo', name: 'Promo heroes' }];
-  var SETBOX = { CB: 'bro', BO: 'omaha' };
+  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen-ecg', name: 'Battle for Caen: Epsom, Charnwood & Goodwood' }, { id: 'promo', name: 'Promo heroes' }];
+  var SETBOX = { CB: 'bro', BO: 'omaha', ECG: 'caen-ecg' };
   function boxOf(t) { return SETBOX[t.set] || 'promo'; }
   function boxName(id) { return BOXES.filter(function (b) { return b.id === id; })[0].name; }
-  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }];
+  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }];
   var CATS = [['customization', 'Customizations'], ['gear', 'Gear'], ['trait', 'Character traits'], ['support', 'Support units'], ['order', 'Orders']];
-  var STRIPE = { R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', cmd: 'command', custom: 'customization', any: 'common' };
+  var STRIPE = { R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', cmd: 'command', custom: 'customization', any: 'common' };
   var KIND = { officer: 'Officer', character: 'Character', infantry: 'Infantry', weapon: 'Weapon', vehicle: 'Vehicle', marker: 'Marker', aircraft: 'Aircraft' };
   var S = { b: 'all', n: 'us', q: '', open: {}, theme: 'light' };
   var cache = {};
@@ -81,7 +81,7 @@
     return '<div class="hrow' + (isOpen ? ' open' : '') + '" id="h-' + esc(t.id) + '">' +
       '<button type="button" class="hhead" data-toggle="' + esc(t.id) + '" aria-expanded="' + isOpen + '" aria-controls="hb-' + esc(t.id) + '">' +
       '<span class="hname">' + mk(t.name) + '<span class="hsnip">' + mk(t.sub || '') + '</span></span>' +
-      '<span class="hbadges"><span class="hb">' + esc(boxName(boxOf(t))) + '</span><span class="hb ' + (S.n === 'us' ? 'hb-us' : 'hb-ge') + '">' + t.cost + ' pts</span></span>' +
+      '<span class="hbadges"><span class="hb">' + esc(boxName(boxOf(t))) + '</span><span class="hb ' + ('hb-' + S.n) + '">' + t.cost + ' pts</span></span>' +
       '<span class="hchev" aria-hidden="true"></span></button>' +
       '<div class="hbody" id="hb-' + esc(t.id) + '"' + (isOpen ? '' : ' hidden') + '>' + (isOpen ? body(t) : '') + '</div></div>';
   }
@@ -157,7 +157,7 @@
     };
   }
   function init() {
-    try { var j = JSON.parse(localStorage.getItem(LSK) || '{}'); if (j.theme) S.theme = j.theme; if (j.nation === 'ge' || j.nation === 'us') S.n = j.nation; } catch (e) { /* ignore */ }
+    try { var j = JSON.parse(localStorage.getItem(LSK) || '{}'); if (j.theme) S.theme = j.theme; if (j.nation === 'ge' || j.nation === 'us' || j.nation === 'uk') S.n = j.nation; } catch (e) { /* ignore */ }
     var p = new URLSearchParams(location.search);
     if (NATIONS.some(function (n) { return n.id === p.get('n'); })) S.n = p.get('n');
     if (BOXES.some(function (b) { return b.id === p.get('b'); })) S.b = p.get('b');

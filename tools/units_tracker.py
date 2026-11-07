@@ -48,12 +48,10 @@ def keys_for(entry):
 def covered(names, entries, nation):
     ns = [norm(n) for n in names if n]
     for e in entries:
-        f = e.get('find')
-        if f and f['n'] != nation and f['n'] not in ('', None):
-            kk = keys_for(e)
-        else:
-            kk = keys_for(e)
-        for k in kk:
+        side = e.get('side')
+        if side and side not in (nation, 'both', 'all') and nation not in (e.get('also') or []):
+            continue
+        for k in keys_for(e):
             for n in ns:
                 if n and (k == n or (len(k) > 4 and k in n) or (len(n) > 4 and n in k)):
                     return e['id']
@@ -76,7 +74,8 @@ def rows():
                 tile_hit = tile_hit or ex['types'].get(t['type'], '') or ex['names'].get(t['name'], '')
                 out.append([box, nat, 'tile', t['name'], t['type'], t['name'], t.get('sub', ''), tile_hit])
             for o in d.get('options', []):
-                hit = covered([o['name']], entries, nat) or ex['kinds'].get('option', '')
+                # a support option is covered when its own name or any unit it lists is covered
+                hit = covered([o['name']] + [u[0] for u in (o.get('units') or [])], entries, nat) or ex['cats'].get(o['cat'], '')
                 out.append([box, nat, 'option', o['name'], o['cat'], '', '', hit])
     return out
 

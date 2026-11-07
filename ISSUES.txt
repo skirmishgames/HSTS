@@ -1,5 +1,5 @@
 HEROES SYSTEM TACTICAL SCALE: ISSUES TO BE ADDRESSED
-Last updated: 2026-11-06 (site version hts-v23)
+Last updated: 2026-11-06 (site version hts-v24)
 
 HOW TO USE THIS FILE
 - One entry per issue. Never delete an entry. Change its status and add a dated line under "Decision".
@@ -174,3 +174,21 @@ ISS-022  Rule text and figures are machine extracted   [OPEN]
 Where: data/hon-bro-rules.js, data/hon-omaha-rules.js, img/hon/<box>/rules/
 Detail: Figures are cropped from the rulebook pages by position and attached to the nearest rule entry above them in the same column. A few can sit under a neighbouring entry on the same page. Inline icons inside sentences are not in the text, so a few Omaha passages were repaired by hand (Stress, Bunker, Substitute, Barrage order, NCO, Bangalores, Smoke, Barbed wire, Tank gear). Omaha text pages 4-14 only. The Omaha scenario pages and tile/option notes are still to do.
 Decision: 2026-11-06 Ship as is, correct on request. Check against the printed rulebook for exact wording.
+
+----------------------------------------------------------------
+BATTLE FOR CAEN: EPSOM, CHARNWOOD & GOODWOOD (units imported)
+----------------------------------------------------------------
+
+ISS-025  Ranks on the ECG cards differ from the sources   [OPEN]
+Where: data/hon-bro-uk.js (High Command Dempsey, Field Command Mathieu), data/hon-bro-ge.js (Feldkommando Milius).
+Conflict: Tile text says Brigadier General Miles Dempsey; he was a lieutenant-general in 1944. Tile says Colonel Mathieu; sources say lieutenant-colonel. Unit card says Hstuf. Milius; sources say SS-Obersturmbannführer.
+Decision: 2026-11-06 Tile data keeps the printed text. The History entries give the sourced rank and say the card differs. Check your physical cards.
+
+ISS-026  Named officers with no source   [OPEN]
+Where: Major Lapointe (Chaudière), P.E. Gower (Royal Winnipeg Rifles), Lt. D. Wye (Worcestershire); heroes Jack Banks, Ludger Houde, Sgt Lee Lowe, Emil Dürr.
+Detail: No record found for any of them. They may be invented or film-inspired. They are listed as exclusions in tools/tracker_exclusions.json and have no History entry.
+Decision: 2026-11-06 Leave without entries until a source turns up.
+
+ISS-027  Caen ECG rules, scenarios and tokens not imported   [OPEN]
+Where: Caen ENG V1.4 - WIP.pdf (28 pages). Units, tiles and options are in. Rules, six campaign scenarios plus the bonus scenario, tokens and icons are next, then Windsor & Jupiter.
+Note: the booklet is a work in progress (V1.4). Check for a newer version when the box is finished.

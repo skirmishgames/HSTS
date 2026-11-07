@@ -2,7 +2,7 @@
   'use strict';
 
   var LSK = 'hts.hon.bro.v1';
-  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }];
+  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }];
   var PRESETS = [150, 200, 250, 300, 350, 400, 500];
   var TYPES = [['all', 'All'], ['platoon', 'Platoons'], ['command', 'Command'], ['hero', 'Heroes'], ['landing', 'Landing'], ['special', 'Other']];
   var TYPE_ORDER = { command: 0, platoon: 1, hero: 2, landing: 3, special: 4 };
@@ -85,7 +85,7 @@
     return list.map(function (s) { return '<span class="dot ' + esc(s) + '" title="' + stripeName(s) + '"></span>'; }).join('');
   }
   function stripeName(s) {
-    return ({ R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', cmd: 'command stripes', custom: 'customization', any: 'common, fits any slot' })[s] || s;
+    return ({ R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', cmd: 'command stripes', custom: 'customization', any: 'common, fits any slot' })[s] || s;
   }
   function pips(n) { var s = ''; for (var i = 0; i < n; i++) s += '■'; return s; }
   function costLabel(c) { return c == null ? 'SP' : String(c); }

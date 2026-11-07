@@ -132,7 +132,7 @@ select,input[type=text],input[type=number],input[type=search]{background:var(--p
 .dot{display:inline-block;width:12px;height:12px;border-radius:50%;border:1px solid rgba(0,0,0,.6)}
 .dot.R{background:#c62828}.dot.Y{background:#f2c200}.dot.B{background:#1f4fa3}.dot.LB{background:#4aa8e0}
 .dot.W{background:#f5f5f5}.dot.K{background:#141414;border-color:#bbb}.dot.G{background:#8bc34a}
-.dot.T{background:#d8c79b}.dot.O{background:#e8650d}.dot.custom{background:#3aa6a0}
+.dot.T{background:#d8c79b}.dot.OL{background:#5b5a3a}.dot.CR{background:#d2c09a}.dot.BL{background:#3c6ea8}.dot.LY{background:#ecdf9a}.dot.O{background:#e8650d}.dot.custom{background:#3aa6a0}
 .dot.cmd{background:linear-gradient(90deg,#c62828 0 33%,#fff 33% 66%,#1f4fa3 66%)}
 .dot.any{background:conic-gradient(#c62828,#f2c200,#4aa8e0,#c62828)}
 .optlist{list-style:none;margin:.5rem 0 0;padding:0;display:flex;flex-direction:column;gap:.2rem;font-size:.9rem}
@@ -536,3 +536,4 @@ body.lbxopen{overflow:hidden}
 .sdlbar{padding:0 1rem;margin:.4rem 0}.sdlbar ul{list-style:none;margin:.3rem 0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center}.sdlbar li{display:flex;flex-wrap:wrap;gap:.2rem .6rem;align-items:center}
 .scrumb a,.sread a:not(.btn){color:var(--accent)}
 .scrumb a{font-weight:500}
+.hb-uk{background:var(--brass,#e0b83a);color:#2a2818;border-color:#2a2818}

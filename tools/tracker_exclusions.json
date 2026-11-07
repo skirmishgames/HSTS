@@ -1,10 +1,22 @@
 {
- "_note": "Items that are not History gaps. 'mechanic' = game rule (belongs in Rules). 'fictional' = invented or film-inspired character with no source found; revisit if the publisher or a verifiable source names the inspiration.",
- "kinds": {"option": "mechanic"},
- "types": {"character": "fictional", "hero": "fictional"},
+ "_note": "Items that are not History gaps. 'mechanic' = game rule card (orders, traits, gear, customizations; they belong in Rules). Support options are real units and need History entries. 'fictional' = invented or film-inspired character with no source found; revisit if a verifiable source names the inspiration. 'unsourced' = a named officer on a unit card that no source found for; revisit if the game's designers name the real person.",
+ "kinds": {},
+ "types": {
+  "character": "fictional",
+  "hero": "fictional"
+ },
  "names": {
   "Major Karl Brassert": "fictional",
   "Feldkommando": "fictional",
-  "Luke Brassert": "fictional"
+  "Luke Brassert": "fictional",
+  "Major Lapointe": "unsourced",
+  "P.E. Gower": "unsourced",
+  "Lt. D. Wye": "unsourced"
+ },
+ "cats": {
+  "order": "mechanic",
+  "trait": "mechanic",
+  "gear": "mechanic",
+  "customization": "mechanic"
  }
 }

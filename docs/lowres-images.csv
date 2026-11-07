@@ -13,6 +13,10 @@ bro,ge,tile,"Festungskompanie (II. Bataillon, Reg. 916, 352. Inf. Div.)",img/hon
 bro,ge,tile,"Panzer-Aufklärungs (Abteilung 2, 2. Panzer Div.)",img/hon/bro/ge/tiles/panzer_aufklaerungs.webp,648,246,39070,low
 bro,ge,tile,"Panzergruppe (II. Panzer Abteilung, 3. Pz. Reg., 2. Pz. Div.)",img/hon/bro/ge/tiles/panzergruppe.webp,648,248,36858,low
 bro,ge,tile,"SS Panzergrenadiere (III. Bataillon, Reg. 25, 12. SS Pz. Div. Hitlerjugend)",img/hon/bro/ge/tiles/ss_panzergrenadiere.webp,790,248,46966,low
+bro,ge,tile,Feldkommando (Hauptsturmführer Karl-Heinz Milius),img/hon/bro/ge/tiles/feldkommando_milius.webp,1679,589,187492,low
+bro,ge,tile,Emil Dürr (Death Joker),img/hon/bro/ge/tiles/emil_durr.webp,800,589,83314,low
+bro,ge,tile,"SS-Panzergruppe (I. SS-Panzerregiment 12, 12. SS-Pz-Div)",img/hon/bro/ge/tiles/ss_panzergruppe.webp,1590,589,180594,low
+bro,ge,tile,"SS-Panzergrenadiere (I. Battalion, Reg. 25, 12. SS Pz Div Hitlerjugend)",img/hon/bro/ge/tiles/ss_panzergrenadiere_hj.webp,2028,589,242402,
 bro,ge,unit,Major Karl Brassert,img/hon/bro/ge/units/german-hq-brassert-a.webp,352,352,30246,low
 bro,ge,unit,Helmut,img/hon/bro/ge/units/german-heroes-helmut-a.webp,352,352,27816,low
 bro,ge,unit,Otto,img/hon/bro/ge/units/german-heroes-otto-a.webp,352,352,31274,low
@@ -24,9 +28,22 @@ bro,ge,unit,Flak 38,img/hon/bro/ge/units/german-options-flak-38.webp,351,460,390
 bro,ge,unit,Pak 40,img/hon/bro/ge/units/german-options-pak-40-a.webp,351,460,39082,low
 bro,ge,unit,SdKfz 234/2 Puma,img/hon/bro/ge/units/german-options-sd-kfz-234-2-puma-a.webp,277,460,33438,low
 bro,ge,unit,Panzer II Luchs,img/hon/bro/ge/units/german-options-panzer-ii-luchs-a.webp,277,460,32704,low
-bro,ge,unit,Panzer IV,img/hon/bro/ge/units/german-options-panzer-iv-01-a.webp,232,460,34112,low
+bro,ge,unit,Panzer IV,img/hon/bro/ge/units/ecg-panzer-iv.webp,508,1008,126878,
 bro,ge,unit,MG 42,img/hon/bro/ge/units/1st-batallion-mg-42-a.webp,459,459,43274,low
-bro,ge,unit,Panzerschreck,img/hon/bro/ge/units/1st-batallion-panzerschreck.webp,459,459,46710,low
+bro,ge,unit,Panzerschreck,img/hon/bro/ge/units/ecg-panzerschreck.webp,459,459,52360,low
+bro,ge,unit,Emil Dürr,img/hon/bro/ge/units/ecg-emil-durr.webp,352,352,32252,low
+bro,ge,unit,Hstuf. Milius,img/hon/bro/ge/units/ecg-hstuf-milius.webp,352,352,33274,low
+bro,ge,unit,Tiger I,img/hon/bro/ge/units/ecg-tiger-i.webp,508,1008,133422,
+bro,ge,unit,Panther Ausf. A Command,img/hon/bro/ge/units/ecg-panther-ausf-a-command.webp,508,1008,130472,
+bro,ge,unit,Panther Ausf. A,img/hon/bro/ge/units/ecg-panther-ausf-a.webp,508,1008,129216,
+bro,ge,unit,StuG IV,img/hon/bro/ge/units/ecg-stug-iv.webp,508,1008,121572,
+bro,ge,unit,Stubaf. Waldmüller,img/hon/bro/ge/units/ecg-stubaf-waldmuller.webp,352,352,33588,low
+bro,ge,unit,SS Fire Group,img/hon/bro/ge/units/ecg-ss-fire-group.webp,459,459,54334,low
+bro,ge,unit,SS MG Group,img/hon/bro/ge/units/ecg-ss-mg-group.webp,459,459,55738,low
+bro,ge,unit,SS Recon Group,img/hon/bro/ge/units/ecg-ss-recon-group.webp,459,459,51330,low
+bro,ge,unit,SS Flamer,img/hon/bro/ge/units/ecg-ss-flamer.webp,459,459,50048,low
+bro,ge,unit,8cm Granatwerfer,img/hon/bro/ge/units/ecg-8cm-granatwerfer.webp,459,459,53008,low
+bro,ge,unit,MG 42 HMG,img/hon/bro/ge/units/ecg-mg-42-hmg.webp,459,459,50846,low
 bro,ge,option,Bluff,img/hon/bro/ge/options/bluff.webp,256,352,19618,low
 bro,ge,option,Planning,img/hon/bro/ge/options/planning.webp,256,352,21728,low
 bro,ge,option,MG Nest,img/hon/bro/ge/options/mg_nest.webp,256,352,24172,low
@@ -89,6 +106,95 @@ bro,ge,option,Tankbuster,img/hon/bro/ge/options/tankbuster.webp,112,150,5830,low
 bro,ge,option,Assault Group,img/hon/bro/ge/options/assault_group_ss.webp,152,150,7600,low
 bro,ge,option,Magnetic Mine,img/hon/bro/ge/options/magnetic_mine.webp,112,134,4766,low
 bro,ge,option,Panzerschreck,img/hon/bro/ge/options/panzerschreck_ss.webp,114,150,4928,low
+bro,ge,option,Fanatic,img/hon/bro/ge/options/fanatic.webp,256,352,26228,low
+bro,ge,option,Fortified,img/hon/bro/ge/options/fortified.webp,256,352,23672,low
+bro,ge,option,Initiative,img/hon/bro/ge/options/initiative_ge.webp,256,352,21694,low
+bro,ge,option,Tiger I,img/hon/bro/ge/options/tiger_i.webp,352,352,33740,low
+bro,ge,option,Panther Ausf. A,img/hon/bro/ge/options/panther_ausf_a_ss.webp,352,352,34904,low
+bro,ge,option,Panzer IV,img/hon/bro/ge/options/panzer_iv_ss.webp,352,352,32808,low
+bro,ge,option,StuG IV,img/hon/bro/ge/options/stug_iv_ss.webp,352,352,33474,low
+bro,ge,option,Tank Gear,img/hon/bro/ge/options/tank_gear_ss.webp,256,352,24710,low
+bro,ge,option,Tank Ammo,img/hon/bro/ge/options/tank_ammo_ss.webp,256,352,25776,low
+bro,ge,option,Assault Group,img/hon/bro/ge/options/assault_group_hj.webp,352,352,42498,low
+bro,ge,option,Flamer Group,img/hon/bro/ge/options/flamer_group_hj.webp,352,352,40684,low
+bro,ge,option,Panzerschreck Group,img/hon/bro/ge/options/panzerschreck_group_hj.webp,352,352,42042,low
+bro,ge,option,8cm Granatwerfer,img/hon/bro/ge/options/granatwerfer_8cm_hj.webp,256,352,25330,low
+bro,ge,option,MG 42 HMG,img/hon/bro/ge/options/mg42_hmg_hj.webp,256,352,24006,low
+bro,uk,tile,Field Command (Colonel J.E.G. Paul Mathieu),img/hon/bro/uk/tiles/field_command_mathieu.webp,1679,589,173972,low
+bro,uk,tile,High Command (Brigadier General Miles Dempsey),img/hon/bro/uk/tiles/high_command_dempsey.webp,2028,589,223068,
+bro,uk,tile,Jack Banks (Youngster),img/hon/bro/uk/tiles/jack_banks.webp,800,589,88288,low
+bro,uk,tile,Ludger Houde (Chimney Breaker),img/hon/bro/uk/tiles/ludger_houde.webp,800,589,82552,low
+bro,uk,tile,Sgt Lee Lowe (Tank Leader),img/hon/bro/uk/tiles/sgt_lee_lowe.webp,800,589,84246,low
+bro,uk,tile,"23rd Hussars (29th Ar. Brigade, 11th Ar. Div.)",img/hon/bro/uk/tiles/hussars_23.webp,1590,589,201348,low
+bro,uk,tile,"Régiment de la Chaudière (8th Inf. Brigade, 3rd Ca. Inf. Div.)",img/hon/bro/uk/tiles/chaudiere.webp,2028,589,216378,
+bro,uk,tile,"Royal Winnipeg Rifles (7th Inf. Brigade, 3rd Ca. Inf. Div.)",img/hon/bro/uk/tiles/rwr.webp,1590,589,182996,low
+bro,uk,tile,"Worcestershire Regiment (214th Inf. Brigade, 43rd Inf. Div.)",img/hon/bro/uk/tiles/worcestershire.webp,2028,589,245050,
+bro,uk,unit,M4 Sherman Command,img/hon/bro/uk/units/ecg-m4-sherman-command.webp,508,1008,125682,
+bro,uk,unit,M4 Sherman,img/hon/bro/uk/units/ecg-m4-sherman.webp,508,1008,115808,
+bro,uk,unit,25pdr Sexton,img/hon/bro/uk/units/ecg-25pdr-sexton.webp,508,1008,130238,
+bro,uk,unit,Sherman Firefly,img/hon/bro/uk/units/ecg-sherman-firefly.webp,508,1008,99358,
+bro,uk,unit,Major Lapointe,img/hon/bro/uk/units/ecg-major-lapointe.webp,352,352,32276,low
+bro,uk,unit,Leader Team,img/hon/bro/uk/units/ecg-leader-team.webp,459,459,50192,low
+bro,uk,unit,Fire Team,img/hon/bro/uk/units/ecg-fire-team.webp,459,459,50076,low
+bro,uk,unit,2 Inch Mortar,img/hon/bro/uk/units/ecg-2-inch-mortar.webp,459,459,48838,low
+bro,uk,unit,Bren,img/hon/bro/uk/units/ecg-bren.webp,459,459,51574,low
+bro,uk,unit,PIAT,img/hon/bro/uk/units/ecg-piat.webp,459,459,49100,low
+bro,uk,unit,P.E. Gower,img/hon/bro/uk/units/ecg-p-e-gower.webp,352,352,32192,low
+bro,uk,unit,Vickers MG,img/hon/bro/uk/units/ecg-vickers-mg.webp,459,459,48770,low
+bro,uk,unit,6 Pounder AT Gun,img/hon/bro/uk/units/ecg-6-pounder-at-gun.webp,458,600,63296,
+bro,uk,unit,75mm Pack Howitzer M8,img/hon/bro/uk/units/ecg-75mm-pack-howitzer-m8.webp,458,600,55942,
+bro,uk,unit,3 Inch Mortar,img/hon/bro/uk/units/ecg-3-inch-mortar.webp,459,459,52356,low
+bro,uk,unit,Lt. D. Wye,img/hon/bro/uk/units/ecg-lt-d-wye.webp,352,352,32750,low
+bro,uk,unit,M3A1 Halftrack,img/hon/bro/uk/units/ecg-m3a1-halftrack.webp,505,938,83364,
+bro,uk,unit,Col. Mathieu,img/hon/bro/uk/units/ecg-col-mathieu.webp,352,352,32306,low
+bro,uk,unit,Dempsey,img/hon/bro/uk/units/ecg-dempsey.webp,352,352,30476,low
+bro,uk,unit,Command Team,img/hon/bro/uk/units/ecg-command-team.webp,459,459,53820,low
+bro,uk,unit,Jack Banks,img/hon/bro/uk/units/ecg-jack-banks.webp,352,352,30434,low
+bro,uk,unit,Ludger Houde,img/hon/bro/uk/units/ecg-ludger-houde.webp,352,352,29928,low
+bro,uk,unit,Sgt Lee Lowe,img/hon/bro/uk/units/ecg-sgt-lee-lowe.webp,352,352,28964,low
+bro,uk,unit,Achille M10,img/hon/bro/uk/units/ecg-achille-m10.webp,508,1008,100968,
+bro,uk,unit,Cromwell Mk IV,img/hon/bro/uk/units/ecg-cromwell-mk-iv.webp,508,1008,102198,
+bro,uk,unit,Daimler AC,img/hon/bro/uk/units/ecg-daimler-ac.webp,459,610,52912,
+bro,uk,unit,Flamer,img/hon/bro/uk/units/ecg-flamer.webp,459,459,49682,low
+bro,uk,unit,M5 Stuart,img/hon/bro/uk/units/ecg-m5-stuart.webp,505,840,83536,
+bro,uk,unit,Universal Carrier,img/hon/bro/uk/units/ecg-universal-carrier.webp,459,610,57806,
+bro,uk,unit,Wasp,img/hon/bro/uk/units/ecg-wasp.webp,459,610,52164,
+bro,uk,unit,Spitfire,img/hon/bro/uk/units/ecg-spitfire.webp,602,464,65388,
+bro,uk,unit,Hawker Typhoon,img/hon/bro/uk/units/ecg-hawker-typhoon.webp,602,464,75664,
+bro,uk,option,3 Inch Mortar,img/hon/bro/uk/options/mortar_3in.webp,256,352,25098,low
+bro,uk,option,Cromwell Mk IV,img/hon/bro/uk/options/cromwell_mk4.webp,352,352,31546,low
+bro,uk,option,Daimler AC,img/hon/bro/uk/options/daimler_ac.webp,256,352,23422,low
+bro,uk,option,Flamer,img/hon/bro/uk/options/flamer_uk.webp,256,352,23282,low
+bro,uk,option,M5 Stuart,img/hon/bro/uk/options/m5_stuart_uk.webp,352,352,32128,low
+bro,uk,option,Universal Carrier,img/hon/bro/uk/options/universal_carrier.webp,256,352,26440,low
+bro,uk,option,Mechanized Universal Carrier,img/hon/bro/uk/options/mechanized_carrier.webp,352,352,37112,low
+bro,uk,option,Vickers MG,img/hon/bro/uk/options/vickers_mg.webp,256,352,24624,low
+bro,uk,option,Wasp,img/hon/bro/uk/options/wasp.webp,256,352,22098,low
+bro,uk,option,Veteran,img/hon/bro/uk/options/veteran_uk.webp,256,352,25960,low
+bro,uk,option,Grenade,img/hon/bro/uk/options/grenade_uk.webp,256,352,24406,low
+bro,uk,option,Ammo,img/hon/bro/uk/options/ammo_uk.webp,256,352,25292,low
+bro,uk,option,Bluff,img/hon/bro/uk/options/bluff.webp,256,352,18962,low
+bro,uk,option,Planning,img/hon/bro/uk/options/planning.webp,256,352,20694,low
+bro,uk,option,Initiative,img/hon/bro/uk/options/initiative.webp,256,352,23494,low
+bro,uk,option,Concealed,img/hon/bro/uk/options/concealed.webp,352,352,31370,low
+bro,uk,option,Aircraft x1,img/hon/bro/uk/options/aircraft_x1.webp,256,352,22380,low
+bro,uk,option,Aircraft x2,img/hon/bro/uk/options/aircraft_x2.webp,352,352,30388,low
+bro,uk,option,Battle Plan,img/hon/bro/uk/options/battle_plan.webp,352,352,25894,low
+bro,uk,option,Artillery,img/hon/bro/uk/options/artillery.webp,352,352,31844,low
+bro,uk,option,Smoke,img/hon/bro/uk/options/smoke.webp,256,352,21882,low
+bro,uk,option,25 pdr Sexton,img/hon/bro/uk/options/sexton_25pdr.webp,352,352,32600,low
+bro,uk,option,Sherman Firefly,img/hon/bro/uk/options/sherman_firefly.webp,352,352,32110,low
+bro,uk,option,Tank Gear,img/hon/bro/uk/options/tank_gear_uk.webp,256,352,24156,low
+bro,uk,option,Tank Ammo,img/hon/bro/uk/options/tank_ammo_uk.webp,256,352,25620,low
+bro,uk,option,Bren Platoon,img/hon/bro/uk/options/bren_platoon_cha.webp,352,352,39278,low
+bro,uk,option,PIAT Platoon,img/hon/bro/uk/options/piat_platoon_cha.webp,352,352,39682,low
+bro,uk,option,Support Platoon,img/hon/bro/uk/options/support_platoon_cha.webp,352,352,39674,low
+bro,uk,option,Ammo Belt,img/hon/bro/uk/options/ammo_belt_uk.webp,256,352,28866,low
+bro,uk,option,Howitzer Support,img/hon/bro/uk/options/howitzer_support.webp,352,352,40660,low
+bro,uk,option,Mortar Support,img/hon/bro/uk/options/mortar_support.webp,352,352,40916,low
+bro,uk,option,Bren Platoon,img/hon/bro/uk/options/bren_platoon_wor.webp,352,352,39786,low
+bro,uk,option,Mechanized Bren,img/hon/bro/uk/options/mech_bren_wor.webp,352,352,39872,low
+bro,uk,option,Mechanized PIAT,img/hon/bro/uk/options/mech_piat_wor.webp,352,352,40946,low
 bro,us,tile,Field Command (Colonel George A. Taylor),img/hon/bro/us/tiles/field_command_taylor.webp,1670,589,224224,low
 bro,us,tile,Clint (Universal Hero),img/hon/bro/us/tiles/clint.webp,800,589,127972,low
 bro,us,tile,Oddball (Positive Freak),img/hon/bro/us/tiles/oddball.webp,800,589,118398,low

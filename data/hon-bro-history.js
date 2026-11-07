@@ -1067,6 +1067,9 @@ window.HTS_HISTORY["hon-bro"] = {
 "Sherman",
 "M4A3",
 "105"
+],
+"also": [
+"uk"
 ]
 },
 {
@@ -1091,6 +1094,9 @@ window.HTS_HISTORY["hon-bro"] = {
 "aka": [
 "Stuart",
 "light tank"
+],
+"also": [
+"uk"
 ]
 },
 {
@@ -1115,6 +1121,9 @@ window.HTS_HISTORY["hon-bro"] = {
 "aka": [
 "Greyhound",
 "armoured car"
+],
+"also": [
+"uk"
 ]
 },
 {
@@ -1139,6 +1148,9 @@ window.HTS_HISTORY["hon-bro"] = {
 "aka": [
 "halftrack",
 "Mechanised"
+],
+"also": [
+"uk"
 ]
 },
 {
@@ -1567,6 +1579,556 @@ window.HTS_HISTORY["hon-bro"] = {
 "AP Mine",
 "AT Mine",
 "Bouncing Betty"
+]
+},
+{
+"id": "chaudiere",
+"name": "Régiment de la Chaudière and Lt-Col. Paul Mathieu",
+"cat": "Formations and people",
+"side": "uk",
+"text": "A French-Canadian infantry regiment from Quebec that landed at Juno Beach under Lt-Col. Paul Mathieu, who commanded it from February 1943.",
+"facts": [
+"Mathieu was born in Quebec City on 1 September 1907 and died in Ottawa on 23 March 1976.",
+"He joined the Régiment de Dorchester et Beauce in 1925; it became the Régiment de la Chaudière in 1936.",
+"He took over from Lt-Col. Gavan Power in February 1943 and gave up command to Major G.O. Taschereau in late November 1944 after being hospitalized.",
+"He received the Distinguished Service Order for leadership in Normandy and Belgium (citation dated 27 November 1944) and later became deputy minister of national defence.",
+"The game card calls him Colonel; the sources give his rank as lieutenant-colonel."
+],
+"src": [
+"Lt-Col. P. Mathieu (Matthew K. Barrett)",
+"https://matthewkbarrett.com/2024/09/17/lt-col-p-mathieu/"
+],
+"find": {
+"n": "uk",
+"q": "Chaudière"
+},
+"aka": [
+"Régiment de la Chaudière",
+"Chaudière",
+"Col. Mathieu",
+"Mathieu",
+"Field Command"
+]
+},
+{
+"id": "rwr",
+"name": "Royal Winnipeg Rifles",
+"cat": "Formations and people",
+"side": "uk",
+"text": "A Manitoba rifle regiment nicknamed the \"Little Black Devils\". Its 1st Battalion was among the first troops ashore on D-Day.",
+"facts": [
+"Founded in 1883 as the 90th Winnipeg Battalion of Rifles.",
+"In 1944 the 1st Battalion served in the 7th Canadian Infantry Brigade, 3rd Canadian Infantry Division.",
+"It landed on Juno Beach on 6 June 1944; a D-Day monument stands at Courseulles-sur-Mer.",
+"Putot-en-Bessin is among its battle honours."
+],
+"src": [
+"Royal Winnipeg Rifles",
+"https://en.wikipedia.org/wiki/Royal_Winnipeg_Rifles"
+],
+"find": {
+"n": "uk",
+"q": "Winnipeg"
+},
+"aka": [
+"Royal Winnipeg Rifles",
+"Winnipeg Rifles",
+"Little Black Devils"
+]
+},
+{
+"id": "hussars23",
+"name": "23rd Hussars",
+"cat": "Formations and people",
+"side": "uk",
+"text": "A British armoured regiment in the 11th Armoured Division. It spearheaded Operation Epsom and was held up on the first day of Goodwood.",
+"facts": [
+"Raised in December 1940 from a cadre of the 10th Royal Hussars and the 15th/19th The King's Royal Hussars.",
+"Part of the 29th Armoured Brigade, 11th Armoured Division.",
+"Spearheaded Operation Epsom, reaching the River Odon.",
+"Its assault on Bourguébus Ridge in Operation Goodwood was halted on the first day.",
+"After Goodwood the division's armour losses were so heavy that the 24th Lancers were disbanded and absorbed by the 23rd Hussars."
+],
+"src": [
+"23rd Hussars",
+"https://en.wikipedia.org/wiki/23rd_Hussars"
+],
+"find": {
+"n": "uk",
+"q": "23rd Hussars"
+},
+"aka": [
+"23rd Hussars",
+"Hussars"
+]
+},
+{
+"id": "worcs",
+"name": "Worcestershire Regiment",
+"cat": "Formations and people",
+"side": "uk",
+"text": "An English county infantry regiment. Its 1st Battalion landed in Normandy on 24 June 1944 with the 214th Brigade of the 43rd (Wessex) Division.",
+"facts": [
+"The regiment was formed in 1881 from the 29th (Worcestershire) and 36th (Herefordshire) Regiments of Foot.",
+"In September 1943 the 1st Battalion moved to the 214th Infantry Brigade, 43rd (Wessex) Infantry Division.",
+"It landed in Normandy on 24 June 1944 and soon fought in Operation Epsom.",
+"The regiment merged with the Sherwood Foresters in 1970."
+],
+"src": [
+"Worcestershire Regiment",
+"https://en.wikipedia.org/wiki/Worcestershire_Regiment"
+],
+"find": {
+"n": "uk",
+"q": "Worcestershire"
+},
+"aka": [
+"Worcestershire Regiment",
+"Worcestershire"
+]
+},
+{
+"id": "dempsey",
+"name": "Lt-Gen. Miles Dempsey and the Second Army",
+"cat": "Formations and people",
+"side": "uk",
+"text": "Commander of the British Second Army in Normandy, the headquarters behind Epsom, Charnwood and Goodwood.",
+"facts": [
+"Born 15 December 1896; died 5 June 1969.",
+"Commissioned in February 1915 into the Royal Berkshire Regiment. He commanded XIII Corps in Sicily and in the Italian landings in 1943.",
+"Montgomery nominated him to command Second Army; he came ashore on D-Day and set up his tactical headquarters at Banville.",
+"Operation Goodwood began on 18 July 1944. It gained about seven miles at heavy cost but drew German armour away from the US First Army.",
+"He was an acting lieutenant-general from December 1942. The game card says Brigadier General, which is not a British rank he held in 1944.",
+"Knighted KCB in June 1944; he was the first British commander across the Rhine, on 23 March 1945."
+],
+"src": [
+"Miles Dempsey",
+"https://en.wikipedia.org/wiki/Miles_Dempsey"
+],
+"find": {
+"n": "uk",
+"q": "Dempsey"
+},
+"aka": [
+"Dempsey",
+"High Command",
+"Second Army"
+]
+},
+{
+"id": "milius",
+"name": "SS-Obersturmbannführer Karl-Heinz Milius",
+"cat": "Formations and people",
+"side": "ge",
+"text": "Commander of SS-Panzergrenadier-Regiment 25 of the 12th SS \"Hitlerjugend\" Division from 14 June 1944. His men committed war crimes against Canadian prisoners.",
+"facts": [
+"Born 19 August 1911; died 31 May 1990. Promoted SS-Obersturmbannführer on 9 November 1943.",
+"Commanded III Battalion of the regiment from November 1943 to June 1944, then the regiment itself.",
+"On 7 June 1944 his men killed captured Canadian soldiers at Authie and Buron; further killings are recorded on 10-12, 17 and 20-21 June.",
+"He led Kampfgruppe Milius on 3-4 September 1944.",
+"He was indicted for war crimes after the war but never prosecuted and was released.",
+"The game card gives his rank as Hstuf. (Hauptsturmführer); the source gives Obersturmbannführer."
+],
+"src": [
+"Karl-Heinz Milius (Traces of War)",
+"https://www.tracesofwar.com/persons/122618/Milius-Karl-Heinz.htm"
+],
+"find": {
+"n": "ge",
+"q": "Milius"
+},
+"aka": [
+"Milius",
+"Feldkommando Milius",
+"SS-Panzergrenadiere",
+"HJ"
+]
+},
+{
+"id": "bren",
+"name": "Bren light machine gun",
+"cat": "Small arms",
+"side": "uk",
+"text": "The British section machine gun, fed from a curved 30-round magazine on top. The name joins Brno and Enfield.",
+"facts": [
+"A licensed version of the Czechoslovak ZGB 33, itself derived from the ZB vz. 26; designer Václav Holek.",
+"Fired .303 British, the same round as the Lee-Enfield rifle, at about 480 to 540 rounds a minute.",
+"Weighed about 10 kg empty and 11.3 kg loaded.",
+"Normally one per rifle section, with a two-man gun group of gunner and loader."
+],
+"src": [
+"Bren light machine gun",
+"https://en.wikipedia.org/wiki/Bren_light_machine_gun"
+],
+"find": {
+"n": "uk",
+"q": "Bren"
+},
+"aka": [
+"Bren",
+"Bren gun",
+"Bren Platoon",
+"Bren Group"
+]
+},
+{
+"id": "piat",
+"name": "PIAT",
+"cat": "Support weapons",
+"side": "uk",
+"text": "Projector, Infantry, Anti-Tank: the British shoulder-fired anti-tank spigot mortar.",
+"facts": [
+"Entered service in 1943 and first fired in action in Tunisia that March.",
+"A spigot drove the bomb's propellant and recoil re-cocked the spring, so it worked without a rocket motor.",
+"Weighed 15 kg. Effective range about 105 m direct fire, 320 m indirect.",
+"Rated at roughly 100 mm of armour penetration, though fuze reliability and aiming cut that in practice.",
+"In Normandy it accounted for about 7 percent of German tanks knocked out by British forces.",
+"A 1944-45 Canadian Army survey ranked it the most effective infantry weapon, ahead of the Bren."
+],
+"src": [
+"PIAT",
+"https://en.wikipedia.org/wiki/PIAT"
+],
+"find": {
+"n": "uk",
+"q": "PIAT"
+},
+"aka": [
+"PIAT",
+"PIAT Platoon",
+"Mechanized PIAT"
+]
+},
+{
+"id": "mortar2",
+"name": "2-inch mortar",
+"cat": "Support weapons",
+"side": "uk",
+"text": "The light platoon mortar: a short 51 mm tube fired at a fixed angle, used for smoke as much as high explosive.",
+"facts": [
+"Designed in 1937; the Mk II entered service in 1938.",
+"Weighed 4.8 kg with a range of about 460 m.",
+"Fired high explosive, white phosphorus and titanium tetrachloride smoke, illuminating and signal rounds.",
+"A crew of two: one held the barrel, the other loaded and fired."
+],
+"src": [
+"Two-inch mortar",
+"https://en.wikipedia.org/wiki/Two-inch_mortar"
+],
+"find": {
+"n": "uk",
+"q": "2 Inch Mortar"
+},
+"aka": [
+"2 Inch Mortar",
+"2-inch mortar"
+]
+},
+{
+"id": "mortar3",
+"name": "3-inch mortar",
+"cat": "Support weapons",
+"side": "uk",
+"text": "The standard British battalion mortar, carried in three loads by infantry or on Universal Carriers.",
+"facts": [
+"The Mk II was adopted in the early 1930s and was the standard British mortar when the war began in 1939.",
+"Weighed 52.4 kg in total: baseplate 17 kg, barrel 15 kg, bipod 20.2 kg.",
+"Range grew from 1,600 to 2,800 yards by about 1942."
+],
+"src": [
+"Ordnance ML 3-inch mortar",
+"https://en.wikipedia.org/wiki/Ordnance_ML_3-inch_mortar"
+],
+"find": {
+"n": "uk",
+"q": "3 Inch Mortar"
+},
+"aka": [
+"3 Inch Mortar",
+"3-inch mortar",
+"Mortar Support"
+]
+},
+{
+"id": "vickers",
+"name": "Vickers machine gun",
+"cat": "Support weapons",
+"side": "uk",
+"text": "The water-cooled British medium machine gun, in service from 1912 to 1968.",
+"facts": [
+"Adopted on 26 November 1912 and used by the British Army until 30 March 1968.",
+"Water-cooled, .303 British, about 450 to 500 rounds a minute, with a crew of three.",
+"In August 1916 ten guns of the 100th Company, Machine Gun Corps, fired a million rounds in twelve hours without a breakdown."
+],
+"src": [
+"Vickers machine gun",
+"https://en.wikipedia.org/wiki/Vickers_machine_gun"
+],
+"find": {
+"n": "uk",
+"q": "Vickers"
+},
+"aka": [
+"Vickers MG",
+"Vickers"
+]
+},
+{
+"id": "pdr6",
+"name": "Ordnance QF 6-pounder",
+"cat": "Support weapons",
+"side": "uk",
+"text": "The British 57 mm anti-tank gun, towed by infantry battalions and later also fitted to tanks.",
+"facts": [
+"Reached service in April 1942 in North Africa and first fired in action at Gazala that May.",
+"Armour-piercing rounds went through about 112 mm at 500 m; APDS rounds from March 1944 went through about 140 mm at 1,000 m.",
+"Crew of six; the Mk II weighed about 1,145 kg.",
+"Canada produced Mk III, IV and V versions.",
+"HE ammunition was limited until after the Normandy landings."
+],
+"src": [
+"Ordnance QF 6-pounder",
+"https://en.wikipedia.org/wiki/Ordnance_QF_6-pounder"
+],
+"find": {
+"n": "uk",
+"q": "6 Pounder"
+},
+"aka": [
+"6 Pounder AT Gun",
+"6-pounder",
+"6 pdr"
+]
+},
+{
+"id": "pack75",
+"name": "75 mm pack howitzer M1A1 on the M8 carriage",
+"cat": "Support weapons",
+"side": "uk",
+"text": "A light American howitzer made to be broken down into loads, used here as Commonwealth support fire.",
+"facts": [
+"Caliber 75 mm and weight about 0.72 tons; range 9,600 yards (8,778 m).",
+"Built to be taken apart: seven mule loads or nine parachute loads, or towed whole by a 3/4-ton truck.",
+"Four men could move it in an emergency."
+],
+"src": [
+"M1A1 75 mm pack howitzer on M8 carriage (American GI Museum)",
+"https://americangimuseum.org/collections/restored-vehicles/m1a1-75mm-pack-howitzer-on-m8-carriage-1927-1944/"
+],
+"find": {
+"n": "uk",
+"q": "Howitzer"
+},
+"aka": [
+"75mm Pack Howitzer M8",
+"Howitzer Support",
+"pack howitzer"
+]
+},
+{
+"id": "carrier",
+"name": "Universal Carrier",
+"cat": "Vehicles",
+"side": "uk",
+"text": "The small tracked carrier of the Commonwealth armies, used for infantry, mortars, machine guns and towing. Often called the Bren Gun Carrier.",
+"facts": [
+"The Universal design appeared in 1940 as a development of the earlier Bren Gun Carrier; carrier production began in 1934.",
+"About 113,000 were built, including about 29,000 by Ford of Canada.",
+"Armour of 7 to 10 mm; about 3.3 t unladen. Crew of three on the Mk I, four by 1943.",
+"Armed with a Bren and a Boys anti-tank rifle, later a PIAT; some carried Vickers guns or mortars."
+],
+"src": [
+"Universal Carrier",
+"https://en.wikipedia.org/wiki/Universal_Carrier"
+],
+"find": {
+"n": "uk",
+"q": "Universal Carrier"
+},
+"aka": [
+"Universal Carrier",
+"Mechanized Universal Carrier",
+"Bren Gun Carrier",
+"carrier"
+]
+},
+{
+"id": "cromwell",
+"name": "Cromwell tank (Cruiser Mk VIII)",
+"cat": "Vehicles",
+"side": "uk",
+"text": "The fast British cruiser tank that first fought in Normandy. Quick and low, but its 75 mm gun struggled against heavy German tanks.",
+"facts": [
+"Armed with a 75 mm gun and two Besa machine guns; Rolls-Royce Meteor engine, top speed up to 40 mph.",
+"Hull front armour 64 mm and turret front 76.7 mm; weight about 28 tonnes.",
+"The 7th Armoured Division used it as its main tank; in the 11th Armoured and Guards Armoured Divisions it equipped the reconnaissance regiments.",
+"At Villers-Bocage the 75 mm gun could not take on Tigers frontally with a reasonable chance of success.",
+"Over 1,935 Mk IVs were built, the most numerous version."
+],
+"src": [
+"Cromwell tank",
+"https://en.wikipedia.org/wiki/Cromwell_tank"
+],
+"find": {
+"n": "uk",
+"q": "Cromwell"
+},
+"aka": [
+"Cromwell Mk IV",
+"Cromwell"
+]
+},
+{
+"id": "daimler",
+"name": "Daimler Armoured Car",
+"cat": "Vehicles",
+"side": "uk",
+"text": "The British four-wheel-drive armoured car, used for reconnaissance and liaison.",
+"facts": [
+"Prototypes in 1939; service entry slipped to mid-1941 because of transmission trouble.",
+"Armed with a 2-pounder, a coaxial Besa and a Bren for anti-aircraft use.",
+"Four-wheel drive with independent suspension, a fluid flywheel and a Wilson preselector gearbox.",
+"The Daimler Company built 2,694."
+],
+"src": [
+"Daimler Armoured Car",
+"https://en.wikipedia.org/wiki/Daimler_Armoured_Car"
+],
+"find": {
+"n": "uk",
+"q": "Daimler"
+},
+"aka": [
+"Daimler AC",
+"Daimler"
+]
+},
+{
+"id": "firefly",
+"name": "Sherman Firefly",
+"cat": "Vehicles",
+"side": "uk",
+"text": "A Sherman rearmed with the 17-pounder, the only Allied tank that could reliably beat Tigers and Panthers head-on in Normandy.",
+"facts": [
+"Production began in January 1944; about 342 had reached 21st Army Group by 31 May 1944.",
+"Major George Brighty first mounted the 17-pounder in a Sherman in early 1943; Lt-Col. George Witheridge pushed the project; W.G.K. Kilbourn redesigned the recoil system.",
+"British troops had three standard Shermans and one Firefly per troop of four.",
+"The long barrel gave it away, so crews sometimes painted it to hide the length.",
+"It could almost always pierce Panther and Tiger frontal armour at Normandy ranges."
+],
+"src": [
+"Sherman Firefly",
+"https://en.wikipedia.org/wiki/Sherman_Firefly"
+],
+"find": {
+"n": "uk",
+"q": "Firefly"
+},
+"aka": [
+"Sherman Firefly",
+"Firefly"
+]
+},
+{
+"id": "sexton",
+"name": "25-pounder Sexton",
+"cat": "Vehicles",
+"side": "uk",
+"text": "A Canadian self-propelled mount for the British 25-pounder field gun.",
+"facts": [
+"Put the 25-pounder on a Ram or Grizzly tank chassis, replacing the American M7 Priest in 1944.",
+"Designed and mostly built in Canada, though about two-thirds of the ordnance and mountings came from the UK.",
+"The gun fired to 12,253 m and managed 6 to 8 rounds a minute in intense fire.",
+"Used across the North-West Europe campaign of 1944-45."
+],
+"src": [
+"Ordnance QF 25-pounder",
+"https://en.wikipedia.org/wiki/Ordnance_QF_25-pounder"
+],
+"find": {
+"n": "uk",
+"q": "Sexton"
+},
+"aka": [
+"25 pdr Sexton",
+"25pdr Sexton",
+"Sexton"
+]
+},
+{
+"id": "wasp",
+"name": "Wasp flamethrower carrier",
+"cat": "Vehicles",
+"side": "uk",
+"text": "A Universal Carrier fitted with a flamethrower, used to support infantry.",
+"facts": [
+"The Wasp Mk I entered production in September 1942; 1,000 were ordered and delivered by November 1943.",
+"Range was about 80 to 100 yards (73 to 91 m).",
+"The Canadians redesigned it as the Mk IIC with one external rear tank, which freed room for a third crewman with a light machine gun. All production switched to it in June 1944.",
+"The Mk II went into action in Normandy in July 1944; its presence often ended resistance."
+],
+"src": [
+"Wasp flamethrower",
+"https://en.wikipedia.org/wiki/Wasp_flamethrower"
+],
+"find": {
+"n": "uk",
+"q": "Wasp"
+},
+"aka": [
+"Wasp",
+"Flamer"
+]
+},
+{
+"id": "achilles",
+"name": "M10 Achilles",
+"cat": "Vehicles",
+"side": "uk",
+"text": "An American M10 tank destroyer rearmed by the British with the 17-pounder gun.",
+"facts": [
+"The M10 was standardized in June 1942 on an M4 Sherman chassis with an open-topped turret.",
+"The US supplied Britain with 1,648 M10s under Lend-Lease.",
+"1,017 were fitted with the 17-pounder between May 1944 and April 1945; these were the Achilles.",
+"Canadian forces used the Achilles in Italy and North-West Europe."
+],
+"src": [
+"M10 tank destroyer",
+"https://en.wikipedia.org/wiki/M10_tank_destroyer"
+],
+"find": {
+"n": "uk",
+"q": "Achille"
+},
+"aka": [
+"Achille M10",
+"Achilles",
+"M10"
+]
+},
+{
+"id": "tiger",
+"name": "Tiger I",
+"cat": "Vehicles",
+"side": "ge",
+"text": "The German heavy tank with the 8.8 cm gun, fielded in SS heavy battalions such as the one attached to I SS Panzer Corps.",
+"facts": [
+"Entered service in 1942; 1,347 were built between August 1942 and August 1944.",
+"Armed with the 8.8 cm KwK 36 L/56; crew of five; 100 mm front armour on hull and turret, up to 200 mm on the mantlet.",
+"Weighed about 57 tonnes in combat and used a Maybach HL230 petrol engine.",
+"Unreliable at first (engine, seals, brakes); it improved over time but stayed costly to maintain."
+],
+"src": [
+"Tiger I",
+"https://en.wikipedia.org/wiki/Tiger_I"
+],
+"find": {
+"n": "ge",
+"q": "Tiger"
+},
+"aka": [
+"Tiger I",
+"Tiger"
 ]
 }
 ]
