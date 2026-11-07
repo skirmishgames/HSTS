@@ -107,10 +107,11 @@ Scans now live in Boxes/Big Red One (was Digital Scans/Core Box_ Big Red One Edi
 MAPS
 ----------------------------------------------------------------
 
-ISS-016  Bloody Omaha battle tile sets   [OPEN]
-The 12 Omaha boards ship as single images named Battle_Tiles_Set to Set12. They have no A and B sides, so the Maps page treats each as a one-sided board named "Battle tile set 1" to 12. Sets 1 and 5 look alike, as do 7, 9 and 11, with small differences.
-To resolve: check the physical boards. If some are two sides of one board, pair them so Flip works.
-Decision:
+ISS-016  Bloody Omaha boards and their side labels   [FIXED]
+The 12 Omaha board files (Battle_Tiles_Set to Set12) each print a side label in the top left square: OB1-A, OB1-B, OB2-A, OB2-B, OB3-A, OB3-B, OB4-A, OB4-B, OB5-A, then OB4-B again, OB6-A, OB6-B. Maps now pairs them as six double-sided boards OB1 to OB6, in file order.
+Conflict: Set8 and Set10 both read OB4-B and no file reads OB5-B. Set10 follows Set9 (OB5-A) and the files go in A, B pairs, so I used Set10 as OB5-B. Set8 is OB4-B.
+Decision: 2026-11-06, your note that Omaha tiles carry the side on the top left square. Printed label won, file order settled the duplicate.
+To confirm: check the physical OB5 board, side B. If the label there reads OB5-B, the file label is a printing slip.
 
 ISS-017  Duplicate and non-terrain files left out of Maps   [OPEN]
 Caen (Epsom) has stone-bridge identical to stone-bridge-river-narrow, and stone-bridge-urban identical to stone-bridge-urban-wide with the A and B sides swapped. Kept the River & Road names. The small ep tile (a round marker) is a token, so it is not in Maps.
@@ -123,10 +124,9 @@ The Maps warning assumes one copy of each piece per box. If you own several boxe
 To resolve: give me real quantities per piece, or ask me to remove the warning.
 Decision:
 
-ISS-019  Defensive positions label   [OPEN]
-The Big Red One position tiles (1 to 7) are grouped as "Defensive positions". Some show rocks or woods and not a dug-in position.
-To resolve: give me the name printed in the rulebook, if there is one.
-Decision:
+ISS-019  Names for the Big Red One position tiles   [FIXED]
+Rulebook V4.1 p.19 names the terrain types: Defensive Positions, Rocks, Thickets and Forests, Ponds, Bocage / Hedgerows, Buildings. Each position tile has a different type on each side, so Maps tags a tile with both. Side A is a Defensive Position on tiles 1 to 5 and 7 and a Pond on tile 6. Side B is Rocks on tiles 1, 2, 5 and 6 and Thickets and Forests on tiles 3, 4 and 7.
+Decision: 2026-11-06, names taken from rulebook p.19.
 
 ISS-020  Source folders hold the same art several times   [OPEN]
 Caen and Omaha folders have full resolution PNGs, quality-10 JPGs and, for Omaha boards, a quality-8 copy. The site uses scaled copies. Cleanup is part of the file organizing job.

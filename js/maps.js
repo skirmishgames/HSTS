@@ -19,7 +19,7 @@
   ALL.pieces = ALL.pieces.map(function (p, i) { return { p: p, i: i }; }).sort(function (a, b) {
     return (ORDER.indexOf(a.p.group) - ORDER.indexOf(b.p.group)) || (a.i - b.i);
   }).map(function (x) { return x.p; });
-  ALL.groups = ORDER.filter(function (g) { return ALL.pieces.some(function (p) { return p.group === g; }); });
+  ALL.groups = ORDER.filter(function (g) { return ALL.pieces.some(function (p) { return p.cats.indexOf(g) >= 0; }); });
   var LIST = BOXES.concat([ALL]);
   SHORT.all = 'All boxes';
 
@@ -106,8 +106,8 @@
   function visible() {
     var b = box(S.b), toks = norm(S.q).split(' ').filter(Boolean);
     return b.pieces.filter(function (p) {
-      if (S.g !== 'all' && p.group !== S.g) return false;
-      var hay = norm(p.name + ' ' + p.group);
+      if (S.g !== 'all' && p.cats.indexOf(S.g) < 0) return false;
+      var hay = norm(p.name + ' ' + p.cats.join(' ') + ' ' + (p.sd || ''));
       return toks.every(function (t) { return hay.indexOf(t) >= 0; });
     });
   }
@@ -125,7 +125,7 @@
     var gs = ['all'].concat(b.groups);
     if (gs.indexOf(S.g) < 0) S.g = 'all';
     $('groups').innerHTML = gs.map(function (g) {
-      var n = g === 'all' ? b.pieces.length : b.pieces.filter(function (p) { return p.group === g; }).length;
+      var n = g === 'all' ? b.pieces.length : b.pieces.filter(function (p) { return p.cats.indexOf(g) >= 0; }).length;
       return '<button type="button" class="chip' + (S.g === g ? ' on' : '') + '" data-group="' + esc(g) + '" aria-pressed="' + (S.g === g) + '">' + (g === 'all' ? 'All types' : esc(g)) + ' <span class="cn">' + n + '</span></button>';
     }).join('');
     var list = visible();
@@ -135,6 +135,7 @@
       return '<div class="mcard" draggable="true" data-key="' + p.key + '">' +
         '<button type="button" class="mthumb' + (p.kind === 'board' ? ' bd' : '') + '" data-view="' + p.key + '" aria-label="View ' + esc(p.name) + '"><img src="' + thumb + '" alt="" loading="lazy" draggable="false"></button>' +
         '<div class="minfo"><b>' + esc(p.name) + '</b><span>' + sizeText(p) + (p.b ? ', two sides' : ', one side') + '</span>' +
+        (p.sd ? '<span>' + esc(p.sd) + '</span>' : '') + (S.b === 'all' ? '<span>' + esc(SHORT[p.box]) + '</span>' : '') +
         '<span class="mused' + (n > 1 ? ' warn' : '') + '" data-used="' + p.key + '">' + (n ? 'On the map: ' + n : '') + '</span></div>' +
         '<div class="mact"><button type="button" data-add="' + p.key + '">Add</button><button type="button" class="ghost" data-view="' + p.key + '">View</button></div></div>';
     }).join('') || '<p class="mhelp">No pieces match.</p>';
@@ -375,7 +376,7 @@
     $('mmTitle').textContent = p.name;
     var sides = '<figure><img src="' + p.dir + p.a + '" alt="' + esc(p.name) + ' side A"><figcaption>Side A</figcaption></figure>' +
       (p.b ? '<figure><img src="' + p.dir + p.b + '" alt="' + esc(p.name) + ' side B"><figcaption>Side B</figcaption></figure>' : '');
-    $('mmBody').innerHTML = '<div class="mfig' + (p.b ? ' two' : '') + '">' + sides + '</div><p class="mhelp">' + sizeText(p) + '. ' + esc(p.group) + ', ' + esc(realBox(p.box).name) + '.' + (p.b ? '' : ' One printed side only.') + '</p>';
+    $('mmBody').innerHTML = '<div class="mfig' + (p.b ? ' two' : '') + '">' + sides + '</div><p class="mhelp">' + sizeText(p) + '. ' + (p.sd ? esc(p.sd) + ' ' : '') + esc(p.cats.join(', ')) + ', ' + esc(realBox(p.box).name) + '.' + (p.b ? '' : ' One printed side only.') + '</p>';
     $('mmodal').hidden = false; $('mmClose').focus();
   }
   function closeView() { $('mmodal').hidden = true; S.viewKey = null; }
