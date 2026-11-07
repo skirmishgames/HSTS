@@ -1,0 +1,112 @@
+HEROES SYSTEM TACTICAL SCALE: ISSUES TO BE ADDRESSED
+Last updated: 2026-11-06 (site version hts-v15)
+
+HOW TO USE THIS FILE
+- One entry per issue. Never delete an entry. Change its status and add a dated line under "Decision".
+- Status: OPEN, DECIDED (answer chosen, not yet applied), FIXED (applied and shipped), WONT FIX.
+- When two sources disagree, record both under "Conflict" and the winner under "Decision".
+
+CONFLICT RESOLUTION ORDER (proposed, change it if you disagree)
+1. Your physical tile, card or counter in hand.
+2. The newest official rulebook or booklet (Rulebook V4.1, Scenario Booklet V2.5).
+3. Older official files (Scenario Booklet V2.4), the 2023 errata, then the tile and option art.
+4. Community files, Wikipedia and my own reading of images.
+A decision that overrides the site's current data must say which source won and why.
+
+----------------------------------------------------------------
+SCENARIO ARMIES
+----------------------------------------------------------------
+
+ISS-001  German armies come out under the printed points   [OPEN]
+Where: Plain Carnage, Le Quesnay, Surrounded! (German side).
+Conflict: Booklet says 175 / 340 / 450. Tiles and options as pictured add up to 170 / 335 / 440 using the builder's costs.
+Seen: V2.5 pages show the same recruitment pictures, so a page revision does not explain it.
+Possible causes: the printed figure is a limit and not an exact total; a cost in my data is wrong; errata changed a cost (see ISS-009).
+To resolve: check each German card cost against your physical copies, then against the 2023 errata.
+Decision:
+
+ISS-002  Booklet versions are mixed   [OPEN]
+Armies on pages 21 to 28 follow V2.5. Scenario text and facts on all pages come from V2.4. Pages 1 to 20 were only spot-checked (page 10).
+Conflict: V2.5 changed We Shall Pass! German heroes (Ludwig no option, Helmut Flamer, Otto MP40) and the Le Quesnay German Bluff card.
+To resolve: compare V2.5 text pages 21 to 28 with the scenario facts in data/hon-bro-scenarios.js, then pages 1 to 20.
+Decision:
+
+ISS-003  Kubelwagen or Schwimmwagen   [OPEN]
+V2.5 names the 15 point narrow vehicle on the Panzergrenadiere platoon "Kubelwagen". V2.4 and the builder call it Schwimmwagen. The builder also has a separate Kubelwagen at 25 points (Panzer-Aufklarungs only).
+Used: Schwimmwagen (cost matches).
+To resolve: check the physical card name.
+Decision:
+
+----------------------------------------------------------------
+BUILDER RULES
+----------------------------------------------------------------
+
+ISS-004  Common options on hero tiles   [OPEN]
+Old rule: common (no stripe) options did not fit the single slot on a hero tile.
+Conflict: the booklet puts Ammo (The Rock), Culin Hedgerow Cutter (Oddball), Sticky Bomb and Willys .50 (Clint) on heroes. The rulebook is silent.
+Changed in hts-v14: common options now fit hero slots.
+To resolve: confirm on your physical hero tiles (stripe colour of the hero slot).
+Decision:
+
+ISS-009  2023 errata not checked against the data   [OPEN]
+The folder has Errata (2023) and the Contents Checklist marks errata as not applied for the Big Red One core box. Option costs or stripes in the data may predate it.
+To resolve: read the errata images and compare with data/hon-bro-us.js and hon-bro-ge.js.
+Decision:
+
+ISS-010  Printing inconsistencies in the source pieces   [OPEN]
+Known, from Errors.docx and the tile art: Oddball and Stillman are used for the same hero; Lt. J.W. Will is printed as W.J. Will on the counter.
+Used: Oddball and J.W. Will, with a note on the Oddball tile.
+Decision:
+
+----------------------------------------------------------------
+TOKENS AND EQUIPMENT
+----------------------------------------------------------------
+
+ISS-005  Tactical bonus scans do not match the booklet   [OPEN]
+The scan named bonus-tactic-objective (orange cross on a crate) matches none of the 8 bonuses in the booklet. There are no scans for Asset, Intuitive or Explosion.
+Shown on the tokens page as "Unlisted".
+To resolve: identify the token in the box, or find the missing scans.
+Decision:
+
+ISS-006  Overwatch or Opportunistic Fire   [OPEN]
+The equipment scan is titled Opportunistic Fire. The rulebook, the scenario booklet and the builder call the option Overwatch (it gives the Opportunity Fire ability).
+Shown as Overwatch with a note about the scan title.
+Decision:
+
+ISS-007  Marker sides not confirmed   [OPEN]
+The objective and initiative scans are named A and B. I labelled them "side A" and "side B" and did not claim which is the controlled or flipped side. The neutral primary objective scan is named "unofficial", so it may be a fan-made stand-in.
+To resolve: check the physical markers.
+Decision:
+
+----------------------------------------------------------------
+CONTENT ACCURACY
+----------------------------------------------------------------
+
+ISS-008  History entries need a spot check   [OPEN]
+The 65 history entries are summaries written from Wikipedia and the linked sources. Check dates and numbers before relying on them.
+Missing: the German magnetic mine (Hafthohlladung). The page reader was blocked, so there is no entry.
+Decision:
+
+----------------------------------------------------------------
+HOSTING AND HOUSEKEEPING
+----------------------------------------------------------------
+
+ISS-011  GitHub Pages not enabled by me   [OPEN]
+I could not turn it on. Enable it for the main branch, root folder. Domain file: CNAME (hsts.skirmishgames.app).
+
+ISS-012  Old zips in _to_delete   [OPEN]
+The shell cannot delete files in the project folder. Old hts-v*.zip files sit in Heroes-Tactical-System/_to_delete. Delete them by hand.
+
+ISS-013  Remote repository moved   [OPEN]
+Every push prints "This repository moved". It works, but set the remote to https://github.com/skirmishgames/HSTS.git.
+
+ISS-014  Folder layout changed   [OPEN]
+Scans now live in Boxes/Big Red One (was Digital Scans/Core Box_ Big Red One Edition). Any script or note that uses the old path needs the new one.
+
+----------------------------------------------------------------
+NOT IN THE TOOL YET
+----------------------------------------------------------------
+
+ISS-015  Other boxes   [OPEN]
+Contents Checklist.xlsx shows official files for Bloody Omaha and both Battle for Caen boxes (Epsom, Charnwood & Goodwood; Windsor & Jupiter). The tool covers Big Red One only.
+Decision on order:
