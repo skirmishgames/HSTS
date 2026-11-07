@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-CA" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heroes System Tactical Scale maps</title>
+<meta name="description" content="Heroes System Tactical Scale map builder. Pick a Heroes of Normandie box, browse its terrain boards and tiles, and lay out your own battlefield.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="upage mpage" data-tab="map">
+<header class="top">
+  <div class="brand">
+    <h1>Heroes System Tactical Scale</h1>
+    <p class="sub" id="subtitle">Maps, Heroes of Normandie</p>
+  </div>
+  <div class="top-actions">
+    <a class="btn ghost" href="index.html">Army builder</a>
+    <a class="btn ghost" href="units.html">Unit index</a>
+    <a class="btn ghost" href="rules.html">Rules</a>
+    <a class="btn ghost" href="history.html">History</a>
+    <a class="btn ghost" href="scenarios.html">Scenarios</a>
+    <a class="btn ghost" href="tokens.html">Tokens</a>
+    <a class="btn ghost" href="heroes.html">Heroes</a>
+    <button id="btnTheme" class="ghost" type="button" aria-label="Switch light or dark mode">Dark</button>
+  </div>
+</header>
+
+<section class="setup" aria-label="Game box">
+  <div class="field grow">
+    <span class="label">Game box</span>
+    <div id="boxes" class="chips" role="group" aria-label="Game box"></div>
+  </div>
+</section>
+
+<div class="mtabs" role="group" aria-label="Show">
+  <button type="button" data-tab="pieces">Pieces</button>
+  <button type="button" data-tab="map">Map</button>
+</div>
+
+<div class="mlayout">
+  <aside class="mpal pane" aria-label="Terrain pieces">
+    <div class="pane-head"><h2 id="palTitle">Pieces</h2></div>
+    <p class="mhelp" id="palDesc"></p>
+    <div class="field"><label class="label" for="q">Search the pieces</label>
+      <input id="q" type="search" placeholder="Try: road, river, house, bridge" autocomplete="off"></div>
+    <span class="label">Piece type</span>
+    <div id="groups" class="chips mgroups" role="group" aria-label="Piece type"></div>
+    <p id="stat" class="ustat" aria-live="polite"></p>
+    <div id="pieces" class="mgrid"></div>
+  </aside>
+
+  <section class="mwork pane" aria-label="Map">
+    <div class="mrow">
+      <div class="field grow"><label class="label" for="mname">Map name</label>
+        <input id="mname" type="text" placeholder="Untitled map" maxlength="60" autocomplete="off"></div>
+      <div class="field"><label class="label" for="msize">Map size</label>
+        <select id="msize"></select></div>
+      <div class="field msq"><span class="label">Squares wide and high</span>
+        <div class="limit-row"><input id="mcols" type="number" min="2" max="42" inputmode="numeric" aria-label="Squares wide"><input id="mrows" type="number" min="2" max="42" inputmode="numeric" aria-label="Squares high"></div></div>
+    </div>
+
+    <div class="mbar" role="toolbar" aria-label="Map tools">
+      <div class="mgroup">
+        <button id="bUndo" class="ghost" type="button">Undo</button>
+        <button id="bRedo" class="ghost" type="button">Redo</button>
+      </div>
+      <div class="mgroup" id="selTools" aria-label="Selected piece">
+        <button data-act="rl" class="ghost" type="button">Rotate left</button>
+        <button data-act="rr" class="ghost" type="button">Rotate right</button>
+        <button data-act="flip" class="ghost" type="button">Flip side</button>
+        <button data-act="dup" class="ghost" type="button">Duplicate</button>
+        <button data-act="front" class="ghost" type="button">To front</button>
+        <button data-act="back" class="ghost" type="button">To back</button>
+        <button data-act="del" class="ghost danger" type="button">Remove</button>
+      </div>
+      <div class="mgroup mview">
+        <label class="mlab">Snap
+          <select id="msnap"><option value="1">Whole square</option><option value="0.5" selected>Half square</option><option value="0">Off</option></select></label>
+        <label class="mlab"><input id="mgridchk" type="checkbox" checked> Grid</label>
+        <button id="zOut" class="ghost" type="button" aria-label="Zoom out">-</button>
+        <input id="mzoom" type="range" min="15" max="120" step="5" value="45" aria-label="Zoom">
+        <button id="zIn" class="ghost" type="button" aria-label="Zoom in">+</button>
+        <button id="zFit" class="ghost" type="button">Fit</button>
+      </div>
+    </div>
+
+    <p id="mnote" class="mnote" aria-live="polite"></p>
+    <div id="stage" class="mstage" tabindex="-1"><div id="plane" class="mplane"></div></div>
+    <div id="mwarn" class="warnings" aria-live="polite"></div>
+
+    <div class="mrow mfoot">
+      <div class="actions">
+        <button id="bSave" type="button">Save map</button>
+        <button id="bShare" class="ghost" type="button">Share link</button>
+        <button id="bPng" class="ghost" type="button">Download picture</button>
+        <button id="bPrint" class="ghost" type="button">Print</button>
+        <button id="bNew" class="ghost danger" type="button">Clear map</button>
+      </div>
+    </div>
+    <div id="sharebox" class="msharebox" hidden>
+      <label class="label" for="shareurl">Link to this map</label>
+      <input id="shareurl" type="text" readonly>
+    </div>
+    <div id="saved" class="saved" aria-label="Saved maps"></div>
+    <p class="mhelp">Drag a piece to move it. Click a piece to select it, then use the buttons or the keys: arrows move, R rotates, F flips, D duplicates, Delete removes, Ctrl+Z undoes.</p>
+  </section>
+</div>
+
+<div id="mmodal" class="mmodal" hidden>
+  <div class="mdlg" role="dialog" aria-modal="true" aria-labelledby="mmTitle">
+    <div class="mdh"><h2 id="mmTitle"></h2><button id="mmClose" class="ghost" type="button" aria-label="Close">Close</button></div>
+    <div id="mmBody" class="mdb"></div>
+    <div class="mdf"><button id="mmAdd" type="button">Add to map</button></div>
+  </div>
+</div>
+<div id="toast" class="mtoast" role="status" aria-live="polite" hidden></div>
+<img id="printimg" class="printimg" alt="Map">
+
+<footer class="foot">
+  <p>Terrain pictures come from the Heroes of Normandie files for each box. One square is one square of the general grid, and a board is 7 by 7 squares. Pieces are cut to whole squares, so tiles line up on a board when you snap to whole squares.</p>
+  <p>Fan-made tool for Heroes of Normandie, Devil Pig Games. Terrain art belongs to Devil Pig Games.</p>
+  <p>Corrections and feedback: <a href="mailto:games@staroversky.com">games@staroversky.com</a></p>
+</footer>
+
+<script src="data/maps.js"></script>
+<script src="js/maps.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 HEROES SYSTEM TACTICAL SCALE: ISSUES TO BE ADDRESSED
-Last updated: 2026-11-06 (site version hts-v15)
+Last updated: 2026-11-06 (site version hts-v16)
 
 HOW TO USE THIS FILE
 - One entry per issue. Never delete an entry. Change its status and add a dated line under "Decision".
@@ -104,9 +104,45 @@ ISS-014  Folder layout changed   [OPEN]
 Scans now live in Boxes/Big Red One (was Digital Scans/Core Box_ Big Red One Edition). Any script or note that uses the old path needs the new one.
 
 ----------------------------------------------------------------
+MAPS
+----------------------------------------------------------------
+
+ISS-016  Bloody Omaha battle tile sets   [OPEN]
+The 12 Omaha boards ship as single images named Battle_Tiles_Set to Set12. They have no A and B sides, so the Maps page treats each as a one-sided board named "Battle tile set 1" to 12. Sets 1 and 5 look alike, as do 7, 9 and 11, with small differences.
+To resolve: check the physical boards. If some are two sides of one board, pair them so Flip works.
+Decision:
+
+ISS-017  Duplicate and non-terrain files left out of Maps   [OPEN]
+Caen (Epsom) has stone-bridge identical to stone-bridge-river-narrow, and stone-bridge-urban identical to stone-bridge-urban-wide with the A and B sides swapped. Kept the River & Road names. The small ep tile (a round marker) is a token, so it is not in Maps.
+BRO position tiles share art: 1 and 3 have the same side A, 2 and 4 the same side A, 1 and 2 the same side B, 5 and 7 the same side A. They are kept as separate pieces.
+To resolve: confirm the box really holds these as separate tiles.
+Decision:
+
+ISS-018  Piece counts on Maps   [OPEN]
+The Maps warning assumes one copy of each piece per box. If you own several boxes, or a box holds more than one of a tile, the warning is wrong for you.
+To resolve: give me real quantities per piece, or ask me to remove the warning.
+Decision:
+
+ISS-019  Defensive positions label   [OPEN]
+The Big Red One position tiles (1 to 7) are grouped as "Defensive positions". Some show rocks or woods and not a dug-in position.
+To resolve: give me the name printed in the rulebook, if there is one.
+Decision:
+
+ISS-020  Source folders hold the same art several times   [OPEN]
+Caen and Omaha folders have full resolution PNGs, quality-10 JPGs and, for Omaha boards, a quality-8 copy. The site uses scaled copies. Cleanup is part of the file organizing job.
+Decision:
+
+----------------------------------------------------------------
 NOT IN THE TOOL YET
 ----------------------------------------------------------------
 
-ISS-015  Other boxes   [OPEN]
-Contents Checklist.xlsx shows official files for Bloody Omaha and both Battle for Caen boxes (Epsom, Charnwood & Goodwood; Windsor & Jupiter). The tool covers Big Red One only.
+ISS-015  Other boxes: armies, tiles, rules and scenarios   [OPEN]
+Contents Checklist.xlsx shows official files for Bloody Omaha and both Battle for Caen boxes (Epsom, Charnwood & Goodwood; Windsor & Jupiter). The tool covers their terrain (Maps, hts-v16) but not their recruitment tiles, options, heroes, tokens, rules or scenarios. Big Red One is still the only box in the builder.
 Decision on order:
+
+----------------------------------------------------------------
+LOCAL FILE ORGANIZING
+----------------------------------------------------------------
+
+ISS-021  Helper folder _work   [OPEN]
+I made Heroes System/_work for conversion scripts and a zip of the map images. Delete it when you like. The shell cannot.
