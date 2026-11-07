@@ -18,6 +18,7 @@ You need the rulebook to play. This project is not affiliated with or endorsed b
 - **Scenario armies.** Eight scenarios (Plain Carnage, Chicken Game, A Rough Night, Caumont-l'Éventé, Le Quesnay, Surrounded!, Windy at Sept-Vents! and We Shall Pass!) have "Open the armies in the builder" buttons, one per side. Armies follow the booklet recruitment pictures. Pages 21 to 28 follow the V2.5 booklet, the rest V2.4. Thirteen of the sixteen match the booklet points exactly. The German armies in Plain Carnage, Le Quesnay and Surrounded! come out 5 to 10 points under the printed figure. Armies are stored in `data/hon-bro-scenarios.js` as tile ids and one option id per slot.
 - **Tokens and markers.** `tokens.html` shows the scans of the objective, tactical bonus, turn chart, event, suppressed, vehicle damage, destruction and flamethrower markers with what each does, linked to the rules search. Data lives in `data/hon-bro-tokens.js`.
 - **Heroes and equipment.** `heroes.html` lists every hero tile for both sides, the units on it, and every option that fits its slot, worked out with the same rule as the builder. Filter by box (Big Red One, Bloody Omaha, promo heroes). It also shows the equipment cards and markers: Bazooka, Panzerfaust, Knife, MP40, Thompson, Flamer and Overwatch, plus the Bloody Omaha Heroic, Grenade, Mauser, Carbine M1 and Hardened cards. Data lives in `data/hon-bro-heroes.js` (each card has a `box`).
+- **Expansions.** `expansions.html` is a catalogue of 158 products across six games (Heroes of Normandie V2 and V1, Stalingrad, Pacific, Shadows over Normandie, Black Reach). Filter by game and type (big box, army box punchboards, gazette, terrain and so on) or search. Entries with notes show what the product holds, a small preview of its punchboard where there is one, and links to what the tool covers (only the V2 boxes so far). A "starter forces" section summarises an older community buying guide. The product list comes from the collection checklist, not from a web source. Data lives in `data/expansions.js` and previews in `img/exp/`.
 - **Bloody Omaha scenarios and tokens.** `scenarios.html` and `tokens.html` have a box switch. Omaha has the player generated landings chapter, Part 1, Part 2, Little River of No Return and Big River of No Return, each with a battlefield map and builder links (11 armies, some with notes where the printed points differ, see ISSUES.txt ISS-023). Tokens cover Bangalore, Explosive M1, Forward position, Shovel, Ammo belt, Tank gear, shells, mines, haystack, smoke, artillery, bombs and Heroic. Data lives in `data/hon-omaha-scenarios.js` and `data/hon-omaha-tokens.js`.
 - **Icon glossary.** `icons.html` lists every icon from the rulebook icon summaries (Big Red One p.36, Bloody Omaha p.24) with its picture, group, page and what it does. Search by name or words in the description, filter by group, and switch box. Icons are cut from the PDFs at native size with their transparency. Data lives in `data/hon-icons.js` (images in `img/hon/<box>/icons/`).
 - **Rules compendium.** `rules.html` now covers Big Red One and Bloody Omaha. Rule entries carry figures cropped from the rulebook pages (`img/hon/<box>/rules/`), tables (the Omaha player generated landings table), and chips that link to the matching icon in the glossary. Search results show thumbnails. Add new boxes by adding `data/hon-<box>-rules.js` and a box name in `js/rules.js`.
@@ -51,6 +52,7 @@ data/hon-omaha-rules.js  Bloody Omaha rules (V7.1)
 data/maps.js          terrain pieces for the four boxes (img/hon/maps/<box>/)
 data/hon-bro-tokens.js the marker entries
 data/hon-omaha-tokens.js  the Bloody Omaha marker entries
+data/expansions.js    the expansions catalogue
 data/hon-omaha-scenarios.js  the Bloody Omaha scenarios and armies
 data/hon-bro-heroes.js the equipment cards
 data/hon-bro-scenarios.js the scenario summaries
@@ -98,3 +100,14 @@ Costs, sizes, stripes and unit lists were read from the tile sheets. If somethin
 npm i playwright
 node test/smoke.js
 ```
+
+## Archive policy
+
+Devil Pig Games has closed, so this project is also a digital archive for the community. For every scenario book or scenario that is added from now on:
+
+- Keep the full version, not only a summary, as a web page that reads well on an iPad or phone.
+- Look for the best version available on the web (the most complete and most recent) and preserve that one too.
+- Store the PDF in the repository and offer it as a download beside the web version.
+- Do not link out to the old publisher site or forum. Pages must keep working without them.
+
+The existing Big Red One and Bloody Omaha scenario pages are still summaries. See ISSUES.txt ISS-024.

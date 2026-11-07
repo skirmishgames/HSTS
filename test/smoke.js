@@ -327,6 +327,46 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(scImgs.length > 0 && scImgs.every(f => fs.existsSync(path.join(root, f))), 'every omaha scenario figure exists (' + scImgs.length + ')');
   ok(terrs.length === 0, 'omaha tokens: no console errors ' + terrs.join('|'));
 
+  // expansions page
+  const xp = await b.newPage({ viewport: { width: 1100, height: 900 } });
+  const xerrs = []; xp.on('pageerror', e => xerrs.push(e.message)); xp.on('console', m => { if (m.type() === 'error') xerrs.push(m.text()); });
+  await xp.goto(base + 'expansions.html');
+  ok(await xp.locator('.hrow').count() === 158, 'expansions: 158 products listed');
+  ok(await xp.locator('.hbody p').count() === 0, 'expansions: details not loaded until opened');
+  ok(await xp.locator('#guide .eqcard').count() === 6, 'expansions: 6 starter force notes shown');
+  await xp.click('[data-line="hon2"]');
+  ok(await xp.locator('.hrow').count() === 14, 'expansions: Heroes of Normandie V2 has 14 products');
+  await xp.click('[data-cat="tool"]');
+  ok(await xp.locator('.hrow').count() === 4, 'expansions: 4 V2 boxes are in the tool');
+  await xp.locator('.hhead', { hasText: 'Bloody Omaha' }).click();
+  ok(await xp.locator('.hrow.open .hfind a').count() === 8, 'expansions: Bloody Omaha shows 8 tool links');
+  await xp.click('[data-line="all"]'); await xp.click('[data-cat="all"]');
+  await xp.fill('#q', 'commonwealth'); await xp.waitForTimeout(300);
+  ok((await xp.locator('.hname').first().textContent()).includes('Army Box CW'), 'expansions: search finds the Commonwealth army box');
+  ok(await xp.locator('#guide').count() === 0, 'expansions: starter notes hidden while searching');
+  await xp.locator('.hhead', { hasText: 'Army Box CW' }).click();
+  ok(await xp.locator('.hrow.open .xfig img').count() === 1, 'expansions: opened entry shows its preview image');
+  ok(await xp.locator('.hrow.open [data-guide]').count() === 2, 'expansions: Army Box CW links to 2 starter force notes');
+  await xp.fill('#q', ''); await xp.waitForTimeout(300);
+  await xp.locator('.hrow.open [data-guide]').first().click();
+  ok(await xp.locator('#guide-0').count() === 1, 'expansions: starter force link jumps to the note');
+  await xp.locator('#guide-0 [data-open="hon1-pegasus-bridge"]').click();
+  ok(await xp.locator('#x-hon1-pegasus-bridge.open').count() === 1, 'expansions: note chip opens the product');
+  await xp.click('[data-cat="Gazette"]');
+  ok(await xp.locator('.hrow').count() > 5, 'expansions: type filter works');
+  await xp.fill('#q', 'zzzzqq'); await xp.waitForTimeout(300);
+  ok(await xp.locator('.empty2').count() === 1, 'expansions: no-match message');
+  const xhtml = fs.readFileSync(path.join(root, 'data/expansions.js'), 'utf8') + fs.readFileSync(path.join(root, 'expansions.html'), 'utf8');
+  ok(!/devil-pig-games\.com|forum/i.test(xhtml.replace(/Devil Pig Games\./g, '')), 'expansions: no forum or Devil Pig site links');
+  const xImgs = JSON.parse(await xp.evaluate(() => JSON.stringify(window.HTS_EXPANSIONS.lines.reduce((a, l) => a.concat(l.items.reduce((b, i) => b.concat((i.imgs || []).map(f => f.img)), [])), []))));
+  ok(xImgs.length === 22 && xImgs.every(f => fs.existsSync(path.join(root, f))), 'expansions: every preview image exists (' + xImgs.length + ')');
+  ok(xerrs.length === 0, 'expansions page: no console errors ' + xerrs.join('|'));
+  const navMiss = [];
+  for (const pg of ['index', 'units', 'rules', 'scenarios', 'tokens', 'icons', 'heroes', 'maps', 'history']) {
+    if (!fs.readFileSync(path.join(root, pg + '.html'), 'utf8').includes('href="expansions.html"')) navMiss.push(pg);
+  }
+  ok(navMiss.length === 0, 'expansions link is in every menu ' + navMiss.join(','));
+
   // maps page
   const mpg = await b.newPage({ viewport: { width: 1360, height: 900 } });
   const mperrs = []; mpg.on('pageerror', e => mperrs.push(e.message)); mpg.on('console', m => { if (m.type() === 'error') mperrs.push(m.text()); });

@@ -457,3 +457,7 @@ button.hhead:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
 .rthumbs img{height:58px;width:auto;max-width:150px;object-fit:cover;border-radius:6px;border:1px solid var(--line);background:var(--bg)}
 .rthumbs img.ic{height:32px;width:auto;border:0;background:transparent;object-fit:contain}
 @media (max-width:560px){.gcard{flex-direction:column}.gicons{width:100%;justify-content:flex-start}}
+.xfigs{display:flex;flex-wrap:wrap;gap:.8rem;margin:.7rem 0}
+.xfig{margin:0;max-width:360px}
+.xfig img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line)}
+.xfig figcaption{font-size:.8rem;color:var(--muted);margin-top:.25rem}
