@@ -424,3 +424,36 @@ button.hhead:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
 
 .mgroups .chip .cn{opacity:.7;font-size:.78rem;margin-left:.2rem}
 .mgroups .chip.on .cn{opacity:.9}
+
+/* Icon glossary */
+.gmain{padding-bottom:2rem}
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:.7rem}
+.gcard{display:flex;gap:.8rem;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:.75rem .85rem;box-shadow:var(--shadow);align-items:flex-start;scroll-margin-top:.6rem}
+.gicons{flex:0 0 auto;display:flex;flex-wrap:wrap;gap:.25rem;min-width:78px;max-width:128px;justify-content:center;align-items:center;align-self:flex-start;background:color-mix(in srgb,var(--bg) 70%,#8a8f98 30%);border-radius:10px;padding:.35rem}
+.gicons img{width:34px;height:auto;max-height:44px;object-fit:contain;display:block}
+.gicons img:only-child{width:64px;max-height:70px}
+.gtext{min-width:0;flex:1}
+.gtext h3{margin:0 0 .15rem;font-size:1rem}
+.gtext p{margin:.2rem 0;font-size:.9rem}
+.gmeta{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;font-size:.78rem;color:var(--muted)}
+.gbox{font-size:.76rem;color:var(--muted)}
+.gpg{font-size:.76rem;color:var(--muted)}
+
+/* Rules figures, tables and icon chips */
+.rfigs{display:flex;flex-wrap:wrap;gap:.7rem;margin:.6rem 0 .3rem}
+.rfig{margin:0;flex:0 1 auto;max-width:100%}
+.rfig a{display:block;line-height:0}
+.rfig img{max-width:100%;height:auto;max-height:340px;border-radius:8px;border:1px solid var(--line);background:var(--bg)}
+.rfig figcaption{font-size:.74rem;color:var(--muted);margin-top:.2rem}
+.rtablew{overflow-x:auto;margin:.6rem 0}
+.rtable{border-collapse:collapse;font-size:.84rem;min-width:100%}
+.rtable th,.rtable td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+.rtable th{background:color-mix(in srgb,var(--accent) 14%,var(--panel));font-weight:600}
+.richips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.5rem 0 .2rem}
+.richip{display:inline-flex;align-items:center;gap:.3rem;background:color-mix(in srgb,var(--bg) 75%,#8a8f98 25%);border:1px solid var(--line);border-radius:999px;padding:.1rem .6rem .1rem .25rem;font-size:.78rem;color:var(--ink);text-decoration:none}
+.richip img{width:24px;height:24px;object-fit:contain}
+.richip:hover{border-color:var(--accent)}
+.rthumbs{display:flex;gap:.4rem;margin-top:.45rem;flex-wrap:wrap}
+.rthumbs img{height:58px;width:auto;max-width:150px;object-fit:cover;border-radius:6px;border:1px solid var(--line);background:var(--bg)}
+.rthumbs img.ic{height:32px;width:auto;border:0;background:transparent;object-fit:contain}
+@media (max-width:560px){.gcard{flex-direction:column}.gicons{width:100%;justify-content:flex-start}}

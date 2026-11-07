@@ -18,6 +18,8 @@ You need the rulebook to play. This project is not affiliated with or endorsed b
 - **Scenario armies.** Eight scenarios (Plain Carnage, Chicken Game, A Rough Night, Caumont-l'Éventé, Le Quesnay, Surrounded!, Windy at Sept-Vents! and We Shall Pass!) have "Open the armies in the builder" buttons, one per side. Armies follow the booklet recruitment pictures. Pages 21 to 28 follow the V2.5 booklet, the rest V2.4. Thirteen of the sixteen match the booklet points exactly. The German armies in Plain Carnage, Le Quesnay and Surrounded! come out 5 to 10 points under the printed figure. Armies are stored in `data/hon-bro-scenarios.js` as tile ids and one option id per slot.
 - **Tokens and markers.** `tokens.html` shows the scans of the objective, tactical bonus, turn chart, event, suppressed, vehicle damage, destruction and flamethrower markers with what each does, linked to the rules search. Data lives in `data/hon-bro-tokens.js`.
 - **Heroes and equipment.** `heroes.html` lists every hero tile for both sides, the units on it, and every option that fits its slot, worked out with the same rule as the builder. It also shows the weapon cards and markers (Bazooka, Panzerfaust, Knife, MP40, Thompson, Flamer, Overwatch). Data lives in `data/hon-bro-heroes.js`.
+- **Icon glossary.** `icons.html` lists every icon from the rulebook icon summaries (Big Red One p.36, Bloody Omaha p.24) with its picture, group, page and what it does. Search by name or words in the description, filter by group, and switch box. Icons are cut from the PDFs at native size with their transparency. Data lives in `data/hon-icons.js` (images in `img/hon/<box>/icons/`).
+- **Rules compendium.** `rules.html` now covers Big Red One and Bloody Omaha. Rule entries carry figures cropped from the rulebook pages (`img/hon/<box>/rules/`), tables (the Omaha player generated landings table), and chips that link to the matching icon in the glossary. Search results show thumbnails. Add new boxes by adding `data/hon-<box>-rules.js` and a box name in `js/rules.js`.
 - **Maps.** `maps.html` is a map builder for four boxes: Big Red One, Bloody Omaha, Battle for Caen (Epsom, Charnwood & Goodwood) and Battle for Caen (Windsor & Jupiter). Pick a box, filter its terrain by type (Maps, Houses and buildings, Defensive positions, Rocks, Thickets and forests, Ponds, Roads and rivers, Bridges, Trails, Obstacles, Landing craft; type names follow rulebook p.19) or search by name, view both sides of any piece, then add it to a canvas. Drag, rotate, flip, duplicate, reorder, undo and redo. Pieces from different boxes can share one map. Choose a map size from 1 to 9 boards or type squares. Snap is whole square, half square or off. Save maps on your device, copy a link (`maps.html#m=...`), download a picture or print. It warns when a piece is used more than once or two boards overlap. Data lives in `data/maps.js`. A board is 7 by 7 squares and one square is 200 pixels in the images. Boards carry their side label (such as OB5-A or EC1-B) in the top left square.
 - **Save, share, print.** Save armies on your device, copy a link, export or import a file, print a roster sheet.
 
@@ -42,6 +44,9 @@ js/scenarios.js       the scenarios index page
 js/tokens.js          the tokens and markers page
 js/heroes.js          the heroes and equipment page
 js/maps.js            the map builder
+js/icons.js           the icon glossary
+data/hon-icons.js     icon glossary entries
+data/hon-omaha-rules.js  Bloody Omaha rules (V7.1)
 data/maps.js          terrain pieces for the four boxes (img/hon/maps/<box>/)
 data/hon-bro-tokens.js the marker entries
 data/hon-bro-heroes.js the equipment cards
@@ -55,6 +60,7 @@ scenarios.html
 tokens.html
 heroes.html
 maps.html
+icons.html
 css/style.css
 test/smoke.js         Playwright smoke test
 ```

@@ -346,6 +346,42 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await mm.locator('.mcard', { hasText: 'Board C3' }).locator('[data-add]').click(); await mm.waitForTimeout(250);
   ok(await mm.locator('#stage').isVisible() && await mm.evaluate(() => document.documentElement.scrollWidth) <= 390, 'maps: phone switches to the map without sideways scroll');
   ok(mperrs.length === 0, 'maps: no console errors ' + mperrs.join('|'));
+  // icon glossary and rules compendium
+  const ip = await b.newPage({ viewport: { width: 1200, height: 900 } });
+  const iperrs = []; ip.on('pageerror', e => iperrs.push(e.message)); ip.on('console', m => { if (m.type() === 'error') iperrs.push(m.text()); });
+  await ip.goto(base + 'icons.html'); await ip.waitForTimeout(300);
+  ok(await ip.locator('.gcard').count() === 50, 'icons: 50 entries across both boxes');
+  await ip.fill('#q', 'sniper'); await ip.waitForTimeout(250);
+  ok(await ip.locator('.gcard').count() === 1 && await ip.locator('.gcard img').count() >= 1, 'icons: search finds Sniper with its picture');
+  await ip.fill('#q', ''); await ip.locator('#boxes [data-box="omaha"]').click();
+  ok(await ip.locator('.gcard').count() === 17, 'icons: Bloody Omaha has 17 entries');
+  await ip.locator('#groups [data-group="Terrain effects"]').click();
+  ok(await ip.locator('.gcard').count() === 6, 'icons: Omaha terrain filter shows 6');
+  const ibroken = await ip.evaluate(() => Array.from(document.images).filter(i => i.getAttribute('src') && i.complete && i.naturalWidth === 0).length);
+  ok(ibroken === 0, 'icons: no broken images');
+  const iconFiles = await ip.evaluate(() => { const o = []; Object.keys(HTS_ICONS).forEach(k => HTS_ICONS[k].entries.forEach(e => e.icons.forEach(i => o.push(i.img)))); return o; });
+  const imiss = []; for (const u of iconFiles) { const r = await ip.request.get(base + u); if (r.status() !== 200) imiss.push(u); }
+  ok(imiss.length === 0, 'icons: every icon file exists (' + iconFiles.length + ')');
+  ok(iperrs.length === 0, 'icons: no console errors ' + iperrs.join('|'));
+  const rq = await b.newPage({ viewport: { width: 1100, height: 900 } });
+  const rqerrs = []; rq.on('pageerror', e => rqerrs.push(e.message)); rq.on('console', m => { if (m.type() === 'error') rqerrs.push(m.text()); });
+  await rq.goto(base + 'rules.html?b=omaha'); await rq.waitForTimeout(300);
+  ok(await rq.locator('.rlink').count() >= 14, 'rules: Omaha sections listed');
+  await rq.fill('#q', 'bangalore'); await rq.waitForTimeout(250);
+  ok(await rq.locator('.rcard').count() >= 1, 'rules: Omaha search finds Bangalores');
+  await rq.fill('#q', 'landing table'); await rq.waitForTimeout(250);
+  await rq.locator('.rtitle').first().click(); await rq.waitForTimeout(250);
+  ok(await rq.locator('#rmodal .rtable tbody tr').count() === 3, 'rules: landing table renders 3 rows');
+  await rq.goto(base + 'rules.html?b=omaha&q=minefield'); await rq.waitForTimeout(250);
+  ok(await rq.locator('.rthumbs img').count() >= 1, 'rules: search card shows a figure thumbnail');
+  await rq.locator('.rtitle').first().click(); await rq.waitForTimeout(400);
+  ok(await rq.locator('#rmodal .rfig img').count() >= 1, 'rules: section shows its figure');
+  await rq.goto(base + 'rules.html?b=bro&q=howitzer'); await rq.waitForTimeout(250);
+  ok(await rq.locator('.rcard').count() >= 1, 'rules: Big Red One search still works');
+  const figAll = await rq.evaluate(() => { const o = []; ['hon-bro', 'hon-omaha'].forEach(k => HTS_RULES[k].chunks.forEach(c => (c.figs || []).forEach(f => o.push(f.img)))); return o; });
+  const fmiss = []; for (const u of figAll) { const r = await rq.request.get(base + u); if (r.status() !== 200) fmiss.push(u); }
+  ok(figAll.length > 60 && fmiss.length === 0, 'rules: every figure file exists (' + figAll.length + ')');
+  ok(rqerrs.length === 0, 'rules: no console errors ' + rqerrs.join('|'));
   // images load
   const broken = await pg.evaluate(() => Array.from(document.images).filter(i => i.getAttribute('src') && i.complete && i.naturalWidth === 0).length);
   ok(broken === 0, 'no broken images');

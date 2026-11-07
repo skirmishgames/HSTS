@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-CA" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heroes System Tactical Scale icon glossary</title>
+<meta name="description" content="Heroes System Tactical Scale icon glossary. Every objective, bonus, turn chart and combat marker in Heroes of Normandie Big Red One, with the scan and what it does.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="upage hpage">
+<header class="top">
+  <div class="brand">
+    <h1>Heroes System Tactical Scale</h1>
+    <p class="sub" id="subtitle">Icon glossary, Heroes of Normandie</p>
+  </div>
+  <div class="top-actions">
+    <a class="btn ghost" href="index.html">Army builder</a>
+    <a class="btn ghost" href="units.html">Unit index</a>
+    <a class="btn ghost" href="rules.html">Rules</a>
+    <a class="btn ghost" href="history.html">History</a>
+    <a class="btn ghost" href="scenarios.html">Scenarios</a>
+    <a class="btn ghost" href="tokens.html">Tokens</a>
+    <a class="btn ghost" href="heroes.html">Heroes</a>
+    <a class="btn ghost" href="maps.html">Maps</a>
+    <button id="btnTheme" class="ghost" type="button" aria-label="Switch light or dark mode">Dark</button>
+  </div>
+</header>
+
+<section class="setup" aria-label="Search">
+  <div class="field">
+    <span class="label">Game box</span>
+    <div id="boxes" class="seg" role="group" aria-label="Game box"></div>
+  </div>
+  <div class="field grow">
+    <label class="label" for="q">Search the icons</label>
+    <input id="q" type="search" placeholder="Try: sniper, howitzer, obstacle, order, assault" autocomplete="off">
+  </div>
+</section>
+<section class="setup filters2" aria-label="Group">
+  <div class="field">
+    <span class="label">Group</span>
+    <div id="groups" class="chips" role="group" aria-label="Group"></div>
+  </div>
+</section>
+<p id="stat" class="ustat" aria-live="polite"></p>
+
+<main id="out" class="umain gmain"></main>
+
+<footer class="foot">
+  <p id="srcnote">Icons and their descriptions come from the icon summary page of each rulebook. Page numbers point to the rule in the printed rulebook.</p>
+  <p>Fan-made tool for Heroes of Normandie, Devil Pig Games. Icon pictures and rule text belong to Devil Pig Games. Check the rulebook for exact wording.</p>
+  <p>Corrections and feedback: <a href="mailto:games@staroversky.com">games@staroversky.com</a></p>
+</footer>
+
+<script src="data/hon-icons.js"></script>
+<script src="js/icons.js"></script>
+</body>
+</html>

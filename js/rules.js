@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'bro', name: 'Big Red One' }];
+  var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }];
   var S = { b: 'bro', q: '', ch: 'all', open: null, chunk: null, full: false, theme: 'light' };
   var cache = {};
 
@@ -17,6 +17,30 @@
   function hit(hay, padded, t) { return t.length <= 2 ? padded.indexOf(' ' + t + ' ') >= 0 : hay.indexOf(t) >= 0; }
   function countOf(hay, t) { var n = 0, i = -1; while ((i = hay.indexOf(t, i + 1)) >= 0) n++; return n; }
 
+  var ICONIDX = null;
+  function iconIdx() {
+    if (ICONIDX) return ICONIDX;
+    ICONIDX = [];
+    var all = window.HTS_ICONS || {};
+    ['bro', 'omaha'].forEach(function (b) {
+      var d = all['hon-' + b]; if (!d) return;
+      d.entries.forEach(function (e) { ICONIDX.push({ e: e, box: b, n: norm(e.name) }); });
+    });
+    return ICONIDX;
+  }
+  function iconsFor(c) {
+    var idx = iconIdx(), out = [], seen = {};
+    var sub = norm((c.sub || '') + ' ' + (c.term || '')), tx = ' ' + norm(c.text) + ' ';
+    idx.forEach(function (x) {
+      if (!x.e.icons.length || seen[x.n]) return;
+      var ok = sub && (' ' + sub + ' ').indexOf(' ' + x.n + ' ') >= 0 && x.n.length > 3;
+      if (!ok && x.n.length > 4) ok = tx.indexOf(' ' + x.n + ' special abilit') >= 0 || tx.indexOf(' ' + x.n + ' special ability ') >= 0;
+      if (ok) { seen[x.n] = 1; out.push(x); }
+    });
+    out.sort(function (a, b) { return (a.box === S.b ? 0 : 1) - (b.box === S.b ? 0 : 1); });
+    return out.slice(0, 5);
+  }
+
   function load() {
     var ck = S.b;
     if (cache[ck]) return cache[ck];
@@ -26,9 +50,10 @@
     d.chapters.forEach(function (c) { chapters[c.n] = c; });
     d.chunks.forEach(function (c) {
       var s = secs[c.sec];
-      c.hay = norm((s ? s.id + ' ' + s.title : '') + ' ' + (c.sub || '') + ' ' + c.text);
+      c.hay = norm((s ? s.id + ' ' + s.title : '') + ' ' + (c.sub || '') + ' ' + c.text + (c.table ? ' ' + c.table.head.join(' ') + ' ' + c.table.rows.map(function (r) { return r.join(' '); }).join(' ') : ''));
       c.head = norm((s ? s.title : '') + ' ' + (c.sub || '') + ' ' + (c.term || ''));
       c.ch = s ? s.chapter : 0;
+      c.icons = iconsFor(c);
     });
     cache[ck] = { d: d, secs: secs, chapters: chapters };
     return cache[ck];
@@ -60,6 +85,8 @@
     $('chapters').innerHTML = '<button type="button" class="chip' + (S.ch === 'all' ? ' on' : '') + '" data-ch="all">All</button>' +
       R.d.chapters.map(function (c) { return '<button type="button" class="chip' + (String(S.ch) === String(c.n) ? ' on' : '') + '" data-ch="' + c.n + '">' + (c.n < 9 ? c.n + ' ' : '') + esc(c.title) + '</button>'; }).join('');
     $('q').value = S.q;
+    var sb = BOXES.filter(function (b) { return b.id === S.b; })[0];
+    if ($('subtitle') && sb) $('subtitle').textContent = 'Rules compendium, Heroes of Normandie, ' + sb.name;
     document.documentElement.setAttribute('data-theme', S.theme);
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
   }
@@ -98,9 +125,32 @@
     if (!shown.length) { $('out').innerHTML = '<p class="empty2">No rule matches. Try fewer or simpler words.</p>'; $('stat').textContent = '0 matches.'; return; }
     $('out').innerHTML = '<div class="rres">' + shown.map(function (x) {
       var c = x.c;
-      return '<article class="rcard"><h3><button type="button" class="rtitle" data-open="' + esc(c.sec) + '" data-chunk="' + c.id + '">' + mk(label(R, c)) + '</button>' + (c.term ? ' <span class="rbadge">Keyword</span>' : '') + '</h3><p>' + snippet(c, toks, mk) + '</p></article>';
+      return '<article class="rcard"><h3><button type="button" class="rtitle" data-open="' + esc(c.sec) + '" data-chunk="' + c.id + '">' + mk(label(R, c)) + '</button>' + (c.term ? ' <span class="rbadge">Keyword</span>' : '') + '</h3><p>' + snippet(c, toks, mk) + '</p>' + thumbsHtml(c) + '</article>';
     }).join('') + '</div>';
     $('stat').textContent = res.length + ' match' + (res.length === 1 ? '' : 'es') + (res.length > 60 ? ', showing the best 60' : '') + '.';
+  }
+
+  function tableHtml(c) {
+    if (!c.table) return '';
+    return '<div class="rtablew"><table class="rtable"><thead><tr>' + c.table.head.map(function (h) { return '<th>' + esc(h) + '</th>'; }).join('') + '</tr></thead><tbody>' +
+      c.table.rows.map(function (r) { return '<tr>' + r.map(function (x) { return '<td>' + esc(x) + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table></div>';
+  }
+  function chipsHtml(c) {
+    if (!c.icons || !c.icons.length) return '';
+    return '<div class="richips">' + c.icons.map(function (x) {
+      return '<a class="richip" href="icons.html?b=' + x.box + '&amp;q=' + encodeURIComponent(x.e.name) + '" title="Open in the icon glossary"><img src="' + esc(x.e.icons[0].img) + '" alt="" width="24" height="24" loading="lazy">' + esc(x.e.name) + ' icon</a>';
+    }).join('') + '</div>';
+  }
+  function figsHtml(c) {
+    if (!c.figs || !c.figs.length) return '';
+    return '<div class="rfigs">' + c.figs.map(function (f) {
+      return '<figure class="rfig"><a href="' + esc(f.img) + '" target="_blank" rel="noopener"><img src="' + esc(f.img) + '" alt="Rulebook figure, page ' + c.page + '" width="' + f.w + '" height="' + f.h + '" loading="lazy"></a><figcaption>Rulebook p.' + c.page + '</figcaption></figure>';
+    }).join('') + '</div>';
+  }
+  function thumbsHtml(c) {
+    var t = (c.icons || []).slice(0, 3).map(function (x) { return '<img class="ic" src="' + esc(x.e.icons[0].img) + '" alt="" loading="lazy">'; }).join('') +
+      (c.figs || []).slice(0, 2).map(function (f) { return '<img src="' + esc(f.img) + '" alt="" loading="lazy">'; }).join('');
+    return t ? '<div class="rthumbs">' + t + '</div>' : '';
   }
 
   var lastFocus = null;
@@ -133,7 +183,7 @@
     chunks.forEach(function (c) {
       if (c.sub && c.sub !== lastSub && !(partial && c.sub === focus.sub)) { si = subs.indexOf(c.sub); body += '<h3 class="rsub" id="rs' + si + '">' + mk(c.sub) + '</h3>'; }
       body += '<section class="rchunk' + (S.chunk === c.id && !partial ? ' focus' : '') + '" id="k' + c.id + '">' +
-        c.text.split('\n').map(function (p) { return '<p>' + mk(p) + '</p>'; }).join('') + '</section>';
+        c.text.split('\n').map(function (p) { return '<p>' + mk(p) + '</p>'; }).join('') + tableHtml(c) + chipsHtml(c) + figsHtml(c) + '</section>';
       if (c.page !== lastPage) body += '<small class="rpg">Rulebook p.' + c.page + '</small>';
       lastSub = c.sub; lastPage = c.page;
     });
@@ -187,7 +237,7 @@
   function bind() {
     document.addEventListener('click', function (ev) {
       var t = ev.target, el;
-      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; S.open = null; render(); return; }
+      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; S.open = null; S.ch = 'all'; render(); return; }
       if ((el = t.closest('[data-ch]'))) { S.ch = el.dataset.ch === 'all' ? 'all' : Number(el.dataset.ch); S.open = null; render(); return; }
       if ((el = t.closest('[data-jump]'))) { var h = document.getElementById('rs' + el.dataset.jump); if (h) h.scrollIntoView({ block: 'start' }); return; }
       if (t.closest('[data-full-open]')) { S.full = true; render(); return; }

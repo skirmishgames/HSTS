@@ -1,5 +1,5 @@
 HEROES SYSTEM TACTICAL SCALE: ISSUES TO BE ADDRESSED
-Last updated: 2026-11-06 (site version hts-v16)
+Last updated: 2026-11-06 (site version hts-v18)
 
 HOW TO USE THIS FILE
 - One entry per issue. Never delete an entry. Change its status and add a dated line under "Decision".
@@ -146,3 +146,8 @@ LOCAL FILE ORGANIZING
 
 ISS-021  Helper folder _work   [OPEN]
 I made Heroes System/_work for conversion scripts and a zip of the map images. Delete it when you like. The shell cannot.
+
+ISS-022  Rule text and figures are machine extracted   [OPEN]
+Where: data/hon-bro-rules.js, data/hon-omaha-rules.js, img/hon/<box>/rules/
+Detail: Figures are cropped from the rulebook pages by position and attached to the nearest rule entry above them in the same column. A few can sit under a neighbouring entry on the same page. Inline icons inside sentences are not in the text, so a few Omaha passages were repaired by hand (Stress, Bunker, Substitute, Barrage order, NCO, Bangalores, Smoke, Barbed wire, Tank gear). Omaha text pages 4-14 only. The Omaha scenario pages and tile/option notes are still to do.
+Decision: 2026-11-06 Ship as is, correct on request. Check against the printed rulebook for exact wording.

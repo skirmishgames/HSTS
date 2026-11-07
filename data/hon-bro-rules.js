@@ -291,7 +291,14 @@ HTS_RULES["hon-bro"] = {
 "page": 4,
 "text": "DEFENSE VALUE This counter is an Infantry Unit, so its Defense Value is printed inside a Yellow Shield . During a Firing Action, it suffers one or more hits when an opponent's roll plus appropriate Combat Value is 6 or higher.\nCOMBAT VALUE AGAINST LIGHT VEHICLES This Combat Value gives the Unit a +1 to its attack rolls against Light Vehicle (any target whose Defense Value is printed inside a Purple Shield ).\nCOMBAT VALUE AGAINST HEAVY VEHICLES X means this counter can deal no damage to Heavy Vehicles (any target whose Defense Value is printed inside a Grey shield ).\nSPECIAL ABILITIES This counter has several special abilities represented by symbols:\nOrder (x2) , Assault and Limited Range (4 squares) .\nhit This symbol means that the counter must be turned over if it suffers a Hit.\nOUTLINE Yellow, indicates this counter is an Officer.\nlt Blean lt Blean Inactive Side Active Side",
 "term": null,
-"id": 2
+"id": 2,
+"figs": [
+{
+"img": "img/hon/bro/rules/p4-1.webp",
+"w": 487,
+"h": 240
+}
+]
 },
 {
 "sec": "1.2",
@@ -299,7 +306,19 @@ HTS_RULES["hon-bro"] = {
 "page": 5,
 "text": "These Units include transport, recon, and support Vehicles. They are represented in the game by counters that are usually larger than Infantry Units. Counters come in different sizes, and may occupy one or two squares, depending on size. On the game board, always center the counter on the square or squares that it occupies. Light Vehicles have light armour, if any. Their Defense Values are printed inside a Purple shield .\nLight Vehicle counters are double-sided. On one side, the Unit is in perfect working order. On the other side, it has been reduced to a Wreck.\nExample of a Light Vehicle occupying one square, centered on the square that it occupies.\nExample of a Light Vehicle occupying two squares. light vehicle:\nUnharmed Side Wrecked Side Unharmed Side Wrecked Side SdKfz SdKfz 251/1 251/1 Unit NAME Name of the Vehicle.\nMOVEMENT VALUE This counter can move 6 squares.\nCOMBAT VALUE AGAINST infantry Units This Combat Value gives the Unit a +4 to its attack rolls against Infantry Units (any target whose Defense Value is printed inside a Yellow shield ).\nDEFENSE VALUE This counter is a Light Vehicle, so its Defense Value is printed inside a Purple shield .\nDuring a Firing Action, it suffers one or more Hits when an opponent's roll plus appropriate Combat Value is 6 or higher.\nCOMBAT VALUE AGAINST LIGHT VEHICLES This Combat Value gives the Unit a +2 to its attack rolls against Light Vehicles (any target whose Defense Value is printed inside a Purple Shiel ).\nCOMBAT VALUE AGAINST HEAVY VEHICLES X means this counter can deal no damage to Heavy Vehicles (any target whose Defense Value is printed inside a Grey shield ).\nSPECIAL ABILITIES This counter has several Special Abilities represented by symbols: Transport (7) , Machine Gunner , Suppressive Fire and Fire on the Move (-2) .",
 "term": null,
-"id": 3
+"id": 3,
+"figs": [
+{
+"img": "img/hon/bro/rules/p5-3.webp",
+"w": 217,
+"h": 158
+},
+{
+"img": "img/hon/bro/rules/p5-4.webp",
+"w": 218,
+"h": 158
+}
+]
 },
 {
 "sec": "1.2",
@@ -323,7 +342,19 @@ HTS_RULES["hon-bro"] = {
 "page": 5,
 "text": "This counter has 4 Defense Values, printed inside Grey shield as it is a Heavy Vehicle. It suffers damage when an opponent's roll plus appropriate Combat Value is 9 or higher if attacked from the front, 7 or higher if attacked from the side,and 6 or higher if attacked from the rear. secondary weapon This weapon's Combat Value gives the Unit a bonus to its attack rolls; +4 against Infantry Units , +2 against Light Vehicles , and X against Heavy Vehicles . This weapon also has the Machine Gunner , Suppressive Fire and Fire on the Move (-2)\nSpecial Abilities.\ndefense value (front)\nDIVISION BADGE This counter is part of the German army.\ndefense value (side)\nDestruction of vehicles Once a Vehicle (Light or Heavy) is Destroyed, it becomes a Wreck that counts as a terrain tile. A Wreck is a Structure that can be removed from the battlefield provided some conditions are met (see Crushing Wrecks, p.11). Unharmed Side Wrecked Side",
 "term": null,
-"id": 6
+"id": 6,
+"figs": [
+{
+"img": "img/hon/bro/rules/p5-1.webp",
+"w": 217,
+"h": 158
+},
+{
+"img": "img/hon/bro/rules/p5-2.webp",
+"w": 218,
+"h": 158
+}
+]
 },
 {
 "sec": "2",
@@ -347,7 +378,14 @@ HTS_RULES["hon-bro"] = {
 "page": 6,
 "text": "BREAKING POINT When this many counters have been destroyed (here, 3), your opponent scores Victory Points for this tile (the number of victory points is printed in red on the back of the tile). You can read more about this in the Chapter Free Battle Mode (see Scenarios booklet, p.05).\nCOMPOSITION OF THE COMBAT GROUP The number and type of counters in the combat group. In the present case, lt.blean lt.blean, a Recon Team Recon Team, a Fire Team Fire Team and a Support team Support team.\nThe stars in the battle group composition are not in addition to those on the officer's counter.\nThey are only there to remind you that this officer brings 2 Order Tokens thanks to his SpecialAbility.\nDIVISION OR ARMY BADGE Here, 1st Infantry Div.\nREGIMENT BADGE Here, the 16th Infantry Regiment.\nNAME The name of the combat group the tile represents.\n1ST INF. DIV.\n1ST INF. DIV.\n16TH INF. REG. A 16TH INF. REG. A Recruitment Tiles have a cost expressed in Army points. You can read more about this in the Scenarios booklet (see Breaking Points, p.05).",
 "term": null,
-"id": 9
+"id": 9,
+"figs": [
+{
+"img": "img/hon/bro/rules/p6-4.webp",
+"w": 487,
+"h": 153
+}
+]
 },
 {
 "sec": "2.2",
@@ -355,7 +393,24 @@ HTS_RULES["hon-bro"] = {
 "page": 6,
 "text": "Command Tiles have symbols, decorated with laurel wreaths, next to their title, and are governed by special rules. It is most often a Character Tile, such as a superior Officer, but it may sometimes be the tile of a combat group.\nSome of these tiles contain no Unit, such as High Command Tiles, but instead represent extra resources assigned by someone up the chain of command. High Command Tiles are not included in the core box, but are available in some expansions.",
 "term": null,
-"id": 10
+"id": 10,
+"figs": [
+{
+"img": "img/hon/bro/rules/p6-1.webp",
+"w": 411,
+"h": 156
+},
+{
+"img": "img/hon/bro/rules/p6-2.webp",
+"w": 205,
+"h": 155
+},
+{
+"img": "img/hon/bro/rules/p6-3.webp",
+"w": 205,
+"h": 155
+}
+]
 },
 {
 "sec": "2.3",
@@ -395,7 +450,14 @@ HTS_RULES["hon-bro"] = {
 "page": 7,
 "text": "During the Order Phase, both players assign Order Tokens to their Units. Only Units that have Order Tokens will be able to move and attack during the Activation Phase (the others will have a chance to act during the Supply Phase, so don’t worry).\nThe Order Phase is split into four steps:\nSTEP 1 Resolve effects that occur at the Start of the Order Phase: Some effects in the game are resolved at the beginning of the Order Phase. The first thing you must do each Game Turn is resolve these effects, in this order:\n• Special Abilities (see p.21).\n• Action Cards (see p.17).\n• Recruitment Options (see p.28).\n• Scenario Specific Effects.\nSTEP 2 Take Order Tokens: Each Game Turn, you get a number of Numbered Order Tokens equal to the sum of all Order stars from any Officers, as well as Personal Orders, Order Options, or Recruitment Tile Special Abilities. Starting with Order #1, take the consecutive Numbered Order Tokens up to your maximum Order total.",
 "term": null,
-"id": 15
+"id": 15,
+"figs": [
+{
+"img": "img/hon/bro/rules/p7-1.webp",
+"w": 487,
+"h": 153
+}
+]
 },
 {
 "sec": "3.1",
@@ -427,7 +489,19 @@ HTS_RULES["hon-bro"] = {
 "page": 8,
 "text": "Special Order Tokens can be obtained with either the High Command Action Card , the Battle Plan Order Option, or a Special Ability. Special Order Tokens can be activated before or after any other Order Token, which means they can take precedence and be played as Order #0. However, they cannot interrupt an ongoing activation.\nIf several players want to activate Special Order Tokens at the same time, the player who has the Initiative reveals and plays his Special Order first. His opponent plays his next. For some specific rules, a Special Order Token is considered to have the same value as the last Numbered Order Token revealed.\nOrder Token Limit:\nYou can never have more than 10 Numbered Order Tokens, 2 Special Order Tokens, and 2 Bluff Order Tokens.\nSTEP 4 Resolve effects that occur at the end of the Order Phase: Some effects in the game are resolved at the end of the Order Phase. Once all Order Tokens have been placed, you must resolve these effects, in this order:\n• Special Abilities (see p.21).\n• Action Cards (see p.17).\n• Recruitment Options (see p.28).\n• Scenario Specific Effects.\n1*",
 "term": null,
-"id": 19
+"id": 19,
+"figs": [
+{
+"img": "img/hon/bro/rules/p8-1.webp",
+"w": 411,
+"h": 155
+},
+{
+"img": "img/hon/bro/rules/p8-2.webp",
+"w": 487,
+"h": 152
+}
+]
 },
 {
 "sec": "3.2",
@@ -435,7 +509,19 @@ HTS_RULES["hon-bro"] = {
 "page": 9,
 "text": "During the Activation Phase, the players take turns activating their Units and taking actions. Normally, only Units marked with a Numbered or Special Order Token can take actions during this phase, but some Action Cards and Special Abilities may allow a Unit to act out of turn.\n• The player who has the Initiative plays first, starting the phase by revealing his Order Token #1. The Unit with that token may then take an action.\nWarning: Remember to take into account any Special Order Tokens you may have assigned to Units or any Autonomous Special Ability (p.27) your Units may have.\n• When the Activated Unit’s action is complete, the other player reveals his Order Token #1 and takes actions with that Unit. The players continue taking turns, revealing their next Numbered Order Token and taking actions, until all Units with Numbered or Special Order Tokens have been Activated. Leave the Order Tokens next to the Units they were on, so you can remember which Units were Activated in this phase (to tell them apart from those that may still act during the Supply Phase).\n• If you had to discard an Order Token before it was resolved (because the Unit was Destroyed or it received an Activated Marker ), you still have to reveal the token when that Unit’s activation would have occurred. However, nothing happens and your opponent gets to activate his next Numbered Order Token.\n• If you have no more Numbered or Special Order Tokens to reveal, your opponent continues to activate his Units (by Order sequence).\nUnit Actions When Activated, a Unit can take one of the following actions:\n• 3.2.1 - Movement Action (see below).\n• 3.2.3 - Firing Action (see p.13).\nYou may also have your Unit do nothing, but it won’t be able to act later in the Game Turn.",
 "term": null,
-"id": 20
+"id": 20,
+"figs": [
+{
+"img": "img/hon/bro/rules/p9-1.webp",
+"w": 463,
+"h": 448
+},
+{
+"img": "img/hon/bro/rules/p9-2.webp",
+"w": 210,
+"h": 191
+}
+]
 },
 {
 "sec": "3.2.1",
@@ -459,7 +545,14 @@ HTS_RULES["hon-bro"] = {
 "page": 10,
 "text": "Offset Grid Squares Only Infantry Units can enter Offset Grid squares B B . These squares do not align with the General Grid of the Terrain Boards A A .\nOf course passage must be free and unblocked to allow any Movement Action.\nAn Infantry Unit can move, even diagonally, from one Offset Grid square to any adjacent Offset Grid square A . A direct movement between an Offset square and an adjacent one in the General Grid must traverse the sides of both squares and may not be traced through any corner. The necessary passage through an incomplete square is free B . Offset Grid squares:\nblue moves are allowed, red moves are prohibited.",
 "term": null,
-"id": 23
+"id": 23,
+"figs": [
+{
+"img": "img/hon/bro/rules/p10-3.webp",
+"w": 371,
+"h": 372
+}
+]
 },
 {
 "sec": "3.2.1",
@@ -475,7 +568,29 @@ HTS_RULES["hon-bro"] = {
 "page": 10,
 "text": "Forced Moves Some situations or Action Cards can force a Unit to move. This is called a Forced Move. Unlike normal movement, Forced Moves do not trigger special actions that are related to movement, such as Opportunity Fire (see p.24). If a Unit with the Active Side up (see Changes of State, p.21) is forced to move, it is flipped to the Inactive Side first. If a Unit is forced to move off the board or into an Impassable Terrain Element (see p.18), the Unit is Destroyed.",
 "term": null,
-"id": 25
+"id": 25,
+"figs": [
+{
+"img": "img/hon/bro/rules/p10-1.webp",
+"w": 487,
+"h": 244
+},
+{
+"img": "img/hon/bro/rules/p10-2.webp",
+"w": 245,
+"h": 168
+},
+{
+"img": "img/hon/bro/rules/p10-4.webp",
+"w": 245,
+"h": 204
+},
+{
+"img": "img/hon/bro/rules/p10-5.webp",
+"w": 245,
+"h": 204
+}
+]
 },
 {
 "sec": "3.2.1",
@@ -491,7 +606,19 @@ HTS_RULES["hon-bro"] = {
 "page": 11,
 "text": "A Heavy Vehicle deals 1 Destruction Point to a Wreck when driving over a Wreck counter (see Destruction, p.22). If the Heavy Vehicle drives over both squares of a 2-square Wreck, it deals a maximum of 2 Destruction Points per Movement Action.\nWarning: Some Wrecks prohibit any Unit (Infantry or Vehicle) from entering the squares they occupy. (See Impassable, p.18).",
 "term": null,
-"id": 27
+"id": 27,
+"figs": [
+{
+"img": "img/hon/bro/rules/p11-1.webp",
+"w": 487,
+"h": 323
+},
+{
+"img": "img/hon/bro/rules/p11-3.webp",
+"w": 306,
+"h": 303
+}
+]
 },
 {
 "sec": "3.2.1",
@@ -499,7 +626,14 @@ HTS_RULES["hon-bro"] = {
 "page": 11,
 "text": "DuringtheirMovement Action,vehiclesmaypushaWreck 1 square. This push must be announced before executing the Movement Action. Light Vehicles may only push Wrecks that fit in 1 square.\nHeavy Vehicles may push Wrecks of any size. Move the Wreck in the direction of the pushing Vehicle's move, but retain its orientation on the board. This ends the pushing Vehicle's Movement Action.\nIf the Wreck is pushed into a square that is occupied by an Infantry Unit, the Infantry Unit must move over to an adjacent square. This is a Forced Move. If there isn't an unoccupied square for the Infantry Unit to be pushed into or it has no Movement Value (0 or X), it is immediately Destroyed and removed from the game.\nYou may not push a Wreck if the vacated square (the one about to be occupied by the pushing Vehicle) is Impassable to the pushing Vehicle.\nYou may not push a Wreck into a Terrain Element that is Impassable to Light Vehicles or Heavy Vehicles, except for Water squares (rivers, marshes, etc.).\nWhenever all the squares of a Wreck are in Water squares, remove it from the game (as it sinks). You can't push a Wreck off the edge of the battlefield.\nstop stop splash splash!\n!\nstop The Wreck of the Light Vehicle is pushed into the water and sinks.\nSpecial Movement Abilities Some Special Abilities can modify a Movement Action, these two in particular:\nAssault: allows you to move into a square occupied by an enemy Unit to initiate hand-tohand combat. (see assault p.25)\n.\nFire on the Move: lets you take a Firing Action at the beginning of, during, or at the end of your Movement Action. (see fire ont the move p.22)",
 "term": null,
-"id": 28
+"id": 28,
+"figs": [
+{
+"img": "img/hon/bro/rules/p11-2.webp",
+"w": 457,
+"h": 464
+}
+]
 },
 {
 "sec": "3.2.2",
@@ -515,7 +649,34 @@ HTS_RULES["hon-bro"] = {
 "page": 12,
 "text": "The US Unit may move into the ZoC of the German Unit 1 . It may stop there (within Assault range) or may move out of the ZoC 2 and may move back into it 3 , but may not move within it. The Unit could also, from 1 , engage in an Assault against the German Unit, which would allow it to ignore ZoC just for the Assault .\nzoc & Offset Grid Squares The ZoC of a Unit within a Terrain Element containing offset squares extends only to the adjacent Offset squares A A and the incomplete General Grid squares overlapped by its position B B .\nLegal moves in blue, prohibited moves in red. The diagonal moves out of the Offset Grid are prohibited. A A ZOC ZOC ZOC ZOC ZOC ZOC The ZoC of a Unit present in a square of the general grid extends to the surrounding boxes of this grid, whether complete A A or incomplete B B .\nblue moves are allowed, red moves are prohibited. zoc & vehicles A Vehicle does not have a ZoC. However, some Vehicle Special Abilities use the term ZoC to limit their effect to adjacent squares. Vehicles are not affected by the ZoC of enemy Infantry Units.\nPenalties related to Suppressed Markers (see p.16):\nEnemy Infantry Units are not affected by a Suppressed Unit's Zone of Control.\nA A A A ZOC ZOC ZOC ZOC ZOC ZOC",
 "term": null,
-"id": 30
+"id": 30,
+"figs": [
+{
+"img": "img/hon/bro/rules/p12-1.webp",
+"w": 437,
+"h": 407
+},
+{
+"img": "img/hon/bro/rules/p12-2.webp",
+"w": 268,
+"h": 265
+},
+{
+"img": "img/hon/bro/rules/p12-3.webp",
+"w": 487,
+"h": 389
+},
+{
+"img": "img/hon/bro/rules/p12-4.webp",
+"w": 263,
+"h": 263
+},
+{
+"img": "img/hon/bro/rules/p12-5.webp",
+"w": 437,
+"h": 354
+}
+]
 },
 {
 "sec": "3.2.3",
@@ -523,7 +684,19 @@ HTS_RULES["hon-bro"] = {
 "page": 13,
 "text": "Instead of a Movement Action, a Unit can take a Firing Action. In order to attack, the Unit must meet four conditions:",
 "term": null,
-"id": 31
+"id": 31,
+"figs": [
+{
+"img": "img/hon/bro/rules/p13-1.webp",
+"w": 486,
+"h": 320
+},
+{
+"img": "img/hon/bro/rules/p13-2.webp",
+"w": 484,
+"h": 249
+}
+]
 },
 {
 "sec": "3.2.3",
@@ -555,7 +728,14 @@ HTS_RULES["hon-bro"] = {
 "page": 14,
 "text": "The Defense Value of Heavy Vehicles depends on the firing angle (use the side markings to determine which Defense Value is taken into account). Choose the appropriate target square to get the lowest Defense Value.",
 "term": null,
-"id": 35
+"id": 35,
+"figs": [
+{
+"img": "img/hon/bro/rules/p14-2.webp",
+"w": 464,
+"h": 320
+}
+]
 },
 {
 "sec": "3.2.3",
@@ -563,7 +743,14 @@ HTS_RULES["hon-bro"] = {
 "page": 14,
 "text": "Most weapons have no range limit, (see Limited Range, p.23). But, any shot over 7 squares is considered to be at Long Range and suffers a -2 penalty to the final result of the die roll.\nWhen counting the number of squares to the target, you can use diagonals. You must always count the shortest route. Do not count the square of the firing Unit.\nWarning: If the LoS drawn to the center of a Vehicle that occupies more than one square is in doubt, the disagreement is settled by tracing the shortest LoS possible.",
 "term": null,
-"id": 36
+"id": 36,
+"figs": [
+{
+"img": "img/hon/bro/rules/p14-3.webp",
+"w": 487,
+"h": 296
+}
+]
 },
 {
 "sec": "3.2.3",
@@ -579,7 +766,14 @@ HTS_RULES["hon-bro"] = {
 "page": 14,
 "text": "Some Special Abilities, Recruitment Options and Action Cards can modify a Firing Action, or can be used instead of a Firing Action. This is called “taking an Alternate Firing Action.” Unless otherwise indicated, an Alternate Firing Action does not use the Special Abilities or Combat Value printed on the Unit counter. Instead, it only uses the values from the ability, card or option that granted the Alternate Firing Action. Special Abilities that trigger a Firing Action can also be used to trigger an Alternate Firing Action.",
 "term": null,
-"id": 38
+"id": 38,
+"figs": [
+{
+"img": "img/hon/bro/rules/p14-1.webp",
+"w": 434,
+"h": 292
+}
+]
 },
 {
 "sec": "3.2.3",
@@ -611,7 +805,14 @@ HTS_RULES["hon-bro"] = {
 "page": 15,
 "text": "There are a number of special rules that apply if you use a Firing Action to attack a Vehicle:\n- Hitting a Heavy Vehicle When you score a Hit on a Heavy Vehicle, it is not automatically Destroyed. Instead, you must roll to see what part of the Vehicle was damaged by the attack. To determine the location of the Damage on the Heavy Vehicle, the attacker rolls one die and places the Damage Marker that matches the number rolled on the Vehicle. The effect of the Damage to the Vehicle is indicated by the symbol on the Damage Marker:\n1: Crew Each turn, the vehicle can only fire one of its weapons, not both!\n2: Tracks The vehicle may no longer execute Movement Actions for the rest of the game. If it was moving, it stops immediately.\n3 or 4 4: Hull Put two Suppressed Markers on the vehicle in addition to this Damage marker.\nIf it was moving, it stops immediately.\n5: Primary weapon The vehicle’s Primary Weapon is Destroyed.\n6: Destruction The vehicle is Destroyed.\nTurn it over to its Wrecked Side.\nimportant: If a Vehicle ever receives a second Damage Marker of the same kind, the Vehicle is Destroyed. If a Heavy Vehicle receives a double hit (see below), the Vehicle is automatically Destroyed.",
 "term": null,
-"id": 42
+"id": 42,
+"figs": [
+{
+"img": "img/hon/bro/rules/p15-1.webp",
+"w": 194,
+"h": 249
+}
+]
 },
 {
 "sec": "3.2.3",
@@ -651,7 +852,14 @@ HTS_RULES["hon-bro"] = {
 "page": 17,
 "text": "Action Cards spice up the game and make your battles more heroic.\nEach player has their own deck of Action Cards, specific to the faction they are leading into battle, representing the unique tactics and advantages of that faction.\nAt the beginning of the game, you will draw a hand of Action Cards. At the end of each Supply Phase, you will draw up to a full hand again, so there’s no reason to hoard them! In fact, it’s usually best to use as many Action Cards as you can every Game Turn!\nWarning: If two players want to play an Action Card at the same time, the player who has the Initiative resolves his card first.",
 "term": null,
-"id": 47
+"id": 47,
+"figs": [
+{
+"img": "img/hon/bro/rules/p17-1.webp",
+"w": 191,
+"h": 191
+}
+]
 },
 {
 "sec": "4.2",
@@ -747,7 +955,14 @@ HTS_RULES["hon-bro"] = {
 "page": 18,
 "text": "As soon as a Unit moves into this Terrain Element, it must immediately stop moving. A Unit working its way through a Difficult Passage area can only advance 1 square before ending its Movement Action. A Unit that occupies more than one square is no longer affected by a Difficult Passage Terrain Element as soon as the front (or the rear if it is moving backwards) of the counter is no longer in the Terrain Element.",
 "term": null,
-"id": 59
+"id": 59,
+"figs": [
+{
+"img": "img/hon/bro/rules/p18-1.webp",
+"w": 418,
+"h": 243
+}
+]
 },
 {
 "sec": "5.1",
@@ -795,7 +1010,14 @@ HTS_RULES["hon-bro"] = {
 "page": 19,
 "text": "Difficult Passage / Water A small body of water, perfect for fishing... or drowning.",
 "term": null,
-"id": 65
+"id": 65,
+"figs": [
+{
+"img": "img/hon/bro/rules/p19-1.webp",
+"w": 270,
+"h": 397
+}
+]
 },
 {
 "sec": "5.3",
@@ -827,7 +1049,44 @@ HTS_RULES["hon-bro"] = {
 "page": 20,
 "text": "buildings & Line of Sight Most Buildings block LoS completely. When this is the case, the illustration is taken into account instead of the whole tile A . The red outline also blocks LoS for any Unit inside B .\nA Unit inside a Building receives a bonus to its Defense Value against Firing Action and Assault , unless the Firing or Assaulting Unit is also inside.\nbuildings & Firing Actions In order to fire from a Building, a Unit needs to be in the square adjacent to the opening it will fire through. Its LoS is restricted by the red outline of the walls.\nIn order to fire on a Unit that is inside a Building, the target needs to be in a square immediately adjacent to an Opening A . A Unit outside a Building and adjacent to an Opening can fire on Units inside the Building provided neither red outline nor interior walls block LoS B .\nA Unit outside a Building and adjacent to an opening can also be targeted by a Unit inside a Building on which it has an LoS B . In both cases, the target inside the Building benefits from the Building's Defensive Bonus. An Opening is a part of an outside wall that has no red outline and is framed by blue or White Arrows. You can only enter a Building through the spaces marked with a Blue Arrow (the doors). The move through the half square does not count as a square of movement.\nbuildings & Movement Action A Building’s walls and Windows restrict Zone of Control. A Unit is adjacent to a blue arrow that points into or out of a Building (Units A A and B B ), its Zone of Control extends to the square the arrow points at and can prevent exit ( A A ) or entry ( B B ).\nIf two Buildings are adjacent, only Infantry Units no larger than one square may pass or stop between. When two Buildings are adjacent diagonally, Vehicles may move or stop in between.",
 "term": null,
-"id": 69
+"id": 69,
+"figs": [
+{
+"img": "img/hon/bro/rules/p20-1.webp",
+"w": 213,
+"h": 213
+},
+{
+"img": "img/hon/bro/rules/p20-2.webp",
+"w": 501,
+"h": 274
+},
+{
+"img": "img/hon/bro/rules/p20-3.webp",
+"w": 353,
+"h": 287
+},
+{
+"img": "img/hon/bro/rules/p20-4.webp",
+"w": 231,
+"h": 191
+},
+{
+"img": "img/hon/bro/rules/p20-5.webp",
+"w": 357,
+"h": 280
+},
+{
+"img": "img/hon/bro/rules/p20-6.webp",
+"w": 511,
+"h": 269
+},
+{
+"img": "img/hon/bro/rules/p20-7.webp",
+"w": 357,
+"h": 290
+}
+]
 },
 {
 "sec": "6",
@@ -915,7 +1174,14 @@ HTS_RULES["hon-bro"] = {
 "page": 22,
 "text": "If your Firing Action has failed (no Hit, no Suppressed Marker , no Damage Marker), you may put a Suppressed Marker on your target.\nWarning: This Special Ability may not be used along with the Machine Gunner Special Ability.",
 "term": null,
-"id": 80
+"id": 80,
+"figs": [
+{
+"img": "img/hon/bro/rules/p22-1.webp",
+"w": 364,
+"h": 139
+}
+]
 },
 {
 "sec": "6.2",
@@ -931,7 +1197,19 @@ HTS_RULES["hon-bro"] = {
 "page": 23,
 "text": "Alternate Firing Action This Special Ability works like Howitzer (above) if you have a clear LoS to the target Interspace. If not, you can use Indirect Fire, but it may not necessarily land in the target Interspace because of Scatter.\nUse the Scattering Chart on the back of the explosion Template and roll a die.\n+\n• On 1 to 4, the shot scatters in the direction of the number indicated on the scattering Template to a distance equal to the number printed in the symbol.\n• On 5 or 6, the shot lands the target Interspace. Suppressed do not affect scattering rolls.\nDo not take into account penalties due to Obstacles that obscure LoS.\nYou may not use the Indirect Fire Special Ability from inside a building.\nImportant: Resolve each attack individually, using the Combat Values that match the attacker's Howitzer icon. scattering & offset Grid Squares The player who takes the Firing Action decides where the Template goes if it scatters from offset interspaces onto the General Grid .",
 "term": null,
-"id": 82
+"id": 82,
+"figs": [
+{
+"img": "img/hon/bro/rules/p23-2.webp",
+"w": 477,
+"h": 217
+},
+{
+"img": "img/hon/bro/rules/p23-4.webp",
+"w": 477,
+"h": 217
+}
+]
 },
 {
 "sec": "6.2",
@@ -939,7 +1217,19 @@ HTS_RULES["hon-bro"] = {
 "page": 23,
 "text": "The Unit may not fire at a target that is further than the number of indicated squares/Interspaces.\n• This symbol affects Firing Actions with Special Abilities that target squares.\n• This symbol affects Firing Actions with Special Abilities that target Interspaces (such as explosion Templates).\nA red triangle behind the icon means that you ignore Obstacles that block or reduce LoS.",
 "term": null,
-"id": 83
+"id": 83,
+"figs": [
+{
+"img": "img/hon/bro/rules/p23-1.webp",
+"w": 330,
+"h": 294
+},
+{
+"img": "img/hon/bro/rules/p23-3.webp",
+"w": 352,
+"h": 275
+}
+]
 },
 {
 "sec": "6.2",
@@ -947,7 +1237,14 @@ HTS_RULES["hon-bro"] = {
 "page": 24,
 "text": "During a Firing Action, a Unit with this ability can shoot at several enemies. All of these must be of the same type (Infantry, Light Vehicles or Heavy Vehicles) and positioned within 2 squares of at least one of the other targeted Units.\nThe firing Unit naturally needs to have a clear or obscured LoS to every one of the targets. Split the firing Unit's Combat Value (modified by any bonuses or penalties) so that any one of the shots taken receives a bonus of at least +1. You must announce this split and allocate the Combat Value points to the targeted Units before throwing any dice, then make separate rolls for every shot. Each shot is separately affected by the Obstacles it crosses.\nHere, the MG42 performs a Firing Action using the Machine Gunner Special Ability. It starts with Unit A . Unit B is 1 square from Unit A . Unit C is 2 squares from Unit B . The MG42 cannot target Unit D because it's more than 2 squares from the other targeted Units. Since the attacker must split up his total combat bonus (+4) between all targets, each shot is thus modified: A (+1), B (+1) and C (+2).\nTip: you may combine Machine Gunner and Suppressive Fire Special Abilities.",
 "term": null,
-"id": 84
+"id": 84,
+"figs": [
+{
+"img": "img/hon/bro/rules/p24-1.webp",
+"w": 397,
+"h": 383
+}
+]
 },
 {
 "sec": "6.2",
@@ -979,7 +1276,14 @@ HTS_RULES["hon-bro"] = {
 "page": 25,
 "text": "Only Units that have the Assault Special Ability may engage an enemy Infantry Unit or vehicle in close combat. In most cases, a vehicle does not have this ability. Any number next to the icon is added as an Assault combat bonus. Units that do not have this Special Ability can defend but will roll only one die. An X in Combat Value indicates you cannot Assault a target that has that type of defense unless you have special gear or a Special Ability.\nAssault Rules During its Movement Action, a Unit with the Assault Special Ability (the Attacker) may try to enter a square occupied by an enemy Unit (the Defender).\nHowever, the attacking Unit must have a non-X Combat Value versus the defender's defense type. Whether the assault is successful or not, it ends the Unit's Movement Action.\n• An Assault can only be launched from an unoccupied square or square occupied by an allied vehicle that has the Transport Special Ability (see p.27). The square must be adjacent to the Defender.\n• The attacker must have enough Movement Value to move INTO its target's square. An Assault is a special Movement Action; it triggers all move-related rules, including Opportunity Fire or Fire on the Move (See Move sequence, p.33). The actual assault happens in the moment just before the movement into the target's square.\n• Enemy ZoCs do not prevent a Unit from moving into a square occupied by the target Unit when it launches the actual Assault .\nPut the attacking counter partly on the defending counter to denote an on-going assault. Thus you will recall which square the attacking Unit is assaulting from.\nUntil the assault is resolved, the attacking Unit is considered as being in the square from which it launched the assault.",
 "term": null,
-"id": 88
+"id": 88,
+"figs": [
+{
+"img": "img/hon/bro/rules/p25-1.webp",
+"w": 247,
+"h": 287
+}
+]
 },
 {
 "sec": "6.3",
@@ -987,7 +1291,14 @@ HTS_RULES["hon-bro"] = {
 "page": 25,
 "text": "A B The American Unit moves into the Zone of Control of Units A and B B with movement 1. It can launch an Assault on Unit B by moving within Unit A ’s Zone of Control because thisMovement Action is anAssault .\n- RESOLVING THE ASSAULT\n• The Attacker rolls 2 dice , keeps the best result and adds the Combat Value appropriate to the enemy Unit’s type (vs either Infantry Unit, Light Vehicles or Heavy Vehicles). The attacker also adds any other available bonus (Special Ability, Action Card, recruitment option, etc.) and subtracts any penalty.\n• The Defender rolls 1 die (2 if the Unit has the Assault Special Ability) and keeps the best result. The defender adds the appropriate Combat Value, the Defensive Bonus provided by the Terrain Element in which it resides (unless both attacker and defender are in the same room in a building, or in the same defensive element) as well as any other available bonus (Special Ability, Action Card, Recruitment Option, etc.), and subtracts any penalty. If the Defender is a Heavy Vehicle with two weapons, you must use the Combat Value of the Secondary Weapon (yellow outline).\nIf there is no Secondary Weapon, the Defender loses the assault and automatically takes one Hit (locate the Damage). attention: A Unit that has an X in Combat Value against its attacker’s defense, and no useful gear or Special Ability, is immediately Destroyed or, if the Unit is a Heavy Vehicle, takes one automatic Hit (locate the Damage).\nThe player that obtains the highest result wins the assault.\nThe Attacker rolls 2 dice, he gets a 6 and a 1. He chooses the 6, adds the Unit Combat Value against Infantry Units (+2)\nand another +1 bonus thanks to the Assault card, for a total of 9.",
 "term": null,
-"id": 89
+"id": 89,
+"figs": [
+{
+"img": "img/hon/bro/rules/p25-2.webp",
+"w": 296,
+"h": 274
+}
+]
 },
 {
 "sec": "6.3",
@@ -1003,7 +1314,19 @@ HTS_RULES["hon-bro"] = {
 "page": 26,
 "text": "- THE ATTACKER IS VICTORIOUS The defender is an infantry Unit The Unit must immediately fall back to one of the three squares opposite the Attacker. If none of these three squares can be entered, the Defending Infantry Unit is immediately Destroyed. This retreat is a Forced Move and is therefore not considered a Movement Action. The Retreating Unit may enter an enemy Zone of Control this way, but is Destroyed if the retreat forces it to move within an enemy Zone of Control.\nA B The Retreating Unit can't move to A , because the Recon Group blocks passage. B is not allowed because passage of the Terrain Element is prohibited. The last option C requires it to move within anenemy'sZoC,inthiscase the American Unit D D .\nSince there is no valid retreat, the Unit is Destroyed. If the Defender has this symbol, it is Destroyed and its counter is removed from the game.\nIf the Defender has this symbol facing up, it takes a Hit and its counter is turned over. After the Defender has been eliminated or has retreated (Forced Move), the Attacker must take its place. If the square cannot be entered, the attacking Unit must stay in the square from which it launched the Assault. The defender is a light vehicle If the Defending Light Vehicle has this symbol, it is Destroyed and its counter is removed from the game.\nIf the Defending Unit was a Light Vehicle and has a Wrecked Side, it is turned over in place, and becomes a Terrain Element.",
 "term": null,
-"id": 91
+"id": 91,
+"figs": [
+{
+"img": "img/hon/bro/rules/p26-1.webp",
+"w": 487,
+"h": 262
+},
+{
+"img": "img/hon/bro/rules/p26-2.webp",
+"w": 274,
+"h": 270
+}
+]
 },
 {
 "sec": "6.3",
@@ -1139,7 +1462,14 @@ HTS_RULES["hon-bro"] = {
 "page": 29,
 "text": "Restricted to Infantry / Alternate Firing Action This option gives you 3 Grenade markers.\nA grenade’s max range is 2 Interspaces .\nYou can throw a grenade over Terrain Elements as long as you do not exceed the range.\nThe Combat Values are printed on the back side of their respective markers.\nPlace the explosion Template on the target interspace. Use the Combat Values of the Grenade marker to resolve this Alternate Firing Action. There is never any scattering. Units even partially under the Template are affected. Resolve every attack individually.\nUnit A A benefits from the Defensive Bonus granted by the Terrain Element for a total defense of 6. Thanks to the Action Card alternate bonus, the attacks result is 7. Since the total is higher than the defense, the attack hits!\nUnit B B is not in a Terrain Element but the total of the attack (3) is less than the Defense Value (5). + + X = = 7 = = 6 + + = = 3 + + + + + + + + X = = 4 GRENADES & DEFENSIVE POSITIONS Units that are inside a Defensive Position element and under an outside explosion Template are affected by the blast but receive the Defensive Bonus from the element A . If a Unit is on a square adjacent to a Defensive Position, it can throw a grenade inside the element and directly onto a square (not an Interspace) B . The explosion is contained inside the Terrain Element and does not affect squares outside of it. Any Units inside the element do not receive the Defensive Bonus .\nGrenades & BUILDINGS Units inside a building are not affected by an explosion Template if the Template is on an Interspace outside the Building.\nA A A To throw a grenade into a Building, position the Unit on a square adjacent to an Opening A . The Building does not provide a Defensive Bonus against such a grenade so all Units inside are affected.",
 "term": null,
-"id": 108
+"id": 108,
+"figs": [
+{
+"img": "img/hon/bro/rules/p29-4.webp",
+"w": 277,
+"h": 212
+}
+]
 },
 {
 "sec": "7.2",
@@ -1147,7 +1477,29 @@ HTS_RULES["hon-bro"] = {
 "page": 29,
 "text": "When throwing a grenade out of a Building, the first Interspace to count is the one on the half square in front of the Opening.\nGrenades & offset Grid Squares 2 2 Disregard the difference in distance between general grid Interspaces and Offset Grid squares Interspaces.\nTo determine range, simply count any Interspaces you encounter between the grenade thrower and the target. Include the target Interspace in the range.",
 "term": null,
-"id": 109
+"id": 109,
+"figs": [
+{
+"img": "img/hon/bro/rules/p29-1.webp",
+"w": 454,
+"h": 293
+},
+{
+"img": "img/hon/bro/rules/p29-2.webp",
+"w": 268,
+"h": 218
+},
+{
+"img": "img/hon/bro/rules/p29-3.webp",
+"w": 299,
+"h": 172
+},
+{
+"img": "img/hon/bro/rules/p29-5.webp",
+"w": 298,
+"h": 172
+}
+]
 },
 {
 "sec": "7.2",
