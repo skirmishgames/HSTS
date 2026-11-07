@@ -2,7 +2,7 @@
 const { chromium } = require('playwright');
 const http = require('http'), fs = require('fs'), path = require('path');
 const root = path.join(__dirname, '..');
-const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.webp': 'image/webp', '.json': 'application/json' };
+const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.webp': 'image/webp', '.json': 'application/json', '.woff2': 'font/woff2', '.svg': 'image/svg+xml' };
 const srv = http.createServer((req, res) => {
   let p = path.join(root, decodeURIComponent(req.url.split('?')[0]));
   if (p.endsWith('/')) p += 'index.html';
@@ -513,5 +513,24 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(await pg.isVisible('#tabLib'), 'mobile tabs visible');
   await pg.screenshot({ path: process.env.SHOT || '/tmp/h/shot-mobile.png' });
   ok(errs.length === 0, 'no console errors ' + errs.join('|'));
+  // look and feel: self-hosted fonts and nav icons on every page
+  const navPages = ['index', 'units', 'rules', 'scenarios', 'scenario', 'tokens', 'icons', 'heroes', 'maps', 'expansions', 'history'];
+  const np = await b.newPage({ viewport: { width: 1100, height: 800 } });
+  for (const pgName of navPages) {
+    await np.goto(base + pgName + '.html' + (pgName === 'scenario' ? '?b=bro&s=night' : '')); await np.waitForTimeout(400);
+    const info = await np.evaluate(async () => {
+      await document.fonts.ready;
+      const links = Array.from(document.querySelectorAll('.top-actions a, .top-actions button'));
+      return { n: links.length, noIcon: links.filter(a => getComputedStyle(a, '::before').backgroundImage === 'none').map(a => a.textContent.trim()),
+        fira: document.fonts.check('700 1em "Fira Sans Condensed"'), slab: document.fonts.check('1em "Alfa Slab One"'), x: document.documentElement.scrollWidth > innerWidth };
+    });
+    ok(info.n >= 9 && info.noIcon.length === 0 && info.fira && info.slab && !info.x, pgName + ': nav icons and fonts (' + info.noIcon.join(',') + ')');
+  }
+  await np.close();
+  // trackers
+  const cp = require('child_process');
+  let trk = ''; try { trk = cp.execSync('python3 tools/units_tracker.py --strict', { cwd: root }).toString(); } catch (e) { trk = 'FAILED ' + e.stdout; }
+  ok(/gaps 0/.test(trk), 'unit tracker: every unit has a History entry or a recorded exclusion');
+  ok(fs.existsSync(path.join(root, 'docs', 'lowres-images.csv')) && fs.existsSync(path.join(root, 'docs', 'units-tracker.csv')), 'docs/ trackers exist');
   await b.close(); srv.close();
 })();

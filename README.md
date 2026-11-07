@@ -102,6 +102,17 @@ npm i playwright
 node test/smoke.js
 ```
 
+## Trackers
+
+Two scripts keep the data honest as boxes are added. Run both after every import, with `--write` to refresh the files in `docs/`.
+
+- `python3 tools/units_tracker.py` lists every unit, recruitment tile and option and whether it has a History entry. The rule: History entries are added in one batch right after each box import, and this script flags what is missing. Game-mechanic options (orders, traits, gear cards) and invented hero characters are recorded in `tools/tracker_exclusions.json` rather than given History entries. Output: `docs/units-tracker.md` and `.csv`.
+- `python3 tools/lowres_log.py` (needs Pillow) logs the pixel size of every unit image, tile and option card and flags low resolution. `docs/lowres-images.csv` is the list to send the game's creators when asking for better files.
+
+## Look and feel
+
+Fonts are self-hosted in `fonts/` (SIL Open Font License, licences included). The rulebooks use GoodHeadlinePro and Army, which are commercial, so the site uses close open substitutes: Fira Sans Condensed for text, Alfa Slab One for titles, Special Elite for labels. Colours come from the rulebook pages: olive drab, khaki parchment, brass and a red accent, with a dark theme on the same hues. Navigation icons are original SVGs in `img/nav/`, applied by CSS on the link target.
+
 ## Archive policy
 
 Devil Pig Games has closed, so this project is also a digital archive for the community. For every scenario book or scenario that is added from now on:

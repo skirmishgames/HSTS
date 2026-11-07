@@ -1,0 +1,189 @@
+box,nation,kind,name,file,width_px,height_px,bytes,flag
+bro,ge,tile,Feldkommando (Major Karl Brassert),img/hon/bro/ge/tiles/feldkommando_brassert.webp,1670,589,220100,low
+bro,ge,tile,Helmut (Panzerknacker),img/hon/bro/ge/tiles/helmut.webp,800,589,97428,low
+bro,ge,tile,Otto (Nameless Hero),img/hon/bro/ge/tiles/otto.webp,800,589,92010,low
+bro,ge,tile,Ludwig (Scharfschütze),img/hon/bro/ge/tiles/ludwig.webp,800,589,123514,low
+bro,ge,tile,"Panzergrenadiere (I. Bataillon, Pzgr. Reg. 304, 2. Pz. Div.)",img/hon/bro/ge/tiles/panzergrenadiere_1.webp,2028,589,258178,
+bro,ge,tile,"Panzergrenadiere 2 (II. Bataillon, Pzgr. Reg. 304, 2. Pz. Div.)",img/hon/bro/ge/tiles/panzergrenadiere_2.webp,2028,589,254970,
+bro,ge,tile,Divisionsstab (Generalleutnant Dietrich Kraiss),img/hon/bro/ge/tiles/divisionsstab_kraiss.webp,828,248,48796,low
+bro,ge,tile,Heinrich (The Beast of Omaha),img/hon/bro/ge/tiles/heinrich.webp,332,246,21654,low
+bro,ge,tile,Minefield (small) (Minefield),img/hon/bro/ge/tiles/minefield_25.webp,194,244,14120,low
+bro,ge,tile,Minefield (large) (Minefield),img/hon/bro/ge/tiles/minefield_45.webp,194,138,8420,low
+bro,ge,tile,"Festungskompanie (II. Bataillon, Reg. 916, 352. Inf. Div.)",img/hon/bro/ge/tiles/festungskompanie.webp,828,248,48848,low
+bro,ge,tile,"Panzer-Aufklärungs (Abteilung 2, 2. Panzer Div.)",img/hon/bro/ge/tiles/panzer_aufklaerungs.webp,648,246,39070,low
+bro,ge,tile,"Panzergruppe (II. Panzer Abteilung, 3. Pz. Reg., 2. Pz. Div.)",img/hon/bro/ge/tiles/panzergruppe.webp,648,248,36858,low
+bro,ge,tile,"SS Panzergrenadiere (III. Bataillon, Reg. 25, 12. SS Pz. Div. Hitlerjugend)",img/hon/bro/ge/tiles/ss_panzergrenadiere.webp,790,248,46966,low
+bro,ge,unit,Major Karl Brassert,img/hon/bro/ge/units/german-hq-brassert-a.webp,352,352,30246,low
+bro,ge,unit,Helmut,img/hon/bro/ge/units/german-heroes-helmut-a.webp,352,352,27816,low
+bro,ge,unit,Otto,img/hon/bro/ge/units/german-heroes-otto-a.webp,352,352,31274,low
+bro,ge,unit,Otto's Panzer IV,img/hon/bro/ge/units/german-heroes-otto-panzer-iv-02-a.webp,232,460,35062,low
+bro,ge,unit,Ludwig,img/hon/bro/ge/units/german-heroes-ludwig-a.webp,352,352,26836,low
+bro,ge,unit,Schwimmwagen,img/hon/bro/ge/units/german-options-schimmwagen-a.webp,346,460,37092,low
+bro,ge,unit,Zündapp,img/hon/bro/ge/units/german-options-zundapp.webp,459,459,39140,low
+bro,ge,unit,Flak 38,img/hon/bro/ge/units/german-options-flak-38.webp,351,460,39042,low
+bro,ge,unit,Pak 40,img/hon/bro/ge/units/german-options-pak-40-a.webp,351,460,39082,low
+bro,ge,unit,SdKfz 234/2 Puma,img/hon/bro/ge/units/german-options-sd-kfz-234-2-puma-a.webp,277,460,33438,low
+bro,ge,unit,Panzer II Luchs,img/hon/bro/ge/units/german-options-panzer-ii-luchs-a.webp,277,460,32704,low
+bro,ge,unit,Panzer IV,img/hon/bro/ge/units/german-options-panzer-iv-01-a.webp,232,460,34112,low
+bro,ge,unit,MG 42,img/hon/bro/ge/units/1st-batallion-mg-42-a.webp,459,459,43274,low
+bro,ge,unit,Panzerschreck,img/hon/bro/ge/units/1st-batallion-panzerschreck.webp,459,459,46710,low
+bro,ge,option,Bluff,img/hon/bro/ge/options/bluff.webp,256,352,19618,low
+bro,ge,option,Planning,img/hon/bro/ge/options/planning.webp,256,352,21728,low
+bro,ge,option,MG Nest,img/hon/bro/ge/options/mg_nest.webp,256,352,24172,low
+bro,ge,option,Concealed,img/hon/bro/ge/options/concealed.webp,256,352,25438,low
+bro,ge,option,Knife,img/hon/bro/ge/options/knife.webp,114,152,4688,low
+bro,ge,option,Panzerfaust,img/hon/bro/ge/options/panzerfaust_c.webp,114,152,4662,low
+bro,ge,option,MP40,img/hon/bro/ge/options/mp40.webp,116,152,5258,low
+bro,ge,option,Thompson,img/hon/bro/ge/options/thompson.webp,116,152,4962,low
+bro,ge,option,Overwatch,img/hon/bro/ge/options/overwatch.webp,114,152,4464,low
+bro,ge,option,Bazooka,img/hon/bro/ge/options/bazooka_c.webp,116,152,4906,low
+bro,ge,option,Flamer,img/hon/bro/ge/options/flamer.webp,116,152,4612,low
+bro,ge,option,Panzergrenadiere,img/hon/bro/ge/options/pzgren_squad_1.webp,352,352,41678,low
+bro,ge,option,Assault Group,img/hon/bro/ge/options/assault_group.webp,352,352,41836,low
+bro,ge,option,Panzerschreck Group,img/hon/bro/ge/options/panzerschreck_group_1.webp,352,352,42816,low
+bro,ge,option,Panzergrenadiere,img/hon/bro/ge/options/pzgren_squad_2.webp,352,352,42690,low
+bro,ge,option,Panzerschreck Group,img/hon/bro/ge/options/panzerschreck_group_2.webp,352,352,41118,low
+bro,ge,option,Mechanisierte (SdKfz 251/1 x2),img/hon/bro/ge/options/mech_sdkfz251.webp,352,352,38360,low
+bro,ge,option,Schwimmwagen,img/hon/bro/ge/options/schwimmwagen.webp,256,352,25502,low
+bro,ge,option,Zündapp,img/hon/bro/ge/options/zundapp.webp,256,352,23680,low
+bro,ge,option,Flak 38,img/hon/bro/ge/options/flak38.webp,256,352,24204,low
+bro,ge,option,Pak 40,img/hon/bro/ge/options/pak40.webp,256,352,27778,low
+bro,ge,option,Veteran,img/hon/bro/ge/options/veteran.webp,256,352,28410,low
+bro,ge,option,Grenade,img/hon/bro/ge/options/grenade.webp,256,352,22558,low
+bro,ge,option,Ammo,img/hon/bro/ge/options/ammo.webp,256,352,26934,low
+bro,ge,option,Panzerfausts,img/hon/bro/ge/options/panzerfaust.webp,256,352,28362,low
+bro,ge,option,SdKfz 234/2 Puma,img/hon/bro/ge/options/puma.webp,256,352,26356,low
+bro,ge,option,Panzer II Luchs,img/hon/bro/ge/options/luchs.webp,352,352,33160,low
+bro,ge,option,Panzer IV,img/hon/bro/ge/options/panzer_iv.webp,352,352,32780,low
+bro,ge,option,MG 42,img/hon/bro/ge/options/mg42.webp,110,146,4450,low
+bro,ge,option,Panzerschreck,img/hon/bro/ge/options/panzerschreck.webp,110,146,5108,low
+bro,ge,option,Artillery Spotter,img/hon/bro/ge/options/artillery_spotter.webp,108,144,4994,low
+bro,ge,option,Aircraft x1,img/hon/bro/ge/options/aircraft_x1.webp,124,144,5888,low
+bro,ge,option,Aircraft x2,img/hon/bro/ge/options/aircraft_x2.webp,154,144,7052,low
+bro,ge,option,Battle Plan,img/hon/bro/ge/options/battle_plan.webp,174,146,6234,low
+bro,ge,option,Artillery,img/hon/bro/ge/options/artillery.webp,172,146,7466,low
+bro,ge,option,Smoke,img/hon/bro/ge/options/smoke.webp,108,134,4016,low
+bro,ge,option,Tank Ambush,img/hon/bro/ge/options/tank_ambush.webp,108,134,5112,low
+bro,ge,option,Hardened,img/hon/bro/ge/options/hardened.webp,114,150,4008,low
+bro,ge,option,Heroic,img/hon/bro/ge/options/heroic.webp,112,150,4824,low
+bro,ge,option,Grenade,img/hon/bro/ge/options/grenade_c.webp,112,150,4470,low
+bro,ge,option,Mauser,img/hon/bro/ge/options/mauser.webp,112,150,5456,low
+bro,ge,option,Carbine M1,img/hon/bro/ge/options/carbine_m1.webp,114,150,4738,low
+bro,ge,option,Defense Group,img/hon/bro/ge/options/defense_group.webp,150,148,7702,low
+bro,ge,option,7.5cm Group,img/hon/bro/ge/options/group_75cm.webp,150,146,7452,low
+bro,ge,option,Pak 40 Group,img/hon/bro/ge/options/pak40_group.webp,150,146,7684,low
+bro,ge,option,Ammo Belt,img/hon/bro/ge/options/ammo_belt.webp,110,148,6452,low
+bro,ge,option,Turmstellung,img/hon/bro/ge/options/turmstellung.webp,112,140,4506,low
+bro,ge,option,Guardian,img/hon/bro/ge/options/guardian.webp,104,144,4612,low
+bro,ge,option,Kübelwagen,img/hon/bro/ge/options/kubelwagen.webp,114,148,4894,low
+bro,ge,option,Recon Group,img/hon/bro/ge/options/recon_group.webp,150,150,7002,low
+bro,ge,option,Stummel Group,img/hon/bro/ge/options/stummel_group.webp,150,150,7448,low
+bro,ge,option,Panzerschreck,img/hon/bro/ge/options/panzerschreck_pa.webp,114,148,4892,low
+bro,ge,option,Tank Gear,img/hon/bro/ge/options/tank_gear.webp,114,148,5784,low
+bro,ge,option,Tank Ammo,img/hon/bro/ge/options/tank_ammo.webp,114,144,5708,low
+bro,ge,option,StuG IV,img/hon/bro/ge/options/stug_iv.webp,148,150,5782,low
+bro,ge,option,Panther Ausf. A,img/hon/bro/ge/options/panther_ausf_a.webp,148,150,6446,low
+bro,ge,option,SS Dagger,img/hon/bro/ge/options/ss_dagger.webp,114,152,4958,low
+bro,ge,option,Flamer Group,img/hon/bro/ge/options/flamer_group.webp,152,146,7370,low
+bro,ge,option,Tankbuster,img/hon/bro/ge/options/tankbuster.webp,112,150,5830,low
+bro,ge,option,Assault Group,img/hon/bro/ge/options/assault_group_ss.webp,152,150,7600,low
+bro,ge,option,Magnetic Mine,img/hon/bro/ge/options/magnetic_mine.webp,112,134,4766,low
+bro,ge,option,Panzerschreck,img/hon/bro/ge/options/panzerschreck_ss.webp,114,150,4928,low
+bro,us,tile,Field Command (Colonel George A. Taylor),img/hon/bro/us/tiles/field_command_taylor.webp,1670,589,224224,low
+bro,us,tile,Clint (Universal Hero),img/hon/bro/us/tiles/clint.webp,800,589,127972,low
+bro,us,tile,Oddball (Positive Freak),img/hon/bro/us/tiles/oddball.webp,800,589,118398,low
+bro,us,tile,The Rock (Heavy Gunner),img/hon/bro/us/tiles/the_rock.webp,800,589,119566,low
+bro,us,tile,Rifle Platoon (1st Inf. Div. 16th Inf. Reg. A),img/hon/bro/us/tiles/rifle_platoon_1id_16a.webp,2030,589,268214,
+bro,us,tile,Rifle Platoon 2 (1st Inf. Div. 18th Inf. Reg. C),img/hon/bro/us/tiles/rifle_platoon_1id_18c.webp,2030,589,271774,
+bro,us,tile,US Combat Engineers (1st Inf. Div. 299th Battalion),img/hon/bro/us/tiles/us_combat_engineers.webp,792,248,43878,low
+bro,us,tile,Sam Fueller (White Dog),img/hon/bro/us/tiles/sam_fueller.webp,335,248,21738,low
+bro,us,tile,Sgt Horvath (Motivator),img/hon/bro/us/tiles/sgt_horvath.webp,336,248,23454,low
+bro,us,tile,Landing (1st Inf. Div. 16th Inf. Reg. A),img/hon/bro/us/tiles/landing_1id.webp,196,246,17332,low
+bro,us,tile,Landing (29th Inf. Div. 116th Inf. Reg. A),img/hon/bro/us/tiles/landing_29id.webp,196,246,17118,low
+bro,us,tile,High Command (Brigadier General Norman Cota),img/hon/bro/us/tiles/high_command_cota.webp,828,248,50666,low
+bro,us,tile,Rifle Platoon 3 (29th Inf. Div. 116th Inf. Reg. A),img/hon/bro/us/tiles/rifle_platoon_29id_116a.webp,832,252,50732,low
+bro,us,tile,"US Rangers (2nd Rangers, A Battalion)",img/hon/bro/us/tiles/us_rangers.webp,652,248,39572,low
+bro,us,tile,Tank Platoon (743rd Tank Battalion),img/hon/bro/us/tiles/tank_platoon_743.webp,830,250,48570,low
+bro,us,tile,Private Smithy (Smashing Pumpkins),img/hon/bro/us/tiles/private_smithy.webp,332,246,21326,low
+bro,us,tile,Luke Griff Brassert (American Padawan),img/hon/bro/us/tiles/luke_brassert.webp,332,246,22728,low
+bro,us,tile,Don Wardaddy Collier (Fury Tank),img/hon/bro/us/tiles/don_collier.webp,650,244,38938,low
+bro,us,tile,Recon Platoon 2e DB (1er Escadron RBFM 2e DB),img/hon/bro/us/tiles/recon_2edb.webp,608,248,42466,low
+bro,us,unit,Col. Taylor,img/hon/bro/us/units/us-hq-g-taylor-a.webp,352,352,29542,low
+bro,us,unit,81mm Mortar,img/hon/bro/us/units/us-hq-81mm-mortar-a.webp,351,460,41866,low
+bro,us,unit,Clint,img/hon/bro/us/units/us-heroes-clint-a.webp,352,352,31654,low
+bro,us,unit,Oddball,img/hon/bro/us/units/us-heroes-odball-a.webp,352,352,26366,low
+bro,us,unit,Oddball's M4 Sherman,img/hon/bro/us/units/us-heroes-odball-m4-sherman-02-a.webp,232,460,30776,low
+bro,us,unit,The Rock,img/hon/bro/us/units/us-heroes-the-rock-a.webp,352,352,33846,low
+bro,us,unit,Sam Fueller,img/hon/bro/us/units/18th-inf-reg-c-sam-fueller-a.webp,352,352,28848,low
+bro,us,unit,60mm Mortar,img/hon/bro/us/units/us-options-60mm-mortar-a.webp,459,459,44512,low
+bro,us,unit,Willys .50 Cal,img/hon/bro/us/units/us-options-wilys-50cal-a.webp,346,460,34658,low
+bro,us,unit,57mm AT Gun,img/hon/bro/us/units/us-options-57mm-at-gun.webp,351,460,39676,low
+bro,us,unit,M8 AC Greyhound,img/hon/bro/us/units/us-options-m8-ac-greyhound-01-a.webp,277,460,31664,low
+bro,us,unit,M5 Stuart,img/hon/bro/us/units/us-options-m5-stuart-01-a.webp,277,460,34010,low
+bro,us,unit,M4 Sherman,img/hon/bro/us/units/us-options-m4-sherman-01-a.webp,232,460,29490,low
+bro,us,unit,M3A1 Halftrack,img/hon/bro/us/units/18th-inf-reg-c-m3a1-halftrack-01-a.webp,248,460,28040,low
+bro,us,option,Bluff,img/hon/bro/us/options/bluff.webp,256,352,21606,low
+bro,us,option,Planning,img/hon/bro/us/options/planning.webp,256,352,23092,low
+bro,us,option,Improvisation,img/hon/bro/us/options/improvisation.webp,256,352,24334,low
+bro,us,option,81mm Mortar,img/hon/bro/us/options/mortar_81mm.webp,256,352,27134,low
+bro,us,option,Knife,img/hon/bro/us/options/knife.webp,114,152,4638,low
+bro,us,option,Panzerfaust,img/hon/bro/us/options/panzerfaust_c.webp,114,152,4738,low
+bro,us,option,MP40,img/hon/bro/us/options/mp40.webp,116,152,5336,low
+bro,us,option,Thompson,img/hon/bro/us/options/thompson.webp,116,152,5010,low
+bro,us,option,Overwatch,img/hon/bro/us/options/overwatch.webp,114,152,4498,low
+bro,us,option,Bazooka,img/hon/bro/us/options/bazooka_c.webp,116,152,4936,low
+bro,us,option,Flamer,img/hon/bro/us/options/flamer.webp,116,152,4684,low
+bro,us,option,Rifle Squad,img/hon/bro/us/options/rifle_squad_16a.webp,352,352,43560,low
+bro,us,option,.30 Cal Squad,img/hon/bro/us/options/cal30_squad_16a.webp,352,352,43400,low
+bro,us,option,Bazooka Squad,img/hon/bro/us/options/bazooka_squad_16a.webp,352,352,45036,low
+bro,us,option,Rifle Squad,img/hon/bro/us/options/rifle_squad_18c.webp,352,352,42930,low
+bro,us,option,Bazooka Squad,img/hon/bro/us/options/bazooka_squad_18c.webp,352,352,44584,low
+bro,us,option,Mechanised (M3A1 Halftrack x2),img/hon/bro/us/options/mechanised_m3a1.webp,352,352,40806,low
+bro,us,option,60mm Mortar,img/hon/bro/us/options/mortar_60mm.webp,256,352,26756,low
+bro,us,option,Willys .50 Cal,img/hon/bro/us/options/willys_50cal.webp,256,352,27036,low
+bro,us,option,57mm AT Gun,img/hon/bro/us/options/at_gun_57mm.webp,256,352,25880,low
+bro,us,option,M8 AC Greyhound,img/hon/bro/us/options/m8_greyhound.webp,256,352,27678,low
+bro,us,option,Veteran,img/hon/bro/us/options/veteran.webp,256,352,27076,low
+bro,us,option,Grenade,img/hon/bro/us/options/grenade.webp,256,352,27006,low
+bro,us,option,Ammo,img/hon/bro/us/options/ammo.webp,256,352,28840,low
+bro,us,option,Rifle Grenade,img/hon/bro/us/options/rifle_grenade.webp,256,352,25234,low
+bro,us,option,Sticky Bomb,img/hon/bro/us/options/sticky_bomb.webp,256,352,22984,low
+bro,us,option,Culin Hedgerow Cutter,img/hon/bro/us/options/hedgerow_cutter.webp,256,352,26614,low
+bro,us,option,M5 Stuart,img/hon/bro/us/options/m5_stuart.webp,352,352,33852,low
+bro,us,option,M4 Sherman,img/hon/bro/us/options/m4_sherman.webp,352,352,32534,low
+bro,us,option,.30 Cal,img/hon/bro/us/options/cal30_gun.webp,112,152,4692,low
+bro,us,option,Bazooka,img/hon/bro/us/options/bazooka_team.webp,112,152,4870,low
+bro,us,option,M3A1 Halftrack,img/hon/bro/us/options/m3a1_halftrack.webp,110,144,4994,low
+bro,us,option,Support Squad,img/hon/bro/us/options/support_squad_eng.webp,149,144,7732,low
+bro,us,option,Assault Squad,img/hon/bro/us/options/assault_squad_eng.webp,149,148,7816,low
+bro,us,option,Bangalore,img/hon/bro/us/options/bangalore.webp,128,134,6390,low
+bro,us,option,Shovel,img/hon/bro/us/options/shovel.webp,108,142,5222,low
+bro,us,option,Position,img/hon/bro/us/options/position.webp,108,148,5248,low
+bro,us,option,Explosive M1,img/hon/bro/us/options/explosive_m1.webp,110,134,5100,low
+bro,us,option,Hardened,img/hon/bro/us/options/hardened.webp,114,150,4080,low
+bro,us,option,Heroic,img/hon/bro/us/options/heroic.webp,112,150,4864,low
+bro,us,option,Grenade,img/hon/bro/us/options/grenade_c.webp,112,150,4448,low
+bro,us,option,Mauser,img/hon/bro/us/options/mauser.webp,112,150,5482,low
+bro,us,option,Carbine M1,img/hon/bro/us/options/carbine_m1.webp,114,150,4732,low
+bro,us,option,Aircraft x1,img/hon/bro/us/options/aircraft_x1.webp,106,152,5398,low
+bro,us,option,Aircraft x2,img/hon/bro/us/options/aircraft_x2.webp,140,152,6956,low
+bro,us,option,Battle Plan,img/hon/bro/us/options/battle_plan.webp,148,146,5886,low
+bro,us,option,Artillery,img/hon/bro/us/options/artillery.webp,146,146,7564,low
+bro,us,option,Smoke,img/hon/bro/us/options/smoke.webp,112,130,4450,low
+bro,us,option,.30 Cal Squad,img/hon/bro/us/options/cal30_squad_116a.webp,148,144,7710,low
+bro,us,option,Bazooka Squad,img/hon/bro/us/options/bazooka_squad_116a.webp,148,144,8122,low
+bro,us,option,Assault Squad,img/hon/bro/us/options/assault_squad_116a.webp,148,142,8108,low
+bro,us,option,Support Squad,img/hon/bro/us/options/support_squad_rangers.webp,148,144,7578,low
+bro,us,option,Bazooka Squad,img/hon/bro/us/options/bazooka_squad_rangers.webp,148,144,7996,low
+bro,us,option,Bazooka,img/hon/bro/us/options/bazooka_rangers.webp,114,174,5288,low
+bro,us,option,Rangers Gear,img/hon/bro/us/options/rangers_gear.webp,114,140,5672,low
+bro,us,option,Mobile Fire,img/hon/bro/us/options/mobile_fire.webp,116,152,6170,low
+bro,us,option,Urban Fighter,img/hon/bro/us/options/urban_fighter.webp,114,152,6164,low
+bro,us,option,Tank Gear,img/hon/bro/us/options/tank_gear.webp,114,148,5842,low
+bro,us,option,Tank Ammo,img/hon/bro/us/options/tank_ammo.webp,114,144,5806,low
+bro,us,option,M4 Sherman,img/hon/bro/us/options/m4_sherman_tp.webp,146,150,6056,low
+bro,us,option,M4A3 (105) Sherman,img/hon/bro/us/options/m4a3_105.webp,146,150,6770,low
+bro,us,option,Grenade,img/hon/bro/us/options/grenade_ks.webp,110,152,4608,low
+bro,us,option,Sticky Bomb,img/hon/bro/us/options/sticky_bomb_solo.webp,112,152,4856,low
+bro,us,option,Training,img/hon/bro/us/options/training_fr.webp,120,146,5398,low
+bro,us,option,Guardian,img/hon/bro/us/options/guardian_fr.webp,120,146,5968,low

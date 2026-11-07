@@ -1,0 +1,10 @@
+{
+ "_note": "Items that are not History gaps. 'mechanic' = game rule (belongs in Rules). 'fictional' = invented or film-inspired character with no source found; revisit if the publisher or a verifiable source names the inspiration.",
+ "kinds": {"option": "mechanic"},
+ "types": {"character": "fictional", "hero": "fictional"},
+ "names": {
+  "Major Karl Brassert": "fictional",
+  "Feldkommando": "fictional",
+  "Luke Brassert": "fictional"
+ }
+}

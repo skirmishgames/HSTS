@@ -690,6 +690,76 @@ window.HTS_HISTORY["hon-bro"] = {
 ]
 },
 {
+"id": "mk2",
+"name": "Mk 2 fragmentation grenade",
+"cat": "Small arms",
+"side": "us",
+"text": "The standard US hand grenade of the Second World War, nicknamed the \"pineapple\" for its knobbed cast-iron body.",
+"facts": [
+"Introduced in 1918 and standardized in 1920.",
+"Weighs about 600 g, with a small TNT charge of roughly 50 g.",
+"The fuze burns for 4 to 5 seconds.",
+"It can be thrown at least 30 m.",
+"The 40 grooves in the body did not break up the casing as well as designers hoped."
+],
+"src": [
+"Mk 2 grenade",
+"https://en.wikipedia.org/wiki/Mk_2_grenade"
+],
+"aka": [
+"Grenade",
+"pineapple",
+"frag"
+]
+},
+{
+"id": "stielhg24",
+"name": "Stielhandgranate 24",
+"cat": "Small arms",
+"side": "ge",
+"text": "The German \"potato masher\": a grenade on a hollow wooden handle that gave extra throwing distance.",
+"facts": [
+"The 1924 model stayed in service through the Second World War.",
+"Weighs about 230 g with a 36 cm handle and a 170 g TNT charge (black powder in some).",
+"Can be thrown up to about 50 m.",
+"Several heads taped round one core made an improvised bundle charge against bunker slits and, when nothing better was at hand, tanks.",
+"Nicknamed \"Kartoffelstampfer\" (potato masher)."
+],
+"src": [
+"Stielhandgranate",
+"https://en.wikipedia.org/wiki/Stielhandgranate"
+],
+"aka": [
+"Grenade",
+"potato masher",
+"Stielhandgranate"
+]
+},
+{
+"id": "hhl3",
+"name": "Hafthohlladung 3 kg (magnetic mine)",
+"cat": "Support weapons",
+"side": "ge",
+"text": "A hollow-charge anti-tank bomb held to a tank hull by three magnets. The infantryman had to get to the vehicle's side.",
+"facts": [
+"Introduced in May 1942.",
+"Total weight about 3.5 kg, with 1.5 kg of TNT in a 160 mm body.",
+"Penetrates about 130 mm of armour.",
+"Fuze delay is 4.5 seconds (thrown) or 7 seconds (placed by hand).",
+"About 547,000 were made between 1942 and October 1944, then the Panzerfaust and Panzerschreck took over.",
+"Germany feared the Allies would copy it, and coated its own tanks in Zimmerit anti-magnetic paste."
+],
+"src": [
+"Hafthohlladung",
+"https://en.wikipedia.org/wiki/Hafthohlladung"
+],
+"aka": [
+"Magnetic Mine",
+"Haft-Hohlladung",
+"HHL"
+]
+},
+{
 "id": "bangalore",
 "name": "Bangalore torpedo",
 "cat": "Small arms",

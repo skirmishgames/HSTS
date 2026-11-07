@@ -1,0 +1,200 @@
+box,nation,kind,name,type,tile,tile_sub,history_entry
+bro,ge,unit,Major Karl Brassert,officer,Feldkommando,Major Karl Brassert,fictional
+bro,ge,tile,Feldkommando,command,Feldkommando,Major Karl Brassert,fictional
+bro,ge,unit,Helmut,character,Helmut,Panzerknacker,fictional
+bro,ge,tile,Helmut,hero,Helmut,Panzerknacker,fictional
+bro,ge,unit,Otto,character,Otto,Nameless Hero,fictional
+bro,ge,unit,Otto's Panzer IV,vehicle,Otto,Nameless Hero,pz4
+bro,ge,tile,Otto,hero,Otto,Nameless Hero,fictional
+bro,ge,unit,Ludwig,character,Ludwig,Scharfschütze,sniper
+bro,ge,tile,Ludwig,hero,Ludwig,Scharfschütze,sniper
+bro,ge,unit,Ob. Berger,officer,Panzergrenadiere,"I. Bataillon, Pzgr. Reg. 304, 2. Pz. Div.",pzgren
+bro,ge,unit,Recon Group,infantry,Panzergrenadiere,"I. Bataillon, Pzgr. Reg. 304, 2. Pz. Div.",recon
+bro,ge,unit,Fire Group,infantry,Panzergrenadiere,"I. Bataillon, Pzgr. Reg. 304, 2. Pz. Div.",pzgren
+bro,ge,unit,MG 42,weapon,Panzergrenadiere,"I. Bataillon, Pzgr. Reg. 304, 2. Pz. Div.",mg42
+bro,ge,tile,Panzergrenadiere,platoon,Panzergrenadiere,"I. Bataillon, Pzgr. Reg. 304, 2. Pz. Div.",pzgren
+bro,ge,unit,Ob. Reiter,officer,Panzergrenadiere 2,"II. Bataillon, Pzgr. Reg. 304, 2. Pz. Div.",pzgren
+bro,ge,tile,Panzergrenadiere 2,platoon,Panzergrenadiere 2,"II. Bataillon, Pzgr. Reg. 304, 2. Pz. Div.",pzgren
+bro,ge,unit,D. Kraiss,officer,Divisionsstab,Generalleutnant Dietrich Kraiss,kraiss
+bro,ge,unit,Command Group,infantry,Divisionsstab,Generalleutnant Dietrich Kraiss,352
+bro,ge,tile,Divisionsstab,command,Divisionsstab,Generalleutnant Dietrich Kraiss,352
+bro,ge,unit,Heinrich,character,Heinrich,The Beast of Omaha,fictional
+bro,ge,tile,Heinrich,hero,Heinrich,The Beast of Omaha,fictional
+bro,ge,unit,AP Mine,marker,Minefield (small),Minefield,mines
+bro,ge,unit,AT Mine,marker,Minefield (small),Minefield,mines
+bro,ge,unit,Decoy,marker,Minefield (small),Minefield,mines
+bro,ge,tile,Minefield (small),special,Minefield (small),Minefield,mines
+bro,ge,tile,Minefield (large),special,Minefield (large),Minefield,mines
+bro,ge,unit,Ol. Grimme,officer,Festungskompanie,"II. Bataillon, Reg. 916, 352. Inf. Div.",atlwall
+bro,ge,unit,8cm Granatwerfer,weapon,Festungskompanie,"II. Bataillon, Reg. 916, 352. Inf. Div.",gw34
+bro,ge,unit,MG 42 HMG,weapon,Festungskompanie,"II. Bataillon, Reg. 916, 352. Inf. Div.",mg42
+bro,ge,tile,Festungskompanie,platoon,Festungskompanie,"II. Bataillon, Reg. 916, 352. Inf. Div.",atlwall
+bro,ge,unit,Ob. Siebert,officer,Panzer-Aufklärungs,"Abteilung 2, 2. Panzer Div.",recon
+bro,ge,unit,SdKfz 250/1,vehicle,Panzer-Aufklärungs,"Abteilung 2, 2. Panzer Div.",sdkfz250
+bro,ge,unit,Scout,infantry,Panzer-Aufklärungs,"Abteilung 2, 2. Panzer Div.",recon
+bro,ge,unit,MG Scout,infantry,Panzer-Aufklärungs,"Abteilung 2, 2. Panzer Div.",recon
+bro,ge,unit,Scharfschütze,infantry,Panzer-Aufklärungs,"Abteilung 2, 2. Panzer Div.",sniper
+bro,ge,tile,Panzer-Aufklärungs,platoon,Panzer-Aufklärungs,"Abteilung 2, 2. Panzer Div.",recon
+bro,ge,unit,Panzer IV Command,vehicle,Panzergruppe,"II. Panzer Abteilung, 3. Pz. Reg., 2. Pz. Div.",pz4
+bro,ge,unit,Panzer IV,vehicle,Panzergruppe,"II. Panzer Abteilung, 3. Pz. Reg., 2. Pz. Div.",pz4
+bro,ge,tile,Panzergruppe,platoon,Panzergruppe,"II. Panzer Abteilung, 3. Pz. Reg., 2. Pz. Div.",pzgruppe
+bro,ge,unit,Ol. Steiger,officer,SS Panzergrenadiere,"III. Bataillon, Reg. 25, 12. SS Pz. Div. Hitlerjugend",pzgren
+bro,ge,unit,SS Fire Group,infantry,SS Panzergrenadiere,"III. Bataillon, Reg. 25, 12. SS Pz. Div. Hitlerjugend",pzgren
+bro,ge,unit,SS MG Group,infantry,SS Panzergrenadiere,"III. Bataillon, Reg. 25, 12. SS Pz. Div. Hitlerjugend",pzgren
+bro,ge,tile,SS Panzergrenadiere,platoon,SS Panzergrenadiere,"III. Bataillon, Reg. 25, 12. SS Pz. Div. Hitlerjugend",pzgren
+bro,ge,option,Bluff,order,,,mechanic
+bro,ge,option,Planning,order,,,mechanic
+bro,ge,option,MG Nest,order,,,mechanic
+bro,ge,option,Concealed,order,,,mechanic
+bro,ge,option,Knife,customization,,,mechanic
+bro,ge,option,Panzerfaust,customization,,,pfaust
+bro,ge,option,MP40,customization,,,mp40
+bro,ge,option,Thompson,customization,,,thompson
+bro,ge,option,Overwatch,customization,,,mechanic
+bro,ge,option,Bazooka,customization,,,bazooka
+bro,ge,option,Flamer,customization,,,m2flame
+bro,ge,option,Panzergrenadiere,support,,,pzgren
+bro,ge,option,Assault Group,support,,,mechanic
+bro,ge,option,Panzerschreck Group,support,,,pschreck
+bro,ge,option,Mechanisierte (SdKfz 251/1 x2),support,,,sdkfz251
+bro,ge,option,Schwimmwagen,support,,,schwimm
+bro,ge,option,Zündapp,support,,,zundapp
+bro,ge,option,Flak 38,support,,,flak38
+bro,ge,option,Pak 40,support,,,pak40
+bro,ge,option,Veteran,trait,,,mechanic
+bro,ge,option,Grenade,gear,,,mk2
+bro,ge,option,Ammo,gear,,,mechanic
+bro,ge,option,Panzerfausts,gear,,,pfaust
+bro,ge,option,SdKfz 234/2 Puma,support,,,sdkfz234
+bro,ge,option,Panzer II Luchs,support,,,luchs
+bro,ge,option,Panzer IV,support,,,pz4
+bro,ge,option,MG 42,support,,,mg42
+bro,ge,option,Panzerschreck,support,,,pschreck
+bro,ge,option,Artillery Spotter,support,,,observer
+bro,ge,option,Aircraft x1,order,,,p47
+bro,ge,option,Aircraft x2,order,,,p47
+bro,ge,option,Battle Plan,order,,,mechanic
+bro,ge,option,Artillery,order,,,observer
+bro,ge,option,Smoke,order,,,mechanic
+bro,ge,option,Tank Ambush,order,,,mechanic
+bro,ge,option,Hardened,customization,,,mechanic
+bro,ge,option,Heroic,customization,,,mechanic
+bro,ge,option,Mauser,customization,,,kar98
+bro,ge,option,Carbine M1,customization,,,m1carbine
+bro,ge,option,Defense Group,support,,,mechanic
+bro,ge,option,7.5cm Group,support,,,leig18
+bro,ge,option,Pak 40 Group,support,,,pak40
+bro,ge,option,Ammo Belt,gear,,,mechanic
+bro,ge,option,Turmstellung,support,,,tobruk
+bro,ge,option,Guardian,trait,,,mechanic
+bro,ge,option,Kübelwagen,support,,,kubel
+bro,ge,option,Recon Group,support,,,recon
+bro,ge,option,Stummel Group,support,,,sdkfz234
+bro,ge,option,Tank Gear,gear,,,mechanic
+bro,ge,option,Tank Ammo,gear,,,mechanic
+bro,ge,option,StuG IV,support,,,stug4
+bro,ge,option,Panther Ausf. A,support,,,panther
+bro,ge,option,SS Dagger,customization,,,mechanic
+bro,ge,option,Flamer Group,support,,,m2flame
+bro,ge,option,Tankbuster,trait,,,mechanic
+bro,ge,option,Magnetic Mine,gear,,,hhl3
+bro,us,unit,Col. Taylor,officer,Field Command,Colonel George A. Taylor,taylor
+bro,us,tile,Field Command,command,Field Command,Colonel George A. Taylor,taylor
+bro,us,unit,Clint,character,Clint,Universal Hero,fictional
+bro,us,tile,Clint,hero,Clint,Universal Hero,fictional
+bro,us,unit,Oddball,character,Oddball,Positive Freak,fictional
+bro,us,unit,Oddball's M4 Sherman,vehicle,Oddball,Positive Freak,sherman
+bro,us,tile,Oddball,hero,Oddball,Positive Freak,fictional
+bro,us,unit,The Rock,character,The Rock,Heavy Gunner,fictional
+bro,us,tile,The Rock,hero,The Rock,Heavy Gunner,fictional
+bro,us,unit,Lt. Blean,officer,Rifle Platoon,1st Inf. Div. 16th Inf. Reg. A,1id
+bro,us,unit,Recon Team,infantry,Rifle Platoon,1st Inf. Div. 16th Inf. Reg. A,recon
+bro,us,unit,Fire Team,infantry,Rifle Platoon,1st Inf. Div. 16th Inf. Reg. A,garand
+bro,us,unit,Support Team,infantry,Rifle Platoon,1st Inf. Div. 16th Inf. Reg. A,1id
+bro,us,tile,Rifle Platoon,platoon,Rifle Platoon,1st Inf. Div. 16th Inf. Reg. A,1id
+bro,us,unit,Lt. J.W. Will,officer,Rifle Platoon 2,1st Inf. Div. 18th Inf. Reg. C,1id
+bro,us,unit,.30 Cal,weapon,Rifle Platoon 2,1st Inf. Div. 18th Inf. Reg. C,m1919
+bro,us,tile,Rifle Platoon 2,platoon,Rifle Platoon 2,1st Inf. Div. 18th Inf. Reg. C,1id
+bro,us,unit,Lt. Milton,officer,US Combat Engineers,1st Inf. Div. 299th Battalion,1id
+bro,us,unit,Flamer,weapon,US Combat Engineers,1st Inf. Div. 299th Battalion,m2flame
+bro,us,tile,US Combat Engineers,platoon,US Combat Engineers,1st Inf. Div. 299th Battalion,1id
+bro,us,unit,Sam Fueller,character,Sam Fueller,White Dog,fictional
+bro,us,tile,Sam Fueller,hero,Sam Fueller,White Dog,fictional
+bro,us,unit,Sgt Horvath,character,Sgt Horvath,Motivator,fictional
+bro,us,tile,Sgt Horvath,hero,Sgt Horvath,Motivator,fictional
+bro,us,tile,Landing,landing,Landing,1st Inf. Div. 16th Inf. Reg. A,1id
+bro,us,unit,N. Cota,officer,High Command,Brigadier General Norman Cota,cota
+bro,us,unit,Command Team,infantry,High Command,Brigadier General Norman Cota,cota
+bro,us,tile,High Command,command,High Command,Brigadier General Norman Cota,cota
+bro,us,unit,Lt. B. Hawks,officer,Rifle Platoon 3,29th Inf. Div. 116th Inf. Reg. A,16th
+bro,us,unit,60mm Mortar,weapon,Rifle Platoon 3,29th Inf. Div. 116th Inf. Reg. A,m2mortar
+bro,us,tile,Rifle Platoon 3,platoon,Rifle Platoon 3,29th Inf. Div. 116th Inf. Reg. A,16th
+bro,us,unit,Lt. Edlin,officer,US Rangers,"2nd Rangers, A Battalion",rangers
+bro,us,tile,US Rangers,platoon,US Rangers,"2nd Rangers, A Battalion",rangers
+bro,us,unit,M4 Sherman Command,vehicle,Tank Platoon,743rd Tank Battalion,sherman
+bro,us,unit,M4 Sherman,vehicle,Tank Platoon,743rd Tank Battalion,sherman
+bro,us,tile,Tank Platoon,platoon,Tank Platoon,743rd Tank Battalion,743
+bro,us,unit,Private Smithy,character,Private Smithy,Smashing Pumpkins,fictional
+bro,us,tile,Private Smithy,hero,Private Smithy,Smashing Pumpkins,fictional
+bro,us,unit,Luke Brassert,character,Luke Griff Brassert,American Padawan,fictional
+bro,us,tile,Luke Griff Brassert,hero,Luke Griff Brassert,American Padawan,fictional
+bro,us,unit,"Don ""Wardaddy"" Collier",character,Don Wardaddy Collier,Fury Tank,fictional
+bro,us,unit,"Sherman (76) W ""Fury""",vehicle,Don Wardaddy Collier,Fury Tank,sherman
+bro,us,tile,Don Wardaddy Collier,hero,Don Wardaddy Collier,Fury Tank,fictional
+bro,us,unit,Vann,character,Recon Platoon 2e DB,1er Escadron RBFM 2e DB,2edb
+bro,us,unit,Brigantine,vehicle,Recon Platoon 2e DB,1er Escadron RBFM 2e DB,2edb
+bro,us,unit,Recon (BAR),infantry,Recon Platoon 2e DB,1er Escadron RBFM 2e DB,recon
+bro,us,unit,Trinquette,vehicle,Recon Platoon 2e DB,1er Escadron RBFM 2e DB,2edb
+bro,us,tile,Recon Platoon 2e DB,platoon,Recon Platoon 2e DB,1er Escadron RBFM 2e DB,2edb
+bro,us,option,Bluff,order,,,mechanic
+bro,us,option,Planning,order,,,mechanic
+bro,us,option,Improvisation,order,,,mechanic
+bro,us,option,81mm Mortar,support,,,m1mortar
+bro,us,option,Knife,customization,,,mechanic
+bro,us,option,Panzerfaust,customization,,,pfaust
+bro,us,option,MP40,customization,,,mp40
+bro,us,option,Thompson,customization,,,thompson
+bro,us,option,Overwatch,customization,,,mechanic
+bro,us,option,Bazooka,customization,,,bazooka
+bro,us,option,Flamer,customization,,,m2flame
+bro,us,option,Rifle Squad,support,,,garand
+bro,us,option,.30 Cal Squad,support,,,m1919
+bro,us,option,Bazooka Squad,support,,,bazooka
+bro,us,option,Mechanised (M3A1 Halftrack x2),support,,,m3ht
+bro,us,option,60mm Mortar,support,,,m2mortar
+bro,us,option,Willys .50 Cal,support,,,m2hb
+bro,us,option,57mm AT Gun,support,,,57mm
+bro,us,option,M8 AC Greyhound,support,,,m8
+bro,us,option,Veteran,trait,,,mechanic
+bro,us,option,Grenade,gear,,,mk2
+bro,us,option,Ammo,gear,,,mechanic
+bro,us,option,Rifle Grenade,gear,,,garand
+bro,us,option,Sticky Bomb,gear,,,mechanic
+bro,us,option,Culin Hedgerow Cutter,gear,,,culin
+bro,us,option,M5 Stuart,support,,,stuart
+bro,us,option,M4 Sherman,support,,,sherman
+bro,us,option,.30 Cal,support,,,m1919
+bro,us,option,M3A1 Halftrack,support,,,m3ht
+bro,us,option,Support Squad,support,,,mechanic
+bro,us,option,Assault Squad,support,,,mechanic
+bro,us,option,Bangalore,gear,,,bangalore
+bro,us,option,Shovel,gear,,,mechanic
+bro,us,option,Position,gear,,,mechanic
+bro,us,option,Explosive M1,gear,,,mechanic
+bro,us,option,Hardened,customization,,,mechanic
+bro,us,option,Heroic,customization,,,mechanic
+bro,us,option,Mauser,customization,,,kar98
+bro,us,option,Carbine M1,customization,,,m1carbine
+bro,us,option,Aircraft x1,order,,,p47
+bro,us,option,Aircraft x2,order,,,p47
+bro,us,option,Battle Plan,order,,,mechanic
+bro,us,option,Artillery,order,,,observer
+bro,us,option,Smoke,order,,,mechanic
+bro,us,option,Rangers Gear,gear,,,rangers
+bro,us,option,Mobile Fire,trait,,,mechanic
+bro,us,option,Urban Fighter,trait,,,mechanic
+bro,us,option,Tank Gear,gear,,,mechanic
+bro,us,option,Tank Ammo,gear,,,mechanic
+bro,us,option,M4A3 (105) Sherman,support,,,sherman
+bro,us,option,Training,trait,,,mechanic
+bro,us,option,Guardian,trait,,,mechanic
