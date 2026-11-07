@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'bro', name: 'Big Red One' }];
+  var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }];
   var S = { b: 'bro', q: '', g: 'all', open: {}, theme: 'light' };
   var cache = {}, NCOL = 0;
 
@@ -42,6 +42,9 @@
     $('groups').innerHTML = '<button type="button" class="chip' + (S.g === 'all' ? ' on' : '') + '" data-group="all">All</button>' +
       d.groups.map(function (c) { return '<button type="button" class="chip' + (S.g === c ? ' on' : '') + '" data-group="' + esc(c) + '">' + esc(c) + '</button>'; }).join('');
     $('q').value = S.q;
+    var sb = BOXES.filter(function (b) { return b.id === S.b; })[0];
+    if ($('subtitle') && sb) $('subtitle').textContent = 'Tokens and markers, Heroes of Normandie, ' + sb.name;
+    if ($('srcnote')) $('srcnote').textContent = 'Rule text is summarised from the ' + d.source + '. Page numbers are printed page numbers.';
     document.documentElement.setAttribute('data-theme', S.theme);
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
   }
@@ -126,7 +129,7 @@
   function bind() {
     document.addEventListener('click', function (ev) {
       var t = ev.target, el;
-      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; render(); return; }
+      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; S.g = 'all'; S.open = {}; render(); return; }
       if ((el = t.closest('[data-group]'))) { S.g = el.dataset.group; render(); return; }
       if ((el = t.closest('[data-toggle]'))) toggle(el.dataset.toggle);
     });

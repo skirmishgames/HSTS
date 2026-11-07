@@ -684,15 +684,7 @@ HTS_RULES["hon-omaha"] = {
 "page": 12,
 "text": "At the end of the Order Phase, the visibility status of Aircraft units is either “In the clouds” or “In plain sight” for the rest of the Turn.\nIn the clouds: the Aircraft Unit has a Bluff Order Token. It is too far away to Attack or be targeted, even by an Anti-Aircraft unit. Reveal the Bluff Order Token at the beginning of the Activation Phase.\nIn plain sight: the Aircraft Unit did not get a Bluff Order Token. It flies over the battlefield and can be targeted but may only take a Firing Action if it got a Numbered or Special Order Token.\nExample: The German player places an Order Token on the Aircraft Unit’s Recruitment Tile, which is then Activated and may be targeted that turn.",
 "term": null,
-"id": 54
-},
-{
-"sec": "5",
-"sub": "Long range penalty",
-"page": 12,
-"text": "IMPORTANT: NEVER apply the Long Range Penalty,\nwhenever an Aircraft Unit is involved in a Firing Action, whether as attacker or target.",
-"term": null,
-"id": 55,
+"id": 54,
 "figs": [
 {
 "img": "img/hon/omaha/rules/p12-2.webp",
@@ -700,6 +692,14 @@ HTS_RULES["hon-omaha"] = {
 "h": 233
 }
 ]
+},
+{
+"sec": "5",
+"sub": "Long range penalty",
+"page": 12,
+"text": "IMPORTANT: NEVER apply the Long Range Penalty,\nwhenever an Aircraft Unit is involved in a Firing Action, whether as attacker or target.",
+"term": null,
+"id": 55
 },
 {
 "sec": "5",
@@ -721,9 +721,33 @@ HTS_RULES["hon-omaha"] = {
 "sec": "5",
 "sub": "Anti-aircraft",
 "page": 13,
-"text": "Units with the Anti-Aircraft Special Ability can Fire at an Aircraft Unit, even if that Aircraft Unit does not have a Numbered, or Special Order Token placed on its Recruitment Tile. However, a Unit with this Special Ability cannot fire at any Aircraft Unit that is “in the clouds”.\nAlways add any bonus (+1, +2,...) shown next to the AA Special Ability, to the die roll. If the target is an Aircraft with an Order Token: calculate the Speed Penalty normally (see Speed Penalty). If the target is an Aircraft without an Order Token, apply a standard -2 Speed Penalty instead.\n- SPEED PENALTY\nIMPORTANT: Any unit (land and air) that takes a\nFiring Action against an Aircraft Unit must always apply the Speed Penalty.\nThe Speed Penalty is determined by the numerical difference between the Order Token of the firing unit and that of the Aircraft Unit. Always subtract the lowest value from the highest.\nThe player whose Aircraft Unit was targeted must reveal the Order Token if its value had not been disclosed yet. Replace this Token face down again on the Aviation Recruitment Tile until the Aircraft Unit is Activated.\nOPPORTUNITY FIRE\nA unit using Opportunity Fire in response to an Aircraft that has fired, must use the value of the last revealed Numbered Order Token to resolve the Speed Penalty. Since this is the targeted Aircraft’s own Order Token, the Speed Penalty for Opportunity Fire is always 0.\nspecial ORDer:\nIf any unit with a Special Order Token targets an Aircraft Unit with a Numbered Order Token, then the Speed Penalty is the difference between the value of the Aircraft Unit’s Order Token and that of the last revealed Numbered Order Token (of either player) before this Firing Action.\nIf an aircraft is Activated with a Special Order before it has been targeted, its Speed Penalty value also is that of the last revealed Numbered Order Token (of either player).\nThis value can be 0 if the plane is Activated before Order Number 1.\nIf the target is an Aircraft with an unrevealed Special Order Token apply a standard -2 Speed Penalty.\nExamples: An Aircraft Unit with Order Token #3 is targeted by a unit:\nwith Order Token #2, the Speed Penalty (3-2) is 1.\nwith Order Token #5, the Speed Penalty (5-3) is 2.\nwith Order Token #3, the Speed Penalty (3-3) is 0.\nwith Opportunity Fire, the Speed Penalty is 0.\n- BOMBS & ROCKETS\nBomb or rocket markers shown on an Aircraft’s Recruitment Tile are used for Alternate Firing Actions.\nThe German FOCKE-WULF has 2 SC-500 bombs. It can use them in an Alternate Firing Action with the Howitzer Special Ability while using the explosion template with the black Combat Values.",
+"text": "Units with the Anti-Aircraft Special Ability can Fire at an Aircraft Unit, even if that Aircraft Unit does not have a Numbered, or Special Order Token placed on its Recruitment Tile. However, a Unit with this Special Ability cannot fire at any Aircraft Unit that is “in the clouds”.\nAlways add any bonus (+1, +2,...) shown next to the AA Special Ability, to the die roll. If the target is an Aircraft with an Order Token: calculate the Speed Penalty normally (see Speed Penalty). If the target is an Aircraft without an Order Token, apply a standard -2 Speed Penalty instead.",
 "term": null,
 "id": 58
+},
+{
+"sec": "5",
+"sub": "Speed penalty",
+"page": 13,
+"text": "IMPORTANT: Any unit (land and air) that takes a\nFiring Action against an Aircraft Unit must always apply the Speed Penalty.\nThe Speed Penalty is determined by the numerical difference between the Order Token of the firing unit and that of the Aircraft Unit. Always subtract the lowest value from the highest.\nThe player whose Aircraft Unit was targeted must reveal the Order Token if its value had not been disclosed yet. Replace this Token face down again on the Aviation Recruitment Tile until the Aircraft Unit is Activated.\nOPPORTUNITY FIRE\nA unit using Opportunity Fire in response to an Aircraft that has fired, must use the value of the last revealed Numbered Order Token to resolve the Speed Penalty. Since this is the targeted Aircraft’s own Order Token, the Speed Penalty for Opportunity Fire is always 0.",
+"term": null,
+"id": 59
+},
+{
+"sec": "5",
+"sub": "Special order",
+"page": 13,
+"text": "If any unit with a Special Order Token targets an Aircraft Unit with a Numbered Order Token, then the Speed Penalty is the difference between the value of the Aircraft Unit’s Order Token and that of the last revealed Numbered Order Token (of either player) before this Firing Action.\nIf an aircraft is Activated with a Special Order before it has been targeted, its Speed Penalty value also is that of the last revealed Numbered Order Token (of either player).\nThis value can be 0 if the plane is Activated before Order Number 1.\nIf the target is an Aircraft with an unrevealed Special Order Token apply a standard -2 Speed Penalty.\nExamples: An Aircraft Unit with Order Token #3 is targeted by a unit:\nwith Order Token #2, the Speed Penalty (3-2) is 1.\nwith Order Token #5, the Speed Penalty (5-3) is 2.\nwith Order Token #3, the Speed Penalty (3-3) is 0.\nwith Opportunity Fire, the Speed Penalty is 0.",
+"term": null,
+"id": 60
+},
+{
+"sec": "5",
+"sub": "Bombs and rockets",
+"page": 13,
+"text": "Bomb or rocket markers shown on an Aircraft’s Recruitment Tile are used for Alternate Firing Actions.\nThe German FOCKE-WULF has 2 SC-500 bombs. It can use them in an Alternate Firing Action with the Howitzer Special Ability while using the explosion template with the black Combat Values.",
+"term": null,
+"id": 61
 },
 {
 "sec": "6",
@@ -731,7 +755,7 @@ HTS_RULES["hon-omaha"] = {
 "page": 14,
 "text": "In order to start, you must define the size of the Defender's army. The defender does not have to be the German player. The number of army points will depend on the importance of the engagement and will define the terrain elements players must place.",
 "term": null,
-"id": 59
+"id": 62
 },
 {
 "sec": "6",
@@ -739,7 +763,7 @@ HTS_RULES["hon-omaha"] = {
 "page": 14,
 "text": "The number of Terrain Boards that make up the battlefield. Half of the Terrain Boards must represent the beach with the sea. Place the indicated number of Terrain Tiles on the battlefield (bunker, building, defensive positions), as well as the Defensive Obstacles (barbed wire and Czech hedgehogs). Half of them are chosen and placed by the Attacker, the other half by the Defender.",
 "term": null,
-"id": 60
+"id": 63
 },
 {
 "sec": "6",
@@ -747,7 +771,7 @@ HTS_RULES["hon-omaha"] = {
 "page": 14,
 "text": "The attacker must control a certain number in order to win the game. This number is indicated in parentheses.",
 "term": null,
-"id": 61
+"id": 64
 },
 {
 "sec": "6",
@@ -755,7 +779,7 @@ HTS_RULES["hon-omaha"] = {
 "page": 14,
 "text": "Randomly select the number of Tactical Bonuses indicated from among the 6 available. Try not to look at them when you place them, nor at the ones you set aside.",
 "term": null,
-"id": 62
+"id": 65
 },
 {
 "sec": "6",
@@ -763,7 +787,7 @@ HTS_RULES["hon-omaha"] = {
 "page": 14,
 "text": "The number of Turns that the game will last.",
 "term": null,
-"id": 63
+"id": 66
 },
 {
 "sec": "6",
@@ -771,7 +795,7 @@ HTS_RULES["hon-omaha"] = {
 "page": 14,
 "text": "Once all these elements are defined, assemble your forces.\n• The Defender constructs his army by spending his army points. He divides them into groups (see table, column 1). Each group must have a value of at least 100 points.\n• The Attacker takes the number of Recruitment Tiles and Landing Craft indicated by the table. This could be a combat group or a Field Command / Feldkommando. The attacker must take at least one small landing craft. He puts into an opaque bag all the option tiles corresponding to his Recruitment Tiles, the common options (gear, units, vehicles, character traits) and the Orders Options if he purchased a Command Tile.\nEach player draws a number of Action Cards as indicated by the table.",
 "term": null,
-"id": 64
+"id": 67
 },
 {
 "sec": "6",
@@ -779,7 +803,7 @@ HTS_RULES["hon-omaha"] = {
 "page": 14,
 "text": "The Attacker always has the initiative. Thus he deploys first in the landing craft (leaving one landing craft empty). The Defender positions his first group in the deployment zone. This zone is all the squares of the grassy bluff above the beach.",
 "term": null,
-"id": 65
+"id": 68
 },
 {
 "sec": "6",
@@ -787,7 +811,7 @@ HTS_RULES["hon-omaha"] = {
 "page": 14,
 "text": "Each turn, at the end of the Supply Phase, the attacker draws the number of Option Tiles indicated by the table. He keeps the number indicated in parentheses, and discards the others (he does not put them back in the bag). He divides the options between the slots on the Recruitment Tiles, respecting the rules of the coloured stripes. If he unlocks an Order Special Ability this way, he gains an Order Token for the next turn. If the option cannot be slotted into a Recruitment Tile, it is discarded. He then deploys his new units, respecting the Transport rules for landing craft.\nWARNING: One Landing Craft must always remain empty.\nAdjust the number of Order Tokens at the end of each Supply Phase, according to any casualties and units entering the game.",
 "term": null,
-"id": 66
+"id": 69
 },
 {
 "sec": "6",
@@ -795,7 +819,7 @@ HTS_RULES["hon-omaha"] = {
 "page": 14,
 "text": "The defender brings his groups into play in the following Supply Phases:\n• 2 Groups: The second group enters in Turn 2.\n• 3 Groups: The second group enters in Turn 2, the third in Turn 4.\n• 4 Groups: The second group enters in Turn 2, the third in Turn 4, the fourth in Turn 6.\nPlace the event markers on the turn chart so you don't forget the groups arriving later in the game. Use neutral markers if you don't have enough markers in the defender's colour. These units enter on any space on the side opposite the beach.\nThe game stops after the END Turn, or when the attacker controls the number of objectives defined by the table below. If the attacker has not fulfilled his objective, after the END Turn, the defender wins the game.",
 "term": null,
-"id": 67
+"id": 70
 },
 {
 "sec": "6",
@@ -851,7 +875,7 @@ HTS_RULES["hon-omaha"] = {
 ]
 ]
 },
-"id": 68
+"id": 71
 }
 ]
 };

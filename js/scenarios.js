@@ -1,9 +1,10 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'bro', name: 'Big Red One' }];
+  var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }];
   var S = { b: 'bro', q: '', type: 'all', open: {}, theme: 'light' };
   var cache = {}, NCOL = 0;
+  var SRCN = { bro: 'Scenario Booklet', omaha: 'Bloody Omaha rulebook' };
 
   function $(id) { return document.getElementById(id); }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
@@ -41,6 +42,8 @@
     $('types').innerHTML = '<button type="button" class="chip' + (S.type === 'all' ? ' on' : '') + '" data-type="all">All</button>' +
       d.types.map(function (c) { return '<button type="button" class="chip' + (S.type === c ? ' on' : '') + '" data-type="' + esc(c) + '">' + esc(c) + '</button>'; }).join('');
     $('q').value = S.q;
+    var sb = BOXES.filter(function (b) { return b.id === S.b; })[0];
+    if ($('subtitle') && sb) $('subtitle').textContent = 'Scenarios index, Heroes of Normandie, ' + sb.name;
     $('srcnote').textContent = 'Page numbers are the printed page numbers of the ' + d.source + ' (the PDF page matches the printed number).';
     document.documentElement.setAttribute('data-theme', S.theme);
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
@@ -50,23 +53,29 @@
   var SIDE = { us: ['us', 'American', '1st Infantry Division'], ge: ['ge', 'German', '2. Panzer Division'] };
   function armyHref(e, side) {
     var a = e.armies[side];
-    return 'index.html#b=' + encode({ n: side, l: a.limit, nm: e.title + ', ' + SIDE[side][1], a: a.tiles });
+    return 'index.html#b=' + encode({ n: a.side || side, l: a.limit, nm: e.title + ', ' + (a.label || SIDE[side][1]), a: a.tiles });
   }
   function armies(e) {
     if (!e.armies) return '';
     return '<div class="sarmy"><h4>Open the armies in the builder</h4>' +
-      ['us', 'ge'].filter(function (k) { return e.armies[k]; }).map(function (k) {
-        var a = e.armies[k];
-        return '<p class="sarow"><a class="btn" href="' + esc(armyHref(e, k)) + '" data-army="' + k + '">' + SIDE[k][1] + ' army</a>' +
-          '<span class="sameta">' + SIDE[k][2] + ', ' + a.pts + ' of ' + a.limit + ' points, ' + a.tiles.length + ' tile' + (a.tiles.length === 1 ? '' : 's') + '</span>' +
+      Object.keys(e.armies).map(function (k) {
+        var a = e.armies[k], sd = SIDE[a.side || k];
+        return '<p class="sarow"><a class="btn" href="' + esc(armyHref(e, k)) + '" data-army="' + k + '">' + esc(a.label || (sd[1] + ' army')) + '</a>' +
+          '<span class="sameta">' + esc(a.sub || sd[2]) + ', ' + a.pts + ' of ' + a.limit + ' points, ' + a.tiles.length + ' tile' + (a.tiles.length === 1 ? '' : 's') + '</span>' +
           (a.note ? '<span class="sanote">' + esc(a.note) + '</span>' : '') + '</p>';
       }).join('') +
       '<p class="hsrc">This replaces the army now in the builder. Save yours first if you want to keep it. Armies follow the recruitment pictures in the booklet.</p></div>';
   }
+  function figs(e) {
+    if (!e.figs || !e.figs.length) return '';
+    return '<div class="rfigs">' + e.figs.map(function (f) {
+      return '<figure class="rfig"><a href="' + esc(f.img) + '" target="_blank" rel="noopener"><img src="' + esc(f.img) + '" alt="' + esc(f.cap || e.title) + '" width="' + f.w + '" height="' + f.h + '" loading="lazy"></a><figcaption>' + esc(f.cap || '') + '</figcaption></figure>';
+    }).join('') + '</div>';
+  }
   function body(e) {
     return '<p class="htext">' + esc(e.summary) + '</p>' +
-      '<dl class="sfacts">' + e.facts.map(function (f) { return '<dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd>'; }).join('') + '</dl>' + armies(e) +
-      '<p class="hsrc">Scenario Booklet, ' + esc(pg(e)) + '</p>';
+      '<dl class="sfacts">' + e.facts.map(function (f) { return '<dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd>'; }).join('') + '</dl>' + figs(e) + armies(e) +
+      '<p class="hsrc">' + esc(SRCN[S.b] || 'Scenario Booklet') + ', ' + esc(pg(e)) + '</p>';
   }
   function row(e, mk, toks) {
     var isOpen = S.open[e.id] === 1, snip = '';

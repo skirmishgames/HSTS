@@ -258,7 +258,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const hrerrs = []; hrp.on('pageerror', e => hrerrs.push(e.message)); hrp.on('console', m => { if (m.type() === 'error') hrerrs.push(m.text()); });
   await hrp.goto(base + 'heroes.html');
   ok(await hrp.locator('.hrow').count() === 8, 'US heroes page lists 8 hero tiles');
-  ok(await hrp.locator('.eqcard').count() === 7, 'equipment shows 7 cards');
+  ok(await hrp.locator('.eqcard').count() === 12, 'equipment shows 12 cards across boxes');
   await hrp.click('[data-nation="ge"]');
   ok(await hrp.locator('.hrow').count() === 4, 'German heroes page lists 4 hero tiles');
   await hrp.locator('.hhead', { hasText: 'Ludwig' }).click();
@@ -274,6 +274,58 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const badH = [];
   for (const h of hlinks2) { await lp.goto(base + h); await lp.waitForTimeout(250); if (await lp.locator('.rrow, .result, .rcard').count() < 1) badH.push(h); }
   ok(badH.length === 0, 'heroes rules links return results ' + badH.join(','));
+
+  // heroes box filter and Omaha equipment
+  await hrp.fill('#q', ''); await hrp.waitForTimeout(300);
+  await hrp.click('[data-box="omaha"]');
+  ok(await hrp.locator('.hrow').count() === 2 && await hrp.locator('.eqcard').count() === 5, 'heroes: Bloody Omaha shows 2 US heroes and 5 equipment cards');
+  await hrp.click('[data-nation="ge"]');
+  ok(await hrp.locator('.hrow').count() === 1, 'heroes: Bloody Omaha German hero is Heinrich');
+  await hrp.click('[data-box="bro"]');
+  ok(await hrp.locator('.hrow').count() === 3 && await hrp.locator('.eqcard').count() === 7, 'heroes: Big Red One German 3 heroes, 7 equipment cards');
+  await hrp.click('[data-nation="us"]'); await hrp.click('[data-box="promo"]');
+  ok(await hrp.locator('.hrow').count() === 3 && await hrp.locator('.eqcard').count() === 0, 'heroes: promo filter shows 3 US heroes and no equipment');
+  await hrp.click('[data-box="all"]'); await hrp.fill('#q', 'heroic'); await hrp.waitForTimeout(300);
+  ok(await hrp.locator('.eqcard', { hasText: 'Heroic' }).count() === 1 && await hrp.locator('.eqcard img').count() === 2, 'heroes: Heroic card has option and marker images');
+  const hbroken = await hrp.evaluate(async () => { await new Promise(r => setTimeout(r, 400)); return Array.from(document.images).filter(i => i.complete && i.naturalWidth === 0).length; });
+  ok(hbroken === 0, 'heroes page: no broken images');
+  const eqImgs = JSON.parse(await hrp.evaluate(() => JSON.stringify(window.HTS_HEROES.equipment.reduce((a, q) => a.concat(q.faces.map(f => f.img)), []))));
+  ok(eqImgs.every(f => fs.existsSync(path.join(root, f))), 'every equipment image file exists (' + eqImgs.length + ')');
+  await hrp.goto(base + 'heroes.html?b=omaha&n=us&q=horvath'); await hrp.waitForTimeout(300);
+  ok(await hrp.locator('.hrow').count() === 1, 'heroes: URL box and search are applied');
+  ok(hrerrs.length === 0, 'heroes page after box filter: no console errors ' + hrerrs.join('|'));
+
+  // Bloody Omaha scenarios, tokens and armies
+  await sp.goto(base + 'scenarios.html?b=omaha'); await sp.waitForTimeout(300);
+  ok(await sp.locator('.hrow').count() === 5, 'omaha scenarios: 5 entries');
+  await sp.locator('.hhead', { hasText: 'Part #2' }).first().click();
+  ok(await sp.locator('.hrow.open [data-army]').count() === 3, 'omaha part 2 shows 3 builder links');
+  const oInfo = JSON.parse(await sp.evaluate(() => JSON.stringify(window.HTS_SCEN['hon-omaha'].entries.filter(e => e.armies).map(e => [e.id, e.armies]))));
+  ok(oInfo.length === 4, 'omaha: four scenarios carry armies');
+  let oArmies = 0;
+  for (const [id, ar] of oInfo) {
+    for (const key of Object.keys(ar)) {
+      const a = ar[key];
+      const j = { n: a.side, l: a.limit, nm: id + ' ' + key, a: a.tiles };
+      const h = Buffer.from(JSON.stringify(j)).toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+      await ap.goto(url + '#b=' + h); await ap.reload();
+      const used = await ap.textContent('#ptsUsed');
+      ok(Number(used) === a.pts, 'omaha ' + id + ' ' + key + ' loads ' + a.pts + ' points (got ' + used + ')');
+      ok(await ap.locator('.warnings p:not(.bad)').filter({ hasNotText: 'SP instead of a cost' }).count() === 0, 'omaha ' + id + ' ' + key + ' has no slot warnings');
+      oArmies++;
+    }
+  }
+  ok(oArmies === 11, 'omaha: 11 armies loaded');
+  ok(serrs.length === 0 && aerrs.length === 0, 'omaha scenarios and armies: no console errors ' + serrs.concat(aerrs).join('|'));
+  await tp.goto(base + 'tokens.html?b=omaha'); await tp.waitForTimeout(300);
+  ok(await tp.locator('.hrow').count() === 14, 'omaha tokens: 14 entries');
+  await tp.locator('.hhead', { hasText: 'Haystack' }).first().click();
+  ok(await tp.locator('.hrow.open .tface').count() >= 1, 'omaha token opens with faces');
+  const otImgs = JSON.parse(await tp.evaluate(() => JSON.stringify(window.HTS_TOKENS['hon-omaha'].entries.reduce((a, e) => a.concat(e.faces.map(f => f.img)), []))));
+  ok(otImgs.every(f => fs.existsSync(path.join(root, f))), 'every omaha token image exists (' + otImgs.length + ')');
+  const scImgs = JSON.parse(await sp.evaluate(() => JSON.stringify(window.HTS_SCEN['hon-omaha'].entries.reduce((a, e) => a.concat((e.figs || []).map(f => f.img)), []))));
+  ok(scImgs.length > 0 && scImgs.every(f => fs.existsSync(path.join(root, f))), 'every omaha scenario figure exists (' + scImgs.length + ')');
+  ok(terrs.length === 0, 'omaha tokens: no console errors ' + terrs.join('|'));
 
   // maps page
   const mpg = await b.newPage({ viewport: { width: 1360, height: 900 } });

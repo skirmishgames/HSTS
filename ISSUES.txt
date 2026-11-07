@@ -1,5 +1,5 @@
 HEROES SYSTEM TACTICAL SCALE: ISSUES TO BE ADDRESSED
-Last updated: 2026-11-06 (site version hts-v18)
+Last updated: 2026-11-06 (site version hts-v19)
 
 HOW TO USE THIS FILE
 - One entry per issue. Never delete an entry. Change its status and add a dated line under "Decision".
@@ -132,12 +132,23 @@ ISS-020  Source folders hold the same art several times   [OPEN]
 Caen and Omaha folders have full resolution PNGs, quality-10 JPGs and, for Omaha boards, a quality-8 copy. The site uses scaled copies. Cleanup is part of the file organizing job.
 Decision:
 
+ISS-023  Bloody Omaha armies differ from the printed points   [OPEN]
+Where: data/hon-omaha-scenarios.js, armies for Part 1, Little River, Big River
+Detail: 4 of the 11 Omaha armies match the printed points exactly (the three Part 2 armies and Big River German B). The other seven differ for the reasons below.
+- Part 1 US: builder 545, printed 535. The P-51 Mustang tile (50 points) is not in the builder, so the real gap may be larger. Unclear whether the printed figure leaves out the Sherman or something else.
+- Part 1 German: builder 365, printed 335. The Feldkommando and Defense Group enter on Turn 3, which may not count toward the limit.
+- Little and Big River US A: builder 435, printed 495. The M10 A1 Tank Destroyer option is not in the builder data (the gap is 60 points).
+- Big River US B: builder 450, printed 550. The P-47 Thunderbolt and P-51 Mustang aircraft tiles are not in the builder data.
+- Little and Big River German A: builder 405, printed 415. Haystack counters and defensive positions are scenario items with costs the builder does not model.
+Conflict: printed scenario totals against the sum of option costs on the tiles.
+Decision: 2026-11-06 Ship as is. Each army carries a note saying what is missing. Fixing it needs the M10 option and the aircraft tiles scanned or supplied.
+
 ----------------------------------------------------------------
 NOT IN THE TOOL YET
 ----------------------------------------------------------------
 
 ISS-015  Other boxes: armies, tiles, rules and scenarios   [OPEN]
-Contents Checklist.xlsx shows official files for Bloody Omaha and both Battle for Caen boxes (Epsom, Charnwood & Goodwood; Windsor & Jupiter). The tool covers their terrain (Maps, hts-v16) but not their recruitment tiles, options, heroes, tokens, rules or scenarios. Big Red One is still the only box in the builder.
+Contents Checklist.xlsx shows official files for Bloody Omaha and both Battle for Caen boxes (Epsom, Charnwood & Goodwood; Windsor & Jupiter). The tool covers their terrain (Maps, hts-v16) but not their recruitment tiles, options, heroes, tokens, rules or scenarios. Bloody Omaha is in the tool (tiles, options, heroes, rules, icons, tokens, scenarios and maps). Battle for Caen (both boxes) is next.
 Decision on order:
 
 ----------------------------------------------------------------

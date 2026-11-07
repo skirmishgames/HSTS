@@ -1,12 +1,15 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'bro', name: 'Big Red One' }];
+  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'promo', name: 'Promo heroes' }];
+  var SETBOX = { CB: 'bro', BO: 'omaha' };
+  function boxOf(t) { return SETBOX[t.set] || 'promo'; }
+  function boxName(id) { return BOXES.filter(function (b) { return b.id === id; })[0].name; }
   var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }];
   var CATS = [['customization', 'Customizations'], ['gear', 'Gear'], ['trait', 'Character traits'], ['support', 'Support units'], ['order', 'Orders']];
   var STRIPE = { R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', cmd: 'command', custom: 'customization', any: 'common' };
   var KIND = { officer: 'Officer', character: 'Character', infantry: 'Infantry', weapon: 'Weapon', vehicle: 'Vehicle', marker: 'Marker', aircraft: 'Aircraft' };
-  var S = { b: 'bro', n: 'us', q: '', open: {}, theme: 'light' };
+  var S = { b: 'all', n: 'us', q: '', open: {}, theme: 'light' };
   var cache = {};
 
   function $(id) { return document.getElementById(id); }
@@ -28,9 +31,9 @@
   function cost(o) { return o.cost == null ? 'SP' : o.cost; }
 
   function load() {
-    var key = 'hon-' + S.b + '-' + S.n;
+    var key = 'hon-bro-' + S.n;
     if (cache[key]) return cache[key];
-    var d = window.HTS_DATA['hon-' + S.b + '-' + S.n], opts = {};
+    var d = window.HTS_DATA[key], opts = {};
     d.options.forEach(function (o) { opts[o.id] = o; });
     var heroes = d.tiles.filter(function (t) { return t.type === 'hero'; }).map(function (t) {
       t.hay = norm(t.name + ' ' + (t.sub || '') + ' ' + t.units.map(function (u) { return u[0] + ' ' + u[2]; }).join(' ') + ' ' + (t.note || ''));
@@ -42,7 +45,7 @@
   }
 
   function renderControls() {
-    $('boxes').innerHTML = BOXES.map(function (b) { return '<button type="button" data-box="' + b.id + '" class="on" aria-pressed="true">' + b.name + '</button>'; }).join('');
+    $('boxes').innerHTML = BOXES.map(function (b) { return '<button type="button" data-box="' + b.id + '" class="' + (S.b === b.id ? 'on' : '') + '" aria-pressed="' + (S.b === b.id) + '">' + b.name + '</button>'; }).join('');
     $('nations').innerHTML = NATIONS.map(function (n) { return '<button type="button" data-nation="' + n.id + '" class="' + (S.n === n.id ? 'on' : '') + '" aria-pressed="' + (S.n === n.id) + '">' + n.name + '</button>'; }).join('');
     $('q').value = S.q;
     document.documentElement.setAttribute('data-theme', S.theme);
@@ -59,7 +62,7 @@
       if (!list.length) return;
       out += '<p class="htake"><strong>' + c[1] + '</strong> ' + list.map(function (o) { return '<span class="tchip">' + esc(o.name) + ' <i>' + cost(o) + '</i></span>'; }).join('') + '</p>';
     });
-    return out || '<p class="htext">Nothing in the Big Red One box fits this slot.</p>';
+    return out || '<p class="htext">Nothing fits this slot.</p>';
   }
   function body(t) {
     var D = load(), slots = t.slots || [], sig = slots.map(function (s) { return s.size + s.stripes.join(','); }), same = sig.every(function (x) { return x === sig[0]; });
@@ -70,7 +73,7 @@
     else if (same) html += '<h4 class="hsub">' + (slots.length === 1 ? 'Slot' : 'All ' + slots.length + ' slots') + ': ' + esc(slotText(slots[0]).toLowerCase()) + '</h4><p class="hsrc">What it can take</p>' + takeList(D, slots[0]);
     else slots.forEach(function (s, i) { html += '<h4 class="hsub">Slot ' + (i + 1) + ': ' + esc(slotText(s).toLowerCase()) + '</h4>' + takeList(D, s); });
     html += '<p class="hfind"><a href="units.html?n=' + S.n + '&amp;q=' + encodeURIComponent(t.name) + '">In the unit index</a> <a href="rules.html?q=' + encodeURIComponent('heroes characters') + '">Rules: Heroes &amp; characters</a></p>';
-    html += '<p class="hsrc">Set ' + esc(t.set) + '. Costs are in army points; SP means the scenario sets the cost.</p>';
+    html += '<p class="hsrc">' + esc(boxName(boxOf(t))) + ', set ' + esc(t.set) + '. Costs are in army points; SP means the scenario sets the cost.</p>';
     return html;
   }
   function row(t, mk) {
@@ -78,7 +81,7 @@
     return '<div class="hrow' + (isOpen ? ' open' : '') + '" id="h-' + esc(t.id) + '">' +
       '<button type="button" class="hhead" data-toggle="' + esc(t.id) + '" aria-expanded="' + isOpen + '" aria-controls="hb-' + esc(t.id) + '">' +
       '<span class="hname">' + mk(t.name) + '<span class="hsnip">' + mk(t.sub || '') + '</span></span>' +
-      '<span class="hbadges"><span class="hb ' + (S.n === 'us' ? 'hb-us' : 'hb-ge') + '">' + t.cost + ' pts</span></span>' +
+      '<span class="hbadges"><span class="hb">' + esc(boxName(boxOf(t))) + '</span><span class="hb ' + (S.n === 'us' ? 'hb-us' : 'hb-ge') + '">' + t.cost + ' pts</span></span>' +
       '<span class="hchev" aria-hidden="true"></span></button>' +
       '<div class="hbody" id="hb-' + esc(t.id) + '"' + (isOpen ? '' : ' hidden') + '>' + (isOpen ? body(t) : '') + '</div></div>';
   }
@@ -92,7 +95,7 @@
 
   function equipCard(q, mk, D) {
     var o = D.opts[q.opt];
-    return '<article class="eqcard" id="e-' + esc(q.id) + '"><h3>' + mk(q.name) + (o ? ' <span class="hb ' + (S.n === 'us' ? 'hb-us' : 'hb-ge') + '">' + cost(o) + ' pts</span>' : '') + '</h3>' +
+    return '<article class="eqcard" id="e-' + esc(q.id) + '"><h3>' + mk(q.name) + ' <span class="hb">' + esc(boxName(q.box)) + '</span>' + (o ? ' <span class="hb ' + (S.n === 'us' ? 'hb-us' : 'hb-ge') + '">' + cost(o) + ' pts</span>' : '') + '</h3>' +
       '<div class="tfaces eqfaces">' + q.faces.map(function (f) {
         return '<figure class="tface eqface"><img src="' + esc(f.img) + '" alt="' + esc(q.name + ': ' + f.label) + '" width="' + f.w + '" height="' + f.h + '" loading="lazy"><figcaption>' + esc(f.label) + '</figcaption></figure>';
       }).join('') + '</div>' +
@@ -105,12 +108,12 @@
   function render() {
     var D = load(), toks = tokens(S.q), mk = markFn(toks);
     renderControls();
-    var heroes = D.heroes.filter(function (t) { var p = ' ' + t.hay + ' '; return toks.every(function (k) { return hit(t.hay, p, k); }); });
-    var eq = window.HTS_HEROES.equipment.filter(function (q) { var h = norm(q.name + ' ' + q.text), p = ' ' + h + ' '; return toks.every(function (k) { return hit(h, p, k); }); });
+    var heroes = D.heroes.filter(function (t) { var p = ' ' + t.hay + ' '; return (S.b === 'all' || boxOf(t) === S.b) && toks.every(function (k) { return hit(t.hay, p, k); }); });
+    var eq = window.HTS_HEROES.equipment.filter(function (q) { var h = norm(q.name + ' ' + q.text), p = ' ' + h + ' '; return (S.b === 'all' || q.box === S.b) && toks.every(function (k) { return hit(h, p, k); }); });
     var html = '<section class="hgroup"><h2 class="hh">Hero tiles <span class="hcount">' + heroes.length + '</span></h2>' +
       (heroes.length ? list(heroes, mk) : '<p class="empty2">No hero matches.</p>') + '</section>' +
       '<section class="hgroup"><h2 class="hh">Equipment cards and markers <span class="hcount">' + eq.length + '</span></h2>' +
-      '<p class="htext hintro">Weapon customizations for Characters. They fit the slot on a hero tile and the slots on a Command tile, and they work for both armies.</p>' +
+      '<p class="htext hintro">Customizations for Characters. They fit the slot on a hero tile and the slots on a Command tile, and they work for both armies.</p>' +
       (eq.length ? '<div class="eqgrid">' + eq.map(function (q) { return equipCard(q, mk, D); }).join('') + '</div>' : '<p class="empty2">No equipment matches.</p>') + '</section>';
     $('out').innerHTML = html;
     $('stat').textContent = heroes.length + ' hero tile' + (heroes.length === 1 ? '' : 's') + ' and ' + eq.length + ' equipment card' + (eq.length === 1 ? '' : 's') + '. Open a hero to see what it can take.';
@@ -139,6 +142,7 @@
   function bind() {
     document.addEventListener('click', function (ev) {
       var t = ev.target, el;
+      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; S.open = {}; render(); return; }
       if ((el = t.closest('[data-nation]'))) { S.n = el.dataset.nation; S.open = {}; render(); return; }
       if ((el = t.closest('[data-toggle]'))) toggle(el.dataset.toggle);
     });
@@ -156,6 +160,7 @@
     try { var j = JSON.parse(localStorage.getItem(LSK) || '{}'); if (j.theme) S.theme = j.theme; if (j.nation === 'ge' || j.nation === 'us') S.n = j.nation; } catch (e) { /* ignore */ }
     var p = new URLSearchParams(location.search);
     if (NATIONS.some(function (n) { return n.id === p.get('n'); })) S.n = p.get('n');
+    if (BOXES.some(function (b) { return b.id === p.get('b'); })) S.b = p.get('b');
     if (p.get('q')) S.q = p.get('q');
     if (p.get('e')) p.get('e').split(',').forEach(function (id) { if (/^[a-z0-9_]+$/.test(id)) S.open[id] = 1; });
     NCOL = ncol(); bind(); render();
