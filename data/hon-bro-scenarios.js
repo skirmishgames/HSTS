@@ -545,7 +545,7 @@ null
 ]
 ]
 ],
-"note": "The booklet picture shows the American Bluff card (10 points) on the German Feldkommando. This link uses the German Bluff card, which costs 5.",
+"note": "",
 "pts": 335
 }
 }
@@ -920,13 +920,13 @@ null
 [
 "ludwig",
 [
-"mp40"
+null
 ]
 ],
 [
 "helmut",
 [
-"mp40"
+"flamer"
 ]
 ],
 [
@@ -936,8 +936,8 @@ null
 ]
 ]
 ],
-"note": "",
-"pts": 665
+"note": "From the V2.5 booklet page. The 15 point narrow vehicle on the Panzergrenadiere platoon is called Kübelwagen there and Schwimmwagen in the builder.",
+"pts": 675
 }
 }
 },
