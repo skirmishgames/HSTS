@@ -1,6 +1,6 @@
 box,nation,kind,name,type,tile,tile_sub,history_entry
-bro,ge,unit,Major Karl Brassert,officer,Feldkommando,Major Karl Brassert,milius
-bro,ge,tile,Feldkommando,command,Feldkommando,Major Karl Brassert,milius
+bro,ge,unit,Major Karl Brassert,officer,Feldkommando,Major Karl Brassert,fictional
+bro,ge,tile,Feldkommando,command,Feldkommando,Major Karl Brassert,fictional
 bro,ge,unit,Helmut,character,Helmut,Panzerknacker,fictional
 bro,ge,tile,Helmut,hero,Helmut,Panzerknacker,fictional
 bro,ge,unit,Otto,character,Otto,Nameless Hero,fictional
@@ -42,14 +42,17 @@ bro,ge,unit,Ol. Steiger,officer,SS Panzergrenadiere,"III. Bataillon, Reg. 25, 12
 bro,ge,unit,SS Fire Group,infantry,SS Panzergrenadiere,"III. Bataillon, Reg. 25, 12. SS Pz. Div. Hitlerjugend",pzgren
 bro,ge,unit,SS MG Group,infantry,SS Panzergrenadiere,"III. Bataillon, Reg. 25, 12. SS Pz. Div. Hitlerjugend",pzgren
 bro,ge,tile,SS Panzergrenadiere,platoon,SS Panzergrenadiere,"III. Bataillon, Reg. 25, 12. SS Pz. Div. Hitlerjugend",pzgren
-bro,ge,unit,Hstuf. Milius,officer,Feldkommando,Hauptsturmführer Karl-Heinz Milius,milius
-bro,ge,unit,Emil Dürr,character,Emil Dürr,Death Joker,fictional
-bro,ge,tile,Emil Dürr,hero,Emil Dürr,Death Joker,fictional
-bro,ge,unit,Panther Ausf. A Command,vehicle,SS-Panzergruppe,"I. SS-Panzerregiment 12, 12. SS-Pz-Div",panther
-bro,ge,unit,Panther Ausf. A,vehicle,SS-Panzergruppe,"I. SS-Panzerregiment 12, 12. SS-Pz-Div",panther
-bro,ge,tile,SS-Panzergruppe,platoon,SS-Panzergruppe,"I. SS-Panzerregiment 12, 12. SS-Pz-Div",pzgruppe
-bro,ge,unit,Stubaf. Waldmüller,officer,SS-Panzergrenadiere,"I. Battalion, Reg. 25, 12. SS Pz Div Hitlerjugend",pzgren
-bro,ge,tile,SS-Panzergrenadiere,platoon,SS-Panzergrenadiere,"I. Battalion, Reg. 25, 12. SS Pz Div Hitlerjugend",pzgren
+caen,ge,unit,Hstuf. Milius,officer,Feldkommando,Hauptsturmführer Karl-Heinz Milius,milius
+caen,ge,tile,Feldkommando,command,Feldkommando,Hauptsturmführer Karl-Heinz Milius,milius
+caen,ge,unit,Emil Dürr,character,Emil Dürr,Death Joker,fictional
+caen,ge,tile,Emil Dürr,hero,Emil Dürr,Death Joker,fictional
+caen,ge,unit,Panther Ausf. A Command,vehicle,SS-Panzergruppe,"I. SS-Panzerregiment 12, 12. SS-Pz-Div",panther
+caen,ge,unit,Panther Ausf. A,vehicle,SS-Panzergruppe,"I. SS-Panzerregiment 12, 12. SS-Pz-Div",panther
+caen,ge,tile,SS-Panzergruppe,platoon,SS-Panzergruppe,"I. SS-Panzerregiment 12, 12. SS-Pz-Div",pzgruppe
+caen,ge,unit,Stubaf. Waldmüller,officer,SS-Panzergrenadiere,"I. Battalion, Reg. 25, 12. SS Pz Div Hitlerjugend",milius
+caen,ge,unit,SS Fire Group,infantry,SS-Panzergrenadiere,"I. Battalion, Reg. 25, 12. SS Pz Div Hitlerjugend",milius
+caen,ge,unit,SS MG Group,infantry,SS-Panzergrenadiere,"I. Battalion, Reg. 25, 12. SS Pz Div Hitlerjugend",milius
+caen,ge,tile,SS-Panzergrenadiere,platoon,SS-Panzergrenadiere,"I. Battalion, Reg. 25, 12. SS Pz Div Hitlerjugend",milius
 bro,ge,option,Bluff,order,,,mechanic
 bro,ge,option,Planning,order,,,mechanic
 bro,ge,option,MG Nest,order,,,mechanic
@@ -106,73 +109,81 @@ bro,ge,option,SS Dagger,customization,,,mechanic
 bro,ge,option,Flamer Group,support,,,fmw41
 bro,ge,option,Tankbuster,trait,,,mechanic
 bro,ge,option,Magnetic Mine,gear,,,hhl3
-bro,ge,option,Fanatic,trait,,,mechanic
-bro,ge,option,Fortified,order,,,mechanic
-bro,ge,option,Initiative,order,,,mechanic
-bro,ge,option,Tiger I,support,,,tiger
-bro,ge,option,8cm Granatwerfer,support,,,gw34
-bro,ge,option,MG 42 HMG,support,,,mg42
-bro,uk,unit,Col. Mathieu,officer,Field Command,Colonel J.E.G. Paul Mathieu,chaudiere
-bro,uk,tile,Field Command,command,Field Command,Colonel J.E.G. Paul Mathieu,chaudiere
-bro,uk,unit,Dempsey,officer,High Command,Brigadier General Miles Dempsey,dempsey
-bro,uk,unit,Command Team,infantry,High Command,Brigadier General Miles Dempsey,dempsey
-bro,uk,tile,High Command,command,High Command,Brigadier General Miles Dempsey,dempsey
-bro,uk,unit,Jack Banks,character,Jack Banks,Youngster,fictional
-bro,uk,tile,Jack Banks,hero,Jack Banks,Youngster,fictional
-bro,uk,unit,Ludger Houde,character,Ludger Houde,Chimney Breaker,fictional
-bro,uk,tile,Ludger Houde,hero,Ludger Houde,Chimney Breaker,fictional
-bro,uk,unit,Sgt Lee Lowe,character,Sgt Lee Lowe,Tank Leader,fictional
-bro,uk,unit,Achille M10,vehicle,Sgt Lee Lowe,Tank Leader,achilles
-bro,uk,tile,Sgt Lee Lowe,hero,Sgt Lee Lowe,Tank Leader,fictional
-bro,uk,unit,M4 Sherman Command,vehicle,23rd Hussars,"29th Ar. Brigade, 11th Ar. Div.",sherman
-bro,uk,unit,M4 Sherman,vehicle,23rd Hussars,"29th Ar. Brigade, 11th Ar. Div.",sherman
-bro,uk,tile,23rd Hussars,platoon,23rd Hussars,"29th Ar. Brigade, 11th Ar. Div.",hussars23
-bro,uk,unit,Major Lapointe,officer,Régiment de la Chaudière,"8th Inf. Brigade, 3rd Ca. Inf. Div.",chaudiere
-bro,uk,unit,Leader Team,infantry,Régiment de la Chaudière,"8th Inf. Brigade, 3rd Ca. Inf. Div.",chaudiere
-bro,uk,unit,Fire Team,infantry,Régiment de la Chaudière,"8th Inf. Brigade, 3rd Ca. Inf. Div.",chaudiere
-bro,uk,unit,2 Inch Mortar,weapon,Régiment de la Chaudière,"8th Inf. Brigade, 3rd Ca. Inf. Div.",mortar2
-bro,uk,unit,Bren,weapon,Régiment de la Chaudière,"8th Inf. Brigade, 3rd Ca. Inf. Div.",bren
-bro,uk,tile,Régiment de la Chaudière,platoon,Régiment de la Chaudière,"8th Inf. Brigade, 3rd Ca. Inf. Div.",chaudiere
-bro,uk,unit,P.E. Gower,officer,Royal Winnipeg Rifles,"7th Inf. Brigade, 3rd Ca. Inf. Div.",rwr
-bro,uk,unit,Vickers MG,weapon,Royal Winnipeg Rifles,"7th Inf. Brigade, 3rd Ca. Inf. Div.",vickers
-bro,uk,unit,6 Pounder AT Gun,weapon,Royal Winnipeg Rifles,"7th Inf. Brigade, 3rd Ca. Inf. Div.",pdr6
-bro,uk,unit,3 Inch Mortar,weapon,Royal Winnipeg Rifles,"7th Inf. Brigade, 3rd Ca. Inf. Div.",mortar3
-bro,uk,tile,Royal Winnipeg Rifles,platoon,Royal Winnipeg Rifles,"7th Inf. Brigade, 3rd Ca. Inf. Div.",rwr
-bro,uk,unit,Lt. D. Wye,officer,Worcestershire Regiment,"214th Inf. Brigade, 43rd Inf. Div.",worcs
-bro,uk,tile,Worcestershire Regiment,platoon,Worcestershire Regiment,"214th Inf. Brigade, 43rd Inf. Div.",worcs
-bro,uk,option,3 Inch Mortar,support,,,mortar3
-bro,uk,option,Cromwell Mk IV,support,,,cromwell
-bro,uk,option,Daimler AC,support,,,daimler
-bro,uk,option,Flamer,support,,,wasp
-bro,uk,option,M5 Stuart,support,,,stuart
-bro,uk,option,Universal Carrier,support,,,carrier
-bro,uk,option,Mechanized Universal Carrier,support,,,carrier
-bro,uk,option,Vickers MG,support,,,vickers
-bro,uk,option,Wasp,support,,,wasp
-bro,uk,option,Veteran,trait,,,mechanic
-bro,uk,option,Grenade,gear,,,mechanic
-bro,uk,option,Ammo,gear,,,mechanic
-bro,uk,option,Bluff,order,,,mechanic
-bro,uk,option,Planning,order,,,mechanic
-bro,uk,option,Initiative,order,,,mechanic
-bro,uk,option,Concealed,order,,,mechanic
-bro,uk,option,Aircraft x1,order,,,mechanic
-bro,uk,option,Aircraft x2,order,,,mechanic
-bro,uk,option,Battle Plan,order,,,mechanic
-bro,uk,option,Artillery,order,,,observer
-bro,uk,option,Smoke,order,,,mechanic
-bro,uk,option,25 pdr Sexton,support,,,sexton
-bro,uk,option,Sherman Firefly,support,,,sherman
-bro,uk,option,Tank Gear,gear,,,mechanic
-bro,uk,option,Tank Ammo,gear,,,mechanic
-bro,uk,option,Bren Platoon,support,,,bren
-bro,uk,option,PIAT Platoon,support,,,piat
-bro,uk,option,Support Platoon,support,,,bren
-bro,uk,option,Ammo Belt,gear,,,mechanic
-bro,uk,option,Howitzer Support,support,,,vickers
-bro,uk,option,Mortar Support,support,,,mortar3
-bro,uk,option,Mechanized Bren,support,,,m3ht
-bro,uk,option,Mechanized PIAT,support,,,m3ht
+caen,ge,option,Fanatic,trait,,,mechanic
+caen,ge,option,Fortified,order,,,mechanic
+caen,ge,option,Initiative,order,,,mechanic
+caen,ge,option,Tiger I,support,,,tiger
+caen,ge,option,Panther Ausf. A,support,,,panther
+caen,ge,option,Panzer IV,support,,,pz4
+caen,ge,option,StuG IV,support,,,stug4
+caen,ge,option,Tank Gear,gear,,,mechanic
+caen,ge,option,Tank Ammo,gear,,,mechanic
+caen,ge,option,Assault Group,support,,,pzgren
+caen,ge,option,Flamer Group,support,,,fmw41
+caen,ge,option,Panzerschreck Group,support,,,pschreck
+caen,ge,option,8cm Granatwerfer,support,,,gw34
+caen,ge,option,MG 42 HMG,support,,,mg42
+caen,uk,unit,Col. Mathieu,officer,Field Command,Colonel J.E.G. Paul Mathieu,chaudiere
+caen,uk,tile,Field Command,command,Field Command,Colonel J.E.G. Paul Mathieu,chaudiere
+caen,uk,unit,Dempsey,officer,High Command,Brigadier General Miles Dempsey,dempsey
+caen,uk,unit,Command Team,infantry,High Command,Brigadier General Miles Dempsey,dempsey
+caen,uk,tile,High Command,command,High Command,Brigadier General Miles Dempsey,dempsey
+caen,uk,unit,Jack Banks,character,Jack Banks,Youngster,fictional
+caen,uk,tile,Jack Banks,hero,Jack Banks,Youngster,fictional
+caen,uk,unit,Ludger Houde,character,Ludger Houde,Chimney Breaker,fictional
+caen,uk,tile,Ludger Houde,hero,Ludger Houde,Chimney Breaker,fictional
+caen,uk,unit,Sgt Lee Lowe,character,Sgt Lee Lowe,Tank Leader,fictional
+caen,uk,unit,Achille M10,vehicle,Sgt Lee Lowe,Tank Leader,achilles
+caen,uk,tile,Sgt Lee Lowe,hero,Sgt Lee Lowe,Tank Leader,fictional
+caen,uk,unit,M4 Sherman Command,vehicle,23rd Hussars,"29th Ar. Brigade, 11th Ar. Div.",sherman
+caen,uk,unit,M4 Sherman,vehicle,23rd Hussars,"29th Ar. Brigade, 11th Ar. Div.",sherman
+caen,uk,tile,23rd Hussars,platoon,23rd Hussars,"29th Ar. Brigade, 11th Ar. Div.",hussars23
+caen,uk,unit,Major Lapointe,officer,Régiment de la Chaudière,"8th Inf. Brigade, 3rd Ca. Inf. Div.",chaudiere
+caen,uk,unit,Leader Team,infantry,Régiment de la Chaudière,"8th Inf. Brigade, 3rd Ca. Inf. Div.",chaudiere
+caen,uk,unit,Fire Team,infantry,Régiment de la Chaudière,"8th Inf. Brigade, 3rd Ca. Inf. Div.",chaudiere
+caen,uk,unit,2 Inch Mortar,weapon,Régiment de la Chaudière,"8th Inf. Brigade, 3rd Ca. Inf. Div.",mortar2
+caen,uk,unit,Bren,weapon,Régiment de la Chaudière,"8th Inf. Brigade, 3rd Ca. Inf. Div.",bren
+caen,uk,tile,Régiment de la Chaudière,platoon,Régiment de la Chaudière,"8th Inf. Brigade, 3rd Ca. Inf. Div.",chaudiere
+caen,uk,unit,P.E. Gower,officer,Royal Winnipeg Rifles,"7th Inf. Brigade, 3rd Ca. Inf. Div.",rwr
+caen,uk,unit,Vickers MG,weapon,Royal Winnipeg Rifles,"7th Inf. Brigade, 3rd Ca. Inf. Div.",vickers
+caen,uk,unit,6 Pounder AT Gun,weapon,Royal Winnipeg Rifles,"7th Inf. Brigade, 3rd Ca. Inf. Div.",pdr6
+caen,uk,unit,3 Inch Mortar,weapon,Royal Winnipeg Rifles,"7th Inf. Brigade, 3rd Ca. Inf. Div.",mortar3
+caen,uk,tile,Royal Winnipeg Rifles,platoon,Royal Winnipeg Rifles,"7th Inf. Brigade, 3rd Ca. Inf. Div.",rwr
+caen,uk,unit,Lt. D. Wye,officer,Worcestershire Regiment,"214th Inf. Brigade, 43rd Inf. Div.",worcs
+caen,uk,tile,Worcestershire Regiment,platoon,Worcestershire Regiment,"214th Inf. Brigade, 43rd Inf. Div.",worcs
+caen,uk,option,3 Inch Mortar,support,,,mortar3
+caen,uk,option,Cromwell Mk IV,support,,,cromwell
+caen,uk,option,Daimler AC,support,,,daimler
+caen,uk,option,Flamer,support,,,wasp
+caen,uk,option,M5 Stuart,support,,,stuart
+caen,uk,option,Universal Carrier,support,,,carrier
+caen,uk,option,Mechanized Universal Carrier,support,,,carrier
+caen,uk,option,Vickers MG,support,,,vickers
+caen,uk,option,Wasp,support,,,wasp
+caen,uk,option,Veteran,trait,,,mechanic
+caen,uk,option,Grenade,gear,,,mechanic
+caen,uk,option,Ammo,gear,,,mechanic
+caen,uk,option,Bluff,order,,,mechanic
+caen,uk,option,Planning,order,,,mechanic
+caen,uk,option,Initiative,order,,,mechanic
+caen,uk,option,Concealed,order,,,mechanic
+caen,uk,option,Aircraft x1,order,,,mechanic
+caen,uk,option,Aircraft x2,order,,,mechanic
+caen,uk,option,Battle Plan,order,,,mechanic
+caen,uk,option,Artillery,order,,,mechanic
+caen,uk,option,Smoke,order,,,mechanic
+caen,uk,option,25 pdr Sexton,support,,,sexton
+caen,uk,option,Sherman Firefly,support,,,firefly
+caen,uk,option,Tank Gear,gear,,,mechanic
+caen,uk,option,Tank Ammo,gear,,,mechanic
+caen,uk,option,Bren Platoon,support,,,bren
+caen,uk,option,PIAT Platoon,support,,,piat
+caen,uk,option,Support Platoon,support,,,bren
+caen,uk,option,Ammo Belt,gear,,,mechanic
+caen,uk,option,Howitzer Support,support,,,vickers
+caen,uk,option,Mortar Support,support,,,mortar3
+caen,uk,option,Mechanized Bren,support,,,bren
+caen,uk,option,Mechanized PIAT,support,,,piat
 bro,us,unit,Col. Taylor,officer,Field Command,Colonel George A. Taylor,taylor
 bro,us,tile,Field Command,command,Field Command,Colonel George A. Taylor,taylor
 bro,us,unit,Clint,character,Clint,Universal Hero,fictional

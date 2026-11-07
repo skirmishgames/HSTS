@@ -60,13 +60,21 @@ def covered(names, entries, nation):
 def exclusions():
     return json.load(open(os.path.join(ROOT, 'tools', 'tracker_exclusions.json'), encoding='utf-8'))
 
+# Units and options live in the legacy hon-bro-<nation>.js files; the set code says which game box
+# they belong to. Each box has its own History file (data/hon-<box>-history.js).
+SET_BOX = {'ECG': 'caen'}
+
 def rows():
     ex = exclusions()
+    bx = collect()
+    def hist(box):
+        return (bx.get(box, {}).get('hist') or {}).get('entries', [])
     out = []
-    for box, b in collect().items():
-        entries = (b['hist'] or {}).get('entries', [])
+    for fbox, b in bx.items():
         for nat, d in b['nations'].items():
             for t in d['tiles']:
+                box = SET_BOX.get(t.get('set'), fbox)
+                entries = hist(box)
                 tile_hit = covered([t['name'], t.get('sub', '')], entries, nat)
                 for u in t['units']:
                     hit = covered([u[0]], entries, nat) or tile_hit or ex['types'].get(u[2], '') or ex['names'].get(u[0], '')
@@ -74,6 +82,8 @@ def rows():
                 tile_hit = tile_hit or ex['types'].get(t['type'], '') or ex['names'].get(t['name'], '')
                 out.append([box, nat, 'tile', t['name'], t['type'], t['name'], t.get('sub', ''), tile_hit])
             for o in d.get('options', []):
+                box = SET_BOX.get(o.get('set'), fbox)
+                entries = hist(box)
                 # a support option is covered when its own name or any unit it lists is covered
                 hit = covered([o['name']] + [u[0] for u in (o.get('units') or [])], entries, nat) or ex['cats'].get(o['cat'], '')
                 out.append([box, nat, 'option', o['name'], o['cat'], '', '', hit])

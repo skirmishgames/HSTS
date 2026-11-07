@@ -1,8 +1,8 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'bro', name: 'Big Red One' }];
-  var SIDES = [{ id: 'all', name: 'Both' }, { id: 'us', name: 'American' }, { id: 'ge', name: 'German' }, { id: 'uk', name: 'Commonwealth' }];
+  var BOXES = [{ id: 'bro', name: 'Big Red One', sides: ['us', 'ge'] }, { id: 'caen', name: 'Battle for Caen', sides: ['uk', 'ge'] }];
+  var SIDE_ALL = { id: 'all', name: 'Both' };
   var SIDE_NAME = { us: 'American', ge: 'German', uk: 'Commonwealth', both: 'Both sides' };
   var S = { b: 'bro', q: '', side: 'all', cat: 'all', open: {}, theme: 'light' };
   var cache = {};
@@ -39,12 +39,15 @@
     $('boxes').innerHTML = BOXES.map(function (b) {
       return '<button type="button" data-box="' + b.id + '" class="' + (S.b === b.id ? 'on' : '') + '" aria-pressed="' + (S.b === b.id) + '">' + b.name + '</button>';
     }).join('');
-    $('sides').innerHTML = SIDES.map(function (s) {
+    var box = BOXES.filter(function (b) { return b.id === S.b; })[0];
+    if (box.sides.indexOf(S.side) < 0) S.side = 'all';
+    $('sides').innerHTML = [SIDE_ALL].concat(box.sides.map(function (id) { return { id: id, name: SIDE_NAME[id] }; })).map(function (s) {
       return '<button type="button" data-side="' + s.id + '" class="' + (S.side === s.id ? 'on' : '') + '" aria-pressed="' + (S.side === s.id) + '">' + s.name + '</button>';
     }).join('');
     $('cats').innerHTML = '<button type="button" class="chip' + (S.cat === 'all' ? ' on' : '') + '" data-cat="all">All</button>' +
       d.cats.map(function (c) { return '<button type="button" class="chip' + (S.cat === c ? ' on' : '') + '" data-cat="' + esc(c) + '">' + esc(c) + '</button>'; }).join('');
     $('q').value = S.q;
+    if ($('subtitle')) $('subtitle').textContent = 'Historical reference, Heroes of Normandie, ' + box.name;
     document.documentElement.setAttribute('data-theme', S.theme);
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
   }
@@ -137,7 +140,7 @@
   function bind() {
     document.addEventListener('click', function (ev) {
       var t = ev.target, el;
-      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; render(); return; }
+      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; S.cat = 'all'; S.open = {}; render(); return; }
       if ((el = t.closest('[data-side]'))) { S.side = el.dataset.side; render(); return; }
       if ((el = t.closest('[data-cat]'))) { S.cat = el.dataset.cat; render(); return; }
       if ((el = t.closest('[data-toggle]'))) toggle(el.dataset.toggle);
