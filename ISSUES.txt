@@ -1,5 +1,5 @@
 HEROES SYSTEM TACTICAL SCALE: ISSUES TO BE ADDRESSED
-Last updated: 2026-11-06 (site version hts-v19)
+Last updated: 2026-11-06 (site version hts-v22)
 
 HOW TO USE THIS FILE
 - One entry per issue. Never delete an entry. Change its status and add a dated line under "Decision".
@@ -143,10 +143,17 @@ Detail: 4 of the 11 Omaha armies match the printed points exactly (the three Par
 Conflict: printed scenario totals against the sum of option costs on the tiles.
 Decision: 2026-11-06 Ship as is. Each army carries a note saying what is missing. Fixing it needs the M10 option and the aircraft tiles scanned or supplied.
 
-ISS-024  Scenarios are summaries, not full web versions or PDFs   [OPEN]
-Where: scenarios.html, data/hon-bro-scenarios.js, data/hon-omaha-scenarios.js
-Detail: The project is now a community archive because the publisher has closed. For every new scenario, keep the full version as a mobile and iPad friendly web page, keep the best version found on the web, and store the PDF in the repository with a download button. The existing Big Red One and Bloody Omaha scenarios only have summaries, key facts, maps and builder links.
-Decision: 2026-11-06 Rule applies to all scenarios added from now on. Retrofitting the existing books is not scheduled yet.
+ISS-024  Scenarios are summaries, not full web versions or PDFs   [FIXED in hts-v22, follow-ups below]
+Where: scenario.html, js/scenario.js, data/hon-bro-scenarios-full.js, data/hon-omaha-scenarios-full.js, pdf/
+Detail: The project is a community archive because the publisher has closed. Every scenario is now a full web page for phones and iPads, with the booklet page numbers, maps, recruitment pictures, the original page images and a PDF download. Big Red One: 12 entries (pages 3 to 28). Bloody Omaha: 5 entries (pages 14 to 23).
+Decision: 2026-11-06 Done for both existing books. The rule applies to every box added from now on.
+Follow-ups:
+- The Omaha rules chapters (book pages 1 to 13 and the icon summary on page 24) are not full web entries yet. They are in the PDF and the page images, and the Rules page covers them (see ISS-022).
+- Big Red One: the booklet files are labelled V2.4 but the newest file is V2.5 (pages 21 to 28 differ). The web text follows the V2.5 page images. The V2.4 PDF is kept as the earlier version.
+- Text was typed from the page images, so a few small misreadings are possible. Die results in the Plain Carnage walkthrough and turn numbers shown only as icons were read from the icons and checked against the arithmetic where possible.
+- The source prints "Victory, Regular or Major" in the Surrounded! Radio marker text. It is kept as printed. It probably means Minor.
+- The Omaha PDF (10 MB) is a reduced copy of the 97 MB original with an OCR text layer, so search inside it may hit small errors. The 97 MB original is not stored.
+- The 2021 Plain Carnage preview PDF is not stored in the repository yet.
 
 ----------------------------------------------------------------
 NOT IN THE TOOL YET

@@ -45,6 +45,7 @@
     var sb = BOXES.filter(function (b) { return b.id === S.b; })[0];
     if ($('subtitle') && sb) $('subtitle').textContent = 'Scenarios index, Heroes of Normandie, ' + sb.name;
     $('srcnote').textContent = 'Page numbers are the printed page numbers of the ' + d.source + ' (the PDF page matches the printed number).';
+    dlbar();
     document.documentElement.setAttribute('data-theme', S.theme);
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
   }
@@ -72,8 +73,20 @@
       return '<figure class="rfig"><a href="' + esc(f.img) + '" target="_blank" rel="noopener"><img src="' + esc(f.img) + '" alt="' + esc(f.cap || e.title) + '" width="' + f.w + '" height="' + f.h + '" loading="lazy"></a><figcaption>' + esc(f.cap || '') + '</figcaption></figure>';
     }).join('') + '</div>';
   }
+  function readLink(e) {
+    var f = (window.HTS_SCEN_FULL || {})['hon-' + S.b];
+    if (!f || !f.entries[e.id]) return '';
+    return '<p class="sarow"><a class="btn" data-read="' + esc(e.id) + '" href="scenario.html?b=' + S.b + '&s=' + esc(e.id) + '">Read the full scenario</a><span class="sameta">Full text, maps, recruitment pictures and the original pages. Booklet ' + esc(pg(e)) + '.</span></p>';
+  }
+  function dlbar() {
+    var f = (window.HTS_SCEN_FULL || {})['hon-' + S.b];
+    if (!f || !$('dlbar')) return;
+    $('dlbar').innerHTML = '<span class="label">Download the original</span><ul>' + f.book.pdfs.map(function (p) {
+      return '<li><a class="btn ghost" href="' + esc(p.href) + '" download>' + esc(p.label) + '</a><span class="sameta">' + esc(p.size) + '. ' + esc(p.note || '') + '</span></li>';
+    }).join('') + '</ul>';
+  }
   function body(e) {
-    return '<p class="htext">' + esc(e.summary) + '</p>' +
+    return readLink(e) + '<p class="htext">' + esc(e.summary) + '</p>' +
       '<dl class="sfacts">' + e.facts.map(function (f) { return '<dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd>'; }).join('') + '</dl>' + figs(e) + armies(e) +
       '<p class="hsrc">' + esc(SRCN[S.b] || 'Scenario Booklet') + ', ' + esc(pg(e)) + '</p>';
   }

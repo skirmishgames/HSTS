@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-CA" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heroes System Tactical Scale scenario reader</title>
+<meta name="description" content="Heroes System Tactical Scale scenario reader. The full text and pictures of a Heroes of Normandie scenario, laid out to read on a phone or iPad, with the original pages and a PDF download.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="upage sreadpage">
+<header class="top">
+  <div class="brand">
+    <h1>Heroes System Tactical Scale</h1>
+    <p class="sub" id="subtitle">Scenario reader</p>
+  </div>
+  <div class="top-actions">
+    <a class="btn ghost" href="index.html">Army builder</a>
+    <a class="btn ghost" href="units.html">Unit index</a>
+    <a class="btn ghost" href="rules.html">Rules</a>
+    <a class="btn ghost" href="scenarios.html">Scenarios</a>
+    <a class="btn ghost" href="tokens.html">Tokens</a>
+    <a class="btn ghost" href="icons.html">Icons</a>
+    <a class="btn ghost" href="heroes.html">Heroes</a>
+    <a class="btn ghost" href="maps.html">Maps</a>
+    <a class="btn ghost" href="expansions.html">Expansions</a>
+    <a class="btn ghost" href="history.html">History</a>
+    <button id="btnTheme" class="ghost" type="button" aria-label="Switch light or dark mode">Dark</button>
+  </div>
+</header>
+
+<main id="out" class="sread"></main>
+
+<div id="lbx" class="lbx" hidden>
+  <div class="lbx-bar">
+    <span id="lbxCap" class="lbx-cap"></span>
+    <button id="lbxZoom" type="button" class="ghost">Zoom in</button>
+    <button id="lbxClose" type="button" class="ghost">Close</button>
+  </div>
+  <div id="lbxBody" class="lbx-body"><img id="lbxImg" alt=""></div>
+</div>
+
+<footer class="foot">
+  <p id="srcnote">Scenario text and pictures come from the original booklet.</p>
+  <p>Community archive for Heroes of Normandie, published by Devil Pig Games, which has closed. Text and art belong to their original owners. The PDF is kept here so the scenarios are not lost.</p>
+  <p>Corrections and feedback: <a href="mailto:games@staroversky.com">games@staroversky.com</a></p>
+</footer>
+
+<script src="data/hon-bro-scenarios.js"></script>
+<script src="data/hon-omaha-scenarios.js"></script>
+<script src="data/hon-bro-scenarios-full.js"></script>
+<script src="data/hon-omaha-scenarios-full.js"></script>
+<script src="js/scenario.js"></script>
+</body>
+</html>

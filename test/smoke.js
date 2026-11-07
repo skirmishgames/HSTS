@@ -362,7 +362,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(xImgs.length === 22 && xImgs.every(f => fs.existsSync(path.join(root, f))), 'expansions: every preview image exists (' + xImgs.length + ')');
   ok(xerrs.length === 0, 'expansions page: no console errors ' + xerrs.join('|'));
   const navMiss = [];
-  for (const pg of ['index', 'units', 'rules', 'scenarios', 'tokens', 'icons', 'heroes', 'maps', 'history']) {
+  for (const pg of ['index', 'units', 'rules', 'scenarios', 'scenario', 'tokens', 'icons', 'heroes', 'maps', 'history']) {
     if (!fs.readFileSync(path.join(root, pg + '.html'), 'utf8').includes('href="expansions.html"')) navMiss.push(pg);
   }
   ok(navMiss.length === 0, 'expansions link is in every menu ' + navMiss.join(','));
@@ -474,6 +474,37 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const fmiss = []; for (const u of figAll) { const r = await rq.request.get(base + u); if (r.status() !== 200) fmiss.push(u); }
   ok(figAll.length > 60 && fmiss.length === 0, 'rules: every figure file exists (' + figAll.length + ')');
   ok(rqerrs.length === 0, 'rules: no console errors ' + rqerrs.join('|'));
+  // scenario reader: full web versions, page images, PDFs
+  const rd = await b.newPage({ viewport: { width: 390, height: 844 } });
+  const rderrs = []; rd.on('pageerror', e => rderrs.push(e.message)); rd.on('console', m => { if (m.type() === 'error') rderrs.push(m.text()); });
+  const fullData = await rd.goto(base + 'scenario.html?b=bro&s=plain').then(() => rd.evaluate(() => JSON.parse(JSON.stringify(window.HTS_SCEN_FULL))));
+  const wanted = { bro: ['rules', 'free', 'multi', 'plain', 'chicken', 'night', 'caumont', 'quesnay', 'surrounded', 'windy', 'pass', 'tracker'], omaha: ['landings', 'part1', 'part2', 'little', 'big'] };
+  for (const bx of Object.keys(wanted)) {
+    const f = fullData['hon-' + bx];
+    ok(f && wanted[bx].every(id => f.entries[id] && f.entries[id].blocks.length > 10), bx + ': every scenario has a full web version');
+    for (const pdf of f.book.pdfs) { const st = fs.statSync(path.join(root, pdf.href)); ok(st.size > 1e6, bx + ': PDF stored in the repo ' + pdf.href); }
+    const need = []; for (let n = 1; n <= f.book.pages.n; n++) ['p', 't'].forEach(k => need.push(f.book.pages.dir + k + String(n).padStart(2, '0') + '.webp'));
+    ok(need.every(u => fs.existsSync(path.join(root, u))), bx + ': page images and thumbnails for all ' + f.book.pages.n + ' pages exist');
+    const figs = []; wanted[bx].forEach(id => f.entries[id].blocks.forEach(bl => { if (bl.k === 'fig') figs.push(bl.img); }));
+    ok(figs.length >= wanted[bx].length - 3 && figs.every(u => fs.existsSync(path.join(root, u))), bx + ': every figure file exists (' + figs.length + ')');
+    ok(wanted[bx].every(id => f.entries[id].blocks.some(bl => bl.k === 'pg')), bx + ': every scenario carries booklet page markers');
+    for (const id of wanted[bx]) {
+      await rd.goto(base + 'scenario.html?b=' + bx + '&s=' + id); await rd.waitForTimeout(150);
+      const info = await rd.evaluate(() => ({ h1: (document.querySelector('.stitle') || {}).textContent, n: document.querySelectorAll('.sbody > *').length, pg: document.querySelectorAll('.pgmark').length, dl: document.querySelectorAll('.sdl a[download]').length, sw: document.documentElement.scrollWidth, cw: document.documentElement.clientWidth }));
+      ok(info.h1 && info.n > 10 && info.pg >= 1 && info.dl >= 1, bx + '/' + id + ': renders text, page markers and download link');
+      ok(info.sw <= info.cw + 1, bx + '/' + id + ': no sideways scroll on a phone');
+    }
+  }
+  await rd.goto(base + 'scenario.html?b=bro&s=plain'); await rd.waitForTimeout(200);
+  await rd.locator('.pgmark button').first().click(); await rd.waitForTimeout(200);
+  ok(await rd.locator('#lbx:not([hidden])').count() === 1, 'page marker opens the original page');
+  await rd.keyboard.press('Escape');
+  ok(await rd.locator('#lbx[hidden]').count() === 1, 'lightbox closes with Escape');
+  await rd.goto(base + 'scenarios.html?b=omaha'); await rd.waitForTimeout(250);
+  ok((await rd.locator('#dlbar a[download]').count()) >= 1, 'scenarios index offers the PDF download');
+  await rd.locator('.hrow').first().locator('.hhead, button').first().click(); await rd.waitForTimeout(200);
+  ok(await rd.locator('a[data-read]').count() >= 1, 'scenarios index links to the full scenario');
+  ok(rderrs.length === 0, 'scenario reader: no console errors ' + rderrs.join('|'));
   // images load
   const broken = await pg.evaluate(() => Array.from(document.images).filter(i => i.getAttribute('src') && i.complete && i.naturalWidth === 0).length);
   ok(broken === 0, 'no broken images');

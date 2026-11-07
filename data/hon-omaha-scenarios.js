@@ -13,7 +13,7 @@ HTS_SCEN["hon-omaha"] = {
 "id": "landings",
 "title": "Player generated landings",
 "type": "Booklet rules and reference",
-"pages": "14",
+"pages": "14 to 15",
 "start": 14,
 "date": "",
 "summary": "Rules to build your own Omaha landing: pick a size, set up boards, tiles and obstacles, then play attacker against defender with landing craft and a bag of option tiles.",
