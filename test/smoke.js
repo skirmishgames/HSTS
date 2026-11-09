@@ -657,6 +657,17 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(await hm.locator('#boxLinks a[href="expansions.html?l=hon1"]').count() === 1 && await hm.locator('#boxLinks .off').count() === 0 && await hm.locator('#boxLinks a[href="guides.html?c=rules"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=scenarios"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=units"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=single"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=gazettes"]').count() === 1, 'box hon1: catalogue, rules, scenarios, single scenarios, gazettes and unit references all link to pages');
   await hm.goto(base + 'expansions.html?l=hon1'); await hm.waitForTimeout(400);
   ok(await hm.locator('.hrow').count() > 20 && await hm.locator('.chip.on[data-line="hon1"]').count() === 1, 'first edition catalogue lists its products');
+  // Scenarios menu: first edition (V1) option lists the library scenarios
+  await hm.goto(base + 'scenarios.html'); await hm.waitForTimeout(300);
+  ok(await hm.locator('#boxes button[data-box="v1"]').count() === 1, 'scenarios page: first edition (V1) button');
+  await hm.goto(base + 'scenarios.html?b=v1'); await hm.waitForTimeout(400);
+  ok(await hm.locator('.hrow').count() === 76 && /76 of 76/.test(await hm.locator('#stat').innerText()), 'scenarios V1: 76 library entries (59 single, 13 packs, 4 gazettes)');
+  await hm.click('[data-type="Scenario Contest Compilation"]');
+  ok(await hm.locator('.hrow').count() === 13, 'scenarios V1: contest chip lists intro and 12 scenarios');
+  await hm.click('[data-type="all"]'); await hm.fill('#q', 'Godsend'); await hm.waitForTimeout(400);
+  await hm.click('.hhead >> nth=0');
+  const v1links = await hm.locator('.hbody:not([hidden]) a').evaluateAll(a => a.map(x => x.getAttribute('href')));
+  ok(v1links.some(h => /^guides\.html\?d=core-set-01-godsend$/.test(h)) && v1links.some(h => /^pdf\/lib\/core-set-01-godsend\.pdf$/.test(h)), 'scenarios V1: entry links to its library page and PDF');
   // War Stories
   const wsp = await b.newPage({ viewport: { width: 1100, height: 900 } });
   const wserrs = []; wsp.on('pageerror', e => wserrs.push(e.message)); wsp.on('console', m => { if (m.type() === 'error') wserrs.push(m.text()); });
