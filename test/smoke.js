@@ -720,8 +720,8 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // documents library
   await gp.goto(base + 'guides.html'); await gp.waitForTimeout(400);
   const LIB = await gp.evaluate(() => JSON.parse(JSON.stringify({ n: window.HTS_LIB.docs.length, g: window.HTS_LIB.groups.length, ids: window.HTS_LIB.docs.map(d => [d.id, d.n, d.pdf && d.pdf.href]) })));
-  ok(LIB.n === 49 && LIB.g === 6, 'documents: 49 documents in 6 groups');
-  ok(await gp.locator('.dcard').count() === 49, 'documents: every document is listed');
+  ok(LIB.n === 51 && LIB.g === 6, 'documents: 51 documents in 6 groups');
+  ok(await gp.locator('.dcard').count() === 51, 'documents: every document is listed');
   const missingLib = [];
   for (const [id, n, pdf] of LIB.ids) { for (let k = 1; k <= n; k++) { if (!fs.existsSync(path.join(root, 'img/hon/lib/' + id + '/p' + String(k).padStart(2, '0') + '.webp'))) missingLib.push(id + k); } if (pdf && !fs.existsSync(path.join(root, pdf))) missingLib.push(pdf); }
   ok(missingLib.length === 0, 'documents: every page picture and PDF exists ' + missingLib.slice(0, 5).join(','));
@@ -736,6 +736,11 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await gp.locator('.sfigb').first().click(); await gp.waitForTimeout(200);
   ok(await gp.locator('#lbx').isVisible() && await gp.locator('#lbxImg').evaluate(i => i.complete && i.naturalWidth > 0), 'document mines: page opens in the viewer');
   await gp.keyboard.press('Escape');
+  await gp.goto(base + 'guides.html?d=bro-errata'); await gp.waitForTimeout(400);
+  ok(await gp.locator('.dpage').count() === 3 && await gp.locator('a.btn[href="pdf/lib/bro-errata.pdf"]').count() === 1 && /for the Big Red One \(V2\) rules/.test(await gp.locator('.snote').innerText()), 'document bro-errata: three pages, PDF link, V2 note');
+  ok(/Sticky Bomb/.test(await gp.locator('.sread').innerText()) && !/devil-pig-games/i.test(await gp.locator('.sread').innerText()), 'document bro-errata: text is readable and has no publisher address');
+  await gp.goto(base + 'guides.html?d=full-throttle'); await gp.waitForTimeout(400);
+  ok(await gp.locator('.dpage').count() === 2 && /Fan made, not official/.test(await gp.locator('.snote').innerText()), 'document full-throttle: two pages and the not official note');
   await gp.goto(base + 'guides.html?d=bible-core'); await gp.waitForTimeout(400);
   ok(await gp.locator('a.btn[href^="pdf/"]').count() === 0 && /project files/.test(await gp.locator('.sread').innerText()), 'document bible-core: no PDF on the site, says where the original is');
   ok(gperrs.length === 0, 'documents: no console errors ' + gperrs.join('|'));

@@ -55,7 +55,7 @@
     var h = '<nav class="scrumb" aria-label="Breadcrumb"><a href="guides.html?c=' + dc.group + '">' + esc(g ? g.title : 'Documents') + '</a></nav>';
     h += '<h1 class="stitle">' + esc(dc.title) + '</h1>';
     h += '<p class="smeta">' + [EDN[dc.ed], dc.n + (dc.n === 1 ? ' page' : ' pages'), dc.credit].filter(Boolean).map(esc).join(' &middot; ') + '</p>';
-    h += '<aside class="snote">' + (dc.ed === 'Community' ? 'Fan made, not official. ' : dc.ed === 'V1' ? 'A first edition document. ' : '') + 'Where this differs from the Big Red One (V2) rules, the V2 rules win.</aside>';
+    h += '<aside class="snote">' + (dc.ed === 'V2' ? 'This document is for the Big Red One (V2) rules.' : (dc.ed === 'Community' ? 'Fan made, not official. ' : dc.ed === 'V1' ? 'A first edition document. ' : '') + 'Where this differs from the Big Red One (V2) rules, the V2 rules win.') + '</aside>';
     h += '<p class="htext">' + esc(dc.summary) + '</p>';
     if (dc.pdf) h += '<p class="sarow"><a class="btn" href="' + esc(dc.pdf.href) + '" download>Download the PDF</a><span class="sameta">' + esc(dc.pdf.size) + '. ' + esc(dc.pdf.note) + '</span></p>';
     else h += '<p class="hsrc">The pages are below as pictures, with the text of each page under it. The original PDF is kept in the project files, not on this site.</p>';

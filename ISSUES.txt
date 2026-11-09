@@ -310,3 +310,8 @@ ISS-051  Printed forum addresses remain on page pictures   [OPEN]
 Where: pdf/lib/unofficial-faq.pdf, img/hon/lib/unofficial-faq/.
 Detail: The FAQ and a few sheets print addresses on the closed publisher site as plain text. The links in the PDFs and the extracted text were removed. The printed addresses are still visible in the scanned pictures.
 Decision: 2026-11-09 Left, since it is the original page.
+
+ISS-052  Big Red One errata and Full Throttle added to the library   [FIXED in next release]
+Where: data/hon-library.js, img/hon/lib/bro-errata/, img/hon/lib/full-throttle/, pdf/lib/.
+Detail: The errata post (14 November 2022) is in Rules and errata as a V2 document. Its PDF is rebuilt from the page pictures without the header and footer, because they print the address of the closed publisher site, so that copy has no text layer. The Sticky Bomb and MG Nest rules in data/hon-bro-rules.js already carry the corrected wording, and the second German recruitment tile in data/hon-bro-ge.js already reads II. Bataillon. Not in the data: Ludwig and Helmut on the scenario book army page (p.27), and the token fixes (US 57mm AT Gun Movement 2, Otto 2 Breakpoints), because the site has no field for them. Full Throttle (2020, BoardGameGeek translation) is in Community rules as a proposal that was never confirmed as official. Its PDF is the original with the publisher link removed.
+Decision: 2026-11-09 Say if the token fixes should be shown on the unit pages.

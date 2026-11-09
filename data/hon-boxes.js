@@ -84,7 +84,7 @@ window.HTS_BOXES = {
      "id": "guides",
      "label": "Guides",
      "href": "guides.html",
-     "count": "6 guides, 49 documents",
+     "count": "6 guides, 51 documents",
      "text": "Buying advice, strategy tips, the people behind the heroes, and the first edition documents."
     }
    ]
@@ -324,8 +324,8 @@ window.HTS_BOXES = {
      "id": "rules",
      "label": "Rules",
      "href": "guides.html?c=rules",
-     "count": "12 documents",
-     "text": "First edition rules sheets, special abilities, mines, Commandos, errata and the FAQ. The core rulebook itself is not in the files yet."
+     "count": "13 documents",
+     "text": "First edition rules sheets, special abilities, mines, Commandos, errata (including the Big Red One errata) and the FAQ. The core rulebook itself is not in the files yet."
     },
     {
      "id": "scenarios",
@@ -345,7 +345,7 @@ window.HTS_BOXES = {
      "id": "guides",
      "label": "Guides",
      "href": "guides.html?g=v1-to-v2",
-     "count": "6 guides, 49 documents",
+     "count": "6 guides, 51 documents",
      "text": "How to play the old scenario packs with Big Red One platoons, a buying guide, strategy tips, and all the first edition documents."
     }
    ]
