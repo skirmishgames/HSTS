@@ -326,6 +326,32 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const scImgs = JSON.parse(await sp.evaluate(() => JSON.stringify(window.HTS_SCEN['hon-omaha'].entries.reduce((a, e) => a.concat((e.figs || []).map(f => f.img)), []))));
   ok(scImgs.length > 0 && scImgs.every(f => fs.existsSync(path.join(root, f))), 'every omaha scenario figure exists (' + scImgs.length + ')');
   ok(terrs.length === 0, 'omaha tokens: no console errors ' + terrs.join('|'));
+  await tp.goto(base + 'tokens.html?b=caen'); await tp.waitForTimeout(300);
+  ok(await tp.locator('.hrow').count() === 7, 'caen tokens: 7 entries');
+  const ctImgs = JSON.parse(await tp.evaluate(() => JSON.stringify(window.HTS_TOKENS['hon-caen'].entries.reduce((a, e) => a.concat(e.faces.map(f => f.img)), []))));
+  ok(ctImgs.length === 13 && ctImgs.every(f => fs.existsSync(path.join(root, f))), 'every caen token image exists (' + ctImgs.length + ')');
+
+  // Battle for Caen scenarios and armies
+  await sp.goto(base + 'scenarios.html?b=caen'); await sp.waitForTimeout(300);
+  ok(await sp.locator('.hrow').count() === 8, 'caen scenarios: 8 entries');
+  const cInfo = JSON.parse(await sp.evaluate(() => JSON.stringify(window.HTS_SCEN['hon-caen'].entries.filter(e => e.armies).map(e => [e.id, e.armies]))));
+  ok(cInfo.length === 7, 'caen: seven scenarios carry armies');
+  let cArmies = 0;
+  for (const [id, ar] of cInfo) {
+    for (const key of Object.keys(ar)) {
+      const a = ar[key];
+      const j = { n: a.side, l: a.limit, nm: id + ' ' + key, a: a.tiles };
+      const h = Buffer.from(JSON.stringify(j)).toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+      await ap.goto(url + '#b=' + h); await ap.reload();
+      const used = await ap.textContent('#ptsUsed');
+      ok(Number(used) === a.pts, 'caen ' + id + ' ' + key + ' loads ' + a.pts + ' points (got ' + used + ')');
+      ok(await ap.locator('.warnings p:not(.bad)').filter({ hasNotText: 'SP instead of a cost' }).count() === 0, 'caen ' + id + ' ' + key + ' has no slot warnings');
+      cArmies++;
+    }
+  }
+  ok(cArmies === 16, 'caen: 16 armies loaded');
+  const cImgs = JSON.parse(await sp.evaluate(() => JSON.stringify(window.HTS_SCEN['hon-caen'].entries.reduce((a, e) => a.concat((e.figs || []).map(f => f.img)), []))));
+  ok(cImgs.length === 7 && cImgs.every(f => fs.existsSync(path.join(root, f))), 'every caen scenario figure exists (' + cImgs.length + ')');
 
   // expansions page
   const xp = await b.newPage({ viewport: { width: 1100, height: 900 } });
@@ -442,11 +468,14 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const ip = await b.newPage({ viewport: { width: 1200, height: 900 } });
   const iperrs = []; ip.on('pageerror', e => iperrs.push(e.message)); ip.on('console', m => { if (m.type() === 'error') iperrs.push(m.text()); });
   await ip.goto(base + 'icons.html'); await ip.waitForTimeout(300);
-  ok(await ip.locator('.gcard').count() === 50, 'icons: 50 entries across both boxes');
+  ok(await ip.locator('.gcard').count() === 63, 'icons: 63 entries across all three boxes');
   await ip.fill('#q', 'sniper'); await ip.waitForTimeout(250);
   ok(await ip.locator('.gcard').count() === 1 && await ip.locator('.gcard img').count() >= 1, 'icons: search finds Sniper with its picture');
   await ip.fill('#q', ''); await ip.locator('#boxes [data-box="omaha"]').click();
   ok(await ip.locator('.gcard').count() === 17, 'icons: Bloody Omaha has 17 entries');
+  await ip.locator('#boxes [data-box="caen"]').click();
+  ok(await ip.locator('.gcard').count() === 13, 'icons: Battle for Caen has 13 entries');
+  await ip.locator('#boxes [data-box="omaha"]').click();
   await ip.locator('#groups [data-group="Terrain effects"]').click();
   ok(await ip.locator('.gcard').count() === 6, 'icons: Omaha terrain filter shows 6');
   const ibroken = await ip.evaluate(() => Array.from(document.images).filter(i => i.getAttribute('src') && i.complete && i.naturalWidth === 0).length);
@@ -478,7 +507,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const rd = await b.newPage({ viewport: { width: 390, height: 844 } });
   const rderrs = []; rd.on('pageerror', e => rderrs.push(e.message)); rd.on('console', m => { if (m.type() === 'error') rderrs.push(m.text()); });
   const fullData = await rd.goto(base + 'scenario.html?b=bro&s=plain').then(() => rd.evaluate(() => JSON.parse(JSON.stringify(window.HTS_SCEN_FULL))));
-  const wanted = { bro: ['rules', 'free', 'multi', 'plain', 'chicken', 'night', 'caumont', 'quesnay', 'surrounded', 'windy', 'pass', 'tracker'], omaha: ['landings', 'part1', 'part2', 'little', 'big'] };
+  const wanted = { bro: ['rules', 'free', 'multi', 'plain', 'chicken', 'night', 'caumont', 'quesnay', 'surrounded', 'windy', 'pass', 'tracker'], omaha: ['landings', 'part1', 'part2', 'little', 'big'], caen: ['tradingblows', 'lightbrigade', 'beavertails', 'zuruck', 'charon', 'operationstack', 'safari', 'campaignreport'] };
   for (const bx of Object.keys(wanted)) {
     const f = fullData['hon-' + bx];
     ok(f && wanted[bx].every(id => f.entries[id] && f.entries[id].blocks.length > 10), bx + ': every scenario has a full web version');

@@ -22,7 +22,7 @@
     if (ICONIDX) return ICONIDX;
     ICONIDX = [];
     var all = window.HTS_ICONS || {};
-    ['bro', 'omaha'].forEach(function (b) {
+    ['bro', 'omaha', 'caen'].forEach(function (b) {
       var d = all['hon-' + b]; if (!d) return;
       d.entries.forEach(function (e) { ICONIDX.push({ e: e, box: b, n: norm(e.name) }); });
     });

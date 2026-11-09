@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXN = { bro: 'Big Red One', omaha: 'Bloody Omaha' };
+  var BOXN = { bro: 'Big Red One', omaha: 'Bloody Omaha', caen: 'Battle for Caen' };
   var S = { b: 'bro', s: '', theme: 'light' };
 
   function $(id) { return document.getElementById(id); }
@@ -16,7 +16,7 @@
   function fullEntry() { var f = full(); return f && f.entries[S.s]; }
 
   function encode(j) { return btoa(unescape(encodeURIComponent(JSON.stringify(j)))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); }
-  var SIDE = { us: 'American', ge: 'German' };
+  var SIDE = { us: 'American', ge: 'German', uk: 'Commonwealth' };
   function armyHref(e, key) {
     var a = e.armies[key];
     return 'index.html#b=' + encode({ n: a.side || key, l: a.limit, nm: e.title + ', ' + (a.label || SIDE[a.side || key]), a: a.tiles });
@@ -79,7 +79,7 @@
     $('srcnote').textContent = 'Text and pictures come from the ' + (f ? f.book.title + ' ' + f.book.version : 'original book') + ', pages ' + e.pages.replace(' to ', ' to ') + '.';
     var h = '<nav class="scrumb" aria-label="Breadcrumb"><a href="scenarios.html?b=' + S.b + '&amp;e=' + e.id + '">All ' + esc(BOXN[S.b]) + ' scenarios</a></nav>';
     h += '<h1 class="stitle">' + esc(e.title) + '</h1>';
-    h += '<p class="smeta">' + [e.type === 'Single scenarios' ? 'Scenario' : e.type === 'Campaign' ? 'Campaign scenario' : 'Rules', e.date, 'Booklet p.' + e.pages.replace(' to ', '-')].filter(Boolean).map(esc).join(' &middot; ') + '</p>';
+    h += '<p class="smeta">' + [e.type === 'Single scenarios' || e.type === 'Bonus scenario' ? 'Scenario' : /^Campaign/.test(e.type) ? 'Campaign scenario' : 'Rules', e.date, 'Booklet p.' + e.pages.replace(' to ', '-')].filter(Boolean).map(esc).join(' &middot; ') + '</p>';
     if (!fe) {
       h += '<p class="htext">The full text of this entry is not laid out yet. Here is the summary.</p><p class="htext">' + esc(e.summary) + '</p><dl class="sfacts">' + e.facts.map(function (x) { return '<dt>' + esc(x[0]) + '</dt><dd>' + esc(x[1]) + '</dd>'; }).join('') + '</dl>' + armies(e);
     } else {

@@ -1,5 +1,5 @@
 HEROES SYSTEM TACTICAL SCALE: ISSUES TO BE ADDRESSED
-Last updated: 2026-11-06 (site version hts-v24)
+Last updated: 2026-11-09 (site version hts-v25)
 
 HOW TO USE THIS FILE
 - One entry per issue. Never delete an entry. Change its status and add a dated line under "Decision".
@@ -97,7 +97,7 @@ I could not turn it on. Enable it for the main branch, root folder. Domain file:
 ISS-012  Old zips in _to_delete   [OPEN]
 The shell cannot delete files in the project folder. Old hts-v*.zip files sit in Heroes-Tactical-System/_to_delete. Delete them by hand.
 
-ISS-013  Remote repository moved   [OPEN]
+ISS-013  Remote repository moved   [FIXED]
 Every push prints "This repository moved". It works, but set the remote to https://github.com/skirmishgames/HSTS.git.
 
 ISS-014  Folder layout changed   [OPEN]
@@ -189,6 +189,15 @@ Where: Major Lapointe (Chaudière), P.E. Gower (Royal Winnipeg Rifles), Lt. D. W
 Detail: No record found for any of them. They may be invented or film-inspired. They are listed as exclusions in tools/tracker_exclusions.json and have no History entry.
 Decision: 2026-11-06 Leave without entries until a source turns up.
 
-ISS-027  Caen ECG rules, scenarios and tokens not imported   [OPEN]
-Where: Caen ENG V1.4 - WIP.pdf (28 pages). Units, tiles and options are in. Rules, six campaign scenarios plus the bonus scenario, tokens and icons are next, then Windsor & Jupiter.
+ISS-027  Caen ECG import   [FIXED]
+Units, tiles, options, History, rules, scenarios, tokens and icons for Epsom, Charnwood & Goodwood are in. The booklet is a work in progress (V1.4), see ISS-028 to ISS-030. Windsor & Jupiter is the next box.
 Note: the booklet is a work in progress (V1.4). Check for a newer version when the box is finished.
+
+ISS-028  Caen scenarios: turn numbers read from small icons   [OPEN]
+Where: data/hon-caen-scenarios-full.js. The booklet prints every turn number as a small low-contrast icon with no text behind it. All were read from 300 dpi renders. Least certain: the medal deadline in scenario 3 (read as turn 6), the minor victory turn in scenario 2 (read as 6) and the German major victory turns in scenario 1 (6 or 7). Check against the page images.
+
+ISS-029  Caen scenarios: red work-in-progress blocks   [OPEN]
+Where: booklet pp.14, 17, 19, 20, 22, 23, 25. Red blocks hide unfinished text. Scenario 6 (Operation Stack) gives no rule for how many hits destroy the chimney. Replace when a newer booklet exists.
+
+ISS-030  Caen scenario armies do not match every printed total   [OPEN]
+Where: scenario armies in data/hon-caen-scenarios.js. Aircraft tiles, Support tiles (FLAK 88, Artillery, Initiative orders) and hero equipment are not in the builder, so the builder total is below the printed total in most armies. Scenario 3 has a 25-point unit card beside the Field Command that shows no cost. Safari German army builds to 500 against a printed 495. Sgt Lee Lowe's Overwatch has no UK version in the builder. Each army carries a note.

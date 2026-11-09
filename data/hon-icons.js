@@ -895,3 +895,200 @@ HTS_ICONS["hon-omaha"] = {
 }
 ]
 };
+HTS_ICONS["hon-caen"] = {
+ "box": "caen",
+ "name": "Battle for Caen",
+ "source": "Battle for Caen booklet V1.4, icon summary (p.28)",
+ "groups": [
+  "Terrain effects",
+  "Changes of state",
+  "Movement abilities",
+  "Firing abilities",
+  "Defense abilities",
+  "Command abilities"
+ ],
+ "entries": [
+  {
+   "id": "caen-elevated-position",
+   "name": "Elevated position",
+   "group": "Terrain effects",
+   "page": "4",
+   "text": "The LoS of a Unit in an Elevated Position is less hindered by Terrain Elements.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/elevated-position.webp",
+     "w": 110,
+     "h": 130
+    }
+   ]
+  },
+  {
+   "id": "caen-stairs",
+   "name": "Stairs",
+   "group": "Terrain effects",
+   "page": "6",
+   "text": "A Stairs square allows you to move from one floor to another floor of the same building.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/stairs.webp",
+     "w": 110,
+     "h": 140
+    }
+   ]
+  },
+  {
+   "id": "caen-overwatch",
+   "name": "Overwatch",
+   "group": "Changes of state",
+   "page": "9",
+   "text": "Once activated, your unit benefits from the Opportunity Fire Special Ability.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/overwatch.webp",
+     "w": 120,
+     "h": 140
+    }
+   ]
+  },
+  {
+   "id": "caen-urban-fighter",
+   "name": "Urban fighter",
+   "group": "Movement abilities",
+   "page": "9",
+   "text": "Once, and only once, per Movement Action, the unit may enter or exit a building through an opening identified by a white arrow.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/urban-fighter.webp",
+     "w": 120,
+     "h": 140
+    }
+   ]
+  },
+  {
+   "id": "caen-anti-aircraft",
+   "name": "Anti-aircraft",
+   "group": "Firing abilities",
+   "page": "13",
+   "text": "Units with the Anti-Aircraft Special Ability can Fire at an Aircraft Unit, even if that Aircraft Unit does not have a Numbered or Special Order Token placed on its Recruitment Tile. Always add any bonus (+1, +2...) shown next to the AA Special Ability to the die roll.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/anti-aircraft.webp",
+     "w": 120,
+     "h": 140
+    }
+   ]
+  },
+  {
+   "id": "caen-destroyer",
+   "name": "Destroyer",
+   "group": "Firing abilities",
+   "page": "10",
+   "text": "This unit grants all units in its ZoC a +2 bonus to their Destruction dice results.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/destroyer.webp",
+     "w": 120,
+     "h": 124
+    }
+   ]
+  },
+  {
+   "id": "caen-destruction-breach",
+   "name": "Destruction (breach)",
+   "group": "Firing abilities",
+   "page": "9",
+   "text": "Roll a number of dice equal to the value. On 4+, place a Breach Marker. Alternately, you can create Breaches in Buildings. You can put Destruction Markers on vehicle wrecks, but you cannot place Breaches there.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/destruction-breach.webp",
+     "w": 128,
+     "h": 130
+    }
+   ]
+  },
+  {
+   "id": "caen-hawkeye",
+   "name": "HawkEye",
+   "group": "Firing abilities",
+   "page": "10",
+   "text": "This unit's Firing Actions are not subject to the long-range fire penalty.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/hawkeye.webp",
+     "w": 120,
+     "h": 120
+    }
+   ]
+  },
+  {
+   "id": "caen-tank-hunter",
+   "name": "Tank hunter",
+   "group": "Firing abilities",
+   "page": "10",
+   "text": "Add +1 or -1 to the die roll when determining the location of Damage inflicted upon a Heavy Vehicle.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/tank-hunter.webp",
+     "w": 120,
+     "h": 124
+    }
+   ]
+  },
+  {
+   "id": "caen-unshakable",
+   "name": "Unshakable",
+   "group": "Defense abilities",
+   "page": "10",
+   "text": "This unit ignores Suppressed Markers.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/unshakable.webp",
+     "w": 120,
+     "h": 114
+    }
+   ]
+  },
+  {
+   "id": "caen-barrage-order",
+   "name": "Barrage order",
+   "group": "Command abilities",
+   "page": "10",
+   "text": "Instead of activating this unit, you may activate up to 3 Heavy Weapon units within 3 squares that have the exact same name.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/barrage-order.webp",
+     "w": 128,
+     "h": 124
+    }
+   ]
+  },
+  {
+   "id": "caen-improvisation",
+   "name": "Improvisation",
+   "group": "Command abilities",
+   "page": "10",
+   "text": "You may draw 1 more card than the maximum allowed, but you must then discard 1. You can use Improvisation at the beginning of the game.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/improvisation.webp",
+     "w": 120,
+     "h": 124
+    }
+   ]
+  },
+  {
+   "id": "caen-nco",
+   "name": "NCO",
+   "group": "Command abilities",
+   "page": "10",
+   "text": "If this unit receives an Order Token during the Order Phase it may immediately remove 1 Suppressed marker from another unit within 3 squares. It must have a clear LoS to the unit it is helping.",
+   "icons": [
+    {
+     "img": "img/hon/caen/icons/nco.webp",
+     "w": 120,
+     "h": 124
+    }
+   ]
+  }
+ ]
+};

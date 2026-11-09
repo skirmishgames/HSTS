@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }];
+  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen', name: 'Battle for Caen' }];
   var S = { b: 'all', q: '', g: 'all', theme: 'light' };
   var cache = {};
 
@@ -24,7 +24,7 @@
 
   function data() {
     if (cache[S.b]) return cache[S.b];
-    var ids = S.b === 'all' ? ['bro', 'omaha'] : [S.b], entries = [], groups = [];
+    var ids = S.b === 'all' ? ['bro', 'omaha', 'caen'] : [S.b], entries = [], groups = [];
     ids.forEach(function (id) {
       var d = window.HTS_ICONS['hon-' + id];
       d.groups.forEach(function (g) { if (groups.indexOf(g) < 0) groups.push(g); });
