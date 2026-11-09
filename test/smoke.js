@@ -720,8 +720,8 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // documents library
   await gp.goto(base + 'guides.html'); await gp.waitForTimeout(400);
   const LIB = await gp.evaluate(() => JSON.parse(JSON.stringify({ n: window.HTS_LIB.docs.length, g: window.HTS_LIB.groups.length, ids: window.HTS_LIB.docs.map(d => [d.id, d.n, d.pdf && d.pdf.href]) })));
-  ok(LIB.n === 85 && LIB.g === 8, 'documents: 85 documents in 8 groups');
-  ok(await gp.locator('.dcard').count() === 85, 'documents: every document is listed');
+  ok(LIB.n === 123 && LIB.g === 8, 'documents: 123 documents in 8 groups');
+  ok(await gp.locator('.dcard').count() === 123, 'documents: every document is listed');
   const missingLib = [];
   for (const [id, n, pdf] of LIB.ids) { for (let k = 1; k <= n; k++) { if (!fs.existsSync(path.join(root, 'img/hon/lib/' + id + '/p' + String(k).padStart(2, '0') + '.webp'))) missingLib.push(id + k); } if (pdf && !fs.existsSync(path.join(root, pdf))) missingLib.push(pdf); }
   ok(missingLib.length === 0, 'documents: every page picture and PDF exists ' + missingLib.slice(0, 5).join(','));
@@ -746,7 +746,13 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await gp.goto(base + 'guides.html?d=scc-intro'); await gp.waitForTimeout(400);
   ok(await gp.locator('ol.slist li a').count() === 12, 'contest compilation cover lists the 12 scenarios');
   await gp.goto(base + 'guides.html?c=single'); await gp.waitForTimeout(300);
-  ok(await gp.locator('.dcard').count() === 21 && await gp.locator('.dcard .hsrc', { hasText: 'Part of Scenario Contest Compilation (Winter 2015)' }).count() === 13, 'single scenarios: 21 listed, 13 marked as part of the compilation');
+  ok(await gp.locator('.dcard').count() === 59 && await gp.locator('.dcard .hsrc', { hasText: 'Part of Scenario Contest Compilation (Winter 2015)' }).count() === 13 && await gp.locator('.dcard .hsrc', { hasText: 'Part of Core Set scenario book (V1.1b)' }).count() === 10, 'single scenarios: 59 listed, 13 from the contest and 10 from the Core Set book');
+  await gp.goto(base + 'guides.html?d=core-set-intro'); await gp.waitForTimeout(400);
+  ok(await gp.locator('ol.slist li a').count() === 10 && /introduction to Core Set scenario book/.test((await gp.locator('.snote').allInnerTexts()).join(' ')), 'Core Set book introduction lists its 10 scenarios');
+  await gp.goto(base + 'guides.html?d=core-set-10-tempest-of-fire'); await gp.waitForTimeout(400);
+  ok(await gp.locator('.dpage').count() === 2 && await gp.locator('a.btn[href="pdf/lib/core-set-10-tempest-of-fire.pdf"]').count() === 1 && await gp.locator('.snote a[href="guides.html?d=core-set-intro"]').count() === 1, 'Core Set scenario 10: two pages, own PDF, link to its book');
+  await gp.goto(base + 'guides.html?d=gazette-7-story'); await gp.waitForTimeout(400);
+  ok(await gp.locator('ol.slist li a').count() === 3, 'Gazette 7 lists its three scenarios');
   await gp.goto(base + 'guides.html?d=slaughterhouse-bro'); await gp.waitForTimeout(300);
   ok(/for the Big Red One \(V2\) rules/.test(await gp.locator('.snote').first().innerText()), 'slaughterhouse (Big Red One version) is marked V2');
   await gp.goto(base + 'guides.html?d=bible-core'); await gp.waitForTimeout(400);

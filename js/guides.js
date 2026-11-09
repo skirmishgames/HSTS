@@ -58,7 +58,7 @@
     h += '<aside class="snote">' + (dc.ed === 'V2' ? 'This document is for the Big Red One (V2) rules.' : (dc.ed === 'Community' ? 'Fan made, not official. ' : dc.ed === 'V1' ? 'A first edition document. ' : '') + 'Where this differs from the Big Red One (V2) rules, the V2 rules win.') + '</aside>';
     if (dc.part) {
       var pl = dc.part.link ? '<a href="guides.html?d=' + dc.part.link + '">' + esc(dc.part.name) + '</a>' : esc(dc.part.name);
-      h += '<aside class="snote">' + (dc.part.n ? 'Part of ' + pl + ', scenario ' + dc.part.n + ' of ' + dc.part.of + '.' : 'This is the cover and requirements table of ' + esc(dc.part.name) + '. The ' + dc.part.of + ' scenarios are listed below.') + '</aside>';
+      h += '<aside class="snote">' + (dc.part.n ? 'Part of ' + pl + ', scenario ' + dc.part.n + ' of ' + dc.part.of + '.' : 'This is the introduction to ' + esc(dc.part.name) + (dc.part.of ? '. Its ' + dc.part.of + ' scenarios are listed below.' : '.')) + '</aside>';
     }
     h += '<p class="htext">' + esc(dc.summary) + '</p>';
     var kids = L.docs.filter(function (x) { return x.part && x.part.link === dc.id; });
