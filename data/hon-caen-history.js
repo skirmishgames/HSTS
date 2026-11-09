@@ -4,7 +4,8 @@ window.HTS_HISTORY["hon-caen"] = {
 "box": "caen",
 "title": "Historical Reference",
 "cats": [
-"Formations and people",
+"Formations",
+"People",
 "Small arms",
 "Support weapons",
 "Vehicles",
@@ -15,7 +16,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "chaudiere",
 "name": "Régiment de la Chaudière and Lt-Col. Paul Mathieu",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "uk",
 "text": "A French-Canadian infantry regiment from Quebec that landed at Juno Beach under Lt-Col. Paul Mathieu, who commanded it from February 1943.",
 "facts": [
@@ -44,7 +45,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "rwr",
 "name": "Royal Winnipeg Rifles",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "uk",
 "text": "A Manitoba rifle regiment nicknamed the \"Little Black Devils\". Its 1st Battalion was among the first troops ashore on D-Day.",
 "facts": [
@@ -70,7 +71,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "hussars23",
 "name": "23rd Hussars",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "uk",
 "text": "A British armoured regiment in the 11th Armoured Division. It spearheaded Operation Epsom and was held up on the first day of Goodwood.",
 "facts": [
@@ -96,7 +97,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "worcs",
 "name": "Worcestershire Regiment",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "uk",
 "text": "An English county infantry regiment. Its 1st Battalion landed in Normandy on 24 June 1944 with the 214th Brigade of the 43rd (Wessex) Division.",
 "facts": [
@@ -121,7 +122,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "dempsey",
 "name": "Lt-Gen. Miles Dempsey and the Second Army",
-"cat": "Formations and people",
+"cat": "People",
 "side": "uk",
 "text": "Commander of the British Second Army in Normandy, the headquarters behind Epsom, Charnwood and Goodwood.",
 "facts": [
@@ -149,7 +150,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "milius",
 "name": "SS-Obersturmbannführer Karl-Heinz Milius",
-"cat": "Formations and people",
+"cat": "People",
 "side": "ge",
 "text": "Commander of SS-Panzergrenadier-Regiment 25 of the 12th SS \"Hitlerjugend\" Division from 14 June 1944. His men committed war crimes against Canadian prisoners.",
 "facts": [
@@ -639,7 +640,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "pzgruppe",
 "name": "Panzergruppe (tank group)",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "ge",
 "text": "In the game a small group of German tanks. The Panzer IV was the backbone of the German tank force in the West, with Panthers fewer on the ground in June 1944.",
 "facts": [
@@ -834,7 +835,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "pzgren",
 "name": "Panzergrenadiere",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "ge",
 "text": "German mechanised infantry that fought alongside tanks. The word itself was adopted in 1942.",
 "facts": [
@@ -857,7 +858,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "meyer",
 "name": "SS-Standartenführer Kurt Meyer",
-"cat": "Formations and people",
+"cat": "People",
 "side": "ge",
 "text": "Commander of the 12th SS Panzer Division Hitlerjugend from mid-June 1944, nicknamed Panzermeyer. The Divisionsstab tile gives his rank as Obersturmbannführer; Wikipedia gives SS-Standartenführer for June and July 1944.",
 "facts": [
@@ -887,7 +888,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "jager31",
 "name": "Jäger-Regiment 31 and the 16th Luftwaffe Field Division",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "ge",
 "text": "A Luftwaffe field division built from air force ground personnel to fight as infantry. Jäger-Regiment 31 was one of its three regiments. It held the line east of the Orne and was hit by the bombing that opened Operation Goodwood on 18 July 1944.",
 "facts": [
@@ -917,7 +918,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "pioniere12",
 "name": "SS-Panzerpionier-Bataillon 12",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "ge",
 "text": "The pioneer (combat engineer) battalion of the 12th SS Panzer Division Hitlerjugend. The Windsor & Jupiter tile gives it assault groups, a flamethrower, Panzerschrecks, magnetic mines, defence lines and a bridge.",
 "facts": [
@@ -943,7 +944,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "dcli",
 "name": "5th Battalion, Duke of Cornwall's Light Infantry",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "uk",
 "text": "An infantry battalion of the 214th Brigade, 43rd (Wessex) Division. It fought on Hill 112 in Operation Jupiter, 10 and 11 July 1944.",
 "facts": [
@@ -971,7 +972,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "recce43",
 "name": "43rd (Wessex) Reconnaissance Regiment",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "uk",
 "text": "The reconnaissance regiment of the 43rd (Wessex) Infantry Division, equipped with armoured cars, light reconnaissance cars and half-tracks. B Squadron is the force on the Windsor & Jupiter tile.",
 "facts": [
@@ -1001,7 +1002,7 @@ window.HTS_HISTORY["hon-caen"] = {
 {
 "id": "essame",
 "name": "Brigadier Hubert Essame",
-"cat": "Formations and people",
+"cat": "People",
 "side": "uk",
 "text": "Commander of the 214th Infantry Brigade of the 43rd (Wessex) Division from September 1942, through Normandy. He later became a military historian.",
 "facts": [

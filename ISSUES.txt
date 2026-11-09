@@ -1,5 +1,5 @@
 HEROES SYSTEM TACTICAL SCALE: ISSUES TO BE ADDRESSED
-Last updated: 2026-11-09 (site version hts-v26)
+Last updated: 2026-11-09 (site version hts-v27)
 
 HOW TO USE THIS FILE
 - One entry per issue. Never delete an entry. Change its status and add a dated line under "Decision".
@@ -219,3 +219,8 @@ ISS-033  Battle Pack #3: ranks and names that differ or have no source   [OPEN]
 Where: Divisionsstab tile (Kurt Meyer), Feldkommando tile (Hauptmann Willi Herold), counters Ob. Hitzemann, Ob. Müller, Lt. W. Pryke.
 Conflict: The tile gives Meyer as Obersturmbannführer. Wikipedia gives SS-Standartenführer for June and July 1944. No source found for Hitzemann, Müller or Pryke. A Willi Herold is known as a German soldier who posed as a captain in 1945; he was not in Normandy, so the tile is treated as fictional.
 Decision: 2026-11-09 Tile data keeps the printed text. Meyer has a History entry with the sourced rank. The other names are tracker exclusions.
+
+ISS-034  Cards for Omaha, Battle for Caen and Battle Pack #3 are missing   [OPEN]
+Where: cards.html, data/hon-bro-cards.js.
+Detail: Only the Big Red One Battle Event cards (US and German decks) were in the local files. The Panzerfaust and Geballte Ladung texts quote the Combat Values as printed. Hero equipment cards are on heroes.html, not here.
+Decision: 2026-11-09 Add the other decks to _Inbox as image files. They go into the same data file with a box switch.

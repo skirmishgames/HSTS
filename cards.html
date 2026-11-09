@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-CA" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heroes System Tactical Scale cards</title>
+<meta name="description" content="Heroes System Tactical Scale cards. Every Battle Event card in Heroes of Normandie, with when to play it, what it does and a full size picture.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="upage hpage">
+<header class="top">
+  <div class="brand">
+    <h1>Heroes System Tactical Scale</h1>
+    <p class="sub" id="subtitle">Battle Event cards, Heroes of Normandie, Big Red One</p>
+  </div>
+  <div class="top-actions">
+    <a class="btn ghost" href="index.html">Army builder</a>
+    <a class="btn ghost" href="units.html">Unit index</a>
+    <a class="btn ghost" href="rules.html">Rules</a>
+    <a class="btn ghost" href="scenarios.html">Scenarios</a>
+    <a class="btn ghost" href="tokens.html">Tokens</a>
+    <a class="btn ghost" href="icons.html">Icons</a>
+    <a class="btn ghost" href="heroes.html">Heroes</a>
+    <a class="btn ghost" href="maps.html">Maps</a>
+    <a class="btn ghost" href="expansions.html">Archive</a>
+    <a class="btn ghost" href="history.html">History</a>
+    <button id="btnTheme" class="ghost" type="button" aria-label="Switch light or dark mode">Dark</button>
+  </div>
+</header>
+
+<section class="setup" aria-label="Search">
+  <div class="field">
+    <span class="label">Game box</span>
+    <div id="boxes" class="seg" role="group" aria-label="Game box"></div>
+  </div>
+  <div class="field">
+    <span class="label">Side</span>
+    <div id="sides" class="seg" role="group" aria-label="Side"></div>
+  </div>
+  <div class="field grow">
+    <label class="label" for="q">Search the cards</label>
+    <input id="q" type="search" placeholder="Try: suppressed, order token, vehicle, grenade" autocomplete="off">
+  </div>
+</section>
+<section class="setup filters2" aria-label="When to play">
+  <div class="field">
+    <span class="label">When it is played</span>
+    <div id="phases" class="chips" role="group" aria-label="When it is played"></div>
+  </div>
+</section>
+<p id="stat" class="ustat" aria-live="polite"></p>
+
+<main id="out" class="umain cmain"></main>
+
+<div id="lbx" class="lbx" hidden role="dialog" aria-label="Card">
+  <div class="lbx-bar">
+    <span id="lbxCap" class="lbx-cap"></span>
+    <button id="lbxPrev" type="button" class="ghost">Previous</button>
+    <button id="lbxNext" type="button" class="ghost">Next</button>
+    <a id="lbxDl" class="btn ghost" download>Download</a>
+    <button id="lbxZoom" type="button" class="ghost">Zoom in</button>
+    <button id="lbxClose" type="button" class="ghost">Close</button>
+  </div>
+  <div id="lbxBody" class="lbx-body"><img id="lbxImg" alt=""></div>
+</div>
+
+<footer class="foot">
+  <p id="srcnote">Card text is typed from the card scans.</p>
+  <p>Community archive and tool for Heroes of Normandie. Card pictures and rule text belong to Devil Pig Games. The card picture is the authority if the typed text differs.</p>
+  <p>Corrections and feedback: <a href="mailto:games@staroversky.com">games@staroversky.com</a></p>
+</footer>
+
+<script src="data/hon-bro-cards.js"></script>
+<script src="js/cards.js"></script>
+</body>
+</html>

@@ -32,6 +32,10 @@ window.HTS_EXPANSIONS = {
 "href": "tokens.html?b=bro"
 },
 {
+"label": "Cards",
+"href": "cards.html?b=bro"
+},
+{
 "label": "Icons",
 "href": "icons.html?b=bro"
 },

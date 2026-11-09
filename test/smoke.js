@@ -331,6 +331,20 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const ctImgs = JSON.parse(await tp.evaluate(() => JSON.stringify(window.HTS_TOKENS['hon-caen'].entries.reduce((a, e) => a.concat(e.faces.map(f => f.img)), []))));
   ok(ctImgs.length === 48 && ctImgs.every(f => fs.existsSync(path.join(root, f))), 'every caen token image exists (' + ctImgs.length + ')');
 
+  // Battle Event cards viewer
+  await tp.goto(base + 'cards.html'); await tp.waitForTimeout(500);
+  const cd = await tp.evaluate(() => { const e = window.HTS_CARDS['hon-bro'].entries; return { n: e.length, c: e.reduce((a, x) => a + x.copies, 0), tiles: document.querySelectorAll('.ccard').length, imgs: e.reduce((a, x) => a.concat([x.img, x.thumb]), []) }; });
+  ok(cd.n === 62 && cd.c === 100 && cd.tiles === 62, 'cards: 62 different cards, 100 in the box, all shown');
+  ok(cd.imgs.every(f => fs.existsSync(path.join(root, f))), 'cards: every picture exists (' + cd.imgs.length + ')');
+  await tp.fill('#q', 'suppressed'); await tp.waitForTimeout(300);
+  const cs = await tp.evaluate(() => document.querySelectorAll('.ccard').length);
+  ok(cs > 5 && cs < 62, 'cards: search narrows the list (' + cs + ')');
+  await tp.fill('#q', ''); await tp.click('[data-side=ge]'); await tp.waitForTimeout(200);
+  ok(await tp.evaluate(() => document.querySelectorAll('.ccard').length) === 31, 'cards: German side has 31 different cards');
+  await tp.click('.ccard'); await tp.waitForTimeout(200);
+  ok(await tp.evaluate(() => !document.getElementById('lbx').hidden && /Burst/.test(document.getElementById('lbxCap').textContent) && document.getElementById('lbxDl').getAttribute('href').endsWith('.webp')), 'cards: full size view opens with a download link');
+  await tp.click('#lbxClose');
+
   // Battle Pack #3 (Windsor & Jupiter) units
   await tp.goto(base + 'units.html'); await tp.waitForTimeout(300);
   const wj = JSON.parse(await tp.evaluate(() => JSON.stringify(['ge', 'uk'].map(n => { const d = window.HTS_DATA['hon-bro-' + n]; return [d.tiles.filter(t => t.set === 'BP3').length, d.options.filter(o => o.set === 'BP3').length, d.tiles.filter(t => t.set === 'BP3').every(t => t.slots.length > 0 && t.cost > 0)]; }))));
@@ -550,7 +564,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await pg.screenshot({ path: process.env.SHOT || '/tmp/h/shot-mobile.png' });
   ok(errs.length === 0, 'no console errors ' + errs.join('|'));
   // look and feel: self-hosted fonts and nav icons on every page
-  const navPages = ['index', 'units', 'rules', 'scenarios', 'scenario', 'tokens', 'icons', 'heroes', 'maps', 'expansions', 'history'];
+  const navPages = ['index', 'units', 'rules', 'scenarios', 'scenario', 'tokens', 'icons', 'heroes', 'cards', 'maps', 'expansions', 'history'];
   const np = await b.newPage({ viewport: { width: 1100, height: 800 } });
   for (const pgName of navPages) {
     await np.goto(base + pgName + '.html' + (pgName === 'scenario' ? '?b=bro&s=night' : '')); await np.waitForTimeout(400);

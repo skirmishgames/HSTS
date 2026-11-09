@@ -4,7 +4,8 @@ window.HTS_HISTORY["hon-bro"] = {
 "box": "bro",
 "title": "Historical Reference",
 "cats": [
-"Formations and people",
+"Formations",
+"People",
 "Small arms",
 "Support weapons",
 "Vehicles",
@@ -15,7 +16,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "1id",
 "name": "1st Infantry Division (Big Red One)",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "us",
 "text": "The oldest continuously serving division in the US Regular Army, named after the red numeral on its shoulder patch. Elements of it were in the first wave onto Omaha Beach on D-Day.",
 "facts": [
@@ -41,7 +42,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "16th",
 "name": "16th Infantry Regiment",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "us",
 "text": "A regular regiment of the Big Red One, nicknamed \"New York's Own\". It landed on the Easy Red sector of Omaha Beach near Colleville-sur-Mer.",
 "facts": [
@@ -65,7 +66,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "18th",
 "name": "18th Infantry Regiment",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "us",
 "text": "A Big Red One regiment known as the \"Vanguards\", with the motto \"Til the Last Round!\". It landed at Omaha Beach on D-Day and fought through the whole Normandy campaign.",
 "facts": [
@@ -89,7 +90,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "29th",
 "name": "29th Infantry Division (Blue and Gray)",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "us",
 "text": "A National Guard division whose troops came from states that fought on both sides of the Civil War, hence \"Blue and Gray\". On D-Day it sent the 116th Infantry to support the 1st Division at Omaha Beach.",
 "facts": [
@@ -109,7 +110,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "116th",
 "name": "116th Infantry Regiment",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "us",
 "text": "A Virginia National Guard regiment that led the 29th Division onto Omaha Beach. It is remembered for Company A from Bedford, Virginia, which was nearly wiped out within minutes of landing.",
 "facts": [
@@ -130,7 +131,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "rangers",
 "name": "US Army Rangers (2nd and 5th Ranger Battalions)",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "us",
 "text": "Elite light infantry trained for raids and cliff assaults. On D-Day part of the force scaled Pointe du Hoc while the rest landed at Omaha Beach with the 5th Rangers.",
 "facts": [
@@ -154,7 +155,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "engineers",
 "name": "Combat engineers and gap assault teams",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "us",
 "text": "On Omaha Beach, engineers had to blow gaps through four lines of beach obstacles under fire so that landing craft and vehicles could get ashore.",
 "facts": [
@@ -177,7 +178,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "743",
 "name": "743rd Tank Battalion",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "us",
 "text": "An independent tank battalion that landed in the first wave at Omaha Beach, supporting the 116th Infantry Regimental Combat Team.",
 "facts": [
@@ -198,7 +199,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "2edb",
 "name": "2e Division Blindée and the RBFM",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "us",
 "text": "The Free French 2nd Armoured Division under General Leclerc, which fought in the US order of battle. Its Régiment Blindé de Fusiliers-Marins (RBFM) was manned by French Navy sailors whose ships were immobilised or destroyed. This force arrived after D-Day.",
 "facts": [
@@ -225,7 +226,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "taylor",
 "name": "Col. George A. Taylor",
-"cat": "Formations and people",
+"cat": "People",
 "side": "us",
 "text": "Commander of the 16th Infantry Regiment on D-Day. He reached Omaha Beach around 0800, found exhausted men pinned along the seawall and organised their attack inland.",
 "facts": [
@@ -249,7 +250,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "cota",
 "name": "Brig. Gen. Norman Cota",
-"cat": "Formations and people",
+"cat": "People",
 "side": "us",
 "text": "Assistant commander of the 29th Division, who landed in the second wave on Omaha Beach and rallied pinned-down survivors.",
 "facts": [
@@ -272,7 +273,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "landing",
 "name": "Higgins boat (LCVP) and the landing",
-"cat": "Formations and people",
+"cat": "Vehicles",
 "side": "us",
 "text": "The landing craft with a bow ramp used by the Allies on D-Day.",
 "facts": [
@@ -298,7 +299,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "352",
 "name": "352nd Infantry Division",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "ge",
 "text": "The German division that defended the Omaha Beach sector. It was a new formation made up of Eastern Front veterans, young conscripts and many \"Ost\" volunteers.",
 "facts": [
@@ -323,7 +324,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "kraiss",
 "name": "Generalleutnant Dietrich Kraiss",
-"cat": "Formations and people",
+"cat": "People",
 "side": "ge",
 "text": "Commander of the 352nd Infantry Division from its formation in November 1943.",
 "facts": [
@@ -346,7 +347,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "pzgren",
 "name": "Panzergrenadiere",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "ge",
 "text": "German mechanised infantry that fought alongside tanks. The word itself was adopted in 1942.",
 "facts": [
@@ -366,7 +367,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "ss",
 "name": "SS Panzergrenadiere and the 12th SS Hitlerjugend",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "ge",
 "text": "Waffen-SS armoured infantry were among the toughest German troops in Normandy. A well-known example is the 12th SS Panzer Division Hitlerjugend.",
 "facts": [
@@ -390,7 +391,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "recon",
 "name": "Panzer-Aufklärungs (armoured reconnaissance)",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "ge",
 "text": "\"Aufklärung\" means reconnaissance. German armoured recon units scouted ahead in fast armoured cars and light half-tracks.",
 "facts": [
@@ -413,7 +414,7 @@ window.HTS_HISTORY["hon-bro"] = {
 {
 "id": "pzgruppe",
 "name": "Panzergruppe (tank group)",
-"cat": "Formations and people",
+"cat": "Formations",
 "side": "ge",
 "text": "In the game a small group of German tanks. The Panzer IV was the backbone of the German tank force in the West, with Panthers fewer on the ground in June 1944.",
 "facts": [
