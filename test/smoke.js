@@ -11,7 +11,7 @@ const srv = http.createServer((req, res) => {
 function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1; } else console.log('ok: ' + m); }
 (async () => {
   await new Promise(r => srv.listen(0, r));
-  const url = 'http://127.0.0.1:' + srv.address().port + '/index.html';
+  const url = 'http://127.0.0.1:' + srv.address().port + '/builder.html';
   const b = await chromium.launch();
   const pg = await b.newPage({ viewport: { width: 1280, height: 900 } });
   const errs = []; pg.on('pageerror', e => errs.push(e.message)); pg.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
@@ -65,7 +65,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const up = await b.newPage({ viewport: { width: 1280, height: 900 } });
   const uerrs = []; up.on('pageerror', e => uerrs.push(e.message)); up.on('console', m => { if (m.type() === 'error') uerrs.push(m.text()); });
   const q = encodeURIComponent('Rifle Platoon 1st Inf. Div. 16th Inf. Reg. A');
-  await up.goto(url.replace('index.html', 'units.html') + '?n=us&q=' + q);
+  await up.goto(url.replace('builder.html', 'units.html') + '?n=us&q=' + q);
   ok(await up.locator('.ucard').count() === 1, 'exact platoon search returns one tile');
   const ut = await up.textContent('.ucard');
   ok(['Lt. Blean', 'Recon Team', 'Rifle Squad', '.30 Cal', 'Bazooka'].every(w => ut.includes(w)), 'platoon shows tile units and own options units');
@@ -106,7 +106,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // rules search page
   const rp = await b.newPage({ viewport: { width: 1100, height: 900 } });
   const rerrs = []; rp.on('pageerror', e => rerrs.push(e.message)); rp.on('console', m => { if (m.type() === 'error') rerrs.push(m.text()); });
-  await rp.goto(url.replace('index.html', 'rules.html'));
+  await rp.goto(url.replace('builder.html', 'rules.html'));
   ok(await rp.locator('.rlink').count() > 30, 'rules contents list sections');
   await rp.fill('#q', 'suppressed marker');
   await rp.waitForTimeout(300);
@@ -141,7 +141,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // historical reference page
   const hp = await b.newPage({ viewport: { width: 1100, height: 900 } });
   const herrs = []; hp.on('pageerror', e => herrs.push(e.message)); hp.on('console', m => { if (m.type() === 'error') herrs.push(m.text()); });
-  const hurl = url.replace('index.html', 'history.html');
+  const hurl = url.replace('builder.html', 'history.html');
   await hp.goto(hurl);
   const hn = await hp.locator('.hrow').count();
   ok(hn >= 50, 'history lists entries (' + hn + ')');
@@ -177,7 +177,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // scenarios index page
   const sp = await b.newPage({ viewport: { width: 1100, height: 900 } });
   const serrs = []; sp.on('pageerror', e => serrs.push(e.message)); sp.on('console', m => { if (m.type() === 'error') serrs.push(m.text()); });
-  await sp.goto(url.replace('index.html', 'scenarios.html'));
+  await sp.goto(url.replace('builder.html', 'scenarios.html'));
   ok(await sp.locator('.hrow').count() === 12, 'scenarios index lists 12 entries');
   ok(await sp.locator('.hbody p').count() === 0, 'scenario text not loaded until opened');
   const firstScen = (await sp.locator('.hrow .spg').allTextContents());
@@ -200,7 +200,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await sp.fill('#q', ''); await sp.click('[data-type="all"]');
   await sp.locator('.hhead', { hasText: 'Surrounded' }).click();
   const hrefs = await sp.locator('#s-surrounded [data-army]').evaluateAll(a => a.map(x => x.getAttribute('href')));
-  ok(hrefs.length === 2 && hrefs.every(h => h.startsWith('index.html#b=')), 'open row shows American and German builder links');
+  ok(hrefs.length === 2 && hrefs.every(h => h.startsWith('builder.html#b=')), 'open row shows American and German builder links');
   const ap = await b.newPage({ viewport: { width: 1280, height: 900 } });
   const aerrs = []; ap.on('pageerror', e => aerrs.push(e.message));
   for (const [id, ar] of armyInfo) {
@@ -221,14 +221,14 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const bad = [];
   const lp = await b.newPage({ viewport: { width: 1280, height: 900 } });
   for (const [id, n, q] of data) {
-    await lp.goto(url.replace('index.html', 'units.html') + '?n=' + n + '&q=' + encodeURIComponent(q));
+    await lp.goto(url.replace('builder.html', 'units.html') + '?n=' + n + '&q=' + encodeURIComponent(q));
     await lp.waitForTimeout(150);
     if (await lp.locator('.ucard').count() < 1) bad.push(id + ':' + q);
   }
   ok(bad.length === 0, 'history find links all return tiles ' + bad.join(','));
   await rp.close();
   // tokens page
-  const base = url.replace('index.html', '');
+  const base = url.replace('builder.html', '');
   const tp = await b.newPage({ viewport: { width: 1100, height: 900 } });
   const terrs = []; tp.on('pageerror', e => terrs.push(e.message)); tp.on('console', m => { if (m.type() === 'error') terrs.push(m.text()); });
   await tp.goto(base + 'tokens.html');
@@ -346,7 +346,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await tp.click('#lbxClose');
 
   // My collection filter in the builder
-  await tp.goto(base + 'index.html'); await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); } catch (e) {} }); await tp.reload(); await tp.waitForTimeout(400);
+  await tp.goto(base + 'builder.html'); await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); } catch (e) {} }); await tp.reload(); await tp.waitForTimeout(400);
   const own0 = await tp.locator('.lcard').count();
   ok((await tp.textContent('#ownState')).includes('showing everything'), 'collection: not set by default');
   await tp.click('#btnOwn'); await tp.check('[data-own="CB"]'); await tp.click('#ownClose'); await tp.waitForTimeout(200);
@@ -364,7 +364,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); localStorage.removeItem('hts.hon.bro.v1'); } catch (e) {} });
 
   // Aircraft tiles, Support tile and M10 in the builder
-  await tp.goto(base + 'index.html'); await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); localStorage.removeItem('hts.hon.bro.v1'); } catch (e) {} }); await tp.reload(); await tp.waitForTimeout(400);
+  await tp.goto(base + 'builder.html'); await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); localStorage.removeItem('hts.hon.bro.v1'); } catch (e) {} }); await tp.reload(); await tp.waitForTimeout(400);
   await tp.click('[data-type=aircraft]'); await tp.waitForTimeout(150);
   ok(await tp.locator('.lcard').count() === 2, 'builder: 2 US aircraft tiles (Thunderbolt, Mustang)');
   await tp.locator('.lcard', { hasText: 'Thunderbolt' }).first().locator('[data-add]').click();
@@ -423,7 +423,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await xp.click('[data-line="hon2"]');
   ok(await xp.locator('.hrow').count() === 14, 'expansions: Heroes of Normandie V2 has 14 products');
   await xp.click('[data-cat="tool"]');
-  ok(await xp.locator('.hrow').count() === 4, 'expansions: 4 V2 boxes are in the tool');
+  ok(await xp.locator('.hrow').count() === 9, 'expansions: 4 V2 boxes and 5 War Stories are in the tool');
   await xp.locator('.hhead', { hasText: 'Bloody Omaha' }).click();
   ok(await xp.locator('.hrow.open .hfind a').count() === 8, 'expansions: Bloody Omaha shows 8 tool links');
   await xp.click('[data-line="all"]'); await xp.click('[data-cat="all"]');
@@ -445,7 +445,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const xhtml = fs.readFileSync(path.join(root, 'data/expansions.js'), 'utf8') + fs.readFileSync(path.join(root, 'expansions.html'), 'utf8');
   ok(!/devil-pig-games\.com|forum/i.test(xhtml.replace(/Devil Pig Games\./g, '')), 'expansions: no forum or Devil Pig site links');
   const xImgs = JSON.parse(await xp.evaluate(() => JSON.stringify(window.HTS_EXPANSIONS.lines.reduce((a, l) => a.concat(l.items.reduce((b, i) => b.concat((i.imgs || []).map(f => f.img)), [])), []))));
-  ok(xImgs.length === 22 && xImgs.every(f => fs.existsSync(path.join(root, f))), 'expansions: every preview image exists (' + xImgs.length + ')');
+  ok(xImgs.length === 25 && xImgs.every(f => fs.existsSync(path.join(root, f))), 'expansions: every preview image exists (' + xImgs.length + ')');
   ok(xerrs.length === 0, 'expansions page: no console errors ' + xerrs.join('|'));
   const navMiss = [];
   for (const pg of ['index', 'units', 'rules', 'scenarios', 'scenario', 'tokens', 'icons', 'heroes', 'maps', 'history']) {
@@ -614,8 +614,64 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(await pg.isVisible('#tabLib'), 'mobile tabs visible');
   await pg.screenshot({ path: process.env.SHOT || '/tmp/h/shot-mobile.png' });
   ok(errs.length === 0, 'no console errors ' + errs.join('|'));
+  // landing page and box pages
+  const hm = await b.newPage({ viewport: { width: 390, height: 844 } });
+  const hmerrs = []; hm.on('pageerror', e => hmerrs.push(e.message)); hm.on('console', m => { if (m.type() === 'error') hmerrs.push(m.text()); });
+  await hm.goto(base + 'index.html'); await hm.waitForTimeout(300);
+  ok(await hm.locator('#boxGrid .boxcard').count() === 4 && await hm.locator('#boxGrid .boxcard[href="box.html?b=ws"]').count() === 1 && await hm.locator('#boxGrid .boxcard[href="box.html?b=hon1"]').count() === 1 && await hm.locator('.hero-link[href="box.html?b=bro"]').count() === 1, 'landing: Big Red One as the main box, two battle packs, War Stories and the first edition as option tiles');
+  ok(await hm.locator('.gocard').count() === 12, 'landing: twelve shortcuts');
+  ok((await hm.locator('.boxcard img').evaluateAll(a => a.every(i => i.complete && i.naturalWidth > 0))) && (await hm.locator('.hero-art').evaluate(i => i.complete && i.naturalWidth > 0)), 'landing: box art loads');
+  ok(await hm.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), 'landing: no sideways scroll on a phone');
+  const gohrefs = await hm.locator('.gocard').evaluateAll(a => a.map(x => x.getAttribute('href')));
+  const missingPages = gohrefs.filter(h => !fs.existsSync(path.join(root, h.split('?')[0])));
+  ok(missingPages.length === 0, 'landing: every shortcut goes to a page that exists ' + missingPages.join(','));
+  await hm.goto(base + 'box.html?b=bro'); await hm.goto(base + 'index.html#b=abc'); await hm.waitForTimeout(300);
+  ok(/builder\.html/.test(hm.url()), 'old army links on index.html#b= forward to the builder');
+  for (const bx of ['bro', 'omaha', 'caen', 'ws', 'hon1']) {
+    await hm.goto(base + 'box.html?b=' + bx); await hm.waitForTimeout(250);
+    const hrefs = await hm.locator('#boxLinks a').evaluateAll(a => a.map(x => x.getAttribute('href')));
+    const miss = hrefs.filter(h => !fs.existsSync(path.join(root, h.split('?')[0])));
+    ok(hrefs.length >= (bx === 'hon1' || bx === 'ws' ? 1 : 8) && miss.length === 0, 'box ' + bx + ': links go to pages that exist (' + hrefs.length + ')');
+    ok(await hm.locator('.bh-art').evaluate(i => i.complete && i.naturalWidth > 0), 'box ' + bx + ': art loads');
+    ok(await hm.locator('#boxOther li').count() === 4, 'box ' + bx + ': links to the other four boxes');
+  }
+  await hm.goto(base + 'box.html?b=caen'); await hm.waitForTimeout(250);
+  ok(await hm.locator('#boxExp a').count() === 2, 'box caen: Windsor & Jupiter links');
+  const boxData = await hm.evaluate(() => JSON.parse(JSON.stringify(window.HTS_BOXES)));
+  const wantScen = { bro: 'scenarios.html?b=bro', omaha: 'scenarios.html?b=omaha', caen: 'scenarios.html?b=caen', ws: 'scenarios.html?b=ws' };
+  ok(boxData.boxes.filter(x => !x.edition).every(x => x.links.some(l => l.href === wantScen[x.id]) && fs.existsSync(path.join(root, x.art))), 'box data: each box links to its scenarios and has art');
+  await hm.goto(base + 'box.html?b=hon1'); await hm.waitForTimeout(200);
+  ok(await hm.locator('#boxLinks a[href="expansions.html?l=hon1"]').count() === 1 && await hm.locator('#boxLinks .off').count() === 0 && await hm.locator('#boxLinks a[href="guides.html?c=rules"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=scenarios"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=units"]').count() === 1, 'box hon1: catalogue, rules, scenarios and unit references all link to pages');
+  await hm.goto(base + 'expansions.html?l=hon1'); await hm.waitForTimeout(400);
+  ok(await hm.locator('.hrow').count() > 20 && await hm.locator('.chip.on[data-line="hon1"]').count() === 1, 'first edition catalogue lists its products');
+  // War Stories
+  const wsp = await b.newPage({ viewport: { width: 1100, height: 900 } });
+  const wserrs = []; wsp.on('pageerror', e => wserrs.push(e.message)); wsp.on('console', m => { if (m.type() === 'error') wserrs.push(m.text()); });
+  await wsp.goto(base + 'scenarios.html?b=ws'); await wsp.waitForTimeout(400);
+  ok(await wsp.locator('.hrow').count() === 5, 'war stories: five scenarios listed');
+  for (const sid of ['hells-fury', 'blue-and-grey', 'colombelles-castle', 'juno-beach', 'black-baron']) {
+    await wsp.goto(base + 'scenario.html?b=ws&s=' + sid); await wsp.waitForTimeout(500);
+    const info = await wsp.evaluate(async () => {
+      const imgs = Array.from(document.querySelectorAll('.sbody img'));
+      imgs.forEach(i => { i.loading = 'eager'; });
+      await Promise.all(imgs.map(i => i.complete ? 0 : new Promise(r => { i.onload = r; i.onerror = r; })));
+      const dl = Array.from(document.querySelectorAll('.sdl a')).map(a => a.getAttribute('href'));
+      return { h1: (document.querySelector('.stitle') || {}).textContent, n: document.querySelectorAll('.sbody h2').length, imgs: imgs.length, bad: imgs.filter(i => !i.naturalWidth).length, dl, gal: document.querySelectorAll('.sgal li').length, x: document.documentElement.scrollWidth > innerWidth + 1 };
+    });
+    ok(/War Stories #/.test(info.h1) && info.n >= 6 && info.imgs >= 3 && info.bad === 0 && !info.x, 'war stories ' + sid + ': full page, ' + info.imgs + ' pictures load, no sideways scroll (' + info.bad + ' broken)');
+    ok(info.dl.length === 1 && fs.existsSync(path.join(root, info.dl[0])), 'war stories ' + sid + ': PDF download exists ' + info.dl.join(','));
+    ok(sid === 'colombelles-castle' ? info.gal === 0 : info.gal >= 15, 'war stories ' + sid + ': tile gallery ' + info.gal);
+  }
+  await wsp.goto(base + 'scenario.html?b=ws&s=juno-beach'); await wsp.waitForTimeout(300);
+  await wsp.locator('.sgalb').first().click(); await wsp.waitForTimeout(150);
+  ok(await wsp.locator('#lbx').isVisible(), 'war stories: a tile picture opens full size');
+  ok(wserrs.length === 0, 'war stories: no console errors ' + wserrs.join('|'));
+  await wsp.close();
+  await hm.goto(base + 'box.html?b=omaha'); await hm.waitForTimeout(200);
+  ok(await hm.locator('#boxLinks .off').count() === 1, 'box omaha: Cards shown as not archived yet');
+  ok(hmerrs.length === 0, 'landing and box pages: no console errors ' + hmerrs.join('|'));
   // look and feel: self-hosted fonts and nav icons on every page
-  const navPages = ['index', 'units', 'rules', 'scenarios', 'scenario', 'tokens', 'icons', 'heroes', 'cards', 'maps', 'expansions', 'history'];
+  const navPages = ['index', 'box', 'builder', 'units', 'rules', 'scenarios', 'scenario', 'tokens', 'icons', 'heroes', 'cards', 'maps', 'expansions', 'history', 'guides'];
   const np = await b.newPage({ viewport: { width: 1100, height: 800 } });
   for (const pgName of navPages) {
     await np.goto(base + pgName + '.html' + (pgName === 'scenario' ? '?b=bro&s=night' : '')); await np.waitForTimeout(400);
@@ -628,6 +684,58 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     ok(info.n >= 9 && info.noIcon.length === 0 && info.fira && info.slab && !info.x, pgName + ': nav icons and fonts (' + info.noIcon.join(',') + ')');
   }
   await np.close();
+  // guides
+  const gp = await b.newPage({ viewport: { width: 390, height: 844 } });
+  const gperrs = []; gp.on('pageerror', e => gperrs.push(e.message)); gp.on('console', m => { if (m.type() === 'error') gperrs.push(m.text()); });
+  await gp.goto(base + 'guides.html'); await gp.waitForTimeout(300);
+  ok(await gp.locator('#gList li').count() === 6, 'guides: six guides listed');
+  const gids = await gp.locator('#gList a').evaluateAll(a => a.map(x => new URL(x.href).searchParams.get('g')));
+  for (const gid of gids) {
+    await gp.goto(base + 'guides.html?g=' + gid); await gp.waitForTimeout(200);
+    ok(await gp.locator('.stitle').count() === 1 && await gp.locator('.snote').count() >= 1 && /V2|Big Red One/.test(await gp.locator('.snote').first().innerText()), 'guide ' + gid + ': renders with the V2 note');
+    ok(await gp.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), 'guide ' + gid + ': no sideways scroll on a phone');
+  }
+  await gp.goto(base + 'guides.html?g=v1-to-v2'); await gp.waitForTimeout(200);
+  ok(await gp.locator('.stable tbody tr').count() === 6, 'guide v1-to-v2: six platoon equivalents');
+  await gp.goto(base + 'guides.html?g=who-are-these-heroes'); await gp.waitForTimeout(200);
+  ok(await gp.locator('.stable').count() === 4, 'guide heroes: four faction tables');
+  await gp.goto(base + 'guides.html?g=what-to-buy'); await gp.waitForTimeout(200);
+  ok(await gp.locator('.sbody a[href="expansions.html"]').count() === 1, 'guide what-to-buy: catalogue link is a real link');
+  ok(gperrs.length === 0, 'guides: no console errors ' + gperrs.join('|'));
+  const ghtml = fs.readFileSync(path.join(root, 'data/hon-guides.js'), 'utf8') + fs.readFileSync(path.join(root, 'guides.html'), 'utf8');
+  ok(!/devil-pig-games\.com|devilpig/i.test(ghtml), 'guides: no links to the defunct publisher');
+  // documents library
+  await gp.goto(base + 'guides.html'); await gp.waitForTimeout(400);
+  const LIB = await gp.evaluate(() => JSON.parse(JSON.stringify({ n: window.HTS_LIB.docs.length, g: window.HTS_LIB.groups.length, ids: window.HTS_LIB.docs.map(d => [d.id, d.n, d.pdf && d.pdf.href]) })));
+  ok(LIB.n === 49 && LIB.g === 6, 'documents: 49 documents in 6 groups');
+  ok(await gp.locator('.dcard').count() === 49, 'documents: every document is listed');
+  const missingLib = [];
+  for (const [id, n, pdf] of LIB.ids) { for (let k = 1; k <= n; k++) { if (!fs.existsSync(path.join(root, 'img/hon/lib/' + id + '/p' + String(k).padStart(2, '0') + '.webp'))) missingLib.push(id + k); } if (pdf && !fs.existsSync(path.join(root, pdf))) missingLib.push(pdf); }
+  ok(missingLib.length === 0, 'documents: every page picture and PDF exists ' + missingLib.slice(0, 5).join(','));
+  await gp.fill('#lq', 'night combat'); await gp.waitForTimeout(300);
+  ok(await gp.locator('.dcard a[href="guides.html?d=pegasus-bridge-errata"]').count() === 1, 'documents: search finds night combat in the Pegasus Bridge text');
+  await gp.click('#lchips [data-c="scenarios"]'); await gp.waitForTimeout(200);
+  ok(await gp.locator('.dcard').count() >= 1, 'documents: group filter works with a search');
+  await gp.goto(base + 'guides.html?c=units'); await gp.waitForTimeout(300);
+  ok(await gp.locator('.dcard').count() === 15 && await gp.locator('#lchips .chip.on').innerText() === 'Unit references 15', 'documents: ?c=units opens the unit references');
+  await gp.goto(base + 'guides.html?d=mines'); await gp.waitForTimeout(400);
+  ok(await gp.locator('.dpage').count() === 2 && await gp.locator('a.btn[href="pdf/lib/mines.pdf"]').count() === 1 && /V2/.test(await gp.locator('.snote').innerText()), 'document mines: two pages, PDF link, V2 note');
+  await gp.locator('.sfigb').first().click(); await gp.waitForTimeout(200);
+  ok(await gp.locator('#lbx').isVisible() && await gp.locator('#lbxImg').evaluate(i => i.complete && i.naturalWidth > 0), 'document mines: page opens in the viewer');
+  await gp.keyboard.press('Escape');
+  await gp.goto(base + 'guides.html?d=bible-core'); await gp.waitForTimeout(400);
+  ok(await gp.locator('a.btn[href^="pdf/"]').count() === 0 && /project files/.test(await gp.locator('.sread').innerText()), 'document bible-core: no PDF on the site, says where the original is');
+  ok(gperrs.length === 0, 'documents: no console errors ' + gperrs.join('|'));
+  const lhtml = fs.readFileSync(path.join(root, 'data/hon-library.js'), 'utf8');
+  ok(!/devil-pig-games\.com|devilpiggames\.com/i.test(lhtml), 'documents: no links to the defunct publisher');
+  await gp.close();
+  // hero tiles show who they are based on
+  await hrp.goto(base + 'heroes.html?b=bro&n=us&q=oddball'); await hrp.waitForTimeout(300);
+  await hrp.click('.hhead'); await hrp.waitForTimeout(200);
+  ok(/Based on:\s*Oddball \(Donald Sutherland\)/.test(await hrp.locator('.hbody').first().innerText()), 'heroes: Oddball shows what he is based on');
+  await hrp.goto(base + 'heroes.html?b=omaha&n=us&q=horvath'); await hrp.waitForTimeout(300);
+  await hrp.click('.hhead'); await hrp.waitForTimeout(200);
+  ok(!/Based on:/.test(await hrp.locator('.hbody').first().innerText()), 'heroes: a hero with no entry shows no Based on line');
   // trackers
   const cp = require('child_process');
   let trk = ''; try { trk = cp.execSync('python3 tools/units_tracker.py --strict', { cwd: root }).toString(); } catch (e) { trk = 'FAILED ' + e.stdout; }

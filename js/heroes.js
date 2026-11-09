@@ -70,6 +70,8 @@
     var html = '<div class="hhero"><img class="htile" src="' + esc(t.img) + '" alt="' + esc(t.name + ', ' + (t.sub || '') + ' recruitment tile') + '" width="' + t.w + '" height="' + t.h + '" loading="lazy"></div>';
     html += '<p class="htext"><strong>Units:</strong> ' + t.units.map(function (u) { return esc(u[0]) + ' (' + esc(KIND[u[2]] || u[2]) + ')'; }).join(', ') + '.</p>';
     if (t.note) html += '<p class="htext">' + esc(t.note) + '</p>';
+    var bo = window.HTS_GUIDES && window.HTS_GUIDES.heroes[String(t.name).toLowerCase()];
+    if (bo) html += '<p class="htext"><strong>Based on:</strong> ' + esc(bo) + ' <a href="guides.html?g=who-are-these-heroes">All the heroes</a></p>';
     if (!slots.length) html += '<p class="htext">This tile has no option slots.</p>';
     else if (same) html += '<h4 class="hsub">' + (slots.length === 1 ? 'Slot' : 'All ' + slots.length + ' slots') + ': ' + esc(slotText(slots[0]).toLowerCase()) + '</h4><p class="hsrc">What it can take</p>' + takeList(D, slots[0]);
     else slots.forEach(function (s, i) { html += '<h4 class="hsub">Slot ' + (i + 1) + ': ' + esc(slotText(s).toLowerCase()) + '</h4>' + takeList(D, s); });

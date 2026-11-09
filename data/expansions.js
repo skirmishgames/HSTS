@@ -13,7 +13,7 @@ window.HTS_EXPANSIONS = {
 "tool": [
 {
 "label": "Army builder",
-"href": "index.html"
+"href": "builder.html"
 },
 {
 "label": "Unit index",
@@ -58,7 +58,7 @@ window.HTS_EXPANSIONS = {
 "tool": [
 {
 "label": "Army builder",
-"href": "index.html"
+"href": "builder.html"
 },
 {
 "label": "Unit index",
@@ -99,7 +99,7 @@ window.HTS_EXPANSIONS = {
 "tool": [
 {
 "label": "Army builder",
-"href": "index.html"
+"href": "builder.html"
 },
 {
 "label": "Unit index",
@@ -144,7 +144,7 @@ window.HTS_EXPANSIONS = {
 "tool": [
 {
 "label": "Army builder",
-"href": "index.html"
+"href": "builder.html"
 },
 {
 "label": "Unit index",
@@ -194,27 +194,72 @@ window.HTS_EXPANSIONS = {
 {
 "id": "hon2-war-stories-0-hell-s-fury",
 "name": "War Stories #0 - Hell's Fury",
-"cat": "Gazette"
+"cat": "Gazette",
+"text": "A single scenario on one printed sheet, with its own rules and new tiles. Laid out here as a web page with the map and armies, plus the original PDF.",
+"status": "part",
+"gap": "The scenario, map, armies and new tiles are on the scenario page, with the PDF to download. The new tiles are not in the unit index or the army builder yet.",
+"tool": [
+{
+"label": "Read the scenario",
+"href": "scenario.html?b=ws&s=hells-fury"
+}
+]
 },
 {
 "id": "hon2-war-stories-1-blue-and-grey",
 "name": "War Stories #1 - Blue and Grey",
-"cat": "Gazette"
+"cat": "Gazette",
+"text": "A single scenario on one printed sheet, with its own rules and new tiles. Laid out here as a web page with the map and armies, plus the original PDF.",
+"status": "part",
+"gap": "The scenario, map, armies and new tiles are on the scenario page, with the PDF to download. The new tiles are not in the unit index or the army builder yet.",
+"tool": [
+{
+"label": "Read the scenario",
+"href": "scenario.html?b=ws&s=blue-and-grey"
+}
+]
 },
 {
 "id": "hon2-war-stories-2-colombelles-castle",
 "name": "War Stories #2 - Colombelles Castle",
-"cat": "Gazette"
+"cat": "Gazette",
+"text": "A single scenario on one printed sheet, with its own rules and new tiles. Laid out here as a web page with the map and armies, plus the original PDF.",
+"status": "part",
+"gap": "The scenario, map, armies and new tiles are on the scenario page, with the PDF to download. The tile pictures for this story were not supplied.",
+"tool": [
+{
+"label": "Read the scenario",
+"href": "scenario.html?b=ws&s=colombelles-castle"
+}
+]
 },
 {
 "id": "hon2-war-stories-3-juno-beach",
 "name": "War Stories #3 - Juno Beach",
-"cat": "Gazette"
+"cat": "Gazette",
+"text": "A single scenario on one printed sheet, with its own rules and new tiles. Laid out here as a web page with the map and armies, plus the original PDF.",
+"status": "part",
+"gap": "The scenario, map, armies and new tiles are on the scenario page, with the PDF to download. The new tiles are not in the unit index or the army builder yet.",
+"tool": [
+{
+"label": "Read the scenario",
+"href": "scenario.html?b=ws&s=juno-beach"
+}
+]
 },
 {
 "id": "hon2-war-stories-4-the-black-baron",
 "name": "War Stories #4 - The Black Baron",
-"cat": "Gazette"
+"cat": "Gazette",
+"text": "A single scenario on one printed sheet, with its own rules and new tiles. Laid out here as a web page with the map and armies, plus the original PDF.",
+"status": "part",
+"gap": "The scenario, map, armies and new tiles are on the scenario page, with the PDF to download. The new tiles are not in the unit index or the army builder yet.",
+"tool": [
+{
+"label": "Read the scenario",
+"href": "scenario.html?b=ws&s=black-baron"
+}
+]
 },
 {
 "id": "hon2-pulp-stories-1-pumpkin-s-revenge",
@@ -240,6 +285,20 @@ window.HTS_EXPANSIONS = {
 "h": 520,
 "label": "Core box punchboard"
 }
+],
+"tool": [
+{
+"label": "Unit bible: core set",
+"href": "guides.html?d=bible-core"
+},
+{
+"label": "Unofficial scenario rewrite",
+"href": "guides.html?d=unofficial-scenarios"
+},
+{
+"label": "Rules reference sheets",
+"href": "guides.html?d=rules-reference-sheets"
+}
 ]
 },
 {
@@ -249,10 +308,22 @@ window.HTS_EXPANSIONS = {
 "text": "Scenario pack set in and around Sainte-Mère-Église, with its own terrain and punchboards.",
 "imgs": [
 {
+"img": "img/exp/box-sainte-mere-eglise.webp",
+"w": 520,
+"h": 520,
+"label": "Box art"
+},
+{
 "img": "img/exp/sme.webp",
 "w": 520,
 "h": 520,
 "label": "Punchboard"
+}
+],
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-st-mere-eglise"
 }
 ]
 },
@@ -263,10 +334,22 @@ window.HTS_EXPANSIONS = {
 "text": "Scenario pack for the fighting at Carentan, with its own terrain and punchboards.",
 "imgs": [
 {
+"img": "img/exp/box-carentan.webp",
+"w": 432,
+"h": 520,
+"label": "Box art"
+},
+{
 "img": "img/exp/carentan.webp",
 "w": 520,
 "h": 520,
 "label": "Punchboard"
+}
+],
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-carentan"
 }
 ]
 },
@@ -277,10 +360,30 @@ window.HTS_EXPANSIONS = {
 "text": "Scenario pack for Pegasus Bridge. It has river terrain.",
 "imgs": [
 {
+"img": "img/exp/box-pegasus-bridge.webp",
+"w": 520,
+"h": 520,
+"label": "Box art"
+},
+{
 "img": "img/exp/pegasus.webp",
 "w": 520,
 "h": 520,
 "label": "A river terrain tile"
+}
+],
+"tool": [
+{
+"label": "Campaign book",
+"href": "guides.html?d=pegasus-bridge-campaign-book"
+},
+{
+"label": "Corrected story and new rules",
+"href": "guides.html?d=pegasus-bridge-errata"
+},
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-pegasus-bridge"
 }
 ]
 },
@@ -296,6 +399,16 @@ window.HTS_EXPANSIONS = {
 "h": 520,
 "label": "German Festungskompagnie punchboard"
 }
+],
+"tool": [
+{
+"label": "Scenario pack",
+"href": "guides.html?d=d-day-scenario-pack"
+},
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-d-day"
+}
 ]
 },
 {
@@ -310,7 +423,8 @@ window.HTS_EXPANSIONS = {
 "h": 520,
 "label": "A beach and cliff tile"
 }
-]
+],
+"tool": []
 },
 {
 "id": "hon1-army-box-us",
@@ -323,6 +437,16 @@ window.HTS_EXPANSIONS = {
 "w": 520,
 "h": 347,
 "label": "Sherman platoon punchboard"
+}
+],
+"tool": [
+{
+"label": "Unit bible: army boxes",
+"href": "guides.html?d=bible-army-boxes"
+},
+{
+"label": "Multiplayer rules",
+"href": "guides.html?d=multiplayer-rules-v1"
 }
 ]
 },
@@ -338,6 +462,12 @@ window.HTS_EXPANSIONS = {
 "h": 347,
 "label": "Army box punchboard"
 }
+],
+"tool": [
+{
+"label": "Unit bible: army boxes",
+"href": "guides.html?d=bible-army-boxes"
+}
 ]
 },
 {
@@ -352,42 +482,85 @@ window.HTS_EXPANSIONS = {
 "h": 347,
 "label": "Army box punchboard"
 }
+],
+"tool": [
+{
+"label": "Unit bible: army boxes",
+"href": "guides.html?d=bible-army-boxes"
+}
 ]
 },
 {
 "id": "hon1-us-airborne",
 "name": "US Airborne",
-"cat": "Multiple punchboards"
+"cat": "Multiple punchboards",
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-us-misc"
+}
+]
 },
 {
 "id": "hon1-ge-airborne",
 "name": "GE Airborne",
-"cat": "Multiple punchboards"
+"cat": "Multiple punchboards",
+"tool": []
 },
 {
 "id": "hon1-uk-airborne",
 "name": "UK Airborne",
-"cat": "Multiple punchboards"
+"cat": "Multiple punchboards",
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-cw-misc"
+}
+]
 },
 {
 "id": "hon1-4th-armored-division-us",
 "name": "4th Armored Division (US)",
-"cat": "Multiple punchboards"
+"cat": "Multiple punchboards",
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-us-4th-armored"
+}
+]
 },
 {
 "id": "hon1-7th-armored-division-uk",
 "name": "7th Armored Division (UK)",
-"cat": "Multiple punchboards"
+"cat": "Multiple punchboards",
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-cw-7th-armoured"
+}
+]
 },
 {
 "id": "hon1-1st-ss-panzer-ge",
 "name": "1st SS Panzer (GE)",
-"cat": "Multiple punchboards"
+"cat": "Multiple punchboards",
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-ge-1st-ss"
+}
+]
 },
 {
 "id": "hon1-civilians-under-fire",
 "name": "Civilians under Fire",
-"cat": "Multiple punchboards"
+"cat": "Multiple punchboards",
+"tool": [
+{
+"label": "Unit bible: Free French",
+"href": "guides.html?d=bible-free-french"
+}
+]
 },
 {
 "id": "hon1-ge-reinforcement-21eme-pz",
@@ -401,32 +574,57 @@ window.HTS_EXPANSIONS = {
 "h": 347,
 "label": "Panther platoon punchboard"
 }
+],
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-ge-misc"
+}
 ]
 },
 {
 "id": "hon1-goering-and-his-armoured-train",
 "name": "Goering and His Armoured Train",
-"cat": "Multiple punchboards"
+"cat": "Multiple punchboards",
+"tool": []
 },
 {
 "id": "hon1-the-ventura-and-smugglers",
 "name": "The Ventura & Smugglers",
-"cat": "Multiple punchboards"
+"cat": "Multiple punchboards",
+"tool": []
 },
 {
 "id": "hon1-miller-s-rangers",
 "name": "Miller's Rangers",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-us-misc"
+}
+]
 },
 {
 "id": "hon1-steiner-kampfgruppe",
 "name": "Steiner Kampfgruppe",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": []
 },
 {
 "id": "hon1-ffi-colonel-bastien",
 "name": "FFI Colonel Bastien",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": [
+{
+"label": "FII recruitment rules",
+"href": "guides.html?d=fii-recruitment-rules"
+},
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-free-french"
+}
+]
 },
 {
 "id": "hon1-kelly-s-heroes",
@@ -440,12 +638,19 @@ window.HTS_EXPANSIONS = {
 "h": 520,
 "label": "Punchboard"
 }
+],
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-us-misc"
+}
 ]
 },
 {
 "id": "hon1-2eme-db-heroic-platoon",
 "name": "2eme DB Heroic Platoon",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": []
 },
 {
 "id": "hon1-wittmann-s-tigers",
@@ -459,17 +664,42 @@ window.HTS_EXPANSIONS = {
 "h": 347,
 "label": "Punchboard"
 }
-]
+],
+"tool": []
 },
 {
 "id": "hon1-lord-lovat-s-commandos",
 "name": "Lord Lovat's Commandos",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": [
+{
+"label": "Commandos rules",
+"href": "guides.html?d=british-commandos-rules"
+},
+{
+"label": "Commonwealth army rules",
+"href": "guides.html?d=commonwealth-army-rules"
+},
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-cw-misc"
+}
+]
 },
 {
 "id": "hon1-lord-lovat-s-commandos-v2",
 "name": "Lord Lovat's Commandos V2",
-"cat": "Multiple punchboards"
+"cat": "Multiple punchboards",
+"tool": [
+{
+"label": "Commandos rules",
+"href": "guides.html?d=british-commandos-rules"
+},
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-cw-misc"
+}
+]
 },
 {
 "id": "hon1-us-rangers",
@@ -482,6 +712,12 @@ window.HTS_EXPANSIONS = {
 "w": 520,
 "h": 347,
 "label": "Punchboard"
+}
+],
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-us-misc"
 }
 ]
 },
@@ -497,7 +733,8 @@ window.HTS_EXPANSIONS = {
 "h": 347,
 "label": "Punchboard"
 }
-]
+],
+"tool": []
 },
 {
 "id": "hon1-ss-panzergrenadiere",
@@ -511,7 +748,8 @@ window.HTS_EXPANSIONS = {
 "h": 347,
 "label": "Punchboard"
 }
-]
+],
+"tool": []
 },
 {
 "id": "hon1-extra-units-us-and-ge",
@@ -525,22 +763,36 @@ window.HTS_EXPANSIONS = {
 "h": 347,
 "label": "Punchboard"
 }
-]
+],
+"tool": []
 },
 {
 "id": "hon1-royal-winnipeg-rifles",
 "name": "Royal Winnipeg Rifles",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-cw-misc"
+}
+]
 },
 {
 "id": "hon1-east-yorkshire-regiment",
 "name": "East Yorkshire Regiment",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-cw-misc"
+}
+]
 },
 {
 "id": "hon1-pandp-south-lancashire-regiment",
 "name": "P&P South Lancashire Regiment",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": []
 },
 {
 "id": "hon1-promo-heroes-2014",
@@ -554,72 +806,145 @@ window.HTS_EXPANSIONS = {
 "h": 520,
 "label": "Punchboard"
 }
-]
+],
+"tool": []
 },
 {
 "id": "hon1-santa-and-miss-marie",
 "name": "Santa & Miss Marie",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": []
 },
 {
 "id": "hon1-private-bryan",
 "name": "Private Bryan",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": [
+{
+"label": "Unit bible",
+"href": "guides.html?d=bible-us-misc"
+}
+]
 },
 {
 "id": "hon1-karl-von-kroc",
 "name": "Karl von Kroc",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": []
 },
 {
 "id": "hon1-ffi-order-tokens-and-dice",
 "name": "FFI Order Tokens & Dice",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": [
+{
+"label": "FII recruitment rules",
+"href": "guides.html?d=fii-recruitment-rules"
+}
+]
 },
 {
 "id": "hon1-gazette-0",
 "name": "Gazette 0",
-"cat": "Gazette"
+"cat": "Gazette",
+"tool": [
+{
+"label": "Unit bible: gazettes",
+"href": "guides.html?d=bible-gazettes"
+}
+]
 },
 {
 "id": "hon1-gazette-1",
 "name": "Gazette 1",
-"cat": "Gazette"
+"cat": "Gazette",
+"tool": [
+{
+"label": "Mines rules",
+"href": "guides.html?d=mines"
+},
+{
+"label": "Unit bible: gazettes",
+"href": "guides.html?d=bible-gazettes"
+}
+]
 },
 {
 "id": "hon1-gazette-2",
 "name": "Gazette 2",
-"cat": "Gazette"
+"cat": "Gazette",
+"tool": [
+{
+"label": "Unit bible: gazettes",
+"href": "guides.html?d=bible-gazettes"
+}
+]
 },
 {
 "id": "hon1-gazette-3",
 "name": "Gazette 3",
-"cat": "Gazette"
+"cat": "Gazette",
+"tool": [
+{
+"label": "Unit bible: gazettes",
+"href": "guides.html?d=bible-gazettes"
+}
+]
 },
 {
 "id": "hon1-gazette-4",
 "name": "Gazette 4",
-"cat": "Gazette"
+"cat": "Gazette",
+"tool": [
+{
+"label": "Unit bible: gazettes",
+"href": "guides.html?d=bible-gazettes"
+}
+]
 },
 {
 "id": "hon1-gazette-5",
 "name": "Gazette 5",
-"cat": "Gazette"
+"cat": "Gazette",
+"tool": [
+{
+"label": "Unit bible: gazettes",
+"href": "guides.html?d=bible-gazettes"
+}
+]
 },
 {
 "id": "hon1-gazette-6",
 "name": "Gazette 6",
-"cat": "Gazette"
+"cat": "Gazette",
+"tool": [
+{
+"label": "Unit bible: gazettes",
+"href": "guides.html?d=bible-gazettes"
+}
+]
 },
 {
 "id": "hon1-gazette-7",
 "name": "Gazette 7",
-"cat": "Gazette"
+"cat": "Gazette",
+"tool": [
+{
+"label": "Unit bible: gazettes",
+"href": "guides.html?d=bible-gazettes"
+}
+]
 },
 {
 "id": "hon1-gazette-8",
 "name": "Gazette 8",
-"cat": "Gazette"
+"cat": "Gazette",
+"tool": [
+{
+"label": "Unit bible: gazettes",
+"href": "guides.html?d=bible-gazettes"
+}
+]
 },
 {
 "id": "hon1-battleground-1-fields-and-swamps",
@@ -633,7 +958,8 @@ window.HTS_EXPANSIONS = {
 "h": 520,
 "label": "A swamp tile"
 }
-]
+],
+"tool": []
 },
 {
 "id": "hon1-battleground-2-harbors-and-hills",
@@ -647,7 +973,8 @@ window.HTS_EXPANSIONS = {
 "h": 520,
 "label": "A hills tile"
 }
-]
+],
+"tool": []
 },
 {
 "id": "hon1-battleground-3-roads-and-railroads",
@@ -661,7 +988,8 @@ window.HTS_EXPANSIONS = {
 "h": 520,
 "label": "A road tile"
 }
-]
+],
+"tool": []
 },
 {
 "id": "hon1-battleground-4-woods-and-hills",
@@ -675,12 +1003,14 @@ window.HTS_EXPANSIONS = {
 "h": 520,
 "label": "A woods tile"
 }
-]
+],
+"tool": []
 },
 {
 "id": "hon1-river-set",
 "name": "River Set",
-"cat": "Terrain"
+"cat": "Terrain",
+"tool": []
 },
 {
 "id": "hon1-radar-station-and-factory",
@@ -694,142 +1024,179 @@ window.HTS_EXPANSIONS = {
 "h": 520,
 "label": "Factory punchboard"
 }
-]
+],
+"tool": []
 },
 {
 "id": "hon1-the-fortified-farm",
 "name": "The Fortified Farm",
-"cat": "Terrain"
+"cat": "Terrain",
+"tool": []
 },
 {
 "id": "hon1-extra-terrain-set-2",
 "name": "Extra Terrain Set 2",
-"cat": "Terrain"
+"cat": "Terrain",
+"tool": []
 },
 {
 "id": "hon1-pandp-fields-swamps-haystacks-rocks",
 "name": "P&P Fields, Swamps, Haystacks, Rocks",
-"cat": "Terrain"
+"cat": "Terrain",
+"tool": []
 },
 {
 "id": "hon1-pandp-craters",
 "name": "P&P Craters",
-"cat": "Terrain"
+"cat": "Terrain",
+"tool": []
 },
 {
 "id": "hon1-pandp-church",
 "name": "P&P Church",
-"cat": "Terrain"
+"cat": "Terrain",
+"tool": []
 },
 {
 "id": "hon1-pandp-writer-s-mansion",
 "name": "P&P Writer's Mansion",
-"cat": "Terrain"
+"cat": "Terrain",
+"tool": []
 },
 {
 "id": "hon1-pandp-walls-trenches-foxholes-craters",
 "name": "P&P Walls, Trenches, Foxholes, Craters",
-"cat": "Terrain"
+"cat": "Terrain",
+"tool": []
 },
 {
 "id": "hon1-opjh-tournament-maps",
 "name": "OPJH Tournament Maps",
-"cat": "Terrain"
+"cat": "Terrain",
+"tool": []
 },
 {
 "id": "hon1-errata-core",
 "name": "Errata Core",
-"cat": "Errata"
+"cat": "Errata",
+"tool": [
+{
+"label": "Compendium clarifications",
+"href": "guides.html?d=compendium-errata"
+},
+{
+"label": "Unofficial FAQ",
+"href": "guides.html?d=unofficial-faq"
+}
+]
 },
 {
 "id": "hon1-errata-expansions",
 "name": "Errata Expansions",
-"cat": "Errata"
+"cat": "Errata",
+"tool": []
 },
 {
 "id": "hon1-errata-3",
 "name": "Errata #3",
-"cat": "Errata"
+"cat": "Errata",
+"tool": []
 },
 {
 "id": "hon1-errata-3-gift-field",
 "name": "Errata #3 (Gift - Field)",
-"cat": "Errata"
+"cat": "Errata",
+"tool": []
 },
 {
 "id": "hon1-pig-back-from-hell-scenarios",
 "name": "Pig Back From Hell Scenarios",
-"cat": "Campaign"
+"cat": "Campaign",
+"tool": []
 },
 {
 "id": "hon1-nijmegen-44-rules",
 "name": "Nijmegen 44 - Rules",
-"cat": "Campaign"
+"cat": "Campaign",
+"tool": []
 },
 {
 "id": "hon1-nijmegen-44-part-1",
 "name": "Nijmegen 44 - Part 1",
-"cat": "Campaign"
+"cat": "Campaign",
+"tool": []
 },
 {
 "id": "hon1-nijmegen-44-part-2",
 "name": "Nijmegen 44 - Part 2",
-"cat": "Campaign"
+"cat": "Campaign",
+"tool": []
 },
 {
 "id": "hon1-nijmegen-44-part-3",
 "name": "Nijmegen 44 - Part 3",
-"cat": "Campaign"
+"cat": "Campaign",
+"tool": []
 },
 {
 "id": "hon1-nijmegen-44-part-4",
 "name": "Nijmegen 44 - Part 4",
-"cat": "Campaign"
+"cat": "Campaign",
+"tool": []
 },
 {
 "id": "hon1-nijmegen-44-part-5",
 "name": "Nijmegen 44 - Part 5",
-"cat": "Campaign"
+"cat": "Campaign",
+"tool": []
 },
 {
 "id": "hon1-nijmegen-44-part-6",
 "name": "Nijmegen 44 - Part 6",
-"cat": "Campaign"
+"cat": "Campaign",
+"tool": []
 },
 {
 "id": "hon1-nijmegen-44-part-7",
 "name": "Nijmegen 44 - Part 7",
-"cat": "Campaign"
+"cat": "Campaign",
+"tool": []
 },
 {
 "id": "hon1-nijmegen-44-part-8",
 "name": "Nijmegen 44 - Part 8",
-"cat": "Campaign"
+"cat": "Campaign",
+"tool": []
 },
 {
 "id": "hon1-carentan-w-us-paratroopers",
 "name": "Carentan w/ US Paratroopers",
-"cat": "Campaign"
+"cat": "Campaign",
+"tool": []
 },
 {
 "id": "hon1-the-porsche-pack",
 "name": "The Porsche Pack",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": []
 },
 {
 "id": "hon1-king-tiger",
 "name": "King Tiger",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": []
 },
 {
 "id": "hon1-flak-maus",
 "name": "Flak Maus",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": []
 },
 {
 "id": "hon1-panzer-vii-lowe",
 "name": "Panzer VII Löwe",
-"cat": "Single punchboard"
+"cat": "Single punchboard",
+"tool": []
 }
 ]
 },

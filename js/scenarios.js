@@ -1,10 +1,10 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen', name: 'Battle for Caen' }];
+  var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen', name: 'Battle for Caen' }, { id: 'ws', name: 'War Stories' }];
   var S = { b: 'bro', q: '', type: 'all', open: {}, theme: 'light' };
   var cache = {}, NCOL = 0;
-  var SRCN = { bro: 'Scenario Booklet', omaha: 'Bloody Omaha rulebook', caen: 'Battle for Caen booklet V1.4' };
+  var SRCN = { bro: 'Scenario Booklet', omaha: 'Bloody Omaha rulebook', caen: 'Battle for Caen booklet V1.4', ws: 'War Stories sheet' };
 
   function $(id) { return document.getElementById(id); }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
@@ -22,7 +22,7 @@
     var re = new RegExp('(' + toks.map(function (t) { return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')', 'gi');
     return function (s) { return esc(s).replace(re, '<mark>$1</mark>'); };
   }
-  function pg(e) { return 'p.' + e.pages.replace(' to ', '-'); }
+  function pg(e) { return S.b === 'ws' ? 'sheet' : 'p.' + e.pages.replace(' to ', '-'); }
 
   function load() {
     if (cache[S.b]) return cache[S.b];
@@ -54,7 +54,7 @@
   var SIDE = { us: ['us', 'American', '1st Infantry Division'], ge: ['ge', 'German', '2. Panzer Division'], uk: ['uk', 'Commonwealth', 'Commonwealth'] };
   function armyHref(e, side) {
     var a = e.armies[side];
-    return 'index.html#b=' + encode({ n: a.side || side, l: a.limit, nm: e.title + ', ' + (a.label || SIDE[side][1]), a: a.tiles });
+    return 'builder.html#b=' + encode({ n: a.side || side, l: a.limit, nm: e.title + ', ' + (a.label || SIDE[side][1]), a: a.tiles });
   }
   function armies(e) {
     if (!e.armies) return '';
@@ -76,7 +76,7 @@
   function readLink(e) {
     var f = (window.HTS_SCEN_FULL || {})['hon-' + S.b];
     if (!f || !f.entries[e.id]) return '';
-    return '<p class="sarow"><a class="btn" data-read="' + esc(e.id) + '" href="scenario.html?b=' + S.b + '&s=' + esc(e.id) + '">Read the full scenario</a><span class="sameta">Full text, maps, recruitment pictures and the original pages. Booklet ' + esc(pg(e)) + '.</span></p>';
+    return '<p class="sarow"><a class="btn" data-read="' + esc(e.id) + '" href="scenario.html?b=' + S.b + '&s=' + esc(e.id) + '">Read the full scenario</a><span class="sameta">Full text, maps, recruitment pictures and the original ' + (S.b === 'ws' ? 'sheet' : 'pages') + '. ' + (S.b === 'ws' ? 'War Stories sheet' : 'Booklet ' + esc(pg(e))) + '.</span></p>';
   }
   function dlbar() {
     var f = (window.HTS_SCEN_FULL || {})['hon-' + S.b];

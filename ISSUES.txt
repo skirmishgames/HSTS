@@ -245,3 +245,68 @@ ISS-038  Pictures under the Omaha rules were attached to the wrong rules   [FIXE
 Where: data/hon-omaha-rules.js, rules.html.
 Detail: Trench, stream, field, difficult terrain, mound and shovel pictures were each under a neighbouring rule (the trench diagram showed under Difficult terrain, the shovel diagram under Position). Found while typing the rules chapters for the reader. Pictures are now matched to their rules, and a smoke test checks them.
 Decision: 2026-11-09 Fixed. The Big Red One rules page was not re-checked picture by picture.
+
+ISS-039  War Stories: tiles are on the scenario pages only   [OPEN]
+Where: data/hon-ws-scenarios-full.js, img/hon/ws/tiles/.
+Detail: The five War Stories (#0 to #4) are laid out as scenarios with the map, armies, rules, original sheet and PDF. Their 108 tile and marker pictures are shown as galleries. They are not in the unit index or the army builder, which need costs, slots and stripe codes read from the art. The Colombelles Castle (#2) folder has the PDF only, so that story has no tile gallery. The Kurt Knispel Konigstiger tile is missing its B side (the source file is a text file that says MISSING). The Black Baron army picture on the sheet is small. Hell's Fury has no printed player count.
+Decision: 2026-11-09 Add the Colombelles tiles to _Inbox when you have them. Say if you want the War Stories units in the builder.
+
+ISS-040  Juno Beach sheet prints two turns for one rule   [OPEN]
+Where: data/hon-ws-scenarios-full.js (juno-beach).
+Detail: The Set up column says German units in zone 1 may not leave until turn 4. The Victory Conditions column and the turn track say turn 5. The page shows both as printed.
+Decision: 2026-11-09 Left as printed. Treat turn 5 as the rule if you want one answer, since the track agrees with it.
+
+ISS-041  First edition (V1) rulebook and units are documents only   [OPEN]
+Where: data/hon-boxes.js, box.html?b=hon1.
+Detail: The 1st edition is on the landing page as a box. Its page links to the 81 product catalogue. The rulebook, scenarios and units are not in the local files. V2 rules override V1 rules where they differ.
+Decision: 2026-11-09 Add the V1 rulebook, scenario books and tiles to _Inbox when you want them archived.
+
+ISS-042  Archive catalogue linked the army builder to the old address   [FIXED in next release]
+Where: data/expansions.js.
+Detail: Four "Army builder" links in the Archive still pointed at index.html, which is now the landing page. They point at builder.html.
+Decision: 2026-11-09 Fixed.
+
+ISS-043  Hero inspirations list covers more heroes than the archive holds   [OPEN]
+Where: data/hon-guides.js, js/heroes.js.
+Detail: The "Who are these heroes?" list names about 70 heroes. Only 7 match hero tiles in the archive by name (Clint, The Rock, Oddball, Otto, Helmut, Ludwig, Oros Snowt), so only those show a Based on line. Helmut, Ludwig and Oros Snowt are listed with a weapon or backer note, not a person.
+Decision: 2026-11-09 Shown as written in the source list. More tiles will pick up a line when they are added.
+
+ISS-044  Guides are written for V1 or the PC game   [OPEN]
+Where: data/hon-guides.js.
+Detail: The strategy tips come from the PC game forum (mouse-over tips, the Zundapp). The buying guide and the Stalingrad guide were written while V1 was on sale. Each carries a note that V2 rules override them. Numbers and abilities in them were not checked against the V2 rulebook.
+Decision: 2026-11-09 Kept as written, with the note. Check against Big Red One before relying on a number.
+
+ISS-045  Duplicate local file: Expansions Details   [FIXED in next release]
+Where: Sorted/Expansions Details.md and Sorted/Expansions/Expansions Details (forum post).md.
+Detail: The two files were byte identical. One copy is in Sorted/Guides/. The other is in Sorted/_to_delete/ for you to delete, since the shell cannot delete files.
+Decision: 2026-11-09 Kept one.
+
+ISS-046  Scenario packs are in the Documents library, not the scenario reader   [OPEN]
+Where: guides.html?c=scenarios (D-Day pack, Pegasus Bridge campaign book, unofficial scenario rewrite, Big Red One multiplayer scenario generator).
+Detail: Each opens as page pictures with the extracted text under every page, and has a PDF. They are not typed out as scenario pages with maps and armies the way the Big Red One, Bloody Omaha, Battle for Caen and War Stories scenarios are. The D-Day text is clean enough to type out. The Pegasus Bridge scenario pages are pictures and need reading by eye.
+Decision: 2026-11-09 Shipped as documents first so nothing is lost. Lay out D-Day first when you want the full reader versions.
+
+ISS-047  Document text is machine extracted   [OPEN]
+Where: data/hon-library.js.
+Detail: Text comes from the PDF text layer. Pages that are pictures (Realism variant, Commandos, FII, some Pegasus Bridge pages, the catalogues) were read by OCR and have errors, such as stray symbols in the Special Abilities sheets. The page picture is the reference. Search works on this text.
+Decision: 2026-11-09 Left as extracted. The pictures sit above the text on every page.
+
+ISS-048  PDF copies on the site   [OPEN]
+Where: pdf/lib/.
+Detail: Rules, scenario, community and aid documents have a PDF. Originals over 5 MB are stored as compressed copies at 130 dpi without the text layer (Rules reference sheets, Mines, British Commandos rules, D-Day pack, Pegasus Bridge campaign book, Unofficial scenarios, Realism variant, Blast patterns). The unit bibles and catalogues (30 files, 300 MB) have page pictures only. The army label posters (US, German, Commonwealth, 9374 by 13257 points each) are not on the site. Originals of all of them are in Sorted/.
+Decision: 2026-11-09 Done to keep the repository small. Say if you want the originals added.
+
+ISS-049  Duplicate files in _Inbox   [FIXED in next release]
+Where: _Inbox.
+Detail: General Strategy Tips.md (same as Sorted/Guides), Commonwealth Misc Unit Bible (two identical copies), six Big Red One Index Files PDFs (same as Sorted/Boxes/Big Red One), Aviation Rules 2.pdf (same as Sorted/Rules/Aviation/Aviation Rules V2.pdf), and Box Art pic2631892.jpg.webp (the same Pegasus Bridge picture, 12 percent smaller). One copy of each is kept. The extra copies are in Sorted/_to_delete/.
+Decision: 2026-11-09 Kept the newer or better copy.
+
+ISS-050  First edition rulebook is still missing   [OPEN]
+Where: guides.html?c=rules.
+Detail: Only one page of the first edition rulebook (page 6, Wrecks) was supplied, plus the reference sheets, expansion rules and errata. The core rulebook and scenario book are not in the files.
+Decision: 2026-11-09 Add them to _Inbox when you have them.
+
+ISS-051  Printed forum addresses remain on page pictures   [OPEN]
+Where: pdf/lib/unofficial-faq.pdf, img/hon/lib/unofficial-faq/.
+Detail: The FAQ and a few sheets print addresses on the closed publisher site as plain text. The links in the PDFs and the extracted text were removed. The printed addresses are still visible in the scanned pictures.
+Decision: 2026-11-09 Left, since it is the original page.

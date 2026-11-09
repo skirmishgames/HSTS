@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXN = { bro: 'Big Red One', omaha: 'Bloody Omaha', caen: 'Battle for Caen' };
+  var BOXN = { bro: 'Big Red One', omaha: 'Bloody Omaha', caen: 'Battle for Caen', ws: 'War Stories' };
   var S = { b: 'bro', s: '', theme: 'light' };
 
   function $(id) { return document.getElementById(id); }
@@ -19,7 +19,7 @@
   var SIDE = { us: 'American', ge: 'German', uk: 'Commonwealth' };
   function armyHref(e, key) {
     var a = e.armies[key];
-    return 'index.html#b=' + encode({ n: a.side || key, l: a.limit, nm: e.title + ', ' + (a.label || SIDE[a.side || key]), a: a.tiles });
+    return 'builder.html#b=' + encode({ n: a.side || key, l: a.limit, nm: e.title + ', ' + (a.label || SIDE[a.side || key]), a: a.tiles });
   }
 
   function block(b) {
@@ -35,13 +35,14 @@
       case 'fig': return '<figure class="sfig"><button type="button" class="sfigb" data-zoom="' + esc(b.img) + '" data-cap="' + esc(b.cap || '') + '" aria-label="Open picture full size"><img src="' + esc(b.img) + '" alt="' + esc(b.alt || b.cap || '') + '" width="' + b.w + '" height="' + b.h + '" loading="lazy"></button>' + (b.cap ? '<figcaption>' + rich(b.cap) + '</figcaption>' : '') + '</figure>';
       case 'table': return '<div class="stable"><table><thead><tr>' + b.head.map(function (h) { return '<th>' + rich(h) + '</th>'; }).join('') + '</tr></thead><tbody>' + b.rows.map(function (r) { return '<tr>' + r.map(function (c) { return '<td>' + rich(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table></div>';
       case 'pg': var PP = full().book.pages; return '<div class="pgmark"><button type="button" data-zoom="' + PP.dir + 'p' + pad(b.n) + '.webp" data-cap="Original page ' + b.n + '" aria-label="Open original page ' + b.n + '">Booklet page ' + b.n + '</button></div>';
+      case 'gal': return '<ul class="sgal">' + b.items.map(function (g) { return '<li><button type="button" class="sgalb" data-zoom="' + esc(g.img) + '" data-cap="' + esc(g.cap) + '" aria-label="Open ' + esc(g.cap) + ' full size"><img src="' + esc(g.img) + '" alt="' + esc(g.cap) + '" width="' + g.w + '" height="' + g.h + '" loading="lazy"></button><span>' + esc(g.cap) + '</span></li>'; }).join('') + '</ul>';
       case 'facts': return '<dl class="sfacts">' + b.rows.map(function (f) { return '<dt>' + esc(f[0]) + '</dt><dd>' + rich(f[1]) + '</dd>'; }).join('') + '</dl>';
       default: return '';
     }
   }
 
-  function dl(f) {
-    return '<section class="sdl"><h2>Download</h2><ul>' + f.book.pdfs.map(function (p) {
+  function dl(f, fe) {
+    return '<section class="sdl"><h2>Download</h2><ul>' + (fe && fe.pdfs || f.book.pdfs).map(function (p) {
       return '<li><a class="btn" href="' + esc(p.href) + '" download>' + esc(p.label) + '</a><span class="sameta">' + esc(p.size) + '. ' + esc(p.note || '') + '</span></li>';
     }).join('') + '</ul></section>';
   }
@@ -68,7 +69,7 @@
     if (!e) {
       var list = d.entries.map(function (x) {
         var has = (window.HTS_SCEN_FULL['hon-' + S.b] || { entries: {} }).entries[x.id];
-        return '<li><a href="scenario.html?b=' + S.b + '&amp;s=' + x.id + '">' + esc(x.title) + '</a> <span class="hsnip">p.' + esc(x.pages.replace(' to ', '-')) + (has ? '' : ', not yet laid out') + '</span></li>';
+        return '<li><a href="scenario.html?b=' + S.b + '&amp;s=' + x.id + '">' + esc(x.title) + '</a> <span class="hsnip">' + (S.b === 'ws' ? 'sheet' : 'p.' + esc(x.pages.replace(' to ', '-'))) + (has ? '' : ', not yet laid out') + '</span></li>';
       }).join('');
       out.innerHTML = '<h1 class="stitle">Scenario reader, ' + esc(BOXN[S.b]) + '</h1><ul class="slist">' + list + '</ul>';
       document.title = 'Heroes System Tactical Scale scenario reader';
@@ -77,19 +78,19 @@
     var idx = d.entries.indexOf(e), prev = d.entries[idx - 1], next = d.entries[idx + 1];
     document.title = e.title + ', ' + BOXN[S.b] + ' scenario, Heroes System Tactical Scale';
     $('subtitle').textContent = 'Scenario reader, ' + BOXN[S.b];
-    $('srcnote').textContent = 'Text and pictures come from the ' + (f ? f.book.title + ' ' + f.book.version : 'original book') + ', pages ' + e.pages.replace(' to ', ' to ') + '.';
+    $('srcnote').textContent = f && f.book.sheets ? 'Text and pictures come from the original War Stories sheet, which you can also download as a PDF below.' : 'Text and pictures come from the ' + (f ? f.book.title + ' ' + f.book.version : 'original book') + ', pages ' + e.pages.replace(' to ', ' to ') + '.';
     var h = '<nav class="scrumb" aria-label="Breadcrumb"><a href="scenarios.html?b=' + S.b + '&amp;e=' + e.id + '">All ' + esc(BOXN[S.b]) + ' scenarios</a></nav>';
     h += '<h1 class="stitle">' + esc(e.title) + '</h1>';
-    h += '<p class="smeta">' + [e.type === 'Single scenarios' || e.type === 'Bonus scenario' ? 'Scenario' : /^Campaign/.test(e.type) ? 'Campaign scenario' : 'Rules', e.date, 'Booklet p.' + e.pages.replace(' to ', '-')].filter(Boolean).map(esc).join(' &middot; ') + '</p>';
+    h += '<p class="smeta">' + [e.type === 'Single scenarios' || e.type === 'Bonus scenario' ? 'Scenario' : /^Campaign/.test(e.type) ? 'Campaign scenario' : 'Rules', e.date, (S.b === 'ws' ? 'Original sheet, PDF' : 'Booklet p.' + e.pages.replace(' to ', '-'))].filter(Boolean).map(esc).join(' &middot; ') + '</p>';
     if (!fe) {
       h += '<p class="htext">The full text of this entry is not laid out yet. Here is the summary.</p><p class="htext">' + esc(e.summary) + '</p><dl class="sfacts">' + e.facts.map(function (x) { return '<dt>' + esc(x[0]) + '</dt><dd>' + esc(x[1]) + '</dd>'; }).join('') + '</dl>' + armies(e);
     } else {
       var toc = fe.blocks.filter(function (b) { return b.k === 'h'; }).map(function (b) { return '<a class="chip" href="#' + slug(b.t) + '">' + esc(b.t) + '</a>'; });
       if (e.armies) toc.push('<a class="chip" href="#armies">Armies in the builder</a>');
-      toc.push('<a class="chip" href="#original-pages">Original pages</a>');
+      if (fe.pages) toc.push('<a class="chip" href="#original-pages">Original pages</a>');
       h += '<div class="stoc chips" role="navigation" aria-label="On this page">' + toc.join('') + '</div>';
       h += '<div class="sbody">' + fe.blocks.map(block).join('') + '</div>';
-      h += armies(e) + pagesGallery(f, fe) + dl(f);
+      h += armies(e) + (fe.pages ? pagesGallery(f, fe) : '') + dl(f, fe);
     }
     h += '<nav class="spn" aria-label="Previous and next">' + (prev ? '<a class="btn ghost" href="scenario.html?b=' + S.b + '&amp;s=' + prev.id + '">&larr; ' + esc(prev.title) + '</a>' : '<span></span>') + (next ? '<a class="btn ghost" href="scenario.html?b=' + S.b + '&amp;s=' + next.id + '">' + esc(next.title) + ' &rarr;</a>' : '<span></span>') + '</nav>';
     out.innerHTML = h;
