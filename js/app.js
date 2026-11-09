@@ -14,7 +14,8 @@
     nation: 'us', limit: 250, name: '', army: [], theme: 'light', saved: [],
     type: 'all', sets: {}, q: '', view: 'army'
   };
-  var P = { uid: null, i: 0, all: false };
+  var P = { uid: null, i: 0, all: false, own: false };
+  var OWN = window.HTS_OWN;
   var cache = {};
   var seq = 0;
 
@@ -142,6 +143,16 @@
         if (o.cost == null) sp += 1;
       });
     });
+    if (OWN.active()) {
+      var miss = {};
+      S.army.forEach(function (e) {
+        var t = D.t[e.t];
+        if (!OWN.owns(t.set)) miss[t.set] = 1;
+        e.o.forEach(function (id) { if (id && !OWN.owns(D.o[id].set)) miss[D.o[id].set] = 1; });
+      });
+      var mk = Object.keys(miss);
+      if (mk.length) warn.push('<p>This army uses items from ' + mk.map(function (k) { return esc(OWN.name(k)); }).join(' and ') + ', which ' + (mk.length > 1 ? 'are' : 'is') + ' not in your collection.</p>');
+    }
     if (diff < 0) warn.push('<p class="bad">The army is ' + Math.abs(diff) + ' points over the limit.</p>');
     if (mismatch) warn.push('<p>' + mismatch + ' option' + (mismatch > 1 ? 's are' : ' is') + ' in a slot of the wrong size or stripes. Check your physical tiles.</p>');
     if (sp) warn.push('<p>' + sp + ' option' + (sp > 1 ? 's show' : ' shows') + ' SP instead of a cost. Those are counted as 0 points. Check your scenario.</p>');
@@ -231,9 +242,9 @@
       return '<button type="button" class="chip' + (S.type === t[0] ? ' on' : '') + '" data-type="' + t[0] + '">' + t[1] + '</button>';
     }).join('');
     var sets = {};
-    data().d.tiles.forEach(function (t) { sets[t.set] = 1; });
+    data().d.tiles.forEach(function (t) { if (OWN.owns(t.set)) sets[t.set] = 1; });
     $('setChips').innerHTML = Object.keys(sets).map(function (k) {
-      return '<button type="button" class="chip' + (S.sets[k] ? ' on' : '') + '" data-set="' + esc(k) + '" title="Content set ' + esc(k) + '">' + esc(k) + '</button>';
+      return '<button type="button" class="chip' + (S.sets[k] ? ' on' : '') + '" data-set="' + esc(k) + '" title="' + esc(OWN.name(k)) + '">' + esc(k) + '</button>';
     }).join('');
   }
 
@@ -243,12 +254,13 @@
     var list = D.d.tiles.filter(function (t) {
       if (S.type !== 'all' && t.type !== S.type) return false;
       if (anySet && !S.sets[t.set]) return false;
+      if (!OWN.owns(t.set)) return false;
       if (q && (t.name + ' ' + (t.sub || '')).toLowerCase().indexOf(q) < 0) return false;
       return true;
     }).sort(function (a, b) {
       return (TYPE_ORDER[a.type] - TYPE_ORDER[b.type]) || (a.cost - b.cost) || a.name.localeCompare(b.name);
     });
-    if (!list.length) { $('library').innerHTML = '<p class="count">No tiles match.</p>'; return; }
+    if (!list.length) { $('library').innerHTML = '<p class="count">No tiles match.' + (OWN.active() ? ' Your collection filter is on. Open My collection to change it.' : '') + '</p>'; return; }
     $('library').innerHTML = list.map(function (t) {
       var n = S.army.filter(function (e) { return e.t === t.id; }).length;
       return '<div class="lcard"><button type="button" class="imgbtn" data-zoom="' + t.img + '" data-cap="' + esc(t.name + ', ' + t.cost + ' pts') + '" aria-label="Zoom ' + esc(t.name) + '"><img src="' + t.img + '" alt="' + esc(t.name) + '" loading="lazy" width="' + t.w + '" height="' + t.h + '"></button>' +
@@ -271,8 +283,8 @@
 
   /* ---------- picker ---------- */
   function openPicker(entryId, i) {
-    P.uid = entryId; P.i = i; P.all = false;
-    $('pickAll').checked = false;
+    P.uid = entryId; P.i = i; P.all = false; P.own = false;
+    $('pickAll').checked = false; $('pickOwn').checked = false; $('pickOwnWrap').hidden = !OWN.active();
     renderPicker();
     $('picker').hidden = false;
   }
@@ -286,7 +298,7 @@
     $('pickClear').disabled = !e.o[P.i];
     var html = '';
     CATS.forEach(function (c) {
-      var items = D.d.options.filter(function (o) { return o.cat === c[0]; }).map(function (o) { return { o: o, why: fits(slot, o) }; });
+      var items = D.d.options.filter(function (o) { return o.cat === c[0] && (P.own || OWN.owns(o.set)); }).map(function (o) { return { o: o, why: fits(slot, o) }; });
       if (!P.all) items = items.filter(function (x) { return !x.why.length; });
       items.sort(function (a, b) { return (a.why.length - b.why.length) || (cost(a.o.cost) - cost(b.o.cost)) || a.o.name.localeCompare(b.o.name); });
       if (!items.length) return;
@@ -302,10 +314,10 @@
           '<span class="pc"><span class="pts">' + costLabel(o.cost) + ' pts</span><span>' + dots(o.stripes) + '</span></span></button>';
       }).join('');
     });
-    $('pickList').innerHTML = html || '<p class="count">Nothing fits this slot. Tick the box above to see every option.</p>';
+    $('pickList').innerHTML = html || '<p class="count">Nothing fits this slot. Tick a box above to see more options.</p>';
   }
   function closeOverlays() {
-    ['picker', 'zoom', 'help'].forEach(function (id) { $(id).hidden = true; });
+    ['picker', 'zoom', 'help', 'own'].forEach(function (id) { $(id).hidden = true; });
   }
 
   /* ---------- share, export, import ---------- */
@@ -341,6 +353,8 @@
     $('tabLib').className = S.view === 'lib' ? 'on' : '';
   }
   function refresh() { persist(); renderLibrary(); renderBoard(); renderPoints(); }
+
+  OWN.onChange(function () { Object.keys(S.sets).forEach(function (k) { if (!OWN.owns(k)) delete S.sets[k]; }); renderFilters(); renderLibrary(); renderPoints(); if (!$('picker').hidden) renderPicker(); });
 
   function bind() {
     document.addEventListener('click', function (ev) {
@@ -398,6 +412,7 @@
     $('helpClose').onclick = closeOverlays;
     $('btnHelp').onclick = function () { $('help').hidden = false; };
     $('pickAll').onchange = function () { P.all = this.checked; renderPicker(); };
+    $('pickOwn').onchange = function () { P.own = this.checked; renderPicker(); };
     $('pickClear').onclick = function () {
       var e = S.army.filter(function (x) { return x.id === P.uid; })[0];
       if (e) { e.o[P.i] = null; refresh(); }

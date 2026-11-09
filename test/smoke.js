@@ -345,6 +345,24 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(await tp.evaluate(() => !document.getElementById('lbx').hidden && /Burst/.test(document.getElementById('lbxCap').textContent) && document.getElementById('lbxDl').getAttribute('href').endsWith('.webp')), 'cards: full size view opens with a download link');
   await tp.click('#lbxClose');
 
+  // My collection filter in the builder
+  await tp.goto(base + 'index.html'); await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); } catch (e) {} }); await tp.reload(); await tp.waitForTimeout(400);
+  const own0 = await tp.locator('.lcard').count();
+  ok((await tp.textContent('#ownState')).includes('showing everything'), 'collection: not set by default');
+  await tp.click('#btnOwn'); await tp.check('[data-own="CB"]'); await tp.click('#ownClose'); await tp.waitForTimeout(200);
+  const own1 = await tp.locator('.lcard').count();
+  ok(own0 > own1 && own1 === 6, 'collection: only Big Red One tiles after ticking CB (' + own0 + ' to ' + own1 + ')');
+  ok((await tp.textContent('#ownState')).startsWith('1 of 8'), 'collection: status line counts products');
+  await tp.locator('.lcard', { hasText: 'Rifle Platoon' }).first().locator('[data-add]').click();
+  await tp.locator('.atile .slot').first().click();
+  const pk1 = await tp.locator('.pcard').count();
+  await tp.check('#pickOwn'); const pk2 = await tp.locator('.pcard').count();
+  ok(pk2 >= pk1, 'collection: picker can show options not owned (' + pk1 + ' to ' + pk2 + ')');
+  await tp.keyboard.press('Escape');
+  await tp.click('#btnOwn'); await tp.click('#ownNone'); await tp.click('#ownClose'); await tp.waitForTimeout(200);
+  ok(await tp.locator('.lcard').count() === own0, 'collection: clearing the ticks shows everything again');
+  await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); localStorage.removeItem('hts.hon.bro.v1'); } catch (e) {} });
+
   // Battle Pack #3 (Windsor & Jupiter) units
   await tp.goto(base + 'units.html'); await tp.waitForTimeout(300);
   const wj = JSON.parse(await tp.evaluate(() => JSON.stringify(['ge', 'uk'].map(n => { const d = window.HTS_DATA['hon-bro-' + n]; return [d.tiles.filter(t => t.set === 'BP3').length, d.options.filter(o => o.set === 'BP3').length, d.tiles.filter(t => t.set === 'BP3').every(t => t.slots.length > 0 && t.cost > 0)]; }))));

@@ -1,5 +1,5 @@
 HEROES SYSTEM TACTICAL SCALE: ISSUES TO BE ADDRESSED
-Last updated: 2026-11-09 (site version hts-v27)
+Last updated: 2026-11-09 (site version hts-v28)
 
 HOW TO USE THIS FILE
 - One entry per issue. Never delete an entry. Change its status and add a dated line under "Decision".
@@ -224,3 +224,8 @@ ISS-034  Cards for Omaha, Battle for Caen and Battle Pack #3 are missing   [OPEN
 Where: cards.html, data/hon-bro-cards.js.
 Detail: Only the Big Red One Battle Event cards (US and German decks) were in the local files. The Panzerfaust and Geballte Ladung texts quote the Combat Values as printed. Hero equipment cards are on heroes.html, not here.
 Decision: 2026-11-09 Add the other decks to _Inbox as image files. They go into the same data file with a box switch.
+
+ISS-035  Collection filter covers the army builder only   [OPEN]
+Where: js/collection.js, js/app.js.
+Detail: My collection hides unowned tiles and options in the builder. The unit index, heroes, History and maps pages still show everything. Product names for the promo codes (KS-9, SOLO, WS#0, P500) are generic because the code is all the sheets give.
+Decision: 2026-11-09 Extend the same setting (js/collection.js, shared key) to the units and heroes pages if you want it there.

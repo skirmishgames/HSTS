@@ -47,10 +47,10 @@
 
   function tile(e, i, mk) {
     return '<button type="button" class="ccard" data-open="' + i + '" aria-label="Open ' + esc(e.name) + ', ' + esc(SIDENAME[e.nation]) + '">' +
-      '<img src="' + esc(e.thumb) + '" alt="' + esc(e.name + ', ' + SIDENAME[e.nation] + ' card') + '" width="240" height="364" loading="lazy">' +
+      '<span class="cimg"><img src="' + esc(e.thumb) + '" alt="' + esc(e.name + ', ' + SIDENAME[e.nation] + ' card') + '" width="240" height="364" loading="lazy">' +
+      (e.copies > 1 ? '<span class="ccopies" title="' + e.copies + ' copies in the box">x' + e.copies + '</span>' : '') + '</span>' +
       '<span class="cn">' + mk(e.name) + '</span>' +
-      '<span class="cm">' + (e.copies > 1 ? e.copies + ' copies' : '1 copy') + ' &middot; ' + esc(e.phase) + '</span>' +
-      '<span class="cw">' + mk(e.when) + ' ' + mk(e.text) + '</span></button>';
+      '<span class="cm">' + esc(e.phase) + '</span></button>';
   }
 
   function render() {
@@ -84,7 +84,7 @@
       });
       $('out').innerHTML = html + '</div>';
       var copies = shown.reduce(function (n, e) { return n + e.copies; }, 0);
-      $('stat').textContent = shown.length + ' different cards (' + copies + ' in the box)' + (toks.length ? ', best match first' : '') + '. Click one for the full size picture.';
+      $('stat').textContent = shown.length + ' different cards (' + copies + ' in the box)' + (toks.length ? ', best match first' : '') + '. Select a card to read what it does and see it full size.';
     }
     url();
   }
@@ -96,10 +96,12 @@
     $('lbxImg').src = e.img; $('lbxImg').alt = e.name + ', ' + SIDENAME[e.nation] + ' card';
     $('lbxCap').textContent = e.name + ', ' + SIDENAME[e.nation] + ', ' + e.copies + (e.copies > 1 ? ' copies' : ' copy') + ' (' + e.ref + ')';
     $('lbxDl').href = e.img; $('lbxDl').setAttribute('download', e.id + '.webp');
+    $('lbxText').innerHTML = '<h3>' + esc(e.name) + '</h3><p class="ltag">' + esc(SIDENAME[e.nation]) + ' &middot; ' + esc(e.phase) + ' &middot; ' + e.copies + (e.copies > 1 ? ' copies' : ' copy') + '</p>' +
+      '<p class="lwhen">' + esc(e.when) + '</p><p>' + esc(e.text) + '</p><p class="ltag">Card ' + esc(e.ref) + '</p>';
     $('lbxBody').scrollTop = 0;
   }
   function openBox(i) {
-    zoomed = false; $('lbxBody').classList.remove('z'); $('lbxZoom').textContent = 'Zoom in';
+    zoomed = false; $('lbxBody').classList.remove('z'); $('lbx').classList.remove('zoomed'); $('lbxZoom').textContent = 'Zoom in';
     show(i); $('lbx').hidden = false; document.body.classList.add('lbxopen');
   }
   function closeBox() { $('lbx').hidden = true; document.body.classList.remove('lbxopen'); $('lbxImg').removeAttribute('src'); }
@@ -122,7 +124,7 @@
     $('lbxClose').onclick = closeBox;
     $('lbxPrev').onclick = function () { show(cur - 1); };
     $('lbxNext').onclick = function () { show(cur + 1); };
-    $('lbxZoom').onclick = function () { zoomed = !zoomed; $('lbxBody').classList.toggle('z', zoomed); this.textContent = zoomed ? 'Fit to screen' : 'Zoom in'; };
+    $('lbxZoom').onclick = function () { zoomed = !zoomed; $('lbxBody').classList.toggle('z', zoomed); $('lbx').classList.toggle('zoomed', zoomed); this.textContent = zoomed ? 'Fit to screen' : 'Zoom in'; };
     document.addEventListener('keydown', function (ev) {
       if ($('lbx').hidden) return;
       if (ev.key === 'Escape') closeBox();
