@@ -22,6 +22,9 @@ bro,ge,tile,Feldkommando (Hauptmann Willi Herold),img/hon/bro/ge/tiles/feldkomma
 bro,ge,tile,Oros Snowt (Grenade Maniac),img/hon/bro/ge/tiles/oros_snowt.webp,800,589,82092,low
 bro,ge,tile,"Jägerbataillon (Jäger-Regiment 31, 16. Luftwaffen-Feld-Div.)",img/hon/bro/ge/tiles/jagerbataillon.webp,2028,589,205556,
 bro,ge,tile,"SS-Panzerpionier (SS-Panzerpionierbataillon 12, 12. SS-Pz-Div)",img/hon/bro/ge/tiles/ss_panzerpionier.webp,1590,589,180030,low
+bro,ge,tile,Focke-Wulf (Fw 190A),img/hon/bro/ge/tiles/fw190a.webp,602,464,68932,low
+bro,ge,tile,Messerschmitt (Bf 109 G6),img/hon/bro/ge/tiles/bf109g6.webp,602,464,62690,low
+bro,ge,tile,Support (Scenario support tile),img/hon/bro/ge/tiles/support_tile.webp,352,592,33602,low
 bro,ge,unit,Major Karl Brassert,img/hon/bro/ge/units/german-hq-brassert-a.webp,352,352,30246,low
 bro,ge,unit,Helmut,img/hon/bro/ge/units/german-heroes-helmut-a.webp,352,352,27816,low
 bro,ge,unit,Otto,img/hon/bro/ge/units/german-heroes-otto-a.webp,352,352,31274,low
@@ -155,6 +158,9 @@ bro,uk,tile,Field Command (Brigadier Hubert Essame),img/hon/bro/uk/tiles/field_c
 bro,uk,tile,Arthur Ash (Eyes of Britain),img/hon/bro/uk/tiles/arthur_ash.webp,800,589,88100,low
 bro,uk,tile,"B Recce Squadron (43rd Reconnaissance Regiment, 43rd Inf. Div.)",img/hon/bro/uk/tiles/b_recce_squadron.webp,2028,589,207526,
 bro,uk,tile,"Duke of Cornwall’s Light Infantry (214th Inf. Brigade, 43rd Inf. Div.)",img/hon/bro/uk/tiles/dcli.webp,2028,589,215768,
+bro,uk,tile,Spitfire (Mk IX),img/hon/bro/uk/tiles/spitfire.webp,602,464,62576,low
+bro,uk,tile,Hawker Typhoon (Mk IB),img/hon/bro/uk/tiles/hawker_typhoon.webp,602,464,71832,low
+bro,uk,tile,Support (Scenario support tile),img/hon/bro/uk/tiles/support_tile.webp,352,592,35330,low
 bro,uk,unit,M4 Sherman Command,img/hon/bro/uk/units/ecg-m4-sherman-command.webp,508,1008,125682,
 bro,uk,unit,M4 Sherman,img/hon/bro/uk/units/ecg-m4-sherman.webp,508,1008,115808,
 bro,uk,unit,25pdr Sexton,img/hon/bro/uk/units/ecg-25pdr-sexton.webp,508,1008,130238,
@@ -254,6 +260,8 @@ bro,us,tile,Private Smithy (Smashing Pumpkins),img/hon/bro/us/tiles/private_smit
 bro,us,tile,Luke Griff Brassert (American Padawan),img/hon/bro/us/tiles/luke_brassert.webp,332,246,22728,low
 bro,us,tile,Don Wardaddy Collier (Fury Tank),img/hon/bro/us/tiles/don_collier.webp,650,244,38938,low
 bro,us,tile,Recon Platoon 2e DB (1er Escadron RBFM 2e DB),img/hon/bro/us/tiles/recon_2edb.webp,608,248,42466,low
+bro,us,tile,Thunderbolt (Republic P-47),img/hon/bro/us/tiles/p47_thunderbolt.webp,602,464,71252,low
+bro,us,tile,Mustang (North American P-51D),img/hon/bro/us/tiles/p51_mustang.webp,602,464,64940,low
 bro,us,unit,Col. Taylor,img/hon/bro/us/units/us-hq-g-taylor-a.webp,352,352,29542,low
 bro,us,unit,81mm Mortar,img/hon/bro/us/units/us-hq-81mm-mortar-a.webp,351,460,41866,low
 bro,us,unit,Clint,img/hon/bro/us/units/us-heroes-clint-a.webp,352,352,31654,low
@@ -268,6 +276,7 @@ bro,us,unit,M8 AC Greyhound,img/hon/bro/us/units/us-options-m8-ac-greyhound-01-a
 bro,us,unit,M5 Stuart,img/hon/bro/us/units/us-options-m5-stuart-01-a.webp,277,460,34010,low
 bro,us,unit,M4 Sherman,img/hon/bro/us/units/us-options-m4-sherman-01-a.webp,232,460,29490,low
 bro,us,unit,M3A1 Halftrack,img/hon/bro/us/units/18th-inf-reg-c-m3a1-halftrack-01-a.webp,248,460,28040,low
+bro,us,unit,M10 A1,img/hon/bro/us/units/bo-m10-a1.webp,508,1008,92978,
 bro,us,option,Bluff,img/hon/bro/us/options/bluff.webp,256,352,21606,low
 bro,us,option,Planning,img/hon/bro/us/options/planning.webp,256,352,23092,low
 bro,us,option,Improvisation,img/hon/bro/us/options/improvisation.webp,256,352,24334,low
@@ -333,3 +342,4 @@ bro,us,option,Grenade,img/hon/bro/us/options/grenade_ks.webp,110,152,4608,low
 bro,us,option,Sticky Bomb,img/hon/bro/us/options/sticky_bomb_solo.webp,112,152,4856,low
 bro,us,option,Training,img/hon/bro/us/options/training_fr.webp,120,146,5398,low
 bro,us,option,Guardian,img/hon/bro/us/options/guardian_fr.webp,120,146,5968,low
+bro,us,option,M10 Tank Destroyer,img/hon/bro/us/options/m10_a1.webp,352,352,29600,low

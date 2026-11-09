@@ -1272,6 +1272,60 @@ window.HTS_HISTORY["hon-caen"] = {
 "Staghound",
 "T17E1"
 ]
+},
+{
+"id": "spitfire",
+"name": "Supermarine Spitfire Mk IX",
+"cat": "Aircraft",
+"side": "uk",
+"text": "The Spitfire was the Royal Air Force single-seat fighter built by Supermarine, then part of Vickers-Armstrong. The prototype first flew on 5 March 1936. The Mk IX used a two-stage Rolls-Royce Merlin engine, with split radiators and an extra oil cooler under the port wing to fit the intercooler. It was the most produced Merlin-powered Spitfire and was also used as a fighter-bomber, which is how it appears over the Normandy battlefield in the game.",
+"facts": [
+"Maker: Supermarine (Vickers-Armstrong).",
+"Prototype first flight: 5 March 1936.",
+"Mk IX built: about 5,660 (the source gives 5,665 and 5,656).",
+"Engine: two-stage Rolls-Royce Merlin."
+],
+"src": [
+"Supermarine Spitfire, Wikipedia",
+"https://en.wikipedia.org/wiki/Supermarine_Spitfire"
+],
+"find": {
+"n": "uk",
+"q": "Spitfire"
+},
+"aka": [
+"Spitfire",
+"Aircraft",
+"air support"
+]
+},
+{
+"id": "typhoon",
+"name": "Hawker Typhoon Mk IB",
+"cat": "Aircraft",
+"side": "uk",
+"text": "The Typhoon was a single-engine ground attack fighter designed by Sydney Camm and built mostly by Gloster (3,317 in all). It entered service on 11 September 1941 with a 2,180 to 2,260 hp Napier Sabre engine, four 20 mm Hispano cannon, eight RP-3 rockets with 60 lb warheads and room for two 1,000 lb bombs. By June 1944 the 2nd Tactical Air Force had 18 Typhoon IB squadrons. Black and white stripes were painted under the wings because the Typhoon looked like the Fw 190, and they were the forerunner of the D-Day invasion stripes. During Operation Goodwood the 2nd TAF claimed 257 tanks, though later analysis credited rockets with far fewer kills.",
+"facts": [
+"Entered service: 11 September 1941.",
+"Armament: four 20 mm cannon, eight RP-3 rockets, two 1,000 lb bombs.",
+"Built: 3,317.",
+"Normandy: 18 Typhoon IB squadrons in 2nd Tactical Air Force by June 1944.",
+"The tile shows 2 x 1,000 lb bombs."
+],
+"src": [
+"Hawker Typhoon, Wikipedia",
+"https://en.wikipedia.org/wiki/Hawker_Typhoon"
+],
+"find": {
+"n": "uk",
+"q": "Typhoon"
+},
+"aka": [
+"Typhoon",
+"Tiffy",
+"Aircraft",
+"air support"
+]
 }
 ]
 };

@@ -3,15 +3,15 @@
 
   var LSK = 'hts.hon.bro.v1';
   var BOXES = [{ id: 'bro', name: 'Big Red One' }];
-  var TTYPES = [['all', 'All'], ['platoon', 'Platoons'], ['command', 'Command'], ['hero', 'Heroes'], ['landing', 'Landing'], ['special', 'Other']];
+  var TTYPES = [['all', 'All'], ['platoon', 'Platoons'], ['command', 'Command'], ['hero', 'Heroes'], ['landing', 'Landing'], ['aircraft', 'Aircraft'], ['support', 'Support tile'], ['special', 'Other']];
   var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }];
   var VIEWS = [['tile', 'By tile'], ['unit', 'Unit list']];
   var KINDS = [['all', 'All'], ['officer', 'Officers'], ['character', 'Characters'], ['infantry', 'Infantry'], ['weapon', 'Weapons'], ['vehicle', 'Vehicles'], ['marker', 'Markers'], ['aircraft', 'Aircraft']];
   var KIND_ORDER = ['officer', 'character', 'infantry', 'weapon', 'vehicle', 'marker', 'aircraft'];
   var KIND_NAME = { officer: 'Officer', character: 'Character', infantry: 'Infantry', weapon: 'Weapon', vehicle: 'Vehicle', marker: 'Marker', aircraft: 'Aircraft' };
   var CAT_NAME = { support: 'Support unit', gear: 'Gear', trait: 'Character trait', order: 'Order', customization: 'Customization' };
-  var TYPE_NAME = { platoon: 'Platoon', command: 'Command tile', hero: 'Hero', landing: 'Landing', special: 'Other' };
-  var TYPE_ORDER = { command: 0, platoon: 1, hero: 2, landing: 3, special: 4 };
+  var TYPE_NAME = { platoon: 'Platoon', command: 'Command tile', hero: 'Hero', landing: 'Landing', aircraft: 'Aircraft', support: 'Support tile', special: 'Other' };
+  var TYPE_ORDER = { command: 0, platoon: 1, hero: 2, landing: 3, aircraft: 4, support: 5, special: 6 };
 
   var S = { b: 'bro', n: 'us', q: '', view: 'tile', kind: 'all', tt: 'all', theme: 'light' };
   var cache = {};

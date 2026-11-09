@@ -1504,6 +1504,86 @@ HTS_DATA["hon-bro-ge"] = {
     "position_pi",
     "sdkfz_251_7"
    ]
+  },
+  {
+   "id": "fw190a",
+   "name": "Focke-Wulf",
+   "sub": "Fw 190A",
+   "cost": 60,
+   "type": "aircraft",
+   "set": "BO",
+   "squares": 0,
+   "img": "img/hon/bro/ge/tiles/fw190a.webp",
+   "w": 602,
+   "h": 464,
+   "sheet": "TTS Omaha German HQ",
+   "units": [
+    [
+     "Focke-Wulf Fw 190A",
+     1,
+     "aircraft"
+    ]
+   ],
+   "uimg": {
+    "Focke-Wulf Fw 190A": "img/hon/bro/ge/units/air-fw190a.webp"
+   },
+   "slots": [],
+   "own": [],
+   "note": "Aircraft tile. Recruited with an Aircraft Orders option, and its cost is the cost printed on the tile."
+  },
+  {
+   "id": "bf109g6",
+   "name": "Messerschmitt",
+   "sub": "Bf 109 G6",
+   "cost": 40,
+   "type": "aircraft",
+   "set": "BO",
+   "squares": 0,
+   "img": "img/hon/bro/ge/tiles/bf109g6.webp",
+   "w": 602,
+   "h": 464,
+   "sheet": "TTS Omaha German HQ",
+   "units": [
+    [
+     "Messerschmitt Bf 109 G6",
+     1,
+     "aircraft"
+    ]
+   ],
+   "uimg": {
+    "Messerschmitt Bf 109 G6": "img/hon/bro/ge/units/air-bf109g6.webp"
+   },
+   "slots": [],
+   "own": [],
+   "note": "Aircraft tile. Recruited with an Aircraft Orders option, and its cost is the cost printed on the tile."
+  },
+  {
+   "id": "support_tile",
+   "name": "Support",
+   "sub": "Scenario support tile",
+   "cost": 0,
+   "type": "support",
+   "set": "ECG",
+   "squares": 0,
+   "img": "img/hon/bro/ge/tiles/support_tile.webp",
+   "w": 352,
+   "h": 592,
+   "sheet": "TTS Omaha German Options",
+   "units": [],
+   "slots": [
+    {
+     "x": 0.07,
+     "y": 0.44,
+     "w": 0.87,
+     "h": 0.52,
+     "size": "w",
+     "stripes": [
+      "all"
+     ]
+    }
+   ],
+   "own": [],
+   "note": "Support tile for scenarios. Cost 0. One slot that takes any option (Caen booklet V1.4, p.11)."
   }
  ],
  "options": [

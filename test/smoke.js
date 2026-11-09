@@ -258,7 +258,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const hrerrs = []; hrp.on('pageerror', e => hrerrs.push(e.message)); hrp.on('console', m => { if (m.type() === 'error') hrerrs.push(m.text()); });
   await hrp.goto(base + 'heroes.html');
   ok(await hrp.locator('.hrow').count() === 8, 'US heroes page lists 8 hero tiles');
-  ok(await hrp.locator('.eqcard').count() === 12, 'equipment shows 12 cards across boxes');
+  ok(await hrp.locator('.eqcard').count() === 24, 'equipment shows 24 cards across boxes');
   await hrp.click('[data-nation="ge"]');
   ok(await hrp.locator('.hrow').count() === 6, 'German heroes page lists 6 hero tiles');
   await hrp.locator('.hhead', { hasText: 'Ludwig' }).click();
@@ -282,9 +282,9 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await hrp.click('[data-nation="ge"]');
   ok(await hrp.locator('.hrow').count() === 1, 'heroes: Bloody Omaha German hero is Heinrich');
   await hrp.click('[data-box="bro"]');
-  ok(await hrp.locator('.hrow').count() === 3 && await hrp.locator('.eqcard').count() === 7, 'heroes: Big Red One German 3 heroes, 7 equipment cards');
+  ok(await hrp.locator('.hrow').count() === 3 && await hrp.locator('.eqcard').count() === 13, 'heroes: Big Red One German 3 heroes, 13 equipment cards');
   await hrp.click('[data-nation="us"]'); await hrp.click('[data-box="promo"]');
-  ok(await hrp.locator('.hrow').count() === 3 && await hrp.locator('.eqcard').count() === 0, 'heroes: promo filter shows 3 US heroes and no equipment');
+  ok(await hrp.locator('.hrow').count() === 3 && await hrp.locator('.eqcard').count() === 3, 'heroes: promo filter shows 3 US heroes and 3 promo equipment cards');
   await hrp.click('[data-box="all"]'); await hrp.fill('#q', 'heroic'); await hrp.waitForTimeout(300);
   ok(await hrp.locator('.eqcard', { hasText: 'Heroic' }).count() === 1 && await hrp.locator('.eqcard img').count() === 2, 'heroes: Heroic card has option and marker images');
   const hbroken = await hrp.evaluate(async () => { await new Promise(r => setTimeout(r, 400)); return Array.from(document.images).filter(i => i.complete && i.naturalWidth === 0).length; });
@@ -297,7 +297,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
 
   // Bloody Omaha scenarios, tokens and armies
   await sp.goto(base + 'scenarios.html?b=omaha'); await sp.waitForTimeout(300);
-  ok(await sp.locator('.hrow').count() === 5, 'omaha scenarios: 5 entries');
+  ok(await sp.locator('.hrow').count() === 12, 'omaha scenarios and rules chapters: 12 entries');
   await sp.locator('.hhead', { hasText: 'Part #2' }).first().click();
   ok(await sp.locator('.hrow.open [data-army]').count() === 3, 'omaha part 2 shows 3 builder links');
   const oInfo = JSON.parse(await sp.evaluate(() => JSON.stringify(window.HTS_SCEN['hon-omaha'].entries.filter(e => e.armies).map(e => [e.id, e.armies]))));
@@ -362,6 +362,27 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await tp.click('#btnOwn'); await tp.click('#ownNone'); await tp.click('#ownClose'); await tp.waitForTimeout(200);
   ok(await tp.locator('.lcard').count() === own0, 'collection: clearing the ticks shows everything again');
   await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); localStorage.removeItem('hts.hon.bro.v1'); } catch (e) {} });
+
+  // Aircraft tiles, Support tile and M10 in the builder
+  await tp.goto(base + 'index.html'); await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); localStorage.removeItem('hts.hon.bro.v1'); } catch (e) {} }); await tp.reload(); await tp.waitForTimeout(400);
+  await tp.click('[data-type=aircraft]'); await tp.waitForTimeout(150);
+  ok(await tp.locator('.lcard').count() === 2, 'builder: 2 US aircraft tiles (Thunderbolt, Mustang)');
+  await tp.locator('.lcard', { hasText: 'Thunderbolt' }).first().locator('[data-add]').click();
+  ok((await tp.textContent('#ptsUsed')) === '55', 'builder: Thunderbolt costs 55');
+  tp.once('dialog', d => d.accept());
+  await tp.click('[data-nation="uk"]'); await tp.click('[data-type=support]'); await tp.waitForTimeout(150);
+  await tp.locator('.lcard', { hasText: 'Support' }).first().locator('[data-add]').click();
+  await tp.locator('.atile .slot').first().click();
+  ok(await tp.locator('.pcard', { hasText: 'Artillery' }).count() >= 1 && await tp.locator('.pcard').count() > 20, 'builder: Support tile slot takes any option');
+  await tp.locator('.pcard', { hasText: 'Artillery' }).first().click();
+  ok((await tp.textContent('#ptsUsed')) === '30', 'builder: Support tile with Artillery costs 30');
+  tp.once('dialog', d => d.accept());
+  await tp.click('[data-nation="us"]');
+  const m10 = JSON.parse(await tp.evaluate(() => JSON.stringify(window.HTS_DATA['hon-bro-us'].options.filter(o => o.id === 'm10_a1').map(o => [o.cost, o.size]))));
+  ok(m10.length === 1 && m10[0][0] === 60, 'builder: M10 Tank Destroyer option (60) is in the US data');
+  const air = JSON.parse(await tp.evaluate(() => JSON.stringify(['us', 'ge', 'uk'].map(n => window.HTS_DATA['hon-bro-' + n].tiles.filter(t => t.type === 'aircraft').map(t => t.cost)))));
+  ok(JSON.stringify(air) === '[[55,50],[60,40],[50,50]]', 'builder: aircraft costs ' + JSON.stringify(air));
+  await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.bro.v1'); } catch (e) {} });
 
   // Battle Pack #3 (Windsor & Jupiter) units
   await tp.goto(base + 'units.html'); await tp.waitForTimeout(300);
@@ -546,7 +567,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const rd = await b.newPage({ viewport: { width: 390, height: 844 } });
   const rderrs = []; rd.on('pageerror', e => rderrs.push(e.message)); rd.on('console', m => { if (m.type() === 'error') rderrs.push(m.text()); });
   const fullData = await rd.goto(base + 'scenario.html?b=bro&s=plain').then(() => rd.evaluate(() => JSON.parse(JSON.stringify(window.HTS_SCEN_FULL))));
-  const wanted = { bro: ['rules', 'free', 'multi', 'plain', 'chicken', 'night', 'caumont', 'quesnay', 'surrounded', 'windy', 'pass', 'tracker'], omaha: ['landings', 'part1', 'part2', 'little', 'big'], caen: ['tradingblows', 'lightbrigade', 'beavertails', 'zuruck', 'charon', 'operationstack', 'safari', 'campaignreport'] };
+  const wanted = { bro: ['rules', 'free', 'multi', 'plain', 'chicken', 'night', 'caumont', 'quesnay', 'surrounded', 'windy', 'pass', 'tracker'], omaha: ['intro', 'rules-battlefield', 'rules-special', 'rules-abilities', 'rules-recruitment', 'rules-aviation', 'landings', 'part1', 'part2', 'little', 'big', 'icons'], caen: ['tradingblows', 'lightbrigade', 'beavertails', 'zuruck', 'charon', 'operationstack', 'safari', 'campaignreport'] };
   for (const bx of Object.keys(wanted)) {
     const f = fullData['hon-' + bx];
     ok(f && wanted[bx].every(id => f.entries[id] && f.entries[id].blocks.length > 10), bx + ': every scenario has a full web version');
@@ -563,6 +584,18 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
       ok(info.sw <= info.cw + 1, bx + '/' + id + ': no sideways scroll on a phone');
     }
   }
+  // Omaha booklet: every page 1 to 24 has a marker in a full entry, and the rules entries carry text for the new chapters
+  const omf = fullData['hon-omaha'];
+  const omPg = new Set(); Object.values(omf.entries).forEach(e => e.blocks.forEach(bl => { if (bl.k === 'pg') omPg.add(bl.n); }));
+  const omMissing = []; for (let n = 1; n <= 24; n++) if (!omPg.has(n)) omMissing.push(n);
+  ok(omMissing.length === 0, 'omaha: every booklet page 1 to 24 has a page marker in a web entry (missing: ' + omMissing.join(',') + ')');
+  const omText = id => omf.entries[id].blocks.map(bl => (bl.t || '') + ' ' + (bl.items || []).join(' ')).join(' ');
+  ok(/Minefield/.test(omText('rules-recruitment')) && /Speed Penalty/.test(omText('rules-aviation')) && /Transport capacity of 7/.test(omText('rules-special')) && /Trenches/.test(omText('rules-battlefield')) && /Barrage order/.test(omText('rules-abilities')) && /Cota/.test(omText('intro')) && /Minesweeper/.test(omText('icons')), 'omaha: rules chapters carry their text');
+  const omRs = await rd.goto(base + 'scenario.html?b=omaha&s=rules-recruitment').then(() => rd.evaluate(() => ({ h4: document.querySelectorAll('.sbody h4').length, h3: document.querySelectorAll('.sbody h3').length, pm: document.querySelectorAll('.pgmark').length })));
+  ok(omRs.h4 >= 15 && omRs.h3 >= 5 && omRs.pm === 4, 'omaha recruitment options entry renders sub headings and four page markers (' + JSON.stringify(omRs) + ')');
+  // rules page: pictures sit under the right rules
+  const omRulePics = await rq.evaluate(() => { const o = {}; HTS_RULES['hon-omaha'].chunks.forEach(c => { if (c.sub) o[c.sub] = (c.figs || []).map(f => f.img.split('/').pop()); }); return o; });
+  ok(omRulePics['Trenches'].join() === 'p5-4.webp,p5-6.webp' && omRulePics['Difficult terrain'].join() === 'p5-2.webp' && omRulePics['Streams'].join() === 'p5-3.webp' && omRulePics['Shovels'].join() === 'p10-1.webp' && omRulePics['Mounds'].join() === 'p4-5.webp,p5-1.webp', 'omaha rules: pictures match their rules');
   await rd.goto(base + 'scenario.html?b=bro&s=plain'); await rd.waitForTimeout(200);
   await rd.locator('.pgmark button').first().click(); await rd.waitForTimeout(200);
   ok(await rd.locator('#lbx:not([hidden])').count() === 1, 'page marker opens the original page');

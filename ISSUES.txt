@@ -1,5 +1,5 @@
 HEROES SYSTEM TACTICAL SCALE: ISSUES TO BE ADDRESSED
-Last updated: 2026-11-09 (site version hts-v28)
+Last updated: 2026-11-09 (site version hts-v29)
 
 HOW TO USE THIS FILE
 - One entry per issue. Never delete an entry. Change its status and add a dated line under "Decision".
@@ -134,21 +134,22 @@ Decision:
 
 ISS-023  Bloody Omaha armies differ from the printed points   [OPEN]
 Where: data/hon-omaha-scenarios.js, armies for Part 1, Little River, Big River
-Detail: 4 of the 11 Omaha armies match the printed points exactly (the three Part 2 armies and Big River German B). The other seven differ for the reasons below.
-- Part 1 US: builder 545, printed 535. The P-51 Mustang tile (50 points) is not in the builder, so the real gap may be larger. Unclear whether the printed figure leaves out the Sherman or something else.
+Detail: 6 of the 11 Omaha armies match the printed points exactly (the three Part 2 armies, both Little/Big River US A armies and Big River German B). The other five differ for the reasons below. Status after hts-v29 is in the Decision lines at the end.
+- Part 1 US: builder 595, printed 535, with the P-51 Mustang tile (50) now counted. The M4 Sherman on the Field Command shows no cost in the booklet picture. Without its 60 points the builder total is exactly 535, so the printed figure leaves the Sherman out. The Assault Squad is printed as 60 in the picture, the tile data says 50 (kept, it makes the sum work).
 - Part 1 German: builder 365, printed 335. The Feldkommando and Defense Group enter on Turn 3, which may not count toward the limit.
-- Little and Big River US A: builder 435, printed 495. The M10 A1 Tank Destroyer option is not in the builder data (the gap is 60 points).
-- Big River US B: builder 450, printed 550. The P-47 Thunderbolt and P-51 Mustang aircraft tiles are not in the builder data.
+- Little and Big River US A: now 495 of 495. The M10 A1 Tank Destroyer option (60) was added to the builder in hts-v29.
+- Big River US B: builder 555, printed 550, with the P-47 Thunderbolt (55) and P-51 Mustang (50) tiles now counted. Five points above the printed figure. Not explained.
 - Little and Big River German A: builder 405, printed 415. Haystack counters and defensive positions are scenario items with costs the builder does not model.
 Conflict: printed scenario totals against the sum of option costs on the tiles.
 Decision: 2026-11-06 Ship as is. Each army carries a note saying what is missing. Fixing it needs the M10 option and the aircraft tiles scanned or supplied.
+Decision: 2026-11-09 The M10 A1 option and the P-47 and P-51 aircraft tiles are in the builder (hts-v29). Part 1 US, Big River US B and the two German A armies still differ, each for the reason above. Costs of the M10 and the aircraft were read from the art.
 
 ISS-024  Scenarios are summaries, not full web versions or PDFs   [FIXED in hts-v22, follow-ups below]
 Where: scenario.html, js/scenario.js, data/hon-bro-scenarios-full.js, data/hon-omaha-scenarios-full.js, pdf/
-Detail: The project is a community archive because the publisher has closed. Every scenario is now a full web page for phones and iPads, with the booklet page numbers, maps, recruitment pictures, the original page images and a PDF download. Big Red One: 12 entries (pages 3 to 28). Bloody Omaha: 5 entries (pages 14 to 23).
+Detail: The project is a community archive because the publisher has closed. Every scenario is now a full web page for phones and iPads, with the booklet page numbers, maps, recruitment pictures, the original page images and a PDF download. Big Red One: 12 entries (pages 3 to 28). Bloody Omaha: 12 entries covering pages 1 to 24 (hts-v29).
 Decision: 2026-11-06 Done for both existing books. The rule applies to every box added from now on.
 Follow-ups:
-- The Omaha rules chapters (book pages 1 to 13 and the icon summary on page 24) are not full web entries yet. They are in the PDF and the page images, and the Rules page covers them (see ISS-022).
+- The Omaha rules chapters (book pages 1 to 13 and the icon summary on page 24) became full web entries in hts-v29: introduction with the 6 June report, the five rules chapters and the icon summary. Text was typed from the page images. The Rules page still holds the same rules as searchable cards. The icon summary page is numbered 5.1 and 6.x and gives "P.18-19" for the terrain effects (they are on p.4 to 5). It is kept as printed with a note.
 - Big Red One: the booklet files are labelled V2.4 but the newest file is V2.5 (pages 21 to 28 differ). The web text follows the V2.5 page images. The V2.4 PDF is kept as the earlier version.
 - Text was typed from the page images, so a few small misreadings are possible. Die results in the Plain Carnage walkthrough and turn numbers shown only as icons were read from the icons and checked against the arithmetic where possible.
 - The source prints "Victory, Regular or Major" in the Surrounded! Radio marker text. It is kept as printed. It probably means Minor.
@@ -200,7 +201,7 @@ ISS-029  Caen scenarios: red work-in-progress blocks   [OPEN]
 Where: booklet pp.14, 17, 19, 20, 22, 23, 25. Red blocks hide unfinished text. Scenario 6 (Operation Stack) gives no rule for how many hits destroy the chimney. Replace when a newer booklet exists.
 
 ISS-030  Caen scenario armies do not match every printed total   [OPEN]
-Where: scenario armies in data/hon-caen-scenarios.js. Aircraft tiles, Support tiles (FLAK 88, Artillery, Initiative orders) and hero equipment are not in the builder, so the builder total is below the printed total in most armies. Scenario 3 has a 25-point unit card beside the Field Command that shows no cost. Safari German army builds to 500 against a printed 495. Sgt Lee Lowe's Overwatch has no UK version in the builder. Each army carries a note.
+Where: scenario armies in data/hon-caen-scenarios.js. Since hts-v29 the Spitfire, Hawker Typhoon and the UK/German Support tile are in the builder, and Light Brigade (475) and Operation Stack (545) match exactly. Still missing: the FLAK 88 option for the German Support tile, the Initiative option (Charon), and the UK hero gear (Houde's Bazooka and Thompson, Lowe's Overwatch). Scenario 3 has a 25-point unit card beside the Field Command that shows no cost. Safari German army builds to 500 against a printed 495. Each army carries a note.
 
 BATTLE PACK #3: WINDSOR & JUPITER (units, History, tokens imported)
 ------------------------------------------------------------------
@@ -223,9 +224,24 @@ Decision: 2026-11-09 Tile data keeps the printed text. Meyer has a History entry
 ISS-034  Cards for Omaha, Battle for Caen and Battle Pack #3 are missing   [OPEN]
 Where: cards.html, data/hon-bro-cards.js.
 Detail: Only the Big Red One Battle Event cards (US and German decks) were in the local files. The Panzerfaust and Geballte Ladung texts quote the Combat Values as printed. Hero equipment cards are on heroes.html, not here.
-Decision: 2026-11-09 Add the other decks to _Inbox as image files. They go into the same data file with a box switch.
+Decision: 2026-11-09 Hero equipment cards: 24 are on heroes.html since hts-v29 (Big Red One, promo box, Windsor & Jupiter). Add the other decks to _Inbox as image files. They go into the same data file with a box switch.
 
 ISS-035  Collection filter covers the army builder only   [OPEN]
 Where: js/collection.js, js/app.js.
 Detail: My collection hides unowned tiles and options in the builder. The unit index, heroes, History and maps pages still show everything. Product names for the promo codes (KS-9, SOLO, WS#0, P500) are generic because the code is all the sheets give.
 Decision: 2026-11-09 Extend the same setting (js/collection.js, shared key) to the units and heroes pages if you want it there.
+
+ISS-036  Hero gear with no art in the files   [OPEN]
+Where: data/hon-bro-heroes.js, data/hon-bro-uk.js, data/hon-bro-ge.js.
+Detail: The Caen booklet (V1.4) names gear that has no image in the local files: the UK customizations Houde's Bazooka, Houde's Thompson and Lowe's Overwatch, the FLAK 88 option for the German Support tile, and the Initiative option Charon needs. Charon and Beavertails therefore build 10 and 35 points under the printed totals. The Commonwealth equipment card is also missing.
+Decision: 2026-11-09 Add the scans to _Inbox. Until then each army note says what is left out.
+
+ISS-037  Aircraft costs and the Support tile read from the art   [OPEN]
+Where: data/hon-bro-us.js, hon-bro-ge.js, hon-bro-uk.js (type aircraft and support).
+Detail: Costs on the aircraft counters were read from the images: P-47 55, P-51 50, Fw 190 60, Bf 109 40, Spitfire 50, Typhoon 50. The Support tile costs 0 and takes any option in its slot (stripe code "all"), because the booklet says it only exists in scenarios and overrides the recruitment rules for one option. Aircraft sit in the builder as stand-alone tiles that the player adds beside the Orders Option.
+Decision: 2026-11-09 Check the costs against your counters.
+
+ISS-038  Pictures under the Omaha rules were attached to the wrong rules   [FIXED in hts-v29]
+Where: data/hon-omaha-rules.js, rules.html.
+Detail: Trench, stream, field, difficult terrain, mound and shovel pictures were each under a neighbouring rule (the trench diagram showed under Difficult terrain, the shovel diagram under Position). Found while typing the rules chapters for the reader. Pictures are now matched to their rules, and a smoke test checks them.
+Decision: 2026-11-09 Fixed. The Big Red One rules page was not re-checked picture by picture.

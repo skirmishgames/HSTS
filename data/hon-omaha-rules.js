@@ -198,6 +198,11 @@ HTS_RULES["hon-omaha"] = {
 "img": "img/hon/omaha/rules/p4-5.webp",
 "w": 218,
 "h": 213
+},
+{
+"img": "img/hon/omaha/rules/p5-1.webp",
+"w": 489,
+"h": 394
 }
 ]
 },
@@ -210,14 +215,9 @@ HTS_RULES["hon-omaha"] = {
 "id": 7,
 "figs": [
 {
-"img": "img/hon/omaha/rules/p5-4.webp",
-"w": 401,
-"h": 260
-},
-{
-"img": "img/hon/omaha/rules/p5-6.webp",
-"w": 228,
-"h": 253
+"img": "img/hon/omaha/rules/p5-2.webp",
+"w": 194,
+"h": 202
 }
 ]
 },
@@ -230,9 +230,9 @@ HTS_RULES["hon-omaha"] = {
 "id": 8,
 "figs": [
 {
-"img": "img/hon/omaha/rules/p5-5.webp",
+"img": "img/hon/omaha/rules/p5-3.webp",
 "w": 194,
-"h": 190
+"h": 201
 }
 ]
 },
@@ -242,7 +242,14 @@ HTS_RULES["hon-omaha"] = {
 "page": 5,
 "text": "Obstacle (Infantry)\nEars of golden wheat, rustling in a warm breeze. Surely nothing could be hiding in such a lovely spot.",
 "term": null,
-"id": 9
+"id": 9,
+"figs": [
+{
+"img": "img/hon/omaha/rules/p5-5.webp",
+"w": 194,
+"h": 190
+}
+]
 },
 {
 "sec": "1.2",
@@ -258,19 +265,7 @@ HTS_RULES["hon-omaha"] = {
 "page": 5,
 "text": "They are always placed between two square and never diagonally.",
 "term": null,
-"id": 11,
-"figs": [
-{
-"img": "img/hon/omaha/rules/p5-1.webp",
-"w": 489,
-"h": 394
-},
-{
-"img": "img/hon/omaha/rules/p5-2.webp",
-"w": 194,
-"h": 202
-}
-]
+"id": 11
 },
 {
 "sec": "1.3",
@@ -305,9 +300,14 @@ HTS_RULES["hon-omaha"] = {
 "id": 15,
 "figs": [
 {
-"img": "img/hon/omaha/rules/p5-3.webp",
-"w": 194,
-"h": 201
+"img": "img/hon/omaha/rules/p5-4.webp",
+"w": 401,
+"h": 260
+},
+{
+"img": "img/hon/omaha/rules/p5-6.webp",
+"w": 228,
+"h": 253
 }
 ]
 },
@@ -521,14 +521,7 @@ HTS_RULES["hon-omaha"] = {
 "page": 10,
 "text": "Restricted to infantry\nThis option gives you 1 Forward Position. Instead of taking a Firing Action or a Movement Action, during the Activation Phase or the Supply Phase, a unit may put the tile on its square. A forward position tile may not be placed inside a building, rubble, a bunker, a water square, or any square Impassable to Infantry Units\nFront\nBack\nHedgerow side\nother side\nUse the tile's Hedgerow side for a position in a hedgerow, and its reverse side if you put it in any other type of terrain where it is allowed to be placed.",
 "term": null,
-"id": 38,
-"figs": [
-{
-"img": "img/hon/omaha/rules/p10-1.webp",
-"w": 373,
-"h": 277
-}
-]
+"id": 38
 },
 {
 "sec": "4.2",
@@ -536,7 +529,14 @@ HTS_RULES["hon-omaha"] = {
 "page": 10,
 "text": "Restricted to infantry\nThis option gives you 4 Shovel markers. Each marker can be used in one of two ways:\nDuring an assault, it gives you a +1 bonus to the result of your roll. After a Movement Action, you may put a Shovel marker on its 'sand' side between the unit's square and any other square in its ZoC. You may only use it this way on the beach or in the desert.",
 "term": null,
-"id": 39
+"id": 39,
+"figs": [
+{
+"img": "img/hon/omaha/rules/p10-1.webp",
+"w": 373,
+"h": 277
+}
+]
 },
 {
 "sec": "4.2",

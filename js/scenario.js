@@ -26,6 +26,7 @@
     switch (b.k) {
       case 'h': return '<h2 id="' + slug(b.t) + '">' + rich(b.t) + '</h2>';
       case 'h3': return '<h3>' + rich(b.t) + '</h3>';
+      case 'h4': return '<h4>' + rich(b.t) + '</h4>';
       case 'p': return '<p>' + rich(b.t) + '</p>';
       case 'quote': return '<blockquote>' + rich(b.t) + '</blockquote>';
       case 'note': return '<aside class="snote">' + rich(b.t) + '</aside>';
@@ -120,7 +121,7 @@
     try { var j = JSON.parse(localStorage.getItem(LSK) || '{}'); if (j.theme) S.theme = j.theme; } catch (e) { /* ignore */ }
     var p = new URLSearchParams(location.search);
     if (BOXN[p.get('b')]) S.b = p.get('b');
-    if (p.get('s') && /^[a-z0-9]+$/.test(p.get('s'))) S.s = p.get('s');
+    if (p.get('s') && /^[a-z0-9-]+$/.test(p.get('s'))) S.s = p.get('s');
     window.HTS_SCEN_FULL = window.HTS_SCEN_FULL || {};
     bind(); render();
     if (location.hash) { var t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }

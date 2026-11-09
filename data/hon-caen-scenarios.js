@@ -90,11 +90,17 @@ HTS_SCEN["hon-caen"] = {
        [
         null
        ]
+      ],
+      [
+       "support_tile",
+       [
+        "artillery"
+       ]
       ]
      ],
-     "pts": 135,
+     "pts": 165,
      "sub": "15th Infantry Division",
-     "note": "Not in the builder: Houde's Bazooka (15 points, x2) and the Support tile with the Artillery Orders option (30 points, x3). They bring the total to the printed 180. The Royal Winnipeg Rifles tile keeps its first slot empty.",
+     "note": "Not in the builder: Houde's Bazooka (15 points, x2). The files have no Commonwealth version of that card. It brings the total to the printed 180. The Royal Winnipeg Rifles tile keeps its first slot empty.",
      "label": "Commonwealth reinforcements"
     },
     "ge": {
@@ -200,11 +206,14 @@ HTS_SCEN["hon-caen"] = {
        [
         "universal_carrier"
        ]
+      ],
+      [
+       "spitfire",
+       []
       ]
      ],
-     "pts": 425,
+     "pts": 475,
      "sub": "43rd Infantry Division",
-     "note": "The Spitfire aircraft tile (50 points) is not in the builder yet, it brings the total to the printed 475.",
      "label": "Commonwealth army"
     },
     "ge": {
@@ -319,11 +328,19 @@ HTS_SCEN["hon-caen"] = {
       [
        "sgt_lee_lowe",
        []
+      ],
+      [
+       "spitfire",
+       []
+      ],
+      [
+       "hawker_typhoon",
+       []
       ]
      ],
-     "pts": 370,
+     "pts": 470,
      "sub": "3rd Canadian Infantry Division",
-     "note": "Not in the builder: the Spitfire and Hawker Typhoon aircraft tiles (50 points each), Lowe's Overwatch (10 points, no UK version of it exists yet) and an extra unit card beside the Field Command tile. That card shows no cost, 25 points are needed to reach the printed 505 and it may be a Universal Carrier. Check it against the booklet.",
+     "note": "Not in the builder: Lowe's Overwatch (10 points, no UK version of it exists yet) and an extra unit card beside the Field Command tile. That card shows no cost, 25 points are needed to reach the printed 505 and it may be a Universal Carrier. Check it against the booklet.",
      "label": "Commonwealth army"
     },
     "ge": {
@@ -563,11 +580,15 @@ HTS_SCEN["hon-caen"] = {
        [
         "ammo_uk"
        ]
+      ],
+      [
+       "hawker_typhoon",
+       []
       ]
      ],
-     "pts": 625,
+     "pts": 675,
      "sub": "3rd Infantry Division and 11th Armoured Division",
-     "note": "Not in the builder: the Hawker Typhoon aircraft tile (50 points) and the Initiative Orders option (10 points) that joins the army at the start of turn 5. They bring the total to the printed 685.",
+     "note": "Not in the builder: the Initiative Orders option (10 points) that joins the army at the start of turn 5. Every slot on the High Command tile is already used. It brings the total to the printed 685.",
      "label": "Commonwealth army"
     },
     "ge": {
@@ -697,11 +718,15 @@ HTS_SCEN["hon-caen"] = {
       [
        "ludger_houde",
        []
+      ],
+      [
+       "spitfire",
+       []
       ]
      ],
-     "pts": 495,
+     "pts": 545,
      "sub": "3rd Canadian Infantry Division",
-     "note": "The Spitfire aircraft tile (50 points) is not in the builder yet, it brings the total to the printed 545. The 60-point Royal Winnipeg Rifles card is read as Howitzer Support.",
+     "note": "The 60-point Royal Winnipeg Rifles card is read as Howitzer Support.",
      "label": "Commonwealth army"
     },
     "ge": {

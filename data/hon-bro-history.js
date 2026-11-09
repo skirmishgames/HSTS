@@ -1569,6 +1569,34 @@ window.HTS_HISTORY["hon-bro"] = {
 "AT Mine",
 "Bouncing Betty"
 ]
+},
+{
+"id": "m10",
+"name": "M10 Tank Destroyer (M10 A1)",
+"cat": "Vehicles",
+"side": "us",
+"text": "The 3-inch Gun Motor Carriage M10 was standardized in June 1942 and built on a Sherman chassis with an open-topped turret and a 3-inch M7 gun. Fisher Body built 4,993 M10s and Ford built 1,038 M10A1s (Fisher added 375 more). The M10A1 used the M4A3 chassis and a 450 hp Ford V8, where the original had a twin diesel of 375 hp. The crew was five. The armour was thin, from 9.5 to 57.2 mm, and the turret turned by hand, taking about 80 seconds to go round. On 10 July 1944 the 899th Tank Destroyer Battalion stopped a Panzer Lehr counterattack near Le Dezert. Its 3-inch gun struggled against the front of the Panther, and the M36 began to replace it from October 1944.",
+"facts": [
+"Built: 6,406 (4,993 M10 and 1,413 M10A1).",
+"Gun: 3-inch M7, 54 rounds.",
+"Crew: 5.",
+"Armour: 9.5 to 57.2 mm.",
+"\"Wolverine\" was a Chrysler advertising name. US troops called it the TD."
+],
+"src": [
+"M10 tank destroyer, Wikipedia",
+"https://en.wikipedia.org/wiki/M10_tank_destroyer"
+],
+"find": {
+"n": "us",
+"q": "M10"
+},
+"aka": [
+"M10",
+"M10 A1",
+"tank destroyer",
+"TD"
+]
 }
 ]
 };

@@ -18,7 +18,8 @@ HTS_DATA["hon-bro-us"] = {
   "M8 AC Greyhound": "img/hon/bro/us/units/us-options-m8-ac-greyhound-01-a.webp",
   "M5 Stuart": "img/hon/bro/us/units/us-options-m5-stuart-01-a.webp",
   "M4 Sherman": "img/hon/bro/us/units/us-options-m4-sherman-01-a.webp",
-  "M3A1 Halftrack": "img/hon/bro/us/units/18th-inf-reg-c-m3a1-halftrack-01-a.webp"
+  "M3A1 Halftrack": "img/hon/bro/us/units/18th-inf-reg-c-m3a1-halftrack-01-a.webp",
+  "M10 A1": "img/hon/bro/us/units/bo-m10-a1.webp"
  },
  "tiles": [
   {
@@ -1097,6 +1098,58 @@ HTS_DATA["hon-bro-us"] = {
     "training_fr",
     "guardian_fr"
    ]
+  },
+  {
+   "id": "p47_thunderbolt",
+   "name": "Thunderbolt",
+   "sub": "Republic P-47",
+   "cost": 55,
+   "type": "aircraft",
+   "set": "BO",
+   "squares": 0,
+   "img": "img/hon/bro/us/tiles/p47_thunderbolt.webp",
+   "w": 602,
+   "h": 464,
+   "sheet": "TTS Omaha US HQ",
+   "units": [
+    [
+     "Thunderbolt",
+     1,
+     "aircraft"
+    ]
+   ],
+   "uimg": {
+    "Thunderbolt": "img/hon/bro/us/units/air-p47_thunderbolt.webp"
+   },
+   "slots": [],
+   "own": [],
+   "note": "Aircraft tile. Recruited with an Aircraft Orders option, and its cost is the cost printed on the tile."
+  },
+  {
+   "id": "p51_mustang",
+   "name": "Mustang",
+   "sub": "North American P-51D",
+   "cost": 50,
+   "type": "aircraft",
+   "set": "BO",
+   "squares": 0,
+   "img": "img/hon/bro/us/tiles/p51_mustang.webp",
+   "w": 602,
+   "h": 464,
+   "sheet": "TTS Omaha US HQ",
+   "units": [
+    [
+     "Mustang",
+     1,
+     "aircraft"
+    ]
+   ],
+   "uimg": {
+    "Mustang": "img/hon/bro/us/units/air-p51_mustang.webp"
+   },
+   "slots": [],
+   "own": [],
+   "note": "Aircraft tile. Recruited with an Aircraft Orders option, and its cost is the cost printed on the tile."
   }
  ],
  "options": [
@@ -2490,6 +2543,29 @@ HTS_DATA["hon-bro-us"] = {
    "w": 120,
    "h": 146,
    "sheet": "US-Vol3-p2"
+  },
+  {
+   "id": "m10_a1",
+   "name": "M10 Tank Destroyer",
+   "cat": "support",
+   "cost": 60,
+   "squares": 1,
+   "set": "BO",
+   "size": "w",
+   "stripes": [
+    "any"
+   ],
+   "img": "img/hon/bro/us/options/m10_a1.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "TTS Omaha US options",
+   "units": [
+    [
+     "M10 A1",
+     1,
+     "vehicle"
+    ]
+   ]
   }
  ]
 };

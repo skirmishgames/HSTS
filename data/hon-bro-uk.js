@@ -945,6 +945,86 @@ HTS_DATA["hon-bro-uk"] = {
     "bren_platoon_dc",
     "mortar_platoon_dc"
    ]
+  },
+  {
+   "id": "spitfire",
+   "name": "Spitfire",
+   "sub": "Mk IX",
+   "cost": 50,
+   "type": "aircraft",
+   "set": "ECG",
+   "squares": 0,
+   "img": "img/hon/bro/uk/tiles/spitfire.webp",
+   "w": 602,
+   "h": 464,
+   "sheet": "ECG-UK",
+   "units": [
+    [
+     "Spitfire Mk IX",
+     1,
+     "aircraft"
+    ]
+   ],
+   "uimg": {
+    "Spitfire Mk IX": "img/hon/bro/uk/units/air-spitfire.webp"
+   },
+   "slots": [],
+   "own": [],
+   "note": "Aircraft tile. Recruited with an Aircraft Orders option, and its cost is the cost printed on the tile."
+  },
+  {
+   "id": "hawker_typhoon",
+   "name": "Hawker Typhoon",
+   "sub": "Mk IB",
+   "cost": 50,
+   "type": "aircraft",
+   "set": "ECG",
+   "squares": 0,
+   "img": "img/hon/bro/uk/tiles/hawker_typhoon.webp",
+   "w": 602,
+   "h": 464,
+   "sheet": "ECG-UK",
+   "units": [
+    [
+     "Hawker Typhoon Mk IB",
+     1,
+     "aircraft"
+    ]
+   ],
+   "uimg": {
+    "Hawker Typhoon Mk IB": "img/hon/bro/uk/units/air-hawker_typhoon.webp"
+   },
+   "slots": [],
+   "own": [],
+   "note": "Aircraft tile. Recruited with an Aircraft Orders option, and its cost is the cost printed on the tile."
+  },
+  {
+   "id": "support_tile",
+   "name": "Support",
+   "sub": "Scenario support tile",
+   "cost": 0,
+   "type": "support",
+   "set": "ECG",
+   "squares": 0,
+   "img": "img/hon/bro/uk/tiles/support_tile.webp",
+   "w": 352,
+   "h": 592,
+   "sheet": "ECG-UK",
+   "units": [],
+   "slots": [
+    {
+     "x": 0.07,
+     "y": 0.44,
+     "w": 0.87,
+     "h": 0.52,
+     "size": "w",
+     "stripes": [
+      "all"
+     ]
+    }
+   ],
+   "own": [],
+   "note": "Support tile for scenarios. Cost 0. One slot that takes any option (Caen booklet V1.4, p.11)."
   }
  ],
  "options": [

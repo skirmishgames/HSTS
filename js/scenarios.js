@@ -186,7 +186,7 @@
     if (p.get('q')) S.q = p.get('q');
     var d = load();
     if (p.get('t') && d.types.indexOf(p.get('t')) >= 0) S.type = p.get('t');
-    if (p.get('e')) p.get('e').split(',').forEach(function (id) { if (/^[a-z0-9]+$/.test(id)) S.open[id] = 1; });
+    if (p.get('e')) p.get('e').split(',').forEach(function (id) { if (/^[a-z0-9-]+$/.test(id)) S.open[id] = 1; });
     bind(); render();
     var first = Object.keys(S.open)[0]; if (first && $('s-' + first)) $('s-' + first).scrollIntoView({ block: 'center' });
   }

@@ -67,6 +67,11 @@ caen,ge,tile,Jägerbataillon,platoon,Jägerbataillon,"Jäger-Regiment 31, 16. Lu
 caen,ge,unit,Ob. Müller,officer,SS-Panzerpionier,"SS-Panzerpionierbataillon 12, 12. SS-Pz-Div",pioniere12
 caen,ge,unit,SS Assault Group,infantry,SS-Panzerpionier,"SS-Panzerpionierbataillon 12, 12. SS-Pz-Div",pzgren
 caen,ge,tile,SS-Panzerpionier,platoon,SS-Panzerpionier,"SS-Panzerpionierbataillon 12, 12. SS-Pz-Div",pioniere12
+bro,ge,unit,Focke-Wulf Fw 190A,aircraft,Focke-Wulf,Fw 190A,fw190
+bro,ge,tile,Focke-Wulf,aircraft,Focke-Wulf,Fw 190A,fw190
+bro,ge,unit,Messerschmitt Bf 109 G6,aircraft,Messerschmitt,Bf 109 G6,bf109
+bro,ge,tile,Messerschmitt,aircraft,Messerschmitt,Bf 109 G6,bf109
+caen,ge,tile,Support,support,Support,Scenario support tile,mechanic
 bro,ge,option,Bluff,order,,,mechanic
 bro,ge,option,Planning,order,,,mechanic
 bro,ge,option,MG Nest,order,,,mechanic
@@ -189,6 +194,11 @@ caen,uk,unit,Humber LRC,vehicle,B Recce Squadron,"43rd Reconnaissance Regiment, 
 caen,uk,tile,B Recce Squadron,platoon,B Recce Squadron,"43rd Reconnaissance Regiment, 43rd Inf. Div.",recce43
 caen,uk,unit,Lt. W. Pryke,officer,Duke of Cornwall’s Light Infantry,"214th Inf. Brigade, 43rd Inf. Div.",dcli
 caen,uk,tile,Duke of Cornwall’s Light Infantry,platoon,Duke of Cornwall’s Light Infantry,"214th Inf. Brigade, 43rd Inf. Div.",dcli
+caen,uk,unit,Spitfire Mk IX,aircraft,Spitfire,Mk IX,spitfire
+caen,uk,tile,Spitfire,aircraft,Spitfire,Mk IX,spitfire
+caen,uk,unit,Hawker Typhoon Mk IB,aircraft,Hawker Typhoon,Mk IB,typhoon
+caen,uk,tile,Hawker Typhoon,aircraft,Hawker Typhoon,Mk IB,typhoon
+caen,uk,tile,Support,support,Support,Scenario support tile,mortar3
 caen,uk,option,3 Inch Mortar,support,,,mortar3
 caen,uk,option,Cromwell Mk IV,support,,,cromwell
 caen,uk,option,Daimler AC,support,,,daimler
@@ -205,8 +215,8 @@ caen,uk,option,Bluff,order,,,mechanic
 caen,uk,option,Planning,order,,,mechanic
 caen,uk,option,Initiative,order,,,mechanic
 caen,uk,option,Concealed,order,,,mechanic
-caen,uk,option,Aircraft x1,order,,,mechanic
-caen,uk,option,Aircraft x2,order,,,mechanic
+caen,uk,option,Aircraft x1,order,,,spitfire
+caen,uk,option,Aircraft x2,order,,,spitfire
 caen,uk,option,Battle Plan,order,,,mechanic
 caen,uk,option,Artillery,order,,,mechanic
 caen,uk,option,Smoke,order,,,mechanic
@@ -281,6 +291,10 @@ bro,us,unit,Brigantine,vehicle,Recon Platoon 2e DB,1er Escadron RBFM 2e DB,2edb
 bro,us,unit,Recon (BAR),infantry,Recon Platoon 2e DB,1er Escadron RBFM 2e DB,bar
 bro,us,unit,Trinquette,vehicle,Recon Platoon 2e DB,1er Escadron RBFM 2e DB,2edb
 bro,us,tile,Recon Platoon 2e DB,platoon,Recon Platoon 2e DB,1er Escadron RBFM 2e DB,2edb
+bro,us,unit,Thunderbolt,aircraft,Thunderbolt,Republic P-47,p47
+bro,us,tile,Thunderbolt,aircraft,Thunderbolt,Republic P-47,p47
+bro,us,unit,Mustang,aircraft,Mustang,North American P-51D,p51
+bro,us,tile,Mustang,aircraft,Mustang,North American P-51D,p51
 bro,us,option,Bluff,order,,,mechanic
 bro,us,option,Planning,order,,,mechanic
 bro,us,option,Improvisation,order,,,mechanic
@@ -333,3 +347,4 @@ bro,us,option,Tank Ammo,gear,,,mechanic
 bro,us,option,M4A3 (105) Sherman,support,,,sherman
 bro,us,option,Training,trait,,,mechanic
 bro,us,option,Guardian,trait,,,mechanic
+bro,us,option,M10 Tank Destroyer,support,,,m10

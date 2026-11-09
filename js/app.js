@@ -4,8 +4,8 @@
   var LSK = 'hts.hon.bro.v1';
   var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }];
   var PRESETS = [150, 200, 250, 300, 350, 400, 500];
-  var TYPES = [['all', 'All'], ['platoon', 'Platoons'], ['command', 'Command'], ['hero', 'Heroes'], ['landing', 'Landing'], ['special', 'Other']];
-  var TYPE_ORDER = { command: 0, platoon: 1, hero: 2, landing: 3, special: 4 };
+  var TYPES = [['all', 'All'], ['platoon', 'Platoons'], ['command', 'Command'], ['hero', 'Heroes'], ['landing', 'Landing'], ['aircraft', 'Aircraft'], ['support', 'Support tile'], ['special', 'Other']];
+  var TYPE_ORDER = { command: 0, platoon: 1, hero: 2, landing: 3, aircraft: 4, support: 5, special: 6 };
   var CATS = [['support', 'Support units'], ['gear', 'Gear'], ['trait', 'Character traits'], ['order', 'Orders'], ['customization', 'Customizations']];
   var CAT_NAME = { support: 'Support', gear: 'Gear', trait: 'Trait', order: 'Order', customization: 'Customization' };
   var SIZE_NAME = { w: 'wide', n: 'narrow' };
@@ -53,6 +53,7 @@
   /* ---------- rules ---------- */
   function fits(slot, opt) {
     var why = [];
+    if (slot.stripes.indexOf('all') >= 0) return why; // Support tile: takes any option
     if (slot.size !== opt.size) why.push('size');
     var ok;
     if (opt.stripes.indexOf('any') >= 0) ok = true;
@@ -86,7 +87,7 @@
     return list.map(function (s) { return '<span class="dot ' + esc(s) + '" title="' + stripeName(s) + '"></span>'; }).join('');
   }
   function stripeName(s) {
-    return ({ R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', WR: 'white and red', KG: 'black and green', BCG: 'blue, cream and green', BRD: 'blue and red', cmd: 'command stripes', custom: 'customization', any: 'common, fits any slot' })[s] || s;
+    return ({ R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', WR: 'white and red', KG: 'black and green', BCG: 'blue, cream and green', BRD: 'blue and red', cmd: 'command stripes', custom: 'customization', any: 'common, fits any slot', all: 'any option (Support tile)' })[s] || s;
   }
   function pips(n) { var s = ''; for (var i = 0; i < n; i++) s += '■'; return s; }
   function costLabel(c) { return c == null ? 'SP' : String(c); }
@@ -294,7 +295,7 @@
     if (!e) { $('picker').hidden = true; return; }
     var t = D.t[e.t], slot = t.slots[P.i];
     $('pickTitle').textContent = t.name + ', slot ' + (P.i + 1);
-    $('pickMeta').innerHTML = 'Size: ' + SIZE_NAME[slot.size] + '. Stripes: ' + dots(slot.stripes) + ' ' + slot.stripes.map(stripeName).join(', ');
+    $('pickMeta').innerHTML = slot.stripes.indexOf('all') >= 0 ? 'This slot takes any option, whatever its size or stripes.' : 'Size: ' + SIZE_NAME[slot.size] + '. Stripes: ' + dots(slot.stripes) + ' ' + slot.stripes.map(stripeName).join(', ');
     $('pickClear').disabled = !e.o[P.i];
     var html = '';
     CATS.forEach(function (c) {

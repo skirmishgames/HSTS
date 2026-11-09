@@ -10,6 +10,116 @@ HTS_SCEN["hon-omaha"] = {
 ],
 "entries": [
 {
+"id": "intro",
+"title": "Introduction, summary and the 6 June 1944 report",
+"type": "Booklet rules and reference",
+"pages": "1 to 3",
+"start": 1,
+"date": "June 6, 1944",
+"summary": "Cover, contents list, credits and the printed report on D-Day at Omaha Beach, from the Tehran decision to the toll of the day.",
+"facts": [
+[
+"Covers",
+"Cover, contents of the booklet, credits and the history report."
+],
+[
+"Solo mode",
+"The Solo Mode expansion is required for games in Solo Mode."
+]
+]
+},
+{
+"id": "rules-battlefield",
+"title": "1 Battlefield",
+"type": "Booklet rules and reference",
+"pages": "4 to 5",
+"start": 4,
+"date": "",
+"summary": "Terrain effects, terrain elements, defensive obstacles and trenches for the Omaha boards: hole, stress, bunker, contour line, mounds, streams, seawalls, barbed wire and trenches.",
+"facts": [
+[
+"Covers",
+"1.1 Terrain effects, 1.2 Terrain elements, 1.3 Defensive obstacles, 1.4 Defensive elements."
+],
+[
+"Key rule",
+"A red contour line limits range to one square beyond the line, and a trench stops movement unless the move crosses a ladder."
+]
+]
+},
+{
+"id": "rules-special",
+"title": "2 Special rules",
+"type": "Booklet rules and reference",
+"pages": "6 to 7",
+"start": 6,
+"date": "",
+"summary": "Landing craft: transport capacity, deployment and recovery, plus the haystack rules for hiding units.",
+"facts": [
+[
+"Covers",
+"Landing craft, special deployment, haystacks."
+],
+[
+"Key rule",
+"A landing craft carries 7 transport points. At least one landing craft must stay empty every turn."
+]
+]
+},
+{
+"id": "rules-abilities",
+"title": "3 Special abilities",
+"type": "Booklet rules and reference",
+"pages": "7 to 8",
+"start": 7,
+"date": "",
+"summary": "Urban fighter, double fire, endless grenades, hawkeyed, substitute, barrage order, smart, NCO, engineer and minesweeper.",
+"facts": [
+[
+"Covers",
+"3.1 Movement, 3.2 Firing, 3.3 Defense, 3.4 Command, 3.5 Other special abilities."
+]
+]
+},
+{
+"id": "rules-recruitment",
+"title": "4 Recruitment options",
+"type": "Booklet rules and reference",
+"pages": "8 to 11",
+"start": 8,
+"date": "",
+"summary": "Support, gear, character trait, orders and customization options: landing, ammo belts, bangalores, minefield, explosive charges, positions, shovels, shells, tank gear, smoke, artillery and heroic.",
+"facts": [
+[
+"Covers",
+"4.1 Support options, 4.2 Gear options, 4.3 Character traits, 4.4 Orders options, 4.5 Customizations."
+],
+[
+"Minefield",
+"A large field of 8 counters costs 45 points. A field of 4 counters costs 25 points."
+]
+]
+},
+{
+"id": "rules-aviation",
+"title": "5 Aviation rules",
+"type": "Booklet rules and reference",
+"pages": "12 to 13",
+"start": 12,
+"date": "",
+"summary": "How aircraft are recruited, hidden in the clouds or in plain sight, shot at and shot down, with the speed penalty worked through.",
+"facts": [
+[
+"Covers",
+"Aircraft units, planespotting, firing actions, anti-aircraft, speed penalty, special order, bombs and rockets."
+],
+[
+"Key rule",
+"Never apply the long range penalty when an aircraft is involved in a Firing Action. Any unit firing at an aircraft applies the speed penalty."
+]
+]
+},
+{
 "id": "landings",
 "title": "Player generated landings",
 "type": "Booklet rules and reference",
@@ -119,10 +229,14 @@ HTS_SCEN["hon-omaha"] = {
 [
 "heroic"
 ]
+],
+[
+"p51_mustang",
+[]
 ]
 ],
-"note": "The P-51 Mustang aircraft tile (50 points) is not in the builder yet. The builder total is 10 points above the printed 535 once the Mustang is counted, see ISS-023.",
-"pts": 545,
+"note": "The P-51 Mustang (50) is counted. The M4 Sherman on the Field Command shows no cost in the booklet picture. Without its 60 points the builder total is exactly the printed 535, see ISS-023.",
+"pts": 595,
 "label": "American army",
 "sub": "1st Infantry Division"
 },
@@ -411,7 +525,7 @@ null
 "m4a3_105",
 "tank_ammo",
 "tank_gear",
-null
+"m10_a1"
 ]
 ],
 [
@@ -429,8 +543,7 @@ null
 ]
 ]
 ],
-"note": "The M10 Tank Destroyer option on the Tank Platoon is not in the builder yet, so that slot is empty.",
-"pts": 435,
+"pts": 495,
 "label": "American army",
 "sub": "Task Force with US Rangers"
 },
@@ -524,7 +637,7 @@ null
 "m4a3_105",
 "tank_ammo",
 "tank_gear",
-null
+"m10_a1"
 ]
 ],
 [
@@ -542,8 +655,7 @@ null
 ]
 ]
 ],
-"note": "The M10 Tank Destroyer option on the Tank Platoon is not in the builder yet, so that slot is empty.",
-"pts": 435,
+"pts": 495,
 "label": "American Group A",
 "sub": "Task Force with US Rangers"
 },
@@ -580,10 +692,18 @@ null
 "veteran",
 "m4_sherman"
 ]
+],
+[
+"p47_thunderbolt",
+[]
+],
+[
+"p51_mustang",
+[]
 ]
 ],
-"note": "The P-47 Thunderbolt and P-51 Mustang aircraft tiles are not in the builder yet, so the total is 100 below the printed 550. See ISS-023.",
-"pts": 450,
+"note": "The Thunderbolt (55) and Mustang (50) tiles are counted. The total comes to 5 points above the printed 550, see ISS-023.",
+"pts": 555,
 "label": "American Group B",
 "sub": "1st Infantry Division"
 },
@@ -669,6 +789,25 @@ null
 "h": 997,
 "cap": "Battlefield and deployment, booklet p.22"
 }
+]
+},
+{
+"id": "icons",
+"title": "Icon summary",
+"type": "Booklet rules and reference",
+"pages": "24",
+"start": 24,
+"date": "",
+"summary": "The one-page reminder of the terrain effect and special ability icons, with their page references.",
+"facts": [
+[
+"Covers",
+"Terrain effects and the special abilities, in short form."
+],
+[
+"Printing note",
+"The numbering and some page references on this page do not match the rules chapters."
+]
 ]
 }
 ]
