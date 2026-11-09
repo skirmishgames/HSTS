@@ -3,7 +3,7 @@ window.HTS_EXPANSIONS = {
 {
 "id": "hon2",
 "name": "Heroes of Normandie V2",
-"sub": "The current edition. New core box and revised rules, with Big Red One, Bloody Omaha and two Battle for Caen boxes.",
+"sub": "The current edition. New core box and revised rules, with Big Red One, Bloody Omaha, Battle for Caen and its Battle Pack #3.",
 "items": [
 {
 "id": "hon2-core-box-big-red-one",
@@ -91,27 +91,80 @@ window.HTS_EXPANSIONS = {
 "id": "hon2-battle-for-caen-epsom-charnwood-and-goodwood",
 "name": "Battle for Caen: Epsom, Charnwood & Goodwood",
 "cat": "Big box",
-"text": "The first Battle for Caen box, with British and Canadian forces against the Germans. The terrain boards are in the Maps tool. Armies, rules and scenarios are next.",
+"text": "The first Battle for Caen box, with British, Canadian and German forces. Everything in this box is in the tool except aircraft, Support tiles and hero equipment in the builder.",
 "tool": [
+{
+"label": "Army builder",
+"href": "index.html"
+},
+{
+"label": "Unit index",
+"href": "units.html"
+},
+{
+"label": "Rules",
+"href": "rules.html?b=caen"
+},
+{
+"label": "Scenarios",
+"href": "scenarios.html?b=caen"
+},
+{
+"label": "Tokens",
+"href": "tokens.html?b=caen"
+},
+{
+"label": "Icons",
+"href": "icons.html?b=caen"
+},
+{
+"label": "History",
+"href": "history.html?b=caen"
+},
+{
+"label": "Heroes",
+"href": "heroes.html"
+},
 {
 "label": "Maps",
 "href": "maps.html?b=caen-ecg"
 }
 ],
-"status": "part"
+"status": "full"
 },
 {
-"id": "hon2-battle-for-caen-windsor-and-jupiter",
-"name": "Battle for Caen: Windsor & Jupiter",
-"cat": "Big box",
-"text": "The second Battle for Caen box. The terrain boards are in the Maps tool. Armies, rules and scenarios are next.",
+"id": "hon2-battle-pack-3-windsor-and-jupiter",
+"name": "Battle Pack #3: Windsor & Jupiter",
+"cat": "Small box",
+"text": "Battle Pack #3, an expansion for Battle for Caen rather than a big box. It adds the Wessex Division recce and light infantry, SS-Panzerpionier and Luftwaffe Jäger forces, two heroes, markers and six boards. Units, History, tokens and maps are in the tool. The rulebook and scenarios are not in the archive yet.",
 "tool": [
+{
+"label": "Army builder",
+"href": "index.html"
+},
+{
+"label": "Unit index",
+"href": "units.html"
+},
+{
+"label": "History",
+"href": "history.html?b=caen"
+},
+{
+"label": "Tokens",
+"href": "tokens.html?b=caen"
+},
+{
+"label": "Heroes",
+"href": "heroes.html"
+},
 {
 "label": "Maps",
 "href": "maps.html?b=caen-wj"
 }
 ],
-"status": "part"
+"status": "part",
+"gap": "Rules and scenarios are missing because the pack's booklet is not in the archive."
 },
 {
 "id": "hon2-errata-2023",

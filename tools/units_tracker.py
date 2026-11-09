@@ -62,7 +62,7 @@ def exclusions():
 
 # Units and options live in the legacy hon-bro-<nation>.js files; the set code says which game box
 # they belong to. Each box has its own History file (data/hon-<box>-history.js).
-SET_BOX = {'ECG': 'caen'}
+SET_BOX = {'ECG': 'caen', 'BP3': 'caen'}
 
 def rows():
     ex = exclusions()

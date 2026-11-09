@@ -53,6 +53,20 @@ caen,ge,unit,Stubaf. Waldmüller,officer,SS-Panzergrenadiere,"I. Battalion, Reg.
 caen,ge,unit,SS Fire Group,infantry,SS-Panzergrenadiere,"I. Battalion, Reg. 25, 12. SS Pz Div Hitlerjugend",milius
 caen,ge,unit,SS MG Group,infantry,SS-Panzergrenadiere,"I. Battalion, Reg. 25, 12. SS Pz Div Hitlerjugend",milius
 caen,ge,tile,SS-Panzergrenadiere,platoon,SS-Panzergrenadiere,"I. Battalion, Reg. 25, 12. SS Pz Div Hitlerjugend",milius
+caen,ge,unit,K. Meyer,officer,Divisionsstab,Obersturmbannführer Kurt Meyer,meyer
+caen,ge,unit,Command Group,infantry,Divisionsstab,Obersturmbannführer Kurt Meyer,meyer
+caen,ge,tile,Divisionsstab,command,Divisionsstab,Obersturmbannführer Kurt Meyer,meyer
+caen,ge,unit,Hptm. Herold,officer,Feldkommando,Hauptmann Willi Herold,milius
+caen,ge,unit,Oros Snowt,character,Oros Snowt,Grenade Maniac,fictional
+caen,ge,tile,Oros Snowt,hero,Oros Snowt,Grenade Maniac,fictional
+caen,ge,unit,Ob. Hitzemann,officer,Jägerbataillon,"Jäger-Regiment 31, 16. Luftwaffen-Feld-Div.",jager31
+caen,ge,unit,Gunners,infantry,Jägerbataillon,"Jäger-Regiment 31, 16. Luftwaffen-Feld-Div.",jager31
+caen,ge,unit,Luftwaffe Fire Group,infantry,Jägerbataillon,"Jäger-Regiment 31, 16. Luftwaffen-Feld-Div.",jager31
+caen,ge,unit,Luftwaffe MG 42,weapon,Jägerbataillon,"Jäger-Regiment 31, 16. Luftwaffen-Feld-Div.",mg42
+caen,ge,tile,Jägerbataillon,platoon,Jägerbataillon,"Jäger-Regiment 31, 16. Luftwaffen-Feld-Div.",jager31
+caen,ge,unit,Ob. Müller,officer,SS-Panzerpionier,"SS-Panzerpionierbataillon 12, 12. SS-Pz-Div",pioniere12
+caen,ge,unit,SS Assault Group,infantry,SS-Panzerpionier,"SS-Panzerpionierbataillon 12, 12. SS-Pz-Div",pzgren
+caen,ge,tile,SS-Panzerpionier,platoon,SS-Panzerpionier,"SS-Panzerpionierbataillon 12, 12. SS-Pz-Div",pioniere12
 bro,ge,option,Bluff,order,,,mechanic
 bro,ge,option,Planning,order,,,mechanic
 bro,ge,option,MG Nest,order,,,mechanic
@@ -123,6 +137,20 @@ caen,ge,option,Flamer Group,support,,,fmw41
 caen,ge,option,Panzerschreck Group,support,,,pschreck
 caen,ge,option,8cm Granatwerfer,support,,,gw34
 caen,ge,option,MG 42 HMG,support,,,mg42
+caen,ge,option,Panzergrenadiere,support,,,milius
+caen,ge,option,88mm Flak 36,support,,,flak88
+caen,ge,option,AT Group,support,,,jager31
+caen,ge,option,Flakvierling,support,,,flakvierling
+caen,ge,option,MG 42 Group,support,,,mg42
+caen,ge,option,Mortar Group,support,,,gw34
+caen,ge,option,Sd.Kfz 10/5,support,,,sdkfz10_5
+caen,ge,option,8 cm Granatwerfer,support,,,gw34
+caen,ge,option,Minen,gear,,,mechanic
+caen,ge,option,Sd.Kfz 250/9,support,,,sdkfz250_9
+caen,ge,option,Defensive Group,support,,,pschreck
+caen,ge,option,Gear,gear,,,mechanic
+caen,ge,option,Position,gear,,,mechanic
+caen,ge,option,Sd.Kfz 251/7,support,,,sdkfz251_7
 caen,uk,unit,Col. Mathieu,officer,Field Command,Colonel J.E.G. Paul Mathieu,chaudiere
 caen,uk,tile,Field Command,command,Field Command,Colonel J.E.G. Paul Mathieu,chaudiere
 caen,uk,unit,Dempsey,officer,High Command,Brigadier General Miles Dempsey,dempsey
@@ -151,6 +179,16 @@ caen,uk,unit,3 Inch Mortar,weapon,Royal Winnipeg Rifles,"7th Inf. Brigade, 3rd C
 caen,uk,tile,Royal Winnipeg Rifles,platoon,Royal Winnipeg Rifles,"7th Inf. Brigade, 3rd Ca. Inf. Div.",rwr
 caen,uk,unit,Lt. D. Wye,officer,Worcestershire Regiment,"214th Inf. Brigade, 43rd Inf. Div.",worcs
 caen,uk,tile,Worcestershire Regiment,platoon,Worcestershire Regiment,"214th Inf. Brigade, 43rd Inf. Div.",worcs
+caen,uk,unit,H. Essame,officer,Field Command,Brigadier Hubert Essame,essame
+caen,uk,unit,Daimler AC,vehicle,Field Command,Brigadier Hubert Essame,daimler
+caen,uk,unit,Arthur Ash,character,Arthur Ash,Eyes of Britain,fictional
+caen,uk,tile,Arthur Ash,hero,Arthur Ash,Eyes of Britain,fictional
+caen,uk,unit,Cmd Humber AC,vehicle,B Recce Squadron,"43rd Reconnaissance Regiment, 43rd Inf. Div.",humberac
+caen,uk,unit,Humber AC,vehicle,B Recce Squadron,"43rd Reconnaissance Regiment, 43rd Inf. Div.",humberac
+caen,uk,unit,Humber LRC,vehicle,B Recce Squadron,"43rd Reconnaissance Regiment, 43rd Inf. Div.",humberlrc
+caen,uk,tile,B Recce Squadron,platoon,B Recce Squadron,"43rd Reconnaissance Regiment, 43rd Inf. Div.",recce43
+caen,uk,unit,Lt. W. Pryke,officer,Duke of Cornwall’s Light Infantry,"214th Inf. Brigade, 43rd Inf. Div.",dcli
+caen,uk,tile,Duke of Cornwall’s Light Infantry,platoon,Duke of Cornwall’s Light Infantry,"214th Inf. Brigade, 43rd Inf. Div.",dcli
 caen,uk,option,3 Inch Mortar,support,,,mortar3
 caen,uk,option,Cromwell Mk IV,support,,,cromwell
 caen,uk,option,Daimler AC,support,,,daimler
@@ -184,6 +222,17 @@ caen,uk,option,Howitzer Support,support,,,vickers
 caen,uk,option,Mortar Support,support,,,mortar3
 caen,uk,option,Mechanized Bren,support,,,bren
 caen,uk,option,Mechanized PIAT,support,,,piat
+caen,uk,option,Assault Troop,support,,,m3ht
+caen,uk,option,Weapon Troop,support,,,mortar3
+caen,uk,option,Humber AC,support,,,humberac
+caen,uk,option,Hardened,trait,,,mechanic
+caen,uk,option,Gear,gear,,,mechanic
+caen,uk,option,Recce Gear,gear,,,mechanic
+caen,uk,option,AT Platoon,support,,,piat
+caen,uk,option,Mortar Platoon,support,,,mortar3
+caen,uk,option,Recce Troop,support,,,recce43
+caen,uk,option,Bofors 40mm,support,,,bofors
+caen,uk,option,T17 Staghound,support,,,staghound
 bro,us,unit,Col. Taylor,officer,Field Command,Colonel George A. Taylor,taylor
 bro,us,tile,Field Command,command,Field Command,Colonel George A. Taylor,taylor
 bro,us,unit,Clint,character,Clint,Universal Hero,fictional

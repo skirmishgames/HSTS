@@ -1,5 +1,5 @@
 HEROES SYSTEM TACTICAL SCALE: ISSUES TO BE ADDRESSED
-Last updated: 2026-11-09 (site version hts-v25)
+Last updated: 2026-11-09 (site version hts-v26)
 
 HOW TO USE THIS FILE
 - One entry per issue. Never delete an entry. Change its status and add a dated line under "Decision".
@@ -190,7 +190,7 @@ Detail: No record found for any of them. They may be invented or film-inspired. 
 Decision: 2026-11-06 Leave without entries until a source turns up.
 
 ISS-027  Caen ECG import   [FIXED]
-Units, tiles, options, History, rules, scenarios, tokens and icons for Epsom, Charnwood & Goodwood are in. The booklet is a work in progress (V1.4), see ISS-028 to ISS-030. Windsor & Jupiter is the next box.
+Units, tiles, options, History, rules, scenarios, tokens and icons for Epsom, Charnwood & Goodwood are in. The booklet is a work in progress (V1.4), see ISS-028 to ISS-030. Battle Pack #3 (Windsor & Jupiter) is the next item, see ISS-031.
 Note: the booklet is a work in progress (V1.4). Check for a newer version when the box is finished.
 
 ISS-028  Caen scenarios: turn numbers read from small icons   [OPEN]
@@ -201,3 +201,21 @@ Where: booklet pp.14, 17, 19, 20, 22, 23, 25. Red blocks hide unfinished text. S
 
 ISS-030  Caen scenario armies do not match every printed total   [OPEN]
 Where: scenario armies in data/hon-caen-scenarios.js. Aircraft tiles, Support tiles (FLAK 88, Artillery, Initiative orders) and hero equipment are not in the builder, so the builder total is below the printed total in most armies. Scenario 3 has a 25-point unit card beside the Field Command that shows no cost. Safari German army builds to 500 against a printed 495. Sgt Lee Lowe's Overwatch has no UK version in the builder. Each army carries a note.
+
+BATTLE PACK #3: WINDSOR & JUPITER (units, History, tokens imported)
+------------------------------------------------------------------
+
+ISS-031  Battle Pack #3: no rulebook or scenarios in the archive   [OPEN]
+Where: Boxes/Battle for Caen/Battle for Caen_ Windsor & Jupiter holds Tabletop Simulator art only (tiles, options, counters, boards, markers). Battle Pack #3 is an expansion for Battle for Caen, not a big box.
+Detail: Units, History, tokens and maps are in. There is no rules chapter, scenario or army list for the pack. The pack's markers (Charge, Urban Fighter, Tactical Map, Life Point, Ambush Recce, Speed markers, Ferocious) are shown without rules text.
+Decision: 2026-11-09 Add the booklet to _Inbox when you have it. Rules and scenarios follow the same route as Epsom, Charnwood & Goodwood.
+
+ISS-032  Battle Pack #3 tile data read from the art   [OPEN]
+Where: data/hon-bro-ge.js and data/hon-bro-uk.js, set code BP3.
+Detail: Costs, breaking points (red X marks), slot sizes and stripe colours were read from the tile and option images. Breaking points are the red squares: Field Command (Essame) and Feldkommando show none. Stripe colours are the visible bands: Jäger white and red, SS-Panzerpionier black and green, B Recce blue, cream and green, DCLI blue and red. The builder accepts an option when any stripe code matches, so each pack tile has its own two-colour code (WR, KG, BCG, BRD; swatches in css/style.css) to stop its options fitting other tiles. The Panzergrenadiere and Recce Troop options use command stripes. Gear and Position options have no unit counters, only a note on the markers they bring.
+Decision: 2026-11-09 Check against your physical tiles.
+
+ISS-033  Battle Pack #3: ranks and names that differ or have no source   [OPEN]
+Where: Divisionsstab tile (Kurt Meyer), Feldkommando tile (Hauptmann Willi Herold), counters Ob. Hitzemann, Ob. Müller, Lt. W. Pryke.
+Conflict: The tile gives Meyer as Obersturmbannführer. Wikipedia gives SS-Standartenführer for June and July 1944. No source found for Hitzemann, Müller or Pryke. A Willi Herold is known as a German soldier who posed as a captain in 1945; he was not in Normandy, so the tile is treated as fictional.
+Decision: 2026-11-09 Tile data keeps the printed text. Meyer has a History entry with the sourced rank. The other names are tracker exclusions.

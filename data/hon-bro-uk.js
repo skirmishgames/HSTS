@@ -36,7 +36,9 @@ HTS_DATA["hon-bro-uk"] = {
   "Universal Carrier": "img/hon/bro/uk/units/ecg-universal-carrier.webp",
   "Wasp": "img/hon/bro/uk/units/ecg-wasp.webp",
   "Spitfire": "img/hon/bro/uk/units/ecg-spitfire.webp",
-  "Hawker Typhoon": "img/hon/bro/uk/units/ecg-hawker-typhoon.webp"
+  "Hawker Typhoon": "img/hon/bro/uk/units/ecg-hawker-typhoon.webp",
+  "Bofors 40mm": "img/hon/bro/uk/units/wj-bofors-40mm.webp",
+  "T17 Staghound": "img/hon/bro/uk/units/wj-t17-staghound.webp"
  },
  "tiles": [
   {
@@ -650,6 +652,298 @@ HTS_DATA["hon-bro-uk"] = {
     "bren_platoon_wor",
     "mech_bren_wor",
     "mech_piat_wor"
+   ]
+  },
+  {
+   "id": "field_command_essame",
+   "name": "Field Command",
+   "sub": "Brigadier Hubert Essame",
+   "cost": 35,
+   "type": "command",
+   "set": "BP3",
+   "squares": 0,
+   "img": "img/hon/bro/uk/tiles/field_command_essame.webp",
+   "w": 1670,
+   "h": 589,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "H. Essame",
+     1,
+     "officer"
+    ],
+    [
+     "Daimler AC",
+     1,
+     "vehicle"
+    ]
+   ],
+   "uimg": {
+    "H. Essame": "img/hon/bro/uk/units/wj-field-command-essame-h-essame.webp",
+    "Recce Team": "img/hon/bro/uk/units/wj-field-command-essame-recce-team.webp",
+    "Recce Bren": "img/hon/bro/uk/units/wj-field-command-essame-recce-bren.webp",
+    "Recce PIAT": "img/hon/bro/uk/units/wj-field-command-essame-recce-piat.webp"
+   },
+   "slots": [
+    {
+     "x": 0.0295,
+     "y": 0.2174,
+     "w": 0.2527,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    },
+    {
+     "x": 0.5672,
+     "y": 0.2174,
+     "w": 0.1969,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    },
+    {
+     "x": 0.7729,
+     "y": 0.2174,
+     "w": 0.1969,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    }
+   ],
+   "own": [
+    "recce_troop_hq"
+   ]
+  },
+  {
+   "id": "arthur_ash",
+   "name": "Arthur Ash",
+   "sub": "Eyes of Britain",
+   "cost": 25,
+   "type": "hero",
+   "set": "BP3",
+   "squares": 1,
+   "img": "img/hon/bro/uk/tiles/arthur_ash.webp",
+   "w": 800,
+   "h": 589,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "Arthur Ash",
+     1,
+     "character"
+    ]
+   ],
+   "uimg": {
+    "Arthur Ash": "img/hon/bro/uk/units/wj-arthur-ash-arthur-ash.webp"
+   },
+   "slots": [
+    {
+     "x": 0.5176,
+     "y": 0.1968,
+     "w": 0.4143,
+     "h": 0.5918,
+     "size": "n",
+     "stripes": [
+      "custom"
+     ]
+    }
+   ],
+   "own": [],
+   "note": "Tile table with a crosshair icon. Roll 1: no effect. 2-3: Suppressed -2. 4-5: explosion. 6: explosion and Suppressed -2."
+  },
+  {
+   "id": "b_recce_squadron",
+   "name": "B Recce Squadron",
+   "sub": "43rd Reconnaissance Regiment, 43rd Inf. Div.",
+   "cost": 80,
+   "type": "platoon",
+   "set": "BP3",
+   "squares": 2,
+   "img": "img/hon/bro/uk/tiles/b_recce_squadron.webp",
+   "w": 2028,
+   "h": 589,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "Cmd Humber AC",
+     1,
+     "vehicle"
+    ],
+    [
+     "Humber AC",
+     1,
+     "vehicle"
+    ],
+    [
+     "Humber LRC",
+     1,
+     "vehicle"
+    ]
+   ],
+   "uimg": {
+    "Cmd Humber AC": "img/hon/bro/uk/units/wj-b-recce-squadron-cmd-humber-ac.webp",
+    "Humber AC": "img/hon/bro/uk/units/wj-b-recce-squadron-humber-ac.webp",
+    "Humber LRC": "img/hon/bro/uk/units/wj-b-recce-squadron-humber-lrc.webp",
+    "M3A1 Halftrack": "img/hon/bro/uk/units/wj-b-recce-squadron-m3a1-halftrack.webp",
+    "Leader Team": "img/hon/bro/uk/units/wj-b-recce-squadron-leader-team.webp",
+    "Support Team": "img/hon/bro/uk/units/wj-b-recce-squadron-support-team.webp",
+    "6 Pounder AT Gun": "img/hon/bro/uk/units/wj-b-recce-squadron-6-pounder-at-gun.webp",
+    "3 Inch Mortar": "img/hon/bro/uk/units/wj-b-recce-squadron-3-inch-mortar.webp"
+   },
+   "slots": [
+    {
+     "x": 0.0295,
+     "y": 0.2174,
+     "w": 0.2058,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "BCG"
+     ]
+    },
+    {
+     "x": 0.2473,
+     "y": 0.2174,
+     "w": 0.1574,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "BCG"
+     ]
+    },
+    {
+     "x": 0.5922,
+     "y": 0.2174,
+     "w": 0.1634,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "BCG"
+     ]
+    },
+    {
+     "x": 0.7677,
+     "y": 0.2174,
+     "w": 0.2058,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "BCG"
+     ]
+    }
+   ],
+   "own": [
+    "assault_troop_br",
+    "weapon_troop_br",
+    "humber_ac_br",
+    "hardened_br",
+    "gear_br",
+    "recce_gear_br"
+   ]
+  },
+  {
+   "id": "dcli",
+   "name": "Duke of Cornwall’s Light Infantry",
+   "sub": "214th Inf. Brigade, 43rd Inf. Div.",
+   "cost": 95,
+   "type": "platoon",
+   "set": "BP3",
+   "squares": 3,
+   "img": "img/hon/bro/uk/tiles/dcli.webp",
+   "w": 2028,
+   "h": 589,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "Lt. W. Pryke",
+     1,
+     "officer"
+    ],
+    [
+     "Leader Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "2 Inch Mortar",
+     1,
+     "weapon"
+    ],
+    [
+     "Bren",
+     1,
+     "weapon"
+    ]
+   ],
+   "uimg": {
+    "Lt. W. Pryke": "img/hon/bro/uk/units/wj-dcli-lt-w-pryke.webp",
+    "Leader Team": "img/hon/bro/uk/units/wj-dcli-leader-team.webp",
+    "Fire Team": "img/hon/bro/uk/units/wj-dcli-fire-team.webp",
+    "2 Inch Mortar": "img/hon/bro/uk/units/wj-dcli-2-inch-mortar.webp",
+    "Bren": "img/hon/bro/uk/units/wj-dcli-bren.webp",
+    "3 Inch Mortar": "img/hon/bro/uk/units/wj-dcli-3-inch-mortar.webp",
+    "6 Pounder AT Gun": "img/hon/bro/uk/units/wj-dcli-6-pounder-at-gun.webp"
+   },
+   "slots": [
+    {
+     "x": 0.0295,
+     "y": 0.2174,
+     "w": 0.2058,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "BRD"
+     ]
+    },
+    {
+     "x": 0.2473,
+     "y": 0.2174,
+     "w": 0.1574,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "BRD"
+     ]
+    },
+    {
+     "x": 0.5922,
+     "y": 0.2174,
+     "w": 0.1634,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "BRD"
+     ]
+    },
+    {
+     "x": 0.7677,
+     "y": 0.2174,
+     "w": 0.2058,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "BRD"
+     ]
+    }
+   ],
+   "own": [
+    "at_platoon_dc",
+    "bren_platoon_dc",
+    "mortar_platoon_dc"
    ]
   }
  ],
@@ -1427,6 +1721,323 @@ HTS_DATA["hon-bro-uk"] = {
      "PIAT",
      1,
      "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "assault_troop_br",
+   "name": "Assault Troop",
+   "cat": "support",
+   "cost": 75,
+   "squares": 2,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "BCG"
+   ],
+   "img": "img/hon/bro/uk/options/assault_troop_br.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "M3A1 Halftrack",
+     1,
+     "vehicle"
+    ],
+    [
+     "Leader Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Support Team",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "weapon_troop_br",
+   "name": "Weapon Troop",
+   "cat": "support",
+   "cost": 75,
+   "squares": 2,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "BCG"
+   ],
+   "img": "img/hon/bro/uk/options/weapon_troop_br.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "M3A1 Halftrack",
+     1,
+     "vehicle"
+    ],
+    [
+     "6 Pounder AT Gun",
+     1,
+     "weapon"
+    ],
+    [
+     "3 Inch Mortar",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "humber_ac_br",
+   "name": "Humber AC",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "BCG"
+   ],
+   "img": "img/hon/bro/uk/options/humber_ac_br.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "Humber AC",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "hardened_br",
+   "name": "Hardened",
+   "cat": "trait",
+   "cost": 20,
+   "squares": 0,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "BCG"
+   ],
+   "img": "img/hon/bro/uk/options/hardened_br.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-UK"
+  },
+  {
+   "id": "gear_br",
+   "name": "Gear",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "BCG"
+   ],
+   "img": "img/hon/bro/uk/options/gear_br.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-UK",
+   "note": "3 gear markers (x3 on the card). Commonwealth gear markers in this pack: Grenade, PIAT and Knife."
+  },
+  {
+   "id": "recce_gear_br",
+   "name": "Recce Gear",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "BCG"
+   ],
+   "img": "img/hon/bro/uk/options/recce_gear_br.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-UK",
+   "note": "4 markers (x4 on the card). Commonwealth markers in this pack: Ammo, Fuel and Additional Shielding."
+  },
+  {
+   "id": "at_platoon_dc",
+   "name": "AT Platoon",
+   "cat": "support",
+   "cost": 65,
+   "squares": 2,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "BRD"
+   ],
+   "img": "img/hon/bro/uk/options/at_platoon_dc.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "6 Pounder AT Gun",
+     1,
+     "weapon"
+    ],
+    [
+     "Leader Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "bren_platoon_dc",
+   "name": "Bren Platoon",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "BRD"
+   ],
+   "img": "img/hon/bro/uk/options/bren_platoon_dc.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "Leader Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Bren",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "mortar_platoon_dc",
+   "name": "Mortar Platoon",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "BRD"
+   ],
+   "img": "img/hon/bro/uk/options/mortar_platoon_dc.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "Leader Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "3 Inch Mortar",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "recce_troop_hq",
+   "name": "Recce Troop",
+   "cat": "support",
+   "cost": 50,
+   "squares": 2,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "cmd"
+   ],
+   "img": "img/hon/bro/uk/options/recce_troop_hq.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "Recce Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Recce Bren",
+     1,
+     "weapon"
+    ],
+    [
+     "Recce PIAT",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "bofors_40",
+   "name": "Bofors 40mm",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "any"
+   ],
+   "img": "img/hon/bro/uk/options/bofors_40.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "Bofors 40mm",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "staghound_t17",
+   "name": "T17 Staghound",
+   "cat": "support",
+   "cost": 35,
+   "squares": 1,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "any"
+   ],
+   "img": "img/hon/bro/uk/options/staghound_t17.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-UK",
+   "units": [
+    [
+     "T17 Staghound",
+     1,
+     "vehicle"
     ]
    ]
   }

@@ -85,7 +85,7 @@
     return list.map(function (s) { return '<span class="dot ' + esc(s) + '" title="' + stripeName(s) + '"></span>'; }).join('');
   }
   function stripeName(s) {
-    return ({ R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', cmd: 'command stripes', custom: 'customization', any: 'common, fits any slot' })[s] || s;
+    return ({ R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', WR: 'white and red', KG: 'black and green', BCG: 'blue, cream and green', BRD: 'blue and red', cmd: 'command stripes', custom: 'customization', any: 'common, fits any slot' })[s] || s;
   }
   function pips(n) { var s = ''; for (var i = 0; i < n; i++) s += '■'; return s; }
   function costLabel(c) { return c == null ? 'SP' : String(c); }

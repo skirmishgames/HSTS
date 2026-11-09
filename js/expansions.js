@@ -34,7 +34,7 @@
       });
     });
   }
-  function status(it) { return it.status === 'full' ? 'In the tool' : (it.status === 'part' ? 'Maps only' : ''); }
+  function status(it) { return it.status === 'full' ? 'In the tool' : (it.status === 'part' ? 'Partly in the tool' : ''); }
 
   function renderControls() {
     $('lines').innerHTML = '<button type="button" class="chip' + (S.l === 'all' ? ' on' : '') + '" data-line="all">All games</button>' +
@@ -55,7 +55,7 @@
       return '<figure class="xfig"><img src="' + esc(f.img) + '" alt="' + esc(it.name + ': ' + f.label) + '" width="' + f.w + '" height="' + f.h + '" loading="lazy"><figcaption>' + esc(f.label) + '. Small preview.</figcaption></figure>';
     }).join('') + '</div>';
     h += '<dl class="sfacts"><dt>Game</dt><dd>' + esc(it.lineName) + '</dd><dt>Type</dt><dd>' + esc(it.cat) + '. ' + esc(D.catdesc[it.cat] || '') + '</dd>' +
-      '<dt>In this tool</dt><dd>' + (it.status === 'full' ? 'Fully covered.' : (it.status === 'part' ? 'Terrain boards only so far.' : 'Not yet.')) + '</dd></dl>';
+      '<dt>In this tool</dt><dd>' + (it.status === 'full' ? 'Fully covered.' : (it.status === 'part' ? 'Partly covered. ' + (it.gap || 'See the links for what is in.') : 'Not yet.')) + '</dd></dl>';
     if (it.tool.length) h += '<p class="hfind">' + it.tool.map(function (l) { return '<a href="' + esc(l.href) + '">' + esc(l.label) + '</a>'; }).join(' ') + '</p>';
     if (GUIDE[it.id]) h += '<p class="hfind">' + GUIDE[it.id].map(function (gi) { return '<a href="#guide-' + gi + '" data-guide="' + gi + '">Starter force: ' + esc(D.guide[gi].title) + '</a>'; }).join(' ') + '</p>';
     return h;

@@ -853,6 +853,424 @@ window.HTS_HISTORY["hon-caen"] = {
 "aka": [
 "Assault Group"
 ]
+},
+{
+"id": "meyer",
+"name": "SS-Standartenführer Kurt Meyer",
+"cat": "Formations and people",
+"side": "ge",
+"text": "Commander of the 12th SS Panzer Division Hitlerjugend from mid-June 1944, nicknamed Panzermeyer. The Divisionsstab tile gives his rank as Obersturmbannführer; Wikipedia gives SS-Standartenführer for June and July 1944.",
+"facts": [
+"Born 23 December 1910 in Jerxheim and died 23 December 1961 in Hagen.",
+"Commanded the reconnaissance battalion of the Leibstandarte SS Adolf Hitler, then a regiment of the Hitlerjugend division from summer 1943.",
+"Took over the division after Fritz Witt was killed on 14 June 1944 and held command until 6 September 1944.",
+"Ambushed by an American armoured column near the Meuse on 6 September 1944. He surrendered to Belgian partisans, who handed him to the Americans the next day.",
+"Convicted at Aurich in 1945 of responsibility for the killing of Canadian prisoners at the Abbaye d'Ardenne in June 1944. The death sentence was commuted to life, later cut to fourteen years. He was released on 7 September 1954.",
+"Knight's Cross on 18 May 1941, Oak Leaves on 23 February 1943 and Swords on 27 August 1944."
+],
+"src": [
+"Kurt Meyer",
+"https://en.wikipedia.org/wiki/Kurt_Meyer"
+],
+"find": {
+"n": "ge",
+"q": "Divisionsstab"
+},
+"aka": [
+"Kurt Meyer",
+"K. Meyer",
+"Divisionsstab",
+"Command Group",
+"Panzermeyer"
+]
+},
+{
+"id": "jager31",
+"name": "Jäger-Regiment 31 and the 16th Luftwaffe Field Division",
+"cat": "Formations and people",
+"side": "ge",
+"text": "A Luftwaffe field division built from air force ground personnel to fight as infantry. Jäger-Regiment 31 was one of its three regiments. It held the line east of the Orne and was hit by the bombing that opened Operation Goodwood on 18 July 1944.",
+"facts": [
+"Formed on 1 December 1942 at the Groß Born training area from Luftwaffe ground staff.",
+"The battle order for 1 July 1944 lists Luftwaffen-Jäger-Regiments 31, 32 and 46, plus a füsilier battalion, an artillery regiment, anti-tank, pioneer and signals units. Generalmajor Karl Sievers commanded it from 5 November 1943.",
+"Ordered from the Netherlands to Normandy on 20 June 1944. The first parts reached the Vimont area, south-east of Caen, from 25 June.",
+"On 5 July its regiments took over 21st Panzer Division positions east of the Orne estuary.",
+"On 18 July it lay under the bombing that opened Goodwood, about 3,200 tons in roughly 45 minutes by one account. That account says all regimental and battalion commanders were out of action and dates the division's destruction to 18 to 25 July.",
+"The tile's Gunners, Pak 40, 88mm Flak 36, Flakvierling and Sd.Kfz 10/5 reflect how heavily the Luftwaffe field units leaned on anti-aircraft guns. Ob. Hitzemann is a name on the counter that no source found identifies."
+],
+"src": [
+"16th Luftwaffe Field Division Normandy 1944 (Kampfgruppe Willow); battle order from dday-overlord.com",
+"https://kampfgruppewillow.blogspot.com/2024/08/16th-luftwaffe-field-division-normandy.html"
+],
+"find": {
+"n": "ge",
+"q": "Jägerbataillon"
+},
+"aka": [
+"Jägerbataillon",
+"Jäger-Regiment 31",
+"Luftwaffe Fire Group",
+"Gunners",
+"Luftwaffe field division"
+]
+},
+{
+"id": "pioniere12",
+"name": "SS-Panzerpionier-Bataillon 12",
+"cat": "Formations and people",
+"side": "ge",
+"text": "The pioneer (combat engineer) battalion of the 12th SS Panzer Division Hitlerjugend. The Windsor & Jupiter tile gives it assault groups, a flamethrower, Panzerschrecks, magnetic mines, defence lines and a bridge.",
+"facts": [
+"The 12th SS Panzer Division was proposed in early 1943 and approved by Hitler that February. Fritz Witt was its first commander. Most junior ranks were Hitler Youth members, many aged 15 or 16.",
+"Its subunits included a 12th SS Pioneer Battalion under Sturmbannführer Siegfried Müller, and each regiment had a 16th (Pionier) Company. The game only prints \"Ob. Müller\", so the link to this officer is not confirmed.",
+"Operation Windsor (4 and 5 July 1944) took Carpiquet from I Battalion, SS-Panzergrenadier Regiment 26 of this division. The sources found do not name the pioneer battalion in that fight.",
+"The division lost about 8,000 men, over 80 percent of its tanks and 70 percent of its armoured vehicles between June and September 1944."
+],
+"src": [
+"12th SS Panzer Division Hitlerjugend",
+"https://en.wikipedia.org/wiki/12th_SS_Panzer_Division_Hitlerjugend"
+],
+"find": {
+"n": "ge",
+"q": "SS-Panzerpionier"
+},
+"aka": [
+"SS-Panzerpionier",
+"SS Assault Group",
+"Pioniere"
+]
+},
+{
+"id": "dcli",
+"name": "5th Battalion, Duke of Cornwall's Light Infantry",
+"cat": "Formations and people",
+"side": "uk",
+"text": "An infantry battalion of the 214th Brigade, 43rd (Wessex) Division. It fought on Hill 112 in Operation Jupiter, 10 and 11 July 1944.",
+"facts": [
+"Joined the 214th Infantry Brigade on 6 September 1943 alongside the 7th Somerset Light Infantry and the 1st Worcestershire. The brigade landed in Normandy on 24 June 1944 under Brigadier Hubert Essame.",
+"Operation Jupiter aimed at Baron-sur-Odon, Fontaine-Étoupefour and Hill 112. The 43rd Division was the main force, with Churchill tanks of the 31st Tank Brigade and Crocodile flamethrowers in support.",
+"The 10th SS Panzer Division Frundsberg held Hill 112, reinforced by the 9th SS Panzer Division and the Tigers of schwere SS-Panzer Abteilung 102. The 5th DCLI was pushed back from the hilltop.",
+"The 43rd Division lost about 2,000 men in the operation and about 7,000 from 10 to 22 July. Wikipedia calls Jupiter a tactical failure for VIII Corps but a strategic success, because it wore down II SS Panzer Corps.",
+"The Germans left Hill 112 in August and the 53rd (Welsh) Division occupied it on 4 August. Lt. W. Pryke is a name on the counter that no source found identifies."
+],
+"src": [
+"Operation Jupiter (1944)",
+"https://en.wikipedia.org/wiki/Operation_Jupiter_(1944)"
+],
+"find": {
+"n": "uk",
+"q": "Duke of Cornwall"
+},
+"aka": [
+"Duke of Cornwall's Light Infantry",
+"DCLI",
+"Hill 112",
+"Operation Jupiter"
+]
+},
+{
+"id": "recce43",
+"name": "43rd (Wessex) Reconnaissance Regiment",
+"cat": "Formations and people",
+"side": "uk",
+"text": "The reconnaissance regiment of the 43rd (Wessex) Infantry Division, equipped with armoured cars, light reconnaissance cars and half-tracks. B Squadron is the force on the Windsor & Jupiter tile.",
+"facts": [
+"Formed on 14 October 1941 as the 48th Reconnaissance Battalion from the 5th Battalion, Gloucestershire Regiment (TA). It became a regiment in June 1942.",
+"Equipment: Humber armoured cars, Humber light reconnaissance cars, Bren carriers and M3 half-tracks for the assault troop. The HQ squadron had 6-pounder anti-tank guns and 3-inch mortars. That matches the Assault Troop and Weapon Troop options.",
+"HQ, A and C Squadrons reached Sword Beach on 20 June 1944. Their ship, the MV Derrycunihy, was sunk by a mine off Juno Beach on 24 June. B Squadron arrived later and the regiment was at full strength by the end of July.",
+"Lt Col Francis \"Joe\" Lane Fox commanded from 29 September 1943 to 1 October 1944."
+],
+"src": [
+"43rd (Wessex) Reconnaissance Regiment",
+"https://en.wikipedia.org/wiki/43rd_(Wessex)_Reconnaissance_Regiment"
+],
+"find": {
+"n": "uk",
+"q": "B Recce Squadron"
+},
+"aka": [
+"B Recce Squadron",
+"Recce Troop",
+"Recce Team",
+"Recce Bren",
+"Recce PIAT",
+"Assault Troop",
+"Weapon Troop"
+]
+},
+{
+"id": "essame",
+"name": "Brigadier Hubert Essame",
+"cat": "Formations and people",
+"side": "uk",
+"text": "Commander of the 214th Infantry Brigade of the 43rd (Wessex) Division from September 1942, through Normandy. He later became a military historian.",
+"facts": [
+"Born 24 December 1896 in Exeter and died 2 March 1976 in West Wittering.",
+"Enlisted in the Northamptonshire Regiment in 1915 and won the Military Cross in July 1918.",
+"Commanded the 1st Battalion, East Lancashire Regiment in 1941. Promoted brigadier in September 1942 to command the 214th Brigade, which he led until 1945.",
+"Awarded the DSO in October 1944. Briefly commanded the 43rd Division in June 1945 and retired as a major general in 1949.",
+"Wrote The 43rd Wessex Division at War (1952) and The Battle for Normandy (1965), among other books."
+],
+"src": [
+"Hubert Essame",
+"https://en.wikipedia.org/wiki/Hubert_Essame"
+],
+"find": {
+"n": "uk",
+"q": "Essame"
+},
+"aka": [
+"Hubert Essame",
+"H. Essame"
+]
+},
+{
+"id": "flak88",
+"name": "8.8 cm Flak 36",
+"cat": "Support weapons",
+"side": "ge",
+"text": "The German 88 mm anti-aircraft gun on the improved Flak 36 carriage, also used as a very effective anti-tank gun.",
+"facts": [
+"Krupp began work in the late 1920s. Production started in 1933 and the Flak 36 entered service in 1936 and 1937.",
+"The Flak 36 had a new cruciform carriage and a two-piece barrel that made worn liners easier to replace. Many had an armoured shield for the gunners.",
+"Fired 15 to 20 rounds a minute at 820 m/s, with an effective ceiling of 8,000 m. It could penetrate over 84 mm of armour at 2 km.",
+"Crew of 10 and about 7.4 t in firing position. About 21,000 guns of the 18, 36 and 37 types were built.",
+"On 18 and 19 July 1944, during Goodwood, 8.8 cm guns near Cagny knocked out British tanks. Wikipedia says twenty tanks were destroyed in the first seconds and at least 40 in the fight."
+],
+"src": [
+"8.8 cm Flak 18/36/37/41",
+"https://en.wikipedia.org/wiki/8.8_cm_Flak_18/36/37/41"
+],
+"find": {
+"n": "ge",
+"q": "88mm Flak 36"
+},
+"aka": [
+"88mm Flak 36",
+"88 mm Flak",
+"Flak 88"
+]
+},
+{
+"id": "flakvierling",
+"name": "2 cm Flakvierling 38",
+"cat": "Support weapons",
+"side": "ge",
+"text": "Four 20 mm Flak 38 guns on one mount, used against low-flying aircraft and just as effectively against ground targets.",
+"facts": [
+"The Flak 38 fired 450 rounds a minute cyclic, about 180 in practice. The four-barrel mount reached 1,400 a minute at most and about 800 in practice.",
+"Effective vertical range of 2,200 m. Over 40,000 Flak 38 guns were built.",
+"Towed on the Sd.Ah. 52 trailer or mounted on half-tracks such as the Sd.Kfz 10/5 and on tank chassis such as the Wirbelwind."
+],
+"src": [
+"2 cm Flakvierling 38",
+"https://en.wikipedia.org/wiki/2_cm_Flakvierling_38"
+],
+"find": {
+"n": "ge",
+"q": "Flakvierling"
+},
+"aka": [
+"Flakvierling"
+]
+},
+{
+"id": "pak40",
+"name": "7.5 cm Pak 40",
+"cat": "Support weapons",
+"side": "ge",
+"text": "The standard German 75 mm towed anti-tank gun from 1942, able to defeat any Allied tank in Normandy.",
+"facts": [
+"Developed by Rheinmetall-Borsig from 1939 to 1941. The first production guns were delivered in February 1942.",
+"Crew of six, 1,425 kg in action and 14 rounds a minute.",
+"The PzGr. 40 round penetrated about 143 mm at 100 m, 120 mm at 500 m and 97 mm at 1,000 m (angled at 30 degrees).",
+"23,303 guns were built, plus about 3,500 more used to arm tank destroyers."
+],
+"src": [
+"7.5 cm Pak 40",
+"https://en.wikipedia.org/wiki/7.5_cm_Pak_40"
+],
+"find": {
+"n": "ge",
+"q": "Pak 40"
+},
+"aka": [
+"Pak 40",
+"AT Group"
+]
+},
+{
+"id": "bofors",
+"name": "Bofors 40 mm gun (QF 40 mm Mark III)",
+"cat": "Support weapons",
+"side": "uk",
+"text": "The Swedish-designed automatic anti-aircraft gun that became the standard British light anti-aircraft weapon. Self-propelled versions also fired on ground targets in Normandy.",
+"facts": [
+"The L/60 was designed in 1930, first fired as a prototype in November 1931 and completed in October 1933. Over 60,000 were built, including more than 19,000 in British, Canadian and Australian factories.",
+"Maximum rate about 140 rounds a minute, 80 to 100 in practice because the four-round clips were loaded by hand. Maximum range 7,160 m, practical ceiling about 3,800 m.",
+"Crew of four. The carriage weighs 522 kg and the shell 0.9 kg.",
+"A British light anti-aircraft regiment had 54 guns. Six self-propelled Bofors of the 92nd (Loyals) Light AA Regiment landed on Sword Beach on D-Day. Later they were used extensively for ground shoots."
+],
+"src": [
+"Bofors 40 mm L/60 gun",
+"https://en.wikipedia.org/wiki/Bofors_40_mm_L/60_gun"
+],
+"find": {
+"n": "uk",
+"q": "Bofors"
+},
+"aka": [
+"Bofors 40mm",
+"Bofors"
+]
+},
+{
+"id": "sdkfz10_5",
+"name": "Sd.Kfz 10/5",
+"cat": "Vehicles",
+"side": "ge",
+"text": "The light German half-track carrying a 2 cm Flak 38 anti-aircraft gun on an open platform.",
+"facts": [
+"The Sd.Kfz 10 was a 1 tonne half-track with about 14,000 built from 1938 to 1945. Road speed 65 km/h from a 100 PS Maybach engine.",
+"The 10/5 carried the Flak 38 on a platform that was widened from 1942, to 2.156 m. It replaced the 10/4 one for one.",
+"Adler built 1,054 vehicles of the 10/4 and 10/5 types from 1939 to February 1943. Contracts for another 975 10/5s ran for 1943 and 1944."
+],
+"src": [
+"Sd.Kfz. 10",
+"https://en.wikipedia.org/wiki/Sd.Kfz._10"
+],
+"find": {
+"n": "ge",
+"q": "Sd.Kfz 10/5"
+},
+"aka": [
+"Sd.Kfz 10/5",
+"SdKfz 10/5"
+]
+},
+{
+"id": "sdkfz250_9",
+"name": "Sd.Kfz 250/9",
+"cat": "Vehicles",
+"side": "ge",
+"text": "A light reconnaissance half-track with a turret mounting a 2 cm KwK 38 autocannon.",
+"facts": [
+"The turret was a low open-topped one with a coaxial MG 34 or MG 42, the same as on the Sd.Kfz 222 armoured car.",
+"The Sd.Kfz 250 family was built from 1941 to 1945, about 6,628 vehicles of all variants. Armour 5.5 to 14.5 mm.",
+"Top road speed 76 km/h, though drivers were advised not to exceed 65 km/h."
+],
+"src": [
+"Sd.Kfz. 250",
+"https://en.wikipedia.org/wiki/Sd.Kfz._250"
+],
+"find": {
+"n": "ge",
+"q": "Sd.Kfz 250/9"
+},
+"aka": [
+"Sd.Kfz 250/9",
+"SdKfz 250/9"
+]
+},
+{
+"id": "sdkfz251_7",
+"name": "Sd.Kfz 251/7",
+"cat": "Vehicles",
+"side": "ge",
+"text": "The assault engineer version of the Sd.Kfz 251 half-track, fitted to carry assault bridge ramps on its sides.",
+"facts": [
+"The Sd.Kfz 251 was built by Hanomag to carry panzergrenadiers. Crew of 2 plus 10 passengers, armour 6 to 14.5 mm and 7.81 t.",
+"At least 15,252 were built by seven manufacturers, 7,800 of them in 1944.",
+"On the SS-Panzerpionier tile the 251/7 comes with 4 Defence Line markers, 1 Bridge and 1 Defensive Position."
+],
+"src": [
+"Sd.Kfz. 251",
+"https://en.wikipedia.org/wiki/Sd.Kfz._251"
+],
+"find": {
+"n": "ge",
+"q": "Sd.Kfz 251/7"
+},
+"aka": [
+"Sd.Kfz 251/7",
+"SdKfz 251/7"
+]
+},
+{
+"id": "humberac",
+"name": "Humber Armoured Car",
+"cat": "Vehicles",
+"side": "uk",
+"text": "The standard armoured car of British and Canadian reconnaissance regiments. B Squadron's command car and Humber AC are on the Windsor & Jupiter tile.",
+"facts": [
+"Mk I (about 300) used the Guy hull. Mk II (440) improved the armour. Mk III (about 1,650) had a larger three-man turret and a wireless operator.",
+"Mk I to III carried a 15 mm and a 7.92 mm Besa. The Mk IV (about 2,000) swapped in a US 37 mm gun and dropped the wireless operator.",
+"First deliveries in 1941 and used in North Africa from late 1941. It served with the reconnaissance regiments of infantry divisions in Europe."
+],
+"src": [
+"Humber Armoured Car",
+"https://en.wikipedia.org/wiki/Humber_Armoured_Car"
+],
+"find": {
+"n": "uk",
+"q": "Humber AC"
+},
+"aka": [
+"Humber AC",
+"Cmd Humber AC",
+"Humber Armoured Car"
+]
+},
+{
+"id": "humberlrc",
+"name": "Humber Light Reconnaissance Car",
+"cat": "Vehicles",
+"side": "uk",
+"text": "A light armoured car built on the Humber Super Snipe chassis, nicknamed the Ironside or Humberette.",
+"facts": [
+"Built by the Rootes Group, about 3,600 from 1940 to 1943. It carried a No. 19 radio set.",
+"The Mk III (late 1941) had four-wheel drive. The Mk IIIA (1943) had 12 mm of armour at the front, 8 mm at the sides and 6 mm on the turret.",
+"Armed with a Bren and, on the Mk I, a Boys anti-tank rifle. The Reconnaissance Corps used the Mk III and IIIA widely, including in Western Europe."
+],
+"src": [
+"Humber Light Reconnaissance Car",
+"https://en.wikipedia.org/wiki/Humber_Light_Reconnaissance_Car"
+],
+"find": {
+"n": "uk",
+"q": "Humber LRC"
+},
+"aka": [
+"Humber LRC",
+"Humber Light Reconnaissance Car",
+"Ironside"
+]
+},
+{
+"id": "staghound",
+"name": "T17E1 Staghound",
+"cat": "Vehicles",
+"side": "uk",
+"text": "The American-built four-wheel-drive armoured car that British and Commonwealth reconnaissance units used from 1943.",
+"facts": [
+"Built by Chevrolet. Armed with a 37 mm M6 gun, a coaxial .30 calibre Browning, a second .30 in the hull and a 2-inch smoke mortar. Crew of five.",
+"About 3,844 were built, 2,844 of them for Britain. Production began in October 1942.",
+"In a reconnaissance regiment, three Staghounds served at regimental HQ and three at each squadron HQ.",
+"Its first operational service was in Italy. Canadian forces were among those that used it in North-West Europe."
+],
+"src": [
+"Staghound armoured car",
+"https://en.wikipedia.org/wiki/Staghound_armoured_car"
+],
+"find": {
+"n": "uk",
+"q": "T17 Staghound"
+},
+"aka": [
+"T17 Staghound",
+"Staghound",
+"T17E1"
+]
 }
 ]
 };

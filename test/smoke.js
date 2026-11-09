@@ -260,7 +260,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(await hrp.locator('.hrow').count() === 8, 'US heroes page lists 8 hero tiles');
   ok(await hrp.locator('.eqcard').count() === 12, 'equipment shows 12 cards across boxes');
   await hrp.click('[data-nation="ge"]');
-  ok(await hrp.locator('.hrow').count() === 5, 'German heroes page lists 5 hero tiles');
+  ok(await hrp.locator('.hrow').count() === 6, 'German heroes page lists 6 hero tiles');
   await hrp.locator('.hhead', { hasText: 'Ludwig' }).click();
   ok(await hrp.locator('.hrow.open .tchip', { hasText: 'Overwatch' }).count() === 1, 'Ludwig can take Overwatch');
   ok(await hrp.locator('.hrow.open .htile').count() === 1, 'hero tile image shown');
@@ -327,9 +327,16 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(scImgs.length > 0 && scImgs.every(f => fs.existsSync(path.join(root, f))), 'every omaha scenario figure exists (' + scImgs.length + ')');
   ok(terrs.length === 0, 'omaha tokens: no console errors ' + terrs.join('|'));
   await tp.goto(base + 'tokens.html?b=caen'); await tp.waitForTimeout(300);
-  ok(await tp.locator('.hrow').count() === 7, 'caen tokens: 7 entries');
+  ok(await tp.locator('.hrow').count() === 13, 'caen tokens: 13 entries');
   const ctImgs = JSON.parse(await tp.evaluate(() => JSON.stringify(window.HTS_TOKENS['hon-caen'].entries.reduce((a, e) => a.concat(e.faces.map(f => f.img)), []))));
-  ok(ctImgs.length === 13 && ctImgs.every(f => fs.existsSync(path.join(root, f))), 'every caen token image exists (' + ctImgs.length + ')');
+  ok(ctImgs.length === 48 && ctImgs.every(f => fs.existsSync(path.join(root, f))), 'every caen token image exists (' + ctImgs.length + ')');
+
+  // Battle Pack #3 (Windsor & Jupiter) units
+  await tp.goto(base + 'units.html'); await tp.waitForTimeout(300);
+  const wj = JSON.parse(await tp.evaluate(() => JSON.stringify(['ge', 'uk'].map(n => { const d = window.HTS_DATA['hon-bro-' + n]; return [d.tiles.filter(t => t.set === 'BP3').length, d.options.filter(o => o.set === 'BP3').length, d.tiles.filter(t => t.set === 'BP3').every(t => t.slots.length > 0 && t.cost > 0)]; }))));
+  ok(wj[0][0] === 5 && wj[0][1] === 15 && wj[1][0] === 4 && wj[1][1] === 12 && wj[0][2] && wj[1][2], 'Battle Pack 3: 9 tiles and 27 options with slots and costs');
+  const wjImgs = JSON.parse(await tp.evaluate(() => JSON.stringify(['ge', 'uk'].reduce((a, n) => { const d = window.HTS_DATA['hon-bro-' + n]; d.tiles.concat(d.options).filter(x => x.set === 'BP3').forEach(x => { a.push(x.img); Object.values(x.uimg || {}).forEach(u => a.push(u)); }); return a; }, []))));
+  ok(wjImgs.length > 60 && wjImgs.every(f => fs.existsSync(path.join(root, f))), 'every Battle Pack 3 image exists (' + wjImgs.length + ')');
 
   // Battle for Caen scenarios and armies
   await sp.goto(base + 'scenarios.html?b=caen'); await sp.waitForTimeout(300);

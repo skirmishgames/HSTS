@@ -7,7 +7,12 @@ HTS_TOKENS["hon-caen"] = {
  "groups": [
   "Objectives",
   "Turn chart",
-  "Combat markers"
+  "Combat markers",
+  "Gear markers",
+  "Defences",
+  "Customizations",
+  "Aircraft",
+  "Other markers"
  ],
  "entries": [
   {
@@ -265,6 +270,414 @@ HTS_TOKENS["hon-caen"] = {
     }
    ],
    "src": "Battle for Caen booklet V1.4, pp.7 and 11"
+  },
+  {
+   "id": "wjgear-ge",
+   "name": "German gear markers",
+   "group": "Gear markers",
+   "summary": "Grenade, Magnetic Mine and Panzerfaust markers for the German Pioniere. The Gear option brings three of them.",
+   "text": [
+    "Each marker shows a range arrow and a number. Grenade: range 2. Magnetic Mine: range 1. Panzerfaust: range 4.",
+    "The Mine and the Panzerfaust have an explosion side (B) with combat values. The Panzerfaust side B shows 2 in the blast and +1, +5 and +4 below it.",
+    "Oros Snowt has his own Grenade marker with an infinity symbol, so it is never used up."
+   ],
+   "faces": [
+    {
+     "img": "img/hon/caen/tokens/wj-grenade-ge.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Grenade",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-magmine-a.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Magnetic Mine, side A",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-magmine-b.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Magnetic Mine, side B",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-pfaust-a.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Panzerfaust, side A",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-pfaust-b.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Panzerfaust, side B",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-grenade-snowt.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Oros Snowt grenade",
+     "tall": false
+    }
+   ],
+   "facts": [
+    [
+     "Pack",
+     "Battle Pack #3, Windsor & Jupiter"
+    ],
+    [
+     "Option",
+     "Gear (SS-Panzerpionier), 15 pts"
+    ]
+   ],
+   "links": [
+    {
+     "label": "Units",
+     "href": "units.html"
+    }
+   ],
+   "src": "Battle Pack #3 (Windsor & Jupiter) digital files"
+  },
+  {
+   "id": "wjgear-cw",
+   "name": "Commonwealth gear markers",
+   "group": "Gear markers",
+   "summary": "Ammo, Fuel, Grenade, Knife, PIAT and Additional Shielding markers. They come with the Gear and Recce Gear options.",
+   "text": [
+    "Ammo shows +2 and +1. Fuel shows a movement bonus of +2. Additional Shielding shows +2. Knife shows +2 beside a blade. Grenade has range 2 and PIAT has range 5, each with a range arrow.",
+    "The PIAT has an explosion side (B) showing 1 in the blast and +0, +3 and +2 below it."
+   ],
+   "faces": [
+    {
+     "img": "img/hon/caen/tokens/wj-ammo.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Ammo",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-fuel.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Fuel",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-shield.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Additional Shielding",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-grenade-cw.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Grenade",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-knife.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Knife",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-piat-a.webp",
+     "w": 211,
+     "h": 211,
+     "label": "PIAT, side A",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-piat-b.webp",
+     "w": 211,
+     "h": 211,
+     "label": "PIAT, side B",
+     "tall": false
+    }
+   ],
+   "facts": [
+    [
+     "Pack",
+     "Battle Pack #3, Windsor & Jupiter"
+    ],
+    [
+     "Options",
+     "Gear (10 pts) and Recce Gear (15 pts), B Recce Squadron"
+    ]
+   ],
+   "links": [
+    {
+     "label": "Units",
+     "href": "units.html"
+    }
+   ],
+   "src": "Battle Pack #3 (Windsor & Jupiter) digital files"
+  },
+  {
+   "id": "wjdefence",
+   "name": "Defence lines, defensive position and bridge",
+   "group": "Defences",
+   "summary": "Markers that come with the Sd.Kfz 251/7 and the Position option of the SS-Panzerpionier.",
+   "text": [
+    "The Sd.Kfz 251/7 comes with 4 Defence Line markers, 1 Bridge and 1 Defensive Position. The Position option adds 1 more Defensive Position.",
+    "Each is two-sided. The Defensive Position shows a green hedgerow side and a ruined side with modifier icons. The Bridge shows two plank strips with direction arrows."
+   ],
+   "faces": [
+    {
+     "img": "img/hon/caen/tokens/wj-defline-a.webp",
+     "w": 323,
+     "h": 568,
+     "label": "Defence Line, side A",
+     "tall": true
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-defline-b.webp",
+     "w": 325,
+     "h": 574,
+     "label": "Defence Line, side B",
+     "tall": true
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-defpos-a.webp",
+     "w": 612,
+     "h": 612,
+     "label": "Defensive Position, side A",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-defpos-b.webp",
+     "w": 612,
+     "h": 612,
+     "label": "Defensive Position, side B",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-bridge-a.webp",
+     "w": 540,
+     "h": 540,
+     "label": "Bridge, side A",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-bridge-b.webp",
+     "w": 540,
+     "h": 540,
+     "label": "Bridge, side B",
+     "tall": false
+    }
+   ],
+   "facts": [
+    [
+     "Pack",
+     "Battle Pack #3, Windsor & Jupiter"
+    ],
+    [
+     "Options",
+     "Sd.Kfz 251/7 (45 pts), Position (10 pts)"
+    ]
+   ],
+   "links": [
+    {
+     "label": "Units",
+     "href": "units.html"
+    }
+   ],
+   "src": "Battle Pack #3 (Windsor & Jupiter) digital files"
+  },
+  {
+   "id": "wjcustom",
+   "name": "Customization cards",
+   "group": "Customizations",
+   "summary": "Charge, Urban Fighter and Ferocious cards with a point cost, plus the Life Point and Tactical Map markers.",
+   "text": [
+    "Charge costs 10 points and Ferocious costs 10. Urban Fighter costs 5.",
+    "Tactical Map is a marker with range 3. Life Point is a skull marker. The booklet for this pack is not in the archive, so the rules for these are not written up yet."
+   ],
+   "faces": [
+    {
+     "img": "img/hon/caen/tokens/wj-charge.webp",
+     "w": 256,
+     "h": 352,
+     "label": "Charge (10)",
+     "tall": true
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-urban.webp",
+     "w": 256,
+     "h": 352,
+     "label": "Urban Fighter (5)",
+     "tall": true
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-ferocious.webp",
+     "w": 256,
+     "h": 352,
+     "label": "Ferocious (10)",
+     "tall": true
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-tacmap.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Tactical Map",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-life.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Life Point",
+     "tall": false
+    }
+   ],
+   "facts": [
+    [
+     "Pack",
+     "Battle Pack #3, Windsor & Jupiter"
+    ]
+   ],
+   "links": [
+    {
+     "label": "Units",
+     "href": "units.html"
+    }
+   ],
+   "src": "Battle Pack #3 (Windsor & Jupiter) digital files"
+  },
+  {
+   "id": "wjspeed",
+   "name": "Speed markers and pilot counter",
+   "group": "Aircraft",
+   "summary": "Four double-sided Speed markers and the German Pilote counter.",
+   "text": [
+    "The Speed markers come in two designs, each twice. Some sides show an aircraft icon beside the movement values.",
+    "The Pilote counter has a Balkenkreuz. Side A is a figure on foot. Side B is an aircraft canopy."
+   ],
+   "faces": [
+    {
+     "img": "img/hon/caen/tokens/wj-speed1-a.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Speed 1, side A",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-speed1-b.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Speed 1, side B",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-speed2-a.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Speed 2, side A",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-speed2-b.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Speed 2, side B",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-speed3-a.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Speed 3, side A",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-speed3-b.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Speed 3, side B",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-speed4-a.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Speed 4, side A",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-speed4-b.webp",
+     "w": 211,
+     "h": 211,
+     "label": "Speed 4, side B",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-pilot-a.webp",
+     "w": 352,
+     "h": 352,
+     "label": "Pilote, side A",
+     "tall": false
+    },
+    {
+     "img": "img/hon/caen/tokens/wj-pilot-b.webp",
+     "w": 352,
+     "h": 352,
+     "label": "Pilote, side B",
+     "tall": false
+    }
+   ],
+   "facts": [
+    [
+     "Pack",
+     "Battle Pack #3, Windsor & Jupiter"
+    ]
+   ],
+   "links": [
+    {
+     "label": "Units",
+     "href": "units.html"
+    }
+   ],
+   "src": "Battle Pack #3 (Windsor & Jupiter) digital files"
+  },
+  {
+   "id": "wjrecce",
+   "name": "Ambush Recce counter",
+   "group": "Other markers",
+   "summary": "A hidden Commonwealth reconnaissance counter, a question mark with the roundel.",
+   "text": [
+    "The counter shows a question mark, a movement value of 3 and a crosshair icon, with the Commonwealth roundel in the corner.",
+    "The rules for it are not written up yet because the booklet for this pack is not in the archive."
+   ],
+   "faces": [
+    {
+     "img": "img/hon/caen/tokens/wj-ambush-recce.webp",
+     "w": 459,
+     "h": 459,
+     "label": "Ambush Recce",
+     "tall": false
+    }
+   ],
+   "facts": [
+    [
+     "Pack",
+     "Battle Pack #3, Windsor & Jupiter"
+    ]
+   ],
+   "links": [
+    {
+     "label": "Units",
+     "href": "units.html"
+    }
+   ],
+   "src": "Battle Pack #3 (Windsor & Jupiter) digital files"
   }
  ]
 };

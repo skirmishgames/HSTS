@@ -31,7 +31,9 @@ HTS_DATA["hon-bro-ge"] = {
   "SS Recon Group": "img/hon/bro/ge/units/ecg-ss-recon-group.webp",
   "SS Flamer": "img/hon/bro/ge/units/ecg-ss-flamer.webp",
   "8cm Granatwerfer": "img/hon/bro/ge/units/ecg-8cm-granatwerfer.webp",
-  "MG 42 HMG": "img/hon/bro/ge/units/ecg-mg-42-hmg.webp"
+  "MG 42 HMG": "img/hon/bro/ge/units/ecg-mg-42-hmg.webp",
+  "8 cm Granatwerfer": "img/hon/bro/ge/units/wj-8-cm-granatwerfer.webp",
+  "Sd.Kfz 250/9": "img/hon/bro/ge/units/wj-sd-kfz-250-9.webp"
  },
  "tiles": [
   {
@@ -1146,6 +1148,361 @@ HTS_DATA["hon-bro-ge"] = {
     "panzerschreck_group_hj",
     "granatwerfer_8cm_hj",
     "mg42_hmg_hj"
+   ]
+  },
+  {
+   "id": "divisionsstab_meyer",
+   "name": "Divisionsstab",
+   "sub": "Obersturmbannführer Kurt Meyer",
+   "cost": 40,
+   "type": "command",
+   "set": "BP3",
+   "squares": 2,
+   "img": "img/hon/bro/ge/tiles/divisionsstab_meyer.webp",
+   "w": 2028,
+   "h": 589,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "K. Meyer",
+     1,
+     "officer"
+    ],
+    [
+     "Command Group",
+     1,
+     "infantry"
+    ]
+   ],
+   "uimg": {
+    "K. Meyer": "img/hon/bro/ge/units/wj-divisionsstab-meyer-k-meyer.webp",
+    "Command Group": "img/hon/bro/ge/units/wj-divisionsstab-meyer-command-group.webp"
+   },
+   "slots": [
+    {
+     "x": 0.0302,
+     "y": 0.2339,
+     "w": 0.2053,
+     "h": 0.6935,
+     "size": "w",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    },
+    {
+     "x": 0.2476,
+     "y": 0.2339,
+     "w": 0.157,
+     "h": 0.6935,
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    },
+    {
+     "x": 0.5918,
+     "y": 0.2339,
+     "w": 0.163,
+     "h": 0.6935,
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    },
+    {
+     "x": 0.7669,
+     "y": 0.2339,
+     "w": 0.2053,
+     "h": 0.6935,
+     "size": "w",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "feldkommando_herold",
+   "name": "Feldkommando",
+   "sub": "Hauptmann Willi Herold",
+   "cost": 30,
+   "type": "command",
+   "set": "BP3",
+   "squares": 0,
+   "img": "img/hon/bro/ge/tiles/feldkommando_herold.webp",
+   "w": 1670,
+   "h": 589,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "Hptm. Herold",
+     1,
+     "officer"
+    ]
+   ],
+   "uimg": {
+    "Hptm. Herold": "img/hon/bro/ge/units/wj-feldkommando-herold-hptm-herold.webp",
+    "Fire Group": "img/hon/bro/ge/units/wj-feldkommando-herold-fire-group.webp",
+    "NCO": "img/hon/bro/ge/units/wj-feldkommando-herold-nco.webp"
+   },
+   "slots": [
+    {
+     "x": 0.0295,
+     "y": 0.2174,
+     "w": 0.2527,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    },
+    {
+     "x": 0.5672,
+     "y": 0.2174,
+     "w": 0.1969,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    },
+    {
+     "x": 0.7729,
+     "y": 0.2174,
+     "w": 0.1969,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "custom"
+     ]
+    }
+   ],
+   "own": [
+    "panzergrenadiere_wj"
+   ]
+  },
+  {
+   "id": "oros_snowt",
+   "name": "Oros Snowt",
+   "sub": "Grenade Maniac",
+   "cost": 35,
+   "type": "hero",
+   "set": "BP3",
+   "squares": 1,
+   "img": "img/hon/bro/ge/tiles/oros_snowt.webp",
+   "w": 800,
+   "h": 589,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "Oros Snowt",
+     1,
+     "character"
+    ]
+   ],
+   "uimg": {
+    "Oros Snowt": "img/hon/bro/ge/units/wj-oros-snowt-oros-snowt.webp"
+   },
+   "slots": [
+    {
+     "x": 0.5176,
+     "y": 0.1968,
+     "w": 0.4143,
+     "h": 0.5918,
+     "size": "n",
+     "stripes": [
+      "custom"
+     ]
+    }
+   ],
+   "own": [],
+   "note": "The tile carries a Grenade marker with an infinity symbol, so it is never used up."
+  },
+  {
+   "id": "jagerbataillon",
+   "name": "Jägerbataillon",
+   "sub": "Jäger-Regiment 31, 16. Luftwaffen-Feld-Div.",
+   "cost": 70,
+   "type": "platoon",
+   "set": "BP3",
+   "squares": 3,
+   "img": "img/hon/bro/ge/tiles/jagerbataillon.webp",
+   "w": 2028,
+   "h": 589,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "Ob. Hitzemann",
+     1,
+     "officer"
+    ],
+    [
+     "Gunners",
+     1,
+     "infantry"
+    ],
+    [
+     "Luftwaffe Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Luftwaffe MG 42",
+     1,
+     "weapon"
+    ]
+   ],
+   "uimg": {
+    "Ob. Hitzemann": "img/hon/bro/ge/units/wj-jagerbataillon-ob-hitzemann.webp",
+    "Gunners": "img/hon/bro/ge/units/wj-jagerbataillon-gunners.webp",
+    "Luftwaffe Fire Group": "img/hon/bro/ge/units/wj-jagerbataillon-luftwaffe-fire-group.webp",
+    "Luftwaffe MG 42": "img/hon/bro/ge/units/wj-jagerbataillon-luftwaffe-mg-42.webp",
+    "Pak 40": "img/hon/bro/ge/units/wj-jagerbataillon-pak-40.webp",
+    "88mm Flak 36": "img/hon/bro/ge/units/wj-jagerbataillon-88mm-flak-36.webp",
+    "Flakvierling": "img/hon/bro/ge/units/wj-jagerbataillon-flakvierling.webp",
+    "Sd.Kfz 10/5": "img/hon/bro/ge/units/wj-jagerbataillon-sd-kfz-10-5.webp",
+    "Luftwaffe 8cm Granatwerfer": "img/hon/bro/ge/units/wj-jagerbataillon-luftwaffe-8cm-granatwerfer.webp"
+   },
+   "slots": [
+    {
+     "x": 0.0295,
+     "y": 0.2174,
+     "w": 0.2058,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "WR"
+     ]
+    },
+    {
+     "x": 0.2473,
+     "y": 0.2174,
+     "w": 0.1574,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "WR"
+     ]
+    },
+    {
+     "x": 0.5922,
+     "y": 0.2174,
+     "w": 0.1634,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "WR"
+     ]
+    },
+    {
+     "x": 0.7677,
+     "y": 0.2174,
+     "w": 0.2058,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "WR"
+     ]
+    }
+   ],
+   "own": [
+    "flak88_jg",
+    "at_group_jg",
+    "flakvierling_jg",
+    "mg42_group_jg",
+    "mortar_group_jg",
+    "sdkfz_10_5"
+   ]
+  },
+  {
+   "id": "ss_panzerpionier",
+   "name": "SS-Panzerpionier",
+   "sub": "SS-Panzerpionierbataillon 12, 12. SS-Pz-Div",
+   "cost": 110,
+   "type": "platoon",
+   "set": "BP3",
+   "squares": 3,
+   "img": "img/hon/bro/ge/tiles/ss_panzerpionier.webp",
+   "w": 1590,
+   "h": 589,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "Ob. Müller",
+     1,
+     "officer"
+    ],
+    [
+     "SS Assault Group",
+     1,
+     "infantry"
+    ],
+    [
+     "SS Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "SS MG Group",
+     1,
+     "infantry"
+    ]
+   ],
+   "uimg": {
+    "Ob. Müller": "img/hon/bro/ge/units/wj-ss-panzerpionier-ob-muller.webp",
+    "SS Assault Group": "img/hon/bro/ge/units/wj-ss-panzerpionier-ss-assault-group.webp",
+    "SS Fire Group": "img/hon/bro/ge/units/wj-ss-panzerpionier-ss-fire-group.webp",
+    "SS MG Group": "img/hon/bro/ge/units/wj-ss-panzerpionier-ss-mg-group.webp",
+    "SS Flamer": "img/hon/bro/ge/units/wj-ss-panzerpionier-ss-flamer.webp",
+    "Panzerschreck": "img/hon/bro/ge/units/wj-ss-panzerpionier-panzerschreck.webp",
+    "Sd.Kfz 251/7": "img/hon/bro/ge/units/wj-ss-panzerpionier-sd-kfz-251-7.webp"
+   },
+   "slots": [
+    {
+     "x": 0.0386,
+     "y": 0.2174,
+     "w": 0.2623,
+     "h": 0.7172,
+     "size": "w",
+     "stripes": [
+      "KG"
+     ]
+    },
+    {
+     "x": 0.5432,
+     "y": 0.2174,
+     "w": 0.2052,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "KG"
+     ]
+    },
+    {
+     "x": 0.7639,
+     "y": 0.2174,
+     "w": 0.2006,
+     "h": 0.7172,
+     "size": "n",
+     "stripes": [
+      "KG"
+     ]
+    }
+   ],
+   "own": [
+    "assault_group_pi",
+    "defensive_group_pi",
+    "gear_pi",
+    "position_pi",
+    "sdkfz_251_7"
    ]
   }
  ],
@@ -2842,6 +3199,389 @@ HTS_DATA["hon-bro-ge"] = {
      "weapon"
     ]
    ]
+  },
+  {
+   "id": "panzergrenadiere_wj",
+   "name": "Panzergrenadiere",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "cmd"
+   ],
+   "img": "img/hon/bro/ge/options/panzergrenadiere_wj.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "Fire Group",
+     2,
+     "infantry"
+    ],
+    [
+     "NCO",
+     1,
+     "officer"
+    ]
+   ]
+  },
+  {
+   "id": "flak88_jg",
+   "name": "88mm Flak 36",
+   "cat": "support",
+   "cost": 50,
+   "squares": 1,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "WR"
+   ],
+   "img": "img/hon/bro/ge/options/flak88_jg.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "88mm Flak 36",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "at_group_jg",
+   "name": "AT Group",
+   "cat": "support",
+   "cost": 55,
+   "squares": 2,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "WR"
+   ],
+   "img": "img/hon/bro/ge/options/at_group_jg.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "Pak 40",
+     1,
+     "weapon"
+    ],
+    [
+     "Luftwaffe Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Gunners",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "flakvierling_jg",
+   "name": "Flakvierling",
+   "cat": "support",
+   "cost": 40,
+   "squares": 1,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "WR"
+   ],
+   "img": "img/hon/bro/ge/options/flakvierling_jg.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "Flakvierling",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "mg42_group_jg",
+   "name": "MG 42 Group",
+   "cat": "support",
+   "cost": 50,
+   "squares": 2,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "WR"
+   ],
+   "img": "img/hon/bro/ge/options/mg42_group_jg.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "Luftwaffe Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Gunners",
+     1,
+     "infantry"
+    ],
+    [
+     "Luftwaffe MG 42",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "mortar_group_jg",
+   "name": "Mortar Group",
+   "cat": "support",
+   "cost": 55,
+   "squares": 2,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "WR"
+   ],
+   "img": "img/hon/bro/ge/options/mortar_group_jg.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "Luftwaffe Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Gunners",
+     1,
+     "infantry"
+    ],
+    [
+     "Luftwaffe 8cm Granatwerfer",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "sdkfz_10_5",
+   "name": "Sd.Kfz 10/5",
+   "cat": "support",
+   "cost": 30,
+   "squares": 1,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "WR"
+   ],
+   "img": "img/hon/bro/ge/options/sdkfz_10_5.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "Sd.Kfz 10/5",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "granatwerfer_8cm",
+   "name": "8 cm Granatwerfer",
+   "cat": "support",
+   "cost": 20,
+   "squares": 1,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "any"
+   ],
+   "img": "img/hon/bro/ge/options/granatwerfer_8cm.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "8 cm Granatwerfer",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "minen",
+   "name": "Minen",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "any"
+   ],
+   "img": "img/hon/bro/ge/options/minen.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "note": "3 Minen markers (x3 on the card)."
+  },
+  {
+   "id": "sdkfz_250_9",
+   "name": "Sd.Kfz 250/9",
+   "cat": "support",
+   "cost": 30,
+   "squares": 1,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "any"
+   ],
+   "img": "img/hon/bro/ge/options/sdkfz_250_9.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "Sd.Kfz 250/9",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "assault_group_pi",
+   "name": "Assault Group",
+   "cat": "support",
+   "cost": 75,
+   "squares": 2,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "KG"
+   ],
+   "img": "img/hon/bro/ge/options/assault_group_pi.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "SS Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "SS MG Group",
+     1,
+     "infantry"
+    ],
+    [
+     "SS Flamer",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "defensive_group_pi",
+   "name": "Defensive Group",
+   "cat": "support",
+   "cost": 70,
+   "squares": 2,
+   "set": "BP3",
+   "size": "w",
+   "stripes": [
+    "KG"
+   ],
+   "img": "img/hon/bro/ge/options/defensive_group_pi.webp",
+   "w": 352,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "SS Assault Group",
+     1,
+     "infantry"
+    ],
+    [
+     "SS MG Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Panzerschreck",
+     1,
+     "weapon"
+    ]
+   ]
+  },
+  {
+   "id": "gear_pi",
+   "name": "Gear",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "KG"
+   ],
+   "img": "img/hon/bro/ge/options/gear_pi.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "note": "3 gear markers (x3 on the card). German gear markers in this pack: Grenade, Magnetic Mine and Panzerfaust."
+  },
+  {
+   "id": "position_pi",
+   "name": "Position",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "KG"
+   ],
+   "img": "img/hon/bro/ge/options/position_pi.webp",
+   "w": 256,
+   "h": 352,
+   "sheet": "BP3-GE",
+   "note": "1 Defensive Position marker (x1 on the card)."
+  },
+  {
+   "id": "sdkfz_251_7",
+   "name": "Sd.Kfz 251/7",
+   "cat": "support",
+   "cost": 45,
+   "squares": 1,
+   "set": "BP3",
+   "size": "n",
+   "stripes": [
+    "KG"
+   ],
+   "img": "img/hon/bro/ge/options/sdkfz_251_7.webp",
+   "w": 465,
+   "h": 607,
+   "sheet": "BP3-GE",
+   "units": [
+    [
+     "Sd.Kfz 251/7",
+     1,
+     "vehicle"
+    ]
+   ],
+   "note": "Comes with 4 Defence Line markers, 1 Bridge and 1 Defensive Position."
   }
  ]
 };
