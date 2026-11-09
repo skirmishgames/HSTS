@@ -293,12 +293,12 @@ Decision: 2026-11-09 Left as extracted. The pictures sit above the text on every
 
 ISS-048  PDF copies on the site   [OPEN]
 Where: pdf/lib/.
-Detail: Rules, scenario, community and aid documents have a PDF. Originals over 5 MB are stored as compressed copies at 130 dpi without the text layer (Rules reference sheets, Mines, British Commandos rules, D-Day pack, Pegasus Bridge campaign book, Unofficial scenarios, Realism variant, Blast patterns). The unit bibles and catalogues (30 files, 300 MB) have page pictures only. The army label posters (US, German, Commonwealth, 9374 by 13257 points each) are not on the site. Originals of all of them are in Sorted/.
-Decision: 2026-11-09 Done to keep the repository small. Say if you want the originals added.
+Detail: Rules, scenario, community and aid documents have their original PDF (about 110 MB in all). The 30 unit bible and catalogue files (300 MB) have page pictures only, and the three army label posters (US, German, Commonwealth, 9374 by 13257 points each) are not on the site. Originals of all of them are in Sorted/.
+Decision: 2026-11-09 Standing rule from you: always use the better version of a file. The compressed copies I first made were replaced with the originals. Say if you want the unit bibles and catalogues added as PDFs too.
 
 ISS-049  Duplicate files in _Inbox   [FIXED in next release]
 Where: _Inbox.
-Detail: General Strategy Tips.md (same as Sorted/Guides), Commonwealth Misc Unit Bible (two identical copies), six Big Red One Index Files PDFs (same as Sorted/Boxes/Big Red One), Aviation Rules 2.pdf (same as Sorted/Rules/Aviation/Aviation Rules V2.pdf), and Box Art pic2631892.jpg.webp (the same Pegasus Bridge picture, 12 percent smaller). One copy of each is kept. The extra copies are in Sorted/_to_delete/.
+Detail: General Strategy Tips.md (same as Sorted/Guides), Commonwealth Misc Unit Bible (two identical copies), six Big Red One Index Files PDFs (same as Sorted/Boxes/Big Red One), Aviation Rules 2.pdf (same as Sorted/Rules/Aviation/Aviation Rules V2.pdf), and Box Art pic2631892.jpg.webp (the same Pegasus Bridge picture, 12 percent smaller). One copy of each is kept. The extra copies were checked byte for byte and deleted.
 Decision: 2026-11-09 Kept the newer or better copy.
 
 ISS-050  First edition rulebook is still missing   [OPEN]

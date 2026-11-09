@@ -101,7 +101,7 @@
     h += '<h2 id="guides">Guides</h2><ul class="slist" id="gList">' + d.guides.map(function (x) {
       return '<li><a href="guides.html?g=' + x.id + '">' + esc(x.title) + '</a> <span class="hsnip">' + esc(x.tag) + '. ' + esc(x.summary) + '</span></li>';
     }).join('') + '</ul>';
-    h += '<h2 id="documents">Documents</h2><p class="htext">Rules sheets, scenario packs, unit references and catalogues from the first edition and the community. Each opens as pictures of the pages with the text under them, so you can search them, and the smaller ones have a PDF to download.</p>';
+    h += '<h2 id="documents">Documents</h2><p class="htext">Rules sheets, scenario packs, unit references and catalogues from the first edition and the community. Each opens as pictures of the pages with the text under them, so you can search them, and the rules, scenario and community ones have a PDF to download.</p>';
     h += '<div class="field"><label class="label" for="lq">Search the documents</label><input id="lq" type="search" placeholder="Try: mines, night combat, landing craft, Lord Lovat" autocomplete="off" value="' + esc(S.q) + '"></div>';
     h += '<div class="chips" id="lchips" role="group" aria-label="Kind of document"><button type="button" class="chip' + (S.c === 'all' ? ' on' : '') + '" data-c="all">All ' + L.docs.length + '</button>' + L.groups.map(function (g) {
       var n = L.docs.filter(function (x) { return x.group === g.id; }).length;
