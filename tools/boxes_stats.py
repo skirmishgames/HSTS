@@ -38,7 +38,7 @@ def links(b, sets, nation, heroes_box, maps_box, hist_box, extra=None):
     out = []
     out.append({'id': 'rules', 'label': 'Rules', 'href': 'rules.html?b=' + b, 'count': plural(len(rules[b]['chunks']), 'rule entry', 'rule entries'), 'text': 'The rulebook split into searchable entries, with the pictures.'})
     out.append({'id': 'scenarios', 'label': 'Scenarios', 'href': 'scenarios.html?b=' + b, 'count': plural(n_scen(b), 'scenario'), 'text': 'Every scenario as a web page with maps and recruitment pictures, plus the booklet PDF.'})
-    out.append({'id': 'units', 'label': 'Unit index', 'href': 'units.html?n=' + nation, 'count': '%d tiles, %d options' % (len(tiles(sets)), len(options(sets))), 'text': 'Every recruitment tile and option, with costs and the units on them.'})
+    out.append({'id': 'units', 'label': 'Unit index', 'href': 'units.html?b=' + b + '&n=' + nation, 'count': '%d tiles, %d options' % (len(tiles(sets)), len(options(sets))), 'text': 'Every recruitment tile and option, with costs and the units on them.'})
     out.append({'id': 'heroes', 'label': 'Heroes', 'href': 'heroes.html?b=' + heroes_box, 'count': plural(len(tiles(sets, 'hero')), 'hero tile'), 'text': 'Hero tiles, what fits their slots, and the equipment cards.'})
     if b == 'bro':
         out.append({'id': 'cards', 'label': 'Cards', 'href': 'cards.html', 'count': plural(len(cards['entries']), 'card'), 'text': 'The Battle Event card decks, both sides.'})

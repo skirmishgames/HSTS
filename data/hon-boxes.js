@@ -27,7 +27,7 @@ window.HTS_BOXES = {
     {
      "id": "units",
      "label": "Unit index",
-     "href": "units.html?n=us",
+     "href": "units.html?b=bro&n=us",
      "count": "12 tiles, 57 options",
      "text": "Every recruitment tile and option, with costs and the units on them."
     },
@@ -116,7 +116,7 @@ window.HTS_BOXES = {
     {
      "id": "units",
      "label": "Unit index",
-     "href": "units.html?n=us",
+     "href": "units.html?b=omaha&n=us",
      "count": "20 tiles, 61 options",
      "text": "Every recruitment tile and option, with costs and the units on them."
     },
@@ -198,7 +198,7 @@ window.HTS_BOXES = {
     {
      "id": "units",
      "label": "Unit index",
-     "href": "units.html?n=uk",
+     "href": "units.html?b=caen&n=uk",
      "count": "26 tiles, 75 options",
      "text": "Every recruitment tile and option, with costs and the units on them."
     },

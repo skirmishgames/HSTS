@@ -2,7 +2,7 @@
   'use strict';
 
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'bro', name: 'Big Red One' }];
+  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One', sets: ['CB'] }, { id: 'omaha', name: 'Bloody Omaha', sets: ['BO'] }, { id: 'caen', name: 'Battle for Caen', sets: ['ECG', 'BP3'] }, { id: 'other', name: 'Promos and War Stories', sets: ['KS-9', 'SOLO', 'P500', 'WS#0'] }];
   var TTYPES = [['all', 'All'], ['platoon', 'Platoons'], ['command', 'Command'], ['hero', 'Heroes'], ['landing', 'Landing'], ['aircraft', 'Aircraft'], ['support', 'Support tile'], ['special', 'Other']];
   var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }];
   var VIEWS = [['tile', 'By tile'], ['unit', 'Unit list']];
@@ -13,7 +13,7 @@
   var TYPE_NAME = { platoon: 'Platoon', command: 'Command tile', hero: 'Hero', landing: 'Landing', aircraft: 'Aircraft', support: 'Support tile', special: 'Other' };
   var TYPE_ORDER = { command: 0, platoon: 1, hero: 2, landing: 3, aircraft: 4, support: 5, special: 6 };
 
-  var S = { b: 'bro', n: 'us', q: '', view: 'tile', kind: 'all', tt: 'all', theme: 'light' };
+  var S = { b: 'all', n: 'us', q: '', view: 'tile', kind: 'all', tt: 'all', theme: 'light' };
   var cache = {};
 
   function $(id) { return document.getElementById(id); }
@@ -51,7 +51,9 @@
   function index(n) {
     var ck = S.b + ':' + n;
     if (cache[ck]) return cache[ck];
-    var d = window.HTS_DATA['hon-' + S.b + '-' + n];
+    var d = window.HTS_DATA['hon-bro-' + n];
+    var bx = BOXES.filter(function (b) { return b.id === S.b; })[0];
+    if (bx && bx.sets) d = { uimg: d.uimg, tiles: d.tiles.filter(function (t) { return bx.sets.indexOf(t.set) >= 0; }), options: d.options.filter(function (o) { return bx.sets.indexOf(o.set) >= 0; }) };
     var O = {}, owned = {};
     d.options.forEach(function (o) { O[o.id] = o; });
     var tiles = d.tiles.slice().sort(function (a, b) {
@@ -152,7 +154,7 @@
         return '<article class="ucard"><div class="ubody"><ul class="oplist">' + optionRow(x.o, null, I.d) + '</ul></div></article>';
       }).join('') + '</div></section>';
     }
-    if (!html) html = '<p class="empty2">Nothing matches. Try fewer words, for example "rifle" or "bazooka".</p>';
+    if (!html) html = '<p class="empty2">' + (S.b !== 'all' && !I.d.tiles.length ? 'This box has no ' + NATIONS.filter(function (n) { return n.id === S.n; })[0].name + ' tiles. Try another nation or All boxes.' : 'Nothing matches. Try fewer words, for example "rifle" or "bazooka".') + '</p>';
     $('out').innerHTML = html;
     $('stat').textContent = list.length + ' tile' + (list.length === 1 ? '' : 's') + (com.length ? ', ' + com.length + ' common option' + (com.length === 1 ? '' : 's') : '') + ' shown.';
   }

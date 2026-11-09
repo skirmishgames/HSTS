@@ -76,7 +76,20 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // filters
   await up.fill('#q', '');
   await up.waitForTimeout(250);
-  ok(await up.locator('#boxes button.on').textContent() === 'Big Red One', 'game box filter shows Big Red One');
+  ok(await up.locator('#boxes button.on').textContent() === 'All boxes' && await up.locator('#boxes button').count() === 5, 'game box filter offers All boxes plus four boxes');
+  const boxCounts = await up.evaluate(() => { const out = {}; ['us', 'ge', 'uk'].forEach(n => { const d = window.HTS_DATA['hon-bro-' + n]; out[n] = { all: d.tiles.length, bro: d.tiles.filter(t => t.set === 'CB').length, omaha: d.tiles.filter(t => t.set === 'BO').length, caen: d.tiles.filter(t => ['ECG', 'BP3'].includes(t.set)).length }; }); return out; });
+  for (const bxId of ['bro', 'omaha', 'caen']) {
+    await up.goto(url.replace('builder.html', 'units.html') + '?n=us&b=' + bxId); await up.waitForTimeout(250);
+    const want = boxCounts.us[bxId];
+    ok((await up.locator('#stat').textContent()).startsWith(want + ' tile') || (want === 0 && await up.locator('.empty2').count() === 1), 'unit index: ' + bxId + ' box shows its ' + want + ' US tiles');
+  }
+  await up.goto(url.replace('builder.html', 'units.html') + '?n=uk&b=omaha'); await up.waitForTimeout(250);
+  ok(await up.locator('.empty2').count() === 1 && /no Commonwealth tiles/.test(await up.locator('.empty2').textContent()), 'unit index: Bloody Omaha has no Commonwealth tiles and says so');
+  await up.goto(url.replace('builder.html', 'units.html') + '?n=us'); await up.waitForTimeout(250);
+  await up.click('#boxes [data-box="caen"]'); await up.click('#nations [data-nation="uk"]'); await up.waitForTimeout(250);
+  ok((await up.locator('#stat').textContent()).startsWith(boxCounts.uk.caen + ' tile'), 'unit index: picking a box and nation with the buttons works');
+  await up.goto(url.replace('builder.html', 'units.html') + '?n=us'); await up.waitForTimeout(250);
+  ok(await up.locator('#boxes button.on').textContent() === 'All boxes', 'game box filter is on All boxes');
   const all = await up.locator('.ucard').count();
   await up.click('[data-tt="hero"]');
   const heroes = await up.locator('.ucard').count();
