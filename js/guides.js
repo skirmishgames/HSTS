@@ -56,7 +56,13 @@
     h += '<h1 class="stitle">' + esc(dc.title) + '</h1>';
     h += '<p class="smeta">' + [EDN[dc.ed], dc.n + (dc.n === 1 ? ' page' : ' pages'), dc.credit].filter(Boolean).map(esc).join(' &middot; ') + '</p>';
     h += '<aside class="snote">' + (dc.ed === 'V2' ? 'This document is for the Big Red One (V2) rules.' : (dc.ed === 'Community' ? 'Fan made, not official. ' : dc.ed === 'V1' ? 'A first edition document. ' : '') + 'Where this differs from the Big Red One (V2) rules, the V2 rules win.') + '</aside>';
+    if (dc.part) {
+      var pl = dc.part.link ? '<a href="guides.html?d=' + dc.part.link + '">' + esc(dc.part.name) + '</a>' : esc(dc.part.name);
+      h += '<aside class="snote">' + (dc.part.n ? 'Part of ' + pl + ', scenario ' + dc.part.n + ' of ' + dc.part.of + '.' : 'This is the cover and requirements table of ' + esc(dc.part.name) + '. The ' + dc.part.of + ' scenarios are listed below.') + '</aside>';
+    }
     h += '<p class="htext">' + esc(dc.summary) + '</p>';
+    var kids = L.docs.filter(function (x) { return x.part && x.part.link === dc.id; });
+    if (kids.length) h += '<ol class="slist">' + kids.map(function (x) { return '<li><a href="guides.html?d=' + x.id + '">' + esc(x.title.replace(/^Contest scenario \d+: /, '')) + '</a></li>'; }).join('') + '</ol>';
     if (dc.pdf) h += '<p class="sarow"><a class="btn" href="' + esc(dc.pdf.href) + '" download>Download the PDF</a><span class="sameta">' + esc(dc.pdf.size) + '. ' + esc(dc.pdf.note) + '</span></p>';
     else h += '<p class="hsrc">The pages are below as pictures, with the text of each page under it. The original PDF is kept in the project files, not on this site.</p>';
     if (dc.n > 1) {
@@ -75,7 +81,7 @@
   function docCard(dc, extra) {
     return '<li class="dcard"><a href="guides.html?d=' + dc.id + '"><strong>' + esc(dc.title) + '</strong></a>' +
       '<span class="dbadges"><span class="hb">' + esc(dc.ed === 'Community' ? 'Community' : dc.ed) + '</span><span class="hb">' + dc.n + (dc.n === 1 ? ' page' : ' pages') + '</span>' + (dc.pdf ? '<span class="hb">PDF ' + esc(dc.pdf.size) + '</span>' : '') + '</span>' +
-      '<span class="hsnip">' + esc(dc.summary) + '</span>' + (extra || '') + '</li>';
+      '<span class="hsnip">' + esc(dc.summary) + '</span>' + (dc.part ? '<span class="hsrc">Part of ' + esc(dc.part.name) + '</span>' : '') + (extra || '') + '</li>';
   }
 
   function matches() {
@@ -101,7 +107,7 @@
     h += '<h2 id="guides">Guides</h2><ul class="slist" id="gList">' + d.guides.map(function (x) {
       return '<li><a href="guides.html?g=' + x.id + '">' + esc(x.title) + '</a> <span class="hsnip">' + esc(x.tag) + '. ' + esc(x.summary) + '</span></li>';
     }).join('') + '</ul>';
-    h += '<h2 id="documents">Documents</h2><p class="htext">Rules sheets, scenario packs, unit references and catalogues from the first edition and the community. Each opens as pictures of the pages with the text under them, so you can search them, and the rules, scenario and community ones have a PDF to download.</p>';
+    h += '<h2 id="documents">Documents</h2><p class="htext">Rules sheets, scenario packs and single scenarios, Gazettes, unit references and catalogues from the first edition and the community. Each opens as pictures of the pages with the text under them, so you can search them, and the rules, scenarios, Gazettes, community rules and aids have a PDF to download.</p>';
     h += '<div class="field"><label class="label" for="lq">Search the documents</label><input id="lq" type="search" placeholder="Try: mines, night combat, landing craft, Lord Lovat" autocomplete="off" value="' + esc(S.q) + '"></div>';
     h += '<div class="chips" id="lchips" role="group" aria-label="Kind of document"><button type="button" class="chip' + (S.c === 'all' ? ' on' : '') + '" data-c="all">All ' + L.docs.length + '</button>' + L.groups.map(function (g) {
       var n = L.docs.filter(function (x) { return x.group === g.id; }).length;

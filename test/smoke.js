@@ -654,7 +654,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const wantScen = { bro: 'scenarios.html?b=bro', omaha: 'scenarios.html?b=omaha', caen: 'scenarios.html?b=caen', ws: 'scenarios.html?b=ws' };
   ok(boxData.boxes.filter(x => !x.edition).every(x => x.links.some(l => l.href === wantScen[x.id]) && fs.existsSync(path.join(root, x.art))), 'box data: each box links to its scenarios and has art');
   await hm.goto(base + 'box.html?b=hon1'); await hm.waitForTimeout(200);
-  ok(await hm.locator('#boxLinks a[href="expansions.html?l=hon1"]').count() === 1 && await hm.locator('#boxLinks .off').count() === 0 && await hm.locator('#boxLinks a[href="guides.html?c=rules"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=scenarios"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=units"]').count() === 1, 'box hon1: catalogue, rules, scenarios and unit references all link to pages');
+  ok(await hm.locator('#boxLinks a[href="expansions.html?l=hon1"]').count() === 1 && await hm.locator('#boxLinks .off').count() === 0 && await hm.locator('#boxLinks a[href="guides.html?c=rules"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=scenarios"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=units"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=single"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=gazettes"]').count() === 1, 'box hon1: catalogue, rules, scenarios, single scenarios, gazettes and unit references all link to pages');
   await hm.goto(base + 'expansions.html?l=hon1'); await hm.waitForTimeout(400);
   ok(await hm.locator('.hrow').count() > 20 && await hm.locator('.chip.on[data-line="hon1"]').count() === 1, 'first edition catalogue lists its products');
   // War Stories
@@ -720,8 +720,8 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // documents library
   await gp.goto(base + 'guides.html'); await gp.waitForTimeout(400);
   const LIB = await gp.evaluate(() => JSON.parse(JSON.stringify({ n: window.HTS_LIB.docs.length, g: window.HTS_LIB.groups.length, ids: window.HTS_LIB.docs.map(d => [d.id, d.n, d.pdf && d.pdf.href]) })));
-  ok(LIB.n === 51 && LIB.g === 6, 'documents: 51 documents in 6 groups');
-  ok(await gp.locator('.dcard').count() === 51, 'documents: every document is listed');
+  ok(LIB.n === 85 && LIB.g === 8, 'documents: 85 documents in 8 groups');
+  ok(await gp.locator('.dcard').count() === 85, 'documents: every document is listed');
   const missingLib = [];
   for (const [id, n, pdf] of LIB.ids) { for (let k = 1; k <= n; k++) { if (!fs.existsSync(path.join(root, 'img/hon/lib/' + id + '/p' + String(k).padStart(2, '0') + '.webp'))) missingLib.push(id + k); } if (pdf && !fs.existsSync(path.join(root, pdf))) missingLib.push(pdf); }
   ok(missingLib.length === 0, 'documents: every page picture and PDF exists ' + missingLib.slice(0, 5).join(','));
@@ -741,6 +741,14 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(/Sticky Bomb/.test(await gp.locator('.sread').innerText()) && !/devil-pig-games/i.test(await gp.locator('.sread').innerText()), 'document bro-errata: text is readable and has no publisher address');
   await gp.goto(base + 'guides.html?d=full-throttle'); await gp.waitForTimeout(400);
   ok(await gp.locator('.dpage').count() === 2 && /Fan made, not official/.test(await gp.locator('.snote').innerText()), 'document full-throttle: two pages and the not official note');
+  await gp.goto(base + 'guides.html?d=scc-04-back-home-or-not'); await gp.waitForTimeout(400);
+  ok(await gp.locator('.dpage').count() === 2 && await gp.locator('a.btn[href="pdf/lib/scc-04-back-home-or-not.pdf"]').count() === 1 && /Part of Scenario Contest Compilation \(Winter 2015\), scenario 4 of 12/.test((await gp.locator('.snote').allInnerTexts()).join(' ')) && await gp.locator('.snote a[href="guides.html?d=scc-intro"]').count() === 1, 'contest scenario 4: own page, own PDF, says it is part of the compilation');
+  await gp.goto(base + 'guides.html?d=scc-intro'); await gp.waitForTimeout(400);
+  ok(await gp.locator('ol.slist li a').count() === 12, 'contest compilation cover lists the 12 scenarios');
+  await gp.goto(base + 'guides.html?c=single'); await gp.waitForTimeout(300);
+  ok(await gp.locator('.dcard').count() === 21 && await gp.locator('.dcard .hsrc', { hasText: 'Part of Scenario Contest Compilation (Winter 2015)' }).count() === 13, 'single scenarios: 21 listed, 13 marked as part of the compilation');
+  await gp.goto(base + 'guides.html?d=slaughterhouse-bro'); await gp.waitForTimeout(300);
+  ok(/for the Big Red One \(V2\) rules/.test(await gp.locator('.snote').first().innerText()), 'slaughterhouse (Big Red One version) is marked V2');
   await gp.goto(base + 'guides.html?d=bible-core'); await gp.waitForTimeout(400);
   ok(await gp.locator('a.btn[href^="pdf/"]').count() === 0 && /project files/.test(await gp.locator('.sread').innerText()), 'document bible-core: no PDF on the site, says where the original is');
   ok(gperrs.length === 0, 'documents: no console errors ' + gperrs.join('|'));

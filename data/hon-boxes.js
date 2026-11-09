@@ -84,7 +84,7 @@ window.HTS_BOXES = {
      "id": "guides",
      "label": "Guides",
      "href": "guides.html",
-     "count": "6 guides, 51 documents",
+     "count": "6 guides, 85 documents",
      "text": "Buying advice, strategy tips, the people behind the heroes, and the first edition documents."
     }
    ]
@@ -331,8 +331,22 @@ window.HTS_BOXES = {
      "id": "scenarios",
      "label": "Scenarios",
      "href": "guides.html?c=scenarios",
-     "count": "4 scenario packs",
-     "text": "The D-Day and Pegasus Bridge packs and the unofficial rewrite of the core scenario book, as pages you can read online."
+     "count": "13 scenario packs",
+     "text": "The Core Set scenario book, the D-Day, Carentan and Pegasus Bridge packs, mini campaigns and the unofficial rewrite, as pages you can read online with a PDF each."
+    },
+    {
+     "id": "single",
+     "label": "Single scenarios",
+     "href": "guides.html?c=single",
+     "count": "21 scenarios",
+     "text": "Web, Kickstarter and publisher scenarios, and the Scenario Contest Compilation (Winter 2015) split into its twelve entries."
+    },
+    {
+     "id": "gazettes",
+     "label": "Gazettes",
+     "href": "guides.html?c=gazettes",
+     "count": "4 issues",
+     "text": "The Devil Pig News: Gazettes 0, 6, 7 and 8 with their stories and scenarios."
     },
     {
      "id": "units",
@@ -345,7 +359,7 @@ window.HTS_BOXES = {
      "id": "guides",
      "label": "Guides",
      "href": "guides.html?g=v1-to-v2",
-     "count": "6 guides, 51 documents",
+     "count": "6 guides, 85 documents",
      "text": "How to play the old scenario packs with Big Red One platoons, a buying guide, strategy tips, and all the first edition documents."
     }
    ]
