@@ -324,3 +324,7 @@ Decision: 2026-11-09 Split as asked. Say if any should become typed scenario pag
 ISS-054  Scenarios menu had no way to find the V1 scenarios   [DONE]
 Where: js/scenarios.js, scenarios.html.
 Detail: People click Scenarios in the top menu, which only showed the four V2 boxes. Added a First edition (V1) box button that lists the library scenarios (single, contest, Core Set, mini campaigns, gazettes, packs) with type chips and full text search. Entries link to guides.html pages, not scenario.html.
+
+ISS-055  Inbox batch of Tabletop Simulator tile images not processed   [OPEN]
+Where: _Inbox (Contributor Uploads, Heroes of the Pacific, Pulp Stories 1, Print Files, UI/Scenario Previews).
+Detail: About 560 files: tile PNGs for Pegasus Bridge, Kelly's Heroes, Gazette 4, GE 21eme PZ, Heroes of the Pacific and Pulp Stories #1, print-ready maps (Gazette 8 Vercors, Wood-Hills, tournament maps, Church and Mansion PDFs) and scenario preview JPGs. None are in Sorted yet. The computer link dropped before they could be sorted. Plan: unit-reference pages with tile sheets and PDFs per set, map previews, then move to Sorted.

@@ -712,7 +712,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const gp = await b.newPage({ viewport: { width: 390, height: 844 } });
   const gperrs = []; gp.on('pageerror', e => gperrs.push(e.message)); gp.on('console', m => { if (m.type() === 'error') gperrs.push(m.text()); });
   await gp.goto(base + 'guides.html'); await gp.waitForTimeout(300);
-  ok(await gp.locator('#gList li').count() === 6, 'guides: six guides listed');
+  ok(await gp.locator('#gList li').count() === 7, 'guides: seven guides listed');
   const gids = await gp.locator('#gList a').evaluateAll(a => a.map(x => new URL(x.href).searchParams.get('g')));
   for (const gid of gids) {
     await gp.goto(base + 'guides.html?g=' + gid); await gp.waitForTimeout(200);

@@ -724,6 +724,46 @@ window.HTS_GUIDES = {
     "label": "The original BoardGameGeek thread",
     "href": "https://boardgamegeek.com/thread/2945922/article/40913362#40913362"
    }
+  },
+  {
+   "id": "tabletop-simulator",
+   "title": "Playing on Steam with Tabletop Simulator",
+   "tag": "Digital play",
+   "summary": "Fan-made Heroes of Normandie mods for Tabletop Simulator on Steam, and where to find high resolution images of the V2 pieces.",
+   "source": "A community contributor who supplied tile images to this archive. The links are to Steam and Google Drive, which this site does not control.",
+   "blocks": [
+    {
+     "k": "note",
+     "t": "Tabletop Simulator mods are made by fans. The Big Red One (V2) rules override the older rules, whichever mod you play."
+    },
+    {
+     "k": "p",
+     "t": "Tabletop Simulator (TTS) is a tabletop sandbox sold on Steam. Community members have built Heroes of Normandie mods for it, so you can play online without the boxes."
+    },
+    {
+     "k": "h",
+     "t": "The mods on Steam"
+    },
+    {
+     "k": "ul",
+     "items": [
+      "[The Big Red One mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2435331672) has high resolution images for all the core box materials.",
+      "[The contributor's Steam Workshop page](https://steamcommunity.com/profiles/76561197997376704/myworkshopfiles/) lists the other mods, including the first edition expansions."
+     ]
+    },
+    {
+     "k": "h",
+     "t": "High resolution images"
+    },
+    {
+     "k": "p",
+     "t": "The contributor says high resolution images exist for most, maybe all, of the newer V2 material. [This Google Drive folder](https://drive.google.com/drive/folders/1AzMwShJX_6xnryYPwlOU_ZUryb5q_bhG?usp=sharing) has them for the Landing mini recruitment tiles."
+    },
+    {
+     "k": "p",
+     "t": "In theory every Tabletop Simulator image is also in the contributor's Google Drive. Some may be missing, especially for the Big Red One and Battle for Caen mods, which were partly put together with help from someone at the publisher."
+    }
+   ]
   }
  ],
  "heroes": {

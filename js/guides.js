@@ -7,7 +7,8 @@
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function rich(s) {
     return esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/__(.+?)__/g, '<em>$1</em>')
-      .replace(/\[([^\]]+)\]\(([a-z][a-z0-9_-]*\.html(?:\?[a-z0-9_=&;%.-]*)?)\)/g, '<a href="$2">$1</a>');
+      .replace(/\[([^\]]+)\]\(([a-z][a-z0-9_-]*\.html(?:\?[a-z0-9_=&;%.-]*)?)\)/g, '<a href="$2">$1</a>')
+      .replace(/\[([^\]]+)\]\((https:\/\/(?:steamcommunity\.com|drive\.google\.com)\/[a-zA-Z0-9_.\/?=-]+)\)/g, '<a href="$2" rel="noopener" target="_blank">$1</a>');
   }
   function slug(s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
   function norm(s) { return String(s == null ? '' : s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim(); }

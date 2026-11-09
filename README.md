@@ -139,3 +139,4 @@ Devil Pig Games has closed, so this project is also a digital archive for the co
 - Do not link out to the old publisher site or forum. Pages must keep working without them.
 
 The existing Big Red One and Bloody Omaha scenarios have been retrofitted to this policy (hts-v22). The remaining gap is listed in ISSUES.txt ISS-024.
+- **Tabletop Simulator guide.** `data/hon-guides.js` has a guide, "Playing on Steam with Tabletop Simulator", with links to the Big Red One mod, the contributor's Steam Workshop page and a Google Drive folder of high resolution images. `js/guides.js` allows only steamcommunity.com and drive.google.com as external links inside guide text.
