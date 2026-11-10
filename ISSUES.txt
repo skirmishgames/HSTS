@@ -354,6 +354,6 @@ Where: data/hon-library.js (group stalingrad, now 25 docs), img/hon/lib/hos-*, p
 Detail: ISS-058 left these out. On 2026-11-09 the user said to add all Stalingrad content, so seven picture-only docs and two errata docs were added. Pictures are the reduced 1700 px copies of the print files (full size originals stay on the user's computer, Sorted/Expansions/Punchboards/HoS). No PDFs for the punchboards and tiles, to keep the repo small. The errata have PDFs (about 6.6 and 7.0 MB).
 Not done: a Stalingrad army builder or unit index. Unit stats are only in pictures, so it would mean transcribing every unit by hand. Ask first.
 
-ISS-060  Heroes of Stalingrad box on the main page   [DONE, art is low resolution]
-Where: data/hon-boxes.js (box hos), img/boxes/hos.webp, js/home.js unchanged, main page heading now Heroes System Tactical Scale in one place.
-Detail: the supplied box art is 730 x 730, smaller than the 760 px slot, so it is slightly soft. Replace img/boxes/hos.webp when a bigger file turns up (original filed at Sorted/Box Art/Heroes of Stalingrad Box Art.jpg). The box page has no army builder (shown as not built yet).
+ISS-060  Heroes of Stalingrad box on the main page   [DONE]
+Where: data/hon-boxes.js (box hos), img/boxes/hos.webp, main page heading now Heroes System Tactical Scale in one place.
+Detail: art first came in at 730 px, then a 1100 px version replaced it (resized to 760 px). Original filed at Sorted/Box Art/Heroes of Stalingrad Box Art.jpg. The box page has no army builder (shown as not built yet).
