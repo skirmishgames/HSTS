@@ -145,7 +145,7 @@
     return '<div class="hrow' + (isOpen ? ' open' : '') + '" id="s-' + esc(e.id) + '">' +
       '<button type="button" class="hhead" data-toggle="' + esc(e.id) + '" aria-expanded="' + isOpen + '" aria-controls="sb-' + esc(e.id) + '">' +
       '<span class="spg">' + esc(pg(e)) + '</span>' +
-      '<span class="hname">' + mk(e.title) + (e.date ? '<span class="hsnip">' + esc(e.date) + '</span>' : '') + snip + '</span>' +
+      '<span class="hname"><span class="ht">' + mk(e.title) + '</span>' + (e.date ? '<span class="hsnip">' + esc(e.date) + '</span>' : '') + snip + '</span>' +
       '<span class="hbadges"><span class="hb hb-t' + (e.v1 ? e.bcls : /^Campaign/.test(e.type) ? 'c' : /scenario/i.test(e.type) ? 's' : 'r') + '">' + esc(e.v1 ? e.badge : e.type === 'Booklet rules and reference' ? 'Rules' : /^Campaign/.test(e.type) ? 'Campaign' : 'Scenario') + '</span></span>' +
       '<span class="hchev" aria-hidden="true"></span></button>' +
       '<div class="hbody" id="sb-' + esc(e.id) + '"' + (isOpen ? '' : ' hidden') + '>' + (isOpen ? body(e) : '') + '</div></div>';

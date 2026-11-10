@@ -84,7 +84,7 @@
     var isOpen = S.open[t.id] === 1;
     return '<div class="hrow' + (isOpen ? ' open' : '') + '" id="h-' + esc(t.id) + '">' +
       '<button type="button" class="hhead" data-toggle="' + esc(t.id) + '" aria-expanded="' + isOpen + '" aria-controls="hb-' + esc(t.id) + '">' +
-      '<span class="hname">' + mk(t.name) + '<span class="hsnip">' + mk(t.sub || '') + '</span></span>' +
+      '<span class="hname"><span class="ht">' + mk(t.name) + '</span><span class="hsnip">' + mk(t.sub || '') + '</span></span>' +
       '<span class="hbadges"><span class="hb">' + esc(boxName(boxOf(t))) + '</span><span class="hb ' + ('hb-' + S.n) + '">' + t.cost + ' pts</span></span>' +
       '<span class="hchev" aria-hidden="true"></span></button>' +
       '<div class="hbody" id="hb-' + esc(t.id) + '"' + (isOpen ? '' : ' hidden') + '>' + (isOpen ? body(t) : '') + '</div></div>';

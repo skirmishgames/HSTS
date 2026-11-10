@@ -65,7 +65,7 @@
     var snip = it.text ? it.text.split(/(?<=\.)\s/)[0] : it.cat;
     return '<div class="hrow' + (isOpen ? ' open' : '') + '" id="x-' + esc(it.id) + '">' +
       '<button type="button" class="hhead" data-toggle="' + esc(it.id) + '" aria-expanded="' + isOpen + '" aria-controls="xb-' + esc(it.id) + '">' + thumb +
-      '<span class="hname">' + mk(it.name) + '<span class="hsnip">' + mk(snip) + '</span></span>' +
+      '<span class="hname"><span class="ht">' + mk(it.name) + '</span><span class="hsnip">' + mk(snip) + '</span></span>' +
       '<span class="hbadges"><span class="hb">' + esc(it.cat) + '</span>' + (st ? '<span class="hb hb-us">' + st + '</span>' : '') + '</span>' +
       '<span class="hchev" aria-hidden="true"></span></button>' +
       '<div class="hbody" id="xb-' + esc(it.id) + '"' + (isOpen ? '' : ' hidden') + '>' + (isOpen ? body(it) : '') + '</div></div>';

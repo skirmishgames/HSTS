@@ -67,7 +67,7 @@
     return '<div class="hrow' + (isOpen ? ' open' : '') + '" id="t-' + esc(e.id) + '">' +
       '<button type="button" class="hhead" data-toggle="' + esc(e.id) + '" aria-expanded="' + isOpen + '" aria-controls="tb-' + esc(e.id) + '">' +
       '<span class="tthumb"><img src="' + esc(t0.img) + '" alt="" width="44" height="44" loading="lazy"></span>' +
-      '<span class="hname">' + mk(e.name) + snip + '</span>' +
+      '<span class="hname"><span class="ht">' + mk(e.name) + '</span>' + snip + '</span>' +
       '<span class="hchev" aria-hidden="true"></span></button>' +
       '<div class="hbody" id="tb-' + esc(e.id) + '"' + (isOpen ? '' : ' hidden') + '>' + (isOpen ? body(e) : '') + '</div></div>';
   }

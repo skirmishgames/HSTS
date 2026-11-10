@@ -142,6 +142,13 @@ window.HTS_BOXES = {
      "text": "Using Heroes of Normandie sets in Heroes of Stalingrad."
     },
     {
+     "id": "history",
+     "label": "History",
+     "href": "history.html?b=hos",
+     "count": "35 entries",
+     "text": "The real formations, people, weapons, vehicles and aircraft behind the game, each with a source."
+    },
+    {
      "id": "builder",
      "label": "Army builder",
      "href": "builder.html",

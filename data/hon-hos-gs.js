@@ -38,6 +38,168 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-gs"] = {
   "Sturmgruppe": "img/hon/hos/gs/units/sturmgruppe.webp",
   "Sd.Kfz 221": "img/hon/hos/gs/units/sd-kfz-221.webp"
  },
+ "stats": {
+  "H. Hoth": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Ob. Vollrath": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Fire Group": {
+   "mv": 3,
+   "rng": null,
+   "df": 4,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "MG 34": {
+   "mv": 3,
+   "rng": null,
+   "df": 5,
+   "o": 0,
+   "p": 0,
+   "g": null
+  },
+  "Steiner": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 2,
+   "p": 2,
+   "g": null
+  },
+  "S. Gruber": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Ob. Lengerke": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Recon Group": {
+   "mv": 4,
+   "rng": null,
+   "df": 5,
+   "o": 1,
+   "p": 0,
+   "g": null
+  },
+  "Hans O. Maedi": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 1,
+   "p": 1,
+   "g": null
+  },
+  "Ob. Heinz Bach": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Assault Group": {
+   "mv": 3,
+   "rng": 4,
+   "df": 5,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "König": {
+   "mv": 4,
+   "rng": null,
+   "df": 6,
+   "o": 2,
+   "p": 0,
+   "g": null
+  },
+  "Ob. Kurt Stahler": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Sturmgruppe": {
+   "mv": 4,
+   "rng": 4,
+   "df": 5,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "AT Rifle": {
+   "mv": 3,
+   "rng": null,
+   "df": 5,
+   "o": 1,
+   "p": 3,
+   "g": 1
+  },
+  "PAK 38": {
+   "mv": 2,
+   "rng": null,
+   "df": 6,
+   "o": 1,
+   "p": 4,
+   "g": 3
+  },
+  "5cm Mortar": {
+   "mv": 3,
+   "rng": null,
+   "df": 5,
+   "o": 0,
+   "p": 0,
+   "g": null
+  },
+  "Flamer Group": {
+   "mv": 3,
+   "rng": null,
+   "df": 5,
+   "o": 0,
+   "p": 0,
+   "g": 0
+  },
+  "Spotter": {
+   "mv": 4,
+   "rng": null,
+   "df": 6,
+   "o": 0,
+   "p": 0,
+   "g": null
+  },
+  "Sharpshooters": {
+   "mv": 3,
+   "rng": null,
+   "df": 5,
+   "o": 2,
+   "p": 1,
+   "g": null
+  }
+ },
  "tiles": [
   {
    "id": "feldkommando_hoth",
@@ -95,7 +257,9 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-gs"] = {
     "battle_plan",
     "bluff",
     "aircraft_x1"
-   ]
+   ],
+   "orders": 1,
+   "starSlots": []
   },
   {
    "id": "panzergrenadiere",
@@ -179,6 +343,10 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-gs"] = {
     "horch_901",
     "veteran",
     "ammo"
+   ],
+   "orders": 2,
+   "starSlots": [
+    0
    ]
   },
   {
@@ -311,6 +479,10 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-gs"] = {
     "panzer_i",
     "grenade_a"
    ],
+   "orders": 2,
+   "starSlots": [
+    3
+   ],
    "note": "This tile is printed sideways on the sheet."
   },
   {
@@ -431,6 +603,10 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-gs"] = {
     "urban_fighters",
     "assault_group",
     "flamer_group_sdkfz231"
+   ],
+   "orders": 1,
+   "starSlots": [
+    0
    ]
   },
   {
@@ -501,6 +677,10 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-gs"] = {
     "flamer_group_sdkfz231",
     "artillery_spotter",
     "urban_fighters"
+   ],
+   "orders": 2,
+   "starSlots": [
+    0
    ]
   },
   {
@@ -664,6 +844,8 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-gs"] = {
     "additional_shielding_hp",
     "heroic_hp"
    ],
+   "orders": 2,
+   "starSlots": [],
    "note": "Heroic Platoon. The star slot that unlocks extra options is not modelled. This tile is printed sideways on the sheet and has been turned upright."
   }
  ],

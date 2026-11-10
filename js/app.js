@@ -155,6 +155,14 @@
       var mk = Object.keys(miss);
       if (mk.length) warn.push('<p>This army uses items from ' + mk.map(function (k) { return esc(OWN.name(k)); }).join(' and ') + ', which ' + (mk.length > 1 ? 'are' : 'is') + ' not in your collection.</p>');
     }
+    var ord = 0, hasOrd = false;
+    S.army.forEach(function (e) {
+      var t = D.t[e.t];
+      if (t.orders == null) return;
+      hasOrd = true; ord += t.orders;
+      (t.starSlots || []).forEach(function (i) { if (e.o[i]) ord += 1; });
+    });
+    if (hasOrd) warn.push('<p class="info">Order tokens: ' + ord + '. This counts officer stars, fixed tile stars and star slots that hold an option. Command options that add orders are not counted.</p>');
     if (diff < 0) warn.push('<p class="bad">The army is ' + Math.abs(diff) + ' points over the limit.</p>');
     if (mismatch) warn.push('<p>' + mismatch + ' option' + (mismatch > 1 ? 's are' : ' is') + ' in a slot of the wrong size or stripes. Check your physical tiles.</p>');
     if (sp) warn.push('<p>' + sp + ' option' + (sp > 1 ? 's show' : ' shows') + ' SP instead of a cost. Those are counted as 0 points. Check your scenario.</p>');
@@ -177,9 +185,11 @@
         var id = e.o[i], o = id && D.o[id];
         if (o) {
           var bad = fits(s, o).length > 0;
-          return '<button type="button" class="slot filled' + (bad ? ' mismatch' : '') + '" style="' + pos + '" data-slot="' + e.id + ':' + i + '" aria-label="Slot ' + (i + 1) + ': ' + esc(o.name) + '. Change"><img src="' + o.img + '" alt="' + esc(o.name) + '"></button>';
+          var st = t.starSlots && t.starSlots.indexOf(i) >= 0 ? ' star' : '';
+          return '<button type="button" class="slot filled' + (bad ? ' mismatch' : '') + st + '" style="' + pos + '" data-slot="' + e.id + ':' + i + '" aria-label="Slot ' + (i + 1) + ': ' + esc(o.name) + '. Change"><img src="' + o.img + '" alt="' + esc(o.name) + '"></button>';
         }
-        return '<button type="button" class="slot" style="' + pos + '" data-slot="' + e.id + ':' + i + '" aria-label="Slot ' + (i + 1) + ', ' + SIZE_NAME[s.size] + '. Add an option"><span class="plus">+</span><span class="dots">' + dots(s.stripes) + '</span></button>';
+        var st2 = t.starSlots && t.starSlots.indexOf(i) >= 0 ? ' star' : '';
+        return '<button type="button" class="slot' + st2 + '" style="' + pos + '" data-slot="' + e.id + ':' + i + '" aria-label="Slot ' + (i + 1) + ', ' + SIZE_NAME[s.size] + '. Add an option"><span class="plus">+</span><span class="dots">' + dots(s.stripes) + '</span></button>';
       }).join('');
       var lines = e.o.map(function (id, i) {
         if (!id) return '';

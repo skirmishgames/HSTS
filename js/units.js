@@ -36,6 +36,13 @@
       return '<span class="u k-' + esc(u[2]) + '" title="' + esc(KIND_NAME[u[2]] || '') + '">' + esc(u[0]) + (u[1] > 1 ? ' <i>x' + u[1] + '</i>' : '') + '</span>';
     }).join('') + '</span>';
   }
+  function sg(n) { return n == null ? 'X' : (n >= 0 ? '+' : '') + n; }
+  // numbers read from the counter (Stalingrad only): move, range, defense, then orange, purple and grey combat values
+  function statLine(nat, name) {
+    var st = nat && nat.stats && nat.stats[name];
+    if (!st) return '';
+    return '<small class="stl" title="Read from the counter. Orange, purple and grey are the combat value colours.">Move ' + st.mv + ', Def ' + st.df + (st.rng != null ? ', Range ' + st.rng : '') + '<br>Combat ' + sg(st.o) + ' / ' + sg(st.p) + ' / ' + sg(st.g) + '</small>';
+  }
   // counter art: tile-specific first, then the nation default
   function tokens(units, tile, nat, small) {
     if (!units || !units.length) return '';
@@ -43,7 +50,7 @@
       var src = (tile && tile.uimg && tile.uimg[u[0]]) || (nat && nat.uimg && nat.uimg[u[0]]);
       var qty = u[1] > 1 ? ' <i>x' + u[1] + '</i>' : '';
       if (!src) return '<span class="u k-' + esc(u[2]) + '" title="' + esc(KIND_NAME[u[2]] || '') + '">' + esc(u[0]) + qty + '</span>';
-      return '<figure class="ctr k-' + esc(u[2]) + '"><button type="button" data-zoom="' + src + '" data-cap="' + esc(u[0] + (u[1] > 1 ? ' x' + u[1] : '')) + '" aria-label="Zoom ' + esc(u[0]) + '"><img src="' + src + '" alt="" loading="lazy"></button><figcaption>' + esc(u[0]) + qty + '</figcaption></figure>';
+      return '<figure class="ctr k-' + esc(u[2]) + '"><button type="button" data-zoom="' + src + '" data-cap="' + esc(u[0] + (u[1] > 1 ? ' x' + u[1] : '')) + '" aria-label="Zoom ' + esc(u[0]) + '"><img src="' + src + '" alt="" loading="lazy"></button><figcaption>' + esc(u[0]) + qty + statLine(nat, u[0]) + '</figcaption></figure>';
     }).join('') + '</span>';
   }
   function pips(n) { var s = ''; for (var i = 0; i < n; i++) s += '■'; return s; }
@@ -55,7 +62,7 @@
     if (cache[ck]) return cache[ck];
     var d = window.HTS_DATA[dkey(n)];
     var bx = BOXES.filter(function (b) { return b.id === S.b; })[0];
-    if (bx && bx.sets) d = { uimg: d.uimg, tiles: d.tiles.filter(function (t) { return bx.sets.indexOf(t.set) >= 0; }), options: d.options.filter(function (o) { return bx.sets.indexOf(o.set) >= 0; }) };
+    if (bx && bx.sets) d = { uimg: d.uimg, stats: d.stats, tiles: d.tiles.filter(function (t) { return bx.sets.indexOf(t.set) >= 0; }), options: d.options.filter(function (o) { return bx.sets.indexOf(o.set) >= 0; }) };
     var O = {}, owned = {};
     d.options.forEach(function (o) { O[o.id] = o; });
     var tiles = d.tiles.slice().sort(function (a, b) {

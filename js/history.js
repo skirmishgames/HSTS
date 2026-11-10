@@ -1,9 +1,9 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'bro', name: 'Big Red One', sides: ['us', 'ge'] }, { id: 'caen', name: 'Battle for Caen', sides: ['uk', 'ge'] }];
+  var BOXES = [{ id: 'bro', name: 'Big Red One', sides: ['us', 'ge'] }, { id: 'caen', name: 'Battle for Caen', sides: ['uk', 'ge'] }, { id: 'hos', name: 'Heroes of Stalingrad', sides: ['ru', 'gs'], game: 'Heroes of Stalingrad' }];
   var SIDE_ALL = { id: 'all', name: 'Both' };
-  var SIDE_NAME = { us: 'American', ge: 'German', uk: 'Commonwealth', both: 'Both sides' };
+  var SIDE_NAME = { us: 'American', ge: 'German', uk: 'Commonwealth', ru: 'Soviet', gs: 'German', both: 'Both sides' };
   var S = { b: 'bro', q: '', side: 'all', cat: 'all', open: {}, theme: 'light' };
   var cache = {};
 
@@ -47,13 +47,13 @@
     $('cats').innerHTML = '<button type="button" class="chip' + (S.cat === 'all' ? ' on' : '') + '" data-cat="all">All</button>' +
       d.cats.map(function (c) { return '<button type="button" class="chip' + (S.cat === c ? ' on' : '') + '" data-cat="' + esc(c) + '">' + esc(c) + '</button>'; }).join('');
     $('q').value = S.q;
-    if ($('subtitle')) $('subtitle').textContent = 'Historical reference, Heroes of Normandie, ' + box.name;
+    if ($('subtitle')) $('subtitle').textContent = 'Historical reference, ' + (box.game || 'Heroes of Normandie') + (box.game ? '' : ', ' + box.name);
     document.documentElement.setAttribute('data-theme', S.theme);
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
   }
 
   function body(e) {
-    var find = e.find ? '<a class="btn ghost hfind" href="units.html?n=' + e.find.n + '&q=' + encodeURIComponent(e.find.q) + '">Find in the game</a>' : '';
+    var find = e.find ? '<a class="btn ghost hfind" href="units.html?' + (S.b === 'hos' ? 'b=hos&' : '') + 'n=' + e.find.n + '&q=' + encodeURIComponent(e.find.q) + '">Find in the game</a>' : '';
     return '<p class="htext">' + esc(e.text) + '</p>' +
       '<ul class="hfacts">' + e.facts.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>' +
       '<div class="hfoot">' + find + '<a class="hsrc" href="' + esc(e.src[1]) + '" target="_blank" rel="noopener">Source: ' + esc(e.src[0]) + '</a></div>';
@@ -67,7 +67,7 @@
     }
     return '<div class="hrow' + (isOpen ? ' open' : '') + '" id="h-' + esc(e.id) + '">' +
       '<button type="button" class="hhead" data-toggle="' + esc(e.id) + '" aria-expanded="' + isOpen + '" aria-controls="hb-' + esc(e.id) + '">' +
-      '<span class="hname">' + mk(e.name) + snip + '</span>' +
+      '<span class="hname"><span class="ht">' + mk(e.name) + '</span>' + snip + '</span>' +
       '<span class="hbadges"><span class="hb hb-' + e.side + '">' + SIDE_NAME[e.side] + '</span>' + (e.also || []).map(function (a) { return '<span class="hb hb-' + a + '">' + SIDE_NAME[a] + '</span>'; }).join('') + '<span class="hb hcat">' + esc(e.cat) + '</span></span>' +
       '<span class="hchev" aria-hidden="true"></span></button>' +
       '<div class="hbody" id="hb-' + esc(e.id) + '"' + (isOpen ? '' : ' hidden') + '>' + (isOpen ? body(e) : '') + '</div></div>';
@@ -163,7 +163,7 @@
     var p = new URLSearchParams(location.search);
     if (BOXES.some(function (b) { return b.id === p.get('b'); })) S.b = p.get('b');
     if (p.get('q')) S.q = p.get('q');
-    if (p.get('n') === 'us' || p.get('n') === 'ge' || p.get('n') === 'uk') S.side = p.get('n');
+    if (p.get('n') === 'us' || p.get('n') === 'ge' || p.get('n') === 'uk' || p.get('n') === 'ru' || p.get('n') === 'gs') S.side = p.get('n');
     var d = load();
     if (p.get('c') && d.cats.indexOf(p.get('c')) >= 0) S.cat = p.get('c');
     if (p.get('e')) p.get('e').split(',').forEach(function (id) { if (/^[a-z0-9]+$/.test(id)) S.open[id] = 1; });

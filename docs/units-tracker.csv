@@ -348,3 +348,120 @@ bro,us,option,M4A3 (105) Sherman,support,,,sherman
 bro,us,option,Training,trait,,,mechanic
 bro,us,option,Guardian,trait,,,mechanic
 bro,us,option,M10 Tank Destroyer,support,,,m10
+hos,gs,unit,H. Hoth,officer,Feldkommando,Oberst Hermann Hoth,hoth
+hos,gs,tile,Feldkommando,command,Feldkommando,Oberst Hermann Hoth,hoth
+hos,gs,unit,Ob. Vollrath,officer,Panzergrenadiere,"I. Battalion, PzGr-24, Pzr-Div, Reg 26",panzergrenadiere
+hos,gs,unit,Fire Group,infantry,Panzergrenadiere,"I. Battalion, PzGr-24, Pzr-Div, Reg 26",panzergrenadiere
+hos,gs,unit,MG 34,weapon,Panzergrenadiere,"I. Battalion, PzGr-24, Pzr-Div, Reg 26",mg34
+hos,gs,tile,Panzergrenadiere,platoon,Panzergrenadiere,"I. Battalion, PzGr-24, Pzr-Div, Reg 26",panzergrenadiere
+hos,gs,unit,Steiner,character,Steiner,Good Old Feldwebel,fictional
+hos,gs,tile,Steiner,hero,Steiner,Good Old Feldwebel,fictional
+hos,gs,unit,S. Gruber,character,Simon Gruber,Die Hard,fictional
+hos,gs,tile,Simon Gruber,hero,Simon Gruber,Die Hard,fictional
+hos,gs,unit,Ob. Lengerke,officer,Panzergrenadiere,"II. Battalion, PzGr-24, Pzr-Div, Reg 26",panzergrenadiere
+hos,gs,unit,Recon Group,infantry,Panzergrenadiere,"II. Battalion, PzGr-24, Pzr-Div, Reg 26",panzergrenadiere
+hos,gs,unit,Maedi's Panzer III Ausf J,vehicle,Hans Olt Maedi,And His Lucky Goat,panzer3
+hos,gs,unit,Hans O. Maedi,character,Hans Olt Maedi,And His Lucky Goat,fictional
+hos,gs,tile,Hans Olt Maedi,hero,Hans Olt Maedi,And His Lucky Goat,fictional
+hos,gs,unit,Von Scheele,vehicle,Panzergrenadiere,"III. Battalion, PzGr-Reg 26, 24. Pzr-Div.",panzergrenadiere
+hos,gs,unit,Ob. Heinz Bach,officer,Aufklärungsabteilung 40,24. Panzer-Division,aufklarungsabteilung
+hos,gs,unit,Assault Group,infantry,Aufklärungsabteilung 40,24. Panzer-Division,panzergrenadiere
+hos,gs,tile,Aufklärungsabteilung 40,platoon,Aufklärungsabteilung 40,24. Panzer-Division,aufklarungsabteilung
+hos,gs,unit,König,character,Major König,Jägermeister,zaytsev
+hos,gs,unit,König Decoy,marker,Major König,Jägermeister,zaytsev
+hos,gs,tile,Major König,hero,Major König,Jägermeister,zaytsev
+hos,gs,unit,Stuka,aircraft,Stuka,Junkers Ju 87,ju87
+hos,gs,tile,Stuka,aircraft,Stuka,Junkers Ju 87,ju87
+hos,gs,unit,Messerschmitt,aircraft,Messerschmitt,Bf 109 E-3,bf109
+hos,gs,tile,Messerschmitt,aircraft,Messerschmitt,Bf 109 E-3,bf109
+hos,gs,unit,Ob. Kurt Stahler,officer,Die Geisterabteilung,The Ghostly Recons,unsourced
+hos,gs,unit,Sturmgruppe,infantry,Die Geisterabteilung,The Ghostly Recons,panzergrenadiere
+hos,gs,unit,Sd.Kfz 250/1,vehicle,Die Geisterabteilung,The Ghostly Recons,sdkfz250
+hos,gs,tile,Die Geisterabteilung,platoon,Die Geisterabteilung,The Ghostly Recons,unsourced
+hos,gs,option,AT Rifle Group,support,,,panzergrenadiere
+hos,gs,option,Panzergrenadiere,support,,,panzergrenadiere
+hos,gs,option,AT Gun Group,support,,,panzergrenadiere
+hos,gs,option,Panzer III Ausf J,support,,,panzer3
+hos,gs,option,PAK 38,support,,,pak38
+hos,gs,option,Horch 901,support,,,horch901
+hos,gs,option,Veteran,trait,,,mechanic
+hos,gs,option,Ammo,gear,,,mechanic
+hos,gs,option,Mortar Group,support,,,panzergrenadiere
+hos,gs,option,Flamer Group,support,,,panzergrenadiere
+hos,gs,option,Mechanisierte,support,,,sdkfz251
+hos,gs,option,Panzer I,support,,,panzer3
+hos,gs,option,Artillery,order,,,spotter
+hos,gs,option,Battle Plan,order,,,mechanic
+hos,gs,option,Bluff,order,,,mechanic
+hos,gs,option,Grenade,gear,,,mechanic
+hos,gs,option,Assault Group,support,,,panzergrenadiere
+hos,gs,option,Artillery Spotter,support,,,spotter
+hos,gs,option,Urban Fighters,trait,,,mechanic
+hos,gs,option,Additional Shielding,gear,,,mechanic
+hos,gs,option,Overwatch,customization,,,mechanic
+hos,gs,option,Aircraft x1,order,,,mechanic
+hos,gs,option,Sd.Kfz 221,support,,,sdkfz221
+hos,gs,option,Ace Drivers,trait,,,mechanic
+hos,gs,option,Heroic,customization,,,mechanic
+hos,ru,unit,Dragonov,officer,Field Command,Kapitan Dolph Dragonov,unsourced
+hos,ru,tile,Field Command,command,Field Command,Kapitan Dolph Dragonov,unsourced
+hos,ru,unit,Ltd. Youri,officer,Volga Rifle Battalion,"Bat. 1, Reg. 650, 138th Rifle Division",62nd-army
+hos,ru,unit,Frontovik,infantry,Volga Rifle Battalion,"Bat. 1, Reg. 650, 138th Rifle Division",62nd-army
+hos,ru,unit,Fire Team,infantry,Volga Rifle Battalion,"Bat. 1, Reg. 650, 138th Rifle Division",62nd-army
+hos,ru,tile,Volga Rifle Battalion,platoon,Volga Rifle Battalion,"Bat. 1, Reg. 650, 138th Rifle Division",62nd-army
+hos,ru,unit,Lt. Boris,officer,Siberian Rifle Battalion,"Bat. 2, Reg. 650, 138th Rifle Division",284th-rifle
+hos,ru,tile,Siberian Rifle Battalion,platoon,Siberian Rifle Battalion,"Bat. 2, Reg. 650, 138th Rifle Division",284th-rifle
+hos,ru,unit,Mariya's T34/76,vehicle,Mariya Oktyabrskaya,Fighting Girlfriend,oktyabrskaya
+hos,ru,unit,Mariya,character,Mariya Oktyabrskaya,Fighting Girlfriend,oktyabrskaya
+hos,ru,tile,Mariya Oktyabrskaya,hero,Mariya Oktyabrskaya,Fighting Girlfriend,oktyabrskaya
+hos,ru,unit,Danilov,character,Danilov,Political Commissar,fictional
+hos,ru,tile,Danilov,hero,Danilov,Political Commissar,fictional
+hos,ru,unit,Tania,character,Tania Chernova,Guardian Angel,fictional
+hos,ru,tile,Tania Chernova,hero,Tania Chernova,Guardian Angel,fictional
+hos,ru,unit,Lt. Nazar,officer,Shturmovye Gruppy,Stalingrad Academy of Street Fighting,assault-groups
+hos,ru,unit,Assault Team,infantry,Shturmovye Gruppy,Stalingrad Academy of Street Fighting,assault-groups
+hos,ru,unit,DP 28,weapon,Shturmovye Gruppy,Stalingrad Academy of Street Fighting,dp28
+hos,ru,tile,Shturmovye Gruppy,platoon,Shturmovye Gruppy,Stalingrad Academy of Street Fighting,assault-groups
+hos,ru,unit,Koulikov,character,Papa Koulikov,Tough Target,fictional
+hos,ru,tile,Papa Koulikov,hero,Papa Koulikov,Tough Target,fictional
+hos,ru,unit,Vasily,character,Vasily Zaytsev,Russia's Got Talent,zaytsev
+hos,ru,unit,Vasily Decoy,marker,Vasily Zaytsev,Russia's Got Talent,zaytsev
+hos,ru,tile,Vasily Zaytsev,hero,Vasily Zaytsev,Russia's Got Talent,zaytsev
+hos,ru,unit,LaGG-3,aircraft,LaGG-3,Lavotchkine,lagg3
+hos,ru,tile,LaGG-3,aircraft,LaGG-3,Lavotchkine,lagg3
+hos,ru,unit,Yak-7B,aircraft,Yak-7B,Yakolev,yak7b
+hos,ru,tile,Yak-7B,aircraft,Yak-7B,Yakolev,yak7b
+hos,ru,unit,Lt. Sasha,officer,Sasha and the Beasts,"270th Rifle Reg., 10th NKVD Div.",10th-nkvd
+hos,ru,unit,Support Team,infantry,Sasha and the Beasts,"270th Rifle Reg., 10th NKVD Div.",62nd-army
+hos,ru,tile,Sasha and the Beasts,platoon,Sasha and the Beasts,"270th Rifle Reg., 10th NKVD Div.",10th-nkvd
+hos,ru,option,Mortar Group,support,,,62nd-army
+hos,ru,option,HMG Group,support,,,62nd-army
+hos,ru,option,Support Group,support,,,62nd-army
+hos,ru,option,T34/76,support,,,oktyabrskaya
+hos,ru,option,Grenade,gear,,,mechanic
+hos,ru,option,Fire Group,support,,,62nd-army
+hos,ru,option,Battle Plan,order,,,mechanic
+hos,ru,option,Platoon Headquarters,support,,,62nd-army
+hos,ru,option,Artillery,order,,,spotter
+hos,ru,option,Bluff,order,,,mechanic
+hos,ru,option,Veteran,trait,,,mechanic
+hos,ru,option,Ammo,gear,,,mechanic
+hos,ru,option,T60 Scout Tank,support,,,t60
+hos,ru,option,Flamer Group,support,,,62nd-army
+hos,ru,option,AT Rifle Group,support,,,62nd-army
+hos,ru,option,M1937 (53-K),support,,,m1937
+hos,ru,option,GAZ 67,support,,,gaz67
+hos,ru,option,Assault Group,support,,,assault-groups
+hos,ru,option,Sharpshooters,support,,,zaytsev
+hos,ru,option,Concealed,order,,,mechanic
+hos,ru,option,Urban Fighters,trait,,,mechanic
+hos,ru,option,Hardboiled,customization,,,mechanic
+hos,ru,option,RPG 40,customization,,,mechanic
+hos,ru,option,Sprinter,customization,,,mechanic
+hos,ru,option,Overwatch,customization,,,mechanic
+hos,ru,option,Aircraft x1,order,,,mechanic
+hos,ru,option,Heroic,customization,,,mechanic
+hos,ru,option,Op' Fire,customization,,,mechanic
+hos,ru,option,Support Team,support,,,62nd-army
+hos,ru,option,HMG 1910,support,,,10th-nkvd
+hos,ru,option,Gear x5,gear,,,mechanic

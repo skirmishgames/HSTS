@@ -10,7 +10,7 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
   "Fire Team": "img/hon/hos/ru/units/fire-team.webp",
   "Frontovik": "img/hon/hos/ru/units/frontovik.webp",
   "51 Mortar": "img/hon/hos/ru/units/51-mortar.webp",
-  "OP 28": "img/hon/hos/ru/units/op-28.webp",
+  "DP 28": "img/hon/hos/ru/units/dp-28.webp",
   "HMG 1910": "img/hon/hos/ru/units/hmg-1910.webp",
   "T34/76": "img/hon/hos/ru/units/t34-76.webp",
   "Lt. Boris": "img/hon/hos/ru/units/lt-boris.webp",
@@ -34,6 +34,192 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
   "Lt. Sasha": "img/hon/hos/ru/units/lt-sasha.webp",
   "Support Team": "img/hon/hos/ru/units/support-team.webp",
   "HMG 1910 (NKVD)": "img/hon/hos/ru/units/hmg-1910-nkvd.webp"
+ },
+ "stats": {
+  "Dragonov": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Ltd. Youri": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 1,
+   "p": 1,
+   "g": null
+  },
+  "Frontovik": {
+   "mv": 3,
+   "rng": 4,
+   "df": 5,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Fire Team": {
+   "mv": 3,
+   "rng": null,
+   "df": 4,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Lt. Boris": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 1,
+   "p": 1,
+   "g": null
+  },
+  "Mariya": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 1,
+   "p": 0,
+   "g": null
+  },
+  "Danilov": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Tania": {
+   "mv": 4,
+   "rng": null,
+   "df": 6,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Lt. Nazar": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Assault Team": {
+   "mv": 3,
+   "rng": 4,
+   "df": 4,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "DP 28": {
+   "mv": 3,
+   "rng": null,
+   "df": 5,
+   "o": 2,
+   "p": 2,
+   "g": null
+  },
+  "Koulikov": {
+   "mv": 3,
+   "rng": null,
+   "df": 6,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Vasily": {
+   "mv": 4,
+   "rng": null,
+   "df": 6,
+   "o": 2,
+   "p": 0,
+   "g": null
+  },
+  "Lt. Sasha": {
+   "mv": 4,
+   "rng": 4,
+   "df": 6,
+   "o": 2,
+   "p": 1,
+   "g": 0
+  },
+  "Support Team": {
+   "mv": 3,
+   "rng": null,
+   "df": 4,
+   "o": 2,
+   "p": 2,
+   "g": null
+  },
+  "51 Mortar": {
+   "mv": 3,
+   "rng": null,
+   "df": 5,
+   "o": 1,
+   "p": 0,
+   "g": null
+  },
+  "HMG 1910": {
+   "mv": 3,
+   "rng": null,
+   "df": 5,
+   "o": 1,
+   "p": 0,
+   "g": null
+  },
+  "Headquarters": {
+   "mv": 3,
+   "rng": null,
+   "df": 4,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "Flamer Team": {
+   "mv": 3,
+   "rng": null,
+   "df": 5,
+   "o": 0,
+   "p": 0,
+   "g": 0
+  },
+  "AT Rifle": {
+   "mv": 3,
+   "rng": null,
+   "df": 5,
+   "o": 1,
+   "p": 3,
+   "g": 1
+  },
+  "M1937 (53-K)": {
+   "mv": 2,
+   "rng": null,
+   "df": 6,
+   "o": 1,
+   "p": 3,
+   "g": 2
+  },
+  "Sharpshooters": {
+   "mv": 3,
+   "rng": null,
+   "df": 5,
+   "o": 2,
+   "p": 1,
+   "g": null
+  },
+  "HMG 1910 (NKVD)": {
+   "mv": 3,
+   "rng": null,
+   "df": 5,
+   "o": 1,
+   "p": 0,
+   "g": null
+  }
  },
  "tiles": [
   {
@@ -93,7 +279,9 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
     "bluff",
     "platoon_headquarters",
     "aircraft_x1"
-   ]
+   ],
+   "orders": 1,
+   "starSlots": []
   },
   {
    "id": "volga_rifle_battalion",
@@ -175,6 +363,11 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
     "fire_group",
     "grenade_a",
     "grenade_b"
+   ],
+   "orders": 1,
+   "starSlots": [
+    0,
+    1
    ]
   },
   {
@@ -259,6 +452,11 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
     "support_group_wr",
     "m1937_53k",
     "gaz_67"
+   ],
+   "orders": 1,
+   "starSlots": [
+    0,
+    1
    ]
   },
   {
@@ -378,7 +576,7 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
      "infantry"
     ],
     [
-     "OP 28",
+     "DP 28",
      1,
      "weapon"
     ]
@@ -429,6 +627,10 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
     "rpg_40",
     "sprinter",
     "overwatch"
+   ],
+   "orders": 1,
+   "starSlots": [
+    0
    ]
   },
   {
@@ -621,6 +823,8 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
     "hmg_1910_nkvd",
     "gear_x5"
    ],
+   "orders": 2,
+   "starSlots": [],
    "note": "Heroic Platoon. The star slot that unlocks extra options is not modelled."
   }
  ],
@@ -713,7 +917,7 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
      "infantry"
     ],
     [
-     "OP 28",
+     "DP 28",
      1,
      "weapon"
     ]
@@ -1021,7 +1225,7 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
      "infantry"
     ],
     [
-     "OP 28",
+     "DP 28",
      1,
      "weapon"
     ]
@@ -1096,7 +1300,7 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
      "infantry"
     ],
     [
-     "OP 28",
+     "DP 28",
      1,
      "weapon"
     ]
