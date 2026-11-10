@@ -1,11 +1,11 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen', name: 'Battle for Caen' }, { id: 'ws', name: 'War Stories' }, { id: 'v1', name: 'First edition (V1)' }, { id: 'fan', name: 'Fan made (unofficial)' }];
+  var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen', name: 'Battle for Caen' }, { id: 'ws', name: 'War Stories' }, { id: 'v1', name: 'First edition (V1)' }, { id: 'fan', name: 'Fan made (unofficial)' }, { id: 'hos', name: 'Heroes of Stalingrad' }];
   var S = { b: 'bro', q: '', type: 'all', open: {}, theme: 'light' };
   var cache = {}, NCOL = 0;
-  var SRCN = { bro: 'Scenario Booklet', omaha: 'Bloody Omaha rulebook', caen: 'Battle for Caen booklet V1.4', ws: 'War Stories sheet', v1: 'Library document', fan: 'Library document' };
-  function isLib() { return S.b === 'v1' || S.b === 'fan'; }
+  var SRCN = { bro: 'Scenario Booklet', omaha: 'Bloody Omaha rulebook', caen: 'Battle for Caen booklet V1.4', ws: 'War Stories sheet', v1: 'Library document', fan: 'Library document', hos: 'Library document' };
+  function isLib() { return S.b === 'v1' || S.b === 'fan' || S.b === 'hos'; }
 
   function $(id) { return document.getElementById(id); }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
@@ -28,9 +28,10 @@
   // First edition (V1): built from the document library, so the scenarios published
   // on their own, in books, packs and gazettes are found from the Scenarios menu too.
   var V1ORDER = ['Single scenario', 'Core Set scenario book', 'Scenario Contest Compilation', 'Mini campaign', 'Gazette', 'Pack or book'];
+  var HOSORDER = ['Rules and game aids', 'Scenario', 'Mini campaign', 'Battlefield Stories', 'War Stories'];
   var FANORDER = ['Small armies', 'Large armies', 'Very large armies', 'Skirmish', 'Campaign scenario', 'Campaign', 'Tournament'];
   function v1type(d) {
-    if (d.group === 'fanmade') return d.kind || 'Fan made scenario';
+    if (d.group === 'fanmade' || d.group === 'stalingrad') return d.kind || 'Scenario';
     var pn = d.part ? d.part.name : '';
     if (d.group === 'gazettes' || /^Gazette/.test(pn)) return 'Gazette';
     if (/^Scenario Contest/.test(pn)) return 'Scenario Contest Compilation';
@@ -41,21 +42,21 @@
   }
   function v1load() {
     var lib = window.HTS_LIB || { docs: [] }, seen = {};
-    var fan = S.b === 'fan';
-    var entries = lib.docs.filter(function (d) { return fan ? d.group === 'fanmade' : (d.group === 'scenarios' || d.group === 'single' || d.group === 'gazettes'); }).map(function (d) {
+    var fan = S.b === 'fan', hos = S.b === 'hos';
+    var entries = lib.docs.filter(function (d) { return hos ? d.group === 'stalingrad' : fan ? d.group === 'fanmade' : (d.group === 'scenarios' || d.group === 'single' || d.group === 'gazettes'); }).map(function (d) {
       var t = v1type(d), isIntro = /-intro$/.test(d.id) || d.group === 'scenarios' || d.group === 'gazettes';
-      var facts = [['Edition', d.ed === 'V2' ? 'Big Red One (V2) rules' : d.ed === 'Community' ? 'Fan made, not official' : 'First edition (V1) rules']];
+      var facts = [['Edition', d.ed === 'V2' ? 'Big Red One (V2) rules' : d.ed === 'Community' ? 'Fan made, not official' : d.ed === 'Other' ? 'Heroes of Stalingrad rules (Eastern Front)' : 'First edition (V1) rules']];
       if (d.part) facts.push(['Part of', d.part.name + (d.part.n ? ', scenario ' + d.part.n + ' of ' + d.part.of : '')]);
       if (d.credit) facts.push(['Credit', d.credit]);
       facts.push(['Length', d.n + (d.n === 1 ? ' page' : ' pages')]);
       return {
         id: d.id, title: d.title.replace(/^Contest scenario \d+: /, ''), type: t, pages: String(d.n), date: d.part ? 'Part of ' + d.part.name : '',
         summary: d.summary, facts: facts, doc: d, v1: 1,
-        badge: fan ? 'Fan made' : d.group === 'gazettes' ? 'Story' : isIntro ? 'Pack' : 'Scenario', bcls: fan ? 'c' : isIntro || d.group === 'gazettes' ? 'r' : 's',
+        badge: fan ? 'Fan made' : hos ? (d.kind === 'Rules and game aids' ? 'Rules' : 'Scenario') :  d.group === 'gazettes' ? 'Story' : isIntro ? 'Pack' : 'Scenario', bcls: fan ? 'c' : hos ? (d.kind === 'Rules and game aids' ? 'r' : 's') : isIntro || d.group === 'gazettes' ? 'r' : 's',
         text: (d.text || []).join(' ')
       };
     });
-    var ORD = fan ? FANORDER : V1ORDER;
+    var ORD = hos ? HOSORDER : fan ? FANORDER : V1ORDER;
     entries.sort(function (a, b) { return ORD.indexOf(a.type) - ORD.indexOf(b.type); });
     return { entries: entries, types: ORD.filter(function (t) { return entries.some(function (e) { return e.type === t; }); }), source: 'document library', seen: seen };
   }
@@ -80,7 +81,7 @@
     $('q').value = S.q;
     var sb = BOXES.filter(function (b) { return b.id === S.b; })[0];
     if ($('subtitle') && sb) $('subtitle').textContent = 'Scenarios index, Heroes of Normandie, ' + sb.name;
-    $('srcnote').textContent = S.b === 'fan' ? 'Fan made scenarios and campaigns, not official. Only the ones with a clear tile list and a good layout are here. The well designed ones have a PDF to download, the rest are web pages only. Each opens as page pictures with the text. Where a scenario differs from the Big Red One (V2) rules, the V2 rules win.' : S.b === 'v1' ? 'Every first edition scenario in the library: single scenarios, scenarios cut out of books, packs and gazettes. Each opens as page pictures with the text, and has a PDF. Where a scenario differs from the Big Red One (V2) rules, the V2 rules win.' : 'Page numbers are the printed page numbers of the ' + d.source + ' (the PDF page matches the printed number).';
+    $('srcnote').textContent = S.b === 'hos' ? 'Heroes of Stalingrad is the Eastern Front game of the same system as Heroes of Normandie, which covers the Western Front. These are its rules, scenarios and stories. It has its own rules. Each opens as page pictures with the text, and has a PDF.' : S.b === 'fan' ? 'Fan made scenarios and campaigns, not official. Only the ones with a clear tile list and a good layout are here. The well designed ones have a PDF to download, the rest are web pages only. Each opens as page pictures with the text. Where a scenario differs from the Big Red One (V2) rules, the V2 rules win.' : S.b === 'v1' ? 'Every first edition scenario in the library: single scenarios, scenarios cut out of books, packs and gazettes. Each opens as page pictures with the text, and has a PDF. Where a scenario differs from the Big Red One (V2) rules, the V2 rules win.' : 'Page numbers are the printed page numbers of the ' + d.source + ' (the PDF page matches the printed number).';
     dlbar();
     document.documentElement.setAttribute('data-theme', S.theme);
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
