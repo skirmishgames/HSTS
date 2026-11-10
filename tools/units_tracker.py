@@ -97,8 +97,12 @@ def main():
         if k in seen:
             continue
         seen.add(k); uniq.append(x)
-    gaps = [x for x in uniq if not x[7]]
-    print('rows %d, covered %d, gaps %d' % (len(uniq), len(uniq) - len(gaps), len(gaps)))
+    nohist = {b for b, v in collect().items() if not v['hist']}
+    pending = [x for x in uniq if not x[7] and x[0] in nohist]
+    gaps = [x for x in uniq if not x[7] and x[0] not in nohist]
+    print('rows %d, covered %d, gaps %d' % (len(uniq), len(uniq) - len(gaps) - len(pending), len(gaps)))
+    if pending:
+        print('  %d items in boxes with no History file yet (%s), not counted as gaps' % (len(pending), ', '.join(sorted(nohist))))
     for x in gaps:
         print('  GAP %s/%s %s: %s (%s)' % (x[0], x[1], x[2], x[3], x[4]))
     if '--write' in sys.argv:

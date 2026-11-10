@@ -121,7 +121,7 @@ window.HTS_BOXES = {
      "text": "Every Red Army and German recruitment tile and option from the Core Set, Battle Pack, Duel of Snipers and both Heroic Platoons, with costs and the units on them."
     },
     {
-     "id": "boards",
+     "id": "expansions",
      "label": "Punchboards and tiles",
      "href": "guides.html?c=stalingrad",
      "count": "7 sets of pictures",

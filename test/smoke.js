@@ -76,7 +76,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // filters
   await up.fill('#q', '');
   await up.waitForTimeout(250);
-  ok(await up.locator('#boxes button.on').textContent() === 'All boxes' && await up.locator('#boxes button').count() === 5, 'game box filter offers All boxes plus four boxes');
+  ok(await up.locator('#boxes button.on').textContent() === 'All boxes' && await up.locator('#boxes button').count() === 6, 'game box filter offers All boxes plus five boxes');
   const boxCounts = await up.evaluate(() => { const out = {}; ['us', 'ge', 'uk'].forEach(n => { const d = window.HTS_DATA['hon-bro-' + n]; out[n] = { all: d.tiles.length, bro: d.tiles.filter(t => t.set === 'CB').length, omaha: d.tiles.filter(t => t.set === 'BO').length, caen: d.tiles.filter(t => ['ECG', 'BP3'].includes(t.set)).length }; }); return out; });
   for (const bxId of ['bro', 'omaha', 'caen']) {
     await up.goto(url.replace('builder.html', 'units.html') + '?n=us&b=' + bxId); await up.waitForTimeout(250);
@@ -365,7 +365,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await tp.click('#btnOwn'); await tp.check('[data-own="CB"]'); await tp.click('#ownClose'); await tp.waitForTimeout(200);
   const own1 = await tp.locator('.lcard').count();
   ok(own0 > own1 && own1 === 6, 'collection: only Big Red One tiles after ticking CB (' + own0 + ' to ' + own1 + ')');
-  ok((await tp.textContent('#ownState')).startsWith('1 of 8'), 'collection: status line counts products');
+  ok((await tp.textContent('#ownState')).startsWith('1 of 12'), 'collection: status line counts products');
   await tp.locator('.lcard', { hasText: 'Rifle Platoon' }).first().locator('[data-add]').click();
   await tp.locator('.atile .slot').first().click();
   const pk1 = await tp.locator('.pcard').count();
