@@ -1,10 +1,11 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen', name: 'Battle for Caen' }, { id: 'ws', name: 'War Stories' }, { id: 'v1', name: 'First edition (V1)' }];
+  var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen', name: 'Battle for Caen' }, { id: 'ws', name: 'War Stories' }, { id: 'v1', name: 'First edition (V1)' }, { id: 'fan', name: 'Fan made (unofficial)' }];
   var S = { b: 'bro', q: '', type: 'all', open: {}, theme: 'light' };
   var cache = {}, NCOL = 0;
-  var SRCN = { bro: 'Scenario Booklet', omaha: 'Bloody Omaha rulebook', caen: 'Battle for Caen booklet V1.4', ws: 'War Stories sheet', v1: 'Library document' };
+  var SRCN = { bro: 'Scenario Booklet', omaha: 'Bloody Omaha rulebook', caen: 'Battle for Caen booklet V1.4', ws: 'War Stories sheet', v1: 'Library document', fan: 'Library document' };
+  function isLib() { return S.b === 'v1' || S.b === 'fan'; }
 
   function $(id) { return document.getElementById(id); }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
@@ -22,12 +23,14 @@
     var re = new RegExp('(' + toks.map(function (t) { return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')', 'gi');
     return function (s) { return esc(s).replace(re, '<mark>$1</mark>'); };
   }
-  function pg(e) { return S.b === 'ws' ? 'sheet' : S.b === 'v1' ? e.pages + (e.pages === '1' ? ' page' : ' pages') : 'p.' + e.pages.replace(' to ', '-'); }
+  function pg(e) { return S.b === 'ws' ? 'sheet' : isLib() ? e.pages + (e.pages === '1' ? ' page' : ' pages') : 'p.' + e.pages.replace(' to ', '-'); }
 
   // First edition (V1): built from the document library, so the scenarios published
   // on their own, in books, packs and gazettes are found from the Scenarios menu too.
   var V1ORDER = ['Single scenario', 'Core Set scenario book', 'Scenario Contest Compilation', 'Mini campaign', 'Gazette', 'Pack or book'];
+  var FANORDER = ['Small armies', 'Large armies', 'Very large armies', 'Skirmish', 'Campaign scenario', 'Campaign', 'Tournament'];
   function v1type(d) {
+    if (d.group === 'fanmade') return d.kind || 'Fan made scenario';
     var pn = d.part ? d.part.name : '';
     if (d.group === 'gazettes' || /^Gazette/.test(pn)) return 'Gazette';
     if (/^Scenario Contest/.test(pn)) return 'Scenario Contest Compilation';
@@ -38,29 +41,31 @@
   }
   function v1load() {
     var lib = window.HTS_LIB || { docs: [] }, seen = {};
-    var entries = lib.docs.filter(function (d) { return d.group === 'scenarios' || d.group === 'single' || d.group === 'gazettes'; }).map(function (d) {
+    var fan = S.b === 'fan';
+    var entries = lib.docs.filter(function (d) { return fan ? d.group === 'fanmade' : (d.group === 'scenarios' || d.group === 'single' || d.group === 'gazettes'); }).map(function (d) {
       var t = v1type(d), isIntro = /-intro$/.test(d.id) || d.group === 'scenarios' || d.group === 'gazettes';
-      var facts = [['Edition', d.ed === 'V2' ? 'Big Red One (V2) rules' : d.ed === 'Community' ? 'Community, unofficial' : 'First edition (V1) rules']];
+      var facts = [['Edition', d.ed === 'V2' ? 'Big Red One (V2) rules' : d.ed === 'Community' ? 'Fan made, not official' : 'First edition (V1) rules']];
       if (d.part) facts.push(['Part of', d.part.name + (d.part.n ? ', scenario ' + d.part.n + ' of ' + d.part.of : '')]);
       if (d.credit) facts.push(['Credit', d.credit]);
       facts.push(['Length', d.n + (d.n === 1 ? ' page' : ' pages')]);
       return {
         id: d.id, title: d.title.replace(/^Contest scenario \d+: /, ''), type: t, pages: String(d.n), date: d.part ? 'Part of ' + d.part.name : '',
         summary: d.summary, facts: facts, doc: d, v1: 1,
-        badge: d.group === 'gazettes' ? 'Story' : isIntro ? 'Pack' : 'Scenario', bcls: isIntro || d.group === 'gazettes' ? 'r' : 's',
+        badge: fan ? 'Fan made' : d.group === 'gazettes' ? 'Story' : isIntro ? 'Pack' : 'Scenario', bcls: fan ? 'c' : isIntro || d.group === 'gazettes' ? 'r' : 's',
         text: (d.text || []).join(' ')
       };
     });
-    entries.sort(function (a, b) { return V1ORDER.indexOf(a.type) - V1ORDER.indexOf(b.type); });
-    return { entries: entries, types: V1ORDER.filter(function (t) { return entries.some(function (e) { return e.type === t; }); }), source: 'document library', seen: seen };
+    var ORD = fan ? FANORDER : V1ORDER;
+    entries.sort(function (a, b) { return ORD.indexOf(a.type) - ORD.indexOf(b.type); });
+    return { entries: entries, types: ORD.filter(function (t) { return entries.some(function (e) { return e.type === t; }); }), source: 'document library', seen: seen };
   }
 
   function load() {
     if (cache[S.b]) return cache[S.b];
-    var d = S.b === 'v1' ? v1load() : window.HTS_SCEN['hon-' + S.b];
+    var d = isLib() ? v1load() : window.HTS_SCEN['hon-' + S.b];
     d.entries.forEach(function (e) {
       e.head = norm(e.title);
-      e.hay = norm((e.v1 ? e.text + ' ' + (e.doc.group === 'gazettes' ? 'gazette devil pig news ' : 'scenario ') + (e.date || '') + ' ' : '') + (e.armies ? 'army builder armies ' : '') + e.title + ' ' + e.type + ' ' + e.date + ' page ' + e.pages + ' ' + e.summary + ' ' + e.facts.map(function (f) { return f[0] + ' ' + f[1]; }).join(' '));
+      e.hay = norm((e.v1 ? e.text + ' ' + (e.doc.group === 'gazettes' ? 'gazette devil pig news ' : e.doc.group === 'fanmade' ? 'fan made unofficial scenario ' : 'scenario ') + (e.date || '') + ' ' : '') + (e.armies ? 'army builder armies ' : '') + e.title + ' ' + e.type + ' ' + e.date + ' page ' + e.pages + ' ' + e.summary + ' ' + e.facts.map(function (f) { return f[0] + ' ' + f[1]; }).join(' '));
     });
     cache[S.b] = d;
     return d;
@@ -75,7 +80,7 @@
     $('q').value = S.q;
     var sb = BOXES.filter(function (b) { return b.id === S.b; })[0];
     if ($('subtitle') && sb) $('subtitle').textContent = 'Scenarios index, Heroes of Normandie, ' + sb.name;
-    $('srcnote').textContent = S.b === 'v1' ? 'Every first edition scenario in the library: single scenarios, scenarios cut out of books, packs and gazettes. Each opens as page pictures with the text, and has a PDF. Where a scenario differs from the Big Red One (V2) rules, the V2 rules win.' : 'Page numbers are the printed page numbers of the ' + d.source + ' (the PDF page matches the printed number).';
+    $('srcnote').textContent = S.b === 'fan' ? 'Fan made scenarios and campaigns, not official. Only the ones with a clear tile list and a good layout are here. The well designed ones have a PDF to download, the rest are web pages only. Each opens as page pictures with the text. Where a scenario differs from the Big Red One (V2) rules, the V2 rules win.' : S.b === 'v1' ? 'Every first edition scenario in the library: single scenarios, scenarios cut out of books, packs and gazettes. Each opens as page pictures with the text, and has a PDF. Where a scenario differs from the Big Red One (V2) rules, the V2 rules win.' : 'Page numbers are the printed page numbers of the ' + d.source + ' (the PDF page matches the printed number).';
     dlbar();
     document.documentElement.setAttribute('data-theme', S.theme);
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
@@ -118,7 +123,7 @@
   function dlbar() {
     var f = (window.HTS_SCEN_FULL || {})['hon-' + S.b];
     if (!$('dlbar')) return;
-    if (S.b === 'v1') { $('dlbar').innerHTML = '<span class="label">Looking for rules, units or gazette stories?</span> <a class="btn ghost" href="guides.html">Browse all documents</a>'; return; }
+    if (isLib()) { $('dlbar').innerHTML = '<span class="label">Looking for rules, units or gazette stories?</span> <a class="btn ghost" href="guides.html">Browse all documents</a>'; return; }
     if (!f) return;
     $('dlbar').innerHTML = '<span class="label">Download the original</span><ul>' + f.book.pdfs.map(function (p) {
       return '<li><a class="btn ghost" href="' + esc(p.href) + '" download>' + esc(p.label) + '</a><span class="sameta">' + esc(p.size) + '. ' + esc(p.note || '') + '</span></li>';
@@ -174,7 +179,7 @@
       $('stat').textContent = '0 entries.';
     } else {
       $('out').innerHTML = list(res, mk, toks);
-      $('stat').textContent = res.length + ' of ' + d.entries.length + ' entries, in ' + (S.b === 'v1' ? 'library order' : 'booklet page order') + '. Click one to read it.';
+      $('stat').textContent = res.length + ' of ' + d.entries.length + ' entries, in ' + (isLib() ? 'library order' : 'booklet page order') + '. Click one to read it.';
       if (toks.length) $('stat').textContent = res.length + ' of ' + d.entries.length + ' entries, best match first. Click one to read it.';
     }
     url();
