@@ -667,8 +667,8 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // Scenarios menu: fan made option, labelled as unofficial
   ok(await hm.locator('#boxes button[data-box="fan"]').count() === 1, 'scenarios page: fan made (unofficial) button');
   await hm.goto(base + 'scenarios.html?b=fan'); await hm.waitForTimeout(400);
-  ok(await hm.locator('.hrow').count() === 41 && /41 of 41/.test(await hm.locator('#stat').innerText()), 'scenarios fan made: 41 entries');
-  ok(await hm.locator('.hrow .hbadges .hb', { hasText: 'Fan made' }).count() === 41 && /not official/i.test(await hm.locator('#srcnote').innerText()), 'scenarios fan made: every entry is badged fan made and the note says not official');
+  ok(await hm.locator('.hrow').count() === 42 && /42 of 42/.test(await hm.locator('#stat').innerText()), 'scenarios fan made: 42 entries');
+  ok(await hm.locator('.hrow .hbadges .hb', { hasText: 'Fan made' }).count() === 42 && /not official/i.test(await hm.locator('#srcnote').innerText()), 'scenarios fan made: every entry is badged fan made and the note says not official');
   ok(await hm.locator('[data-type="Small armies"]').count() === 1 && await hm.locator('[data-type="Tournament"]').count() === 1 && await hm.locator('[data-type="Campaign"]').count() === 1, 'scenarios fan made: type chips');
   await hm.fill('#q', 'Wittmann'); await hm.waitForTimeout(400);
   ok(await hm.locator('.hrow').count() >= 2, 'scenarios fan made: search finds Wittmann scenarios');
@@ -741,13 +741,13 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // documents library
   await gp.goto(base + 'guides.html'); await gp.waitForTimeout(400);
   const LIB = await gp.evaluate(() => JSON.parse(JSON.stringify({ n: window.HTS_LIB.docs.length, g: window.HTS_LIB.groups.length, ids: window.HTS_LIB.docs.map(d => [d.id, d.n, d.pdf && d.pdf.href]) })));
-  ok(LIB.n === 185 && LIB.g === 10, 'documents: 185 documents in 10 groups');
-  ok(await gp.locator('.dcard').count() === 185, 'documents: every document is listed');
+  ok(LIB.n === 186 && LIB.g === 10, 'documents: 186 documents in 10 groups');
+  ok(await gp.locator('.dcard').count() === 186, 'documents: every document is listed');
   const missingLib = [];
   for (const [id, n, pdf] of LIB.ids) { for (let k = 1; k <= n; k++) { if (!fs.existsSync(path.join(root, 'img/hon/lib/' + id + '/p' + String(k).padStart(2, '0') + '.webp'))) missingLib.push(id + k); } if (pdf && !fs.existsSync(path.join(root, pdf))) missingLib.push(pdf); }
   ok(missingLib.length === 0, 'documents: every page picture and PDF exists ' + missingLib.slice(0, 5).join(','));
   const FANC = await gp.evaluate(() => { const d = window.HTS_LIB.docs.filter(x => x.group === 'fanmade'); return { n: d.length, pdf: d.filter(x => x.pdf).length, bad: d.filter(x => x.ed !== 'Community' || !x.kind || !/^Fan made|^OPJH/.test(x.credit)).length, big: d.filter(x => x.pdf && /MB/.test(x.pdf.size) && parseFloat(x.pdf.size) > 20).length }; });
-  ok(FANC.n === 41 && FANC.pdf === 33 && FANC.bad === 0 && FANC.big === 0, 'documents: 41 fan made documents, 33 with a PDF, all labelled community and fan made, no PDF over 20 MB ' + JSON.stringify(FANC));
+  ok(FANC.n === 42 && FANC.pdf === 33 && FANC.bad === 0 && FANC.big === 0, 'documents: 42 fan made documents, 33 with a PDF, all labelled community and fan made, no PDF over 20 MB ' + JSON.stringify(FANC));
   await gp.goto(base + 'guides.html?d=fan-the-bunker'); await gp.waitForTimeout(400);
   ok(/Fan made/.test(await gp.locator('.smeta').innerText()) && /not official/i.test(await gp.locator('.snote').first().innerText()) && await gp.locator('a[download]').count() === 1, 'fan made document: labelled unofficial, has a PDF');
   await gp.goto(base + 'guides.html?d=fan-t1-encounter-on-the-road'); await gp.waitForTimeout(400);
