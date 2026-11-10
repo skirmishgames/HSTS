@@ -12,6 +12,12 @@
       { code: 'ECG', name: 'Battle for Caen: Epsom, Charnwood & Goodwood', note: 'Adds the Commonwealth and new German tiles.' },
       { code: 'BP3', name: 'Battle Pack #3: Windsor & Jupiter', note: 'Expansion for Battle for Caen.' }
     ] },
+    { name: 'Heroes of Stalingrad', items: [
+      { code: 'HoS-CB', name: 'Heroes of Stalingrad: Core Set', note: 'Red Army and German tiles and options.' },
+      { code: 'HoS-BP', name: 'Heroes of Stalingrad: Battle Pack', note: 'Shturmovye Gruppy, Papa Koulikov and the German Panzergrenadiere III and Aufklärungsabteilung 40.' },
+      { code: 'HoS-KS', name: 'Heroes of Stalingrad: Duel of Snipers', note: 'Zaytsev, König, aircraft and options.' },
+      { code: 'HoS-HP', name: 'Heroes of Stalingrad: Heroic Platoons', note: 'Sasha and the Beasts, and Die Geisterabteilung.' }
+    ] },
     { name: 'Promos', items: [
       { code: 'KS-9', name: 'Promo KS-9', note: 'Private Smithy (Smashing Pumpkins) and a Grenade.' },
       { code: 'SOLO', name: 'Promo SOLO', note: 'Luke Griff Brassert and a Sticky Bomb.' },

@@ -2,7 +2,8 @@
   'use strict';
 
   var LSK = 'hts.hon.bro.v1';
-  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }];
+  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }, { id: 'ru', name: 'Soviet Union (Stalingrad)' }, { id: 'gs', name: 'Germany (Stalingrad)' }];
+  var HOSN = { ru: 1, gs: 1 };
   var PRESETS = [150, 200, 250, 300, 350, 400, 500];
   var TYPES = [['all', 'All'], ['platoon', 'Platoons'], ['command', 'Command'], ['hero', 'Heroes'], ['landing', 'Landing'], ['aircraft', 'Aircraft'], ['support', 'Support tile'], ['special', 'Other']];
   var TYPE_ORDER = { command: 0, platoon: 1, hero: 2, landing: 3, aircraft: 4, support: 5, special: 6 };
@@ -25,7 +26,7 @@
   function data() {
     var n = S.nation;
     if (!cache[n]) {
-      var d = window.HTS_DATA['hon-bro-' + n];
+      var d = window.HTS_DATA[(HOSN[n] ? 'hon-hos-' : 'hon-bro-') + n];
       var t = {}, o = {};
       d.tiles.forEach(function (x) { t[x.id] = x; });
       d.options.forEach(function (x) { o[x.id] = x; });

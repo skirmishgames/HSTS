@@ -711,6 +711,35 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await hm.goto(base + 'box.html?b=omaha'); await hm.waitForTimeout(200);
   ok(await hm.locator('#boxLinks .off').count() === 1, 'box omaha: Cards shown as not archived yet');
   ok(hmerrs.length === 0, 'landing and box pages: no console errors ' + hmerrs.join('|'));
+  // Heroes of Stalingrad army builder and unit index
+  {
+    const sp = await b.newPage({ viewport: { width: 1280, height: 900 } });
+    const sperrs = []; sp.on('pageerror', e => sperrs.push(e.message)); sp.on('console', m => { if (m.type() === 'error') sperrs.push(m.text()); }); sp.on('dialog', d => d.accept());
+    await sp.goto(base + 'builder.html');
+    await sp.click('[data-nation="ru"]');
+    ok(await sp.locator('.lcard').count() === 12 && await sp.locator('.lcard', { hasText: 'Siberian Rifle Battalion' }).count() === 1 && await sp.locator('.lcard', { hasText: 'Sasha and the Beasts' }).count() === 1, 'builder Soviet Union (Stalingrad): 12 tiles incl. Siberian Rifle Battalion and Sasha');
+    await sp.locator('.lcard', { hasText: 'Volga Rifle Battalion' }).first().locator('[data-add]').click();
+    ok((await sp.textContent('#ptsUsed')) === '55', 'builder Stalingrad Red: Volga Rifle Battalion costs 55');
+    await sp.locator('.atile .slot').first().click();
+    ok(await sp.locator('.pcard', { hasText: 'Mortar Group' }).count() >= 1 && await sp.locator('.pcard', { hasText: 'Veteran' }).count() === 0, 'builder Stalingrad Red: red slot offers Mortar Group, hides black-only Veteran');
+    await sp.locator('.pcard', { hasText: 'Mortar Group' }).first().click();
+    ok((await sp.textContent('#ptsUsed')) === '100', 'builder Stalingrad Red: Mortar Group adds 45 (100)');
+    await sp.click('[data-nation="gs"]');
+    ok(await sp.locator('.lcard').count() === 12 && await sp.locator('.lcard', { hasText: 'Die Geisterabteilung' }).count() === 1 && await sp.locator('.lcard', { hasText: 'Major K' }).count() === 1, 'builder Germany (Stalingrad): 12 tiles incl. Die Geisterabteilung and Major Konig');
+    await sp.locator('.lcard', { hasText: 'Feldkommando' }).first().locator('[data-add]').click();
+    await sp.locator('.atile .slot').first().click();
+    ok(await sp.locator('.pcard', { hasText: 'Artillery' }).count() >= 1 && await sp.locator('.pcard', { hasText: 'Aircraft' }).count() >= 1, 'builder Stalingrad German: command tile offers Artillery and Aircraft orders');
+    await sp.goto(base + 'units.html?b=hos&n=ru'); await sp.waitForTimeout(300);
+    ok(/^12 tile/.test(await sp.locator('#stat').innerText()), 'unit index Stalingrad Red: 12 tiles');
+    await sp.click('#nations [data-nation="gs"]'); await sp.waitForTimeout(250);
+    ok(/^12 tile/.test(await sp.locator('#stat').innerText()), 'unit index Stalingrad German: 12 tiles');
+    await sp.click('#boxes [data-box="bro"]'); await sp.waitForTimeout(250);
+    ok(!(await sp.locator('#nations [data-nation="gs"].on').count()), 'unit index: picking a Normandie box leaves the Stalingrad nation');
+    const hosd = ['ru', 'gs'].map(n => { const t = fs.readFileSync(path.join(root, 'data/hon-hos-' + n + '.js'), 'utf8'); return JSON.parse(t.slice(t.indexOf('= {') + 2, t.lastIndexOf('}') + 1)); });
+    ok(hosd.every(d => d.tiles.every(t => fs.existsSync(path.join(root, t.img)) && t.own.every(o => d.options.some(x => x.id === o))) && d.options.every(o => fs.existsSync(path.join(root, o.img)) && o.cost !== undefined)), 'Stalingrad data: every tile and option picture exists and every owned option is defined');
+    ok(sperrs.length === 0, 'Stalingrad builder and unit index: no console errors ' + sperrs.join('|'));
+    await sp.close();
+  }
   // look and feel: self-hosted fonts and nav icons on every page
   const navPages = ['index', 'box', 'builder', 'units', 'rules', 'scenarios', 'scenario', 'tokens', 'icons', 'heroes', 'cards', 'maps', 'expansions', 'history', 'guides'];
   const np = await b.newPage({ viewport: { width: 1100, height: 800 } });

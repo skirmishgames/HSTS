@@ -2,9 +2,11 @@
   'use strict';
 
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One', sets: ['CB'] }, { id: 'omaha', name: 'Bloody Omaha', sets: ['BO'] }, { id: 'caen', name: 'Battle for Caen', sets: ['ECG', 'BP3'] }, { id: 'other', name: 'Promos and War Stories', sets: ['KS-9', 'SOLO', 'P500', 'WS#0'] }];
+  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One', sets: ['CB'] }, { id: 'omaha', name: 'Bloody Omaha', sets: ['BO'] }, { id: 'caen', name: 'Battle for Caen', sets: ['ECG', 'BP3'] }, { id: 'hos', name: 'Heroes of Stalingrad', sets: ['HoS-CB', 'HoS-BP', 'HoS-KS', 'HoS-HP'] }, { id: 'other', name: 'Promos and War Stories', sets: ['KS-9', 'SOLO', 'P500', 'WS#0'] }];
   var TTYPES = [['all', 'All'], ['platoon', 'Platoons'], ['command', 'Command'], ['hero', 'Heroes'], ['landing', 'Landing'], ['aircraft', 'Aircraft'], ['support', 'Support tile'], ['special', 'Other']];
-  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }];
+  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }, { id: 'ru', name: 'Soviet Union (Stalingrad)' }, { id: 'gs', name: 'Germany (Stalingrad)' }];
+  var HOSN = { ru: 1, gs: 1 };
+  function dkey(n) { return (HOSN[n] ? 'hon-hos-' : 'hon-bro-') + n; }
   var VIEWS = [['tile', 'By tile'], ['unit', 'Unit list']];
   var KINDS = [['all', 'All'], ['officer', 'Officers'], ['character', 'Characters'], ['infantry', 'Infantry'], ['weapon', 'Weapons'], ['vehicle', 'Vehicles'], ['marker', 'Markers'], ['aircraft', 'Aircraft']];
   var KIND_ORDER = ['officer', 'character', 'infantry', 'weapon', 'vehicle', 'marker', 'aircraft'];
@@ -51,7 +53,7 @@
   function index(n) {
     var ck = S.b + ':' + n;
     if (cache[ck]) return cache[ck];
-    var d = window.HTS_DATA['hon-bro-' + n];
+    var d = window.HTS_DATA[dkey(n)];
     var bx = BOXES.filter(function (b) { return b.id === S.b; })[0];
     if (bx && bx.sets) d = { uimg: d.uimg, tiles: d.tiles.filter(function (t) { return bx.sets.indexOf(t.set) >= 0; }), options: d.options.filter(function (o) { return bx.sets.indexOf(o.set) >= 0; }) };
     var O = {}, owned = {};
@@ -202,7 +204,7 @@
   function bind() {
     document.addEventListener('click', function (ev) {
       var t = ev.target, el;
-      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; render(); return; }
+      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; if (S.b === 'hos' && !HOSN[S.n]) S.n = 'ru'; else if (S.b !== 'hos' && S.b !== 'all' && HOSN[S.n]) S.n = 'us'; render(); return; }
       if ((el = t.closest('[data-tt]'))) { S.tt = el.dataset.tt; render(); return; }
       if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; render(); return; }
       if ((el = t.closest('[data-tt]'))) { S.tt = el.dataset.tt; render(); return; }

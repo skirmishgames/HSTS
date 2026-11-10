@@ -97,7 +97,7 @@ window.HTS_BOXES = {
    "sides": "Soviet Union and Germany",
    "when": "Stalingrad, 1942 to 1943",
    "art": "img/boxes/hos.webp",
-   "blurb": "The Eastern Front game of the Heroes System Tactical Scale. Red Army and German infantry fight through the ruins of Stalingrad, in factories, cellars and sewers. It has its own rules. Where they differ from the Big Red One (V2) rules, the V2 rules win for Heroes of Normandie. The archive holds its rules, scenarios, stories, punchboards and map tiles. There is no army builder or unit index for it yet.",
+   "blurb": "The Eastern Front game of the Heroes System Tactical Scale. Red Army and German infantry fight through the ruins of Stalingrad, in factories, cellars and sewers. It has its own rules. Where they differ from the Big Red One (V2) rules, the V2 rules win for Heroes of Normandie. The archive holds its rules, scenarios, stories, punchboards and map tiles, and every recruitment tile and option is in the unit index and the army builder.",
    "links": [
     {
      "id": "rules",
@@ -115,10 +115,17 @@ window.HTS_BOXES = {
     },
     {
      "id": "units",
+     "label": "Unit index",
+     "href": "units.html?b=hos&n=ru",
+     "count": "24 tiles, 67 options",
+     "text": "Every Red Army and German recruitment tile and option from the Core Set, Battle Pack, Duel of Snipers and both Heroic Platoons, with costs and the units on them."
+    },
+    {
+     "id": "boards",
      "label": "Punchboards and tiles",
      "href": "guides.html?c=stalingrad",
      "count": "7 sets of pictures",
-     "text": "The Core Set, Battle Pack, Duel of Snipers, Heroic Platoon and Sewers punchboards and map tiles, as reduced pictures. Not the searchable unit index."
+     "text": "The Core Set, Battle Pack, Duel of Snipers, Heroic Platoon and Sewers punchboards and map tiles, as reduced pictures."
     },
     {
      "id": "guides",
@@ -130,9 +137,9 @@ window.HTS_BOXES = {
     {
      "id": "builder",
      "label": "Army builder",
-     "href": null,
-     "count": "not built yet",
-     "text": "Stalingrad is not in the army builder. Its units are only pictures so far."
+     "href": "builder.html",
+     "count": "",
+     "text": "Build a Red Army or German army from the real tiles and options. Pick Soviet Union (Stalingrad) or Germany (Stalingrad)."
     }
    ]
   },
