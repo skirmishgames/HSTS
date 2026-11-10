@@ -28,7 +28,7 @@
   // First edition (V1): built from the document library, so the scenarios published
   // on their own, in books, packs and gazettes are found from the Scenarios menu too.
   var V1ORDER = ['Single scenario', 'Core Set scenario book', 'Scenario Contest Compilation', 'Mini campaign', 'Gazette', 'Pack or book'];
-  var HOSORDER = ['Rules and game aids', 'Scenario', 'Mini campaign', 'Battlefield Stories', 'War Stories'];
+  var HOSORDER = ['Rules and game aids', 'Scenario', 'Mini campaign', 'Battlefield Stories', 'War Stories', 'Punchboards and tiles'];
   var FANORDER = ['Small armies', 'Large armies', 'Very large armies', 'Skirmish', 'Campaign scenario', 'Campaign', 'Tournament'];
   function v1type(d) {
     if (d.group === 'fanmade' || d.group === 'stalingrad') return d.kind || 'Scenario';
@@ -52,7 +52,7 @@
       return {
         id: d.id, title: d.title.replace(/^Contest scenario \d+: /, ''), type: t, pages: String(d.n), date: d.part ? 'Part of ' + d.part.name : '',
         summary: d.summary, facts: facts, doc: d, v1: 1,
-        badge: fan ? 'Fan made' : hos ? (d.kind === 'Rules and game aids' ? 'Rules' : 'Scenario') :  d.group === 'gazettes' ? 'Story' : isIntro ? 'Pack' : 'Scenario', bcls: fan ? 'c' : hos ? (d.kind === 'Rules and game aids' ? 'r' : 's') : isIntro || d.group === 'gazettes' ? 'r' : 's',
+        badge: fan ? 'Fan made' : hos ? (d.kind === 'Rules and game aids' ? 'Rules' : d.kind === 'Punchboards and tiles' ? 'Tiles' : 'Scenario') :  d.group === 'gazettes' ? 'Story' : isIntro ? 'Pack' : 'Scenario', bcls: fan ? 'c' : hos ? (d.kind === 'Rules and game aids' || d.kind === 'Punchboards and tiles' ? 'r' : 's') : isIntro || d.group === 'gazettes' ? 'r' : 's',
         text: (d.text || []).join(' ')
       };
     });
@@ -81,7 +81,7 @@
     $('q').value = S.q;
     var sb = BOXES.filter(function (b) { return b.id === S.b; })[0];
     if ($('subtitle') && sb) $('subtitle').textContent = 'Scenarios index, Heroes of Normandie, ' + sb.name;
-    $('srcnote').textContent = S.b === 'hos' ? 'Heroes of Stalingrad is the Eastern Front game of the same system as Heroes of Normandie, which covers the Western Front. These are its rules, scenarios and stories. It has its own rules. Each opens as page pictures with the text, and has a PDF.' : S.b === 'fan' ? 'Fan made scenarios and campaigns, not official. Only the ones with a clear tile list and a good layout are here. The well designed ones have a PDF to download, the rest are web pages only. Each opens as page pictures with the text. Where a scenario differs from the Big Red One (V2) rules, the V2 rules win.' : S.b === 'v1' ? 'Every first edition scenario in the library: single scenarios, scenarios cut out of books, packs and gazettes. Each opens as page pictures with the text, and has a PDF. Where a scenario differs from the Big Red One (V2) rules, the V2 rules win.' : 'Page numbers are the printed page numbers of the ' + d.source + ' (the PDF page matches the printed number).';
+    $('srcnote').textContent = S.b === 'hos' ? 'Heroes of Stalingrad is the Eastern Front game of the same system as Heroes of Normandie, which covers the Western Front. These are its rules, scenarios, stories, punchboards and map tiles. It has its own rules. Each opens as page pictures with the text. Rules, scenarios and stories have a PDF. Punchboards and tiles are pictures only, reduced in size.' : S.b === 'fan' ? 'Fan made scenarios and campaigns, not official. Only the ones with a clear tile list and a good layout are here. The well designed ones have a PDF to download, the rest are web pages only. Each opens as page pictures with the text. Where a scenario differs from the Big Red One (V2) rules, the V2 rules win.' : S.b === 'v1' ? 'Every first edition scenario in the library: single scenarios, scenarios cut out of books, packs and gazettes. Each opens as page pictures with the text, and has a PDF. Where a scenario differs from the Big Red One (V2) rules, the V2 rules win.' : 'Page numbers are the printed page numbers of the ' + d.source + ' (the PDF page matches the printed number).';
     dlbar();
     document.documentElement.setAttribute('data-theme', S.theme);
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';

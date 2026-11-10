@@ -674,8 +674,8 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(await hm.locator('.hrow').count() >= 2, 'scenarios fan made: search finds Wittmann scenarios');
   ok(await hm.locator('#boxes button[data-box="hos"]').count() === 1, 'scenarios page: Heroes of Stalingrad button');
   await hm.goto(base + 'scenarios.html?b=hos'); await hm.waitForTimeout(400);
-  ok(await hm.locator('.hrow').count() === 16 && /Eastern Front/.test(await hm.locator('#srcnote').innerText()), 'scenarios Stalingrad: 16 documents, note names the Eastern Front');
-  ok(await hm.locator('[data-type="Mini campaign"]').count() === 1 && await hm.locator('[data-type="Battlefield Stories"]').count() === 1, 'scenarios Stalingrad: type chips');
+  ok(await hm.locator('.hrow').count() === 25 && /Eastern Front/.test(await hm.locator('#srcnote').innerText()), 'scenarios Stalingrad: 25 documents, note names the Eastern Front');
+  ok(await hm.locator('[data-type="Mini campaign"]').count() === 1 && await hm.locator('[data-type="Battlefield Stories"]').count() === 1 && await hm.locator('[data-type="Punchboards and tiles"]').count() === 1, 'scenarios Stalingrad: type chips');
   await hm.fill('#q', 'Rattenkrieg'); await hm.waitForTimeout(400);
   ok(await hm.locator('.hrow').count() === 1, 'scenarios Stalingrad: search finds the sewer scenario');
   await hm.goto(base + 'scenarios.html?b=v1'); await hm.waitForTimeout(400);
@@ -747,8 +747,8 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // documents library
   await gp.goto(base + 'guides.html'); await gp.waitForTimeout(400);
   const LIB = await gp.evaluate(() => JSON.parse(JSON.stringify({ n: window.HTS_LIB.docs.length, g: window.HTS_LIB.groups.length, ids: window.HTS_LIB.docs.map(d => [d.id, d.n, d.pdf && d.pdf.href]) })));
-  ok(LIB.n === 202 && LIB.g === 11, 'documents: 202 documents in 11 groups');
-  ok(await gp.locator('.dcard').count() === 202, 'documents: every document is listed');
+  ok(LIB.n === 211 && LIB.g === 11, 'documents: 211 documents in 11 groups');
+  ok(await gp.locator('.dcard').count() === 211, 'documents: every document is listed');
   const missingLib = [];
   for (const [id, n, pdf] of LIB.ids) { for (let k = 1; k <= n; k++) { if (!fs.existsSync(path.join(root, 'img/hon/lib/' + id + '/p' + String(k).padStart(2, '0') + '.webp'))) missingLib.push(id + k); } if (pdf && !fs.existsSync(path.join(root, pdf))) missingLib.push(pdf); }
   ok(missingLib.length === 0, 'documents: every page picture and PDF exists ' + missingLib.slice(0, 5).join(','));

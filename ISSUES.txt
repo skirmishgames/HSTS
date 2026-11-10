@@ -345,6 +345,11 @@ Decision: 2026-11-09 Say if any scenario in the deleted list should come back, o
 
 ISS-058  Heroes of Stalingrad rules, scenarios and stories added   [DONE, with notes]
 Where: data/hon-library.js (group stalingrad, 16 docs), img/hon/lib/hos-*, pdf/lib/hos-*, js/scenarios.js (Heroes of Stalingrad button), js/guides.js (Eastern Front note).
-Detail: Stalingrad covers the Eastern Front of the Heroes System Tactical Scale. No units, punchboards or tiles are added (decision 2026-11-09), so the Sewers tile files and the unit card errata (German and Russian, 10 pages each, pictures of unit cards) were filed on disk only. The Sewers rules and scenarios are in.
+Detail: Stalingrad covers the Eastern Front of the Heroes System Tactical Scale. At first no units, punchboards or tiles were added (later reversed, see ISS-059), so the Sewers tile files and the unit card errata (German and Russian, 10 pages each, pictures of unit cards) were filed on disk only. The Sewers rules and scenarios are in.
 The first HoS Rulebook.pdf was damaged (97 MB, only the first 14.7 MB had data). The user sent a good copy, which is the hos-rulebook doc. The damaged copy went to _to_delete. The earlier Offset Grid Squares game aid, mentioned in the fan tournament rules, is now here as hos-map-game-aid.
 Decision: 2026-11-09 Say if Stalingrad should also have its own box tab in the army builder later.
+
+ISS-059  Heroes of Stalingrad punchboards, tiles and unit card errata added   [DONE, with notes]
+Where: data/hon-library.js (group stalingrad, now 25 docs), img/hon/lib/hos-*, pdf/lib/hos-unit-card-errata-*.
+Detail: ISS-058 left these out. On 2026-11-09 the user said to add all Stalingrad content, so seven picture-only docs and two errata docs were added. Pictures are the reduced 1700 px copies of the print files (full size originals stay on the user's computer, Sorted/Expansions/Punchboards/HoS). No PDFs for the punchboards and tiles, to keep the repo small. The errata have PDFs (about 6.6 and 7.0 MB).
+Not done: a Stalingrad army builder or unit index. Unit stats are only in pictures, so it would mean transcribing every unit by hand. Ask first.
