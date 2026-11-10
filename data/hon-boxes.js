@@ -90,6 +90,53 @@ window.HTS_BOXES = {
    ]
   },
   {
+   "id": "hos",
+   "name": "Heroes of Stalingrad",
+   "full": "Heroes of Stalingrad",
+   "kind": "Eastern Front",
+   "sides": "Soviet Union and Germany",
+   "when": "Stalingrad, 1942 to 1943",
+   "art": "img/boxes/hos.webp",
+   "blurb": "The Eastern Front game of the Heroes System Tactical Scale. Red Army and German infantry fight through the ruins of Stalingrad, in factories, cellars and sewers. It has its own rules. Where they differ from the Big Red One (V2) rules, the V2 rules win for Heroes of Normandie. The archive holds its rules, scenarios, stories, punchboards and map tiles. There is no army builder or unit index for it yet.",
+   "links": [
+    {
+     "id": "rules",
+     "label": "Rules",
+     "href": "guides.html?c=stalingrad",
+     "count": "5 documents",
+     "text": "The rulebook, the Battle Pack rules, the offset grid map game aid and the German and Russian unit card errata."
+    },
+    {
+     "id": "scenarios",
+     "label": "Scenarios and stories",
+     "href": "scenarios.html?b=hos",
+     "count": "13 scenarios and stories",
+     "text": "Core Set, Factory, House of Hell, Sewers and Sniper scenarios, the Hell on Earth mini campaign, Battlefield Stories 1 to 5 and War Stories 1 and 2."
+    },
+    {
+     "id": "units",
+     "label": "Punchboards and tiles",
+     "href": "guides.html?c=stalingrad",
+     "count": "7 sets of pictures",
+     "text": "The Core Set, Battle Pack, Duel of Snipers, Heroic Platoon and Sewers punchboards and map tiles, as reduced pictures. Not the searchable unit index."
+    },
+    {
+     "id": "guides",
+     "label": "Guides",
+     "href": "guides.html?g=normandie-in-stalingrad",
+     "count": "1 guide",
+     "text": "Using Heroes of Normandie sets in Heroes of Stalingrad."
+    },
+    {
+     "id": "builder",
+     "label": "Army builder",
+     "href": null,
+     "count": "not built yet",
+     "text": "Stalingrad is not in the army builder. Its units are only pictures so far."
+    }
+   ]
+  },
+  {
    "id": "omaha",
    "name": "Bloody Omaha",
    "full": "Bloody Omaha",
@@ -299,53 +346,6 @@ window.HTS_BOXES = {
      "href": null,
      "count": "on each story page",
      "text": "The new tiles are shown on each scenario page. They are not in the unit index or the army builder yet."
-    }
-   ]
-  },
-  {
-   "id": "hos",
-   "name": "Heroes of Stalingrad",
-   "full": "Heroes of Stalingrad",
-   "kind": "Eastern Front",
-   "sides": "Soviet Union and Germany",
-   "when": "Stalingrad, 1942 to 1943",
-   "art": "img/boxes/hos.webp",
-   "blurb": "The Eastern Front game of the Heroes System Tactical Scale. Red Army and German infantry fight through the ruins of Stalingrad, in factories, cellars and sewers. It has its own rules. Where they differ from the Big Red One (V2) rules, the V2 rules win for Heroes of Normandie. The archive holds its rules, scenarios, stories, punchboards and map tiles. There is no army builder or unit index for it yet.",
-   "links": [
-    {
-     "id": "rules",
-     "label": "Rules",
-     "href": "guides.html?c=stalingrad",
-     "count": "5 documents",
-     "text": "The rulebook, the Battle Pack rules, the offset grid map game aid and the German and Russian unit card errata."
-    },
-    {
-     "id": "scenarios",
-     "label": "Scenarios and stories",
-     "href": "scenarios.html?b=hos",
-     "count": "13 scenarios and stories",
-     "text": "Core Set, Factory, House of Hell, Sewers and Sniper scenarios, the Hell on Earth mini campaign, Battlefield Stories 1 to 5 and War Stories 1 and 2."
-    },
-    {
-     "id": "units",
-     "label": "Punchboards and tiles",
-     "href": "guides.html?c=stalingrad",
-     "count": "7 sets of pictures",
-     "text": "The Core Set, Battle Pack, Duel of Snipers, Heroic Platoon and Sewers punchboards and map tiles, as reduced pictures. Not the searchable unit index."
-    },
-    {
-     "id": "guides",
-     "label": "Guides",
-     "href": "guides.html?g=normandie-in-stalingrad",
-     "count": "1 guide",
-     "text": "Using Heroes of Normandie sets in Heroes of Stalingrad."
-    },
-    {
-     "id": "builder",
-     "label": "Army builder",
-     "href": null,
-     "count": "not built yet",
-     "text": "Stalingrad is not in the army builder. Its units are only pictures so far."
     }
    ]
   },
