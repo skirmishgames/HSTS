@@ -3,7 +3,7 @@
   var LSK = 'hts.maps.v1';
   var D = window.HTS_MAPS, CELL = D.cell;
   var BOXES = D.boxes;
-  var SHORT = { bro: 'Big Red One', omaha: 'Bloody Omaha', 'caen-ecg': 'Caen: Epsom, Charnwood & Goodwood', 'caen-wj': 'Caen: Windsor & Jupiter' };
+  var SHORT = { bro: 'Big Red One', omaha: 'Bloody Omaha', 'caen-ecg': 'Caen: Epsom, Charnwood & Goodwood', 'caen-wj': 'Caen: Windsor & Jupiter', hos: 'Heroes of Stalingrad' };
   var SIZES = [['1x1', 7, 7, '1 board (7 x 7)'], ['2x1', 14, 7, '2 x 1 boards (14 x 7)'], ['1x2', 7, 14, '1 x 2 boards (7 x 14)'],
     ['2x2', 14, 14, '2 x 2 boards (14 x 14)'], ['3x2', 21, 14, '3 x 2 boards (21 x 14)'], ['2x3', 14, 21, '2 x 3 boards (14 x 21)'],
     ['3x3', 21, 21, '3 x 3 boards (21 x 21)'], ['custom', 0, 0, 'Custom']];
@@ -14,7 +14,7 @@
     });
   });
   var ORDER = D.order || [];
-  var ALL = { id: 'all', name: 'All boxes', desc: 'Every terrain piece from the four boxes, so you can compare houses, roads or boards side by side.', pieces: [] };
+  var ALL = { id: 'all', name: 'All boxes', desc: 'Every terrain piece from every box, so you can compare houses, roads or boards side by side.', pieces: [] };
   BOXES.forEach(function (b) { ALL.pieces = ALL.pieces.concat(b.pieces); });
   ALL.pieces = ALL.pieces.map(function (p, i) { return { p: p, i: i }; }).sort(function (a, b) {
     return (ORDER.indexOf(a.p.group) - ORDER.indexOf(b.p.group)) || (a.i - b.i);
@@ -116,7 +116,7 @@
     $('boxes').innerHTML = LIST.map(function (b) {
       return '<button type="button" class="chip' + (S.b === b.id ? ' on' : '') + '" data-box="' + b.id + '" aria-pressed="' + (S.b === b.id) + '">' + esc(SHORT[b.id] || b.name) + '</button>';
     }).join('');
-    $('subtitle').textContent = 'Maps, Heroes of Normandie' + (S.b === 'all' ? '' : ', ' + box(S.b).name);
+    $('subtitle').textContent = (S.b === 'hos' ? 'Maps, Heroes of Stalingrad' : 'Maps, Heroes of Normandie' + (S.b === 'all' ? '' : ', ' + box(S.b).name));
   }
   function renderPalette() {
     var b = box(S.b);
@@ -134,7 +134,7 @@
       var n = used(p.key), thumb = p.dir + (p.t || p.a);
       return '<div class="mcard" draggable="true" data-key="' + p.key + '">' +
         '<button type="button" class="mthumb' + (p.kind === 'board' ? ' bd' : '') + '" data-view="' + p.key + '" aria-label="View ' + esc(p.name) + '"><img src="' + thumb + '" alt="" loading="lazy" draggable="false"></button>' +
-        '<div class="minfo"><b>' + esc(p.name) + '</b><span>' + sizeText(p) + (p.b ? ', two sides' : ', one side') + '</span>' +
+        '<div class="minfo"><b>' + esc(p.name) + '</b><span>' + sizeText(p) + (p.b ? ', two sides' + (p.ma ? ' (' + esc(p.ma) + ', ' + esc(p.mb) + ')' : '') : ', one side') + '</span>' +
         (p.sd ? '<span>' + esc(p.sd) + '</span>' : '') + (S.b === 'all' ? '<span>' + esc(SHORT[p.box]) + '</span>' : '') +
         '<span class="mused' + (n > 1 ? ' warn' : '') + '" data-used="' + p.key + '">' + (n ? 'On the map: ' + n : '') + '</span></div>' +
         '<div class="mact"><button type="button" data-add="' + p.key + '">Add</button><button type="button" class="ghost" data-view="' + p.key + '">View</button></div></div>';
@@ -197,7 +197,7 @@
       b.disabled = !it || (b.dataset.act === 'flip' && !P[it.k].b);
     });
     var n = S.map.items.length;
-    $('mnote').textContent = it ? P[it.k].name + ', side ' + it.s.toUpperCase() + ', ' + fmt(dims(it).w) + ' x ' + fmt(dims(it).h) + ' squares at ' + fmt(it.x) + ', ' + fmt(it.y) :
+    $('mnote').textContent = it ? P[it.k].name + ', side ' + it.s.toUpperCase() + (P[it.k]['m' + it.s] ? ' (' + P[it.k]['m' + it.s] + ')' : '') + ', ' + fmt(dims(it).w) + ' x ' + fmt(dims(it).h) + ' squares at ' + fmt(it.x) + ', ' + fmt(it.y) :
       (n ? n + ' piece' + (n === 1 ? '' : 's') + ' on the map. Click one to select it.' : 'The map is empty. Add a board from the pieces list to begin.');
   }
   function warnings() {
@@ -374,8 +374,8 @@
     var p = P[key]; if (!p) return;
     S.viewKey = key;
     $('mmTitle').textContent = p.name;
-    var sides = '<figure><img src="' + p.dir + p.a + '" alt="' + esc(p.name) + ' side A"><figcaption>Side A</figcaption></figure>' +
-      (p.b ? '<figure><img src="' + p.dir + p.b + '" alt="' + esc(p.name) + ' side B"><figcaption>Side B</figcaption></figure>' : '');
+    var sides = '<figure><img src="' + p.dir + p.a + '" alt="' + esc(p.name) + ' side A"><figcaption>Side A' + (p.ma ? ', ' + esc(p.ma) : '') + '</figcaption></figure>' +
+      (p.b ? '<figure><img src="' + p.dir + p.b + '" alt="' + esc(p.name) + ' side B"><figcaption>Side B' + (p.mb ? ', ' + esc(p.mb) : '') + '</figcaption></figure>' : '');
     $('mmBody').innerHTML = '<div class="mfig' + (p.b ? ' two' : '') + '">' + sides + '</div><p class="mhelp">' + sizeText(p) + '. ' + (p.sd ? esc(p.sd) + ' ' : '') + esc(p.cats.join(', ')) + ', ' + esc(realBox(p.box).name) + '.' + (p.b ? '' : ' One printed side only.') + '</p>';
     $('mmodal').hidden = false; $('mmClose').focus();
   }

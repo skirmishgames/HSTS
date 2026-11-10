@@ -142,6 +142,13 @@ window.HTS_BOXES = {
      "text": "Using Heroes of Normandie sets in Heroes of Stalingrad."
     },
     {
+     "id": "maps",
+     "label": "Maps",
+     "href": "maps.html?b=hos",
+     "count": "8 boards",
+     "text": "The Core Set and Battle Pack boards, side A and side B, named by the marks in their top left corners. Lay out your own battlefield."
+    },
+    {
      "id": "history",
      "label": "History",
      "href": "history.html?b=hos",
