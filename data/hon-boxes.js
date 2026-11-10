@@ -142,6 +142,20 @@ window.HTS_BOXES = {
      "text": "Using Heroes of Normandie sets in Heroes of Stalingrad."
     },
     {
+     "id": "tokens",
+     "label": "Tokens",
+     "href": "tokens.html?b=hos",
+     "count": "13 markers",
+     "text": "Order tokens, the turn chart, Suppressed, Damage and Destruction markers and the Templates."
+    },
+    {
+     "id": "icons",
+     "label": "Icons",
+     "href": "icons.html?b=hos",
+     "count": "32 entries",
+     "text": "The icon glossary from the rulebook icon page."
+    },
+    {
      "id": "maps",
      "label": "Maps",
      "href": "maps.html?b=hos",

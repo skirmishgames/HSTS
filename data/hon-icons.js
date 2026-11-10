@@ -1092,3 +1092,542 @@ HTS_ICONS["hon-caen"] = {
   }
  ]
 };
+HTS_ICONS["hon-hos"] = {
+"box": "hos",
+"name": "Heroes of Stalingrad",
+"source": "Rulebook, icon summary (p.28)",
+"groups": [
+"Terrain effects",
+"Changes of state",
+"Firing abilities",
+"Assault abilities",
+"Defense abilities",
+"Command abilities",
+"Other abilities"
+],
+"entries": [
+{
+"id": "hos-defensive-bonuses",
+"name": "Defensive bonuses",
+"group": "Terrain effects",
+"page": "10",
+"text": "This element gives a bonus to the Defense Value of every Infantry unit on one of its squares.",
+"icons": [
+{
+"img": "img/hon/hos/icons/defensive-bonuses.webp",
+"w": 129,
+"h": 123
+},
+{
+"img": "img/hon/hos/icons/defensive-bonuses-2.webp",
+"w": 129,
+"h": 123
+}
+]
+},
+{
+"id": "hos-impassable",
+"name": "Impassable",
+"group": "Terrain effects",
+"page": "10",
+"text": "No unit can enter this element.",
+"icons": [
+{
+"img": "img/hon/hos/icons/impassable.webp",
+"w": 114,
+"h": 114
+}
+]
+},
+{
+"id": "hos-impassable-to",
+"name": "Impassable to...",
+"group": "Terrain effects",
+"page": "11",
+"text": "This element is impassable to Infantry, Light vehicles or Heavy vehicles, as the symbol shows.",
+"icons": [
+{
+"img": "img/hon/hos/icons/impassable-to.webp",
+"w": 108,
+"h": 150
+},
+{
+"img": "img/hon/hos/icons/impassable-to-2.webp",
+"w": 108,
+"h": 150
+},
+{
+"img": "img/hon/hos/icons/impassable-to-3.webp",
+"w": 108,
+"h": 150
+}
+]
+},
+{
+"id": "hos-obstacles",
+"name": "Obstacles",
+"group": "Terrain effects",
+"page": "11",
+"text": "This element totally blocks LoS or interferes with LoS that crosses it (Obscured LoS).",
+"icons": [
+{
+"img": "img/hon/hos/icons/obstacles.webp",
+"w": 132,
+"h": 126
+},
+{
+"img": "img/hon/hos/icons/obstacles-2.webp",
+"w": 132,
+"h": 126
+},
+{
+"img": "img/hon/hos/icons/obstacles-3.webp",
+"w": 132,
+"h": 126
+}
+]
+},
+{
+"id": "hos-difficult-passage",
+"name": "Difficult passage",
+"group": "Terrain effects",
+"page": "11",
+"text": "Once a unit enters this element, it must stop its movement immediately.",
+"icons": [
+{
+"img": "img/hon/hos/icons/difficult-passage.webp",
+"w": 138,
+"h": 138
+}
+]
+},
+{
+"id": "hos-structures",
+"name": "Structures",
+"group": "Terrain effects",
+"page": "12",
+"text": "To destroy one, you must inflict the number of destruction points printed in the symbol.",
+"icons": [
+{
+"img": "img/hon/hos/icons/structures.webp",
+"w": 126,
+"h": 129
+},
+{
+"img": "img/hon/hos/icons/structures-2.webp",
+"w": 126,
+"h": 129
+}
+]
+},
+{
+"id": "hos-ambush",
+"name": "Ambush",
+"group": "Changes of state",
+"page": "15",
+"text": "Flip the counter to conceal this unit.",
+"icons": [
+{
+"img": "img/hon/hos/icons/ambush.webp",
+"w": 132,
+"h": 138
+},
+{
+"img": "img/hon/hos/icons/ambush-2.webp",
+"w": 132,
+"h": 138
+}
+]
+},
+{
+"id": "hos-crew",
+"name": "Crew",
+"group": "Changes of state",
+"page": "15",
+"text": "The unit can move onto a vehicle to add its special abilities to those of the vehicle.",
+"icons": [
+{
+"img": "img/hon/hos/icons/crew.webp",
+"w": 132,
+"h": 135
+},
+{
+"img": "img/hon/hos/icons/crew-2.webp",
+"w": 132,
+"h": 135
+}
+]
+},
+{
+"id": "hos-tripod",
+"name": "Tripod",
+"group": "Changes of state",
+"page": "15",
+"text": "Flip the counter to deploy or pack the weapon.",
+"icons": [
+{
+"img": "img/hon/hos/icons/tripod.webp",
+"w": 132,
+"h": 135
+},
+{
+"img": "img/hon/hos/icons/tripod-2.webp",
+"w": 132,
+"h": 135
+}
+]
+},
+{
+"id": "hos-artillery-spotter",
+"name": "Artillery spotter",
+"group": "Firing abilities",
+"page": "15",
+"text": "The unit reduces the scattering distance by 1 Interspace.",
+"icons": [
+{
+"img": "img/hon/hos/icons/artillery-spotter.webp",
+"w": 132,
+"h": 129
+}
+]
+},
+{
+"id": "hos-destruction",
+"name": "Destruction",
+"group": "Firing abilities",
+"page": "15",
+"text": "Roll a number of dice equal to the value. On 4 or more, place a Destruction marker.",
+"icons": [
+{
+"img": "img/hon/hos/icons/destruction.webp",
+"w": 138,
+"h": 138
+},
+{
+"img": "img/hon/hos/icons/destruction-2.webp",
+"w": 138,
+"h": 138
+}
+]
+},
+{
+"id": "hos-dual-weapon",
+"name": "Dual weapon",
+"group": "Firing abilities",
+"page": "15",
+"text": "During a Firing Action, roll two dice and keep the best result.",
+"icons": [
+{
+"img": "img/hon/hos/icons/dual-weapon.webp",
+"w": 162,
+"h": 144
+}
+]
+},
+{
+"id": "hos-distracting-fire",
+"name": "Distracting fire",
+"group": "Firing abilities",
+"page": "15",
+"text": "Roll a die. If the result equals or beats the value printed on the symbol, place a Suppressed Marker on the target.",
+"icons": [
+{
+"img": "img/hon/hos/icons/distracting-fire.webp",
+"w": 150,
+"h": 144
+}
+]
+},
+{
+"id": "hos-flamethrower",
+"name": "Flamethrower",
+"group": "Firing abilities",
+"page": "16",
+"text": "The unit may use the flamethrower Template.",
+"icons": [
+{
+"img": "img/hon/hos/icons/flamethrower.webp",
+"w": 150,
+"h": 120
+}
+]
+},
+{
+"id": "hos-limited-range",
+"name": "Limited range",
+"group": "Firing abilities",
+"page": "16",
+"text": "Shots cannot be made beyond the number of squares or Interspaces shown.",
+"icons": [
+{
+"img": "img/hon/hos/icons/limited-range.webp",
+"w": 140,
+"h": 150
+},
+{
+"img": "img/hon/hos/icons/limited-range-2.webp",
+"w": 139,
+"h": 150
+}
+]
+},
+{
+"id": "hos-fire-on-the-move",
+"name": "Fire on the move",
+"group": "Firing abilities",
+"page": "16",
+"text": "The unit may fire while moving.",
+"icons": [
+{
+"img": "img/hon/hos/icons/fire-on-the-move.webp",
+"w": 146,
+"h": 144
+},
+{
+"img": "img/hon/hos/icons/fire-on-the-move-2.webp",
+"w": 145,
+"h": 144
+}
+]
+},
+{
+"id": "hos-frightening-shot",
+"name": "Frightening shot",
+"group": "Firing abilities",
+"page": "16",
+"text": "After missing a shot, place a Suppressed Marker on your target.",
+"icons": [
+{
+"img": "img/hon/hos/icons/frightening-shot.webp",
+"w": 118,
+"h": 150
+}
+]
+},
+{
+"id": "hos-howitzer",
+"name": "Howitzer",
+"group": "Firing abilities",
+"page": "16",
+"text": "The unit may use a blast Template and needs LoS. The coloured ovals match the Combat Values on the explosion Template.",
+"icons": [
+{
+"img": "img/hon/hos/icons/howitzer.webp",
+"w": 190,
+"h": 54
+}
+]
+},
+{
+"id": "hos-indirect-fire",
+"name": "Indirect fire",
+"group": "Firing abilities",
+"page": "16",
+"text": "The unit may use a blast Template and does not need LoS. The shot may scatter.",
+"icons": [
+{
+"img": "img/hon/hos/icons/indirect-fire.webp",
+"w": 190,
+"h": 52
+}
+]
+},
+{
+"id": "hos-machine-gunner",
+"name": "Machine gunner",
+"group": "Firing abilities",
+"page": "17",
+"text": "The unit may divide its Combat Value across multiple targets.",
+"icons": [
+{
+"img": "img/hon/hos/icons/machine-gunner.webp",
+"w": 141,
+"h": 150
+}
+]
+},
+{
+"id": "hos-piercing",
+"name": "Piercing",
+"group": "Firing abilities",
+"page": "17",
+"text": "The unit adds 1 to the die roll when it needs to find a damage location.",
+"icons": [
+{
+"img": "img/hon/hos/icons/piercing.webp",
+"w": 141,
+"h": 147
+}
+]
+},
+{
+"id": "hos-sniper",
+"name": "Sniper",
+"group": "Firing abilities",
+"page": "17",
+"text": "Roll on the sniper table: 1 no effect, 2 to 3 one Suppressed Marker, 4 to 5 one Hit, 6 one Hit and one Suppressed Marker.",
+"icons": [
+{
+"img": "img/hon/hos/icons/sniper.webp",
+"w": 141,
+"h": 144
+}
+]
+},
+{
+"id": "hos-suppressive-fire",
+"name": "Suppressive fire",
+"group": "Firing abilities",
+"page": "17",
+"text": "The unit may double its Combat Value to suppress its target.",
+"icons": [
+{
+"img": "img/hon/hos/icons/suppressive-fire.webp",
+"w": 136,
+"h": 150
+}
+]
+},
+{
+"id": "hos-assault",
+"name": "Assault",
+"group": "Assault abilities",
+"page": "17",
+"text": "The unit can engage in melee and rolls 2 dice when attacking or defending.",
+"icons": [
+{
+"img": "img/hon/hos/icons/assault.webp",
+"w": 142,
+"h": 150
+},
+{
+"img": "img/hon/hos/icons/assault-2.webp",
+"w": 143,
+"h": 150
+}
+]
+},
+{
+"id": "hos-mechanic",
+"name": "Mechanic",
+"group": "Defense abilities",
+"page": "19",
+"text": "The unit may repair Heavy Vehicles.",
+"icons": [
+{
+"img": "img/hon/hos/icons/mechanic.webp",
+"w": 141,
+"h": 144
+}
+]
+},
+{
+"id": "hos-positive-waves",
+"name": "Positive waves",
+"group": "Defense abilities",
+"page": "19",
+"text": "Your opponent rolls 2 dice for the damage location and you choose.",
+"icons": [
+{
+"img": "img/hon/hos/icons/positive-waves.webp",
+"w": 141,
+"h": 144
+}
+]
+},
+{
+"id": "hos-autonomous",
+"name": "Autonomous",
+"group": "Command abilities",
+"page": "19",
+"text": "The unit does not need a Numbered Order Token to act.",
+"icons": [
+{
+"img": "img/hon/hos/icons/autonomous.webp",
+"w": 141,
+"h": 144
+}
+]
+},
+{
+"id": "hos-inspiration",
+"name": "Inspiration",
+"group": "Command abilities",
+"page": "19",
+"text": "The unit can remove Suppressed Markers from other units in its LoS and within range.",
+"icons": [
+{
+"img": "img/hon/hos/icons/inspiration.webp",
+"w": 141,
+"h": 144
+}
+]
+},
+{
+"id": "hos-orders",
+"name": "Orders",
+"group": "Command abilities",
+"page": "20",
+"text": "The unit provides one or more additional Numbered Order Tokens.",
+"icons": [
+{
+"img": "img/hon/hos/icons/orders.webp",
+"w": 147,
+"h": 150
+},
+{
+"img": "img/hon/hos/icons/orders-2.webp",
+"w": 147,
+"h": 150
+}
+]
+},
+{
+"id": "hos-personal-order",
+"name": "Personal order",
+"group": "Command abilities",
+"page": "20",
+"text": "The unit provides one additional Numbered Order Token but has to be assigned one each turn.",
+"icons": [
+{
+"img": "img/hon/hos/icons/personal-order.webp",
+"w": 141,
+"h": 144
+}
+]
+},
+{
+"id": "hos-scout",
+"name": "Scout",
+"group": "Command abilities",
+"page": "20",
+"text": "The unit gets a free move, ignoring difficult passages, before the start of the game.",
+"icons": [
+{
+"img": "img/hon/hos/icons/scout.webp",
+"w": 141,
+"h": 150
+}
+]
+},
+{
+"id": "hos-transport",
+"name": "Transport",
+"group": "Other abilities",
+"page": "20",
+"text": "The vehicle can carry infantry units.",
+"icons": [
+{
+"img": "img/hon/hos/icons/transport.webp",
+"w": 153,
+"h": 138
+},
+{
+"img": "img/hon/hos/icons/transport-2.webp",
+"w": 153,
+"h": 138
+}
+]
+}
+]
+};

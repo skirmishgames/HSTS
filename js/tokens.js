@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen', name: 'Battle for Caen' }];
+  var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen', name: 'Battle for Caen' }, { id: 'hos', name: 'Heroes of Stalingrad' }];
   var S = { b: 'bro', q: '', g: 'all', open: {}, theme: 'light' };
   var cache = {}, NCOL = 0;
 
@@ -43,7 +43,7 @@
       d.groups.map(function (c) { return '<button type="button" class="chip' + (S.g === c ? ' on' : '') + '" data-group="' + esc(c) + '">' + esc(c) + '</button>'; }).join('');
     $('q').value = S.q;
     var sb = BOXES.filter(function (b) { return b.id === S.b; })[0];
-    if ($('subtitle') && sb) $('subtitle').textContent = 'Tokens and markers, Heroes of Normandie, ' + sb.name;
+    if ($('subtitle') && sb) $('subtitle').textContent = 'Tokens and markers, ' + (sb.id === 'hos' ? 'Heroes of Stalingrad' : 'Heroes of Normandie, ' + sb.name);
     if ($('srcnote')) $('srcnote').textContent = 'Rule text is summarised from the ' + d.source + '. Page numbers are printed page numbers.';
     document.documentElement.setAttribute('data-theme', S.theme);
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';

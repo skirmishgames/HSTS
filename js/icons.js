@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen', name: 'Battle for Caen' }];
+  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen', name: 'Battle for Caen' }, { id: 'hos', name: 'Heroes of Stalingrad' }];
   var S = { b: 'all', q: '', g: 'all', theme: 'light' };
   var cache = {};
 
@@ -24,7 +24,7 @@
 
   function data() {
     if (cache[S.b]) return cache[S.b];
-    var ids = S.b === 'all' ? ['bro', 'omaha', 'caen'] : [S.b], entries = [], groups = [];
+    var ids = S.b === 'all' ? ['bro', 'omaha', 'caen', 'hos'] : [S.b], entries = [], groups = [];
     ids.forEach(function (id) {
       var d = window.HTS_ICONS['hon-' + id];
       d.groups.forEach(function (g) { if (groups.indexOf(g) < 0) groups.push(g); });
@@ -57,7 +57,7 @@
     }).join('') + '</div><div class="gtext"><h3>' + mk(e.name) + '</h3>' +
       '<p class="gmeta"><span class="rbadge">' + esc(e.group) + '</span> ' + (S.b === 'all' ? '<span class="gbox">' + esc(x.boxName) + '</span> ' : '') + '<span class="gpg">Rulebook p.' + esc(e.page) + '</span></p>' +
       '<p>' + mk(e.text) + '</p>' +
-      '<p class="hfind"><a href="rules.html?b=' + x.box + '&amp;q=' + encodeURIComponent(e.name) + '">Find in the rules</a></p></div></article>';
+      '' + (x.box === 'hos' ? '' : '<p class="hfind"><a href="rules.html?b=' + x.box + '&amp;q=' + encodeURIComponent(e.name) + '">Find in the rules</a></p>') + '</div></article>';
   }
 
   function render() {
