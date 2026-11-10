@@ -631,7 +631,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const hm = await b.newPage({ viewport: { width: 390, height: 844 } });
   const hmerrs = []; hm.on('pageerror', e => hmerrs.push(e.message)); hm.on('console', m => { if (m.type() === 'error') hmerrs.push(m.text()); });
   await hm.goto(base + 'index.html'); await hm.waitForTimeout(300);
-  ok(await hm.locator('#boxGrid .boxcard').count() === 4 && await hm.locator('#boxGrid .boxcard[href="box.html?b=ws"]').count() === 1 && await hm.locator('#boxGrid .boxcard[href="box.html?b=hon1"]').count() === 1 && await hm.locator('.hero-link[href="box.html?b=bro"]').count() === 1, 'landing: Big Red One as the main box, two battle packs, War Stories and the first edition as option tiles');
+  ok(await hm.locator('#boxGrid .boxcard').count() === 5 && await hm.locator('#boxGrid .boxcard[href="box.html?b=hos"]').count() === 1 && await hm.locator('#boxGrid .boxcard[href="box.html?b=ws"]').count() === 1 && await hm.locator('#boxGrid .boxcard[href="box.html?b=hon1"]').count() === 1 && await hm.locator('.hero-link[href="box.html?b=bro"]').count() === 1, 'landing: Big Red One as the main box, two battle packs, War Stories, Heroes of Stalingrad and the first edition as option tiles');
   ok(await hm.locator('.gocard').count() === 12, 'landing: twelve shortcuts');
   ok((await hm.locator('.boxcard img').evaluateAll(a => a.every(i => i.complete && i.naturalWidth > 0))) && (await hm.locator('.hero-art').evaluate(i => i.complete && i.naturalWidth > 0)), 'landing: box art loads');
   ok(await hm.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), 'landing: no sideways scroll on a phone');
@@ -640,19 +640,20 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(missingPages.length === 0, 'landing: every shortcut goes to a page that exists ' + missingPages.join(','));
   await hm.goto(base + 'box.html?b=bro'); await hm.goto(base + 'index.html#b=abc'); await hm.waitForTimeout(300);
   ok(/builder\.html/.test(hm.url()), 'old army links on index.html#b= forward to the builder');
-  for (const bx of ['bro', 'omaha', 'caen', 'ws', 'hon1']) {
+  for (const bx of ['bro', 'omaha', 'caen', 'ws', 'hos', 'hon1']) {
     await hm.goto(base + 'box.html?b=' + bx); await hm.waitForTimeout(250);
     const hrefs = await hm.locator('#boxLinks a').evaluateAll(a => a.map(x => x.getAttribute('href')));
     const miss = hrefs.filter(h => !fs.existsSync(path.join(root, h.split('?')[0])));
-    ok(hrefs.length >= (bx === 'hon1' || bx === 'ws' ? 1 : 8) && miss.length === 0, 'box ' + bx + ': links go to pages that exist (' + hrefs.length + ')');
+    ok(hrefs.length >= (bx === 'hon1' || bx === 'ws' || bx === 'hos' ? 1 : 8) && miss.length === 0, 'box ' + bx + ': links go to pages that exist (' + hrefs.length + ')');
     ok(await hm.locator('.bh-art').evaluate(i => i.complete && i.naturalWidth > 0), 'box ' + bx + ': art loads');
-    ok(await hm.locator('#boxOther li').count() === 4, 'box ' + bx + ': links to the other four boxes');
+    ok(await hm.locator('#boxOther li').count() === 5, 'box ' + bx + ': links to the other five boxes');
   }
   await hm.goto(base + 'box.html?b=caen'); await hm.waitForTimeout(250);
   ok(await hm.locator('#boxExp a').count() === 2, 'box caen: Windsor & Jupiter links');
   const boxData = await hm.evaluate(() => JSON.parse(JSON.stringify(window.HTS_BOXES)));
   const wantScen = { bro: 'scenarios.html?b=bro', omaha: 'scenarios.html?b=omaha', caen: 'scenarios.html?b=caen', ws: 'scenarios.html?b=ws' };
-  ok(boxData.boxes.filter(x => !x.edition).every(x => x.links.some(l => l.href === wantScen[x.id]) && fs.existsSync(path.join(root, x.art))), 'box data: each box links to its scenarios and has art');
+  ok(boxData.boxes.filter(x => !x.edition && x.id !== 'hos').every(x => x.links.some(l => l.href === wantScen[x.id]) && fs.existsSync(path.join(root, x.art))), 'box data: each box links to its scenarios and has art');
+  ok(boxData.boxes.some(x => x.id === 'hos' && fs.existsSync(path.join(root, x.art)) && x.links.some(l => l.href === 'scenarios.html?b=hos')), 'box data: Heroes of Stalingrad has art and links to its scenarios');
   await hm.goto(base + 'box.html?b=hon1'); await hm.waitForTimeout(200);
   ok(await hm.locator('#boxLinks a[href="expansions.html?l=hon1"]').count() === 1 && await hm.locator('#boxLinks .off').count() === 0 && await hm.locator('#boxLinks a[href="guides.html?c=rules"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=scenarios"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=units"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=single"]').count() === 1 && await hm.locator('#boxLinks a[href="guides.html?c=gazettes"]').count() === 1, 'box hon1: catalogue, rules, scenarios, single scenarios, gazettes and unit references all link to pages');
   await hm.goto(base + 'expansions.html?l=hon1'); await hm.waitForTimeout(400);
