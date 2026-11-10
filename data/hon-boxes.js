@@ -121,6 +121,13 @@ window.HTS_BOXES = {
      "text": "Every Red Army and German recruitment tile and option from the Core Set, Battle Pack, Duel of Snipers and both Heroic Platoons, with costs and the units on them."
     },
     {
+     "id": "heroes",
+     "label": "Heroes",
+     "href": "heroes.html?b=hos&n=ru",
+     "count": "9 hero tiles",
+     "text": "Mariya Oktyabrskaya, Danilov, Tania Chernova, Papa Koulikov, Zaytsev, Steiner, Simon Gruber, Major Konig and Hans Olt Maedi, and what fits their slots."
+    },
+    {
      "id": "expansions",
      "label": "Punchboards and tiles",
      "href": "guides.html?c=stalingrad",

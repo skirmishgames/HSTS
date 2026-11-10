@@ -1,11 +1,12 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen-ecg', name: 'Battle for Caen: Epsom, Charnwood & Goodwood' }, { id: 'caen-wj', name: 'Battle Pack #3: Windsor & Jupiter' }, { id: 'promo', name: 'Promo heroes' }];
-  var SETBOX = { CB: 'bro', BO: 'omaha', ECG: 'caen-ecg', BP3: 'caen-wj' };
+  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen-ecg', name: 'Battle for Caen: Epsom, Charnwood & Goodwood' }, { id: 'caen-wj', name: 'Battle Pack #3: Windsor & Jupiter' }, { id: 'promo', name: 'Promo heroes' }, { id: 'hos', name: 'Heroes of Stalingrad' }];
+  var SETBOX = { CB: 'bro', BO: 'omaha', ECG: 'caen-ecg', BP3: 'caen-wj', 'HoS-CB': 'hos', 'HoS-BP': 'hos', 'HoS-KS': 'hos', 'HoS-HP': 'hos' };
+  var HOSN = { ru: 1, gs: 1 };
   function boxOf(t) { return SETBOX[t.set] || 'promo'; }
   function boxName(id) { return BOXES.filter(function (b) { return b.id === id; })[0].name; }
-  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }];
+  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }, { id: 'ru', name: 'Soviet Union (Stalingrad)' }, { id: 'gs', name: 'Germany (Stalingrad)' }];
   var CATS = [['customization', 'Customizations'], ['gear', 'Gear'], ['trait', 'Character traits'], ['support', 'Support units'], ['order', 'Orders']];
   var STRIPE = { R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', WR: 'white and red', KG: 'black and green', BCG: 'blue, cream and green', BRD: 'blue and red', cmd: 'command', custom: 'customization', any: 'common', all: 'any option' };
   var KIND = { officer: 'Officer', character: 'Character', infantry: 'Infantry', weapon: 'Weapon', vehicle: 'Vehicle', marker: 'Marker', aircraft: 'Aircraft' };
@@ -32,7 +33,7 @@
   function cost(o) { return o.cost == null ? 'SP' : o.cost; }
 
   function load() {
-    var key = 'hon-bro-' + S.n;
+    var key = (HOSN[S.n] ? 'hon-hos-' : 'hon-bro-') + S.n;
     if (cache[key]) return cache[key];
     var d = window.HTS_DATA[key], opts = {};
     d.options.forEach(function (o) { opts[o.id] = o; });
@@ -70,7 +71,7 @@
     var html = '<div class="hhero"><img class="htile" src="' + esc(t.img) + '" alt="' + esc(t.name + ', ' + (t.sub || '') + ' recruitment tile') + '" width="' + t.w + '" height="' + t.h + '" loading="lazy"></div>';
     html += '<p class="htext"><strong>Units:</strong> ' + t.units.map(function (u) { return esc(u[0]) + ' (' + esc(KIND[u[2]] || u[2]) + ')'; }).join(', ') + '.</p>';
     if (t.note) html += '<p class="htext">' + esc(t.note) + '</p>';
-    var bo = window.HTS_GUIDES && window.HTS_GUIDES.heroes[String(t.name).toLowerCase()];
+    var bo = !HOSN[S.n] && window.HTS_GUIDES && window.HTS_GUIDES.heroes[String(t.name).toLowerCase()];
     if (bo) html += '<p class="htext"><strong>Based on:</strong> ' + esc(bo) + ' <a href="guides.html?g=who-are-these-heroes">All the heroes</a></p>';
     if (!slots.length) html += '<p class="htext">This tile has no option slots.</p>';
     else if (same) html += '<h4 class="hsub">' + (slots.length === 1 ? 'Slot' : 'All ' + slots.length + ' slots') + ': ' + esc(slotText(slots[0]).toLowerCase()) + '</h4><p class="hsrc">What it can take</p>' + takeList(D, slots[0]);
@@ -115,11 +116,12 @@
     var eq = window.HTS_HEROES.equipment.filter(function (q) { var h = norm(q.name + ' ' + q.text), p = ' ' + h + ' '; return (S.b === 'all' || q.box === S.b) && toks.every(function (k) { return hit(h, p, k); }); });
     var html = '<section class="hgroup"><h2 class="hh">Hero tiles <span class="hcount">' + heroes.length + '</span></h2>' +
       (heroes.length ? list(heroes, mk) : '<p class="empty2">No hero matches.</p>') + '</section>' +
+      (HOSN[S.n] ? '<section class="hgroup"><h2 class="hh">Equipment</h2><p class="htext hintro">Heroes of Stalingrad equipment is listed as options. Open a hero to see what fits its slots, or look in the <a href="units.html?b=hos&amp;n=' + S.n + '">unit index</a>.</p></section>' :
       '<section class="hgroup"><h2 class="hh">Equipment cards and markers <span class="hcount">' + eq.length + '</span></h2>' +
       '<p class="htext hintro">Customizations for Characters. They fit the slot on a hero tile and the slots on a Command tile, and they work for both armies.</p>' +
-      (eq.length ? '<div class="eqgrid">' + eq.map(function (q) { return equipCard(q, mk, D); }).join('') + '</div>' : '<p class="empty2">No equipment matches.</p>') + '</section>';
+      (eq.length ? '<div class="eqgrid">' + eq.map(function (q) { return equipCard(q, mk, D); }).join('') + '</div>' : '<p class="empty2">No equipment matches.</p>') + '</section>');
     $('out').innerHTML = html;
-    $('stat').textContent = heroes.length + ' hero tile' + (heroes.length === 1 ? '' : 's') + ' and ' + eq.length + ' equipment card' + (eq.length === 1 ? '' : 's') + '. Open a hero to see what it can take.';
+    $('stat').textContent = HOSN[S.n] ? heroes.length + ' hero tile' + (heroes.length === 1 ? '' : 's') + '. Open a hero to see what it can take.' : heroes.length + ' hero tile' + (heroes.length === 1 ? '' : 's') + ' and ' + eq.length + ' equipment card' + (eq.length === 1 ? '' : 's') + '. Open a hero to see what it can take.';
     url();
   }
 
@@ -145,8 +147,8 @@
   function bind() {
     document.addEventListener('click', function (ev) {
       var t = ev.target, el;
-      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; S.open = {}; render(); return; }
-      if ((el = t.closest('[data-nation]'))) { S.n = el.dataset.nation; S.open = {}; render(); return; }
+      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; if (S.b === 'hos' && !HOSN[S.n]) S.n = 'ru'; else if (S.b !== 'hos' && S.b !== 'all' && HOSN[S.n]) S.n = 'us'; S.open = {}; render(); return; }
+      if ((el = t.closest('[data-nation]'))) { S.n = el.dataset.nation; if (HOSN[S.n] && S.b !== 'all' && S.b !== 'hos') S.b = 'hos'; else if (!HOSN[S.n] && S.b === 'hos') S.b = 'all'; S.open = {}; render(); return; }
       if ((el = t.closest('[data-toggle]'))) toggle(el.dataset.toggle);
     });
     window.addEventListener('resize', function () { if (ncol() !== NCOL) { NCOL = ncol(); render(); } });
