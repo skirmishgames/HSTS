@@ -8,7 +8,7 @@
   function rich(s) {
     return esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/__(.+?)__/g, '<em>$1</em>')
       .replace(/\[([^\]]+)\]\(([a-z][a-z0-9_-]*\.html(?:\?[a-z0-9_=&;%.-]*)?)\)/g, '<a href="$2">$1</a>')
-      .replace(/\[([^\]]+)\]\((https:\/\/(?:steamcommunity\.com|drive\.google\.com)\/[a-zA-Z0-9_.\/?=-]+)\)/g, '<a href="$2" rel="noopener" target="_blank">$1</a>');
+      .replace(/\[([^\]]+)\]\((https:\/\/(?:(?:steamcommunity|drive\.google)\.com|en\.wikipedia\.org)\/[a-zA-Z0-9_.\/?=%-]+)\)/g, '<a href="$2" rel="noopener" target="_blank">$1</a>');
   }
   function slug(s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
   function norm(s) { return String(s == null ? '' : s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim(); }
@@ -46,6 +46,10 @@
     out.innerHTML = h;
   }
 
+  function bgText(dc) {
+    return (dc.background || []).map(function (b) { return [b.t, (b.items || []).join(' '), (b.rows || []).map(function (r) { return r.join(' '); }).join(' ')].join(' '); }).join(' ');
+  }
+
   function paras(t) { return String(t).split(/\n{2,}/).map(function (p) { return '<p>' + esc(p.replace(/\n/g, ' ')) + '</p>'; }).join(''); }
 
   function renderDoc(dc) {
@@ -66,6 +70,12 @@
     if (kids.length) h += '<ol class="slist">' + kids.map(function (x) { return '<li><a href="guides.html?d=' + x.id + '">' + esc(x.title.replace(/^Contest scenario \d+: /, '')) + '</a></li>'; }).join('') + '</ol>';
     if (dc.pdf) h += '<p class="sarow"><a class="btn" href="' + esc(dc.pdf.href) + '" download>Download the PDF</a><span class="sameta">' + esc(dc.pdf.size) + '. ' + esc(dc.pdf.note) + '</span></p>';
     else h += '<p class="hsrc">The pages are below as pictures, with the text of each page under it. The original PDF is kept in the project files, not on this site.</p>';
+    if (dc.background) {
+      var bt = dc.background.filter(function (b) { return b.k === 'h'; }).map(function (b) { return '<a class="chip" href="#' + slug(b.t) + '">' + esc(b.t) + '</a>'; }).join('');
+      h += '<div class="stoc chips" role="navigation" aria-label="On this page">' + bt + '<a class="chip" href="#p1">The sheet, page by page</a></div>';
+      h += '<div class="sbody">' + dc.background.map(block).join('') + '</div>';
+      h += '<h2 id="the-sheet">The sheet, page by page</h2>';
+    }
     if (dc.n > 1) {
       var chips = ''; for (var k = 1; k <= dc.n; k++) chips += '<a class="chip" href="#p' + k + '">' + k + '</a>';
       h += '<div class="stoc chips" role="navigation" aria-label="Pages"><span class="hsrc">Pages</span>' + chips + '</div>';
@@ -90,7 +100,7 @@
     lib().docs.forEach(function (dc) {
       if (S.c !== 'all' && dc.group !== S.c) return;
       if (!toks.length) { res.push({ dc: dc, hits: [] }); return; }
-      var head = norm(dc.title + ' ' + dc.summary), hits = [];
+      var head = norm(dc.title + ' ' + dc.summary + ' ' + bgText(dc)), hits = [];
       dc.text.forEach(function (t, i) {
         var hay = norm(t);
         if (toks.every(function (k) { return hay.indexOf(k) >= 0; })) hits.push(i + 1);
