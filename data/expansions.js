@@ -264,7 +264,13 @@ window.HTS_EXPANSIONS = {
 {
 "id": "hon2-pulp-stories-1-pumpkin-s-revenge",
 "name": "Pulp Stories #1 - Pumpkin's Revenge",
-"cat": "Gazette"
+"cat": "Gazette",
+"tool": [
+{
+"label": "Tile pictures",
+"href": "guides.html?d=pulp-stories-1-tiles"
+}
+]
 }
 ]
 },
@@ -384,6 +390,14 @@ window.HTS_EXPANSIONS = {
 {
 "label": "Unit bible",
 "href": "guides.html?d=bible-pegasus-bridge"
+},
+{
+"label": "Tile pictures",
+"href": "guides.html?d=pegasus-bridge-tiles"
+},
+{
+"label": "Terrain tile pictures",
+"href": "guides.html?d=pegasus-bridge-terrain-tiles"
 }
 ]
 },
@@ -579,6 +593,10 @@ window.HTS_EXPANSIONS = {
 {
 "label": "Unit bible",
 "href": "guides.html?d=bible-ge-misc"
+},
+{
+"label": "Tile pictures",
+"href": "guides.html?d=ge-21eme-pz-tiles"
 }
 ]
 },
@@ -643,6 +661,10 @@ window.HTS_EXPANSIONS = {
 {
 "label": "Unit bible",
 "href": "guides.html?d=bible-us-misc"
+},
+{
+"label": "Tile pictures",
+"href": "guides.html?d=kellys-heroes-tiles"
 }
 ]
 },
@@ -899,6 +921,10 @@ window.HTS_EXPANSIONS = {
 {
 "label": "Unit bible: gazettes",
 "href": "guides.html?d=bible-gazettes"
+},
+{
+"label": "Tile pictures",
+"href": "guides.html?d=gazette-4-tiles"
 }
 ]
 },

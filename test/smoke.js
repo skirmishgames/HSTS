@@ -661,7 +661,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await hm.goto(base + 'scenarios.html'); await hm.waitForTimeout(300);
   ok(await hm.locator('#boxes button[data-box="v1"]').count() === 1, 'scenarios page: first edition (V1) button');
   await hm.goto(base + 'scenarios.html?b=v1'); await hm.waitForTimeout(400);
-  ok(await hm.locator('.hrow').count() === 76 && /76 of 76/.test(await hm.locator('#stat').innerText()), 'scenarios V1: 76 library entries (59 single, 13 packs, 4 gazettes)');
+  ok(await hm.locator('.hrow').count() === 80 && /80 of 80/.test(await hm.locator('#stat').innerText()), 'scenarios V1: 80 library entries (59 single, 14 packs, 7 gazette items)');
   await hm.click('[data-type="Scenario Contest Compilation"]');
   ok(await hm.locator('.hrow').count() === 13, 'scenarios V1: contest chip lists intro and 12 scenarios');
   await hm.click('[data-type="all"]'); await hm.fill('#q', 'Godsend'); await hm.waitForTimeout(400);
@@ -731,8 +731,8 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // documents library
   await gp.goto(base + 'guides.html'); await gp.waitForTimeout(400);
   const LIB = await gp.evaluate(() => JSON.parse(JSON.stringify({ n: window.HTS_LIB.docs.length, g: window.HTS_LIB.groups.length, ids: window.HTS_LIB.docs.map(d => [d.id, d.n, d.pdf && d.pdf.href]) })));
-  ok(LIB.n === 123 && LIB.g === 8, 'documents: 123 documents in 8 groups');
-  ok(await gp.locator('.dcard').count() === 123, 'documents: every document is listed');
+  ok(LIB.n === 139 && LIB.g === 9, 'documents: 139 documents in 9 groups');
+  ok(await gp.locator('.dcard').count() === 139, 'documents: every document is listed');
   const missingLib = [];
   for (const [id, n, pdf] of LIB.ids) { for (let k = 1; k <= n; k++) { if (!fs.existsSync(path.join(root, 'img/hon/lib/' + id + '/p' + String(k).padStart(2, '0') + '.webp'))) missingLib.push(id + k); } if (pdf && !fs.existsSync(path.join(root, pdf))) missingLib.push(pdf); }
   ok(missingLib.length === 0, 'documents: every page picture and PDF exists ' + missingLib.slice(0, 5).join(','));
@@ -741,7 +741,26 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await gp.click('#lchips [data-c="scenarios"]'); await gp.waitForTimeout(200);
   ok(await gp.locator('.dcard').count() >= 1, 'documents: group filter works with a search');
   await gp.goto(base + 'guides.html?c=units'); await gp.waitForTimeout(300);
-  ok(await gp.locator('.dcard').count() === 15 && await gp.locator('#lchips .chip.on').innerText() === 'Unit references 15', 'documents: ?c=units opens the unit references');
+  ok(await gp.locator('.dcard').count() === 21 && await gp.locator('#lchips .chip.on').innerText() === 'Unit references 21', 'documents: ?c=units opens the unit references');
+  // tile picture documents
+  const tileDocs = { 'pegasus-bridge-tiles': [7, 'V1'], 'pegasus-bridge-terrain-tiles': [3, 'V1'], 'kellys-heroes-tiles': [4, 'V1'], 'gazette-4-tiles': [2, 'V1'], 'ge-21eme-pz-tiles': [6, 'V1'], 'pulp-stories-1-tiles': [3, 'Other'] };
+  for (const [tid, [tn, ted]] of Object.entries(tileDocs)) {
+    await gp.goto(base + 'guides.html?d=' + tid); await gp.waitForTimeout(300);
+    ok(await gp.locator('.dpage').count() === tn && await gp.locator('a.btn[href="pdf/lib/' + tid + '.pdf"]').count() === 1 && fs.existsSync(path.join(root, 'pdf/lib/' + tid + '.pdf')), 'tile document ' + tid + ': ' + tn + ' pages and a PDF');
+  }
+  await gp.goto(base + 'guides.html?d=pulp-stories-1-tiles'); await gp.waitForTimeout(300);
+  ok(/other than Heroes of Normandie/.test(await gp.locator('.snote').innerText()), 'tile document: Pulp Stories note says it is another line');
+  await gp.goto(base + 'guides.html?c=units'); await gp.waitForTimeout(300); await gp.fill('#lq', 'sherman oddball'); await gp.waitForTimeout(300);
+  ok(await gp.locator('.dcard a[href="guides.html?d=kellys-heroes-tiles"]').count() === 1, 'documents: search finds a tile by name');
+  const printDocs = { 'wood-hills-print': 7, 'vercors-maps': 2, 'tournament-maps': 6, 'selonge-forest-depots': 2, 'church-print': 2, 'mansion-print': 2, 'sainte-mere-eglise-campaign-book-pages': 7, 'gazette-1-pages': 3, 'gazette-2-pages': 3, 'gazette-3-pages': 4 };
+  for (const [pid, pn] of Object.entries(printDocs)) {
+    await gp.goto(base + 'guides.html?d=' + pid); await gp.waitForTimeout(300);
+    ok(await gp.locator('.dpage').count() === pn, 'document ' + pid + ': ' + pn + ' pages');
+  }
+  await gp.goto(base + 'guides.html?c=print'); await gp.waitForTimeout(300);
+  ok(await gp.locator('.dcard').count() === 6, 'documents: ?c=print lists the six print file documents');
+  await gp.fill('#lq', 'Speirs'); await gp.waitForTimeout(300); await gp.goto(base + 'guides.html?q=Speirs'); await gp.waitForTimeout(400);
+  ok(await gp.locator('.dcard a[href="guides.html?d=gazette-3-pages"]').count() === 1, 'documents: search finds Run Speirs in Gazette 3 pages');
   await gp.goto(base + 'guides.html?d=mines'); await gp.waitForTimeout(400);
   ok(await gp.locator('.dpage').count() === 2 && await gp.locator('a.btn[href="pdf/lib/mines.pdf"]').count() === 1 && /V2/.test(await gp.locator('.snote').innerText()), 'document mines: two pages, PDF link, V2 note');
   await gp.locator('.sfigb').first().click(); await gp.waitForTimeout(200);

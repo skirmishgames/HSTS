@@ -762,6 +762,10 @@ window.HTS_GUIDES = {
     {
      "k": "p",
      "t": "In theory every Tabletop Simulator image is also in the contributor's Google Drive. Some may be missing, especially for the Big Red One and Battle for Caen mods, which were partly put together with help from someone at the publisher."
+    },
+    {
+     "k": "p",
+     "t": "The tile pictures in the [unit references](guides.html?c=units) for Pegasus Bridge, Kelly's Heroes, Gazette 4, GE Reinforcement 21eme PZ and Pulp Stories #1 come from the same contributor's Tabletop Simulator preparation work."
     }
    ]
   }

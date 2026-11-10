@@ -17,7 +17,7 @@
   function curG() { return data().guides.filter(function (g) { return g.id === S.g; })[0]; }
   function curD() { return lib().docs.filter(function (d) { return d.id === S.d; })[0]; }
   function grp(id) { return lib().groups.filter(function (g) { return g.id === id; })[0]; }
-  var EDN = { V1: 'First edition (V1)', V2: 'Big Red One (V2)', Community: 'Community, unofficial' };
+  var EDN = { V1: 'First edition (V1)', V2: 'Big Red One (V2)', Community: 'Community, unofficial', Other: 'Other Heroes line' };
 
   function block(b) {
     switch (b.k) {
@@ -56,7 +56,7 @@
     var h = '<nav class="scrumb" aria-label="Breadcrumb"><a href="guides.html?c=' + dc.group + '">' + esc(g ? g.title : 'Documents') + '</a></nav>';
     h += '<h1 class="stitle">' + esc(dc.title) + '</h1>';
     h += '<p class="smeta">' + [EDN[dc.ed], dc.n + (dc.n === 1 ? ' page' : ' pages'), dc.credit].filter(Boolean).map(esc).join(' &middot; ') + '</p>';
-    h += '<aside class="snote">' + (dc.ed === 'V2' ? 'This document is for the Big Red One (V2) rules.' : (dc.ed === 'Community' ? 'Fan made, not official. ' : dc.ed === 'V1' ? 'A first edition document. ' : '') + 'Where this differs from the Big Red One (V2) rules, the V2 rules win.') + '</aside>';
+    h += '<aside class="snote">' + (dc.ed === 'Other' ? 'Tile pictures for a Heroes line other than Heroes of Normandie. That game uses its own rules. Where it differs from the Big Red One (V2) rules, the V2 rules win for Heroes of Normandie.' : dc.ed === 'V2' ? 'This document is for the Big Red One (V2) rules.' : (dc.ed === 'Community' ? 'Fan made, not official. ' : dc.ed === 'V1' ? 'A first edition document. ' : '') + 'Where this differs from the Big Red One (V2) rules, the V2 rules win.') + '</aside>';
     if (dc.part) {
       var pl = dc.part.link ? '<a href="guides.html?d=' + dc.part.link + '">' + esc(dc.part.name) + '</a>' : esc(dc.part.name);
       h += '<aside class="snote">' + (dc.part.n ? 'Part of ' + pl + ', scenario ' + dc.part.n + ' of ' + dc.part.of + '.' : 'This is the introduction to ' + esc(dc.part.name) + (dc.part.of ? '. Its ' + dc.part.of + ' scenarios are listed below.' : '.')) + '</aside>';
