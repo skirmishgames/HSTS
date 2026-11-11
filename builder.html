@@ -42,11 +42,6 @@
       <input id="limitNum" type="number" min="0" step="5" inputmode="numeric" aria-label="Custom points limit">
     </div>
   </div>
-  <div class="field">
-    <span class="label">Collection</span>
-    <button id="btnOwn" class="ghost" type="button" aria-describedby="ownState">My collection</button>
-    <span id="ownState" class="count"></span>
-  </div>
   <div class="field grow">
     <label class="label" for="armyName">Army name</label>
     <input id="armyName" type="text" placeholder="Name this army" maxlength="60" autocomplete="off">
@@ -95,6 +90,7 @@
       <div id="typeChips" class="chips" role="group" aria-label="Tile type"></div>
       <div id="setChips" class="chips" role="group" aria-label="Content set"></div>
     </div>
+    <div id="ownnote"></div>
     <div id="library" class="library"></div>
   </aside>
 </main>

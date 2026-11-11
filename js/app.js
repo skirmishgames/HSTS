@@ -272,6 +272,8 @@
     }).sort(function (a, b) {
       return (TYPE_ORDER[a.type] - TYPE_ORDER[b.type]) || (a.cost - b.cost) || a.name.localeCompare(b.name);
     });
+    var hidT = D.d.tiles.filter(function (t) { return !OWN.owns(t.set); }).length;
+    $('ownnote').innerHTML = OWN.note(hidT, hidT === 1 ? 'tile' : 'tiles');
     if (!list.length) { $('library').innerHTML = '<p class="count">No tiles match.' + (OWN.active() ? ' Your collection filter is on. Open My collection to change it.' : '') + '</p>'; return; }
     $('library').innerHTML = list.map(function (t) {
       var n = S.army.filter(function (e) { return e.t === t.id; }).length;

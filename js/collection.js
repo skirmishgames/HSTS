@@ -5,7 +5,7 @@
      Nothing ticked means the filter is off and everything shows. */
   var KEY = 'hts.hon.own.v1';
   var GROUPS = [
-    { name: 'Big boxes', items: [
+    { name: 'HoN: Big Red One', items: [
       { code: 'CB', name: 'Heroes of Normandie: Big Red One', note: 'The core box. US and German tiles.' },
       { code: 'BO', name: 'Heroes of Normandie: Bloody Omaha', note: 'US and German tiles for the Omaha landings.' }
     ] },

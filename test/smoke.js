@@ -366,11 +366,11 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // My collection filter in the builder
   await tp.goto(base + 'builder.html'); await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); } catch (e) {} }); await tp.reload(); await tp.waitForTimeout(400);
   const own0 = await tp.locator('.lcard').count();
-  ok((await tp.textContent('#ownState')).includes('showing everything'), 'collection: not set by default');
+  ok((await tp.textContent('#btnOwn')).trim() === 'My collection' && await tp.locator('.setup #btnOwn').count() === 0, 'collection: builder uses the header button only, not set by default');
   await tp.click('#btnOwn'); await tp.check('[data-own="CB"]'); await tp.click('#ownClose'); await tp.waitForTimeout(200);
   const own1 = await tp.locator('.lcard').count();
   ok(own0 > own1 && own1 === 6, 'collection: only Big Red One tiles after ticking CB (' + own0 + ' to ' + own1 + ')');
-  ok((await tp.textContent('#ownState')).startsWith('1 of ' + (12 + 66)), 'collection: status line counts products');
+  ok(/\(1\)/.test(await tp.textContent('#btnOwn')) && /hidden because of My collection/.test(await tp.locator('#ownnote').innerText()), 'collection: header button shows the count and the builder says how many tiles are hidden');
   await tp.locator('.lcard', { hasText: 'Rifle Platoon' }).first().locator('[data-add]').click();
   await tp.locator('.atile .slot').first().click();
   const pk1 = await tp.locator('.pcard').count();
