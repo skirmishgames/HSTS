@@ -785,7 +785,7 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
      "y": 0.2405,
      "w": 0.181,
      "h": 0.654,
-     "size": "w",
+     "size": "n",
      "stripes": [
       "B",
       "Y",
@@ -797,7 +797,7 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
      "y": 0.2405,
      "w": 0.1841,
      "h": 0.654,
-     "size": "w",
+     "size": "n",
      "stripes": [
       "W",
       "B",
@@ -810,7 +810,7 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
      "y": 0.2405,
      "w": 0.1841,
      "h": 0.654,
-     "size": "w",
+     "size": "n",
      "stripes": [
       "B",
       "Y",
@@ -1548,7 +1548,7 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
    "cost": 30,
    "squares": 1,
    "set": "HoS-HP",
-   "size": "w",
+   "size": "n",
    "stripes": [
     "B",
     "Y",
@@ -1573,7 +1573,7 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
    "cost": 20,
    "squares": 1,
    "set": "HoS-HP",
-   "size": "w",
+   "size": "n",
    "stripes": [
     "B",
     "Y",
@@ -1599,7 +1599,7 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
    "cost": 30,
    "squares": 0,
    "set": "HoS-HP",
-   "size": "w",
+   "size": "n",
    "stripes": [
     "B",
     "Y",

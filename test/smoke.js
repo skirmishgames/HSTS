@@ -944,6 +944,24 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     ok(nerrs.length === 0, 'collection: no console errors on the item pages ' + nerrs.join('|'));
     await np.close();
   }
+  // option shapes: a slot only takes options of its own shape (Big Red One rulebook p.6, Stalingrad rulebook p.22)
+  {
+    const vm = require('vm'); const ctx = { window: { HTS_DATA: {} } }; ctx.HTS_DATA = ctx.window.HTS_DATA; vm.createContext(ctx);
+    fs.readdirSync(path.join(root, 'data')).filter(f => /^hon-(bro|hos)-(us|ge|uk|ru|gs)\.js$/.test(f)).forEach(f => vm.runInContext(fs.readFileSync(path.join(root, 'data', f), 'utf8'), ctx));
+    let badSize = 0, hp = 0, hpBad = 0;
+    Object.keys(ctx.HTS_DATA).forEach(k => { const D = ctx.HTS_DATA[k];
+      D.tiles.forEach(t => t.slots.forEach(s => { if (s.size !== 'w' && s.size !== 'n') badSize++; if (t.set === 'HoS-HP') { hp++; if (s.size !== 'n') hpBad++; } }));
+      D.options.forEach(o => { if (o.size !== 'w' && o.size !== 'n') badSize++; if (o.set === 'HoS-HP') { hp++; if (o.size !== 'n') hpBad++; } }); });
+    ok(badSize === 0, 'shapes: every slot and option is wide or narrow');
+    ok(hp === 13 && hpBad === 0, 'shapes: Stalingrad Heroic Platoon slots and options are all narrow (' + hp + ' checked)');
+    const shp = await b.newPage({ viewport: { width: 1280, height: 900 } }); shp.on('dialog', d => d.accept());
+    await shp.goto(base + 'builder.html'); await shp.click('[data-nation="ru"]');
+    await shp.locator('.lcard', { hasText: 'Sasha and the Beasts' }).first().locator('[data-add]').click();
+    await shp.locator('.atile .slot').first().click();
+    const shapeTxt = await shp.locator('#pickMeta').innerText();
+    ok(/narrow/.test(shapeTxt) && await shp.locator('.pcard', { hasText: 'Support Team' }).count() >= 1 && await shp.locator('.pcard', { hasText: 'Mortar Group' }).count() === 0, 'shapes: Sasha slot is narrow and lists only narrow options');
+    await shp.close();
+  }
   // trackers
   const cp = require('child_process');
   let trk = ''; try { trk = cp.execSync('python3 tools/units_tracker.py --strict', { cwd: root }).toString(); } catch (e) { trk = 'FAILED ' + e.stdout; }
