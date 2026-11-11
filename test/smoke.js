@@ -916,7 +916,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
       needs: Object.keys(window.HTS_NEEDS).length, codes: window.HTS_OWN.products.map(i => i.code),
       bad: Object.keys(window.HTS_NEEDS).filter(k => [].concat.apply([], window.HTS_NEEDS[k].map(x => [].concat(x))).some(c => window.HTS_OWN.products.map(i => i.code).indexOf(c) < 0)),
       badLib: Object.keys(window.HTS_NEEDS).filter(k => k.indexOf('lib:') === 0 && !window.HTS_LIB.docs.some(d => d.id === k.slice(4))) })));
-    ok(dat.groups >= 5 && dat.prods === 78, 'collection: product list has 78 products in groups (' + dat.groups + ' groups, ' + dat.prods + ' products)');
+    ok(dat.groups >= 5 && dat.prods === 66 && dat.codes.length === 78, 'collection: product list has 78 products, 12 older and 66 grouped (' + dat.groups + ' groups, ' + dat.prods + ' products)');
     ok(dat.needs >= 50 && dat.bad.length === 0, 'collection: every needs entry uses a known product code ' + dat.bad.join(','));
     ok(dat.badLib.length === 0, 'collection: every lib needs entry is a real document ' + dat.badLib.join(','));
     ok(await np.locator('#btnOwn').count() === 1, 'collection: My collection button is in the header on the scenarios page');
@@ -934,7 +934,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     ok(/hidden because of My collection/.test(await np.locator('#ownnote').innerText()), 'collection: units page uses the same setting');
     await np.goto(base + 'heroes.html'); await np.waitForTimeout(500);
     ok(/hidden because of My collection/.test(await np.locator('#ownnote').innerText()), 'collection: heroes page uses the same setting');
-    await np.goto(base + 'maps.html'); await np.waitForTimeout(800);
+    await np.goto(base + 'maps.html'); await np.waitForTimeout(800); await np.click('[data-box=all]'); await np.waitForTimeout(300);
     ok(/hidden because of My collection/.test(await np.locator('#ownnote').innerText()), 'collection: maps page uses the same setting');
     await np.click('[data-own-off]'); await np.waitForTimeout(300);
     ok(await np.locator('#ownnote').innerText() === '' && await np.evaluate(() => !window.HTS_OWN.active()), 'collection: Show everything switches the filter off');
