@@ -370,7 +370,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await tp.click('#btnOwn'); await tp.check('[data-own="CB"]'); await tp.click('#ownClose'); await tp.waitForTimeout(200);
   const own1 = await tp.locator('.lcard').count();
   ok(own0 > own1 && own1 === 6, 'collection: only Big Red One tiles after ticking CB (' + own0 + ' to ' + own1 + ')');
-  ok((await tp.textContent('#ownState')).startsWith('1 of 12'), 'collection: status line counts products');
+  ok((await tp.textContent('#ownState')).startsWith('1 of ' + (12 + 66)), 'collection: status line counts products');
   await tp.locator('.lcard', { hasText: 'Rifle Platoon' }).first().locator('[data-add]').click();
   await tp.locator('.atile .slot').first().click();
   const pk1 = await tp.locator('.pcard').count();
@@ -904,6 +904,46 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await hrp.goto(base + 'heroes.html?b=omaha&n=us&q=horvath'); await hrp.waitForTimeout(300);
   await hrp.click('.hhead'); await hrp.waitForTimeout(200);
   ok(!/Based on:/.test(await hrp.locator('.hbody').first().innerText()), 'heroes: a hero with no entry shows no Based on line');
+
+  // My collection, site-wide
+  {
+    const np = await b.newPage({ viewport: { width: 1280, height: 900 } });
+    const nerrs = []; np.on('pageerror', e => nerrs.push(e.message)); np.on('console', m => { if (m.type() === 'error') nerrs.push(m.text()); });
+    const clear = () => np.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); } catch (e) {} });
+    await np.goto(base + 'scenarios.html?b=omaha'); await clear(); await np.reload(); await np.waitForTimeout(500);
+    const dat = JSON.parse(await np.evaluate(() => JSON.stringify({
+      groups: window.HTS_PRODUCTS.length, prods: window.HTS_PRODUCTS.reduce((a, g) => a + g.items.length, 0),
+      needs: Object.keys(window.HTS_NEEDS).length, codes: window.HTS_OWN.products.map(i => i.code),
+      bad: Object.keys(window.HTS_NEEDS).filter(k => [].concat.apply([], window.HTS_NEEDS[k].map(x => [].concat(x))).some(c => window.HTS_OWN.products.map(i => i.code).indexOf(c) < 0)),
+      badLib: Object.keys(window.HTS_NEEDS).filter(k => k.indexOf('lib:') === 0 && !window.HTS_LIB.docs.some(d => d.id === k.slice(4))) })));
+    ok(dat.groups >= 5 && dat.prods === 78, 'collection: product list has 78 products in groups (' + dat.groups + ' groups, ' + dat.prods + ' products)');
+    ok(dat.needs >= 50 && dat.bad.length === 0, 'collection: every needs entry uses a known product code ' + dat.bad.join(','));
+    ok(dat.badLib.length === 0, 'collection: every lib needs entry is a real document ' + dat.badLib.join(','));
+    ok(await np.locator('#btnOwn').count() === 1, 'collection: My collection button is in the header on the scenarios page');
+    const sc0 = await np.locator('.hrow').count();
+    ok(sc0 >= 4 && await np.locator('#ownnote').innerText() === '', 'collection: scenarios page shows everything and no note when nothing is set (' + sc0 + ')');
+    const api = JSON.parse(await np.evaluate(() => { const O = window.HTS_OWN; localStorage.setItem('hts.hon.own.v1', JSON.stringify({ own: { CB: true }, only: true })); return JSON.stringify([O.owns('CB'), O.owns('nope-unknown'), O.ownsAll(['BO']), O.ownsAll([['BO', 'CB']]), O.ownsAll(['CB', 'BO'])]); }));
+    await np.reload(); await np.waitForTimeout(500);
+    const api2 = JSON.parse(await np.evaluate(() => JSON.stringify([window.HTS_OWN.owns('CB'), window.HTS_OWN.owns('BO'), window.HTS_OWN.owns('nope-unknown'), window.HTS_OWN.ownsAll([['BO', 'CB']]), window.HTS_OWN.ownsAll(['CB', 'BO'])])));
+    ok(JSON.stringify(api2) === JSON.stringify([true, false, true, true, false]), 'collection: owns, unknown codes, alternatives and all-of rules (' + JSON.stringify(api2) + ')');
+    const sc1 = await np.locator('.hrow').count();
+    ok(sc1 > 0 && sc1 < sc0, 'collection: scenarios page hides scenarios you cannot play (' + sc0 + ' to ' + sc1 + ')');
+    ok(/hidden because of My collection/.test(await np.locator('#ownnote').innerText()), 'collection: scenarios page says how many are hidden');
+    ok(await np.locator('#btnOwn').innerText().then(t => /\(1\)/.test(t) || /1/.test(t)), 'collection: header button shows the count');
+    await np.goto(base + 'units.html'); await np.waitForTimeout(500);
+    ok(/hidden because of My collection/.test(await np.locator('#ownnote').innerText()), 'collection: units page uses the same setting');
+    await np.goto(base + 'heroes.html'); await np.waitForTimeout(500);
+    ok(/hidden because of My collection/.test(await np.locator('#ownnote').innerText()), 'collection: heroes page uses the same setting');
+    await np.goto(base + 'maps.html'); await np.waitForTimeout(800);
+    ok(/hidden because of My collection/.test(await np.locator('#ownnote').innerText()), 'collection: maps page uses the same setting');
+    await np.click('[data-own-off]'); await np.waitForTimeout(300);
+    ok(await np.locator('#ownnote').innerText() === '' && await np.evaluate(() => !window.HTS_OWN.active()), 'collection: Show everything switches the filter off');
+    await np.goto(base + 'scenarios.html?b=omaha'); await np.waitForTimeout(500);
+    ok(await np.locator('.hrow').count() === sc0, 'collection: switching off on one page applies to the others');
+    await clear();
+    ok(nerrs.length === 0, 'collection: no console errors on the item pages ' + nerrs.join('|'));
+    await np.close();
+  }
   // trackers
   const cp = require('child_process');
   let trk = ''; try { trk = cp.execSync('python3 tools/units_tracker.py --strict', { cwd: root }).toString(); } catch (e) { trk = 'FAILED ' + e.stdout; }

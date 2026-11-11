@@ -102,10 +102,14 @@
   }
 
   /* ---------- palette ---------- */
+  var OWN = window.HTS_OWN, MPROD = { bro: 'CB', omaha: 'BO', 'caen-ecg': 'ECG', 'caen-wj': 'BP3' };
+  function prodOf(p) { return p.box === 'hos' ? (/^bp/.test(p.id) ? 'HoS-BP' : 'HoS-CB') : MPROD[p.box]; }
+  function ownOk(p) { return !OWN || OWN.owns(prodOf(p)); }
   function used(key) { return S.map.items.filter(function (i) { return i.k === key; }).length; }
   function visible() {
     var b = box(S.b), toks = norm(S.q).split(' ').filter(Boolean);
     return b.pieces.filter(function (p) {
+      if (!ownOk(p)) return false;
       if (S.g !== 'all' && p.cats.indexOf(S.g) < 0) return false;
       var hay = norm(p.name + ' ' + p.cats.join(' ') + ' ' + (p.sd || ''));
       return toks.every(function (t) { return hay.indexOf(t) >= 0; });
@@ -122,14 +126,16 @@
     var b = box(S.b);
     $('palTitle').textContent = b.name;
     $('palDesc').textContent = b.desc + (S.b === 'all' ? '' : ' Pieces from different boxes can share one map.');
-    var gs = ['all'].concat(b.groups);
+    var pcs = b.pieces.filter(ownOk), hid = b.pieces.length - pcs.length;
+    if ($('ownnote')) $('ownnote').innerHTML = OWN ? OWN.note(hid, hid === 1 ? 'piece' : 'pieces') : '';
+    var gs = ['all'].concat(b.groups.filter(function (g) { return pcs.some(function (p) { return p.cats.indexOf(g) >= 0; }); }));
     if (gs.indexOf(S.g) < 0) S.g = 'all';
     $('groups').innerHTML = gs.map(function (g) {
-      var n = g === 'all' ? b.pieces.length : b.pieces.filter(function (p) { return p.cats.indexOf(g) >= 0; }).length;
+      var n = g === 'all' ? pcs.length : pcs.filter(function (p) { return p.cats.indexOf(g) >= 0; }).length;
       return '<button type="button" class="chip' + (S.g === g ? ' on' : '') + '" data-group="' + esc(g) + '" aria-pressed="' + (S.g === g) + '">' + (g === 'all' ? 'All types' : esc(g)) + ' <span class="cn">' + n + '</span></button>';
     }).join('');
     var list = visible();
-    $('stat').textContent = list.length + ' of ' + b.pieces.length + ' pieces';
+    $('stat').textContent = list.length + ' of ' + pcs.length + ' pieces';
     $('pieces').innerHTML = list.map(function (p) {
       var n = used(p.key), thumb = p.dir + (p.t || p.a);
       return '<div class="mcard" draggable="true" data-key="' + p.key + '">' +
@@ -537,6 +543,7 @@
     bind();
     setTab(window.matchMedia('(max-width:899px)').matches && !S.map.items.length ? 'pieces' : 'map');
     renderAll();
+    if (OWN) OWN.onChange(renderPalette);
     if (!loadHash(false) && !S.zoomSet) fit();
   }
   init();

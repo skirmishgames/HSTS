@@ -12,6 +12,8 @@
   var KIND = { officer: 'Officer', character: 'Character', infantry: 'Infantry', weapon: 'Weapon', vehicle: 'Vehicle', marker: 'Marker', aircraft: 'Aircraft' };
   var S = { b: 'all', n: 'us', q: '', open: {}, theme: 'light' };
   var cache = {};
+  var OWN = window.HTS_OWN;
+  var EQBOX = { bro: 'CB', omaha: 'BO', 'caen-ecg': 'ECG', 'caen-wj': 'BP3' };
 
   function $(id) { return document.getElementById(id); }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
@@ -114,6 +116,14 @@
     renderControls();
     var heroes = D.heroes.filter(function (t) { var p = ' ' + t.hay + ' '; return (S.b === 'all' || boxOf(t) === S.b) && toks.every(function (k) { return hit(t.hay, p, k); }); });
     var eq = window.HTS_HEROES.equipment.filter(function (q) { var h = norm(q.name + ' ' + q.text), p = ' ' + h + ' '; return (S.b === 'all' || q.box === S.b) && toks.every(function (k) { return hit(h, p, k); }); });
+    var hid = 0;
+    if (OWN && OWN.active()) {
+      var h0 = heroes.length + eq.length;
+      heroes = heroes.filter(function (t) { return OWN.owns(t.set); });
+      eq = eq.filter(function (q) { return OWN.owns(EQBOX[q.box]); });
+      hid = h0 - heroes.length - eq.length;
+    }
+    if ($('ownnote')) $('ownnote').innerHTML = OWN ? OWN.note(hid, hid === 1 ? 'hero or equipment item' : 'heroes and equipment items') : '';
     var html = '<section class="hgroup"><h2 class="hh">Hero tiles <span class="hcount">' + heroes.length + '</span></h2>' +
       (heroes.length ? list(heroes, mk) : '<p class="empty2">No hero matches.</p>') + '</section>' +
       (HOSN[S.n] ? '<section class="hgroup"><h2 class="hh">Equipment</h2><p class="htext hintro">Heroes of Stalingrad equipment is listed as options. Open a hero to see what fits its slots, or look in the <a href="units.html?b=hos&amp;n=' + S.n + '">unit index</a>.</p></section>' :
@@ -169,6 +179,7 @@
     if (p.get('q')) S.q = p.get('q');
     if (p.get('e')) p.get('e').split(',').forEach(function (id) { if (/^[a-z0-9_]+$/.test(id)) S.open[id] = 1; });
     NCOL = ncol(); bind(); render();
+    if (OWN) OWN.onChange(render);
     var first = Object.keys(S.open)[0]; if (first && $('h-' + first)) $('h-' + first).scrollIntoView({ block: 'center' });
   }
   init();

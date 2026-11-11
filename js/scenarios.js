@@ -132,8 +132,26 @@
   }
   function body(e) {
     return readLink(e) + '<p class="htext">' + esc(e.summary) + '</p>' +
-      '<dl class="sfacts">' + e.facts.map(function (f) { return '<dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd>'; }).join('') + '</dl>' + figs(e) + armies(e) +
+      '<dl class="sfacts">' + e.facts.map(function (f) { return '<dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd>'; }).join('') + (needsOf(e) && !e.facts.some(function (f) { return f[0] === 'Required products'; }) ? '<dt>Needs</dt><dd>' + esc(needsText(e)) + '</dd>' : '') + '</dl>' + figs(e) + armies(e) +
       '<p class="hsrc">' + (e.v1 ? 'From the document library, ' + esc(pg(e)) : esc(SRCN[S.b] || 'Scenario Booklet') + ', ' + esc(pg(e))) + '</p>';
+  }
+  // My collection: what a scenario needs (data/hon-needs.js). No entry means not tagged, and it is never hidden.
+  var OWN = window.HTS_OWN;
+  function needsOf(e) { var n = window.HTS_NEEDS && window.HTS_NEEDS[(e.v1 ? 'lib' : S.b) + ':' + e.id]; return n && n.length ? n : null; }
+  function usable(e) {
+    var n = needsOf(e);
+    return !n || !OWN || n.every(function (c) { return Array.isArray(c) ? c.some(function (x) { return OWN.owns(x); }) : OWN.owns(c); });
+  }
+  function pname(c) { return OWN.name(c).replace(/^Heroes of (Normandie|Stalingrad): /, ''); }
+  function needsText(e) {
+    var n = needsOf(e);
+    return n ? n.map(function (c) { return Array.isArray(c) ? c.map(pname).join(' or ') : pname(c); }).join(', ') : '';
+  }
+  function needsLine(e) {
+    if (!OWN) return '';
+    var n = needsOf(e);
+    if (n) return '<span class="needs"><b>Needs:</b> ' + esc(needsText(e)) + '</span>';
+    return OWN.active() ? '<span class="needs">Needs not tagged, shown anyway.</span>' : '';
   }
   function row(e, mk, toks) {
     var isOpen = S.open[e.id] === 1, snip = '';
@@ -145,7 +163,7 @@
     return '<div class="hrow' + (isOpen ? ' open' : '') + '" id="s-' + esc(e.id) + '">' +
       '<button type="button" class="hhead" data-toggle="' + esc(e.id) + '" aria-expanded="' + isOpen + '" aria-controls="sb-' + esc(e.id) + '">' +
       '<span class="spg">' + esc(pg(e)) + '</span>' +
-      '<span class="hname"><span class="ht">' + mk(e.title) + '</span>' + (e.date ? '<span class="hsnip">' + esc(e.date) + '</span>' : '') + snip + '</span>' +
+      '<span class="hname"><span class="ht">' + mk(e.title) + '</span>' + (e.date ? '<span class="hsnip">' + esc(e.date) + '</span>' : '') + needsLine(e) + snip + '</span>' +
       '<span class="hbadges"><span class="hb hb-t' + (e.v1 ? e.bcls : /^Campaign/.test(e.type) ? 'c' : /scenario/i.test(e.type) ? 's' : 'r') + '">' + esc(e.v1 ? e.badge : e.type === 'Booklet rules and reference' ? 'Rules' : /^Campaign/.test(e.type) ? 'Campaign' : 'Scenario') + '</span></span>' +
       '<span class="hchev" aria-hidden="true"></span></button>' +
       '<div class="hbody" id="sb-' + esc(e.id) + '"' + (isOpen ? '' : ' hidden') + '>' + (isOpen ? body(e) : '') + '</div></div>';
@@ -163,8 +181,10 @@
     var d = load();
     NCOL = ncol();
     renderControls(d);
-    var toks = tokens(S.q), mk = markFn(toks), res = [];
+    var toks = tokens(S.q), mk = markFn(toks), res = [], hidden = 0, shown = 0;
     d.entries.forEach(function (e, i) {
+      if (!usable(e)) { hidden++; return; }
+      shown++;
       if (S.type !== 'all' && e.type !== S.type) return;
       var score = 0;
       if (toks.length) {
@@ -175,13 +195,14 @@
       res.push({ e: e, score: score, i: i });
     });
     if (toks.length) res.sort(function (a, b) { return (b.score - a.score) || (a.i - b.i); });
+    if ($('ownnote')) $('ownnote').innerHTML = OWN ? OWN.note(hidden, hidden === 1 ? 'scenario' : 'scenarios') : '';
     if (!res.length) {
-      $('out').innerHTML = '<p class="empty2">Nothing matches. Try fewer or simpler words, or clear the filter.</p>';
+      $('out').innerHTML = '<p class="empty2">Nothing matches. Try fewer or simpler words, or clear the filter.' + (hidden ? ' Your collection hides ' + hidden + ' here.' : '') + '</p>';
       $('stat').textContent = '0 entries.';
     } else {
       $('out').innerHTML = list(res, mk, toks);
-      $('stat').textContent = res.length + ' of ' + d.entries.length + ' entries, in ' + (isLib() ? 'library order' : 'booklet page order') + '. Click one to read it.';
-      if (toks.length) $('stat').textContent = res.length + ' of ' + d.entries.length + ' entries, best match first. Click one to read it.';
+      $('stat').textContent = res.length + ' of ' + shown + ' entries, in ' + (isLib() ? 'library order' : 'booklet page order') + '. Click one to read it.';
+      if (toks.length) $('stat').textContent = res.length + ' of ' + shown + ' entries, best match first. Click one to read it.';
     }
     url();
   }
@@ -233,6 +254,7 @@
     if (p.get('t') && d.types.indexOf(p.get('t')) >= 0) S.type = p.get('t');
     if (p.get('e')) p.get('e').split(',').forEach(function (id) { if (/^[a-z0-9-]+$/.test(id)) S.open[id] = 1; });
     bind(); render();
+    if (OWN) OWN.onChange(render);
     var first = Object.keys(S.open)[0]; if (first && $('s-' + first)) $('s-' + first).scrollIntoView({ block: 'center' });
   }
   init();

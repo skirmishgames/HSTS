@@ -17,6 +17,7 @@
 
   var S = { b: 'all', n: 'us', q: '', view: 'tile', kind: 'all', tt: 'all', theme: 'light' };
   var cache = {};
+  var OWN = window.HTS_OWN;
 
   function $(id) { return document.getElementById(id); }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
@@ -63,6 +64,12 @@
     var d = window.HTS_DATA[dkey(n)];
     var bx = BOXES.filter(function (b) { return b.id === S.b; })[0];
     if (bx && bx.sets) d = { uimg: d.uimg, stats: d.stats, tiles: d.tiles.filter(function (t) { return bx.sets.indexOf(t.set) >= 0; }), options: d.options.filter(function (o) { return bx.sets.indexOf(o.set) >= 0; }) };
+    var hid = 0;
+    if (OWN && OWN.active()) {
+      var n0 = d.tiles.length;
+      d = { uimg: d.uimg, stats: d.stats, tiles: d.tiles.filter(function (t) { return OWN.owns(t.set); }), options: d.options.filter(function (o) { return OWN.owns(o.set); }) };
+      hid = n0 - d.tiles.length;
+    }
     var O = {}, owned = {};
     d.options.forEach(function (o) { O[o.id] = o; });
     var tiles = d.tiles.slice().sort(function (a, b) {
@@ -100,7 +107,7 @@
       return u;
     }).sort(function (a, b) { return a.name.localeCompare(b.name); });
 
-    cache[ck] = { d: d, tiles: tiles, common: common, units: units };
+    cache[ck] = { d: d, tiles: tiles, common: common, units: units, hidden: hid };
     return cache[ck];
   }
 
@@ -192,6 +199,7 @@
     renderControls();
     var I = index(S.n);
     if (S.view === 'unit') renderUnits(I); else renderTiles(I);
+    if ($('ownnote')) $('ownnote').innerHTML = OWN ? OWN.note(I.hidden, I.hidden === 1 ? 'tile' : 'tiles') : '';
     try {
       var p = new URLSearchParams();
       p.set('b', S.b); p.set('n', S.n); if (S.q) p.set('q', S.q); if (S.view !== 'tile') p.set('v', S.view);
@@ -258,6 +266,7 @@
     if (p.get('v') === 'unit') S.view = 'unit';
     bind();
     render();
+    if (OWN) OWN.onChange(function () { cache = {}; render(); });
   }
   init();
   window.HTS_UNITS = { state: S, index: index, match: match, norm: norm };
