@@ -73,6 +73,9 @@
   }
 
   function render(root) {
+    /* Groups start collapsed. A re-render (Tick all, Clear) keeps the groups the person had open. */
+    var wasOpen = {};
+    Array.prototype.forEach.call(root.querySelectorAll('details.ownsec[open]'), function (d) { wasOpen[d.getAttribute('data-g')] = true; });
     var h = '<div class="sheet" role="dialog" aria-modal="true" aria-labelledby="ownTitle"><header><div><h3 id="ownTitle">My collection</h3>' +
       '<p class="meta">Tick what you own. Every page that lists scenarios, boards, units and heroes then hides what you cannot use. Saved on this device only.</p></div>' +
       '<button id="ownClose" class="ghost" type="button">Done</button></header>' +
@@ -80,7 +83,7 @@
       '<span class="lrow-btns"><button id="ownAll" class="ghost" type="button">Tick all</button><button id="ownNone" class="ghost" type="button">Clear</button></span></div>';
     GROUPS.forEach(function (g) {
       var n = g.items.filter(function (i) { return st.own[i.code]; }).length;
-      h += '<details class="ownsec"' + (n || GROUPS.indexOf(g) < 4 ? ' open' : '') + '><summary class="pick-group">' + esc(g.name) + ' <span class="count">' + n + ' of ' + g.items.length + '</span></summary><div class="ownlist">';
+      h += '<details class="ownsec" data-g="' + esc(g.name) + '"' + (wasOpen[g.name] ? ' open' : '') + '><summary class="pick-group">' + esc(g.name) + ' <span class="count">' + n + ' of ' + g.items.length + '</span></summary><div class="ownlist">';
       g.items.forEach(function (i) {
         h += '<label class="ownrow"><input type="checkbox" data-own="' + esc(i.code) + '"' + (st.own[i.code] ? ' checked' : '') + '>' +
           '<span><strong>' + esc(i.name) + '</strong><small>' + esc(i.note) + (stats(i.code) ? ' ' + esc(stats(i.code)) + '.' : '') + '</small></span></label>';
