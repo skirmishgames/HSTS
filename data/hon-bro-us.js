@@ -387,8 +387,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "BO",
    "squares": 3,
    "img": "img/hon/bro/us/tiles/us_combat_engineers.webp",
-   "w": 792,
-   "h": 248,
+   "w": 1886,
+   "h": 590,
    "sheet": "US-Vol2-p1",
    "units": [
     [
@@ -471,8 +471,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "BO",
    "squares": 1,
    "img": "img/hon/bro/us/tiles/sam_fueller.webp",
-   "w": 335,
-   "h": 248,
+   "w": 798,
+   "h": 590,
    "sheet": "US-Vol2-p2",
    "units": [
     [
@@ -504,8 +504,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "BO",
    "squares": 1,
    "img": "img/hon/bro/us/tiles/sgt_horvath.webp",
-   "w": 336,
-   "h": 248,
+   "w": 800,
+   "h": 590,
    "sheet": "US-Vol2-p2",
    "units": [
     [
@@ -537,8 +537,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "BO",
    "squares": 3,
    "img": "img/hon/bro/us/tiles/landing_1id.webp",
-   "w": 196,
-   "h": 246,
+   "w": 467,
+   "h": 586,
    "sheet": "US-Vol2-p2",
    "units": [
     [
@@ -564,8 +564,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "BO",
    "squares": 3,
    "img": "img/hon/bro/us/tiles/landing_29id.webp",
-   "w": 196,
-   "h": 246,
+   "w": 467,
+   "h": 586,
    "sheet": "US-Vol2-p2",
    "units": [
     [
@@ -591,8 +591,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "BO",
    "squares": 2,
    "img": "img/hon/bro/us/tiles/high_command_cota.webp",
-   "w": 828,
-   "h": 248,
+   "w": 1971,
+   "h": 590,
    "sheet": "US-Vol2-p3",
    "units": [
     [
@@ -669,8 +669,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "BO",
    "squares": 3,
    "img": "img/hon/bro/us/tiles/rifle_platoon_29id_116a.webp",
-   "w": 832,
-   "h": 252,
+   "w": 1981,
+   "h": 600,
    "sheet": "US-Vol2-p4",
    "units": [
     [
@@ -755,8 +755,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "BO",
    "squares": 3,
    "img": "img/hon/bro/us/tiles/us_rangers.webp",
-   "w": 652,
-   "h": 248,
+   "w": 1552,
+   "h": 590,
    "sheet": "US-Vol2-p5",
    "units": [
     [
@@ -836,8 +836,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "BO",
    "squares": 2,
    "img": "img/hon/bro/us/tiles/tank_platoon_743.webp",
-   "w": 830,
-   "h": 250,
+   "w": 1976,
+   "h": 595,
    "sheet": "US-Vol2-p6",
    "units": [
     [
@@ -1792,8 +1792,8 @@ HTS_DATA["hon-bro-us"] = {
     "any"
    ],
    "img": "img/hon/bro/us/options/cal30_gun.webp",
-   "w": 112,
-   "h": 152,
+   "w": 270,
+   "h": 366,
    "sheet": "US-Vol1-p6",
    "units": [
     [
@@ -1862,8 +1862,8 @@ HTS_DATA["hon-bro-us"] = {
     "R"
    ],
    "img": "img/hon/bro/us/options/support_squad_eng.webp",
-   "w": 149,
-   "h": 144,
+   "w": 355,
+   "h": 343,
    "sheet": "US-Vol2-p1",
    "units": [
     [
@@ -1896,8 +1896,8 @@ HTS_DATA["hon-bro-us"] = {
     "R"
    ],
    "img": "img/hon/bro/us/options/assault_squad_eng.webp",
-   "w": 149,
-   "h": 148,
+   "w": 359,
+   "h": 357,
    "sheet": "US-Vol2-p1",
    "units": [
     [
@@ -1942,8 +1942,8 @@ HTS_DATA["hon-bro-us"] = {
     "R"
    ],
    "img": "img/hon/bro/us/options/shovel.webp",
-   "w": 108,
-   "h": 142,
+   "w": 260,
+   "h": 342,
    "sheet": "US-Vol2-p1"
   },
   {
@@ -1959,8 +1959,8 @@ HTS_DATA["hon-bro-us"] = {
     "R"
    ],
    "img": "img/hon/bro/us/options/position.webp",
-   "w": 108,
-   "h": 148,
+   "w": 257,
+   "h": 352,
    "sheet": "US-Vol2-p1"
   },
   {
@@ -1992,8 +1992,8 @@ HTS_DATA["hon-bro-us"] = {
     "custom"
    ],
    "img": "img/hon/bro/us/options/hardened.webp",
-   "w": 114,
-   "h": 150,
+   "w": 271,
+   "h": 357,
    "sheet": "US-Vol2-p2"
   },
   {
@@ -2008,8 +2008,8 @@ HTS_DATA["hon-bro-us"] = {
     "custom"
    ],
    "img": "img/hon/bro/us/options/heroic.webp",
-   "w": 112,
-   "h": 150,
+   "w": 270,
+   "h": 361,
    "sheet": "US-Vol2-p2"
   },
   {
@@ -2024,8 +2024,8 @@ HTS_DATA["hon-bro-us"] = {
     "custom"
    ],
    "img": "img/hon/bro/us/options/grenade_c.webp",
-   "w": 112,
-   "h": 150,
+   "w": 267,
+   "h": 357,
    "sheet": "US-Vol2-p2"
   },
   {
@@ -2040,8 +2040,8 @@ HTS_DATA["hon-bro-us"] = {
     "custom"
    ],
    "img": "img/hon/bro/us/options/mauser.webp",
-   "w": 112,
-   "h": 150,
+   "w": 270,
+   "h": 361,
    "sheet": "US-Vol2-p2"
   },
   {
@@ -2120,8 +2120,8 @@ HTS_DATA["hon-bro-us"] = {
     "cmd"
    ],
    "img": "img/hon/bro/us/options/battle_plan.webp",
-   "w": 148,
-   "h": 146,
+   "w": 357,
+   "h": 352,
    "sheet": "US-Vol2-p3"
   },
   {
@@ -2136,8 +2136,8 @@ HTS_DATA["hon-bro-us"] = {
     "cmd"
    ],
    "img": "img/hon/bro/us/options/artillery.webp",
-   "w": 146,
-   "h": 146,
+   "w": 352,
+   "h": 352,
    "sheet": "US-Vol2-p3"
   },
   {
@@ -2152,8 +2152,8 @@ HTS_DATA["hon-bro-us"] = {
     "cmd"
    ],
    "img": "img/hon/bro/us/options/smoke.webp",
-   "w": 112,
-   "h": 130,
+   "w": 267,
+   "h": 310,
    "sheet": "US-Vol2-p3"
   },
   {
@@ -2169,8 +2169,8 @@ HTS_DATA["hon-bro-us"] = {
     "B"
    ],
    "img": "img/hon/bro/us/options/cal30_squad_116a.webp",
-   "w": 148,
-   "h": 144,
+   "w": 352,
+   "h": 343,
    "sheet": "US-Vol2-p4",
    "units": [
     [
@@ -2203,8 +2203,8 @@ HTS_DATA["hon-bro-us"] = {
     "B"
    ],
    "img": "img/hon/bro/us/options/bazooka_squad_116a.webp",
-   "w": 148,
-   "h": 144,
+   "w": 357,
+   "h": 347,
    "sheet": "US-Vol2-p4",
    "units": [
     [
@@ -2237,8 +2237,8 @@ HTS_DATA["hon-bro-us"] = {
     "B"
    ],
    "img": "img/hon/bro/us/options/assault_squad_116a.webp",
-   "w": 148,
-   "h": 142,
+   "w": 357,
+   "h": 342,
    "sheet": "US-Vol2-p4",
    "units": [
     [
@@ -2266,8 +2266,8 @@ HTS_DATA["hon-bro-us"] = {
     "R"
    ],
    "img": "img/hon/bro/us/options/support_squad_rangers.webp",
-   "w": 148,
-   "h": 144,
+   "w": 352,
+   "h": 343,
    "sheet": "US-Vol2-p5",
    "units": [
     [
@@ -2300,8 +2300,8 @@ HTS_DATA["hon-bro-us"] = {
     "R"
    ],
    "img": "img/hon/bro/us/options/bazooka_squad_rangers.webp",
-   "w": 148,
-   "h": 144,
+   "w": 352,
+   "h": 343,
    "sheet": "US-Vol2-p5",
    "units": [
     [
@@ -2409,8 +2409,8 @@ HTS_DATA["hon-bro-us"] = {
     "Y"
    ],
    "img": "img/hon/bro/us/options/tank_gear.webp",
-   "w": 114,
-   "h": 148,
+   "w": 275,
+   "h": 357,
    "sheet": "US-Vol2-p6"
   },
   {
@@ -2426,8 +2426,8 @@ HTS_DATA["hon-bro-us"] = {
     "Y"
    ],
    "img": "img/hon/bro/us/options/tank_ammo.webp",
-   "w": 114,
-   "h": 144,
+   "w": 275,
+   "h": 347,
    "sheet": "US-Vol2-p6"
   },
   {
@@ -2443,8 +2443,8 @@ HTS_DATA["hon-bro-us"] = {
     "Y"
    ],
    "img": "img/hon/bro/us/options/m4_sherman_tp.webp",
-   "w": 146,
-   "h": 150,
+   "w": 348,
+   "h": 357,
    "sheet": "US-Vol2-p6",
    "units": [
     [
@@ -2467,8 +2467,8 @@ HTS_DATA["hon-bro-us"] = {
     "Y"
    ],
    "img": "img/hon/bro/us/options/m4a3_105.webp",
-   "w": 146,
-   "h": 150,
+   "w": 352,
+   "h": 361,
    "sheet": "US-Vol2-p6",
    "units": [
     [

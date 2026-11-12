@@ -392,8 +392,8 @@ HTS_DATA["hon-bro-ge"] = {
    "set": "BO",
    "squares": 2,
    "img": "img/hon/bro/ge/tiles/divisionsstab_kraiss.webp",
-   "w": 828,
-   "h": 248,
+   "w": 1971,
+   "h": 590,
    "sheet": "GE-Vol2-p1",
    "units": [
     [
@@ -471,8 +471,8 @@ HTS_DATA["hon-bro-ge"] = {
    "set": "BO",
    "squares": 1,
    "img": "img/hon/bro/ge/tiles/heinrich.webp",
-   "w": 332,
-   "h": 246,
+   "w": 800,
+   "h": 593,
    "sheet": "GE-Vol2-p2",
    "units": [
     [
@@ -568,8 +568,8 @@ HTS_DATA["hon-bro-ge"] = {
    "set": "BO",
    "squares": 3,
    "img": "img/hon/bro/ge/tiles/festungskompanie.webp",
-   "w": 828,
-   "h": 248,
+   "w": 1971,
+   "h": 590,
    "sheet": "GE-Vol2-p3",
    "units": [
     [
@@ -2204,8 +2204,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/mg42.webp",
-   "w": 110,
-   "h": 146,
+   "w": 262,
+   "h": 348,
    "sheet": "GE-Vol1-p6",
    "units": [
     [
@@ -2250,8 +2250,8 @@ HTS_DATA["hon-bro-ge"] = {
     "any"
    ],
    "img": "img/hon/bro/ge/options/artillery_spotter.webp",
-   "w": 108,
-   "h": 144,
+   "w": 260,
+   "h": 347,
    "sheet": "GE-Vol1-p6",
    "units": [
     [
@@ -2321,8 +2321,8 @@ HTS_DATA["hon-bro-ge"] = {
     "cmd"
    ],
    "img": "img/hon/bro/ge/options/battle_plan.webp",
-   "w": 174,
-   "h": 146,
+   "w": 414,
+   "h": 348,
    "sheet": "GE-Vol2-p1"
   },
   {
@@ -2337,8 +2337,8 @@ HTS_DATA["hon-bro-ge"] = {
     "cmd"
    ],
    "img": "img/hon/bro/ge/options/artillery.webp",
-   "w": 172,
-   "h": 146,
+   "w": 414,
+   "h": 352,
    "sheet": "GE-Vol2-p1"
   },
   {
@@ -2353,8 +2353,8 @@ HTS_DATA["hon-bro-ge"] = {
     "cmd"
    ],
    "img": "img/hon/bro/ge/options/smoke.webp",
-   "w": 108,
-   "h": 134,
+   "w": 257,
+   "h": 319,
    "sheet": "GE-Vol2-p1"
   },
   {
@@ -2369,8 +2369,8 @@ HTS_DATA["hon-bro-ge"] = {
     "cmd"
    ],
    "img": "img/hon/bro/ge/options/tank_ambush.webp",
-   "w": 108,
-   "h": 134,
+   "w": 257,
+   "h": 319,
    "sheet": "GE-Vol2-p1"
   },
   {
@@ -2385,8 +2385,8 @@ HTS_DATA["hon-bro-ge"] = {
     "custom"
    ],
    "img": "img/hon/bro/ge/options/hardened.webp",
-   "w": 114,
-   "h": 150,
+   "w": 271,
+   "h": 357,
    "sheet": "GE-Vol2-p2"
   },
   {
@@ -2401,8 +2401,8 @@ HTS_DATA["hon-bro-ge"] = {
     "custom"
    ],
    "img": "img/hon/bro/ge/options/heroic.webp",
-   "w": 112,
-   "h": 150,
+   "w": 270,
+   "h": 361,
    "sheet": "GE-Vol2-p2"
   },
   {
@@ -2417,8 +2417,8 @@ HTS_DATA["hon-bro-ge"] = {
     "custom"
    ],
    "img": "img/hon/bro/ge/options/grenade_c.webp",
-   "w": 112,
-   "h": 150,
+   "w": 267,
+   "h": 357,
    "sheet": "GE-Vol2-p2"
   },
   {
@@ -2433,8 +2433,8 @@ HTS_DATA["hon-bro-ge"] = {
     "custom"
    ],
    "img": "img/hon/bro/ge/options/mauser.webp",
-   "w": 112,
-   "h": 150,
+   "w": 270,
+   "h": 361,
    "sheet": "GE-Vol2-p2"
   },
   {
@@ -2467,8 +2467,8 @@ HTS_DATA["hon-bro-ge"] = {
     "K"
    ],
    "img": "img/hon/bro/ge/options/defense_group.webp",
-   "w": 150,
-   "h": 148,
+   "w": 357,
+   "h": 352,
    "sheet": "GE-Vol2-p3",
    "units": [
     [
@@ -2502,8 +2502,8 @@ HTS_DATA["hon-bro-ge"] = {
     "K"
    ],
    "img": "img/hon/bro/ge/options/group_75cm.webp",
-   "w": 150,
-   "h": 146,
+   "w": 357,
+   "h": 348,
    "sheet": "GE-Vol2-p3",
    "units": [
     [
@@ -2537,8 +2537,8 @@ HTS_DATA["hon-bro-ge"] = {
     "K"
    ],
    "img": "img/hon/bro/ge/options/pak40_group.webp",
-   "w": 150,
-   "h": 146,
+   "w": 357,
+   "h": 348,
    "sheet": "GE-Vol2-p3",
    "units": [
     [
@@ -2572,8 +2572,8 @@ HTS_DATA["hon-bro-ge"] = {
     "K"
    ],
    "img": "img/hon/bro/ge/options/ammo_belt.webp",
-   "w": 110,
-   "h": 148,
+   "w": 265,
+   "h": 357,
    "sheet": "GE-Vol2-p3"
   },
   {
@@ -2590,8 +2590,8 @@ HTS_DATA["hon-bro-ge"] = {
     "K"
    ],
    "img": "img/hon/bro/ge/options/turmstellung.webp",
-   "w": 112,
-   "h": 140,
+   "w": 267,
+   "h": 333,
    "sheet": "GE-Vol2-p3",
    "units": [
     [
