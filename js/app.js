@@ -98,7 +98,7 @@
   /* ---------- rules ---------- */
   function fits(slot, opt) {
     var why = [];
-    if (slot.stripes.indexOf('all') >= 0) return why; // Support tile: takes any option
+    if (slot.stripes.indexOf('all') >= 0) return opt.v1 ? ['stripes'] : why; // Support tile: takes any V2 option, not first edition ones
     if (slot.size !== opt.size) why.push('size');
     var ok;
     if (opt.stripes.indexOf('any') >= 0) ok = !slot.stripes.some(function (x) { return String(x).indexOf('v1_') === 0; }); /* V2 any-stripe options do not go on first edition tiles */
