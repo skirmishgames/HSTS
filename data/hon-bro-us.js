@@ -1043,8 +1043,8 @@ HTS_DATA["hon-bro-us"] = {
    "set": "P500",
    "squares": 3,
    "img": "img/hon/bro/us/tiles/recon_2edb.webp",
-   "w": 608,
-   "h": 248,
+   "w": 1716,
+   "h": 700,
    "sheet": "US-Vol3-p2",
    "units": [
     [
@@ -2523,8 +2523,8 @@ HTS_DATA["hon-bro-us"] = {
     "Y"
    ],
    "img": "img/hon/bro/us/options/training_fr.webp",
-   "w": 120,
-   "h": 146,
+   "w": 345,
+   "h": 420,
    "sheet": "US-Vol3-p2"
   },
   {
@@ -2540,8 +2540,8 @@ HTS_DATA["hon-bro-us"] = {
     "Y"
    ],
    "img": "img/hon/bro/us/options/guardian_fr.webp",
-   "w": 120,
-   "h": 146,
+   "w": 345,
+   "h": 420,
    "sheet": "US-Vol3-p2"
   },
   {
