@@ -517,8 +517,8 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
    "set": "HoS-CB",
    "squares": 1,
    "img": "img/hon/hos/ru/tiles/danilov_political_commissar.webp",
-   "w": 650,
-   "h": 507,
+   "w": 507,
+   "h": 650,
    "sheet": "R2",
    "units": [
     [
@@ -539,8 +539,8 @@ window.HTS_DATA = window.HTS_DATA || {}; HTS_DATA["hon-hos-ru"] = {
    "set": "HoS-CB",
    "squares": 1,
    "img": "img/hon/hos/ru/tiles/tania_chernova.webp",
-   "w": 557,
-   "h": 479,
+   "w": 479,
+   "h": 557,
    "sheet": "R2",
    "units": [
     [
