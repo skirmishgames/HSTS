@@ -2,7 +2,9 @@
 
 Each folder holds PNG crops cut automatically from punchboard scans, plus `<sheet>_map.jpg` overview pictures showing where each numbered crop sits on its sheet, and `<sheet>.json` with crop positions. File names look like `us2_07.png` (sheet us2, piece 7).
 
-Look at EVERY crop with the Read tool (one at a time or a few per turn) and write one JSON object per crop. Do not guess: if you cannot read a value, use null and say so in "notes". Zoom is not available, so if text is too small to read say so.
+IMPORTANT working method: images drop out of your context if you load too many. Work in batches of at most 6 crops: Read 6 crops, then immediately write their finished entries to labels.json (rewrite the whole file with all entries so far), and only then load the next batch. Never write an entry for a crop you are not looking at in the current batch.
+
+Look at EVERY crop with the Read tool and write one JSON object per crop. Do not guess: if you cannot read a value, use null and say so in "notes". Zoom is not available, so if text is too small to read say so.
 
 Write the result to `labels.json` in the same folder: a JSON array, one object per crop, in file-name order. Fields:
 

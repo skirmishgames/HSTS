@@ -427,7 +427,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
       await ap.goto(url + '#b=' + h); await ap.reload();
       const used = await ap.textContent('#ptsUsed');
       ok(Number(used) === a.pts, 'caen ' + id + ' ' + key + ' loads ' + a.pts + ' points (got ' + used + ')');
-      ok(await ap.locator('.warnings p:not(.bad)').filter({ hasNotText: 'SP instead of a cost' }).count() === 0, 'caen ' + id + ' ' + key + ' has no slot warnings');
+      ok(await ap.locator('.warnings p:not(.bad)').filter({ hasNotText: 'SP instead of a cost' }).count() === (id === 'beavertails' && key === 'ge' ? 1 : 0), 'caen ' + id + ' ' + key + ' has no slot warnings' + (id === 'beavertails' && key === 'ge' ? ' except the Magnetic Mine (black and white stripes) the booklet puts in a black and yellow slot' : ''));
       cArmies++;
     }
   }
@@ -1072,6 +1072,19 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     ok((await v1p.textContent('#ptsUsed')) === '70', 'first edition: the army survives a reload');
     ok(v1errs.length === 0, 'first edition: no console errors ' + v1errs.join('|'));
     await v1p.evaluate(() => { try { localStorage.clear(); } catch (e) {} }); await v1p.close();
+  }
+  // stripes: an option must carry only colours that are on the slot
+  {
+    const stp = await b.newPage({ viewport: { width: 1280, height: 900 } }); stp.on('dialog', d => d.accept());
+    await stp.goto(base + 'builder.html'); await stp.evaluate(() => { try { localStorage.clear(); } catch (e) {} }); await stp.reload(); await stp.waitForTimeout(400);
+    await stp.locator('.lcard', { hasText: '16th Inf. Reg. A' }).first().locator('[data-add]').click();
+    await stp.locator('.atile .slot').first().click(); await stp.waitForTimeout(200);
+    const wide = await stp.evaluate(() => { const H = window.HTS, D = H.data(); return Array.from(document.querySelectorAll('.pcard [data-pick], .pcard')).length; });
+    const names = await stp.locator('.pcard .nm').allInnerTexts();
+    const subs = await stp.evaluate(() => { const D = window.HTS.data(); const t = D.d.tiles.find(x => x.id === 'rifle_platoon_1id_16a'); const sl = t.slots[0]; return D.d.options.filter(o => o.size === sl.size && o.stripes.indexOf('any') < 0 && o.stripes.some(c => sl.stripes.indexOf(c) >= 0) && !o.stripes.every(c => sl.stripes.indexOf(c) >= 0)).map(o => o.id); });
+    const shown = await stp.evaluate(() => Array.from(document.querySelectorAll('.pcard')).map(c => c.getAttribute('data-pick') || c.getAttribute('data-opt') || ''));
+    ok(names.length >= 3 && subs.length > 0 && subs.every(id => shown.indexOf(id) < 0), 'stripes: the 16th Inf. Reg. A slot does not list options that share only one stripe colour (' + subs.slice(0, 4).join(', ') + ')');
+    await stp.close();
   }
   // trackers
   const cp = require('child_process');

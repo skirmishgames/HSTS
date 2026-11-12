@@ -30,7 +30,7 @@
     if (slot.stripes.indexOf('all') >= 0) return true;
     if (slot.size !== opt.size) return false;
     if (opt.stripes.indexOf('any') >= 0) return true;
-    return opt.stripes.some(function (s) { return slot.stripes.indexOf(s) >= 0; });
+    return opt.stripes.length > 0 && opt.stripes.every(function (s) { return slot.stripes.indexOf(s) >= 0; });
   }
   function cost(o) { return o.cost == null ? 'SP' : o.cost; }
 

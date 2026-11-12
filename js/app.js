@@ -102,7 +102,8 @@
     if (slot.size !== opt.size) why.push('size');
     var ok;
     if (opt.stripes.indexOf('any') >= 0) ok = !slot.stripes.some(function (x) { return String(x).indexOf('v1_') === 0; }); /* V2 any-stripe options do not go on first edition tiles */
-    else ok = opt.stripes.some(function (s) { return slot.stripes.indexOf(s) >= 0; });
+    /* every stripe colour on the option must be on the slot: one shared colour is not a match */
+    else ok = opt.stripes.length > 0 && opt.stripes.every(function (s) { return slot.stripes.indexOf(s) >= 0; });
     if (!ok) why.push('stripes');
     return why;
   }
