@@ -1,0 +1,480 @@
+[
+ {
+  "file": "gazette31_01.png",
+  "kind": "tile",
+  "name": "US Paratroopers",
+  "sub": "101st Inf. Div. 506th Inf. Reg. 2nd Bat.",
+  "cost": 130,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "wide",
+    "stripes": [
+     "blue",
+     "green",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "green",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "green",
+     "blue"
+    ]
+   },
+   {
+    "size": "wide",
+    "stripes": [
+     "blue",
+     "green",
+     "blue"
+    ]
+   }
+  ],
+  "special_ability_slot": 0,
+  "units": [
+   [
+    "Lt. R. Winters",
+    1
+   ],
+   [
+    "Sgt. Toye",
+    1
+   ],
+   [
+    "Malarkey",
+    1
+   ],
+   [
+    "Perconte",
+    1
+   ]
+  ],
+  "breaking_point": 3,
+  "partial": false,
+  "confidence": "high",
+  "notes": "Subtitle line 'Heroic Platoon' under the sub line. Star tabs on BOTH slot 0 and slot 3 (index field holds only 0). Outer two slots look wider than inner two. Small cup/medal icon tab at bottom beside cost. Slot 1 shows black bar on its left side. Parachute badge and Airborne patch beside title."
+ },
+ {
+  "file": "gazette31_02.png",
+  "kind": "option",
+  "name": "3rd Platoon",
+  "sub": null,
+  "cost": 60,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "units": [
+   [
+    "Sgt. Lipton",
+    1
+   ],
+   [
+    "Wynn",
+    1
+   ],
+   [
+    "Mac Grath",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripe colours read from low-contrast edge tabs"
+ },
+ {
+  "file": "gazette31_03.png",
+  "kind": "option",
+  "name": "2nd Platoon",
+  "sub": null,
+  "cost": 65,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "units": [
+   [
+    "Sgt. Randleman",
+    1
+   ],
+   [
+    "Luz",
+    1
+   ],
+   [
+    "Webster",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripe colours read from low-contrast edge tabs"
+ },
+ {
+  "file": "gazette31_04.png",
+  "kind": "unit",
+  "name": "Winters",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter, 1 soldier, gold border; stats 4 / +2 / +1 / 6 / X; star, sword +1, crosshair icons, house-arrow icon"
+ },
+ {
+  "file": "gazette31_05.png",
+  "kind": "unit",
+  "name": "Speirs",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "black",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Hero counter, gold border; stats 4 / +2 / +1 / 6 / X; icons no-symbol arrow, sword +1, range arrow 4. Middle stripe looks black (edge tab dark)"
+ },
+ {
+  "file": "gazette31_06.png",
+  "kind": "unit",
+  "name": "Guarnere",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "black",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Hero counter, gold border; stats 4 / +2 / +1 / 6 / X; sword +1, sword x2, range arrow 4. Middle stripe looks black"
+ },
+ {
+  "file": "gazette31_07.png",
+  "kind": "option",
+  "name": "Band of Brothers",
+  "sub": null,
+  "cost": 20,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear/ability option: silhouette picture of soldiers, range arrow 2 and +1 burst icon"
+ },
+ {
+  "file": "gazette31_08.png",
+  "kind": "option",
+  "name": "Currahee",
+  "sub": null,
+  "cost": 20,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "506th regiment crest picture; X3 marker"
+ },
+ {
+  "file": "gazette31_09.png",
+  "kind": "tile",
+  "name": "William \"Wild Bill\" Guarnere",
+  "sub": "Young Hero",
+  "cost": 30,
+  "rotation": 0,
+  "stripes": [],
+  "tile_type": "hero",
+  "slots": [],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "Guarnere",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero portrait tile, no slots; Airborne patch and parachute badge at top left"
+ },
+ {
+  "file": "gazette31_10.png",
+  "kind": "tile",
+  "name": "Lt. Ronald Speirs",
+  "sub": "Crazy Runner",
+  "cost": 40,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "tile_type": "hero",
+  "slots": [
+   {
+    "size": "wide",
+    "stripes": [
+     "blue",
+     "green",
+     "blue"
+    ]
+   }
+  ],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "Speirs",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Hero tile with one large slot on the right (width class uncertain, only one slot). A grey star tab sits at bottom of tile next to the cost, not clearly attached to the slot, so special_ability_slot left null. Slot has black bar on its left side."
+ },
+ {
+  "file": "gazette31_11.png",
+  "kind": "marker",
+  "name": "Charge / Double Time / Guts / Medic",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Holds several pieces: order triangles Charge (+1 sword, range arrow 3), Double Time (arrow 3, +1 move), Guts (arrow 3, no-suppression icon), a red medic cross marker with X move arrow, plus the left part of the Eugene counter (see 12). Triangle stripes blue/green."
+ },
+ {
+  "file": "gazette31_12.png",
+  "kind": "unit",
+  "name": "Eugene",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black"
+  ],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Medic counter, 1 soldier, red cross cycle icon, house-arrow icon; stats 4 / +0 / X / 6 / X. Edge tabs look only dark/black. Tile 13 names him Eugene G. \"Doc\" Roe Sr."
+ },
+ {
+  "file": "gazette31_13.png",
+  "kind": "tile",
+  "name": "Eugene G. \"Doc\" Roe Sr.",
+  "sub": "Smart Medic",
+  "cost": 20,
+  "rotation": 90,
+  "stripes": [],
+  "tile_type": "hero",
+  "slots": [],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "Eugene",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero portrait tile, no slots; name reads bottom to top so rotate 90 clockwise. Medic marker (red cross, X arrow) pictured with the counter."
+ },
+ {
+  "file": "gazette31_14.png",
+  "kind": "unit",
+  "name": "Sgt Lipton",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter, 5 soldiers, gold border, sergeant chevron; stats 4 / +2 / +1 / 4 / X; sword +1, -1 move icon"
+ },
+ {
+  "file": "gazette31_15.png",
+  "kind": "unit",
+  "name": "Sgt Toye",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter, 5 soldiers, gold border, sergeant chevron; stats 4 / +2 / +1 / 4 / X"
+ },
+ {
+  "file": "gazette31_16.png",
+  "kind": "unit",
+  "name": "Malarkey",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 soldiers; stats 4 / +2 / +0 / 5 / X; sword +1, -1 icon, question-cycle, skull"
+ },
+ {
+  "file": "gazette31_17.png",
+  "kind": "unit",
+  "name": "Webster",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "2 soldiers with machine gun; red border; stats 4 / +1 / +0 / 5 / X"
+ },
+ {
+  "file": "gazette31_18.png",
+  "kind": "unit",
+  "name": "Mac Grath",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "2 soldiers with bazooka; red border; stats 4 / +1 / +4 / 5 / +3"
+ },
+ {
+  "file": "gazette31_19.png",
+  "kind": "unit",
+  "name": "Sgt Randleman",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter, 5 soldiers, gold border, sergeant chevron; stats 4 / +2 / +1 / 4 / X"
+ },
+ {
+  "file": "gazette31_20.png",
+  "kind": "unit",
+  "name": "Perconte",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 soldiers; stats 4 / +2 / +0 / 5 / X"
+ },
+ {
+  "file": "gazette31_21.png",
+  "kind": "unit",
+  "name": "Wynn",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "2 soldiers with BAR; stats 4 / +2 / +1 / 5 / X; crosshair-cycle icon"
+ },
+ {
+  "file": "gazette31_22.png",
+  "kind": "unit",
+  "name": "Luz",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "green",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 soldiers; stats 4 / +2 / +0 / 5 / X"
+ }
+]

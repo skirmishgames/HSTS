@@ -1,0 +1,519 @@
+[
+{
+"file": "cwbritishweapo1_01.png",
+"kind": "marker",
+"name": "Hardboiled",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Bulldog trait/status marker; dark bands at sides are sheet edge background"
+},
+{
+"file": "cwbritishweapo1_02.png",
+"kind": "marker",
+"name": "Hardboiled",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Same as 01"
+},
+{
+"file": "cwbritishweapo1_03.png",
+"kind": "marker",
+"name": "Hardboiled",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Same as 01"
+},
+{
+"file": "cwbritishweapo1_04.png",
+"kind": "unit",
+"name": "Universal Carrier",
+"sub": null,
+"cost": null,
+"rotation": 180,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Vehicle counter, text upside down; stripes stick out at top and bottom as seen; numbers 6 / +2 / +2 / X / 6"
+},
+{
+"file": "cwbritishweapo1_05.png",
+"kind": "unit",
+"name": "Flamer",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Infantry counter, text reads bottom to top; stripes at left and right as seen; numbers 3 / +0 / +0 / 5 / X"
+},
+{
+"file": "cwbritishweapo1_06.png",
+"kind": "tile",
+"name": "East Yorkshire Regiment",
+"sub": "3rd Inf. Div. 8th Infantry Brigade",
+"cost": 55,
+"rotation": 90,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"tile_type": "platoon",
+"slots": [
+{
+"size": "narrow",
+"stripes": [
+"white",
+"red",
+"white"
+]
+},
+{
+"size": "narrow",
+"stripes": [
+"white",
+"red",
+"white"
+]
+},
+{
+"size": "narrow",
+"stripes": [
+"white",
+"red",
+"white"
+]
+},
+{
+"size": "narrow",
+"stripes": [
+"white",
+"red",
+"white"
+]
+}
+],
+"special_ability_slot": 0,
+"units": [
+[
+"3 Inch Mortar",
+1
+],
+[
+"Vickers",
+1
+],
+[
+"Lt. Higgins",
+1
+],
+[
+"Flamer",
+1
+]
+],
+"breaking_point": 3,
+"partial": false,
+"confidence": "high",
+"notes": "All 4 slots look the same width; star tab on the first slot (left when upright); slot badge is black triangle with red triangle on white/red stripes, black line under stripes"
+},
+{
+"file": "cwbritishweapo1_07.png",
+"kind": "option",
+"name": "Universal Carrier",
+"sub": null,
+"cost": 30,
+"rotation": 90,
+"stripes": [
+"black"
+],
+"units": [
+[
+"Universal Carrier",
+1
+]
+],
+"breaking_point": 0,
+"markers": null,
+"name_colour": "white",
+"partial": false,
+"confidence": "high",
+"notes": "Name reads bottom to top; stripe at the two ends as seen is dark/black band, possibly sheet edge, uncertain"
+},
+{
+"file": "cwbritishweapo1_08.png",
+"kind": "unit",
+"name": "Higgins",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Hero infantry counter with yellow border and star; numbers 4 / +2 / +1 / 6 / X; text reads bottom to top; stripes at left and right as seen"
+},
+{
+"file": "cwbritishweapo1_09.png",
+"kind": "marker",
+"name": "Ammo Belt",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Ammo belt marker with +1 and +2; no cost; striped edges at left and right"
+},
+{
+"file": "cwbritishweapo1_10.png",
+"kind": "marker",
+"name": "Ammo Belt",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Ammo belt marker with +1 and +2; no cost; striped edges at left and right"
+},
+{
+"file": "cwbritishweapo1_11.png",
+"kind": "marker",
+"name": "Ammo Belt",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Ammo belt marker with +1 and +2; no cost; striped edges at left and right"
+},
+{
+"file": "cwbritishweapo1_12.png",
+"kind": "marker",
+"name": null,
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "medium",
+"notes": "Long teardrop flame template with -1 / +5 / +2 / +0 / Suppressed -2 values; no printed name, likely flamethrower template"
+},
+{
+"file": "cwbritishweapo1_13.png",
+"kind": "option",
+"name": "Ammo Belt",
+"sub": null,
+"cost": 20,
+"rotation": 0,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"markers": "X3",
+"name_colour": "red",
+"partial": false,
+"confidence": "high",
+"notes": "Gear picture of ammo belt with burst icon; X3 at bottom right"
+},
+{
+"file": "cwbritishweapo1_14.png",
+"kind": "option",
+"name": "Hardboiled",
+"sub": null,
+"cost": 5,
+"rotation": 0,
+"stripes": [
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"markers": "X3",
+"name_colour": "red",
+"partial": false,
+"confidence": "medium",
+"notes": "Bulldog picture with Suppressed -2 icon; side bands dark brown/black, stripe colour uncertain"
+},
+{
+"file": "cwbritishweapo1_15.png",
+"kind": "unit",
+"name": "Vickers",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Numbers 2 / +0 / +1 / 5 / X; text reads bottom to top"
+},
+{
+"file": "cwbritishweapo1_16.png",
+"kind": "unit",
+"name": "3 Inch Mortar",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Numbers 3 / +0 / +1 / 5 / X; text reads bottom to top"
+},
+{
+"file": "cwbritishweapo1_17.png",
+"kind": "option",
+"name": "Mortar Platoon",
+"sub": null,
+"cost": 35,
+"rotation": 0,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [
+[
+"3 Inch Mortar",
+2
+]
+],
+"breaking_point": 2,
+"markers": null,
+"name_colour": "white",
+"partial": false,
+"confidence": "high",
+"notes": ""
+},
+{
+"file": "cwbritishweapo1_18.png",
+"kind": "unit",
+"name": "6 Pounder AT Gun",
+"sub": null,
+"cost": null,
+"rotation": 180,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Gun counter upside down; stripes at top and bottom as seen; numbers 2 / +4 / +5 / 6 / +1"
+},
+{
+"file": "cwbritishweapo1_19.png",
+"kind": "unit",
+"name": "Vickers",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Same design as 15"
+},
+{
+"file": "cwbritishweapo1_20.png",
+"kind": "unit",
+"name": "3 Inch Mortar",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Same design as 16"
+},
+{
+"file": "cwbritishweapo1_21.png",
+"kind": "option",
+"name": "AT Gun Platoon",
+"sub": null,
+"cost": 55,
+"rotation": 0,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [
+[
+"6 Pounder AT Gun",
+1
+],
+[
+"Universal Carrier",
+1
+]
+],
+"breaking_point": 2,
+"markers": null,
+"name_colour": "white",
+"partial": false,
+"confidence": "high",
+"notes": ""
+},
+{
+"file": "cwbritishweapo1_22.png",
+"kind": "unit",
+"name": "Universal Carrier",
+"sub": null,
+"cost": null,
+"rotation": 180,
+"stripes": [
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "medium",
+"notes": "Vehicle counter upside down with British roundel; stripe bands at top and bottom as seen are black (different from 04 which has white/red); numbers 6 / +2 / +2 / X / 6"
+},
+{
+"file": "cwbritishweapo1_23.png",
+"kind": "unit",
+"name": "Vickers",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Same design as 15"
+},
+{
+"file": "cwbritishweapo1_24.png",
+"kind": "unit",
+"name": "3 Inch Mortar",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Same design as 16"
+},
+{
+"file": "cwbritishweapo1_25.png",
+"kind": "option",
+"name": "MG Platoon",
+"sub": null,
+"cost": 40,
+"rotation": 0,
+"stripes": [
+"white",
+"red",
+"white"
+],
+"units": [
+[
+"Vickers",
+2
+]
+],
+"breaking_point": 2,
+"markers": null,
+"name_colour": "white",
+"partial": false,
+"confidence": "high",
+"notes": "Unit captions printed as 'Vicker'"
+}
+]

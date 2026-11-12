@@ -335,6 +335,348 @@ HTS_DATA["hon-v1-us"] = {
     }
    ],
    "own": []
+  },
+  {
+   "id": "us_paratroopers",
+   "name": "US Paratroopers",
+   "sub": "101st Inf. Div. 506th Inf. Reg. 2nd Bat.",
+   "cost": 130,
+   "type": "platoon",
+   "set": "hon1-gazette-3",
+   "squares": 3,
+   "img": "img/hon/v1/us/tiles/us_paratroopers.webp",
+   "w": 2077,
+   "h": 560,
+   "sheet": "Gazette 3",
+   "units": [
+    [
+     "Lt. R. Winters",
+     1,
+     "officer"
+    ],
+    [
+     "Sgt. Toye",
+     1,
+     "officer"
+    ],
+    [
+     "Malarkey",
+     1,
+     "vehicle"
+    ],
+    [
+     "Perconte",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.0135,
+     "y": 0.21,
+     "w": 0.202,
+     "h": 0.757,
+     "size": "w",
+     "stripes": [
+      "BGB",
+      "K"
+     ]
+    },
+    {
+     "x": 0.225,
+     "y": 0.21,
+     "w": 0.156,
+     "h": 0.757,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.62,
+     "y": 0.21,
+     "w": 0.154,
+     "h": 0.757,
+     "size": "n",
+     "stripes": [
+      "K",
+      "BGB"
+     ]
+    },
+    {
+     "x": 0.785,
+     "y": 0.21,
+     "w": 0.202,
+     "h": 0.757,
+     "size": "w",
+     "stripes": [
+      "K",
+      "BGB"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "william_wild_bill_guarnere",
+   "name": "William \"Wild Bill\" Guarnere",
+   "sub": "Young Hero",
+   "cost": 30,
+   "type": "hero",
+   "set": "hon1-gazette-3",
+   "squares": 1,
+   "img": "img/hon/v1/us/tiles/william_wild_bill_guarnere.webp",
+   "w": 443,
+   "h": 574,
+   "sheet": "Gazette 3",
+   "units": [
+    [
+     "Guarnere",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
+  },
+  {
+   "id": "lt_ronald_speirs",
+   "name": "Lt. Ronald Speirs",
+   "sub": "Crazy Runner",
+   "cost": 40,
+   "type": "hero",
+   "set": "hon1-gazette-3",
+   "squares": 1,
+   "img": "img/hon/v1/us/tiles/lt_ronald_speirs.webp",
+   "w": 788,
+   "h": 570,
+   "sheet": "Gazette 3",
+   "units": [
+    [
+     "Speirs",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.524,
+     "y": 0.196,
+     "w": 0.422,
+     "h": 0.77,
+     "size": "n",
+     "stripes": [
+      "K",
+      "BGB"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "eugene_g_doc_roe_sr",
+   "name": "Eugene G. \"Doc\" Roe Sr.",
+   "sub": "Smart Medic",
+   "cost": 20,
+   "type": "hero",
+   "set": "hon1-gazette-3",
+   "squares": 1,
+   "img": "img/hon/v1/us/tiles/eugene_g_doc_roe_sr.webp",
+   "w": 441,
+   "h": 572,
+   "sheet": "Gazette 3",
+   "units": [
+    [
+     "Eugene",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
+  },
+  {
+   "id": "rifle_platoon",
+   "name": "Rifle Platoon",
+   "sub": "4th Inf. Div. 12nd Inf. Reg.",
+   "cost": 70,
+   "type": "platoon",
+   "set": "hon1-us-rifle-platoon",
+   "squares": 3,
+   "img": "img/hon/v1/us/tiles/rifle_platoon.webp",
+   "w": 1962,
+   "h": 557,
+   "sheet": "US Rifle Platoon",
+   "units": [
+    [
+     "Recon Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Support Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Lt. H. Finn",
+     1,
+     "officer"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.019,
+     "y": 0.19,
+     "w": 0.213,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "YLB"
+     ]
+    },
+    {
+     "x": 0.242,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "YLB",
+      "K"
+     ]
+    },
+    {
+     "x": 0.592,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.767,
+     "y": 0.19,
+     "w": 0.214,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "K",
+      "YLB"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "us_rangers",
+   "name": "US Rangers",
+   "sub": "5th Ranger Battalion",
+   "cost": 80,
+   "type": "platoon",
+   "set": "hon1-us-rangers",
+   "squares": 3,
+   "img": "img/hon/v1/us/tiles/us_rangers.webp",
+   "w": 1967,
+   "h": 567,
+   "sheet": "US Rangers",
+   "units": [
+    [
+     "Recon Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Support Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "\"Ace\" Parker",
+     1,
+     "vehicle"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.019,
+     "y": 0.19,
+     "w": 0.213,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "BYB"
+     ]
+    },
+    {
+     "x": 0.242,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "BYB",
+      "K"
+     ]
+    },
+    {
+     "x": 0.592,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K",
+      "BYB"
+     ]
+    },
+    {
+     "x": 0.767,
+     "y": 0.19,
+     "w": 0.214,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "K",
+      "BYB"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "cpt_m_pepper",
+   "name": "Cpt. M. Pepper",
+   "sub": "Heavy Stormer",
+   "cost": 25,
+   "type": "hero",
+   "set": "hon1-us-rangers",
+   "squares": 0,
+   "img": "img/hon/v1/us/tiles/cpt_m_pepper.webp",
+   "w": 460,
+   "h": 600,
+   "sheet": "US Rangers",
+   "units": [
+    [
+     "Pepper",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
   }
  ],
  "options": [
@@ -981,6 +1323,355 @@ HTS_DATA["hon-v1-us"] = {
    "h": 320,
    "sheet": "Army Box us4",
    "note": "Markers: X3."
+  },
+  {
+   "id": "3rd_platoon",
+   "name": "3rd Platoon",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "hon1-gazette-3",
+   "size": "w",
+   "stripes": [
+    "BGB"
+   ],
+   "img": "img/hon/v1/us/options/3rd_platoon.webp",
+   "w": 363,
+   "h": 326,
+   "sheet": "Gazette 3",
+   "units": [
+    [
+     "Sgt. Lipton",
+     1,
+     "officer"
+    ],
+    [
+     "Wynn",
+     1,
+     "infantry"
+    ],
+    [
+     "Mac Grath",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "2nd_platoon",
+   "name": "2nd Platoon",
+   "cat": "support",
+   "cost": 65,
+   "squares": 2,
+   "set": "hon1-gazette-3",
+   "size": "w",
+   "stripes": [
+    "BGB"
+   ],
+   "img": "img/hon/v1/us/options/2nd_platoon.webp",
+   "w": 363,
+   "h": 326,
+   "sheet": "Gazette 3",
+   "units": [
+    [
+     "Sgt. Randleman",
+     1,
+     "officer"
+    ],
+    [
+     "Luz",
+     1,
+     "infantry"
+    ],
+    [
+     "Webster",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "band_of_brothers",
+   "name": "Band of Brothers",
+   "cat": "gear",
+   "cost": 20,
+   "squares": 0,
+   "set": "hon1-gazette-3",
+   "size": "n",
+   "stripes": [
+    "BGB"
+   ],
+   "img": "img/hon/v1/us/options/band_of_brothers.webp",
+   "w": 267,
+   "h": 319,
+   "sheet": "Gazette 3"
+  },
+  {
+   "id": "currahee",
+   "name": "Currahee",
+   "cat": "gear",
+   "cost": 20,
+   "squares": 0,
+   "set": "hon1-gazette-3",
+   "size": "n",
+   "stripes": [
+    "BGB"
+   ],
+   "img": "img/hon/v1/us/options/currahee.webp",
+   "w": 267,
+   "h": 320,
+   "sheet": "Gazette 3",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "support_squad",
+   "name": "Support Squad",
+   "cat": "support",
+   "cost": 50,
+   "squares": 2,
+   "set": "hon1-us-rifle-platoon",
+   "size": "w",
+   "stripes": [
+    "YLB"
+   ],
+   "img": "img/hon/v1/us/options/support_squad.webp",
+   "w": 363,
+   "h": 330,
+   "sheet": "US Rifle Platoon",
+   "units": [
+    [
+     "Support Team",
+     2,
+     "infantry"
+    ],
+    [
+     ".30 Cal",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "ambush_squad",
+   "name": "Ambush Squad",
+   "cat": "support",
+   "cost": 40,
+   "squares": 2,
+   "set": "hon1-us-rifle-platoon",
+   "size": "w",
+   "stripes": [
+    "YLB"
+   ],
+   "img": "img/hon/v1/us/options/ambush_squad.webp",
+   "w": 363,
+   "h": 330,
+   "sheet": "US Rifle Platoon",
+   "units": [
+    [
+     "Recon Team",
+     2,
+     "infantry"
+    ],
+    [
+     "Bazooka",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "rifle_squad",
+   "name": "Rifle Squad",
+   "cat": "support",
+   "cost": 50,
+   "squares": 2,
+   "set": "hon1-us-rifle-platoon",
+   "size": "w",
+   "stripes": [
+    "YLB"
+   ],
+   "img": "img/hon/v1/us/options/rifle_squad.webp",
+   "w": 363,
+   "h": 330,
+   "sheet": "US Rifle Platoon",
+   "units": [
+    [
+     "Recon Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Support Team",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "halftrack",
+   "name": "Halftrack",
+   "cat": "support",
+   "cost": 30,
+   "squares": 1,
+   "set": "hon1-us-rifle-platoon",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/halftrack.webp",
+   "w": 267,
+   "h": 323,
+   "sheet": "US Rifle Platoon",
+   "units": [
+    [
+     "M 3A1 Halftrack",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "support_squad_us_rangers",
+   "name": "Support Squad",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "hon1-us-rangers",
+   "size": "w",
+   "stripes": [
+    "BYB"
+   ],
+   "img": "img/hon/v1/us/options/support_squad_us_rangers.webp",
+   "w": 363,
+   "h": 337,
+   "sheet": "US Rangers",
+   "units": [
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Support Team",
+     1,
+     "infantry"
+    ],
+    [
+     ".30 Cal",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "gears",
+   "name": "Gears",
+   "cat": "gear",
+   "cost": 20,
+   "squares": 0,
+   "set": "hon1-us-rangers",
+   "size": "n",
+   "stripes": [
+    "BYB"
+   ],
+   "img": "img/hon/v1/us/options/gears.webp",
+   "w": 268,
+   "h": 334,
+   "sheet": "US Rangers",
+   "units": [
+    [
+     "Rifle Grenade",
+     1,
+     "infantry"
+    ],
+    [
+     "Ammo Belt",
+     1,
+     "infantry"
+    ],
+    [
+     "Ammo",
+     1,
+     "infantry"
+    ],
+    [
+     "Sticky Bomb",
+     1,
+     "infantry"
+    ],
+    [
+     "Grenade",
+     1,
+     "infantry"
+    ]
+   ],
+   "note": "Markers: X5."
+  },
+  {
+   "id": "ambush_squad_us_rangers",
+   "name": "Ambush Squad",
+   "cat": "support",
+   "cost": 50,
+   "squares": 2,
+   "set": "hon1-us-rangers",
+   "size": "w",
+   "stripes": [
+    "BYB"
+   ],
+   "img": "img/hon/v1/us/options/ambush_squad_us_rangers.webp",
+   "w": 363,
+   "h": 337,
+   "sheet": "US Rangers",
+   "units": [
+    [
+     "Recon Team",
+     2,
+     "infantry"
+    ],
+    [
+     "Bazooka",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "rangers_squad",
+   "name": "Rangers Squad",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "hon1-us-rangers",
+   "size": "w",
+   "stripes": [
+    "BYB"
+   ],
+   "img": "img/hon/v1/us/options/rangers_squad.webp",
+   "w": 363,
+   "h": 337,
+   "sheet": "US Rangers",
+   "units": [
+    [
+     "Recon Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Support Team",
+     1,
+     "infantry"
+    ]
+   ]
   }
  ]
 };

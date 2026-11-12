@@ -134,7 +134,7 @@
   }
   function stripeName(s) {
     if (String(s).indexOf('v1_') === 0) return stripeName(String(s).slice(3)) + ', first edition';
-    return ({ R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', WR: 'white and red', YRB: 'yellow, red and blue (Weapon Platoon)', GOG: 'green and orange (Recon Squadron)', GLG: 'grey and light green (Sherman Squadron)', RWR: 'red and white (Panzergruppe)', GWG: 'green and white (Sturmpioniere)', GW: 'green and white (Panzergrenadiere)', RWM: 'red, white and maroon (Chaudiere)', YR: 'yellow and red (Suffolk)', YGY: 'yellow and grey (Yeomanry)', KG: 'black and green', BCG: 'blue, cream and green', BRD: 'blue and red', cmd: 'command stripes', custom: 'customization', any: 'common, fits any slot', all: 'any option (Support tile)' })[s] || s;
+    return ({ R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', WR: 'white and red', YRB: 'yellow, red and blue (Weapon Platoon)', GOG: 'green and orange (Recon Squadron)', GLG: 'grey and light green (Sherman Squadron)', RWR: 'red and white (Panzergruppe)', GWG: 'green and white (Sturmpioniere)', GW: 'green and white (Panzergrenadiere)', RWM: 'red, white and maroon (Chaudiere)', YR: 'yellow and red (Suffolk)', YGY: 'yellow and grey (Yeomanry)', KWK: 'black and white (SS-Panzergrenadiere)', KRK: 'black and red (Wittmann)', WRW: 'white and red (East Yorkshire)', GKG: 'green and black (Royal Winnipeg Rifles)', BGB: 'blue and green (Paratroopers)', YLB: 'yellow and light blue (Rifle Platoon)', BYB: 'blue and yellow (Rangers)', KG: 'black and green', BCG: 'blue, cream and green', BRD: 'blue and red', cmd: 'command stripes', custom: 'customization', any: 'common, fits any slot', all: 'any option (Support tile)' })[s] || s;
   }
   function pips(n) { var s = ''; for (var i = 0; i < n; i++) s += '■'; return s; }
   function costLabel(c) { return c == null ? 'SP' : String(c); }
@@ -317,7 +317,8 @@
       if (q && (t.name + ' ' + (t.sub || '') + (t.hos ? HOS_WORDS : '') + (t.v1 ? V1_WORDS : '')).toLowerCase().indexOf(q) < 0) return false;
       return true;
     }).sort(function (a, b) {
-      return (TYPE_ORDER[a.type] - TYPE_ORDER[b.type]) || (a.cost - b.cost) || a.name.localeCompare(b.name);
+      /* V2 tiles first, then first edition, so the two editions sit in separate runs */
+      return ((a.v1 ? 1 : 0) - (b.v1 ? 1 : 0)) || (TYPE_ORDER[a.type] - TYPE_ORDER[b.type]) || (a.cost - b.cost) || a.name.localeCompare(b.name);
     });
     var hidT = D.d.tiles.filter(function (t) { return !OWN.owns(t.set); }).length;
     $('ownnote').innerHTML = OWN.note(hidT, hidT === 1 ? 'tile' : 'tiles');

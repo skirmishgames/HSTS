@@ -1,0 +1,471 @@
+[
+{
+"file": "cwcanadianplat1_01.png",
+"kind": "tile",
+"name": "Royal Winnipeg Rifles",
+"sub": "3rd Inf. Div. 7th Infantry Brigade",
+"cost": 95,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"tile_type": "platoon",
+"slots": [
+{
+"size": "narrow",
+"stripes": [
+"green",
+"black"
+]
+},
+{
+"size": "narrow",
+"stripes": [
+"green",
+"black"
+]
+},
+{
+"size": "narrow",
+"stripes": [
+"green",
+"black"
+]
+},
+{
+"size": "narrow",
+"stripes": [
+"green",
+"black"
+]
+}
+],
+"special_ability_slot": 0,
+"units": [
+[
+"Lt. Henry",
+1
+],
+[
+"2 Inch Mortar",
+1
+],
+[
+"Leader Team",
+1
+],
+[
+"Fire Team",
+1
+],
+[
+"Bren",
+1
+]
+],
+"breaking_point": 3,
+"partial": false,
+"confidence": "high",
+"notes": "Tile lies on its side, text reads bottom to top. All 4 slots same width; star tab on slot 0 (left when upright); slots show maple leaf badge on green/black stripes (green above black as seen after rotation); Leader Team, Fire Team and Bren pictures overlap and are partly hidden"
+},
+{
+"file": "cwcanadianplat1_02.png",
+"kind": "marker",
+"name": "Grenade",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Grenade marker with range-2 icon; dark bands at sides are sheet edge/stripe, not read"
+},
+{
+"file": "cwcanadianplat1_03.png",
+"kind": "marker",
+"name": "Grenade",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Grenade marker with range-2 icon; dark bands at sides are sheet edge/stripe, not read"
+},
+{
+"file": "cwcanadianplat1_04.png",
+"kind": "marker",
+"name": "Grenade",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Grenade marker with range-2 icon; dark bands at sides are sheet edge/stripe, not read"
+},
+{
+"file": "cwcanadianplat1_05.png",
+"kind": "unit",
+"name": "M 3A1 Halftrack",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Vehicle counter, text reads bottom to top; side stripes green above black as seen; numbers 6 / +3 / +2 / 6 / X; maple leaf badge top left"
+},
+{
+"file": "cwcanadianplat1_06.png",
+"kind": "unit",
+"name": "2 Inch Mortar",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Numbers 3 / +0 / +1 / 5 / X; text reads bottom to top"
+},
+{
+"file": "cwcanadianplat1_07.png",
+"kind": "unit",
+"name": "Leader Team",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Numbers 3 / +1 / +2 / 4 / X; text reads bottom to top; bayonet +1 icon"
+},
+{
+"file": "cwcanadianplat1_08.png",
+"kind": "unit",
+"name": "Henry",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Hero counter (Lt. Henry) with yellow border, two stars; numbers 4 / +2 / +1 / 6 / X; printed 'Henry'"
+},
+{
+"file": "cwcanadianplat1_09.png",
+"kind": "option",
+"name": "Grenade",
+"sub": null,
+"cost": 5,
+"rotation": 90,
+"stripes": [],
+"units": [
+[
+"Grenade",
+3
+]
+],
+"breaking_point": 0,
+"markers": "X3",
+"name_colour": "red",
+"partial": true,
+"confidence": "medium",
+"notes": "Crop cuts off the right side: cost tab and X3 only partly visible. Cost 5 and X3 read from the overview map, not the crop. Name reads bottom to top; stripes not visible in crop"
+},
+{
+"file": "cwcanadianplat1_10.png",
+"kind": "unit",
+"name": "Bren",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Numbers 4 / +2 / +2 / 5 / X; red border; text reads bottom to top"
+},
+{
+"file": "cwcanadianplat1_11.png",
+"kind": "unit",
+"name": "Leader Team",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Same design as 07"
+},
+{
+"file": "cwcanadianplat1_12.png",
+"kind": "option",
+"name": "Bren Platoon",
+"sub": null,
+"cost": 65,
+"rotation": 0,
+"stripes": [
+"green",
+"black"
+],
+"units": [
+[
+"Leader Team",
+1
+],
+[
+"Fire Team",
+1
+],
+[
+"Bren",
+1
+]
+],
+"breaking_point": 2,
+"markers": null,
+"name_colour": "white",
+"partial": false,
+"confidence": "high",
+"notes": ""
+},
+{
+"file": "cwcanadianplat1_13.png",
+"kind": "option",
+"name": "Woodsmen",
+"sub": null,
+"cost": 15,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"markers": null,
+"name_colour": "red",
+"partial": false,
+"confidence": "high",
+"notes": "Name reads bottom to top; stripes at top and bottom as seen (green left, black right); shows ability icons only (burst, range arrows, bayonet, green bush target)"
+},
+{
+"file": "cwcanadianplat1_14.png",
+"kind": "unit",
+"name": "M 3A1 Halftrack",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Vehicle counter, differs from 05 (no stone load on bonnet, plain front); numbers 6 / +3 / +2 / 6 / X"
+},
+{
+"file": "cwcanadianplat1_15.png",
+"kind": "unit",
+"name": "Bren",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Same design as 10"
+},
+{
+"file": "cwcanadianplat1_16.png",
+"kind": "unit",
+"name": "Bren",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Same design as 10"
+},
+{
+"file": "cwcanadianplat1_17.png",
+"kind": "unit",
+"name": "Leader Team",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Same design as 07"
+},
+{
+"file": "cwcanadianplat1_18.png",
+"kind": "option",
+"name": "Mechanized Bren",
+"sub": null,
+"cost": 75,
+"rotation": 0,
+"stripes": [
+"green",
+"black"
+],
+"units": [
+[
+"Halftrack M3A1",
+1
+],
+[
+"Leader Team",
+1
+],
+[
+"Bren",
+1
+]
+],
+"breaking_point": 2,
+"markers": null,
+"name_colour": "white",
+"partial": false,
+"confidence": "high",
+"notes": "Caption printed 'Halftrack M3AI'"
+},
+{
+"file": "cwcanadianplat1_19.png",
+"kind": "unit",
+"name": "PIAT",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Numbers 4 / +3 / +0 / 5 / +2; range-5 icon; red border; text reads bottom to top"
+},
+{
+"file": "cwcanadianplat1_20.png",
+"kind": "unit",
+"name": "Fire Team",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Numbers 3 / +1 / +2 / 4 / X; text reads bottom to top"
+},
+{
+"file": "cwcanadianplat1_21.png",
+"kind": "unit",
+"name": "Fire Team",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"green",
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Numbers 3 / +1 / +2 / 4 / X; text reads bottom to top; same as 20"
+},
+{
+"file": "cwcanadianplat1_22.png",
+"kind": "option",
+"name": "Mechanized PIAT",
+"sub": null,
+"cost": 70,
+"rotation": 0,
+"stripes": [
+"green",
+"black"
+],
+"units": [
+[
+"Halftrack M3A1",
+1
+],
+[
+"Leader Team",
+1
+],
+[
+"PIAT",
+1
+]
+],
+"breaking_point": 2,
+"markers": null,
+"name_colour": "white",
+"partial": false,
+"confidence": "high",
+"notes": "Caption printed 'Halftrack M3AI'"
+}
+]

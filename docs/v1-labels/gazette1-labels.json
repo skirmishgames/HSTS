@@ -1,0 +1,166 @@
+[
+ {
+  "file": "gazette11_01.png",
+  "kind": "other",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "low",
+  "notes": "Crop is effectively the whole sheet (3029x2510) holding many pieces, not a single piece. Contains: British and US Minesweepers counters, German Minensucher counters, 57mm AT Gun, 75mm Pack Howitzer M8 x2, 10.5 cm leFH 18 counters, options 57mm AT Gun 20, 75mm Pack Howitzer M8 30 x2, Minesweepers 10 (British and US versions), Minensucher 10, 10.5 cm leFH18 40, tile-like card 'Achtung Minen!' 50 (Minefield X4 (3 mines + 1 decoy) twice), British roundel '!' marker, Achtung Minen sign markers, clover-shaped terrain markers. Individual pieces are covered by other crops or missed by the cropper."
+ },
+ {
+  "file": "gazette11_02.png",
+  "kind": "other",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "low",
+  "notes": "Narrow right-edge strip of the sheet (496x2510) holding several clover-shaped terrain markers and five 'Achtung Minen' skull sign markers, cut off at the right edge. Not a single piece."
+ },
+ {
+  "file": "gazette11_03.png",
+  "kind": "unit",
+  "name": "Minesweepers",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "brown",
+   "black",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "British Commonwealth counter (roundel badge), three soldiers with mine detectors. Name reads bottom to top. Side tabs brown with black centre; colours are medium confidence."
+ },
+ {
+  "file": "gazette11_04.png",
+  "kind": "other",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Clover-shaped terrain/mine-field marker (grass, rocks), cut off by the cropper (clipped at top). No text."
+ },
+ {
+  "file": "gazette11_05.png",
+  "kind": "unit",
+  "name": "Minesweepers",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "brown",
+   "black",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Duplicate of crop 3, British roundel version."
+ },
+ {
+  "file": "gazette11_06.png",
+  "kind": "other",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Clover-shaped terrain/mine-field marker, clipped at top. No text. Same as crop 4."
+ },
+ {
+  "file": "gazette11_07.png",
+  "kind": "other",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Clover-shaped terrain/mine-field marker with rocks, no text. Slightly clipped at sides by the cropper."
+ },
+ {
+  "file": "gazette11_08.png",
+  "kind": "marker",
+  "name": "Achtung Minen",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Mine warning sign marker with skull. Text reads bottom to top on left side. Mirrors crop 10."
+ },
+ {
+  "file": "gazette11_09.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Wooden marker with British roundel and a large '!' bar at right; cut off at the right edge so the '!' is only partly visible. No text."
+ },
+ {
+  "file": "gazette11_10.png",
+  "kind": "marker",
+  "name": "Achtung Minen",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Mine warning sign marker with skull. Same as crop 8."
+ },
+ {
+  "file": "gazette11_11.png",
+  "kind": "marker",
+  "name": "Achtung Minen",
+  "sub": null,
+  "cost": null,
+  "rotation": 270,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Mine warning sign marker with skull; text on the right reads top to bottom, so it is the opposite orientation to crops 8 and 10."
+ },
+ {
+  "file": "gazette11_12.png",
+  "kind": "other",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Clover-shaped terrain/mine-field marker with rocks, no text."
+ },
+ {
+  "file": "gazette11_13.png",
+  "kind": "marker",
+  "name": "Achtung Minen",
+  "sub": null,
+  "cost": null,
+  "rotation": 270,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Mine warning sign marker, same as crop 11."
+ }
+]

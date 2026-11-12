@@ -19,6 +19,7 @@ const groups = [
   { name: 'Heroes of Normandie V2: expansions', items: pick('hon2', ['Small box', 'Single punchboard', 'Gazette']) },
   { name: 'First edition: boxes and scenario packs', items: pick('hon1', ['Big box', 'Small box']) },
   { name: 'First edition: army boxes and punchboards', items: pick('hon1', ['Multiple punchboards', 'Single punchboard']) },
+  { name: 'First edition: gazettes', items: pick('hon1', ['Gazette']) },
   { name: 'First edition: terrain', items: pick('hon1', ['Terrain']) },
   { name: 'Heroes of Stalingrad: extras', items: pick('hos', [], ['hos-battlegrounds-2019', 'hos-battleground-set-5-the-sewers', 'hos-battlefield-stories-1-all-quiet']) }
 ].filter(g => g.items.length);

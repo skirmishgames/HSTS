@@ -260,6 +260,56 @@ window.HTS_PRODUCTS = [
   ]
  },
  {
+  "name": "First edition: gazettes",
+  "items": [
+   {
+    "code": "hon1-gazette-0",
+    "name": "Gazette 0",
+    "note": ""
+   },
+   {
+    "code": "hon1-gazette-1",
+    "name": "Gazette 1",
+    "note": ""
+   },
+   {
+    "code": "hon1-gazette-2",
+    "name": "Gazette 2",
+    "note": ""
+   },
+   {
+    "code": "hon1-gazette-3",
+    "name": "Gazette 3",
+    "note": ""
+   },
+   {
+    "code": "hon1-gazette-4",
+    "name": "Gazette 4",
+    "note": ""
+   },
+   {
+    "code": "hon1-gazette-5",
+    "name": "Gazette 5",
+    "note": ""
+   },
+   {
+    "code": "hon1-gazette-6",
+    "name": "Gazette 6",
+    "note": ""
+   },
+   {
+    "code": "hon1-gazette-7",
+    "name": "Gazette 7",
+    "note": ""
+   },
+   {
+    "code": "hon1-gazette-8",
+    "name": "Gazette 8",
+    "note": ""
+   }
+  ]
+ },
+ {
   "name": "First edition: terrain",
   "items": [
    {

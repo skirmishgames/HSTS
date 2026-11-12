@@ -1,0 +1,591 @@
+[
+ {
+  "file": "usrangers1_01.png",
+  "kind": "other",
+  "name": "US",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Sheet title lettering (word 'US' of 'US Rangers Front')"
+ },
+ {
+  "file": "usrangers1_02.png",
+  "kind": "other",
+  "name": "Rangers",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Sheet title lettering"
+ },
+ {
+  "file": "usrangers1_03.png",
+  "kind": "other",
+  "name": "Front",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Sheet title lettering"
+ },
+ {
+  "file": "usrangers1_04.png",
+  "kind": "unit",
+  "name": "Recon",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 soldiers; stats 4 / +2 / +1 / 5 / X; icons: 3-wing, sword +1, question-mark cycle, skull. Stripes at left/right edges as printed, listed top to bottom of crop as shown"
+ },
+ {
+  "file": "usrangers1_05.png",
+  "kind": "tile",
+  "name": "US Rangers",
+  "sub": "5th Ranger Battalion",
+  "cost": 80,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "blue",
+     "yellow"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "blue",
+     "yellow"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "blue",
+     "yellow"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "blue",
+     "yellow"
+    ]
+   }
+  ],
+  "special_ability_slot": 0,
+  "units": [
+   [
+    "Recon Team",
+    1
+   ],
+   [
+    "Support Team",
+    1
+   ],
+   [
+    "Fire Team",
+    1
+   ],
+   [
+    "\"Ace\" Parker",
+    1
+   ]
+  ],
+  "breaking_point": 3,
+  "partial": false,
+  "confidence": "high",
+  "notes": "Rotation 90 means the star-tab slot (at bottom in crop) becomes leftmost. All 4 slots look the same width. Some slots show a grey/black centre stripe under the blue; recorded as yellow/blue/yellow. Star tab on the first slot."
+ },
+ {
+  "file": "usrangers1_06.png",
+  "kind": "tile",
+  "name": "Cpt. M. Pepper",
+  "sub": "Heavy Stormer",
+  "cost": 25,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "tile_type": "hero",
+  "slots": [],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "Pepper",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero portrait tile, no slots; small unit counter picture bottom right (Pepper, star icon)"
+ },
+ {
+  "file": "usrangers1_07.png",
+  "kind": "unit",
+  "name": "\"Ace\" Parker",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter, 1 soldier, gold border and gold stars icon; stats 4 / +2 / +1 / 6 / X; sword +1, blue arrow 4 icon"
+ },
+ {
+  "file": "usrangers1_08.png",
+  "kind": "unit",
+  "name": "Support Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "4 soldiers; stats 4 / +2 / +2 / 5 / X"
+ },
+ {
+  "file": "usrangers1_09.png",
+  "kind": "unit",
+  "name": "Fire Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "5 soldiers; stats 4 / +2 / +1 / 5 / X"
+ },
+ {
+  "file": "usrangers1_10.png",
+  "kind": "option",
+  "name": "Support Squad",
+  "sub": null,
+  "cost": 60,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "units": [
+   [
+    "Fire Team",
+    1
+   ],
+   [
+    "Support Team",
+    1
+   ],
+   [
+    ".30 Cal",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "usrangers1_11.png",
+  "kind": "unit",
+  "name": "Recon",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 soldiers; stats 4 / +2 / +1 / 5 / X; looks identical to 04, 12 and 16"
+ },
+ {
+  "file": "usrangers1_12.png",
+  "kind": "unit",
+  "name": "Recon",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 soldiers; stats 4 / +2 / +1 / 5 / X; looks identical to 04, 11 and 16"
+ },
+ {
+  "file": "usrangers1_13.png",
+  "kind": "unit",
+  "name": "Fire Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "5 soldiers; stats 4 / +2 / +1 / 5 / X"
+ },
+ {
+  "file": "usrangers1_14.png",
+  "kind": "unit",
+  "name": "Pepper",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter, 1 soldier, gold border and star icon; stats 4 / +2 / +2 / 6 / X"
+ },
+ {
+  "file": "usrangers1_15.png",
+  "kind": "option",
+  "name": "Gears",
+  "sub": null,
+  "cost": 20,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "units": [
+   [
+    "Rifle Grenade",
+    1
+   ],
+   [
+    "Ammo Belt",
+    1
+   ],
+   [
+    "Ammo",
+    1
+   ],
+   [
+    "Sticky Bomb",
+    1
+   ],
+   [
+    "Grenade",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X5",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear pictures shown, not unit pictures; Rifle Grenade and Ammo Belt labels partly hidden"
+ },
+ {
+  "file": "usrangers1_16.png",
+  "kind": "unit",
+  "name": "Recon",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 soldiers; stats 4 / +2 / +1 / 5 / X; looks identical to 04, 11, 12"
+ },
+ {
+  "file": "usrangers1_17.png",
+  "kind": "unit",
+  "name": "Support Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "4 soldiers; stats 4 / +2 / +2 / 5 / X"
+ },
+ {
+  "file": "usrangers1_18.png",
+  "kind": "unit",
+  "name": "Bazooka",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "2 soldiers with bazooka; red border; stats 4 / +0 / +4 / 5 / +3; icons: 1 burst, 7 arrow, template, cycle, skull"
+ },
+ {
+  "file": "usrangers1_19.png",
+  "kind": "marker",
+  "name": "Rifle Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker with range arrow 7"
+ },
+ {
+  "file": "usrangers1_20.png",
+  "kind": "marker",
+  "name": "Ammo Belt",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker, +1 and +2 modifier hexes"
+ },
+ {
+  "file": "usrangers1_21.png",
+  "kind": "option",
+  "name": "Ambush Squad",
+  "sub": null,
+  "cost": 50,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "units": [
+   [
+    "Recon Team",
+    2
+   ],
+   [
+    "Bazooka",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "usrangers1_22.png",
+  "kind": "marker",
+  "name": "Sticky Bomb",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker with range arrow 1"
+ },
+ {
+  "file": "usrangers1_23.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker with range arrow 2 and red template"
+ },
+ {
+  "file": "usrangers1_24.png",
+  "kind": "unit",
+  "name": "Support Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "4 soldiers; stats 4 / +2 / +2 / 5 / X"
+ },
+ {
+  "file": "usrangers1_25.png",
+  "kind": "unit",
+  "name": "Fire Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "5 soldiers; stats 4 / +2 / +1 / 5 / X"
+ },
+ {
+  "file": "usrangers1_26.png",
+  "kind": "unit",
+  "name": ".30 Cal",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "2 soldiers with machine gun; red border; stats 4 / +0 / +0 / 5 / X; tripod-cycle and skull icons"
+ },
+ {
+  "file": "usrangers1_27.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker with range arrow 2 and red template; same as 23"
+ },
+ {
+  "file": "usrangers1_28.png",
+  "kind": "marker",
+  "name": "Ammo",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker, +1 hex"
+ },
+ {
+  "file": "usrangers1_29.png",
+  "kind": "option",
+  "name": "Rangers Squad",
+  "sub": null,
+  "cost": 60,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "blue",
+   "yellow"
+  ],
+  "units": [
+   [
+    "Recon Team",
+    1
+   ],
+   [
+    "Fire Team",
+    1
+   ],
+   [
+    "Support Team",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ }
+]

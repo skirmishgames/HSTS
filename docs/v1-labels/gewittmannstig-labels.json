@@ -1,0 +1,533 @@
+[
+ {
+  "file": "gewittmannstig1_01.png",
+  "kind": "tile",
+  "name": "Hauptsturmf\u00fchrer M. Wittmann",
+  "sub": "Schwere SS-Panzer-Abteilung 101",
+  "cost": 110,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "tile_type": "command",
+  "slots": [
+   {
+    "size": "wide",
+    "stripes": [
+     "black",
+     "red",
+     "black"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "red",
+     "black"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "red",
+     "black"
+    ]
+   }
+  ],
+  "special_ability_slot": 0,
+  "units": [
+   [
+    "M. Wittmann (Tiger I)",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "partial": false,
+  "confidence": "high",
+  "notes": "Laurel-wreath rank badge, third line reads 'Heroic Platoon'; classed as command tile, could be argued hero. First slot clearly wider; star tab above it. Slot stripes show thin white/grey edges beside black and red. Portrait of Wittmann."
+ },
+ {
+  "file": "gewittmannstig1_02.png",
+  "kind": "unit",
+  "name": "M. Wittmann",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Tiger I hero counter, yellow border, Iron Cross badge. Name reads bottom to top."
+ },
+ {
+  "file": "gewittmannstig1_03.png",
+  "kind": "unit",
+  "name": "Tiger I",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "gewittmannstig1_04.png",
+  "kind": "option",
+  "name": "Tiger I",
+  "sub": null,
+  "cost": 90,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "units": [
+   [
+    "Tiger I",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "gewittmannstig1_05.png",
+  "kind": "option",
+  "name": "Intrepid",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Large yellow number 1 shown."
+ },
+ {
+  "file": "gewittmannstig1_06.png",
+  "kind": "option",
+  "name": "Fuel",
+  "sub": null,
+  "cost": 5,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "gewittmannstig1_07.png",
+  "kind": "option",
+  "name": "88mm Flak 36",
+  "sub": null,
+  "cost": 50,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "units": [
+   [
+    "88mm Flak 36",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "yellow",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name text is yellow. Side stripes show thin white edges beside the red."
+ },
+ {
+  "file": "gewittmannstig1_08.png",
+  "kind": "marker",
+  "name": "Fuel",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Fuel marker with +1 arrow."
+ },
+ {
+  "file": "gewittmannstig1_09.png",
+  "kind": "marker",
+  "name": "Fuel",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Fuel marker with +1 arrow."
+ },
+ {
+  "file": "gewittmannstig1_10.png",
+  "kind": "option",
+  "name": "Blitzkrieg",
+  "sub": null,
+  "cost": 30,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "yellow",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Three blue arrows and an hourglass icon. Stripes have white edges beside red."
+ },
+ {
+  "file": "gewittmannstig1_11.png",
+  "kind": "option",
+  "name": "APC Shell",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "gewittmannstig1_12.png",
+  "kind": "option",
+  "name": "HE Shell",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "gewittmannstig1_13.png",
+  "kind": "option",
+  "name": "Field Artillery",
+  "sub": null,
+  "cost": 25,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "+2",
+  "name_colour": "yellow",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Two artillery cards pictured. Stripes have white edges beside the red."
+ },
+ {
+  "file": "gewittmannstig1_14.png",
+  "kind": "option",
+  "name": "Artillery",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "+1",
+  "name_colour": "yellow",
+  "partial": false,
+  "confidence": "high",
+  "notes": "One artillery card pictured. Stripes have white edges beside the red."
+ },
+ {
+  "file": "gewittmannstig1_15.png",
+  "kind": "unit",
+  "name": "88mm Flak 36",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Large gun counter with red border. Name reads bottom to top on left. Side stripe order read from a narrow strip, so colour order is medium confidence."
+ },
+ {
+  "file": "gewittmannstig1_16.png",
+  "kind": "marker",
+  "name": "Fuel",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Fuel marker with +1 arrow."
+ },
+ {
+  "file": "gewittmannstig1_17.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "No name printed. Large 1, infantry-casualty picture with explosion, below it a yellow-outlined and a red-outlined weapon icon separated by a slash. Looks like a damage/casualty marker."
+ },
+ {
+  "file": "gewittmannstig1_18.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "No name printed. Large 2, tank track with explosion, blue arrow with X below. Looks like a vehicle damage marker."
+ },
+ {
+  "file": "gewittmannstig1_19.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "No name printed. '3' and '4' either side of a tank with explosion, two orange SUPPRESSED -2 icons below. Damage/result marker."
+ },
+ {
+  "file": "gewittmannstig1_20.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "No name printed. '5' beside a destroyed tank with debris, three X hexes below (orange, purple, grey/white). Damage/result marker."
+ },
+ {
+  "file": "gewittmannstig1_21.png",
+  "kind": "marker",
+  "name": "HE Shell",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Ammo marker, shell with explosion icon, no cost."
+ },
+ {
+  "file": "gewittmannstig1_22.png",
+  "kind": "marker",
+  "name": "HE Shell",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Ammo marker, no cost."
+ },
+ {
+  "file": "gewittmannstig1_23.png",
+  "kind": "marker",
+  "name": "HE Shell",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Ammo marker, no cost."
+ },
+ {
+  "file": "gewittmannstig1_24.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "No name printed. Duplicate of crop 17 (large 1, infantry casualty picture, yellow/red weapon icons)."
+ },
+ {
+  "file": "gewittmannstig1_25.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "No name printed. Duplicate of crop 18 (large 2, tank track with explosion, blue X arrow)."
+ },
+ {
+  "file": "gewittmannstig1_26.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "No name printed. Duplicate of crop 19 (3 and 4 with tank, two SUPPRESSED -2 icons)."
+ },
+ {
+  "file": "gewittmannstig1_27.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "No name printed. Duplicate of crop 20 (5 with destroyed tank, three X hexes)."
+ },
+ {
+  "file": "gewittmannstig1_28.png",
+  "kind": "marker",
+  "name": "APC Shell",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Ammo marker with +1, no cost."
+ },
+ {
+  "file": "gewittmannstig1_29.png",
+  "kind": "marker",
+  "name": "APC Shell",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Ammo marker with +1, no cost."
+ },
+ {
+  "file": "gewittmannstig1_30.png",
+  "kind": "marker",
+  "name": "APC Shell",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "red",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Ammo marker with +1, no cost."
+ }
+]

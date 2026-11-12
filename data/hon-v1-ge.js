@@ -322,6 +322,163 @@ HTS_DATA["hon-v1-ge"] = {
    "slots": [],
    "own": [],
    "note": "Army size 200+ points."
+  },
+  {
+   "id": "ss_panzergrenadiere",
+   "name": "SS-Panzergrenadiere",
+   "sub": "I. Battalion, Leibstandarte-SS AH",
+   "cost": 100,
+   "type": "platoon",
+   "set": "hon1-ss-panzergrenadiere",
+   "squares": 3,
+   "img": "img/hon/v1/ge/tiles/ss_panzergrenadiere.webp",
+   "w": 1915,
+   "h": 600,
+   "sheet": "SS Panzergrenadiere",
+   "units": [
+    [
+     "Oberstumfuhrer Hessler",
+     1,
+     "officer"
+    ],
+    [
+     "Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "MG Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Sd.Kfz 250/1",
+     1,
+     "vehicle"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.019,
+     "y": 0.19,
+     "w": 0.213,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "KWK",
+      "K"
+     ]
+    },
+    {
+     "x": 0.242,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.592,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.767,
+     "y": 0.19,
+     "w": 0.214,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "KWK"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "heinrich_von_kamptz",
+   "name": "Heinrich von Kamptz",
+   "sub": "Aryan Plague",
+   "cost": 30,
+   "type": "hero",
+   "set": "hon1-ss-panzergrenadiere",
+   "squares": 0,
+   "img": "img/hon/v1/ge/tiles/heinrich_von_kamptz.webp",
+   "w": 459,
+   "h": 600,
+   "sheet": "SS Panzergrenadiere",
+   "units": [
+    [
+     "Von Kamptz",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
+  },
+  {
+   "id": "hauptsturmfuhrer_m_wittmann",
+   "name": "Hauptsturmführer M. Wittmann",
+   "sub": "Schwere SS-Panzer-Abteilung 101",
+   "cost": 110,
+   "type": "platoon",
+   "set": "hon1-wittmann-s-tigers",
+   "squares": 0,
+   "img": "img/hon/v1/ge/tiles/hauptsturmfuhrer_m_wittmann.webp",
+   "w": 1859,
+   "h": 600,
+   "sheet": "Wittmann's Tigers",
+   "units": [
+    [
+     "M. Wittmann (Tiger I)",
+     1,
+     "vehicle"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.03,
+     "y": 0.225,
+     "w": 0.227,
+     "h": 0.7,
+     "size": "w",
+     "stripes": [
+      "KRK",
+      "cmd"
+     ]
+    },
+    {
+     "x": 0.609,
+     "y": 0.225,
+     "w": 0.174,
+     "h": 0.7,
+     "size": "n",
+     "stripes": [
+      "KRK",
+      "cmd"
+     ]
+    },
+    {
+     "x": 0.794,
+     "y": 0.225,
+     "w": 0.174,
+     "h": 0.7,
+     "size": "n",
+     "stripes": [
+      "KRK",
+      "cmd"
+     ]
+    }
+   ],
+   "own": []
   }
  ],
  "options": [
@@ -932,6 +1089,291 @@ HTS_DATA["hon-v1-ge"] = {
    "h": 363,
    "sheet": "Army Box ge4",
    "note": "Markers: X3."
+  },
+  {
+   "id": "ss_assault_group",
+   "name": "SS Assault Group",
+   "cat": "support",
+   "cost": 75,
+   "squares": 2,
+   "set": "hon1-ss-panzergrenadiere",
+   "size": "w",
+   "stripes": [
+    "KWK"
+   ],
+   "img": "img/hon/v1/ge/options/ss_assault_group.webp",
+   "w": 364,
+   "h": 363,
+   "sheet": "SS Panzergrenadiere",
+   "units": [
+    [
+     "Sd.Kfz 250/1",
+     1,
+     "vehicle"
+    ],
+    [
+     "Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "MG Group",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "ss_panzergrenadiere",
+   "name": "SS Panzergrenadiere",
+   "cat": "support",
+   "cost": 65,
+   "squares": 2,
+   "set": "hon1-ss-panzergrenadiere",
+   "size": "w",
+   "stripes": [
+    "KWK"
+   ],
+   "img": "img/hon/v1/ge/options/ss_panzergrenadiere.webp",
+   "w": 364,
+   "h": 363,
+   "sheet": "SS Panzergrenadiere",
+   "units": [
+    [
+     "Sd.Kfz 250/1",
+     1,
+     "vehicle"
+    ],
+    [
+     "Fire Group",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "nazi_basterds",
+   "name": "Nazi Basterds",
+   "cat": "gear",
+   "cost": 30,
+   "squares": 0,
+   "set": "hon1-ss-panzergrenadiere",
+   "size": "n",
+   "stripes": [
+    "KWK"
+   ],
+   "img": "img/hon/v1/ge/options/nazi_basterds.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "SS Panzergrenadiere"
+  },
+  {
+   "id": "schwimmwagen_ss_panzergrenadiere",
+   "name": "Schwimmwagen",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-ss-panzergrenadiere",
+   "size": "n",
+   "stripes": [
+    "KWK"
+   ],
+   "img": "img/hon/v1/ge/options/schwimmwagen_ss_panzergrenadiere.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "SS Panzergrenadiere",
+   "units": [
+    [
+     "Schwimmwagen",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "stummel",
+   "name": "Stummel",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-ss-panzergrenadiere",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/stummel.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "SS Panzergrenadiere",
+   "units": [
+    [
+     "Sd.Kfz 251/9 Stummel",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "bloodthirsty",
+   "name": "Bloodthirsty",
+   "cat": "gear",
+   "cost": 25,
+   "squares": 0,
+   "set": "hon1-ss-panzergrenadiere",
+   "size": "n",
+   "stripes": [
+    "KWK"
+   ],
+   "img": "img/hon/v1/ge/options/bloodthirsty.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "SS Panzergrenadiere"
+  },
+  {
+   "id": "tiger_i",
+   "name": "Tiger I",
+   "cat": "support",
+   "cost": 90,
+   "squares": 1,
+   "set": "hon1-wittmann-s-tigers",
+   "size": "w",
+   "stripes": [
+    "KRK"
+   ],
+   "img": "img/hon/v1/ge/options/tiger_i.webp",
+   "w": 363,
+   "h": 363,
+   "sheet": "Wittmann's Tigers",
+   "units": [
+    [
+     "Tiger I",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "intrepid",
+   "name": "Intrepid",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-wittmann-s-tigers",
+   "size": "n",
+   "stripes": [
+    "KRK"
+   ],
+   "img": "img/hon/v1/ge/options/intrepid.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "Wittmann's Tigers"
+  },
+  {
+   "id": "fuel_wittmann_s_tigers",
+   "name": "Fuel",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "hon1-wittmann-s-tigers",
+   "size": "n",
+   "stripes": [
+    "KRK"
+   ],
+   "img": "img/hon/v1/ge/options/fuel_wittmann_s_tigers.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "Wittmann's Tigers",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "88mm_flak_36",
+   "name": "88mm Flak 36",
+   "cat": "order",
+   "cost": 50,
+   "squares": 1,
+   "set": "hon1-wittmann-s-tigers",
+   "size": "w",
+   "stripes": [
+    "KRK"
+   ],
+   "img": "img/hon/v1/ge/options/88mm_flak_36.webp",
+   "w": 364,
+   "h": 363,
+   "sheet": "Wittmann's Tigers",
+   "units": [
+    [
+     "88mm Flak 36",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "blitzkrieg",
+   "name": "Blitzkrieg",
+   "cat": "order",
+   "cost": 30,
+   "squares": 0,
+   "set": "hon1-wittmann-s-tigers",
+   "size": "w",
+   "stripes": [
+    "cmd"
+   ],
+   "img": "img/hon/v1/ge/options/blitzkrieg.webp",
+   "w": 363,
+   "h": 363,
+   "sheet": "Wittmann's Tigers"
+  },
+  {
+   "id": "apc_shell_wittmann_s_tigers",
+   "name": "APC Shell",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-wittmann-s-tigers",
+   "size": "n",
+   "stripes": [
+    "KRK"
+   ],
+   "img": "img/hon/v1/ge/options/apc_shell_wittmann_s_tigers.webp",
+   "w": 266,
+   "h": 363,
+   "sheet": "Wittmann's Tigers",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "he_shell",
+   "name": "HE Shell",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-wittmann-s-tigers",
+   "size": "n",
+   "stripes": [
+    "KRK"
+   ],
+   "img": "img/hon/v1/ge/options/he_shell.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "Wittmann's Tigers",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "field_artillery_wittmann_s_tigers",
+   "name": "Field Artillery",
+   "cat": "order",
+   "cost": 25,
+   "squares": 0,
+   "set": "hon1-wittmann-s-tigers",
+   "size": "w",
+   "stripes": [
+    "cmd"
+   ],
+   "img": "img/hon/v1/ge/options/field_artillery_wittmann_s_tigers.webp",
+   "w": 364,
+   "h": 364,
+   "sheet": "Wittmann's Tigers",
+   "note": "Markers: +2."
   }
  ]
 };

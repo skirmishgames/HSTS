@@ -1,0 +1,491 @@
+[
+ {
+  "file": "gesspanzergran1_01.png",
+  "kind": "tile",
+  "name": "SS-Panzergrenadiere",
+  "sub": "I. Battalion, Leibstandarte-SS AH",
+  "cost": 100,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "white",
+     "black"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "white",
+     "black"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "white",
+     "black"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "white",
+     "black"
+    ]
+   }
+  ],
+  "special_ability_slot": 0,
+  "units": [
+   [
+    "Oberstumfuhrer Hessler",
+    1
+   ],
+   [
+    "Fire Group",
+    1
+   ],
+   [
+    "MG Group",
+    1
+   ],
+   [
+    "Sd.Kfz 250/1",
+    1
+   ]
+  ],
+  "breaking_point": 3,
+  "partial": false,
+  "confidence": "high",
+  "notes": "All four slots look the same width. Star tab above first slot. Slot stripes are black/white/black with Leibstandarte key badge. Hessler picture has two stars."
+ },
+ {
+  "file": "gesspanzergran1_02.png",
+  "kind": "unit",
+  "name": "Schwimmwagen",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle counter. Stripes stick out at top and bottom."
+ },
+ {
+  "file": "gesspanzergran1_03.png",
+  "kind": "unit",
+  "name": "SS Fire Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top on left side."
+ },
+ {
+  "file": "gesspanzergran1_04.png",
+  "kind": "option",
+  "name": "SS Assault Group",
+  "sub": null,
+  "cost": 75,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "units": [
+   [
+    "Sd.Kfz 250/1",
+    1
+   ],
+   [
+    "Fire Group",
+    1
+   ],
+   [
+    "MG Group",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "gesspanzergran1_05.png",
+  "kind": "option",
+  "name": "SS Panzergrenadiere",
+  "sub": null,
+  "cost": 65,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "units": [
+   [
+    "Sd.Kfz 250/1",
+    1
+   ],
+   [
+    "Fire Group",
+    2
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "gesspanzergran1_06.png",
+  "kind": "option",
+  "name": "Nazi Basterds",
+  "sub": null,
+  "cost": 30,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Cost printed as +30 PTS. Shows US star badge = Leibstandarte badge, and sword +1 icon."
+ },
+ {
+  "file": "gesspanzergran1_07.png",
+  "kind": "marker",
+  "name": "Magnetic Mine",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Mine marker with distance arrow showing 1."
+ },
+ {
+  "file": "gesspanzergran1_08.png",
+  "kind": "tile",
+  "name": "Heinrich von Kamptz",
+  "sub": "Aryan Plague",
+  "cost": 30,
+  "rotation": 270,
+  "stripes": [],
+  "tile_type": "hero",
+  "slots": [],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "Von Kamptz",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero tile, no slots, no stripes visible. Text reads top to bottom on right side."
+ },
+ {
+  "file": "gesspanzergran1_09.png",
+  "kind": "unit",
+  "name": "SS MG Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border."
+ },
+ {
+  "file": "gesspanzergran1_10.png",
+  "kind": "unit",
+  "name": "SS Fire Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "gesspanzergran1_11.png",
+  "kind": "unit",
+  "name": "Von Kamptz",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter, orange border, star."
+ },
+ {
+  "file": "gesspanzergran1_12.png",
+  "kind": "unit",
+  "name": "Hessler",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter, orange border, two stars."
+ },
+ {
+  "file": "gesspanzergran1_13.png",
+  "kind": "option",
+  "name": "Magnetic Mine",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripes are dark grey with black centre, not black/white/black. Shows three mines."
+ },
+ {
+  "file": "gesspanzergran1_14.png",
+  "kind": "marker",
+  "name": "Magnetic Mine",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripe at sides looks dark grey/black; white centre not clearly visible."
+ },
+ {
+  "file": "gesspanzergran1_15.png",
+  "kind": "option",
+  "name": "Schwimmwagen",
+  "sub": null,
+  "cost": 25,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "units": [
+   [
+    "Schwimmwagen",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "gesspanzergran1_16.png",
+  "kind": "option",
+  "name": "Stummel",
+  "sub": null,
+  "cost": 25,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "units": [
+   [
+    "Sd.Kfz 251/9 Stummel",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripes dark grey with black centre."
+ },
+ {
+  "file": "gesspanzergran1_17.png",
+  "kind": "unit",
+  "name": "SS Fire Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "gesspanzergran1_18.png",
+  "kind": "marker",
+  "name": "Magnetic Mine",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Same as other mine markers."
+ },
+ {
+  "file": "gesspanzergran1_19.png",
+  "kind": "option",
+  "name": "Bloodthirsty",
+  "sub": null,
+  "cost": 25,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Landscape card, name reads bottom to top. Shows knife, sword icon = reroll icon, skull."
+ },
+ {
+  "file": "gesspanzergran1_20.png",
+  "kind": "unit",
+  "name": "Sd.Kfz.250/1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripes stick out at top and bottom. One crewman visible."
+ },
+ {
+  "file": "gesspanzergran1_21.png",
+  "kind": "unit",
+  "name": "Sd.Kfz.250/1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Second copy, two crewmen visible."
+ },
+ {
+  "file": "gesspanzergran1_22.png",
+  "kind": "unit",
+  "name": "Sd.Kfz.251/9 Stummel",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripes dark grey with black centre. Two red triangle corner marks."
+ },
+ {
+  "file": "gesspanzergran1_23.png",
+  "kind": "unit",
+  "name": "SS MG Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border."
+ }
+]

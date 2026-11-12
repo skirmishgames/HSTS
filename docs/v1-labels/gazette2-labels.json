@@ -1,0 +1,316 @@
+[
+{
+"file": "gazette21_01.png",
+"kind": "marker",
+"name": null,
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [],
+"units": [],
+"breaking_point": 0,
+"partial": true,
+"confidence": "medium",
+"notes": "Large flame template (values -1 / +5 / +2 / +0 / Suppressed -2, printed sideways so upright rotation uncertain). Crop box is oversized: it also contains three HE Shell markers below it and the top edge of the Trailer counter, which have no separate crops (HE Shell x3 sit in this crop). No printed name on template"
+},
+{
+"file": "gazette21_02.png",
+"kind": "tile",
+"name": "Percy Hobart",
+"sub": "Hobart's Funnies",
+"cost": 30,
+"rotation": 90,
+"stripes": [
+"blue",
+"red",
+"white"
+],
+"tile_type": "command",
+"slots": [
+{
+"size": "narrow",
+"stripes": [
+"blue",
+"red",
+"white",
+"red",
+"blue"
+]
+},
+{
+"size": "narrow",
+"stripes": [
+"black"
+]
+},
+{
+"size": "narrow",
+"stripes": [
+"blue",
+"red",
+"white",
+"red",
+"blue"
+]
+}
+],
+"special_ability_slot": null,
+"units": [
+[
+"Major General Percy Hobart",
+1
+]
+],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Laurel-wreath title (command/hero style tile), text reads bottom to top. 3 slots all same width, each with RAF roundel badge; outer two slots have blue/red/white stripes, middle slot shows only black/brown line; slot order left to right after rotation is bottom, middle, top of the crop; no star tab visible"
+},
+{
+"file": "gazette21_03.png",
+"kind": "unit",
+"name": "Trailer",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Vehicle trailer counter with RAF roundel, number 7 at left, flame icon with green arrow; dark band at top and bottom is stripe/background, colour uncertain"
+},
+{
+"file": "gazette21_04.png",
+"kind": "marker",
+"name": "APC Shell",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Ammo marker with +1; no cost; dark bands at sides not read as stripes"
+},
+{
+"file": "gazette21_05.png",
+"kind": "marker",
+"name": "APC Shell",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Ammo marker with +1; no cost; dark bands at sides not read as stripes"
+},
+{
+"file": "gazette21_06.png",
+"kind": "marker",
+"name": "APC Shell",
+"sub": null,
+"cost": null,
+"rotation": 0,
+"stripes": [],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Ammo marker with +1; no cost; dark bands at sides not read as stripes"
+},
+{
+"file": "gazette21_07.png",
+"kind": "option",
+"name": "APC Shells",
+"sub": null,
+"cost": 10,
+"rotation": 0,
+"stripes": [
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"markers": "X3",
+"name_colour": "red",
+"partial": true,
+"confidence": "medium",
+"notes": "Crop cuts off the top so the name line is not in the crop; name 'APC Shells' read from overview map. Three AP shells picture, cost 10, X3. Stripe at sides dark brown/black, colour uncertain"
+},
+{
+"file": "gazette21_08.png",
+"kind": "option",
+"name": "HE Shells",
+"sub": null,
+"cost": 10,
+"rotation": 0,
+"stripes": [
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"markers": "X3",
+"name_colour": "red",
+"partial": false,
+"confidence": "high",
+"notes": "Three HE shells picture; stripe at sides dark brown/black, colour uncertain"
+},
+{
+"file": "gazette21_09.png",
+"kind": "option",
+"name": "Sherman Crab",
+"sub": null,
+"cost": 75,
+"rotation": 0,
+"stripes": [
+"black"
+],
+"units": [
+[
+"Sherman Crab",
+1
+]
+],
+"breaking_point": 1,
+"markers": null,
+"name_colour": "white",
+"partial": false,
+"confidence": "high",
+"notes": "Stripe at sides dark brown/black, colour uncertain"
+},
+{
+"file": "gazette21_10.png",
+"kind": "unit",
+"name": "Churchill Ark Mark 1",
+"sub": null,
+"cost": null,
+"rotation": 180,
+"stripes": [
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "medium",
+"notes": "Vehicle counter upside down, seems to be cut off at left edge (ramp side) so may be slightly clipped; printed 'Churchill Ark Mark I'; numbers 7 / +2 / +4 / X; stripes at top and bottom as seen dark"
+},
+{
+"file": "gazette21_11.png",
+"kind": "unit",
+"name": "Churchill Ark Mark 1",
+"sub": null,
+"cost": null,
+"rotation": 270,
+"stripes": [
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Vehicle counter, text reads top to bottom so needs 270 clockwise; different side/face from 10 (shows bridge-laying direction arrows); numbers 4 / +4 / +2 / 7 / X"
+},
+{
+"file": "gazette21_12.png",
+"kind": "unit",
+"name": "Churchill Crocodile",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Vehicle counter, text reads bottom to top; numbers 3 / +3 / +4 / +4 / 8 and flame icon; armour 10 / 8 / 8 / 8"
+},
+{
+"file": "gazette21_13.png",
+"kind": "unit",
+"name": "Sherman Crab",
+"sub": null,
+"cost": null,
+"rotation": 270,
+"stripes": [
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "medium",
+"notes": "Vehicle counter; name on right edge reads top to bottom so 270 clockwise; stat icons at top appear upside down in this view (counter is double-oriented), so upright direction is based on the name; flail at bottom; numbers 6 / 7 / +3 / +5 / +4 / X"
+},
+{
+"file": "gazette21_14.png",
+"kind": "unit",
+"name": "Hobart",
+"sub": null,
+"cost": null,
+"rotation": 90,
+"stripes": [
+"black"
+],
+"units": [],
+"breaking_point": 0,
+"partial": false,
+"confidence": "high",
+"notes": "Hero counter with yellow border and grey star; number X; text reads bottom to top; side bands dark brown/black, colour uncertain"
+},
+{
+"file": "gazette21_15.png",
+"kind": "option",
+"name": "Churchill Crocodile",
+"sub": null,
+"cost": 95,
+"rotation": 0,
+"stripes": [
+"black"
+],
+"units": [
+[
+"Trailer",
+1
+],
+[
+"Churchill Crocodile",
+1
+]
+],
+"breaking_point": 2,
+"markers": null,
+"name_colour": "white",
+"partial": false,
+"confidence": "high",
+"notes": "Stripe at sides dark brown/black, colour uncertain"
+},
+{
+"file": "gazette21_16.png",
+"kind": "option",
+"name": "Churchill Ark Mark 1",
+"sub": null,
+"cost": 25,
+"rotation": 0,
+"stripes": [
+"black"
+],
+"units": [
+[
+"Churchill Ark Mark 1",
+2
+]
+],
+"breaking_point": 1,
+"markers": null,
+"name_colour": "white",
+"partial": false,
+"confidence": "high",
+"notes": "Name on two lines 'Churchill Ark / Mark 1'; two pictures of the Ark (two counter sides); stripe at sides dark brown/black, colour uncertain"
+}
+]

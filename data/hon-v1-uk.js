@@ -421,6 +421,227 @@ HTS_DATA["hon-v1-uk"] = {
    ],
    "slots": [],
    "own": []
+  },
+  {
+   "id": "east_yorkshire_regiment",
+   "name": "East Yorkshire Regiment",
+   "sub": "3rd Inf. Div. 8th Infantry Brigade",
+   "cost": 55,
+   "type": "platoon",
+   "set": "hon1-east-yorkshire-regiment",
+   "squares": 3,
+   "img": "img/hon/v1/uk/tiles/east_yorkshire_regiment.webp",
+   "w": 1964,
+   "h": 549,
+   "sheet": "East Yorkshire Regiment",
+   "units": [
+    [
+     "3 Inch Mortar",
+     1,
+     "infantry"
+    ],
+    [
+     "Vickers",
+     1,
+     "infantry"
+    ],
+    [
+     "Lt. Higgins",
+     1,
+     "officer"
+    ],
+    [
+     "Flamer",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.019,
+     "y": 0.19,
+     "w": 0.213,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "WRW"
+     ]
+    },
+    {
+     "x": 0.242,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "WRW",
+      "K"
+     ]
+    },
+    {
+     "x": 0.592,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K",
+      "WRW"
+     ]
+    },
+    {
+     "x": 0.767,
+     "y": 0.19,
+     "w": 0.214,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "K",
+      "WRW"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "royal_winnipeg_rifles",
+   "name": "Royal Winnipeg Rifles",
+   "sub": "3rd Inf. Div. 7th Infantry Brigade",
+   "cost": 95,
+   "type": "platoon",
+   "set": "hon1-royal-winnipeg-rifles",
+   "squares": 3,
+   "img": "img/hon/v1/uk/tiles/royal_winnipeg_rifles.webp",
+   "w": 1965,
+   "h": 548,
+   "sheet": "Royal Winnipeg Rifles",
+   "units": [
+    [
+     "Lt. Henry",
+     1,
+     "officer"
+    ],
+    [
+     "2 Inch Mortar",
+     1,
+     "infantry"
+    ],
+    [
+     "Leader Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Bren",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.019,
+     "y": 0.19,
+     "w": 0.213,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "GKG"
+     ]
+    },
+    {
+     "x": 0.242,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "GKG",
+      "K"
+     ]
+    },
+    {
+     "x": 0.592,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.767,
+     "y": 0.19,
+     "w": 0.214,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "K",
+      "GKG"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "percy_hobart",
+   "name": "Percy Hobart",
+   "sub": "Hobart's Funnies",
+   "cost": 30,
+   "type": "command",
+   "set": "hon1-gazette-2",
+   "squares": 0,
+   "img": "img/hon/v1/uk/tiles/percy_hobart.webp",
+   "w": 1558,
+   "h": 563,
+   "sheet": "Gazette 2",
+   "units": [
+    [
+     "Major General Percy Hobart",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.02,
+     "y": 0.198,
+     "w": 0.271,
+     "h": 0.752,
+     "size": "w",
+     "stripes": [
+      "cmd",
+      "K"
+     ]
+    },
+    {
+     "x": 0.549,
+     "y": 0.198,
+     "w": 0.208,
+     "h": 0.752,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.771,
+     "y": 0.198,
+     "w": 0.207,
+     "h": 0.752,
+     "size": "n",
+     "stripes": [
+      "K",
+      "cmd"
+     ]
+    }
+   ],
+   "own": []
   }
  ],
  "options": [
@@ -1211,6 +1432,337 @@ HTS_DATA["hon-v1-uk"] = {
     [
      "Sherman Firefly",
      1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "ammo_belt_east_yorkshire_regiment",
+   "name": "Ammo Belt",
+   "cat": "gear",
+   "cost": 20,
+   "squares": 0,
+   "set": "hon1-east-yorkshire-regiment",
+   "size": "n",
+   "stripes": [
+    "WRW"
+   ],
+   "img": "img/hon/v1/uk/options/ammo_belt_east_yorkshire_regiment.webp",
+   "w": 267,
+   "h": 318,
+   "sheet": "East Yorkshire Regiment",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "hardboiled",
+   "name": "Hardboiled",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "hon1-east-yorkshire-regiment",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/uk/options/hardboiled.webp",
+   "w": 267,
+   "h": 317,
+   "sheet": "East Yorkshire Regiment",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "mortar_platoon_east_yorkshire_regiment",
+   "name": "Mortar Platoon",
+   "cat": "support",
+   "cost": 35,
+   "squares": 2,
+   "set": "hon1-east-yorkshire-regiment",
+   "size": "w",
+   "stripes": [
+    "WRW"
+   ],
+   "img": "img/hon/v1/uk/options/mortar_platoon_east_yorkshire_regiment.webp",
+   "w": 363,
+   "h": 326,
+   "sheet": "East Yorkshire Regiment",
+   "units": [
+    [
+     "3 Inch Mortar",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "at_gun_platoon",
+   "name": "AT Gun Platoon",
+   "cat": "support",
+   "cost": 55,
+   "squares": 2,
+   "set": "hon1-east-yorkshire-regiment",
+   "size": "w",
+   "stripes": [
+    "WRW"
+   ],
+   "img": "img/hon/v1/uk/options/at_gun_platoon.webp",
+   "w": 364,
+   "h": 327,
+   "sheet": "East Yorkshire Regiment",
+   "units": [
+    [
+     "6 Pounder AT Gun",
+     1,
+     "infantry"
+    ],
+    [
+     "Universal Carrier",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "mg_platoon_east_yorkshire_regiment",
+   "name": "MG Platoon",
+   "cat": "support",
+   "cost": 40,
+   "squares": 2,
+   "set": "hon1-east-yorkshire-regiment",
+   "size": "w",
+   "stripes": [
+    "WRW"
+   ],
+   "img": "img/hon/v1/uk/options/mg_platoon_east_yorkshire_regiment.webp",
+   "w": 364,
+   "h": 327,
+   "sheet": "East Yorkshire Regiment",
+   "units": [
+    [
+     "Vickers",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "bren_platoon_royal_winnipeg_rifles",
+   "name": "Bren Platoon",
+   "cat": "support",
+   "cost": 65,
+   "squares": 2,
+   "set": "hon1-royal-winnipeg-rifles",
+   "size": "w",
+   "stripes": [
+    "GKG"
+   ],
+   "img": "img/hon/v1/uk/options/bren_platoon_royal_winnipeg_rifles.webp",
+   "w": 363,
+   "h": 326,
+   "sheet": "Royal Winnipeg Rifles",
+   "units": [
+    [
+     "Leader Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Bren",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "woodsmen",
+   "name": "Woodsmen",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-royal-winnipeg-rifles",
+   "size": "n",
+   "stripes": [
+    "GKG"
+   ],
+   "img": "img/hon/v1/uk/options/woodsmen.webp",
+   "w": 267,
+   "h": 317,
+   "sheet": "Royal Winnipeg Rifles"
+  },
+  {
+   "id": "mechanized_bren",
+   "name": "Mechanized Bren",
+   "cat": "support",
+   "cost": 75,
+   "squares": 2,
+   "set": "hon1-royal-winnipeg-rifles",
+   "size": "w",
+   "stripes": [
+    "GKG"
+   ],
+   "img": "img/hon/v1/uk/options/mechanized_bren.webp",
+   "w": 364,
+   "h": 326,
+   "sheet": "Royal Winnipeg Rifles",
+   "units": [
+    [
+     "Halftrack M3A1",
+     1,
+     "vehicle"
+    ],
+    [
+     "Leader Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Bren",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "mechanized_piat",
+   "name": "Mechanized PIAT",
+   "cat": "support",
+   "cost": 70,
+   "squares": 2,
+   "set": "hon1-royal-winnipeg-rifles",
+   "size": "w",
+   "stripes": [
+    "GKG"
+   ],
+   "img": "img/hon/v1/uk/options/mechanized_piat.webp",
+   "w": 364,
+   "h": 327,
+   "sheet": "Royal Winnipeg Rifles",
+   "units": [
+    [
+     "Halftrack M3A1",
+     1,
+     "vehicle"
+    ],
+    [
+     "Leader Team",
+     1,
+     "infantry"
+    ],
+    [
+     "PIAT",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "apc_shells_gazette_2",
+   "name": "APC Shells",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-gazette-2",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/uk/options/apc_shells_gazette_2.webp",
+   "w": 266,
+   "h": 306,
+   "sheet": "Gazette 2",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "he_shells",
+   "name": "HE Shells",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-gazette-2",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/uk/options/he_shells.webp",
+   "w": 267,
+   "h": 317,
+   "sheet": "Gazette 2",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "sherman_crab",
+   "name": "Sherman Crab",
+   "cat": "support",
+   "cost": 75,
+   "squares": 1,
+   "set": "hon1-gazette-2",
+   "size": "w",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/uk/options/sherman_crab.webp",
+   "w": 363,
+   "h": 326,
+   "sheet": "Gazette 2",
+   "units": [
+    [
+     "Sherman Crab",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "churchill_crocodile",
+   "name": "Churchill Crocodile",
+   "cat": "support",
+   "cost": 95,
+   "squares": 2,
+   "set": "hon1-gazette-2",
+   "size": "w",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/uk/options/churchill_crocodile.webp",
+   "w": 364,
+   "h": 327,
+   "sheet": "Gazette 2",
+   "units": [
+    [
+     "Trailer",
+     1,
+     "vehicle"
+    ],
+    [
+     "Churchill Crocodile",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "churchill_ark_mark_1",
+   "name": "Churchill Ark Mark 1",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-gazette-2",
+   "size": "w",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/uk/options/churchill_ark_mark_1.webp",
+   "w": 363,
+   "h": 326,
+   "sheet": "Gazette 2",
+   "units": [
+    [
+     "Churchill Ark Mark 1",
+     2,
      "vehicle"
     ]
    ]

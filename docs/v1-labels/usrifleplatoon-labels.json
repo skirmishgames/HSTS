@@ -1,0 +1,476 @@
+[
+ {
+  "file": "usrifleplatoon1_01.png",
+  "kind": "option",
+  "name": "Support Squad",
+  "sub": null,
+  "cost": 50,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "units": [
+   [
+    "Support Team",
+    2
+   ],
+   [
+    ".30 Cal",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripe order: yellow above light blue on both sides"
+ },
+ {
+  "file": "usrifleplatoon1_02.png",
+  "kind": "tile",
+  "name": "Rifle Platoon",
+  "sub": "4th Inf. Div. 12nd Inf. Reg.",
+  "cost": 70,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "light blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "light blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "light blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "light blue"
+    ]
+   }
+  ],
+  "special_ability_slot": 0,
+  "units": [
+   [
+    "Recon Team",
+    1
+   ],
+   [
+    "Support Team",
+    1
+   ],
+   [
+    "Lt. H. Finn",
+    1
+   ],
+   [
+    "Fire Team",
+    1
+   ]
+  ],
+  "breaking_point": 3,
+  "partial": false,
+  "confidence": "high",
+  "notes": "Rotation 90 puts the star-tab slot leftmost. All 4 slots same width. Regiment printed as '12ND' (as printed). Stripes are yellow on one side and light blue on the other; slots also show grey/black centre bar."
+ },
+ {
+  "file": "usrifleplatoon1_03.png",
+  "kind": "unit",
+  "name": "M 3A1 Halftrack",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle counter, tall; stats 6 / +3 / +3 / 6 / X; US star roundel; side tabs are dark grey/black only"
+ },
+ {
+  "file": "usrifleplatoon1_04.png",
+  "kind": "unit",
+  "name": "Recon Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 soldiers; stats 4 / +1 / +0 / 5 / X"
+ },
+ {
+  "file": "usrifleplatoon1_05.png",
+  "kind": "unit",
+  "name": "Support Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "4 soldiers; stats 3 / +2 / +2 / 4 / X"
+ },
+ {
+  "file": "usrifleplatoon1_06.png",
+  "kind": "unit",
+  "name": "Fire Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "5 soldiers; stats 3 / +2 / +1 / 4 / X"
+ },
+ {
+  "file": "usrifleplatoon1_07.png",
+  "kind": "option",
+  "name": "Ambush Squad",
+  "sub": null,
+  "cost": 40,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "units": [
+   [
+    "Recon Team",
+    2
+   ],
+   [
+    "Bazooka",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "usrifleplatoon1_08.png",
+  "kind": "unit",
+  "name": "Recon Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 soldiers; stats 4 / +1 / +0 / 5 / X"
+ },
+ {
+  "file": "usrifleplatoon1_09.png",
+  "kind": "unit",
+  "name": "Support Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "4 soldiers; stats 3 / +2 / +2 / 4 / X"
+ },
+ {
+  "file": "usrifleplatoon1_10.png",
+  "kind": "unit",
+  "name": "Fire Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "5 soldiers; stats 3 / +2 / +1 / 4 / X"
+ },
+ {
+  "file": "usrifleplatoon1_11.png",
+  "kind": "option",
+  "name": "Rifle Squad",
+  "sub": null,
+  "cost": 50,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "units": [
+   [
+    "Recon Team",
+    1
+   ],
+   [
+    "Fire Team",
+    1
+   ],
+   [
+    "Support Team",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "usrifleplatoon1_12.png",
+  "kind": "unit",
+  "name": "Lt. Finn",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter, 1 soldier, gold border, star icon; stats 4 / +2 / +1 / 6 / X; sword and range arrow 4. Tile lists him as Lt. H. Finn"
+ },
+ {
+  "file": "usrifleplatoon1_13.png",
+  "kind": "unit",
+  "name": "Support Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "4 soldiers; stats 3 / +2 / +2 / 4 / X"
+ },
+ {
+  "file": "usrifleplatoon1_14.png",
+  "kind": "unit",
+  "name": "Support Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "4 soldiers; stats 3 / +2 / +2 / 4 / X; identical to 13"
+ },
+ {
+  "file": "usrifleplatoon1_15.png",
+  "kind": "unit",
+  "name": ".30 Cal",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "2 soldiers with machine gun; red border; stats 3 / +0 / +0 / 5 / X"
+ },
+ {
+  "file": "usrifleplatoon1_16.png",
+  "kind": "option",
+  "name": "Halftrack",
+  "sub": null,
+  "cost": 30,
+  "rotation": 270,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "units": [
+   [
+    "M 3A1 Halftrack",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads top to bottom, so crop must be turned 270 clockwise. Stripe tabs are dark grey/black only."
+ },
+ {
+  "file": "usrifleplatoon1_17.png",
+  "kind": "option",
+  "name": "Grenade",
+  "sub": null,
+  "cost": 5,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear option showing 3 grenade pictures; stripe tabs dark grey/black"
+ },
+ {
+  "file": "usrifleplatoon1_18.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker with range arrow 2 and red template"
+ },
+ {
+  "file": "usrifleplatoon1_19.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker with range arrow 2 and red template"
+ },
+ {
+  "file": "usrifleplatoon1_20.png",
+  "kind": "unit",
+  "name": "Recon Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 soldiers; stats 4 / +1 / +0 / 5 / X"
+ },
+ {
+  "file": "usrifleplatoon1_21.png",
+  "kind": "unit",
+  "name": "Recon Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 soldiers; stats 4 / +1 / +0 / 5 / X"
+ },
+ {
+  "file": "usrifleplatoon1_22.png",
+  "kind": "unit",
+  "name": "Bazooka",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "light blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "2 soldiers with bazooka; red border; stats 3 / +0 / +4 / 5 / +3"
+ },
+ {
+  "file": "usrifleplatoon1_23.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker with range arrow 2 and red template"
+ },
+ {
+  "file": "usrifleplatoon1_24.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker with range arrow 2 and red template"
+ }
+]

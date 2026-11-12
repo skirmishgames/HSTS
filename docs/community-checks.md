@@ -60,6 +60,9 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Panzergrenadiere | II. Battalion, Pzgr-Lehr-Rgt.901 | 65 | long: platoon, narrow: black, narrow: black, long: black or platoon |
 | Divisionsstab | Generalleutnant Fritz Bayerlein | 10 | long: command, narrow: command, narrow: command, long: command |
 | Fritz | Walk-on Actor | 0 | no slots |
+| SS-Panzergrenadiere | I. Battalion, Leibstandarte-SS AH | 100 | long: platoon or black, narrow: black, narrow: black, long: platoon |
+| Heinrich von Kamptz | Aryan Plague | 30 | no slots |
+| Hauptsturmführer M. Wittmann | Schwere SS-Panzer-Abteilung 101 | 110 | long: platoon or command, narrow: platoon or command, narrow: platoon or command |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
 |---|---|---|---|---|---|
@@ -93,6 +96,20 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Improvisation | 20 | long | command | order | Army Box ge4 |
 | Granatwerfer Gruppe | 60 | long | command | order | Army Box ge4 |
 | Smoke | 10 | narrow | command | order | Army Box ge4 |
+| SS Assault Group | 75 | long | platoon (KWK) | support | SS Panzergrenadiere |
+| SS Panzergrenadiere | 65 | long | platoon (KWK) | support | SS Panzergrenadiere |
+| Nazi Basterds | 30 | narrow | platoon (KWK) | gear | SS Panzergrenadiere |
+| Schwimmwagen | 25 | narrow | platoon (KWK) | support | SS Panzergrenadiere |
+| Stummel | 25 | narrow | black | support | SS Panzergrenadiere |
+| Bloodthirsty | 25 | narrow | platoon (KWK) | gear | SS Panzergrenadiere |
+| Tiger I | 90 | long | platoon (KRK) | support | Wittmann's Tigers |
+| Intrepid | 15 | narrow | platoon (KRK) | gear | Wittmann's Tigers |
+| Fuel | 5 | narrow | platoon (KRK) | gear | Wittmann's Tigers |
+| 88mm Flak 36 | 50 | long | platoon (KRK) | order | Wittmann's Tigers |
+| Blitzkrieg | 30 | long | command | order | Wittmann's Tigers |
+| APC Shell | 10 | narrow | platoon (KRK) | gear | Wittmann's Tigers |
+| HE Shell | 10 | narrow | platoon (KRK) | gear | Wittmann's Tigers |
+| Field Artillery | 25 | long | command | order | Wittmann's Tigers |
 
 ### Commonwealth
 
@@ -106,6 +123,9 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Field Command | Captain Colin Maud & Winnie | 35 | narrow: command, narrow: command or black, long: black |
 | 4th County of London Yeomanry | 7th Ar.Div. 22nd Armoured Brigade | 130 | narrow: platoon or black, narrow: platoon or black, long: black or platoon |
 | Walter Pipkin | Tank Killer | 85 | no slots |
+| East Yorkshire Regiment | 3rd Inf. Div. 8th Infantry Brigade | 55 | long: platoon, narrow: platoon or black, narrow: black or platoon, long: black or platoon |
+| Royal Winnipeg Rifles | 3rd Inf. Div. 7th Infantry Brigade | 95 | long: platoon, narrow: platoon or black, narrow: black, long: black or platoon |
+| Percy Hobart | Hobart's Funnies | 30 | long: command or black, narrow: black, narrow: black or command |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
 |---|---|---|---|---|---|
@@ -141,6 +161,20 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | APC Shells | 10 | narrow | platoon (YGY) | gear | Army Box cw5 |
 | Cromwell Mk VII | 65 | long | platoon (YGY) | support | Army Box cw5 |
 | Sherman Firefly | 65 | long | platoon (YGY) | support | Army Box cw5 |
+| Ammo Belt | 20 | narrow | platoon (WRW) | gear | East Yorkshire Regiment |
+| Hardboiled | 5 | narrow | black | gear | East Yorkshire Regiment |
+| Mortar Platoon | 35 | long | platoon (WRW) | support | East Yorkshire Regiment |
+| AT Gun Platoon | 55 | long | platoon (WRW) | support | East Yorkshire Regiment |
+| MG Platoon | 40 | long | platoon (WRW) | support | East Yorkshire Regiment |
+| Bren Platoon | 65 | long | platoon (GKG) | support | Royal Winnipeg Rifles |
+| Woodsmen | 15 | narrow | platoon (GKG) | gear | Royal Winnipeg Rifles |
+| Mechanized Bren | 75 | long | platoon (GKG) | support | Royal Winnipeg Rifles |
+| Mechanized PIAT | 70 | long | platoon (GKG) | support | Royal Winnipeg Rifles |
+| APC Shells | 10 | narrow | black | gear | Gazette 2 |
+| HE Shells | 10 | narrow | black | gear | Gazette 2 |
+| Sherman Crab | 75 | long | black | support | Gazette 2 |
+| Churchill Crocodile | 95 | long | black | support | Gazette 2 |
+| Churchill Ark Mark 1 | 25 | long | black | support | Gazette 2 |
 
 ### United States
 
@@ -153,6 +187,13 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Recon Squadron | 4th Ar.Div. 3D Cavalry Group | 60 | narrow: platoon or black, narrow: platoon or black, long: black or platoon |
 | Kowalski | The Snake | 15 | no slots |
 | Sherman Squadron | 4th Ar.Div. 37th Ar.Regt | 125 | narrow: platoon or black, narrow: platoon or black, long: black or platoon |
+| US Paratroopers | 101st Inf. Div. 506th Inf. Reg. 2nd Bat. | 130 | long: platoon or black, narrow: black, narrow: black or platoon, long: black or platoon |
+| William "Wild Bill" Guarnere | Young Hero | 30 | no slots |
+| Lt. Ronald Speirs | Crazy Runner | 40 | narrow: black or platoon |
+| Eugene G. "Doc" Roe Sr. | Smart Medic | 20 | no slots |
+| Rifle Platoon | 4th Inf. Div. 12nd Inf. Reg. | 70 | long: platoon, narrow: platoon or black, narrow: black, long: black or platoon |
+| US Rangers | 5th Ranger Battalion | 80 | long: platoon, narrow: platoon or black, narrow: black or platoon, long: black or platoon |
+| Cpt. M. Pepper | Heavy Stormer | 25 | no slots |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
 |---|---|---|---|---|---|
@@ -186,4 +227,16 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Ace Driver | 5 | narrow | platoon (GLG) | gear | Army Box us4 |
 | APC Shells | 10 | narrow | platoon (GLG) | gear | Army Box us4 |
 | HE Shells | 10 | narrow | platoon (GLG) | gear | Army Box us4 |
+| 3rd Platoon | 60 | long | platoon (BGB) | support | Gazette 3 |
+| 2nd Platoon | 65 | long | platoon (BGB) | support | Gazette 3 |
+| Band of Brothers | 20 | narrow | platoon (BGB) | gear | Gazette 3 |
+| Currahee | 20 | narrow | platoon (BGB) | gear | Gazette 3 |
+| Support Squad | 50 | long | platoon (YLB) | support | US Rifle Platoon |
+| Ambush Squad | 40 | long | platoon (YLB) | support | US Rifle Platoon |
+| Rifle Squad | 50 | long | platoon (YLB) | support | US Rifle Platoon |
+| Halftrack | 30 | narrow | black | support | US Rifle Platoon |
+| Support Squad | 60 | long | platoon (BYB) | support | US Rangers |
+| Gears | 20 | narrow | platoon (BYB) | gear | US Rangers |
+| Ambush Squad | 50 | long | platoon (BYB) | support | US Rangers |
+| Rangers Squad | 60 | long | platoon (BYB) | support | US Rangers |
 
