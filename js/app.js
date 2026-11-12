@@ -2,8 +2,14 @@
   'use strict';
 
   var LSK = 'hts.hon.bro.v1';
-  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }, { id: 'ru', name: 'Soviet Union (Stalingrad)' }, { id: 'gs', name: 'Germany (Stalingrad)' }];
-  var HOSN = { ru: 1, gs: 1 };
+  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }, { id: 'ru', name: 'Soviet Union (Stalingrad)' }];
+  /* Each builder nation is built from one or more data files. Germany holds both German files.
+     Ids from hon-hos-gs are prefixed with HOSP in the merged view because ten option ids
+     (veteran, ammo, artillery, ...) also exist in hon-bro-ge. The data files are not changed. */
+  var SOURCES = { us: ['hon-bro-us'], ge: ['hon-bro-ge', 'hon-hos-gs'], uk: ['hon-bro-uk'], ru: ['hon-hos-ru'] };
+  var HOSP = 'gs:';
+  var HOS_TAG = 'Stalingrad';
+  var HOS_WORDS = ' stalingrad eastern front';
   var PRESETS = [150, 200, 250, 300, 350, 400, 500];
   var TYPES = [['all', 'All'], ['platoon', 'Platoons'], ['command', 'Command'], ['hero', 'Heroes'], ['landing', 'Landing'], ['aircraft', 'Aircraft'], ['support', 'Support tile'], ['special', 'Other']];
   var TYPE_ORDER = { command: 0, platoon: 1, hero: 2, landing: 3, aircraft: 4, support: 5, special: 6 };
@@ -26,11 +32,21 @@
   function data() {
     var n = S.nation;
     if (!cache[n]) {
-      var d = window.HTS_DATA[(HOSN[n] ? 'hon-hos-' : 'hon-bro-') + n];
-      var t = {}, o = {};
-      d.tiles.forEach(function (x) { t[x.id] = x; });
-      d.options.forEach(function (x) { o[x.id] = x; });
-      cache[n] = { d: d, t: t, o: o };
+      var tiles = [], options = [], t = {}, o = {}, name = '';
+      SOURCES[n].forEach(function (key) {
+        var d = window.HTS_DATA[key], hos = key.indexOf('hon-hos-') === 0, merged = hos && SOURCES[n].length > 1, pre = merged ? HOSP : '';
+        name = SOURCES[n].length > 1 ? NATIONS.filter(function (x) { return x.id === n; })[0].name : d.name;
+        /* copies, so the shared data files stay as they are for the unit index and heroes pages */
+        d.tiles.forEach(function (x) {
+          var y = Object.assign({}, x, { id: pre + x.id, own: (x.own || []).map(function (id) { return pre + id; }), hos: merged, un: key.split('-')[2] });
+          tiles.push(y); t[y.id] = y;
+        });
+        d.options.forEach(function (x) {
+          var y = Object.assign({}, x, { id: pre + x.id, hos: merged });
+          options.push(y); o[y.id] = y;
+        });
+      });
+      cache[n] = { d: { name: name, tiles: tiles, options: options }, t: t, o: o };
     }
     return cache[n];
   }
@@ -47,7 +63,28 @@
       if (!raw) return;
       var j = JSON.parse(raw);
       ['nation', 'limit', 'name', 'army', 'theme', 'saved'].forEach(function (k) { if (j[k] != null) S[k] = j[k]; });
+      if (!Array.isArray(S.saved)) S.saved = [];
+      migrate();
     } catch (e) { /* ignore */ }
+  }
+  /* Old saves under the nation gs (Germany, Stalingrad) become Germany with prefixed ids. */
+  function oldGs(list) { return list.map(function (id) { return id && String(id).indexOf(HOSP) !== 0 ? HOSP + id : id; }); }
+  function migrateSnap(j) {
+    if (!j || j.n !== 'gs') return j;
+    var k = Object.assign({}, j, { n: 'ge' });
+    if (Array.isArray(j.a)) k.a = j.a.map(function (x) { return [oldGs([x[0]])[0], Array.isArray(x[1]) ? oldGs(x[1]) : x[1]]; });
+    return k;
+  }
+  function migrate() {
+    if (S.nation === 'gs') {
+      S.nation = 'ge';
+      if (Array.isArray(S.army)) S.army = S.army.map(function (e) { return Object.assign({}, e, { t: oldGs([e.t])[0], o: Array.isArray(e.o) ? oldGs(e.o) : e.o }); });
+    }
+    if (!NATIONS.some(function (n) { return n.id === S.nation; })) { S.nation = 'us'; S.army = []; }
+    S.saved = S.saved.filter(function (a) { return a && a.snap; }).map(function (a) {
+      var snap = migrateSnap(a.snap);
+      return Object.assign({}, a, { nation: a.nation === 'gs' ? 'ge' : a.nation, snap: snap });
+    });
   }
   function uid() { seq += 1; return 'a' + Date.now().toString(36) + seq; }
 
@@ -101,7 +138,8 @@
       return '<span class="u k-' + esc(u[2]) + '">' + esc(u[0]) + (u[1] > 1 ? ' <i>x' + u[1] + '</i>' : '') + '</span>';
     }).join('') + '</span>';
   }
-  function unitsHref(t) { return 'units.html?n=' + S.nation + '&q=' + encodeURIComponent(t.name + ' ' + (t.sub && t.type !== 'special' ? t.sub : '')); }
+  function unitsHref(t) { return 'units.html?n=' + (t.un || S.nation) + '&q=' + encodeURIComponent(t.name + ' ' + (t.sub && t.type !== 'special' ? t.sub : '')); }
+  function hosBadge(x) { return x.hos ? '<span class="hosbadge" title="Heroes of Stalingrad">' + HOS_TAG + '</span>' : ''; }
   var KIND_ORDER = ['officer', 'character', 'infantry', 'weapon', 'vehicle', 'marker', 'aircraft'];
   var KIND_PLURAL = { officer: 'Officers', character: 'Characters', infantry: 'Infantry', weapon: 'Weapons', vehicle: 'Vehicles', marker: 'Markers', aircraft: 'Aircraft' };
 
@@ -162,7 +200,7 @@
       hasOrd = true; ord += t.orders;
       (t.starSlots || []).forEach(function (i) { if (e.o[i]) ord += 1; });
     });
-    if (hasOrd) warn.push('<p class="info">Order tokens: ' + ord + '. This counts officer stars, fixed tile stars and star slots that hold an option. Command options that add orders are not counted.</p>');
+    if (hasOrd) warn.push('<p class="info">Order tokens: ' + ord + '. This counts officer stars, fixed tile stars and star slots that hold an option. Command options that add orders are not counted.' + (S.army.some(function (e) { return D.t[e.t].orders == null; }) ? ' Tiles from Heroes of Normandie have no order tokens in the builder.' : '') + '</p>');
     if (diff < 0) warn.push('<p class="bad">The army is ' + Math.abs(diff) + ' points over the limit.</p>');
     if (mismatch) warn.push('<p>' + mismatch + ' option' + (mismatch > 1 ? 's are' : ' is') + ' in a slot of the wrong size or stripes. Check your physical tiles.</p>');
     if (sp) warn.push('<p>' + sp + ' option' + (sp > 1 ? 's show' : ' shows') + ' SP instead of a cost. Those are counted as 0 points. Check your scenario.</p>');
@@ -267,7 +305,7 @@
       if (S.type !== 'all' && t.type !== S.type) return false;
       if (anySet && !S.sets[t.set]) return false;
       if (!OWN.owns(t.set)) return false;
-      if (q && (t.name + ' ' + (t.sub || '')).toLowerCase().indexOf(q) < 0) return false;
+      if (q && (t.name + ' ' + (t.sub || '') + (t.hos ? HOS_WORDS : '')).toLowerCase().indexOf(q) < 0) return false;
       return true;
     }).sort(function (a, b) {
       return (TYPE_ORDER[a.type] - TYPE_ORDER[b.type]) || (a.cost - b.cost) || a.name.localeCompare(b.name);
@@ -278,7 +316,7 @@
     $('library').innerHTML = list.map(function (t) {
       var n = S.army.filter(function (e) { return e.t === t.id; }).length;
       return '<div class="lcard"><button type="button" class="imgbtn" data-zoom="' + t.img + '" data-cap="' + esc(t.name + ', ' + t.cost + ' pts') + '" aria-label="Zoom ' + esc(t.name) + '"><img src="' + t.img + '" alt="' + esc(t.name) + '" loading="lazy" width="' + t.w + '" height="' + t.h + '"></button>' +
-        '<div class="info"><span class="nm">' + esc(t.name) + '</span><span class="sb">' + esc(t.sub || '') + '</span>' +
+        '<div class="info"><span class="nm">' + esc(t.name) + '</span><span class="sb">' + esc(t.sub || '') + '</span>' + hosBadge(t) +
         (t.units ? '<span class="lu">' + esc(unitLine(t.units)) + '</span>' : '') +
         '<span class="count">' + t.slots.length + ' slot' + (t.slots.length === 1 ? '' : 's') + (n ? ', ' + n + ' in army' : '') + '</span>' +
         '<div class="row"><span class="pts">' + t.cost + ' pts</span><span class="lrow-btns"><a class="btn ghost" href="' + esc(unitsHref(t)) + '">Units</a><button type="button" class="add" data-add="' + t.id + '">Add</button></span></div></div></div>';
@@ -290,7 +328,7 @@
     var r = $('savedRow');
     if (!S.saved.length) { r.innerHTML = ''; return; }
     r.innerHTML = S.saved.map(function (a, i) {
-      return '<span class="chips"><button type="button" class="chip" data-load="' + i + '">' + esc(a.name) + ' (' + NATIONS.filter(function (n) { return n.id === a.nation; })[0].name.slice(0, 2).toUpperCase() + ', ' + a.pts + ')</button>' +
+      return '<span class="chips"><button type="button" class="chip" data-load="' + i + '">' + esc(a.name) + ' (' + (NATIONS.filter(function (n) { return n.id === a.nation; })[0] || NATIONS[0]).name.slice(0, 2).toUpperCase() + ', ' + a.pts + ')</button>' +
         '<button type="button" class="chip" data-del="' + i + '" aria-label="Delete saved army ' + esc(a.name) + '">x</button></span>';
     }).join('');
   }
@@ -321,7 +359,7 @@
         var o = x.o;
         return '<button type="button" class="pcard' + (x.why.length ? ' nofit' : '') + '" data-pick="' + o.id + '">' +
           '<img src="' + o.img + '" alt="" loading="lazy" width="' + o.w + '" height="' + o.h + '">' +
-          '<span class="nm">' + esc(o.name) + '</span>' +
+          '<span class="nm">' + esc(o.name) + '</span>' + hosBadge(o) +
           (o.units ? '<span class="nt">Includes: ' + esc(unitLine(o.units)) + '</span>' : '') +
           (o.note ? '<span class="nt">' + esc(o.note) + '</span>' : '') +
           (x.why.length ? '<span class="fl">Wrong ' + x.why.join(' and ') + '</span>' : '') +
@@ -339,6 +377,7 @@
     return { n: S.nation, l: S.limit, nm: S.name, a: S.army.map(function (e) { return [e.t, e.o]; }) };
   }
   function applySnapshot(j) {
+    j = migrateSnap(j);
     if (!j || !NATIONS.some(function (n) { return n.id === j.n; }) || !Array.isArray(j.a)) throw new Error('bad');
     S.nation = j.n; S.limit = Number(j.l) || 250; S.name = j.nm || '';
     S.army = j.a.map(function (x) { return { id: uid(), t: x[0], o: Array.isArray(x[1]) ? x[1] : [] }; });
