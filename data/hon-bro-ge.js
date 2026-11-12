@@ -1684,8 +1684,8 @@ HTS_DATA["hon-bro-ge"] = {
     "custom"
    ],
    "img": "img/hon/bro/ge/options/panzerfaust_c.webp",
-   "w": 114,
-   "h": 152,
+   "w": 271,
+   "h": 362,
    "sheet": "GE-Vol1-p2",
    "note": "1 Panzerfaust marker, range 4. Characters only."
   },
@@ -1718,8 +1718,8 @@ HTS_DATA["hon-bro-ge"] = {
     "custom"
    ],
    "img": "img/hon/bro/ge/options/thompson.webp",
-   "w": 116,
-   "h": 152,
+   "w": 276,
+   "h": 362,
    "sheet": "GE-Vol1-p2",
    "note": "Use the option's Combat Values, Suppressive Fire, limited range 4. Characters only."
   },
@@ -1735,8 +1735,8 @@ HTS_DATA["hon-bro-ge"] = {
     "custom"
    ],
    "img": "img/hon/bro/ge/options/overwatch.webp",
-   "w": 114,
-   "h": 152,
+   "w": 271,
+   "h": 362,
    "sheet": "GE-Vol1-p2",
    "note": "Opportunity Fire special ability. Characters only."
   },
@@ -1752,8 +1752,8 @@ HTS_DATA["hon-bro-ge"] = {
     "custom"
    ],
    "img": "img/hon/bro/ge/options/bazooka_c.webp",
-   "w": 116,
-   "h": 152,
+   "w": 276,
+   "h": 362,
    "sheet": "GE-Vol1-p2",
    "note": "2 Bazooka markers, Alternate Firing Action. Characters only."
   },
@@ -1769,8 +1769,8 @@ HTS_DATA["hon-bro-ge"] = {
     "custom"
    ],
    "img": "img/hon/bro/ge/options/flamer.webp",
-   "w": 116,
-   "h": 152,
+   "w": 276,
+   "h": 362,
    "sheet": "GE-Vol1-p2",
    "note": "Flamethrower special ability. Characters only."
   },
@@ -2838,8 +2838,8 @@ HTS_DATA["hon-bro-ge"] = {
     "custom"
    ],
    "img": "img/hon/bro/ge/options/ss_dagger.webp",
-   "w": 114,
-   "h": 152,
+   "w": 317,
+   "h": 422,
    "sheet": "GE-Vol2-p6"
   },
   {
@@ -2855,8 +2855,8 @@ HTS_DATA["hon-bro-ge"] = {
     "W"
    ],
    "img": "img/hon/bro/ge/options/flamer_group.webp",
-   "w": 152,
-   "h": 146,
+   "w": 422,
+   "h": 406,
    "sheet": "GE-Vol2-p6",
    "units": [
     [
@@ -2884,8 +2884,8 @@ HTS_DATA["hon-bro-ge"] = {
     "W"
    ],
    "img": "img/hon/bro/ge/options/tankbuster.webp",
-   "w": 112,
-   "h": 150,
+   "w": 311,
+   "h": 417,
    "sheet": "GE-Vol2-p6"
   },
   {
@@ -2901,8 +2901,8 @@ HTS_DATA["hon-bro-ge"] = {
     "W"
    ],
    "img": "img/hon/bro/ge/options/assault_group_ss.webp",
-   "w": 152,
-   "h": 150,
+   "w": 422,
+   "h": 417,
    "sheet": "GE-Vol2-p6",
    "units": [
     [
@@ -2930,8 +2930,8 @@ HTS_DATA["hon-bro-ge"] = {
     "W"
    ],
    "img": "img/hon/bro/ge/options/magnetic_mine.webp",
-   "w": 112,
-   "h": 134,
+   "w": 311,
+   "h": 372,
    "sheet": "GE-Vol2-p6"
   },
   {
@@ -2947,8 +2947,8 @@ HTS_DATA["hon-bro-ge"] = {
     "W"
    ],
    "img": "img/hon/bro/ge/options/panzerschreck_ss.webp",
-   "w": 114,
-   "h": 150,
+   "w": 317,
+   "h": 417,
    "sheet": "GE-Vol2-p6",
    "units": [
     [

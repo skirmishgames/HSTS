@@ -1256,8 +1256,8 @@ HTS_DATA["hon-bro-us"] = {
     "custom"
    ],
    "img": "img/hon/bro/us/options/panzerfaust_c.webp",
-   "w": 114,
-   "h": 152,
+   "w": 271,
+   "h": 362,
    "sheet": "US-Vol1-p2",
    "note": "1 Panzerfaust marker, range 4. Characters only."
   },
@@ -1290,8 +1290,8 @@ HTS_DATA["hon-bro-us"] = {
     "custom"
    ],
    "img": "img/hon/bro/us/options/thompson.webp",
-   "w": 116,
-   "h": 152,
+   "w": 276,
+   "h": 362,
    "sheet": "US-Vol1-p2",
    "note": "Use the option's Combat Values, Suppressive Fire, limited range 4. Characters only."
   },
@@ -1307,8 +1307,8 @@ HTS_DATA["hon-bro-us"] = {
     "custom"
    ],
    "img": "img/hon/bro/us/options/overwatch.webp",
-   "w": 114,
-   "h": 152,
+   "w": 271,
+   "h": 362,
    "sheet": "US-Vol1-p2",
    "note": "Opportunity Fire special ability. Characters only."
   },
@@ -1324,8 +1324,8 @@ HTS_DATA["hon-bro-us"] = {
     "custom"
    ],
    "img": "img/hon/bro/us/options/bazooka_c.webp",
-   "w": 116,
-   "h": 152,
+   "w": 276,
+   "h": 362,
    "sheet": "US-Vol1-p2",
    "note": "2 Bazooka markers, Alternate Firing Action. Characters only."
   },
@@ -1341,8 +1341,8 @@ HTS_DATA["hon-bro-us"] = {
     "custom"
    ],
    "img": "img/hon/bro/us/options/flamer.webp",
-   "w": 116,
-   "h": 152,
+   "w": 276,
+   "h": 362,
    "sheet": "US-Vol1-p2",
    "note": "Flamethrower special ability. Characters only."
   },
