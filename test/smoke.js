@@ -967,6 +967,20 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     ok(/narrow/.test(shapeTxt) && await shp.locator('.pcard', { hasText: 'Support Team' }).count() >= 1 && await shp.locator('.pcard', { hasText: 'Mortar Group' }).count() === 0, 'shapes: Sasha slot is narrow and lists only narrow options');
     await shp.close();
   }
+  // grouped header menu
+  {
+    const nv = await b.newPage({ viewport: { width: 1280, height: 800 } });
+    await nv.goto(base + 'scenarios.html'); await nv.waitForTimeout(400);
+    ok(await nv.locator('.top-actions .navgrp').count() === 3 && await nv.locator('.navgrp.here[data-nav="play"]').count() === 1, 'menu: Play, Reference and Archive groups, current group marked');
+    ok(!(await nv.locator('.navmenu a[href="units.html"]').isVisible()), 'menu: links are hidden until a group is opened');
+    await nv.click('.navgrp[data-nav="ref"] summary'); await nv.click('.navgrp[data-nav="arc"] summary');
+    ok(await nv.locator('.navgrp[open]').count() === 1, 'menu: opening one group closes the other');
+    await nv.keyboard.press('Escape');
+    ok(await nv.locator('.navgrp[open]').count() === 0, 'menu: Escape closes the menu');
+    await nv.click('.navgrp[data-nav="ref"] summary'); await nv.click('.navmenu a[href="units.html"]'); await nv.waitForTimeout(400);
+    ok(/units\.html/.test(nv.url()), 'menu: a link inside a group goes to its page');
+    await nv.close();
+  }
   // trackers
   const cp = require('child_process');
   let trk = ''; try { trk = cp.execSync('python3 tools/units_tracker.py --strict', { cwd: root }).toString(); } catch (e) { trk = 'FAILED ' + e.stdout; }
