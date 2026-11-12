@@ -1042,6 +1042,37 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     await nv.close();
   }
   ok(!JSON.parse(fs.readFileSync(path.join(root, 'data/hon-library.js'), 'utf8').replace(/^window\.HTS_LIB = /, '').replace(/;\s*$/, '')).docs.some(d => ['rules-reference-sheets', 'special-abilities-v1', 'v1-rulebook-wrecks', 'multiplayer-rules-v1', 'aviation-rules-v1', 'compendium-errata', 'unofficial-faq'].indexOf(d.id) >= 0), 'documents: first edition core rules are not on the site (V2 overrides them)');
+  // first edition (V1) army boxes in the builder
+  {
+    const vm = require('vm'); const ctx = { window: { HTS_DATA: {} } }; ctx.HTS_DATA = ctx.window.HTS_DATA; vm.createContext(ctx);
+    ['us', 'ge', 'uk'].forEach(n => vm.runInContext(fs.readFileSync(path.join(root, 'data', 'hon-v1-' + n + '.js'), 'utf8'), ctx));
+    const cnt = ['us', 'ge', 'uk'].map(n => ctx.HTS_DATA['hon-v1-' + n].tiles.length + '/' + ctx.HTS_DATA['hon-v1-' + n].options.length).join(' ');
+    ok(cnt === '7/30 6/30 8/32', 'first edition: army box data holds 7/30, 6/30 and 8/32 tiles and options (' + cnt + ')');
+    let missing = [], bad = [];
+    ['us', 'ge', 'uk'].forEach(n => { const D = ctx.HTS_DATA['hon-v1-' + n];
+      D.tiles.concat(D.options).forEach(x => { if (!fs.existsSync(path.join(root, x.img))) missing.push(x.img); if (typeof x.cost !== 'number' || !x.name) bad.push(x.id); });
+      D.tiles.forEach(t => t.slots.forEach(sl => { if (['w', 'n'].indexOf(sl.size) < 0 || !sl.stripes.length) bad.push(t.id); })); });
+    ok(missing.length === 0 && bad.length === 0, 'first edition: every tile and option has a picture, a name, a cost and valid slots ' + missing.concat(bad).slice(0, 5).join(','));
+    const v1p = await b.newPage({ viewport: { width: 1280, height: 900 } }); const v1errs = []; v1p.on('pageerror', e => v1errs.push(e.message)); v1p.on('dialog', d => d.accept());
+    await v1p.goto(base + 'builder.html'); await v1p.evaluate(() => { try { localStorage.clear(); } catch (e) {} }); await v1p.reload(); await v1p.waitForTimeout(400);
+    await v1p.fill('#search', 'first edition'); await v1p.waitForTimeout(300);
+    ok(await v1p.locator('.lcard').count() === 7 && await v1p.locator('.lcard .v1badge').count() === 7 && await v1p.locator('.lcard', { hasText: 'Weapon Platoon' }).count() === 1, 'first edition: searching "first edition" lists the 7 US army box tiles, each with the badge');
+    await v1p.fill('#search', ''); await v1p.click('[data-nation="ge"]'); await v1p.fill('#search', 'panzergrenadiere'); await v1p.waitForTimeout(300);
+    await v1p.locator('.lcard', { has: v1p.locator('.v1badge') }).first().locator('[data-add]').click();
+    ok((await v1p.textContent('#ptsUsed')) === '65' && await v1p.locator('.atile .slot').count() === 4, 'first edition: Panzergrenadiere costs 65 and has 4 slots');
+    await v1p.locator('.atile .slot').nth(0).click(); await v1p.waitForTimeout(200);
+    const s0 = await v1p.locator('.pcard .nm').allInnerTexts();
+    ok(s0.length === 3 && s0.indexOf('Support Group') >= 0, 'first edition: a platoon-stripe slot lists only that platoon\'s long options (' + s0.join(', ') + ')');
+    await v1p.keyboard.press('Escape'); await v1p.locator('.atile .slot').nth(1).click(); await v1p.waitForTimeout(200);
+    const s1 = await v1p.locator('.pcard .nm').allInnerTexts();
+    ok(s1.indexOf('Grenade') >= 0 && s1.indexOf('MG 42') < 0 && s1.indexOf('Support Group') < 0, 'first edition: a black slot lists only first edition black-stripe options, no V2 options (' + s1.join(', ') + ')');
+    await v1p.locator('.pcard', { hasText: 'Grenade' }).first().click(); await v1p.waitForTimeout(200);
+    ok((await v1p.textContent('#ptsUsed')) === '70', 'first edition: option cost is added (70)');
+    await v1p.reload(); await v1p.waitForTimeout(400);
+    ok((await v1p.textContent('#ptsUsed')) === '70', 'first edition: the army survives a reload');
+    ok(v1errs.length === 0, 'first edition: no console errors ' + v1errs.join('|'));
+    await v1p.evaluate(() => { try { localStorage.clear(); } catch (e) {} }); await v1p.close();
+  }
   // trackers
   const cp = require('child_process');
   let trk = ''; try { trk = cp.execSync('python3 tools/units_tracker.py --strict', { cwd: root }).toString(); } catch (e) { trk = 'FAILED ' + e.stdout; }

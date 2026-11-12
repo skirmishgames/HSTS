@@ -6,7 +6,9 @@
   /* Each builder nation is built from one or more data files. Germany holds both German files.
      Ids from hon-hos-gs are prefixed with HOSP in the merged view because ten option ids
      (veteran, ammo, artillery, ...) also exist in hon-bro-ge. The data files are not changed. */
-  var SOURCES = { us: ['hon-bro-us'], ge: ['hon-bro-ge', 'hon-hos-gs'], uk: ['hon-bro-uk'], ru: ['hon-hos-ru'] };
+  var SOURCES = { us: ['hon-bro-us', 'hon-v1-us'], ge: ['hon-bro-ge', 'hon-hos-gs', 'hon-v1-ge'], uk: ['hon-bro-uk', 'hon-v1-uk'], ru: ['hon-hos-ru'] };
+  /* First edition (V1) files are merged the same way, with ids prefixed V1P and a First edition tag. */
+  var V1P = 'v1:', V1_TAG = 'First edition', V1_WORDS = ' first edition v1';
   var HOSP = 'gs:';
   var HOS_TAG = 'Stalingrad';
   var HOS_WORDS = ' stalingrad eastern front';
@@ -29,20 +31,25 @@
   function $(id) { return document.getElementById(id); }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
 
+  /* First edition stripes are kept apart from V2 and Stalingrad ones, so first edition options only fit first edition slots. */
+  function v1s(c) { return 'v1_' + c; }
   function data() {
     var n = S.nation;
     if (!cache[n]) {
       var tiles = [], options = [], t = {}, o = {}, name = '';
       SOURCES[n].forEach(function (key) {
-        var d = window.HTS_DATA[key], hos = key.indexOf('hon-hos-') === 0, merged = hos && SOURCES[n].length > 1, pre = merged ? HOSP : '';
+        var d = window.HTS_DATA[key], hos = key.indexOf('hon-hos-') === 0, v1 = key.indexOf('hon-v1-') === 0, merged = hos && SOURCES[n].length > 1, pre = v1 ? V1P : (merged ? HOSP : '');
+        if (!d) return;
         name = SOURCES[n].length > 1 ? NATIONS.filter(function (x) { return x.id === n; })[0].name : d.name;
         /* copies, so the shared data files stay as they are for the unit index and heroes pages */
         d.tiles.forEach(function (x) {
-          var y = Object.assign({}, x, { id: pre + x.id, own: (x.own || []).map(function (id) { return pre + id; }), hos: merged, un: key.split('-')[2] });
+          var y = Object.assign({}, x, { id: pre + x.id, own: (x.own || []).map(function (id) { return pre + id; }), hos: merged, v1: v1, un: v1 ? '' : key.split('-')[2] });
+          if (v1) y.slots = x.slots.map(function (sl) { return Object.assign({}, sl, { stripes: sl.stripes.map(v1s) }); });
           tiles.push(y); t[y.id] = y;
         });
         d.options.forEach(function (x) {
-          var y = Object.assign({}, x, { id: pre + x.id, hos: merged });
+          var y = Object.assign({}, x, { id: pre + x.id, hos: merged, v1: v1 });
+          if (v1) y.stripes = x.stripes.map(v1s);
           options.push(y); o[y.id] = y;
         });
       });
@@ -94,7 +101,7 @@
     if (slot.stripes.indexOf('all') >= 0) return why; // Support tile: takes any option
     if (slot.size !== opt.size) why.push('size');
     var ok;
-    if (opt.stripes.indexOf('any') >= 0) ok = true;
+    if (opt.stripes.indexOf('any') >= 0) ok = !slot.stripes.some(function (x) { return String(x).indexOf('v1_') === 0; }); /* V2 any-stripe options do not go on first edition tiles */
     else ok = opt.stripes.some(function (s) { return slot.stripes.indexOf(s) >= 0; });
     if (!ok) why.push('stripes');
     return why;
@@ -122,10 +129,11 @@
 
   /* ---------- rendering helpers ---------- */
   function dots(list) {
-    return list.map(function (s) { return '<span class="dot ' + esc(s) + '" title="' + stripeName(s) + '"></span>'; }).join('');
+    return list.map(function (s) { return '<span class="dot ' + esc(String(s).replace(/^v1_/, '')) + '" title="' + stripeName(s) + '"></span>'; }).join('');
   }
   function stripeName(s) {
-    return ({ R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', WR: 'white and red', KG: 'black and green', BCG: 'blue, cream and green', BRD: 'blue and red', cmd: 'command stripes', custom: 'customization', any: 'common, fits any slot', all: 'any option (Support tile)' })[s] || s;
+    if (String(s).indexOf('v1_') === 0) return stripeName(String(s).slice(3)) + ', first edition';
+    return ({ R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', WR: 'white and red', YRB: 'yellow, red and blue (Weapon Platoon)', GOG: 'green and orange (Recon Squadron)', GLG: 'grey and light green (Sherman Squadron)', RWR: 'red and white (Panzergruppe)', GWG: 'green and white (Sturmpioniere)', GW: 'green and white (Panzergrenadiere)', RWM: 'red, white and maroon (Chaudiere)', YR: 'yellow and red (Suffolk)', YGY: 'yellow and grey (Yeomanry)', KG: 'black and green', BCG: 'blue, cream and green', BRD: 'blue and red', cmd: 'command stripes', custom: 'customization', any: 'common, fits any slot', all: 'any option (Support tile)' })[s] || s;
   }
   function pips(n) { var s = ''; for (var i = 0; i < n; i++) s += '■'; return s; }
   function costLabel(c) { return c == null ? 'SP' : String(c); }
@@ -139,7 +147,7 @@
     }).join('') + '</span>';
   }
   function unitsHref(t) { return 'units.html?n=' + (t.un || S.nation) + '&q=' + encodeURIComponent(t.name + ' ' + (t.sub && t.type !== 'special' ? t.sub : '')); }
-  function hosBadge(x) { return x.hos ? '<span class="hosbadge" title="Heroes of Stalingrad">' + HOS_TAG + '</span>' : ''; }
+  function hosBadge(x) { return x.hos ? '<span class="hosbadge" title="Heroes of Stalingrad">' + HOS_TAG + '</span>' : (x.v1 ? '<span class="hosbadge v1badge" title="Heroes of Normandie, first edition">' + V1_TAG + '</span>' : ''); }
   var KIND_ORDER = ['officer', 'character', 'infantry', 'weapon', 'vehicle', 'marker', 'aircraft'];
   var KIND_PLURAL = { officer: 'Officers', character: 'Characters', infantry: 'Infantry', weapon: 'Weapons', vehicle: 'Vehicles', marker: 'Markers', aircraft: 'Aircraft' };
 
@@ -240,7 +248,7 @@
         '<button type="button" class="ghost" data-act="up" aria-label="Move up"' + (idx === 0 ? ' disabled' : '') + '>Up</button>' +
         '<button type="button" class="ghost" data-act="down" aria-label="Move down"' + (idx === S.army.length - 1 ? ' disabled' : '') + '>Down</button>' +
         '<button type="button" class="ghost" data-act="zoom">Zoom</button>' +
-        '<a class="btn ghost" href="' + esc(unitsHref(t)) + '">Units</a>' +
+        (t.v1 ? '' : '<a class="btn ghost" href="' + esc(unitsHref(t)) + '">Units</a>') +
         '<button type="button" class="ghost danger" data-act="remove">Remove</button></div></header>' +
         (t.units ? '<p class="incl"><b>Tile includes</b>' + unitChips(t.units) + '</p>' : '') +
         '<div class="tilebox" style="aspect-ratio:' + t.w + '/' + t.h + '"><img src="' + t.img + '" alt="' + esc(t.name) + ' tile" width="' + t.w + '" height="' + t.h + '">' + slots + '</div>' +
@@ -305,7 +313,7 @@
       if (S.type !== 'all' && t.type !== S.type) return false;
       if (anySet && !S.sets[t.set]) return false;
       if (!OWN.owns(t.set)) return false;
-      if (q && (t.name + ' ' + (t.sub || '') + (t.hos ? HOS_WORDS : '')).toLowerCase().indexOf(q) < 0) return false;
+      if (q && (t.name + ' ' + (t.sub || '') + (t.hos ? HOS_WORDS : '') + (t.v1 ? V1_WORDS : '')).toLowerCase().indexOf(q) < 0) return false;
       return true;
     }).sort(function (a, b) {
       return (TYPE_ORDER[a.type] - TYPE_ORDER[b.type]) || (a.cost - b.cost) || a.name.localeCompare(b.name);
@@ -319,7 +327,7 @@
         '<div class="info"><span class="nm">' + esc(t.name) + '</span><span class="sb">' + esc(t.sub || '') + '</span>' + hosBadge(t) +
         (t.units ? '<span class="lu">' + esc(unitLine(t.units)) + '</span>' : '') +
         '<span class="count">' + t.slots.length + ' slot' + (t.slots.length === 1 ? '' : 's') + (n ? ', ' + n + ' in army' : '') + '</span>' +
-        '<div class="row"><span class="pts">' + t.cost + ' pts</span><span class="lrow-btns"><a class="btn ghost" href="' + esc(unitsHref(t)) + '">Units</a><button type="button" class="add" data-add="' + t.id + '">Add</button></span></div></div></div>';
+        '<div class="row"><span class="pts">' + t.cost + ' pts</span><span class="lrow-btns">' + (t.v1 ? '' : '<a class="btn ghost" href="' + esc(unitsHref(t)) + '">Units</a>') + '<button type="button" class="add" data-add="' + t.id + '">Add</button></span></div></div></div>';
     }).join('');
   }
 
