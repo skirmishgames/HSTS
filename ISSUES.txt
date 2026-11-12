@@ -449,3 +449,13 @@ ISS-077  P500 Recon Platoon re-cut; FFI scan quality   [DONE, with notes]
 Where: img/hon/bro/us/tiles/recon_2edb.webp, img/hon/bro/us/options/training_fr.webp, guardian_fr.webp, data/hon-bro-us.js (w and h only).
 Detail: the Unsorted folder "FFI Heroic Recon Platoon" is the P500 Edition sheet (Recon Platoon 1er Escadron RBFM 2e DB, Training, Guardian) at 3464 px. The tile was re-cut at 700 px tall (was 248) and the two options at 420 px (were 146). The folder on the computer was renamed to say what it is.
 Limits: the FFI Colonel Bastien sheet in Unsorted is a 1772 x 1181 print proof with heavy compression. The tile would be about 720 x 220 px with blocky colour. Not added to the builder: the user said poor quality is not to be added (ISS-066 stays open for a better scan). Civilians Under Fire is 2362 px per sheet and usable.
+
+ISS-078  Rotated hero tiles   [DONE]
+Where: img/hon/hos/ru/tiles/danilov_political_commissar.webp, tania_chernova.webp, data/hon-hos-ru.js (w and h).
+Detail: the user saw hero tiles lying on their side in the builder. All 43 hero, aircraft, landing and other short tiles were checked on a contact sheet. Two were sideways, Danilov and Tania Chernova. Both turned upright.
+
+ISS-079  First edition armies: cutting and reading pipeline (phase 3, in progress)   [OPEN]
+Where: tools/v1/ (segment_punchboard.py, LABEL_SPEC.md, contact_sheet.py), docs/v1-labels/ (readings for the US, German and Commonwealth army boxes).
+Detail: first edition tiles use the same slot and stripe model as V2. Each punchboard is cut automatically (background colour is taken from the sheet edge: green US, grey German, khaki Commonwealth; khaki needs CLOSE=41). Sonnet subagents then read every cut piece to LABEL_SPEC.md. Their tile and option readings for the US box (7 tiles, 31 options) and German box (6 tiles, 30 options) were checked by eye against the cut pictures: every name and cost is right. Commonwealth (8 tiles, 34 options) was read from rough cuts and is being re-cut cleanly before checking.
+Lesson: a subagent loses pictures from its context if it loads too many. Tell it to work in batches of six and write each batch to disk before loading the next.
+Still to do: re-cut the pieces that were clipped or merged (Ammo Bearer, M10 A1, Sturmpioniere, most Commonwealth options), fix stripe colours and slot widths by measurement, build data/hon-v1-*.js, add a first edition choice to the builder, then the remaining expansions.

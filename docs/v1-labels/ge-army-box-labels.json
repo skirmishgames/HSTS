@@ -1,0 +1,1953 @@
+[
+ {
+  "file": "ge1_01.png",
+  "kind": "tile",
+  "name": "Panzergruppe",
+  "sub": "II. Battalion, Pz-Lehr-Rgt.130",
+  "cost": 160,
+  "rotation": 0,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Black stripe links slot 2 and slot 3 (stripes run red/white/red then black bar). Third slot clearly wider. Unit pictures: two Panzer IV (first with two stars, second with 2 red X). Slot 2 has red/white/red on left edge and black on right.",
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "red",
+     "white",
+     "red"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "red",
+     "white",
+     "red"
+    ]
+   },
+   {
+    "size": "wide",
+    "stripes": [
+     "red",
+     "white",
+     "red"
+    ]
+   }
+  ],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "Panzer IV",
+    2
+   ]
+  ],
+  "breaking_point": 2
+ },
+ {
+  "file": "ge1_02.png",
+  "kind": "unit",
+  "name": "Panzer IV",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Yellow border, two stars (veteran/leader style). Values 9 top, 7/7 sides, 6 bottom, 4 arrow, -2 arrow, X."
+ },
+ {
+  "file": "ge1_03.png",
+  "kind": "unit",
+  "name": "Panzer IV",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Standard (no star, no yellow border) Panzer IV counter, foliage camouflage. Values 9, 7/7, 6, 4."
+ },
+ {
+  "file": "ge1_04.png",
+  "kind": "option",
+  "name": "StuG IV",
+  "sub": null,
+  "cost": 65,
+  "rotation": 0,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "units": [
+   [
+    "StuG IV",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "One red X square bottom right. Printed 'STUG IV'."
+ },
+ {
+  "file": "ge1_05.png",
+  "kind": "option",
+  "name": "StuG IV Group",
+  "sub": null,
+  "cost": 130,
+  "rotation": 0,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "units": [
+   [
+    "StuG IV",
+    2
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Two red X squares bottom right."
+ },
+ {
+  "file": "ge1_06.png",
+  "kind": "unit",
+  "name": "Panther Ausf A",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Printed 'PANTHER -AUSF A'. Values 8 top/bottom, 7 left, 10 right, 4 arrow, -2 arrow. Stripes stick out top and bottom."
+ },
+ {
+  "file": "ge1_07.png",
+  "kind": "option",
+  "name": "Panther A",
+  "sub": null,
+  "cost": 80,
+  "rotation": 0,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "units": [
+   [
+    "Panther Ausf A",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "One red X square bottom right."
+ },
+ {
+  "file": "ge1_08.png",
+  "kind": "option",
+  "name": "Sharpshooters",
+  "sub": null,
+  "cost": 5,
+  "rotation": 270,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "+2",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Eagle artwork; name printed vertically on right. Small yellow arrow with stars and '+2' shown. Stripes (grey/black/grey) stick out top and bottom as scanned."
+ },
+ {
+  "file": "ge1_09.png",
+  "kind": "option",
+  "name": "APC Shell",
+  "sub": null,
+  "cost": 10,
+  "rotation": 270,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Printed 'APC SHELL.'; stripes stick out top and bottom as scanned."
+ },
+ {
+  "file": "ge1_10.png",
+  "kind": "option",
+  "name": "Fuel",
+  "sub": null,
+  "cost": 5,
+  "rotation": 270,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Jerry cans artwork; stripes stick out top and bottom as scanned."
+ },
+ {
+  "file": "ge1_11.png",
+  "kind": "unit",
+  "name": "StuG IV",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "No crew figure. Values 9, 7/7, 6, 4, -2; red target icon, spotting icon."
+ },
+ {
+  "file": "ge1_12.png",
+  "kind": "unit",
+  "name": "StuG IV",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Variant with commander figure in hatch. Values 9, 7/7, 6, 4, -2."
+ },
+ {
+  "file": "ge1_13.png",
+  "kind": "marker",
+  "name": "Vehicle damage result 1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Square damage-table marker: '1', crew/infantry hit burst icon on top; below, yellow gun icon / red gun icon (two alternatives). Meaning of icons not printed as text."
+ },
+ {
+  "file": "ge1_14.png",
+  "kind": "marker",
+  "name": "Vehicle damage result 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Square marker: '2', yellow tank track with burst on top; below blue arrow with white X."
+ },
+ {
+  "file": "ge1_15.png",
+  "kind": "marker",
+  "name": "Vehicle damage result 3/4",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Square marker: '3' and '4' either side of yellow hull icon with burst; below two orange 'SUPPRESSED -2' tokens."
+ },
+ {
+  "file": "ge1_16.png",
+  "kind": "marker",
+  "name": "Vehicle damage result 5",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Square marker: '5', yellow turret hit icon on top; below three X hexes (orange, purple, grey)."
+ },
+ {
+  "file": "ge1_17.png",
+  "kind": "marker",
+  "name": "Vehicle damage result 1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Duplicate of ge1_13 appearance: '1', crew burst; yellow gun / red gun below."
+ },
+ {
+  "file": "ge1_18.png",
+  "kind": "marker",
+  "name": "Vehicle damage result 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Duplicate of ge1_14 appearance: '2', yellow track with burst; blue arrow with X."
+ },
+ {
+  "file": "ge1_19.png",
+  "kind": "marker",
+  "name": "Vehicle damage result 3/4",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Square marker: '3' and '4' either side of yellow hull icon with burst; below two orange 'SUPPRESSED -2' tokens."
+ },
+ {
+  "file": "ge1_20.png",
+  "kind": "marker",
+  "name": "Vehicle damage result 5",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Square marker: '5', yellow turret hit icon; below three X hexes."
+ },
+ {
+  "file": "ge1_21.png",
+  "kind": "marker",
+  "name": "APC Shell +1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square ammo marker: 'APC SHELL' in red, shell picture, '+1' badge. Red/white/red stripe border visible at left and right edges."
+ },
+ {
+  "file": "ge1_22.png",
+  "kind": "marker",
+  "name": "APC Shell +1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square ammo marker: 'APC SHELL' in red, shell picture, '+1' badge. Red/white/red stripe border visible at left and right edges."
+ },
+ {
+  "file": "ge1_23.png",
+  "kind": "marker",
+  "name": "APC Shell +1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square ammo marker: 'APC SHELL' in red, shell picture, '+1' badge. Red/white/red stripe border visible at left and right edges."
+ },
+ {
+  "file": "ge1_24.png",
+  "kind": "marker",
+  "name": "Vehicle damage result 1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Square marker: '1', crew burst; yellow gun / red gun below."
+ },
+ {
+  "file": "ge1_25.png",
+  "kind": "marker",
+  "name": "Vehicle damage result 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Square marker: '2', yellow track with burst; blue arrow with X."
+ },
+ {
+  "file": "ge1_26.png",
+  "kind": "marker",
+  "name": "Vehicle damage result 3/4",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Square marker: '3' and '4', yellow hull; two orange 'SUPPRESSED -2' tokens."
+ },
+ {
+  "file": "ge1_27.png",
+  "kind": "marker",
+  "name": "Vehicle damage result 5",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Square marker: '5', yellow turret hit; three X hexes."
+ },
+ {
+  "file": "ge1_28.png",
+  "kind": "marker",
+  "name": "Fuel +1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square fuel marker: 'FUEL' in red, jerry can, blue arrow '+1'. Red/white/red stripe border at left and right edges."
+ },
+ {
+  "file": "ge1_29.png",
+  "kind": "marker",
+  "name": "Fuel +1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square fuel marker: 'FUEL' in red, jerry can, blue arrow '+1'. Red/white/red stripe border at left and right edges."
+ },
+ {
+  "file": "ge1_30.png",
+  "kind": "marker",
+  "name": "Fuel +1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square fuel marker: 'FUEL' in red, jerry can, blue arrow '+1'. Red/white/red stripe border at left and right edges."
+ },
+ {
+  "file": "ge2_01.png",
+  "kind": "tile",
+  "name": "Sturmpioniere",
+  "sub": "II. Battalion, Pz-Lehr-Rgt.130",
+  "cost": 110,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Crop is a large region of the sheet: besides the tile it also contains a flame/fire template with suppressed token, a Hedgerow Side marker, MG Group and Othman unit counters, a Magnetic Mine option (15, X3), an Assault Group option (75), a Ferocious option and the tops of two further cards (cut off at the bottom). Only the tile is labelled here. Slot 1 clearly wider than the other three (about 370 vs 285 px). Black bar links slots 2 and 3 through the middle panel. Small tab above slot 4 shows '0' (a number, not a star) - treated as special ability tab. Unit pictures: Ob Othman (two stars), Goliath, Fire Group, MG Group; three red X squares.",
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "wide",
+    "stripes": [
+     "green",
+     "white",
+     "green"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "green",
+     "white",
+     "green"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "green",
+     "white",
+     "green"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "green",
+     "white",
+     "green"
+    ]
+   }
+  ],
+  "special_ability_slot": 3,
+  "units": [
+   [
+    "Ob Othman",
+    1
+   ],
+   [
+    "Goliath",
+    1
+   ],
+   [
+    "Fire Group",
+    1
+   ],
+   [
+    "MG Group",
+    1
+   ]
+  ],
+  "breaking_point": 3
+ },
+ {
+  "file": "ge2_02.png",
+  "kind": "unit",
+  "name": "Fire Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Five soldiers, values 3 arrow, +2 / 5 / +0 / +1, +1 sword icon."
+ },
+ {
+  "file": "ge2_03.png",
+  "kind": "unit",
+  "name": "Fire Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Same appearance as ge2_02."
+ },
+ {
+  "file": "ge2_04.png",
+  "kind": "marker",
+  "name": "Hedgerow Side",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square terrain/cover marker with green border, printed 'HEDGEROW SIDE'; icons: red cross, target, +2, red no-entry hex."
+ },
+ {
+  "file": "ge2_05.png",
+  "kind": "unit",
+  "name": "MG Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border. Values 3 arrow, +3 / 5 / +0 / +3, -1 arrow, +1 sword icon."
+ },
+ {
+  "file": "ge2_06.png",
+  "kind": "unit",
+  "name": "Othman",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Yellow border, two stars (leader). Values 4 arrow, +2 / 6 / +0 / +1, red 4 range arrow."
+ },
+ {
+  "file": "ge2_07.png",
+  "kind": "option",
+  "name": "Position",
+  "sub": null,
+  "cost": 10,
+  "rotation": 270,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X1",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Shows the Hedgerow Side position marker picture. Stripes stick out top and bottom as scanned."
+ },
+ {
+  "file": "ge2_08.png",
+  "kind": "tile",
+  "name": "Oros Snowt",
+  "sub": "Grenade Maniac",
+  "cost": 35,
+  "rotation": 270,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero tile: portrait, name printed vertically on right, cost 35 top left. No empty slot or stripes visible on the crop (crop shows no stripe edges); stripes taken from the small O. Snowt unit picture. Also shows a Grenade gear picture with a large red 8 beside it. Crop may omit part of the tile edge.",
+  "tile_type": "hero",
+  "slots": [],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "O. Snowt",
+    1
+   ]
+  ],
+  "breaking_point": 0
+ },
+ {
+  "file": "ge2_09.png",
+  "kind": "option",
+  "name": "Schwimmwagen",
+  "sub": null,
+  "cost": 25,
+  "rotation": 270,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "units": [
+   [
+    "Schwimmwagen",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "One red X square at bottom left as scanned (bottom right when upright). Stripes top and bottom as scanned."
+ },
+ {
+  "file": "ge2_10.png",
+  "kind": "option",
+  "name": "Magnetic Mine",
+  "sub": null,
+  "cost": 15,
+  "rotation": 270,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripes top and bottom as scanned."
+ },
+ {
+  "file": "ge2_11.png",
+  "kind": "option",
+  "name": "Assault Group",
+  "sub": null,
+  "cost": 75,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "units": [
+   [
+    "Fire Group",
+    1
+   ],
+   [
+    "MG Group",
+    1
+   ],
+   [
+    "Flamer Group",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Two red X squares."
+ },
+ {
+  "file": "ge2_12.png",
+  "kind": "unit",
+  "name": "Schwimmwagen",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle counter, stripes top and bottom. Values 6 arrow, +4 / 5 / +2 / X, -2 arrow."
+ },
+ {
+  "file": "ge2_13.png",
+  "kind": "unit",
+  "name": "Goliath",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border tracked remote demolition vehicle. Values 2 arrow, 6."
+ },
+ {
+  "file": "ge2_14.png",
+  "kind": "unit",
+  "name": "Goliath",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border tracked remote demolition vehicle. Values 2 arrow, 6."
+ },
+ {
+  "file": "ge2_15.png",
+  "kind": "option",
+  "name": "Ferocious",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Sword burst = blue down arrow icon."
+ },
+ {
+  "file": "ge2_16.png",
+  "kind": "option",
+  "name": "Demolition Charge",
+  "sub": null,
+  "cost": 10,
+  "rotation": 270,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripes top and bottom as scanned."
+ },
+ {
+  "file": "ge2_17.png",
+  "kind": "marker",
+  "name": "Demolition Charge",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square marker: '3kg' charge picture, blue range arrow with red 1. Green/white/green stripe border visible at left and right edges."
+ },
+ {
+  "file": "ge2_18.png",
+  "kind": "marker",
+  "name": "Demolition Charge",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square marker: '3kg' charge picture, blue range arrow with red 1. Green/white/green stripe border visible at left and right edges."
+ },
+ {
+  "file": "ge2_19.png",
+  "kind": "marker",
+  "name": "Demolition Charge",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square marker: '3kg' charge, blue range arrow with red 1; green/white/green stripe border at left and right edges."
+ },
+ {
+  "file": "ge2_20.png",
+  "kind": "unit",
+  "name": "MG Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border. Values 3 arrow, +3 / 5 / +0 / +3, -1 arrow, +1 sword."
+ },
+ {
+  "file": "ge2_21.png",
+  "kind": "unit",
+  "name": "Flamer",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border; printed 'FLAMER' (the option card calls it Flamer Group). Values 3 arrow, +0 / 5 / X / +0, flame icon."
+ },
+ {
+  "file": "ge2_22.png",
+  "kind": "unit",
+  "name": "O. Snowt",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Single soldier counter, no coloured border. Values 4 arrow, +2 / 6 / +0 / +1, +1 sword icon. Crop edge slightly clipped at bottom."
+ },
+ {
+  "file": "ge2_23.png",
+  "kind": "option",
+  "name": "Tank Buster",
+  "sub": null,
+  "cost": 20,
+  "rotation": 270,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "+2",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Tank destroyer badge artwork with sword burst +2 icon. Stripes top and bottom as scanned."
+ },
+ {
+  "file": "ge2_24.png",
+  "kind": "option",
+  "name": "Goliath",
+  "sub": null,
+  "cost": 15,
+  "rotation": 270,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "units": [
+   [
+    "Goliath",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X1",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripes top and bottom as scanned."
+ },
+ {
+  "file": "ge2_25.png",
+  "kind": "marker",
+  "name": "Magnetic Mine",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square marker: mine picture, blue range arrow with red 1. Dark grey/black stripe border at left and right edges."
+ },
+ {
+  "file": "ge2_26.png",
+  "kind": "marker",
+  "name": "Magnetic Mine",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square marker: mine picture, blue range arrow with red 1. Dark grey/black stripe border at left and right edges."
+ },
+ {
+  "file": "ge2_27.png",
+  "kind": "marker",
+  "name": "Magnetic Mine",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Square marker: mine picture, blue range arrow with red 1. Dark grey/black stripe border at left and right edges."
+ },
+ {
+  "file": "ge3_01.png",
+  "kind": "unit",
+  "name": "Sd.Kfz.251/1",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripes at sides of upright-name view are grey/black/grey"
+ },
+ {
+  "file": "ge3_02.png",
+  "kind": "unit",
+  "name": "MG 42",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border"
+ },
+ {
+  "file": "ge3_03.png",
+  "kind": "tile",
+  "name": "Panzergrenadiere",
+  "sub": "II. Battalion, Pzgr-Lehr-Rgt.901",
+  "cost": 65,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Crop is rotated; slots listed in upright left-to-right order (crop bottom to top). Slot stripes only partly visible as bands (green/white or grey/black). Star tab on the first slot. Cost 65 tab on right of upright tile.",
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "wide",
+    "stripes": [
+     "green",
+     "white"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "grey",
+     "black"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "grey",
+     "black"
+    ]
+   },
+   {
+    "size": "wide",
+    "stripes": [
+     "green",
+     "white"
+    ]
+   }
+  ],
+  "special_ability_slot": 0,
+  "units": [
+   [
+    "OB Haeften",
+    1
+   ],
+   [
+    "Recon Group",
+    1
+   ],
+   [
+    "MG-42",
+    1
+   ],
+   [
+    "Fire Group",
+    1
+   ]
+  ],
+  "breaking_point": 3
+ },
+ {
+  "file": "ge3_04.png",
+  "kind": "option",
+  "name": "Panzergrenadiere",
+  "sub": null,
+  "cost": 45,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Recon Group",
+    1
+   ],
+   [
+    "Fire Group",
+    1
+   ],
+   [
+    "MG-42",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "ge3_05.png",
+  "kind": "unit",
+  "name": "Recon Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "ge3_06.png",
+  "kind": "unit",
+  "name": "Fire Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "ge3_07.png",
+  "kind": "option",
+  "name": "Support Group",
+  "sub": null,
+  "cost": 50,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Fire Group",
+    1
+   ],
+   [
+    "MG-42",
+    2
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "ge3_08.png",
+  "kind": "unit",
+  "name": "Recon Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "ge3_09.png",
+  "kind": "unit",
+  "name": "Fire Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "ge3_10.png",
+  "kind": "unit",
+  "name": "MG 42",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border"
+ },
+ {
+  "file": "ge3_11.png",
+  "kind": "option",
+  "name": "Ambush Group",
+  "sub": null,
+  "cost": 40,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Recon Group",
+    2
+   ],
+   [
+    "Panzerschreck",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "ge3_12.png",
+  "kind": "unit",
+  "name": "Von Haeften",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Yellow border, stars"
+ },
+ {
+  "file": "ge3_13.png",
+  "kind": "unit",
+  "name": "Recon Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "ge3_14.png",
+  "kind": "unit",
+  "name": "Recon Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "ge3_15.png",
+  "kind": "unit",
+  "name": "Panzerschreck",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border"
+ },
+ {
+  "file": "ge3_16.png",
+  "kind": "option",
+  "name": "Sd.Kfz 251/1",
+  "sub": null,
+  "cost": 30,
+  "rotation": 270,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Sd.Kfz 251/1",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "ge3_17.png",
+  "kind": "option",
+  "name": "Grenade",
+  "sub": null,
+  "cost": 5,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "ge3_18.png",
+  "kind": "marker",
+  "name": "Grenade 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade marker with 2 range arrow"
+ },
+ {
+  "file": "ge3_19.png",
+  "kind": "marker",
+  "name": "Grenade 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade marker with 2 range arrow"
+ },
+ {
+  "file": "ge3_20.png",
+  "kind": "unit",
+  "name": "Fire Group",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "ge3_21.png",
+  "kind": "unit",
+  "name": "MG 42",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border"
+ },
+ {
+  "file": "ge3_22.png",
+  "kind": "unit",
+  "name": "MG 42",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "white",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border"
+ },
+ {
+  "file": "ge3_23.png",
+  "kind": "marker",
+  "name": "Grenade 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade marker with 2 range arrow"
+ },
+ {
+  "file": "ge3_24.png",
+  "kind": "marker",
+  "name": "Grenade 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade marker with 2 range arrow"
+ },
+ {
+  "file": "ge4_01.png",
+  "kind": "tile",
+  "name": "Divisionsstab",
+  "sub": "Generalleutnant Fritz Bayerlein",
+  "cost": 10,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "High Command, restriction '500+'. Four equal-width slots (all narrow). Slots listed bottom to top of crop. Portrait of general.",
+  "tile_type": "command",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "white",
+     "red",
+     "white",
+     "black"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "white",
+     "red",
+     "white",
+     "black"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "white",
+     "red",
+     "white",
+     "black"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "white",
+     "red",
+     "white",
+     "black"
+    ]
+   }
+  ],
+  "special_ability_slot": null,
+  "units": [],
+  "breaking_point": 0
+ },
+ {
+  "file": "ge4_02.png",
+  "kind": "option",
+  "name": "Guardian",
+  "sub": null,
+  "cost": 30,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "yellow"
+ },
+ {
+  "file": "ge4_03.png",
+  "kind": "option",
+  "name": "Directive",
+  "sub": null,
+  "cost": 40,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "ge4_04.png",
+  "kind": "option",
+  "name": "Artillery",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Marker text is a bonus value",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "+1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "ge4_05.png",
+  "kind": "option",
+  "name": "Directive",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "ge4_06.png",
+  "kind": "unit",
+  "name": "8cm Grantwerfer 34",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border"
+ },
+ {
+  "file": "ge4_07.png",
+  "kind": "unit",
+  "name": "8cm Grantwerfer 34",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Red border"
+ },
+ {
+  "file": "ge4_08.png",
+  "kind": "option",
+  "name": "Field Artillery",
+  "sub": null,
+  "cost": 30,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Marker text is a bonus value",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "+3",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "ge4_09.png",
+  "kind": "option",
+  "name": "Battle Plan",
+  "sub": null,
+  "cost": 30,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Marker text is a bonus value",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "+1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "ge4_10.png",
+  "kind": "option",
+  "name": "Airstrike",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Marker text is a bonus value",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "+1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "ge4_11.png",
+  "kind": "option",
+  "name": "Planning",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "yellow"
+ },
+ {
+  "file": "ge4_12.png",
+  "kind": "tile",
+  "name": "Fritz",
+  "sub": "Walk-on Actor",
+  "cost": 0,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero tile, no slots. Shows '200+' restriction. Cost 0.",
+  "tile_type": "hero",
+  "slots": [],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "Fritz",
+    1
+   ]
+  ],
+  "breaking_point": 0
+ },
+ {
+  "file": "ge4_13.png",
+  "kind": "unit",
+  "name": "Fritz",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "medium",
+  "notes": ""
+ },
+ {
+  "file": "ge4_14.png",
+  "kind": "option",
+  "name": "Improvisation",
+  "sub": null,
+  "cost": 20,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "yellow"
+ },
+ {
+  "file": "ge4_15.png",
+  "kind": "unit",
+  "name": "G. Braun",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Yellow border, star"
+ },
+ {
+  "file": "ge4_16.png",
+  "kind": "option",
+  "name": "Granatwerfer Gruppe",
+  "sub": null,
+  "cost": 60,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Printed spelling 'Gruppe'; unit line prints 'Grantawerfer'",
+  "units": [
+   [
+    "8cm Grantawerfer 34",
+    2
+   ],
+   [
+    "G. Braun",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "yellow"
+ },
+ {
+  "file": "ge4_17.png",
+  "kind": "option",
+  "name": "Smoke",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red",
+   "white",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "ge4_18.png",
+  "kind": "marker",
+  "name": "Order tokens (Hold Your Ground, Charge, Fire At Will, Double Time)",
+  "sub": null,
+  "cost": null,
+  "rotation": 270,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Four triangular order tokens in one crop"
+ },
+ {
+  "file": "ge4_19.png",
+  "kind": "marker",
+  "name": "Smoke template",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Not opened individually; identified from map overview (smoke template 5-6)"
+ },
+ {
+  "file": "ge4_20.png",
+  "kind": "marker",
+  "name": "Smoke template",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Not opened individually; identified from map overview (smoke template 5-6)"
+ },
+ {
+  "file": "ge4_21.png",
+  "kind": "marker",
+  "name": "Smoke template",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Not opened individually; identified from map overview (smoke template 5-6)"
+ }
+]

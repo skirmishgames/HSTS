@@ -1,0 +1,2191 @@
+[
+ {
+  "file": "us1_01.png",
+  "kind": "tile",
+  "name": "High Command",
+  "sub": "General Raymond O. Barton",
+  "cost": 10,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Army size restriction 500+. 4th Inf. Div. ivy badge in all four slots. All four slots look the same width so all marked narrow. Crop is vertical; slot order upright is crop bottom to top (all identical).",
+  "tile_type": "command",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "white",
+     "red",
+     "white",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "white",
+     "red",
+     "white",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "white",
+     "red",
+     "white",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "white",
+     "red",
+     "white",
+     "blue"
+    ]
+   }
+  ],
+  "special_ability_slot": null,
+  "units": [],
+  "breaking_point": 0
+ },
+ {
+  "file": "us1_02.png",
+  "kind": "option",
+  "name": "Airstrike",
+  "sub": null,
+  "cost": 20,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Airstrike card",
+    3
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "+3",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "us1_03.png",
+  "kind": "option",
+  "name": "Directive",
+  "sub": null,
+  "cost": 40,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Directive marker",
+    3
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "us1_04.png",
+  "kind": "option",
+  "name": "Artillery",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Artillery card",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "+1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "us1_05.png",
+  "kind": "option",
+  "name": "Directive",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Directive marker",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "us1_06.png",
+  "kind": "marker",
+  "name": "A",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Objective marker A (large) with red/white/blue stripes"
+ },
+ {
+  "file": "us1_07.png",
+  "kind": "marker",
+  "name": "B",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Objective marker B (large) with red/white/blue stripes"
+ },
+ {
+  "file": "us1_08.png",
+  "kind": "option",
+  "name": "Field Artillery",
+  "sub": null,
+  "cost": 30,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Field Artillery card",
+    3
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "+3",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "us1_09.png",
+  "kind": "option",
+  "name": "Battle Plan",
+  "sub": null,
+  "cost": 25,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "+1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "us1_10.png",
+  "kind": "option",
+  "name": "Planning",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Star picture",
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "yellow"
+ },
+ {
+  "file": "us1_11.png",
+  "kind": "option",
+  "name": "Initiative",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "us1_12.png",
+  "kind": "marker",
+  "name": "A",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Objective marker A (small) with red/white/blue stripes"
+ },
+ {
+  "file": "us1_13.png",
+  "kind": "tile",
+  "name": "Sgt Bruno",
+  "sub": "Long Range Tank Buster",
+  "cost": 25,
+  "rotation": 270,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero tile, no slots. Printed 'SGT BRUNO' without period.",
+  "tile_type": "hero",
+  "slots": [],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "Bruno",
+    1
+   ]
+  ],
+  "breaking_point": 0
+ },
+ {
+  "file": "us1_14.png",
+  "kind": "unit",
+  "name": "Pilot",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "No side stripes visible. Red X over star badge is part of the Pilot counter."
+ },
+ {
+  "file": "us1_15.png",
+  "kind": "unit",
+  "name": "Bruno",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Dark bands at both sides, read as black stripes"
+ },
+ {
+  "file": "us1_16.png",
+  "kind": "option",
+  "name": "Hidden",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Objective A",
+    2
+   ],
+   [
+    "Objective B",
+    2
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "yellow"
+ },
+ {
+  "file": "us1_17.png",
+  "kind": "option",
+  "name": "Smoke",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "us1_18.png",
+  "kind": "marker",
+  "name": "B",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "white",
+   "red",
+   "white",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Objective marker B (small) with red/white/blue stripes"
+ },
+ {
+  "file": "us1_19.png",
+  "kind": "marker",
+  "name": "1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Initiative / order number 1 token"
+ },
+ {
+  "file": "us1_20.png",
+  "kind": "marker",
+  "name": "Order tokens: Hold Your Ground, Charge, Fire at Will, Double Time",
+  "sub": null,
+  "cost": null,
+  "rotation": 270,
+  "stripes": [],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Crop holds four triangular order tokens (Hold Your Ground, Charge, Fire at Will, Double Time). Stripes on triangles red/white/blue."
+ },
+ {
+  "file": "us1_21.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Large blast/smoke template with 5-6 and numbered arrows; no printed name"
+ },
+ {
+  "file": "us1_22.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Large blast/smoke template with 5-6 and numbered arrows; no printed name"
+ },
+ {
+  "file": "us1_23.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Large blast/smoke template with 5-6 and numbered arrows; no printed name"
+ },
+ {
+  "file": "us2_01.png",
+  "kind": "tile",
+  "name": "Sgt. Brady",
+  "sub": "Perfect Spotter",
+  "cost": 15,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero tile, no slots; unit crest shown",
+  "tile_type": "hero",
+  "slots": [],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "Brady",
+    1
+   ]
+  ],
+  "breaking_point": 0
+ },
+ {
+  "file": "us2_02.png",
+  "kind": "unit",
+  "name": ".30 Cal",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_03.png",
+  "kind": "tile",
+  "name": "Weapon Platoon",
+  "sub": "4th Inf. Div. 12nd Inf. Reg.",
+  "cost": 55,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Crop is rotated; upright slot order is crop bottom to top. Star tab on the first upright slot (crop bottom). All 4 slots same width. The second and third upright slots show a dark grey overlay with a black line across the stripes (stripes recorded as yellow, red, blue, may differ). Sub printed '12ND Inf. Reg.'. 3 red X squares.",
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "red",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "red",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "red",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "red",
+     "blue"
+    ]
+   }
+  ],
+  "special_ability_slot": 0,
+  "units": [
+   [
+    "Lt. Jones",
+    1
+   ],
+   [
+    "60mm Mortar",
+    1
+   ],
+   [
+    "Bazooka",
+    1
+   ],
+   [
+    ".30 Cal",
+    1
+   ]
+  ],
+  "breaking_point": 3
+ },
+ {
+  "file": "us2_04.png",
+  "kind": "unit",
+  "name": "Brady",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Brady counter"
+ },
+ {
+  "file": "us2_05.png",
+  "kind": "unit",
+  "name": "Lt. Jones",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_06.png",
+  "kind": "unit",
+  "name": ".30 Cal",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_07.png",
+  "kind": "option",
+  "name": ".30 Cal Squad",
+  "sub": null,
+  "cost": 25,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    ".30 Cal",
+    2
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "us2_08.png",
+  "kind": "option",
+  "name": "Bazooka Squad",
+  "sub": null,
+  "cost": 30,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Bazooka",
+    2
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "us2_09.png",
+  "kind": "marker",
+  "name": "Suppressed -2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_10.png",
+  "kind": "marker",
+  "name": "Suppressed -2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_11.png",
+  "kind": "unit",
+  "name": "60mm Mortar",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripes appear slightly offset by crop"
+ },
+ {
+  "file": "us2_12.png",
+  "kind": "unit",
+  "name": "60mm Mortar",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_13.png",
+  "kind": "option",
+  "name": "Ammo Belt",
+  "sub": null,
+  "cost": 20,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Side stripes dark grey/black, not colour",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "us2_14.png",
+  "kind": "option",
+  "name": "Ammo Bearer",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Crop cuts off bottom of card; cost and red X not visible in crop, taken from the sheet overview map (10, 1 X).",
+  "units": [
+   [
+    "Ammo Bearers",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "us2_15.png",
+  "kind": "option",
+  "name": "Horn of Plenty",
+  "sub": null,
+  "cost": 20,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Horn of Plenty",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "red"
+ },
+ {
+  "file": "us2_16.png",
+  "kind": "option",
+  "name": "Mortar Squad",
+  "sub": null,
+  "cost": 30,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "60mm Mortar",
+    2
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "us2_17.png",
+  "kind": "unit",
+  "name": "Bazooka",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_18.png",
+  "kind": "unit",
+  "name": "Bazooka",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_19.png",
+  "kind": "option",
+  "name": "Trigger Happy",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "us2_20.png",
+  "kind": "marker",
+  "name": "Suppressed -2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_21.png",
+  "kind": "marker",
+  "name": "Ammo Belt",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Ammo belt token +1 / +2"
+ },
+ {
+  "file": "us2_22.png",
+  "kind": "marker",
+  "name": "Ammo Belt",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Ammo belt token +1 / +2"
+ },
+ {
+  "file": "us2_23.png",
+  "kind": "marker",
+  "name": "Ammo Belt",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "black",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Ammo belt token +1 / +2"
+ },
+ {
+  "file": "us2_24.png",
+  "kind": "unit",
+  "name": ".30 Cal",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_25.png",
+  "kind": "unit",
+  "name": "60mm Mortar",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_26.png",
+  "kind": "unit",
+  "name": "Bazooka",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_27.png",
+  "kind": "unit",
+  "name": "Ammo Bearers",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us2_28.png",
+  "kind": "marker",
+  "name": "Horn of Plenty",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Counter with crates; name 'Horn of Plenty' reads bottom to top; not a recruitment piece"
+ },
+ {
+  "file": "us3_01.png",
+  "kind": "tile",
+  "name": "Recon Squadron",
+  "sub": "4th Ar.Div. 3D Cavalry Group",
+  "cost": 60,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "orange",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 slots all same width; 4th Armored Div. triangle badge in each. Star tab on Ridley picture is part of the composition, not a slot tab; the small tab with a green '6' wing icon sits above slot 0. Stripe order per slot read approximately (green, orange, black, green); right slot mirrored.",
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "green",
+     "orange",
+     "black",
+     "green"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "green",
+     "orange",
+     "black",
+     "green"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "green",
+     "black",
+     "orange",
+     "green"
+    ]
+   }
+  ],
+  "special_ability_slot": 0,
+  "units": [
+   [
+    "Sgt. Ridley",
+    1
+   ],
+   [
+    "Scout Team",
+    1
+   ],
+   [
+    "Willys .50 Cal",
+    1
+   ]
+  ],
+  "breaking_point": 2
+ },
+ {
+  "file": "us3_02.png",
+  "kind": "unit",
+  "name": "Scout Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us3_03.png",
+  "kind": "unit",
+  "name": "Scout Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us3_04.png",
+  "kind": "unit",
+  "name": "Scout Bar",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us3_05.png",
+  "kind": "option",
+  "name": "Tricky",
+  "sub": null,
+  "cost": 5,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Tricky (unit back)",
+    2
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X2",
+  "name_colour": "red"
+ },
+ {
+  "file": "us3_06.png",
+  "kind": "option",
+  "name": "Recon Bar",
+  "sub": null,
+  "cost": 25,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Scout Team",
+    1
+   ],
+   [
+    "Scout Bar",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "us3_07.png",
+  "kind": "option",
+  "name": "Recon Bazooka",
+  "sub": null,
+  "cost": 30,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Scout Team",
+    1
+   ],
+   [
+    "Scout Bazooka",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "us3_08.png",
+  "kind": "unit",
+  "name": "Ridley",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Yellow border (hero counter) with star icon; side stripes green/orange/green"
+ },
+ {
+  "file": "us3_09.png",
+  "kind": "tile",
+  "name": "Kowalski",
+  "sub": "The Snake",
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero tile, portrait, no slots; 3rd Cavalry Group crest top left.",
+  "tile_type": "hero",
+  "slots": [],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "Kowalski",
+    1
+   ]
+  ],
+  "breaking_point": 0
+ },
+ {
+  "file": "us3_10.png",
+  "kind": "unit",
+  "name": "Scout Bazooka",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us3_11.png",
+  "kind": "unit",
+  "name": "Willys .50 Cal",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us3_12.png",
+  "kind": "option",
+  "name": "Grenade",
+  "sub": null,
+  "cost": 5,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "us3_13.png",
+  "kind": "option",
+  "name": "Sticky Bomb",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "us3_14.png",
+  "kind": "option",
+  "name": "Recon M20",
+  "sub": null,
+  "cost": 25,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Armored Utility Car M20",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "us3_15.png",
+  "kind": "unit",
+  "name": "Kowalski",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "orange"
+  ],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Crop cuts off the right side of the counter"
+ },
+ {
+  "file": "us3_16.png",
+  "kind": "unit",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Blank counter back (terrain picture with 4th Armored triangle), no name"
+ },
+ {
+  "file": "us3_17.png",
+  "kind": "marker",
+  "name": "Suppressed -2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us3_18.png",
+  "kind": "option",
+  "name": "Veteran",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Veteran marker",
+    3
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "us3_19.png",
+  "kind": "unit",
+  "name": "Armored Utility Car M20",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us3_20.png",
+  "kind": "marker",
+  "name": "Sticky Bomb",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Sticky Bomb token with '1' range arrow"
+ },
+ {
+  "file": "us3_21.png",
+  "kind": "marker",
+  "name": "Sticky Bomb",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Sticky Bomb token with '1' range arrow"
+ },
+ {
+  "file": "us3_22.png",
+  "kind": "marker",
+  "name": "Sticky Bomb",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Sticky Bomb token with '1' range arrow"
+ },
+ {
+  "file": "us3_23.png",
+  "kind": "marker",
+  "name": "Sticky Bomb",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Sticky Bomb token with '1' range arrow"
+ },
+ {
+  "file": "us3_24.png",
+  "kind": "marker",
+  "name": "Sticky Bomb",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Sticky Bomb token with '1' range arrow"
+ },
+ {
+  "file": "us3_25.png",
+  "kind": "marker",
+  "name": "Sticky Bomb",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Sticky Bomb token with '1' range arrow"
+ },
+ {
+  "file": "us3_26.png",
+  "kind": "unit",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "orange",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Blank counter back (terrain picture with 4th Armored triangle), no name"
+ },
+ {
+  "file": "us3_27.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade token with '2' range arrow"
+ },
+ {
+  "file": "us3_28.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade token with '2' range arrow"
+ },
+ {
+  "file": "us3_29.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade token with '2' range arrow"
+ },
+ {
+  "file": "us3_30.png",
+  "kind": "marker",
+  "name": "Veteran",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Veteran token with die icon"
+ },
+ {
+  "file": "us3_31.png",
+  "kind": "marker",
+  "name": "Veteran",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Veteran token with die icon"
+ },
+ {
+  "file": "us3_32.png",
+  "kind": "marker",
+  "name": "Veteran",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Veteran token with die icon"
+ },
+ {
+  "file": "us3_33.png",
+  "kind": "option",
+  "name": "Sticky Bomb",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "green",
+   "black",
+   "green"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Duplicate of us3_13",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "us4_01.png",
+  "kind": "unit",
+  "name": "Sherman CMD M4",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Yellow border and stars (command/hero style vehicle); grey/light green/grey side stripes in crop"
+ },
+ {
+  "file": "us4_02.png",
+  "kind": "unit",
+  "name": "Sherman M4",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us4_03.png",
+  "kind": "tile",
+  "name": "Sherman Squadron",
+  "sub": "4th Ar.Div. 37th Ar.Regt",
+  "cost": 125,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "green",
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "3 slots all same width with 4th Armored triangle badge; no tab seen on any slot (stars on the Sherman CMD picture are part of the unit). Light green stripe recorded as green; grey bands are dark grey-brown.",
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "grey",
+     "green",
+     "black",
+     "grey"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "grey",
+     "green",
+     "black",
+     "grey"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "grey",
+     "black",
+     "green",
+     "grey"
+    ]
+   }
+  ],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "Sherman CMD M4",
+    1
+   ],
+   [
+    "Sherman M4",
+    1
+   ]
+  ],
+  "breaking_point": 2
+ },
+ {
+  "file": "us4_04.png",
+  "kind": "option",
+  "name": "M10 A1 Squad",
+  "sub": null,
+  "cost": 120,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "M10 A1",
+    2
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "us4_05.png",
+  "kind": "option",
+  "name": "M10 A1",
+  "sub": null,
+  "cost": 60,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Crop cuts off right edge slightly; card otherwise readable, cost 60",
+  "units": [
+   [
+    "M10 A1",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "us4_06.png",
+  "kind": "unit",
+  "name": "Sherman (76)W",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Landscape counter, name reads upright; stripes at top and bottom edges"
+ },
+ {
+  "file": "us4_07.png",
+  "kind": "option",
+  "name": "Sherman (76)W",
+  "sub": null,
+  "cost": 70,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Sherman (76)W",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "us4_08.png",
+  "kind": "option",
+  "name": "Ace Driver",
+  "sub": null,
+  "cost": 5,
+  "rotation": 270,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Card is rotated; cost 5 read upside-down at left",
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "red"
+ },
+ {
+  "file": "us4_09.png",
+  "kind": "option",
+  "name": "APC Shells",
+  "sub": null,
+  "cost": 10,
+  "rotation": 270,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "us4_10.png",
+  "kind": "option",
+  "name": "HE Shells",
+  "sub": null,
+  "cost": 10,
+  "rotation": 270,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "us4_11.png",
+  "kind": "unit",
+  "name": "M10 A1",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us4_12.png",
+  "kind": "unit",
+  "name": "M10 A1",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Sandbags variant picture"
+ },
+ {
+  "file": "us4_13.png",
+  "kind": "marker",
+  "name": "Damage table 1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle damage result marker"
+ },
+ {
+  "file": "us4_14.png",
+  "kind": "marker",
+  "name": "Damage table 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle damage result marker"
+ },
+ {
+  "file": "us4_15.png",
+  "kind": "marker",
+  "name": "Damage table 3-4",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle damage result marker"
+ },
+ {
+  "file": "us4_16.png",
+  "kind": "marker",
+  "name": "Damage table 5",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle damage result marker"
+ },
+ {
+  "file": "us4_17.png",
+  "kind": "marker",
+  "name": "Damage table 1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle damage result marker"
+ },
+ {
+  "file": "us4_18.png",
+  "kind": "marker",
+  "name": "Damage table 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle damage result marker"
+ },
+ {
+  "file": "us4_19.png",
+  "kind": "marker",
+  "name": "Damage table 3-4",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle damage result marker"
+ },
+ {
+  "file": "us4_20.png",
+  "kind": "marker",
+  "name": "Damage table 5",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle damage result marker"
+ },
+ {
+  "file": "us4_21.png",
+  "kind": "marker",
+  "name": "APC Shells",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Token with +1"
+ },
+ {
+  "file": "us4_22.png",
+  "kind": "marker",
+  "name": "APC Shells",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Token with +1"
+ },
+ {
+  "file": "us4_23.png",
+  "kind": "marker",
+  "name": "APC Shells",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Token with +1"
+ },
+ {
+  "file": "us4_24.png",
+  "kind": "marker",
+  "name": "Damage table 1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle damage result marker"
+ },
+ {
+  "file": "us4_25.png",
+  "kind": "marker",
+  "name": "Damage table 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle damage result marker"
+ },
+ {
+  "file": "us4_26.png",
+  "kind": "marker",
+  "name": "Damage table 3-4",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle damage result marker"
+ },
+ {
+  "file": "us4_27.png",
+  "kind": "marker",
+  "name": "Damage table 5",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle damage result marker"
+ },
+ {
+  "file": "us4_28.png",
+  "kind": "marker",
+  "name": "HE Shells",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us4_29.png",
+  "kind": "marker",
+  "name": "HE Shells",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ },
+ {
+  "file": "us4_30.png",
+  "kind": "marker",
+  "name": "HE Shells",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "grey",
+   "green",
+   "grey"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": ""
+ }
+]

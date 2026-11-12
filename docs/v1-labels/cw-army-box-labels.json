@@ -1,0 +1,2509 @@
+[
+ {
+  "file": "cw1_01.png",
+  "kind": "tile",
+  "name": "High Command",
+  "sub": "Brigadier E.H. Goulburn",
+  "cost": 10,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "High Command, army size restriction 500+. Four equal-width slots (all narrow), each with a black/red triangle division badge. No special ability tab visible.",
+  "units": [
+   [
+    "Brigadier E.H. Goulburn",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "tile_type": "command",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "red",
+     "white",
+     "red",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "red",
+     "white",
+     "red",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "red",
+     "white",
+     "red",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "red",
+     "white",
+     "red",
+     "blue"
+    ]
+   }
+  ],
+  "special_ability_slot": null
+ },
+ {
+  "file": "cw1_02.png",
+  "kind": "option",
+  "name": "Airstrike",
+  "sub": null,
+  "cost": 20,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Cost read from the sheet overview map because the crop cuts off the bottom of the card. Three cards shown; marker +3 from map.",
+  "units": [
+   [
+    "Airstrike cards",
+    3
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "+3",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw1_03.png",
+  "kind": "option",
+  "name": "Directive",
+  "sub": null,
+  "cost": 40,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Cost read from the sheet overview map because the crop cuts off the bottom of the card. ",
+  "units": [
+   [
+    "Directive",
+    3
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw1_04.png",
+  "kind": "option",
+  "name": "Artillery",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Cost read from the sheet overview map because the crop cuts off the bottom of the card. Marker +1 from map.",
+  "units": [
+   [
+    "Artillery card",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "+1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw1_05.png",
+  "kind": "option",
+  "name": "Directive",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Cost read from the sheet overview map because the crop cuts off the bottom of the card. ",
+  "units": [
+   [
+    "Directive",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw1_06.png",
+  "kind": "marker",
+  "name": "Objective C",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Objective marker C with flag-colour stripes at sides."
+ },
+ {
+  "file": "cw1_07.png",
+  "kind": "marker",
+  "name": "Objective D",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Objective marker D with flag-colour stripes at sides."
+ },
+ {
+  "file": "cw1_08.png",
+  "kind": "option",
+  "name": "Artillery",
+  "sub": null,
+  "cost": 30,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Cost read from the sheet overview map because the crop cuts off the bottom of the card. Marker +3 from map.",
+  "units": [
+   [
+    "Artillery card",
+    3
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "+3",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw1_09.png",
+  "kind": "option",
+  "name": "Battle Plan",
+  "sub": null,
+  "cost": 25,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Cost read from the sheet overview map because the crop cuts off the bottom of the card. Marker +1 from map.",
+  "units": [
+   [
+    "Battle Plan marker",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "+1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw1_10.png",
+  "kind": "option",
+  "name": "Planning",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Cost read from the sheet overview map because the crop cuts off the bottom of the card. No count marker on map.",
+  "units": [
+   [
+    "Star marker",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw1_11.png",
+  "kind": "option",
+  "name": "Initiative",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Cost read from the sheet overview map because the crop cuts off the bottom of the card. ",
+  "units": [
+   [
+    "Initiative 1 marker",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw1_12.png",
+  "kind": "marker",
+  "name": "Objective C",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Small objective marker C with side stripes."
+ },
+ {
+  "file": "cw1_13.png",
+  "kind": "tile",
+  "name": "Sasha",
+  "sub": "Military Advisor",
+  "cost": 30,
+  "rotation": 90,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero tile; no slots. Ability text 'Urban Fighter' printed beside portrait. Name reads bottom to top in the crop.",
+  "units": [
+   [
+    "Sasha",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "tile_type": "hero",
+  "slots": [],
+  "special_ability_slot": null
+ },
+ {
+  "file": "cw1_14.png",
+  "kind": "unit",
+  "name": "Sasha",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter with star, gold border; name reads bottom to top. Side stripes are not clearly visible (brown bands only)."
+ },
+ {
+  "file": "cw1_15.png",
+  "kind": "option",
+  "name": "Concealed",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Option with four objective markers pictured.",
+  "units": [
+   [
+    "Objective C",
+    1
+   ],
+   [
+    "Objective D",
+    1
+   ],
+   [
+    "Objective C (small)",
+    1
+   ],
+   [
+    "Objective D (small)",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw1_16.png",
+  "kind": "option",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "low",
+  "notes": "Crop shows only the bottom right corner of an option card (X3, partly cut cost digit). From the overview map this is Smoke, cost 10, X3. Name not readable in the crop itself.",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw1_17.png",
+  "kind": "option",
+  "name": "Airstrike",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Cost read from the sheet overview map because the crop cuts off the bottom of the card. Marker +1 from map.",
+  "units": [
+   [
+    "Airstrike card",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "+1",
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw1_18.png",
+  "kind": "marker",
+  "name": "Objective D",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Small objective marker D with side stripes."
+ },
+ {
+  "file": "cw1_19.png",
+  "kind": "marker",
+  "name": "Order tokens: Hold Your Ground, Charge, Fire At Will, Double Time",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Crop holds four triangular order tokens in one piece: Hold Your Ground (grey), Charge (red), Fire At Will (yellow), Double Time (blue). Name text reads bottom to top."
+ },
+ {
+  "file": "cw1_20.png",
+  "kind": "marker",
+  "name": "Smoke",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Smoke template with 5-6 and direction arrows."
+ },
+ {
+  "file": "cw1_21.png",
+  "kind": "marker",
+  "name": "Smoke",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Smoke template with 5-6 and direction arrows."
+ },
+ {
+  "file": "cw1_22.png",
+  "kind": "marker",
+  "name": "Smoke",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Smoke template with 5-6 and direction arrows."
+ },
+ {
+  "file": "cw2_01.png",
+  "kind": "marker",
+  "name": "Veteran",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Veteran token (dice with arrow); black bands at sides, no cost."
+ },
+ {
+  "file": "cw2_02.png",
+  "kind": "marker",
+  "name": "Veteran",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Veteran token (dice with arrow); black bands at sides, no cost."
+ },
+ {
+  "file": "cw2_03.png",
+  "kind": "marker",
+  "name": "Veteran",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Veteran token (dice with arrow); black bands at sides, no cost."
+ },
+ {
+  "file": "cw2_04.png",
+  "kind": "tile",
+  "name": "R\u00e9giment de la Chaudi\u00e8re",
+  "sub": "3rd Inf. Div. 8th Infantry Brigade",
+  "cost": 55,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Four equal-width slots (all narrow), each with a gold maple leaf badge on a black square. Star tab sits on the leftmost slot when upright. Name reads bottom to top in the crop.",
+  "units": [
+   [
+    "Lt. Dubois",
+    1
+   ],
+   [
+    "3 Inch Mortar",
+    1
+   ],
+   [
+    "Bazooka",
+    1
+   ],
+   [
+    "Vickers",
+    1
+   ]
+  ],
+  "breaking_point": 3,
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "red",
+     "white",
+     "brown"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "red",
+     "white",
+     "brown"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "red",
+     "white",
+     "brown"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "red",
+     "white",
+     "brown"
+    ]
+   }
+  ],
+  "special_ability_slot": 0
+ },
+ {
+  "file": "cw2_05.png",
+  "kind": "unit",
+  "name": "Dubois",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter Lt. Dubois with star, gold border, maple leaf badge. Name reads bottom to top."
+ },
+ {
+  "file": "cw2_06.png",
+  "kind": "unit",
+  "name": "Universal Carrier",
+  "sub": null,
+  "cost": null,
+  "rotation": 180,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle counter, name upside down. Stripes stick out at top and bottom edges in the crop."
+ },
+ {
+  "file": "cw2_07.png",
+  "kind": "unit",
+  "name": "Vickers",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top. Red border."
+ },
+ {
+  "file": "cw2_08.png",
+  "kind": "marker",
+  "name": "Ammo Belt",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker with +1 and +2 values; red/white/brown stripes at sides, no cost."
+ },
+ {
+  "file": "cw2_09.png",
+  "kind": "marker",
+  "name": "Ammo Belt",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker with +1 and +2 values; red/white/brown stripes at sides, no cost."
+ },
+ {
+  "file": "cw2_10.png",
+  "kind": "marker",
+  "name": "Ammo Belt",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Gear marker with +1 and +2 values; red/white/brown stripes at sides, no cost."
+ },
+ {
+  "file": "cw2_11.png",
+  "kind": "option",
+  "name": "Veteran",
+  "sub": null,
+  "cost": 15,
+  "rotation": 270,
+  "stripes": [
+   "black"
+  ],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Crop cuts off the left part of the card, so cost and X3 are not fully visible in it; cost 15 and X3 read from the sheet overview map. Text reads top to bottom (rotate 270). Stripes sit at top and bottom in the crop and look black.",
+  "units": [
+   [
+    "Veteran token",
+    3
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "cw2_12.png",
+  "kind": "option",
+  "name": "Ammo Belt",
+  "sub": null,
+  "cost": 20,
+  "rotation": 270,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Text reads top to bottom (rotate 270). Stripes at top/bottom of crop, listed top to bottom once upright.",
+  "units": [
+   [
+    "Ammo Belt gear",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "cw2_13.png",
+  "kind": "unit",
+  "name": "3 Inch Mortar",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw2_14.png",
+  "kind": "unit",
+  "name": "Universal Carrier",
+  "sub": null,
+  "cost": null,
+  "rotation": 180,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name upside down. Stripes at top and bottom edges in the crop."
+ },
+ {
+  "file": "cw2_15.png",
+  "kind": "unit",
+  "name": "Vickers",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw2_16.png",
+  "kind": "option",
+  "name": "Universal Carrier",
+  "sub": null,
+  "cost": 30,
+  "rotation": 270,
+  "stripes": [
+   "brown",
+   "black",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Text reads top to bottom (rotate 270). Stripes at top/bottom of crop look brown with a black centre line, not the red/white/brown of other cards; uncertain.",
+  "units": [
+   [
+    "Universal Carrier",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw2_17.png",
+  "kind": "option",
+  "name": "Trigger Happy",
+  "sub": null,
+  "cost": 10,
+  "rotation": 270,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Text reads top to bottom (rotate 270). Shows +1 and Suppressed -2 icons.",
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "cw2_18.png",
+  "kind": "unit",
+  "name": "3 Inch Mortar",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw2_19.png",
+  "kind": "unit",
+  "name": "Universal Carrier",
+  "sub": null,
+  "cost": null,
+  "rotation": 180,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name upside down. Stripes at top and bottom edges in the crop."
+ },
+ {
+  "file": "cw2_20.png",
+  "kind": "unit",
+  "name": "Vickers",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw2_21.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Yellow X with RAF roundel on grass; no printed name (likely an air/aerial target marker, not confirmed)."
+ },
+ {
+  "file": "cw2_22.png",
+  "kind": "option",
+  "name": "MG Platoon",
+  "sub": null,
+  "cost": 70,
+  "rotation": 0,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Printed 'VICKER X2'.",
+  "units": [
+   [
+    "Vickers",
+    2
+   ],
+   [
+    "Universal Carrier",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw2_23.png",
+  "kind": "unit",
+  "name": "3 Inch Mortar",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw2_24.png",
+  "kind": "unit",
+  "name": "Universal Carrier",
+  "sub": null,
+  "cost": null,
+  "rotation": 180,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name upside down. Has a roundel at bottom left (variant without the maple leaf badge); stripes at top/bottom edges in the crop."
+ },
+ {
+  "file": "cw2_25.png",
+  "kind": "unit",
+  "name": "Bazooka",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw2_26.png",
+  "kind": "option",
+  "name": "Mortar Platoon",
+  "sub": null,
+  "cost": 65,
+  "rotation": 0,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Printed '3\" MORTAR X2'.",
+  "units": [
+   [
+    "3\" Mortar",
+    2
+   ],
+   [
+    "Universal Carrier",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw2_27.png",
+  "kind": "option",
+  "name": "Mechanized",
+  "sub": null,
+  "cost": 60,
+  "rotation": 0,
+  "stripes": [
+   "red",
+   "white",
+   "brown"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Universal Carrier",
+    2
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw3_01.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade marker with range arrow '2'; no cost."
+ },
+ {
+  "file": "cw3_02.png",
+  "kind": "marker",
+  "name": "Ammo",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Ammo marker with +1; no cost."
+ },
+ {
+  "file": "cw3_03.png",
+  "kind": "tile",
+  "name": "Ernest 'Smokey' Smith",
+  "sub": "Walking Fire",
+  "cost": 30,
+  "rotation": 90,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero tile with portrait and RAF roundel; no slots. Name printed ERNEST SMOKEY SMITH reading bottom to top; the quotation marks are my addition.",
+  "units": [
+   [
+    "Smokey",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "tile_type": "hero",
+  "slots": [],
+  "special_ability_slot": null
+ },
+ {
+  "file": "cw3_04.png",
+  "kind": "tile",
+  "name": "Suffolk Regiment",
+  "sub": "3rd Inf. Div. 8th Infantry Brigade",
+  "cost": 95,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Four equal-width slots (all narrow) with red-triangle division badge on yellow/red stripes; star tab above the leftmost slot. Stripe band between slots 2 and 3 is hidden behind the composition panel. Stripe colours yellow/red with a dark band.",
+  "units": [
+   [
+    "Lt. Lawson",
+    1
+   ],
+   [
+    "2 Inch Mortar",
+    1
+   ],
+   [
+    "Leader Team",
+    1
+   ],
+   [
+    "Fire Team",
+    1
+   ],
+   [
+    "Bren",
+    1
+   ]
+  ],
+  "breaking_point": 3,
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "red"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "red"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "red"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "red"
+    ]
+   }
+  ],
+  "special_ability_slot": 0
+ },
+ {
+  "file": "cw3_05.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade marker with range arrow '2'; no cost."
+ },
+ {
+  "file": "cw3_06.png",
+  "kind": "marker",
+  "name": "Ammo",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Ammo marker with +1; no cost."
+ },
+ {
+  "file": "cw3_07.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade marker with range arrow '2'; no cost."
+ },
+ {
+  "file": "cw3_08.png",
+  "kind": "marker",
+  "name": "Ammo",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Ammo marker with +1; no cost."
+ },
+ {
+  "file": "cw3_09.png",
+  "kind": "unit",
+  "name": "2 Inch Mortar",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top. Red border."
+ },
+ {
+  "file": "cw3_10.png",
+  "kind": "unit",
+  "name": "Smokey",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter for Ernest Smith with RAF roundel; name reads bottom to top. No clear side stripes visible (crop is tight)."
+ },
+ {
+  "file": "cw3_11.png",
+  "kind": "unit",
+  "name": "Lawson",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter Lt. Lawson, gold border and star; name reads bottom to top."
+ },
+ {
+  "file": "cw3_12.png",
+  "kind": "option",
+  "name": "Bren Platoon",
+  "sub": null,
+  "cost": 60,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Leader Team",
+    1
+   ],
+   [
+    "Fire Team",
+    1
+   ],
+   [
+    "Bren",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw3_13.png",
+  "kind": "option",
+  "name": "PIAT Platoon",
+  "sub": null,
+  "cost": 60,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Leader Team",
+    1
+   ],
+   [
+    "Fire Team",
+    1
+   ],
+   [
+    "PIAT",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw3_14.png",
+  "kind": "option",
+  "name": "Support",
+  "sub": null,
+  "cost": 65,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Leader Team",
+    1
+   ],
+   [
+    "PIAT",
+    1
+   ],
+   [
+    "Bren",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw3_15.png",
+  "kind": "unit",
+  "name": "PIAT",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw3_16.png",
+  "kind": "unit",
+  "name": "Bren",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw3_17.png",
+  "kind": "unit",
+  "name": "Leader Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw3_18.png",
+  "kind": "unit",
+  "name": "Leader Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw3_19.png",
+  "kind": "unit",
+  "name": "Leader Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw3_20.png",
+  "kind": "option",
+  "name": "Ammo",
+  "sub": null,
+  "cost": 10,
+  "rotation": 270,
+  "stripes": [
+   "black"
+  ],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Crop cuts off most of the card, so name text AMMO is not in the crop; name taken from the overview map (AMMO, X3). Cost 10 and X3 visible, rotated. Stripes not visible.",
+  "units": [
+   [
+    "Ammo",
+    3
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "cw3_21.png",
+  "kind": "unit",
+  "name": "PIAT",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw3_22.png",
+  "kind": "unit",
+  "name": "Bren",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw3_23.png",
+  "kind": "unit",
+  "name": "Bren",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw3_24.png",
+  "kind": "unit",
+  "name": "Fire Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw3_25.png",
+  "kind": "unit",
+  "name": "Fire Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw3_26.png",
+  "kind": "unit",
+  "name": "Fire Team",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "red"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw4_01.png",
+  "kind": "marker",
+  "name": "Arrow 1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Orange arrow with '1', part of a blast/scatter template (see cw4_06); crop clipped."
+ },
+ {
+  "file": "cw4_02.png",
+  "kind": "tile",
+  "name": "Field Command",
+  "sub": "Captain Colin Maud & Winnie",
+  "cost": 35,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Field Command, army size restriction 200+. Three equal-width slots (all narrow) with red-triangle division badge. Gold star sits on the Maud counter picture, not on a tab, so special_ability_slot is null. Stripe bands: slot 1 and 2 show blue/red/white/red/blue, slot 3 is dark grey/black (covered by the portrait band).",
+  "units": [
+   [
+    "C. Maud",
+    1
+   ],
+   [
+    "Winnie",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "tile_type": "command",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "red",
+     "white",
+     "red",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "red",
+     "white",
+     "red",
+     "blue"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "blue",
+     "red",
+     "white",
+     "red",
+     "blue"
+    ]
+   }
+  ],
+  "special_ability_slot": null
+ },
+ {
+  "file": "cw4_03.png",
+  "kind": "marker",
+  "name": "Roundel 1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "RAF roundel with '1' (air support/order counter); no cost, wood background."
+ },
+ {
+  "file": "cw4_04.png",
+  "kind": "marker",
+  "name": "Roundel",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "RAF roundel on wood background; map shows an exclamation mark beside it, cut off in this crop."
+ },
+ {
+  "file": "cw4_05.png",
+  "kind": "unit",
+  "name": "Winnie",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Winnie the dog counter; name reads bottom to top. Shows 4 move arrow with rotate icon; crop slightly clipped at bottom."
+ },
+ {
+  "file": "cw4_06.png",
+  "kind": "marker",
+  "name": "Template 5-6",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Large round blast template showing 5-6 with arrows and +2 +2 X, 3 values; crop cuts off part of the template. Some labels are rotated."
+ },
+ {
+  "file": "cw4_07.png",
+  "kind": "marker",
+  "name": "Fuel",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Fuel jerrycan with +1 arrow; crop cuts off the 'FUEL' text, name from overview map."
+ },
+ {
+  "file": "cw4_08.png",
+  "kind": "marker",
+  "name": "Fuel",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Fuel jerrycan with +1 arrow; crop cuts off the 'FUEL' text, name from overview map."
+ },
+ {
+  "file": "cw4_09.png",
+  "kind": "marker",
+  "name": "Fuel",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Fuel jerrycan with +1 arrow; crop cuts off the 'FUEL' text, name from overview map."
+ },
+ {
+  "file": "cw4_10.png",
+  "kind": "marker",
+  "name": "Arrow 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Orange arrow pointing left with '2' (rotated), template piece; crop clipped."
+ },
+ {
+  "file": "cw4_11.png",
+  "kind": "unit",
+  "name": "T17 Staghound",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle counter, name reads upright at top. Armour 8; no side stripes visible."
+ },
+ {
+  "file": "cw4_12.png",
+  "kind": "unit",
+  "name": "Churchill AVRE",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle counter with gold-framed rating boxes. No side stripes visible."
+ },
+ {
+  "file": "cw4_13.png",
+  "kind": "unit",
+  "name": "C. Maud",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero counter Captain Colin Maud, gold border and star. Name reads bottom to top."
+ },
+ {
+  "file": "cw4_14.png",
+  "kind": "option",
+  "name": "Staghound",
+  "sub": null,
+  "cost": 35,
+  "rotation": 0,
+  "stripes": [
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripes at sides look black or dark brown, different from the Union Jack stripes of other cards.",
+  "units": [
+   [
+    "T17 Staghound",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw4_15.png",
+  "kind": "option",
+  "name": "Vickers MG",
+  "sub": null,
+  "cost": 20,
+  "rotation": 0,
+  "stripes": [
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripes at sides look black or dark brown.",
+  "units": [
+   [
+    "Vickers",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw4_16.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Orange X with roundel; no printed name (air marker)."
+ },
+ {
+  "file": "cw4_17.png",
+  "kind": "option",
+  "name": "Churchill AVRE",
+  "sub": null,
+  "cost": 75,
+  "rotation": 0,
+  "stripes": [
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Stripes at sides look dark (black or dark brown).",
+  "units": [
+   [
+    "Churchill AVRE",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw4_18.png",
+  "kind": "unit",
+  "name": "Vickers",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "black"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top. RAF roundel badge instead of maple leaf. Stripes at sides appear black/brown, not clearly coloured."
+ },
+ {
+  "file": "cw4_19.png",
+  "kind": "marker",
+  "name": "Objective A",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Objective marker A with Union Jack colour stripes at sides."
+ },
+ {
+  "file": "cw4_20.png",
+  "kind": "marker",
+  "name": "Objective B",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Objective marker B with Union Jack colour stripes at sides."
+ },
+ {
+  "file": "cw4_21.png",
+  "kind": "option",
+  "name": "Concealed",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Objective A",
+    1
+   ],
+   [
+    "Objective B",
+    1
+   ],
+   [
+    "Objective A (small)",
+    1
+   ],
+   [
+    "Objective B (small)",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw4_22.png",
+  "kind": "option",
+  "name": "Planning",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "blue",
+   "red",
+   "white",
+   "red",
+   "blue"
+  ],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Crop cuts off the bottom of the card so the cost is not visible; cost 10 read from the overview map.",
+  "units": [
+   [
+    "Star marker",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "yellow"
+ },
+ {
+  "file": "cw4_23.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Yellow X with roundel, edge clipped; no printed name (air marker)."
+ },
+ {
+  "file": "cw4_24.png",
+  "kind": "marker",
+  "name": null,
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Yellow X with roundel; no printed name (air marker)."
+ },
+ {
+  "file": "cw4_25.png",
+  "kind": "marker",
+  "name": "Objective A",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Small objective marker A with Union Jack colour stripes."
+ },
+ {
+  "file": "cw4_26.png",
+  "kind": "marker",
+  "name": "Objective B",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Small objective marker B with Union Jack colour stripes."
+ },
+ {
+  "file": "cw4_27.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade marker with range arrow '2'; no cost."
+ },
+ {
+  "file": "cw4_28.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade marker with range arrow '2'; no cost."
+ },
+ {
+  "file": "cw4_29.png",
+  "kind": "marker",
+  "name": "Grenade",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Grenade marker with range arrow '2'; no cost."
+ },
+ {
+  "file": "cw4_30.png",
+  "kind": "option",
+  "name": "Grenade",
+  "sub": null,
+  "cost": 5,
+  "rotation": 0,
+  "stripes": [
+   "black"
+  ],
+  "partial": true,
+  "confidence": "low",
+  "notes": "Crop shows only a thin strip with grenade pictures; name, cost and X3 not in the crop. Values (Grenade, 5, X3) taken from the overview map. Side stripe looks black.",
+  "units": [
+   [
+    "Grenade",
+    3
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "cw4_31.png",
+  "kind": "option",
+  "name": "Fuel",
+  "sub": null,
+  "cost": 5,
+  "rotation": 0,
+  "stripes": [
+   "black"
+  ],
+  "partial": true,
+  "confidence": "low",
+  "notes": "Crop shows only the bottom right of the card with jerrycans and X3. Name and cost (Fuel, 5) taken from the overview map.",
+  "units": [
+   [
+    "Fuel",
+    3
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "cw5_01.png",
+  "kind": "tile",
+  "name": "4th County of London Yeomanry",
+  "sub": "7th Ar.Div. 22nd Armoured Brigade",
+  "cost": 130,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "grey",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Three slots with red desert-rat badge; third slot is wider than the first two. Gold stars sit over the first unit picture, not on a slot tab. Second picture label reads CROMWELL-MKIV (as on cw5_04).",
+  "units": [
+   [
+    "Cromwell Mk IV CMD",
+    1
+   ],
+   [
+    "Cromwell Mk IV",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "grey",
+     "yellow"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "grey",
+     "yellow"
+    ]
+   },
+   {
+    "size": "wide",
+    "stripes": [
+     "yellow",
+     "grey",
+     "yellow"
+    ]
+   }
+  ],
+  "special_ability_slot": null
+ },
+ {
+  "file": "cw5_02.png",
+  "kind": "option",
+  "name": "Troop",
+  "sub": null,
+  "cost": 130,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "grey",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Title TROOP with CROMWELL MK VII and SHERMAN FIREFLY printed beside the pictures; crop slightly clipped on the right.",
+  "units": [
+   [
+    "Cromwell Mk VII",
+    1
+   ],
+   [
+    "Sherman Firefly",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw5_03.png",
+  "kind": "unit",
+  "name": "Cromwell Mk IV CMD",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "grey",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle counter with gold command border and star; name reads bottom to top. Printed CROMWELL-MKIV-CMD."
+ },
+ {
+  "file": "cw5_04.png",
+  "kind": "unit",
+  "name": "Cromwell Mk IV",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "grey",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top. Printed CROMWELL-MKIV."
+ },
+ {
+  "file": "cw5_05.png",
+  "kind": "unit",
+  "name": "Sherman Firefly",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "grey",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle counter, name upright at top; stripes at top and bottom edges in the crop."
+ },
+ {
+  "file": "cw5_06.png",
+  "kind": "tile",
+  "name": "Walter Pipkin",
+  "sub": "Tank Killer",
+  "cost": 85,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hero tile with portrait and Churchill Mk VII counter picture; no slots, no side stripes visible.",
+  "units": [
+   [
+    "Churchill Mk VII",
+    1
+   ]
+  ],
+  "breaking_point": 0,
+  "tile_type": "hero",
+  "slots": [],
+  "special_ability_slot": null
+ },
+ {
+  "file": "cw5_07.png",
+  "kind": "option",
+  "name": "Ace Driver",
+  "sub": null,
+  "cost": 5,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "grey",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Shows -2 = -1 and -1 = 0 movement icons.",
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "red"
+ },
+ {
+  "file": "cw5_08.png",
+  "kind": "option",
+  "name": "APC Shells",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "grey",
+   "yellow"
+  ],
+  "partial": true,
+  "confidence": "medium",
+  "notes": "Crop shows only the bottom right corner with X3; name (APC SHELLS, plural on the overview map) and cost 10 come from the overview map, not this crop.",
+  "units": [
+   [
+    "APC shell",
+    3
+   ]
+  ],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red"
+ },
+ {
+  "file": "cw5_09.png",
+  "kind": "unit",
+  "name": "Churchill Mk VII Walter Pipkin",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Vehicle counter, name reads bottom to top: CHURCHILL MKVII / WALTER PIPKIN. Armour 10, RAF roundel."
+ },
+ {
+  "file": "cw5_10.png",
+  "kind": "unit",
+  "name": "Cromwell Mk VII",
+  "sub": null,
+  "cost": null,
+  "rotation": 90,
+  "stripes": [
+   "yellow",
+   "grey",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Name reads bottom to top."
+ },
+ {
+  "file": "cw5_11.png",
+  "kind": "marker",
+  "name": "Order 1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hit-effect card '1': infantry hit, gun / hull weapon choice; no cost."
+ },
+ {
+  "file": "cw5_12.png",
+  "kind": "marker",
+  "name": "Order 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hit-effect card '2': track hit, with X. No cost."
+ },
+ {
+  "file": "cw5_13.png",
+  "kind": "marker",
+  "name": "Order 3-4",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hit-effect card '3-4': hull hit with two Suppressed -2 icons. No cost."
+ },
+ {
+  "file": "cw5_14.png",
+  "kind": "marker",
+  "name": "Order 5",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hit-effect card '5': turret hit with three X icons. No cost."
+ },
+ {
+  "file": "cw5_15.png",
+  "kind": "option",
+  "name": "Cromwell Mk VII",
+  "sub": null,
+  "cost": 65,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "grey",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Cromwell Mk VII",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw5_16.png",
+  "kind": "option",
+  "name": "Sherman Firefly",
+  "sub": null,
+  "cost": 65,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "grey",
+   "yellow"
+  ],
+  "partial": false,
+  "confidence": "high",
+  "notes": "",
+  "units": [
+   [
+    "Sherman Firefly",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white"
+ },
+ {
+  "file": "cw5_17.png",
+  "kind": "marker",
+  "name": "Order 1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hit-effect card '1': infantry hit, gun / hull weapon choice; no cost."
+ },
+ {
+  "file": "cw5_18.png",
+  "kind": "marker",
+  "name": "Order 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hit-effect card '2': track hit, with X. No cost."
+ },
+ {
+  "file": "cw5_19.png",
+  "kind": "marker",
+  "name": "Order 3-4",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hit-effect card '3-4': hull hit with two Suppressed -2 icons. No cost."
+ },
+ {
+  "file": "cw5_20.png",
+  "kind": "marker",
+  "name": "Order 5",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hit-effect card '5': turret hit with three X icons. No cost."
+ },
+ {
+  "file": "cw5_21.png",
+  "kind": "marker",
+  "name": "Order 1",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hit-effect card '1': infantry hit, gun / hull weapon choice; no cost."
+ },
+ {
+  "file": "cw5_22.png",
+  "kind": "marker",
+  "name": "Order 2",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hit-effect card '2': track hit, with X. No cost."
+ },
+ {
+  "file": "cw5_23.png",
+  "kind": "marker",
+  "name": "Order 3-4",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hit-effect card '3-4': hull hit with two Suppressed -2 icons. No cost."
+ },
+ {
+  "file": "cw5_24.png",
+  "kind": "marker",
+  "name": "Order 5",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": false,
+  "confidence": "high",
+  "notes": "Hit-effect card '5': turret hit with three X icons. No cost."
+ },
+ {
+  "file": "cw5_25.png",
+  "kind": "marker",
+  "name": "APC Shells",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Only the title APC SHELL(S) is in the crop (clipped); overview map shows an ammo marker with +1."
+ },
+ {
+  "file": "cw5_26.png",
+  "kind": "marker",
+  "name": "APC Shells",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Only the title APC SHELL(S) is in the crop (clipped); overview map shows an ammo marker with +1."
+ },
+ {
+  "file": "cw5_27.png",
+  "kind": "marker",
+  "name": "APC Shells",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [],
+  "partial": true,
+  "confidence": "high",
+  "notes": "Only the title APC SHELL(S) is in the crop (clipped); overview map shows an ammo marker with +1."
+ }
+]
