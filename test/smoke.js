@@ -826,8 +826,8 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // documents library
   await gp.goto(base + 'guides.html'); await gp.waitForTimeout(400);
   const LIB = await gp.evaluate(() => JSON.parse(JSON.stringify({ n: window.HTS_LIB.docs.length, g: window.HTS_LIB.groups.length, ids: window.HTS_LIB.docs.map(d => [d.id, d.n, d.pdf && d.pdf.href]) })));
-  ok(LIB.n === 211 && LIB.g === 11, 'documents: 211 documents in 11 groups');
-  ok(await gp.locator('.dcard').count() === 211, 'documents: every document is listed');
+  ok(LIB.n === 204 && LIB.g === 11, 'documents: 204 documents in 11 groups');
+  ok(await gp.locator('.dcard').count() === 204, 'documents: every document is listed');
   const missingLib = [];
   for (const [id, n, pdf] of LIB.ids) { for (let k = 1; k <= n; k++) { if (!fs.existsSync(path.join(root, 'img/hon/lib/' + id + '/p' + String(k).padStart(2, '0') + '.webp'))) missingLib.push(id + k); } if (pdf && !fs.existsSync(path.join(root, pdf))) missingLib.push(pdf); }
   ok(missingLib.length === 0, 'documents: every page picture and PDF exists ' + missingLib.slice(0, 5).join(','));
@@ -981,6 +981,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     ok(/units\.html/.test(nv.url()), 'menu: a link inside a group goes to its page');
     await nv.close();
   }
+  ok(!JSON.parse(fs.readFileSync(path.join(root, 'data/hon-library.js'), 'utf8').replace(/^window\.HTS_LIB = /, '').replace(/;\s*$/, '')).docs.some(d => ['rules-reference-sheets', 'special-abilities-v1', 'v1-rulebook-wrecks', 'multiplayer-rules-v1', 'aviation-rules-v1', 'compendium-errata', 'unofficial-faq'].indexOf(d.id) >= 0), 'documents: first edition core rules are not on the site (V2 overrides them)');
   // trackers
   const cp = require('child_process');
   let trk = ''; try { trk = cp.execSync('python3 tools/units_tracker.py --strict', { cwd: root }).toString(); } catch (e) { trk = 'FAILED ' + e.stdout; }

@@ -300,10 +300,6 @@ window.HTS_EXPANSIONS = {
 {
 "label": "Unofficial scenario rewrite",
 "href": "guides.html?d=unofficial-scenarios"
-},
-{
-"label": "Rules reference sheets",
-"href": "guides.html?d=rules-reference-sheets"
 }
 ]
 },
@@ -457,10 +453,6 @@ window.HTS_EXPANSIONS = {
 {
 "label": "Unit bible: army boxes",
 "href": "guides.html?d=bible-army-boxes"
-},
-{
-"label": "Multiplayer rules",
-"href": "guides.html?d=multiplayer-rules-v1"
 }
 ]
 },
@@ -1106,14 +1098,6 @@ window.HTS_EXPANSIONS = {
 "name": "Errata Core",
 "cat": "Errata",
 "tool": [
-{
-"label": "Compendium clarifications",
-"href": "guides.html?d=compendium-errata"
-},
-{
-"label": "Unofficial FAQ",
-"href": "guides.html?d=unofficial-faq"
-}
 ]
 },
 {
