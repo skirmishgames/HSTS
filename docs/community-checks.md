@@ -38,13 +38,14 @@ Each item says where to look on the site and what to compare.
 
 ## Scenarios and My collection
 
-21. **What each scenario needs.** 57 scenarios are tagged with the boxes they need. Colombelles Castle and Juno Beach are assumed to draw their Commonwealth units from Epsom, Charnwood & Goodwood. The rest say "Needs not tagged" and are never hidden. Corrections and missing tags are welcome.
+21. **What each scenario needs.** 59 scenarios are tagged with the boxes they need. Colombelles Castle and Juno Beach are assumed to draw their Commonwealth units from Epsom, Charnwood & Goodwood. The rest say "Needs not tagged" and are never hidden. Corrections and missing tags are welcome.
 22. **Fan scenarios.** Only fan scenarios that name their map tiles are kept. If one is missing and does name its tiles, say so.
+23. **Rebuilt fan scenarios.** 38 fan scenarios were rebuilt as web pages from the original text and pictures. Please check the tile codes, army points and rules on each against your copy. Also say if the removed general tournament rules post, or one of the fan documents left on page pictures, does name its map tiles.
 
 ## Archive
 
-23. **Editions of documents.** Unofficial Expansions, Unofficial Scenarios and the Realism Variant are filed as first edition. Full Throttle (light vehicles, 2020) is filed under Big Red One. The unit bibles are all filed as first edition.
-24. **First edition rules.** The first edition core rules were removed because the Big Red One rules override them. Four expansion rules stay (Mines, Commonwealth army, British Commandos, FFI recruitment). Say if any of these is also replaced by a V2 rule.
+24. **Editions of documents.** Unofficial Expansions, Unofficial Scenarios and the Realism Variant are filed as first edition. Full Throttle (light vehicles, 2020) is filed under Big Red One. The unit bibles are all filed as first edition.
+25. **First edition rules.** The first edition core rules were removed because the Big Red One rules override them. Four expansion rules stay (Mines, Commonwealth army, British Commandos, FFI recruitment). Say if any of these is also replaced by a V2 rule.
 
 ## First edition tiles and options to check
 
