@@ -439,7 +439,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const xp = await b.newPage({ viewport: { width: 1100, height: 900 } });
   const xerrs = []; xp.on('pageerror', e => xerrs.push(e.message)); xp.on('console', m => { if (m.type() === 'error') xerrs.push(m.text()); });
   await xp.goto(base + 'expansions.html');
-  ok(await xp.locator('.hrow').count() === 158, 'expansions: 158 products listed');
+  ok(await xp.locator('.hrow').count() === 138, 'expansions: 138 products listed');
   ok(await xp.locator('.hbody p').count() === 0, 'expansions: details not loaded until opened');
   ok(await xp.locator('#guide .eqcard').count() === 6, 'expansions: 6 starter force notes shown');
   await xp.click('[data-line="hon2"]');

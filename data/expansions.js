@@ -1097,8 +1097,7 @@ window.HTS_EXPANSIONS = {
 "id": "hon1-errata-core",
 "name": "Errata Core",
 "cat": "Errata",
-"tool": [
-]
+"tool": []
 },
 {
 "id": "hon1-errata-expansions",
@@ -1442,113 +1441,6 @@ window.HTS_EXPANSIONS = {
 {
 "id": "son-devil-boy-scenarios",
 "name": "Devil Boy Scenarios",
-"cat": "Scenario"
-}
-]
-},
-{
-"id": "hobr",
-"name": "Heroes of Black Reach",
-"sub": "The same system in the Warhammer 40,000 setting, with Ultramarines and Orks.",
-"items": [
-{
-"id": "hobr-core-box",
-"name": "Core Box",
-"cat": "Big box"
-},
-{
-"id": "hobr-ultramarines-reinforcements",
-"name": "Ultramarines Reinforcements",
-"cat": "Multiple punchboards"
-},
-{
-"id": "hobr-ork-reinforcements",
-"name": "Ork Reinforcements",
-"cat": "Multiple punchboards"
-},
-{
-"id": "hobr-bad-moons",
-"name": "Bad Moons",
-"cat": "Multiple punchboards"
-},
-{
-"id": "hobr-vanguard-veteran-squad",
-"name": "Vanguard Veteran Squad",
-"cat": "Single punchboard"
-},
-{
-"id": "hobr-doomskorcha-s-boys",
-"name": "Doomskorcha's Boys",
-"cat": "Single punchboard"
-},
-{
-"id": "hobr-zoggrim",
-"name": "Zoggrim",
-"cat": "Single punchboard"
-},
-{
-"id": "hobr-cassius-and-kraggot",
-"name": "Cassius & Kraggot",
-"cat": "Single punchboard"
-},
-{
-"id": "hobr-ultramarine-drop-pod",
-"name": "Ultramarine Drop Pod",
-"cat": "Single punchboard"
-},
-{
-"id": "hobr-drop-zone-1",
-"name": "Drop Zone #1",
-"cat": "Gazette"
-},
-{
-"id": "hobr-battleground-set-1",
-"name": "Battleground Set 1",
-"cat": "Terrain"
-},
-{
-"id": "hobr-castellum-stronghold",
-"name": "Castellum Stronghold",
-"cat": "Terrain"
-},
-{
-"id": "hobr-core-box-rules",
-"name": "Core Box Rules",
-"cat": "Booklet"
-},
-{
-"id": "hobr-core-box-scenarios",
-"name": "Core Box Scenarios",
-"cat": "Booklet"
-},
-{
-"id": "hobr-ork-reinforcements-2",
-"name": "Ork Reinforcements",
-"cat": "Booklet"
-},
-{
-"id": "hobr-ultramarine-reinforcements",
-"name": "Ultramarine Reinforcements",
-"cat": "Booklet"
-},
-{
-"id": "hobr-drop-zone-rules",
-"name": "Drop Zone Rules",
-"cat": "Booklet"
-},
-{
-"id": "hobr-aircraft-droppod-rules",
-"name": "Aircraft/Droppod Rules",
-"cat": "Booklet"
-},
-{
-"id": "hobr-first-official-tournament",
-"name": "First Official Tournament",
-"cat": "Tournament"
-},
-{
-"id": "hobr-2-who-s-the-boss",
-"name": "(#2) Who's the Boss",
 "cat": "Scenario"
 }
 ]
