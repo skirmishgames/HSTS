@@ -2,11 +2,31 @@
   'use strict';
 
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One', sets: ['CB'] }, { id: 'omaha', name: 'Bloody Omaha', sets: ['BO'] }, { id: 'caen', name: 'Battle for Caen', sets: ['ECG', 'BP3'] }, { id: 'hos', name: 'Heroes of Stalingrad', sets: ['HoS-CB', 'HoS-BP', 'HoS-KS', 'HoS-HP'] }, { id: 'other', name: 'Promos and War Stories', sets: ['KS-9', 'SOLO', 'P500', 'WS#0'] }];
+  var BOXES = [{ id: 'all', name: 'All boxes' }, { id: 'bro', name: 'Big Red One', sets: ['CB'] }, { id: 'omaha', name: 'Bloody Omaha', sets: ['BO'] }, { id: 'caen', name: 'Battle for Caen', sets: ['ECG', 'BP3'] }, { id: 'hos', name: 'Heroes of Stalingrad', sets: ['HoS-CB', 'HoS-BP', 'HoS-KS', 'HoS-HP'] }, { id: 'other', name: 'Promos and War Stories', sets: ['KS-9', 'SOLO', 'P500', 'WS#0'] }, { id: 'v1', name: 'First edition', v1: true }];
   var TTYPES = [['all', 'All'], ['platoon', 'Platoons'], ['command', 'Command'], ['hero', 'Heroes'], ['landing', 'Landing'], ['aircraft', 'Aircraft'], ['support', 'Support tile'], ['special', 'Other']];
-  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }, { id: 'ru', name: 'Soviet Union (Stalingrad)' }, { id: 'gs', name: 'Germany (Stalingrad)' }];
+  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }, { id: 'fr', name: 'French (FFI)' }, { id: 'ru', name: 'Soviet Union (Stalingrad)' }, { id: 'gs', name: 'Germany (Stalingrad)' }];
   var HOSN = { ru: 1, gs: 1 };
-  function dkey(n) { return (HOSN[n] ? 'hon-hos-' : 'hon-bro-') + n; }
+  /* data files per nation; first edition tiles and options get a v1: id prefix so they never clash with V2 ids */
+  var SRC = { us: ['hon-bro-us', 'hon-v1-us'], ge: ['hon-bro-ge', 'hon-v1-ge'], uk: ['hon-bro-uk', 'hon-v1-uk'], fr: ['hon-v1-fr'], ru: ['hon-hos-ru'], gs: ['hon-hos-gs'] };
+  var V1P = 'v1:', V1_TAG = 'First edition', V1_WORDS = ' first edition v1';
+  var ncache = {};
+  function copy(x, extra) { var y = {}; Object.keys(x).forEach(function (k) { y[k] = x[k]; }); Object.keys(extra).forEach(function (k) { y[k] = extra[k]; }); return y; }
+  function nationData(n) {
+    if (ncache[n]) return ncache[n];
+    var out = { uimg: null, stats: null, tiles: [], options: [] };
+    (SRC[n] || []).forEach(function (key) {
+      var D = window.HTS_DATA && window.HTS_DATA[key];
+      if (!D) return;
+      var v1 = key.indexOf('hon-v1-') === 0, p = v1 ? V1P : '';
+      if (!out.uimg && D.uimg) out.uimg = D.uimg;
+      if (!out.stats && D.stats) out.stats = D.stats;
+      D.tiles.forEach(function (t) { out.tiles.push(copy(t, { id: p + t.id, own: (t.own || []).map(function (id) { return p + id; }), v1: v1, _nat: D })); });
+      D.options.forEach(function (o) { out.options.push(copy(o, { id: p + o.id, v1: v1, _nat: D })); });
+    });
+    ncache[n] = out;
+    return out;
+  }
+  function v1Badge(x) { return x.v1 ? ' <span class="hosbadge v1badge" title="Heroes of Normandie, first edition">' + V1_TAG + '</span>' : ''; }
   var VIEWS = [['tile', 'By tile'], ['unit', 'Unit list']];
   var KINDS = [['all', 'All'], ['officer', 'Officers'], ['character', 'Characters'], ['infantry', 'Infantry'], ['weapon', 'Weapons'], ['vehicle', 'Vehicles'], ['marker', 'Markers'], ['aircraft', 'Aircraft']];
   var KIND_ORDER = ['officer', 'character', 'infantry', 'weapon', 'vehicle', 'marker', 'aircraft'];
@@ -61,9 +81,10 @@
   function index(n) {
     var ck = S.b + ':' + n;
     if (cache[ck]) return cache[ck];
-    var d = window.HTS_DATA[dkey(n)];
+    var d = nationData(n);
     var bx = BOXES.filter(function (b) { return b.id === S.b; })[0];
     if (bx && bx.sets) d = { uimg: d.uimg, stats: d.stats, tiles: d.tiles.filter(function (t) { return bx.sets.indexOf(t.set) >= 0; }), options: d.options.filter(function (o) { return bx.sets.indexOf(o.set) >= 0; }) };
+    else if (bx && bx.v1) d = { uimg: d.uimg, stats: d.stats, tiles: d.tiles.filter(function (t) { return t.v1; }), options: d.options.filter(function (o) { return o.v1; }) };
     var hid = 0;
     if (OWN && OWN.active()) {
       var n0 = d.tiles.length;
@@ -73,17 +94,18 @@
     var O = {}, owned = {};
     d.options.forEach(function (o) { O[o.id] = o; });
     var tiles = d.tiles.slice().sort(function (a, b) {
-      return (TYPE_ORDER[a.type] - TYPE_ORDER[b.type]) || (a.cost - b.cost) || a.name.localeCompare(b.name);
+      return ((a.v1 ? 1 : 0) - (b.v1 ? 1 : 0)) || (TYPE_ORDER[a.type] - TYPE_ORDER[b.type]) || ((a.cost || 0) - (b.cost || 0)) || a.name.localeCompare(b.name);
     }).map(function (t) {
       var own = (t.own || []).map(function (id) { owned[id] = t.id; return O[id]; }).filter(Boolean);
-      var hay = norm([t.name, t.sub, TYPE_NAME[t.type], unitLine(t.units)].concat(own.map(function (o) { return o.name + ' ' + CAT_NAME[o.cat] + ' ' + unitLine(o.units); })).join(' '));
+      var hay = norm([t.name, t.sub, TYPE_NAME[t.type], unitLine(t.units)].concat(own.map(function (o) { return o.name + ' ' + CAT_NAME[o.cat] + ' ' + unitLine(o.units); })).join(' ') + (t.v1 ? V1_WORDS : ''));
       return { t: t, own: own, hay: hay };
     });
     var T = {};
     d.tiles.forEach(function (t) { T[t.id] = t; });
-    var common = d.options.filter(function (o) { return !owned[o.id] && o.units; }).sort(function (a, b) {
-      return (a.cat === b.cat ? 0 : (a.cat === 'support' ? -1 : 1)) || (a.cost || 0) - (b.cost || 0) || a.name.localeCompare(b.name);
-    }).map(function (o) { return { o: o, hay: norm(o.name + ' common option ' + unitLine(o.units) + ' ' + (o.units || []).map(function (u) { return u[2]; }).join(' ')) }; });
+    /* every option no tile owns, with or without units, so gear and orders can be found too */
+    var common = d.options.filter(function (o) { return !owned[o.id]; }).sort(function (a, b) {
+      return ((a.v1 ? 1 : 0) - (b.v1 ? 1 : 0)) || ((a.units ? 0 : 1) - (b.units ? 0 : 1)) || (a.cat === b.cat ? 0 : (a.cat === 'support' ? -1 : 1)) || (a.cost || 0) - (b.cost || 0) || a.name.localeCompare(b.name);
+    }).map(function (o) { return { o: o, hay: norm(o.name + ' common option ' + (CAT_NAME[o.cat] || '') + ' ' + unitLine(o.units) + ' ' + (o.units || []).map(function (u) { return u[2]; }).join(' ') + (o.v1 ? V1_WORDS : '')) }; });
 
     // unit list
     var U = {};
@@ -94,12 +116,12 @@
         U[k].from.push({ label: label, q: extra, qty: u[1], tt: tt });
       });
     }
-    d.tiles.forEach(function (t) { add(t.units, t.name + (t.sub && t.type !== 'special' ? ', ' + t.sub : '') + ' (tile)', t.name + ' ' + (t.sub && t.type !== 'special' ? t.sub : ''), t.type); });
+    d.tiles.forEach(function (t) { add(t.units, t.name + (t.sub && t.type !== 'special' ? ', ' + t.sub : '') + (t.v1 ? ' (first edition tile)' : ' (tile)'), t.name + ' ' + (t.sub && t.type !== 'special' ? t.sub : '') + (t.v1 ? ' first edition' : ''), t.type); });
     d.options.forEach(function (o) {
       if (!o.units) return;
       var tid = owned[o.id], tl = tid && T[tid];
-      var label = o.name + (tl ? ' (on ' + (tl.sub && tl.type !== 'special' ? tl.sub : tl.name) + ')' : ' (common option)');
-      add(o.units, label, tl ? tl.name + ' ' + (tl.sub || '') : o.name, tl ? tl.type : 'common');
+      var label = o.name + (tl ? ' (on ' + (tl.sub && tl.type !== 'special' ? tl.sub : tl.name) + ')' : (o.v1 ? ' (first edition option)' : ' (common option)'));
+      add(o.units, label, tl ? tl.name + ' ' + (tl.sub || '') : o.name + (o.v1 ? ' first edition' : ''), tl ? tl.type : 'common');
     });
     var units = Object.keys(U).map(function (k) {
       var u = U[k];
@@ -138,7 +160,7 @@
     var right = costLabel(o.cost) + ' pts';
     var body = o.units ? tokens(o.units, tile, nat, true) : '<span class="cat">' + esc(CAT_NAME[o.cat] || o.cat) + ', adds no units</span>';
     return '<li><button type="button" class="th" data-zoom="' + o.img + '" data-cap="' + esc(o.name + ', ' + right) + '" aria-label="Zoom ' + esc(o.name) + '"><img src="' + o.img + '" alt="" loading="lazy" width="' + o.w + '" height="' + o.h + '"></button>' +
-      '<div><div class="on">' + esc(o.name) + (o.units ? ' <span class="cat">' + esc(CAT_NAME[o.cat] || '') + '</span>' : '') + '</div>' + body + (o.note ? '<span class="note">' + esc(o.note) + '</span>' : '') + '</div>' +
+      '<div><div class="on">' + esc(o.name) + (tile ? '' : v1Badge(o)) + (o.units ? ' <span class="cat">' + esc(CAT_NAME[o.cat] || '') + '</span>' : '') + '</div>' + body + (o.note ? '<span class="note">' + esc(o.note) + '</span>' : '') + '</div>' +
       '<span class="opts">' + right + '</span></li>';
   }
 
@@ -158,16 +180,16 @@
       html += '<div class="ugrid">' + list.map(function (x) {
         var t = x.t;
         return '<article class="ucard" id="t-' + t.id + '"><button type="button" class="imgbtn" data-zoom="' + t.img + '" data-cap="' + esc(t.name + ', ' + t.cost + ' pts') + '" aria-label="Zoom ' + esc(t.name) + '"><img src="' + t.img + '" alt="' + esc(t.name) + ' tile" loading="lazy" width="' + t.w + '" height="' + t.h + '"></button>' +
-          '<div class="ubody"><h3>' + esc(t.name) + (t.sub && t.type !== 'special' ? '<small>' + esc(t.sub) + '</small>' : '') + '</h3>' +
+          '<div class="ubody"><h3>' + esc(t.name) + v1Badge(t) + (t.sub && t.type !== 'special' ? '<small>' + esc(t.sub) + '</small>' : '') + '</h3>' +
           '<p class="umeta">' + esc(TYPE_NAME[t.type]) + ', ' + t.cost + ' pts, ' + t.slots.length + ' slot' + (t.slots.length === 1 ? '' : 's') + (t.squares ? ', breaking point <span class="pips">' + pips(t.squares) + '</span>' : '') + '</p>' +
-          (t.note ? '<p class="umeta note2">' + esc(t.note) + '</p>' : '') + '<h4>Units on the tile</h4>' + tokens(t.units, t, I.d) +
-          (x.own.length ? '<h4>Options that come with this tile</h4><ul class="oplist">' + x.own.map(function (o) { return optionRow(o, t, I.d); }).join('') + '</ul>' : '') +
+          (t.note ? '<p class="umeta note2">' + esc(t.note) + '</p>' : '') + '<h4>Units on the tile</h4>' + tokens(t.units, t, t._nat || I.d) +
+          (x.own.length ? '<h4>Options that come with this tile</h4><ul class="oplist">' + x.own.map(function (o) { return optionRow(o, t, o._nat || I.d); }).join('') + '</ul>' : '') +
           '</div></article>';
       }).join('') + '</div>';
     }
     if (com.length) {
       html += '<section class="usec"><h2>Common and shared options</h2><div class="ugrid">' + com.map(function (x) {
-        return '<article class="ucard"><div class="ubody"><ul class="oplist">' + optionRow(x.o, null, I.d) + '</ul></div></article>';
+        return '<article class="ucard"><div class="ubody"><ul class="oplist">' + optionRow(x.o, null, x.o._nat || I.d) + '</ul></div></article>';
       }).join('') + '</div></section>';
     }
     if (!html) html = '<p class="empty2">' + (S.b !== 'all' && !I.d.tiles.length ? 'This box has no ' + NATIONS.filter(function (n) { return n.id === S.n; })[0].name + ' tiles. Try another nation or All boxes.' : 'Nothing matches. Try fewer words, for example "rifle" or "bazooka".') + '</p>';
@@ -219,7 +241,7 @@
   function bind() {
     document.addEventListener('click', function (ev) {
       var t = ev.target, el;
-      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; if (S.b === 'hos' && !HOSN[S.n]) S.n = 'ru'; else if (S.b !== 'hos' && S.b !== 'all' && HOSN[S.n]) S.n = 'us'; render(); return; }
+      if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; if (S.b === 'hos' && !HOSN[S.n]) S.n = 'ru'; else if (S.b !== 'hos' && S.b !== 'all' && HOSN[S.n]) S.n = 'us'; if (S.n === 'fr' && S.b !== 'all' && S.b !== 'v1') S.n = 'us'; render(); return; }
       if ((el = t.closest('[data-tt]'))) { S.tt = el.dataset.tt; render(); return; }
       if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; render(); return; }
       if ((el = t.closest('[data-tt]'))) { S.tt = el.dataset.tt; render(); return; }

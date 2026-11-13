@@ -151,7 +151,7 @@
       return '<span class="u k-' + esc(u[2]) + '">' + esc(u[0]) + (u[1] > 1 ? ' <i>x' + u[1] + '</i>' : '') + '</span>';
     }).join('') + '</span>';
   }
-  function unitsHref(t) { return 'units.html?n=' + (t.un || S.nation) + '&q=' + encodeURIComponent(t.name + ' ' + (t.sub && t.type !== 'special' ? t.sub : '')); }
+  function unitsHref(t) { return 'units.html?n=' + (t.un || S.nation) + '&q=' + encodeURIComponent(t.name + ' ' + (t.sub && t.type !== 'special' ? t.sub : '') + (t.v1 ? ' first edition' : '')); }
   function hosBadge(x) { return x.hos ? '<span class="hosbadge" title="Heroes of Stalingrad">' + HOS_TAG + '</span>' : (x.v1 ? '<span class="hosbadge v1badge" title="Heroes of Normandie, first edition">' + V1_TAG + '</span>' : ''); }
   var KIND_ORDER = ['officer', 'character', 'infantry', 'weapon', 'vehicle', 'marker', 'aircraft'];
   var KIND_PLURAL = { officer: 'Officers', character: 'Characters', infantry: 'Infantry', weapon: 'Weapons', vehicle: 'Vehicles', marker: 'Markers', aircraft: 'Aircraft' };
@@ -253,7 +253,7 @@
         '<button type="button" class="ghost" data-act="up" aria-label="Move up"' + (idx === 0 ? ' disabled' : '') + '>Up</button>' +
         '<button type="button" class="ghost" data-act="down" aria-label="Move down"' + (idx === S.army.length - 1 ? ' disabled' : '') + '>Down</button>' +
         '<button type="button" class="ghost" data-act="zoom">Zoom</button>' +
-        (t.v1 ? '' : '<a class="btn ghost" href="' + esc(unitsHref(t)) + '">Units</a>') +
+        '<a class="btn ghost" href="' + esc(unitsHref(t)) + '">Units</a>' +
         '<button type="button" class="ghost danger" data-act="remove">Remove</button></div></header>' +
         (t.units ? '<p class="incl"><b>Tile includes</b>' + unitChips(t.units) + '</p>' : '') +
         '<div class="tilebox" style="aspect-ratio:' + t.w + '/' + t.h + '"><img src="' + t.img + '" alt="' + esc(t.name) + ' tile" width="' + t.w + '" height="' + t.h + '">' + slots + '</div>' +
@@ -365,7 +365,7 @@
         '<div class="info"><span class="nm">' + esc(t.name) + '</span><span class="sb">' + esc(t.sub || '') + '</span>' + hosBadge(t) +
         (t.units ? '<span class="lu">' + esc(unitLine(t.units)) + '</span>' : '') +
         '<span class="count">' + t.slots.length + ' slot' + (t.slots.length === 1 ? '' : 's') + (n ? ', ' + n + ' in army' : '') + '</span>' +
-        '<div class="row"><span class="pts">' + t.cost + ' pts</span><span class="lrow-btns">' + (t.v1 ? '' : '<a class="btn ghost" href="' + esc(unitsHref(t)) + '">Units</a>') + '<button type="button" class="add" data-add="' + t.id + '">Add</button></span></div></div></div>';
+        '<div class="row"><span class="pts">' + t.cost + ' pts</span><span class="lrow-btns">' + '<a class="btn ghost" href="' + esc(unitsHref(t)) + '">Units</a>' + '<button type="button" class="add" data-add="' + t.id + '">Add</button></span></div></div></div>';
     }).join('');
   }
 

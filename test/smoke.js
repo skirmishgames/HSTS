@@ -76,7 +76,17 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // filters
   await up.fill('#q', '');
   await up.waitForTimeout(250);
-  ok(await up.locator('#boxes button.on').textContent() === 'All boxes' && await up.locator('#boxes button').count() === 6, 'game box filter offers All boxes plus five boxes');
+  ok(await up.locator('#boxes button.on').textContent() === 'All boxes' && await up.locator('#boxes button').count() === 7, 'game box filter offers All boxes plus six boxes');
+  // first edition in the unit index
+  await up.goto(url.replace('builder.html', 'units.html') + '?n=us&q=' + encodeURIComponent('4th Ar.Div. 37th Ar.Regt')); await up.waitForTimeout(300);
+  ok(await up.locator('.ucard').count() === 1 && /Sherman Squadron/i.test(await up.textContent('.ucard h3')) && await up.locator('.ucard .v1badge').count() === 1, 'unit index: first edition Sherman Squadron is found by its regiment, with the badge');
+  await up.goto(url.replace('builder.html', 'units.html') + '?n=us&b=v1'); await up.waitForTimeout(300);
+  ok((await up.textContent('#stat')).startsWith('33 tiles, 89 common options'), 'unit index: First edition box lists the 33 US tiles and 89 options');
+  await up.goto(url.replace('builder.html', 'units.html') + '?n=fr'); await up.waitForTimeout(300);
+  ok((await up.textContent('#stat')).startsWith('6 tiles, 10 common options') && await up.locator('.ucard', { hasText: 'Maquisards' }).count() === 1, 'unit index: French (FFI) lists its 6 tiles and 10 options');
+  await up.goto(url.replace('builder.html', 'units.html') + '?n=us&q=grenade'); await up.waitForTimeout(300);
+  ok(await up.locator('.ucard', { hasText: 'Grenade' }).count() >= 2, 'unit index: gear with no units, such as Grenade, can be found');
+  await up.fill('#q', '');
   const boxCounts = await up.evaluate(() => { const out = {}; ['us', 'ge', 'uk'].forEach(n => { const d = window.HTS_DATA['hon-bro-' + n]; out[n] = { all: d.tiles.length, bro: d.tiles.filter(t => t.set === 'CB').length, omaha: d.tiles.filter(t => t.set === 'BO').length, caen: d.tiles.filter(t => ['ECG', 'BP3'].includes(t.set)).length }; }); return out; });
   for (const bxId of ['bro', 'omaha', 'caen']) {
     await up.goto(url.replace('builder.html', 'units.html') + '?n=us&b=' + bxId); await up.waitForTimeout(250);
