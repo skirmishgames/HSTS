@@ -80,7 +80,9 @@ const LIB = {
   'fan-strike-swiftly': [CORE, US],
   'fan-within-reach-of-an-88mm': [CORE, US, 'hon1-extra-units-us-and-ge', MILL, WIT],
   'fan-my-home': [CORE, 'hon1-d-day', 'hon1-lord-lovat-s-commandos', GE, WIT],
-  'fan-cut-like-a-knife-through-butter': [CORE, FARM, ET2]
+  'fan-cut-like-a-knife-through-butter': [CORE, FARM, ET2],
+  'fan-the-german-strongpoint-at-foucarville': [CORE],
+  'fan-the-la-manoir-farmhouse-6-june-1944': [CORE, FARM]
 };
 Object.keys(LIB).forEach(id => { need['lib:' + id] = LIB[id]; });
 fs.writeFileSync(__dirname + '/../data/hon-needs.js', 'window.HTS_NEEDS = ' + JSON.stringify(need, null, 1) + ';\n');

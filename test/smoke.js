@@ -692,8 +692,8 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // Scenarios menu: fan made option, labelled as unofficial
   ok(await hm.locator('#boxes button[data-box="fan"]').count() === 1, 'scenarios page: fan made (unofficial) button');
   await hm.goto(base + 'scenarios.html?b=fan'); await hm.waitForTimeout(400);
-  ok(await hm.locator('.hrow').count() === 42 && /42 of 42/.test(await hm.locator('#stat').innerText()), 'scenarios fan made: 42 entries');
-  ok(await hm.locator('.hrow .hbadges .hb', { hasText: 'Fan made' }).count() === 42 && /not official/i.test(await hm.locator('#srcnote').innerText()), 'scenarios fan made: every entry is badged fan made and the note says not official');
+  ok(await hm.locator('.hrow').count() === 43 && /43 of 43/.test(await hm.locator('#stat').innerText()), 'scenarios fan made: 43 entries');
+  ok(await hm.locator('.hrow .hbadges .hb', { hasText: 'Fan made' }).count() === 43 && /not official/i.test(await hm.locator('#srcnote').innerText()), 'scenarios fan made: every entry is badged fan made and the note says not official');
   ok(await hm.locator('[data-type="Small armies"]').count() === 1 && await hm.locator('[data-type="Tournament"]').count() === 1 && await hm.locator('[data-type="Campaign"]').count() === 1, 'scenarios fan made: type chips');
   await hm.fill('#q', 'Wittmann'); await hm.waitForTimeout(400);
   ok(await hm.locator('.hrow').count() >= 2, 'scenarios fan made: search finds Wittmann scenarios');
@@ -886,17 +886,43 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // documents library
   await gp.goto(base + 'guides.html'); await gp.waitForTimeout(400);
   const LIB = await gp.evaluate(() => JSON.parse(JSON.stringify({ n: window.HTS_LIB.docs.length, g: window.HTS_LIB.groups.length, ids: window.HTS_LIB.docs.map(d => [d.id, d.n, d.pdf && d.pdf.href]) })));
-  ok(LIB.n === 204 && LIB.g === 11, 'documents: 204 documents in 11 groups');
-  ok(await gp.locator('.dcard').count() === 204, 'documents: every document is listed');
+  ok(LIB.n === 205 && LIB.g === 11, 'documents: 205 documents in 11 groups');
+  ok(await gp.locator('.dcard').count() === 205, 'documents: every document is listed');
   const missingLib = [];
   for (const [id, n, pdf] of LIB.ids) { for (let k = 1; k <= n; k++) { if (!fs.existsSync(path.join(root, 'img/hon/lib/' + id + '/p' + String(k).padStart(2, '0') + '.webp'))) missingLib.push(id + k); } if (pdf && !fs.existsSync(path.join(root, pdf))) missingLib.push(pdf); }
   ok(missingLib.length === 0, 'documents: every page picture and PDF exists ' + missingLib.slice(0, 5).join(','));
   const FANC = await gp.evaluate(() => { const d = window.HTS_LIB.docs.filter(x => x.group === 'fanmade'); return { n: d.length, pdf: d.filter(x => x.pdf).length, bad: d.filter(x => x.ed !== 'Community' || !x.kind || !/^Fan made|^OPJH/.test(x.credit)).length, big: d.filter(x => x.pdf && /MB/.test(x.pdf.size) && parseFloat(x.pdf.size) > 20).length }; });
-  ok(FANC.n === 42 && FANC.pdf === 4 && FANC.bad === 0 && FANC.big === 0, 'documents: 42 fan made documents, 4 with a PDF (the campaigns), all labelled community and fan made, no PDF over 20 MB ' + JSON.stringify(FANC));
+  ok(FANC.n === 43 && FANC.pdf === 4 && FANC.bad === 0 && FANC.big === 0, 'documents: 43 fan made documents (42 before the rebuild, one without tiles removed, two added), 4 with a PDF (the campaigns), all labelled community and fan made, no PDF over 20 MB ' + JSON.stringify(FANC));
   await gp.goto(base + 'guides.html?d=fan-the-bunker'); await gp.waitForTimeout(400);
   ok(/Fan made/.test(await gp.locator('.smeta').innerText()) && /not official/i.test(await gp.locator('.snote').first().innerText()) && await gp.locator('a[download]').count() === 0, 'fan made document: labelled unofficial, rebuilt layout has no PDF');
-  await gp.goto(base + 'guides.html?d=fan-t1-encounter-on-the-road'); await gp.waitForTimeout(400);
-  ok(await gp.locator('a[download]').count() === 0 && /no PDF to download/i.test(await gp.locator('#out').innerText()), 'fan made document without a good layout: web only, no PDF');
+  // fan scenarios rebuilt in the web layout
+  const FS = await gp.evaluate(() => { const d = window.HTS_LIB.docs.filter(x => x.group === 'fanmade'), sc = d.filter(x => x.scn); return {
+    n: d.length, scn: sc.length, noscn: d.filter(x => !x.scn).map(x => x.id),
+    bad: sc.filter(x => !x.title || !((x.scn.maps && x.scn.maps.length) || (x.scn.tiles && x.scn.tiles.length) || x.scn.tilesNote) || x.pdf).map(x => x.id),
+    nomapfile: sc.filter(x => (x.scn.maps || []).concat(x.scn.forces ? x.scn.forces.filter(f => f.img).map(f => f.img) : []).some(m => !m.img)).map(x => x.id),
+    gone: ['fan-hon-general-tournament-rules'].filter(i => d.some(x => x.id === i)),
+    added: ['fan-the-german-strongpoint-at-foucarville', 'fan-the-la-manoir-farmhouse-6-june-1944'].filter(i => d.some(x => x.id === i && x.scn)),
+    edel: d.filter(x => /edelweiss/i.test(x.id)).length }; });
+  ok(FS.n === 43 && FS.scn === 38 && FS.noscn.length === 5, 'fan scenarios: 43 fan docs, 38 with the web layout, 5 left on the page pictures (' + FS.noscn.join(', ') + ')');
+  ok(FS.bad.length === 0 && FS.nomapfile.length === 0, 'fan scenarios: every web layout doc has a title, a map picture or a tiles line, and no PDF (' + FS.bad.join(', ') + ')');
+  ok(FS.gone.length === 0 && FS.added.length === 2 && FS.edel === 0, 'fan scenarios: the removed doc is gone, the two added scenarios are in, Operation Edelweiss is not');
+  const fsFiles = fs.readdirSync(path.join(root, 'pdf', 'lib')).filter(f => /^fan-/.test(f));
+  const fsRef = await gp.evaluate(() => window.HTS_LIB.docs.filter(x => x.group === 'fanmade' && x.pdf).map(x => x.pdf.href.split('/').pop()));
+  ok(fsFiles.every(f => fsRef.indexOf(f) >= 0) && fsRef.length === 4, 'fan scenarios: no leftover fan PDF in pdf/lib (' + fsFiles.length + ' files for ' + fsRef.length + ' docs)');
+  const fsImgs = fs.readdirSync(path.join(root, 'img', 'hon', 'lib')).filter(f => /^fan-/.test(f));
+  const fsIds = await gp.evaluate(() => window.HTS_LIB.docs.filter(x => x.group === 'fanmade').map(x => x.id));
+  ok(fsImgs.every(f => fsIds.indexOf(f) >= 0) && fsIds.every(f => fsImgs.indexOf(f) >= 0), 'fan scenarios: every fan doc has a picture folder and no picture folder is left over');
+  await gp.goto(base + 'guides.html?d=fan-t3-hold-the-line'); await gp.waitForTimeout(500);
+  const heads = await gp.evaluate(() => Array.from(document.querySelectorAll('.scn-sec h2')).map(h => h.textContent));
+  ok(heads.join('|') === 'Background|Map and set-up|Forces|Deployment|Special rules|Objectives and victory', 'fan scenario layout: sections in order (' + heads.join('|') + ')');
+  ok(/C4-B/.test(await gp.locator('.scn-tiles').first().innerText()) && await gp.locator('.scn-tile').count() === 8 && await gp.locator('.scn-map img').count() === 1 && await gp.locator('.scn-fimg img').count() === 2, 'fan scenario layout: tiles, the map picture and the two force pictures');
+  ok(await gp.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), 'fan scenario layout: no sideways scroll at phone width');
+  ok(await gp.locator('a[download]').count() === 0 && await gp.locator('details.scn-orig').count() === 1, 'fan scenario layout: no PDF link, and the original pages are kept in a fold');
+  await gp.goto(base + 'guides.html?d=fan-opjh-2019-tournament-rules'); await gp.waitForTimeout(400);
+  ok(await gp.locator('.scn-sec').count() === 0 && await gp.locator('.dpage').count() === 1 && await gp.locator('a[download]').count() === 0, 'fan scenario fallback: a doc without scn still shows its page pictures');
+  await gp.goto(base + 'guides.html'); await gp.waitForTimeout(400);
+  await gp.fill('#lq', 'quagmire'); await gp.waitForTimeout(300);
+  ok(await gp.locator('.dcard a[href="guides.html?d=fan-opjh-2019-2-village-in-the-woods"]').count() === 1, 'fan scenario search: a word in the rules text finds the scenario');
   await gp.goto(base + 'guides.html'); await gp.waitForTimeout(400);
   await gp.fill('#lq', 'night combat'); await gp.waitForTimeout(300);
   ok(await gp.locator('.dcard a[href="guides.html?d=pegasus-bridge-errata"]').count() === 1, 'documents: search finds night combat in the Pegasus Bridge text');
@@ -1297,10 +1323,11 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     ok(z['Not stated'] > z['Up to 150'] + z['151 to 300'] + z['Over 300'] && z['Not stated'] + z['Up to 150'] + z['151 to 300'] + z['Over 300'] === z.All, 'scenario filters: first edition entries without a points figure fall under Not stated (' + JSON.stringify(z) + ')');
     await fp.click('[data-fk="fan"]'); ok(await rows() === fan1, 'scenario filters: Fan made narrows the first edition list to its community documents');
     await go('?b=fan'); k = await chipN('#kinds'); z = await chipN('#sizes');
-    ok(k['Fan made'] === 42 && k.Official === 0 && z['Up to 150'] === 1 && z['Not stated'] > 0, 'scenario filters: the fan made list is all fan made, with one up to 150 (' + JSON.stringify(z) + ')');
+    ok(k['Fan made'] === 43 && k.Official === 0 && z['Up to 150'] === 2 && z['Not stated'] > 0, 'scenario filters: the fan made list is all fan made, with two up to 150 (' + JSON.stringify(z) + ')');
     await fp.click('[data-fz="le150"]');
     const two = libDocs.find(d => d.id === 'fan-two-bridges');
-    ok(await rows() === 1 && (await fp.locator('.hrow .ht').innerText()).replace(/…|\.\.\./g, '') === two.title.replace(/…|\.\.\./g, ''), 'scenario filters: the 95 point fan scenario is the one up to 150');
+    const manoir = libDocs.find(d => d.id === 'fan-the-la-manoir-farmhouse-6-june-1944'), tl = (await fp.locator('.hrow .ht').allInnerTexts()).map(t => t.replace(/…|\.\.\./g, ''));
+    ok(await rows() === 2 && tl.indexOf(two.title.replace(/…|\.\.\./g, '')) >= 0 && tl.indexOf(manoir.title.replace(/…|\.\.\./g, '')) >= 0, 'scenario filters: the 95 point and the 140 point fan scenarios are the two up to 150');
     await fp.locator('.hhead').first().click();
     ok(/Army size/.test(await fp.locator('.hbody:not([hidden])').innerText()), 'scenario filters: an opened library entry says where its army size comes from');
     await go('?b=hos'); k = await chipN('#kinds');

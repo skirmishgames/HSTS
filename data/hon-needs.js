@@ -346,5 +346,18 @@ window.HTS_NEEDS = {
   ],
   "hon1-the-fortified-farm",
   "hon1-extra-terrain-set-2"
+ ],
+ "lib:fan-the-german-strongpoint-at-foucarville": [
+  [
+   "hon1-core-box",
+   "CB"
+  ]
+ ],
+ "lib:fan-the-la-manoir-farmhouse-6-june-1944": [
+  [
+   "hon1-core-box",
+   "CB"
+  ],
+  "hon1-the-fortified-farm"
  ]
 };
