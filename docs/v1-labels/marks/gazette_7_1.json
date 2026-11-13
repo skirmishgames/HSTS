@@ -1,0 +1,336 @@
+{
+ "src": "Gazette 7/Gazette 7 Punchboard scan 1.jpg",
+ "nat": "uk",
+ "sheet": "Gazette 7",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Commandos",
+   "sub": "1er Bataillon de Fusiliers Marins - N\u00b04 Commandos",
+   "cost": 115,
+   "type": "command",
+   "box": [
+    118,
+    120,
+    2218,
+    705
+   ],
+   "rot": 0,
+   "squares": 3,
+   "units": [
+    [
+     "Alexandre Losi",
+     1
+    ],
+    [
+     "Leader Team",
+     1
+    ],
+    [
+     "Fire Team",
+     1
+    ],
+    [
+     "Support Team",
+     1
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      175,
+      245,
+      600,
+      660
+     ],
+     "size": "narrow",
+     "left": [
+      "yellow",
+      "blue",
+      "yellow"
+     ],
+     "right": [
+      "yellow",
+      "blue",
+      "yellow"
+     ]
+    },
+    {
+     "box": [
+      614,
+      245,
+      795,
+      660
+     ],
+     "size": "narrow",
+     "left": [
+      "yellow",
+      "blue",
+      "yellow"
+     ],
+     "right": [
+      "red",
+      "blue",
+      "red"
+     ]
+    },
+    {
+     "box": [
+      1431,
+      245,
+      1765,
+      660
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "red",
+      "blue",
+      "red"
+     ]
+    },
+    {
+     "box": [
+      1776,
+      245,
+      2205,
+      660
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "yellow",
+      "blue",
+      "yellow"
+     ]
+    }
+   ],
+   "notes": "Slot 2 and 3 are partly hidden behind the central unit panel/overlap, boxes cover the visible part only. Yellow star icons printed (hero marker). All 4 slots have a Commandos badge."
+  },
+  {
+   "kind": "option",
+   "name": "Commandos",
+   "cost": 75,
+   "box": [
+    118,
+    772,
+    545,
+    1105
+   ],
+   "rot": 0,
+   "stripes": [
+    "yellow",
+    "blue",
+    "yellow"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 2,
+   "units": [
+    [
+     "Fire Team",
+     2
+    ],
+    [
+     "Support Team",
+     1
+    ]
+   ],
+   "notes": "",
+   "snap": false
+  },
+  {
+   "kind": "option",
+   "name": "Section K-Gun",
+   "cost": 65,
+   "box": [
+    545,
+    772,
+    1004,
+    1105
+   ],
+   "rot": 0,
+   "stripes": [
+    "yellow",
+    "blue",
+    "yellow"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 2,
+   "units": [
+    [
+     "Fire Team",
+     1
+    ],
+    [
+     "K-Gun",
+     2
+    ]
+   ],
+   "notes": "",
+   "snap": false
+  },
+  {
+   "kind": "option",
+   "name": "Section Anti-Tank",
+   "cost": 55,
+   "box": [
+    1004,
+    772,
+    1395,
+    1105
+   ],
+   "rot": 0,
+   "stripes": [
+    "yellow",
+    "blue",
+    "yellow"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 2,
+   "units": [
+    [
+     "Fire Team",
+     1
+    ],
+    [
+     "PIAT",
+     2
+    ]
+   ],
+   "notes": "",
+   "snap": false
+  },
+  {
+   "kind": "option",
+   "name": "Semper Primum",
+   "cost": 25,
+   "box": [
+    141,
+    1208,
+    515,
+    1542
+   ],
+   "rot": 0,
+   "stripes": [
+    "yellow",
+    "blue",
+    "yellow"
+   ],
+   "name_colour": "white",
+   "markers": "X3",
+   "squares": 0,
+   "units": [],
+   "notes": "",
+   "snap": false
+  },
+  {
+   "kind": "option",
+   "name": "Jeep \"Youpi Youpi\"",
+   "cost": 25,
+   "box": [
+    500,
+    1208,
+    806,
+    1542
+   ],
+   "rot": 0,
+   "stripes": [
+    "yellow",
+    "blue",
+    "yellow"
+   ],
+   "name_colour": "white",
+   "markers": "X1",
+   "squares": 1,
+   "units": [
+    [
+     "Jeep",
+     1
+    ],
+    [
+     "Fuel",
+     1
+    ]
+   ],
+   "notes": "Fuel marker X1 shown",
+   "snap": false
+  },
+  {
+   "kind": "tile",
+   "name": "Laurent Duclos",
+   "sub": "Vieille France",
+   "cost": 25,
+   "type": "hero",
+   "box": [
+    850,
+    1210,
+    1340,
+    1800
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [
+    [
+     "L. Duclos",
+     1
+    ],
+    [
+     "Knife",
+     1
+    ]
+   ],
+   "slots": [],
+   "notes": "Knife marker X1; no slot"
+  },
+  {
+   "kind": "tile",
+   "name": "Philippe Kieffer",
+   "sub": "Le Pacha",
+   "cost": 40,
+   "type": "hero",
+   "box": [
+    1409,
+    1205,
+    2215,
+    1785
+   ],
+   "rot": 0,
+   "squares": 0,
+   "units": [
+    [
+     "Kieffer",
+     1
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      1825,
+      1335,
+      2150,
+      1750
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "blue",
+      "red",
+      "white",
+      "red",
+      "blue"
+     ]
+    }
+   ],
+   "notes": "yellow star icon printed"
+  }
+ ]
+}

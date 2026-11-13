@@ -1,0 +1,351 @@
+{
+ "src": "Pointe-du-Hoc/PdH Punchboard Front.jpg",
+ "nat": "us",
+ "set": "hon1-pointe-du-hoc",
+ "sheet": "Pointe-du-Hoc",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Lt Col James Earl Rudder",
+   "cost": 40,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "nat": "us",
+   "box": [
+    107,
+    130,
+    1677,
+    672
+   ],
+   "sub": "Badass Coach",
+   "type": "command",
+   "slots": [
+    {
+     "box": [
+      168,
+      234,
+      582,
+      654
+     ],
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "K"
+     ]
+    },
+    {
+     "box": [
+      984,
+      234,
+      1302,
+      654
+     ],
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "box": [
+      1327,
+      234,
+      1663,
+      654
+     ],
+     "size": "n",
+     "stripes": [
+      "K",
+      "cmd"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Rudder",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "Joseph Legalec",
+   "cost": 10,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "us",
+   "box": [
+    1770,
+    107,
+    2548,
+    671
+   ],
+   "sub": "Odd Lighthouse Keeper",
+   "type": "hero",
+   "slots": [
+    {
+     "box": [
+      2200,
+      240,
+      2518,
+      630
+     ],
+     "size": "n",
+     "stripes": [
+      "H_legalec"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Joseph",
+     1,
+     "character"
+    ]
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "The Creature",
+   "cost": 40,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "us",
+   "box": [
+    2672,
+    153,
+    3083,
+    680
+   ],
+   "sub": "Shrimpman",
+   "type": "hero",
+   "slots": [],
+   "units": [
+    [
+     "The Creature",
+     1,
+     "character"
+    ]
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "Rangers Weapon Platoon",
+   "cost": 55,
+   "rot": 0,
+   "snap": false,
+   "squares": 3,
+   "nat": "us",
+   "box": [
+    354,
+    815,
+    1983,
+    1356
+   ],
+   "sub": "5th Rangers Battalion",
+   "type": "platoon",
+   "slots": [
+    {
+     "box": [
+      448,
+      918,
+      867,
+      1304
+     ],
+     "size": "w",
+     "stripes": [
+      "RKR",
+      "K"
+     ]
+    },
+    {
+     "box": [
+      1270,
+      918,
+      1600,
+      1304
+     ],
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "box": [
+      1620,
+      918,
+      1965,
+      1304
+     ],
+     "size": "w",
+     "stripes": [
+      "K",
+      "RKR"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Ltd James Harper",
+     1,
+     "infantry"
+    ],
+    [
+     ".30 Cal",
+     1,
+     "infantry"
+    ],
+    [
+     "60mm Mortar",
+     1,
+     "infantry"
+    ],
+    [
+     "Flamer",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Mortar Grapnel",
+   "cost": 5,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "nat": "us",
+   "box": [
+    366,
+    1495,
+    712,
+    1805
+   ],
+   "stripes": [
+    "RKR"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  },
+  {
+   "kind": "option",
+   "name": "Trigger Happy",
+   "cost": 10,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "nat": "us",
+   "box": [
+    712,
+    1495,
+    1026,
+    1805
+   ],
+   "stripes": [
+    "RKR"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  },
+  {
+   "kind": "option",
+   "name": "Offensive Grenades",
+   "cost": 5,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "nat": "us",
+   "box": [
+    1358,
+    1495,
+    1715,
+    1805
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  },
+  {
+   "kind": "option",
+   "name": "Incendiary Grenades",
+   "cost": 10,
+   "rot": 270,
+   "snap": false,
+   "squares": 0,
+   "nat": "us",
+   "box": [
+    2788,
+    949,
+    3095,
+    1447
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  },
+  {
+   "kind": "option",
+   "name": "Gunners Squad",
+   "cost": 80,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "nat": "us",
+   "box": [
+    2726,
+    1400,
+    3153,
+    1800
+   ],
+   "stripes": [
+    "RKR"
+   ],
+   "size": "w",
+   "cat": "gear",
+   "units": [
+    [
+     "Gunners",
+     2,
+     "infantry"
+    ],
+    [
+     "Gunners BAR",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Artillery",
+   "cost": 50,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "nat": "us",
+   "box": [
+    2730,
+    3090,
+    3155,
+    3480
+   ],
+   "stripes": [
+    "cmd"
+   ],
+   "size": "w",
+   "cat": "gear",
+   "note": "Markers: X3."
+  }
+ ]
+}

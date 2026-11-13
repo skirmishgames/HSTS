@@ -1,0 +1,294 @@
+{
+ "src": "GE Steiner Kampfgruppe/GE Steiner Kampfgruppe Punchboard 1 Front.jpg",
+ "nat": "ge",
+ "set": "hon1-steiner-kampfgruppe",
+ "sheet": "Steiner Kampfgruppe",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Steiner Kampfgruppe",
+   "cost": 105,
+   "rot": 0,
+   "snap": false,
+   "squares": 3,
+   "box": [
+    150,
+    150,
+    2630,
+    835
+   ],
+   "sub": "Heroic Platoon",
+   "type": "platoon",
+   "slots": [
+    {
+     "box": [
+      207,
+      299,
+      594,
+      802
+     ],
+     "size": "n",
+     "stripes": [
+      "TKT",
+      "K"
+     ]
+    },
+    {
+     "box": [
+      620,
+      299,
+      1001,
+      802
+     ],
+     "size": "n",
+     "stripes": [
+      "TKT",
+      "K"
+     ]
+    },
+    {
+     "box": [
+      1781,
+      299,
+      2162,
+      802
+     ],
+     "size": "n",
+     "stripes": [
+      "TKT",
+      "K"
+     ]
+    },
+    {
+     "box": [
+      2180,
+      299,
+      2578,
+      802
+     ],
+     "size": "n",
+     "stripes": [
+      "TKT",
+      "K"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Fire Group",
+     2,
+     "infantry"
+    ],
+    [
+     "Steiner",
+     1,
+     "infantry"
+    ],
+    [
+     "Recon Group",
+     1,
+     "infantry"
+    ],
+    [
+     "MG 32",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "8cm Granatwerfer",
+   "cost": 20,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    140,
+    1003,
+    450,
+    1353
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "MG42 HMG",
+   "cost": 20,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    564,
+    1011,
+    873,
+    1353
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Panzerschreck",
+   "cost": 20,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    987,
+    1012,
+    1298,
+    1352
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "7.5cm IG 18 Gun",
+   "cost": 25,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    1382,
+    1013,
+    1721,
+    1352
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Guardian",
+   "cost": 10,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    1834,
+    1003,
+    2145,
+    1352
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "order"
+  },
+  {
+   "kind": "option",
+   "name": "Gears",
+   "cost": 20,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    142,
+    1522,
+    452,
+    1888
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X5."
+  },
+  {
+   "kind": "option",
+   "name": "Planning",
+   "cost": 10,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    563,
+    1539,
+    873,
+    1888
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "order"
+  },
+  {
+   "kind": "option",
+   "name": "Veteran",
+   "cost": 15,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    988,
+    1522,
+    1298,
+    1888
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  },
+  {
+   "kind": "option",
+   "name": "Heroic",
+   "cost": 30,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    1413,
+    1522,
+    1723,
+    1922
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  },
+  {
+   "kind": "option",
+   "name": "Trigger Happy",
+   "cost": 10,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    1834,
+    1522,
+    2145,
+    1888
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  }
+ ]
+}

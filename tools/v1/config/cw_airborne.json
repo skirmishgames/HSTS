@@ -1,0 +1,119 @@
+{
+ "src": "CW Airborne/CW Airborne Punchboard 1 Front.jpg",
+ "nat": "uk",
+ "set": "hon1-uk-airborne",
+ "sheet": "CW Airborne",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Sir Julian Binus",
+   "cost": 35,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    1447,
+    232,
+    3790,
+    1375
+   ],
+   "sub": "Technician, not Engineer!",
+   "type": "hero",
+   "slots": [
+    {
+     "box": [
+      1550,
+      440,
+      2150,
+      1270
+     ],
+     "size": "n",
+     "stripes": [
+      "RR",
+      "K"
+     ]
+    },
+    {
+     "box": [
+      3000,
+      440,
+      3640,
+      1270
+     ],
+     "size": "n",
+     "stripes": [
+      "H_binus",
+      "RR"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Binus",
+     1,
+     "character"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Container",
+   "cost": 20,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    3935,
+    200,
+    4560,
+    950
+   ],
+   "stripes": [
+    "RR"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X1."
+  },
+  {
+   "kind": "option",
+   "name": "Hawkins Mines",
+   "cost": 15,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    93,
+    1512,
+    814,
+    2221
+   ],
+   "stripes": [
+    "RR"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  },
+  {
+   "kind": "option",
+   "name": "Training Paratrooper",
+   "cost": 25,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    754,
+    1512,
+    1477,
+    2169
+   ],
+   "stripes": [
+    "RR"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X6."
+  }
+ ]
+}

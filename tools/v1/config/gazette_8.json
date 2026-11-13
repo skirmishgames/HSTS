@@ -1,0 +1,242 @@
+{
+ "src": "Gazette 8/Gazette 8 Punchboard 2 Front.jpg",
+ "nat": "us",
+ "set": "hon1-gazette-8",
+ "sheet": "Gazette 8",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Maquisards",
+   "cost": 55,
+   "rot": 0,
+   "snap": false,
+   "squares": 3,
+   "nat": "us",
+   "box": [
+    74,
+    50,
+    1665,
+    840
+   ],
+   "sub": "Les Héros du Vercors",
+   "type": "platoon",
+   "slots": [
+    {
+     "box": [
+      193,
+      244,
+      688,
+      744
+     ],
+     "size": "w",
+     "stripes": [
+      "BWR"
+     ]
+    },
+    {
+     "box": [
+      1170,
+      244,
+      1557,
+      744
+     ],
+     "size": "n",
+     "stripes": [
+      "H_maq",
+      "BWR"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Robert",
+     1,
+     "infantry"
+    ],
+    [
+     "Maquisards",
+     2,
+     "infantry"
+    ],
+    [
+     "Maquisards Support",
+     1,
+     "infantry"
+    ]
+   ],
+   "note": "French FFI, filed under United States until there is a French nation."
+  },
+  {
+   "kind": "tile",
+   "name": "Reserve Gebirgsjäger Regiment I",
+   "cost": 80,
+   "rot": 0,
+   "snap": false,
+   "squares": 3,
+   "nat": "ge",
+   "box": [
+    74,
+    847,
+    1665,
+    1636
+   ],
+   "sub": "Reserve Division 157",
+   "type": "platoon",
+   "slots": [
+    {
+     "box": [
+      188,
+      1040,
+      688,
+      1534
+     ],
+     "size": "w",
+     "stripes": [
+      "WBW"
+     ]
+    },
+    {
+     "box": [
+      1170,
+      1040,
+      1557,
+      1534
+     ],
+     "size": "n",
+     "stripes": [
+      "H_geb",
+      "K"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Fire Group",
+     2,
+     "infantry"
+    ],
+    [
+     "LEGRW 36",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "SOE Agents",
+   "cost": 85,
+   "rot": 0,
+   "snap": false,
+   "squares": 3,
+   "nat": "us",
+   "box": [
+    2185,
+    580,
+    2725,
+    1090
+   ],
+   "stripes": [
+    "BWR"
+   ],
+   "size": "w",
+   "cat": "support",
+   "units": [
+    [
+     "Hoppers",
+     1,
+     "infantry"
+    ],
+    [
+     "SOE Team",
+     3,
+     "infantry"
+    ]
+   ],
+   "note": "French FFI, filed under United States until there is a French nation."
+  },
+  {
+   "kind": "option",
+   "name": "Laffly W15 TCC",
+   "cost": 20,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "us",
+   "box": [
+    1655,
+    1110,
+    2065,
+    1600
+   ],
+   "stripes": [
+    "BWR"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "Laffly W15 TCC",
+     1,
+     "infantry"
+    ]
+   ],
+   "note": "French FFI, filed under United States until there is a French nation."
+  },
+  {
+   "kind": "option",
+   "name": "Garde d'Honneur",
+   "cost": 25,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "us",
+   "box": [
+    1945,
+    2330,
+    2330,
+    2820
+   ],
+   "stripes": [
+    "RWBWR"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "Garde d'Honneur",
+     1,
+     "infantry"
+    ]
+   ],
+   "note": "French FFI, filed under United States until there is a French nation."
+  },
+  {
+   "kind": "option",
+   "name": "Gebirgsjäger",
+   "cost": 50,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "nat": "ge",
+   "box": [
+    2055,
+    3040,
+    2570,
+    3545
+   ],
+   "stripes": [
+    "WBW"
+   ],
+   "size": "w",
+   "cat": "support",
+   "units": [
+    [
+     "MG Group",
+     1,
+     "infantry"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "src": "US Private Bryan/US Private Bryan Punchboard 1 Front.jpg",
+ "nat": "us",
+ "sheet": "Private Bryan",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "James F. Bryan",
+   "sub": "To Be Saved",
+   "cost": 20,
+   "type": "hero",
+   "box": [
+    430,
+    1480,
+    1940,
+    2580
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [],
+   "slots": [
+    {
+     "box": [
+      1230,
+      1695,
+      1890,
+      2460
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "white"
+     ]
+    }
+   ],
+   "notes": "small unit picture bottom left"
+  },
+  {
+   "kind": "option",
+   "name": "Bazooka",
+   "cost": 15,
+   "box": [
+    990,
+    530,
+    1670,
+    1370
+   ],
+   "rot": 0,
+   "stripes": [
+    "white"
+   ],
+   "name_colour": "white",
+   "markers": "X2",
+   "squares": 0,
+   "units": [],
+   "notes": "small bazooka picture near cost"
+  }
+ ]
+}

@@ -1,0 +1,328 @@
+{
+ "src": "Gazette 7/Gazette 7 Punchboard scan 2.jpg",
+ "nat": "uk",
+ "sheet": "Gazette 7",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Commandos",
+   "sub": "1er Bataillon de Fusiliers Marins - N\u00b04 Commandos",
+   "cost": 115,
+   "type": "command",
+   "box": [
+    118,
+    120,
+    2218,
+    705
+   ],
+   "rot": 0,
+   "squares": 3,
+   "units": [
+    [
+     "Alexandre Losi",
+     1
+    ],
+    [
+     "Leader Team",
+     1
+    ],
+    [
+     "Fire Team",
+     1
+    ],
+    [
+     "Support Team",
+     1
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      175,
+      245,
+      600,
+      660
+     ],
+     "size": "narrow",
+     "left": [
+      "yellow",
+      "blue",
+      "yellow"
+     ],
+     "right": [
+      "yellow",
+      "blue",
+      "yellow"
+     ]
+    },
+    {
+     "box": [
+      614,
+      245,
+      795,
+      660
+     ],
+     "size": "narrow",
+     "left": [
+      "yellow",
+      "blue",
+      "yellow"
+     ],
+     "right": [
+      "red",
+      "blue",
+      "red"
+     ]
+    },
+    {
+     "box": [
+      1431,
+      245,
+      1765,
+      660
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "red",
+      "blue",
+      "red"
+     ]
+    },
+    {
+     "box": [
+      1776,
+      245,
+      2205,
+      660
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "yellow",
+      "blue",
+      "yellow"
+     ]
+    }
+   ],
+   "notes": "Scan 2 is a faded copy of the board with large orange count numbers overlaid (11 over this tile). Slots 2 and 3 partly hidden behind central panel; boxes cover visible part. A roundel badge appears next to the top-right Commandos badge on this scan."
+  },
+  {
+   "kind": "option",
+   "name": "Section Anti-Tank",
+   "cost": 55,
+   "box": [
+    968,
+    772,
+    1383,
+    1105
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "yellow",
+    "blue",
+    "yellow"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": null,
+   "units": [
+    [
+     "Fire Team",
+     1
+    ],
+    [
+     "PIAT",
+     2
+    ]
+   ],
+   "notes": "Scan 2 is a faded copy of the board with large orange count numbers overlaid (5)"
+  },
+  {
+   "kind": "option",
+   "name": "Section K-Gun",
+   "cost": 65,
+   "box": [
+    1383,
+    772,
+    1824,
+    1105
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "yellow",
+    "blue",
+    "yellow"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": null,
+   "units": [
+    [
+     "Fire Team",
+     1
+    ],
+    [
+     "K-Gun",
+     2
+    ]
+   ],
+   "notes": "Scan 2 is a faded copy of the board with large orange count numbers overlaid (6)"
+  },
+  {
+   "kind": "option",
+   "name": "Commandos",
+   "cost": 75,
+   "box": [
+    1824,
+    772,
+    2255,
+    1105
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "yellow",
+    "blue",
+    "yellow"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": null,
+   "units": [
+    [
+     "Fire Team",
+     2
+    ],
+    [
+     "Support Team",
+     1
+    ]
+   ],
+   "notes": "Scan 2 is a faded copy of the board with large orange count numbers overlaid (7)"
+  },
+  {
+   "kind": "option",
+   "name": "Jeep \"Youpi Youpi\"",
+   "cost": 25,
+   "box": [
+    1560,
+    1208,
+    1870,
+    1565
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "yellow",
+    "blue",
+    "yellow"
+   ],
+   "name_colour": "white",
+   "markers": "X1?",
+   "squares": null,
+   "units": [
+    [
+     "Jeep",
+     1
+    ]
+   ],
+   "notes": "Scan 2 is a faded copy of the board with large orange count numbers overlaid (2); marker count and red square hidden under overlay/not legible"
+  },
+  {
+   "kind": "option",
+   "name": "Character Commando",
+   "cost": null,
+   "box": [
+    1855,
+    1215,
+    2230,
+    1545
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "yellow",
+    "blue",
+    "yellow"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "no cost printed; name split CHARACTER above, COMMANDO below the crest; no overlay count"
+  },
+  {
+   "kind": "tile",
+   "name": "Philippe Kieffer",
+   "sub": "Le Pacha",
+   "cost": 40,
+   "type": "hero",
+   "box": [
+    155,
+    1205,
+    975,
+    1785
+   ],
+   "rot": 0,
+   "squares": null,
+   "units": [
+    [
+     "Kieffer",
+     1
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      195,
+      1325,
+      505,
+      1735
+     ],
+     "size": "narrow",
+     "left": [
+      "blue",
+      "red",
+      "white",
+      "red",
+      "blue"
+     ],
+     "right": [
+      "black"
+     ]
+    }
+   ],
+   "notes": "Scan 2 is a faded copy of the board with large orange count numbers overlaid (4). Slot is on the left side of this tile (mirrored vs scan 1)."
+  },
+  {
+   "kind": "tile",
+   "name": "Laurent Duclos",
+   "sub": "Vieille France",
+   "cost": 25,
+   "type": "hero",
+   "box": [
+    1030,
+    1210,
+    1495,
+    1790
+   ],
+   "rot": 0,
+   "squares": null,
+   "units": [
+    [
+     "L. Duclos",
+     1
+    ]
+   ],
+   "slots": [],
+   "notes": "Scan 2 is a faded copy of the board with large orange count numbers overlaid (2); no slot"
+  }
+ ]
+}

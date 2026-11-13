@@ -1,0 +1,197 @@
+{
+ "src": "Gazette 1/Gazette 1 Punchboard 1 Front.png",
+ "nat": "us",
+ "set": "hon1-gazette-1",
+ "sheet": "Gazette 1",
+ "pieces": [
+  {
+   "kind": "option",
+   "name": "57mm AT Gun",
+   "cost": 20,
+   "rot": 270,
+   "snap": false,
+   "squares": 1,
+   "nat": "us",
+   "box": [
+    1356,
+    93,
+    1724,
+    410
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "57mm AT Gun",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "75mm Pack Howitzer M8",
+   "cost": 30,
+   "rot": 270,
+   "snap": false,
+   "squares": 1,
+   "nat": "us",
+   "box": [
+    1356,
+    493,
+    1724,
+    810
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "75mm Pack Howitzer M8",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "75mm Pack Howitzer M8",
+   "cost": 30,
+   "rot": 270,
+   "snap": false,
+   "squares": 1,
+   "nat": "uk",
+   "box": [
+    1356,
+    893,
+    1724,
+    1210
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "75mm Pack Howitzer M8",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Minesweepers",
+   "cost": 10,
+   "rot": 270,
+   "snap": false,
+   "squares": 2,
+   "nat": "uk",
+   "box": [
+    1356,
+    1295,
+    1724,
+    1612
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "Minesweepers",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Minensucher",
+   "cost": 10,
+   "rot": 270,
+   "snap": false,
+   "squares": 2,
+   "nat": "ge",
+   "box": [
+    1356,
+    1695,
+    1724,
+    2012
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "Minensucher",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "10.5 cm LeFH 18",
+   "cost": 40,
+   "rot": 270,
+   "snap": false,
+   "squares": 1,
+   "nat": "ge",
+   "box": [
+    1356,
+    2095,
+    1724,
+    2412
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "10.5 cm LeFH 18",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Minesweepers",
+   "cost": 10,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "nat": "us",
+   "box": [
+    2436,
+    1186,
+    2806,
+    1588
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "Minesweepers",
+     2,
+     "infantry"
+    ]
+   ]
+  }
+ ]
+}

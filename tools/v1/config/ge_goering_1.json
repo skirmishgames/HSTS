@@ -1,0 +1,252 @@
+{
+ "src": "GE Goering and his Armored Train/GE Goering and his Armored Train Punchboard 1 Front.jpg",
+ "nat": "ge",
+ "set": "hon1-goering-and-his-armoured-train",
+ "sheet": "Goering and his Armoured Train",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Hermann Goering",
+   "cost": 40,
+   "rot": 90,
+   "snap": false,
+   "squares": 2,
+   "box": [
+    268,
+    206,
+    995,
+    1159
+   ],
+   "sub": "Fat Reichsmarschall",
+   "type": "hero",
+   "slots": [],
+   "units": [
+    [
+     "Freundin",
+     1,
+     "character"
+    ],
+    [
+     "Goering",
+     1,
+     "character"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Goering's Baton of Power",
+   "cost": 15,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    1574,
+    217,
+    2000,
+    651
+   ],
+   "stripes": [
+    "H_goering"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "MP40",
+   "cost": 5,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    1574,
+    740,
+    2000,
+    1219
+   ],
+   "stripes": [
+    "H_goering"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Howitzer Turret",
+   "cost": 40,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    2026,
+    260,
+    2374,
+    654
+   ],
+   "stripes": [
+    "KWKZ"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Position Turret",
+   "cost": 15,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    2388,
+    261,
+    2779,
+    654
+   ],
+   "stripes": [
+    "KWKZ"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Pzw-IV Turret",
+   "cost": 40,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    2026,
+    782,
+    2374,
+    1175
+   ],
+   "stripes": [
+    "KWKZ"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "AA Turret",
+   "cost": 35,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    2433,
+    782,
+    2779,
+    1175
+   ],
+   "stripes": [
+    "KWKZ"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "tile",
+   "name": "Panzerzug N32",
+   "cost": 0,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    336,
+    1252,
+    2761,
+    1991
+   ],
+   "sub": "Made in France",
+   "type": "platoon",
+   "slots": [
+    {
+     "box": [
+      455,
+      1452,
+      958,
+      1976
+     ],
+     "size": "w",
+     "stripes": [
+      "KWKZ"
+     ]
+    },
+    {
+     "box": [
+      995,
+      1452,
+      1387,
+      1976
+     ],
+     "size": "n",
+     "stripes": [
+      "KWKZ",
+      "K"
+     ]
+    },
+    {
+     "box": [
+      1835,
+      1452,
+      2227,
+      1976
+     ],
+     "size": "n",
+     "stripes": [
+      "K",
+      "KWKZ"
+     ]
+    },
+    {
+     "box": [
+      2255,
+      1452,
+      2646,
+      1976
+     ],
+     "size": "n",
+     "stripes": [
+      "K",
+      "KWKZ"
+     ]
+    }
+   ],
+   "note": "The cost tab on the tile prints N/A. Entered as 0 points."
+  },
+  {
+   "kind": "option",
+   "name": "Zugpersonal",
+   "cost": 60,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "box": [
+    1644,
+    2617,
+    2081,
+    2979
+   ],
+   "stripes": [
+    "KWKZ"
+   ],
+   "size": "w",
+   "cat": "support",
+   "units": [
+    [
+     "Fire Group",
+     2,
+     "infantry"
+    ],
+    [
+     "Feldwebel",
+     1,
+     "infantry"
+    ]
+   ]
+  }
+ ]
+}

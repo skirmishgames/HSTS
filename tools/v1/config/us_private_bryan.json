@@ -1,0 +1,59 @@
+{
+ "src": "US Private Bryan/US Private Bryan Punchboard 1 Front.jpg",
+ "nat": "us",
+ "set": "hon1-private-bryan",
+ "sheet": "Private Bryan",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "James F. Bryan",
+   "cost": 20,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    429,
+    1492,
+    1981,
+    2574
+   ],
+   "sub": "To Be Saved",
+   "type": "hero",
+   "slots": [
+    {
+     "box": [
+      1230,
+      1695,
+      1890,
+      2460
+     ],
+     "size": "n",
+     "stripes": [
+      "K",
+      "H_bryan"
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Bazooka",
+   "cost": 15,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    968,
+    522,
+    1689,
+    1373
+   ],
+   "stripes": [
+    "H_bryan"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X2."
+  }
+ ]
+}

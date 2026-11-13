@@ -1,0 +1,117 @@
+{
+ "src": "US Airborne/US Airborne Punchboard 1 Front.jpg",
+ "nat": "us",
+ "set": "hon1-us-airborne",
+ "sheet": "US Airborne",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Jamie \"Clem\" Kilmister",
+   "cost": 40,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    1447,
+    232,
+    3712,
+    1313
+   ],
+   "sub": "Metal Hero",
+   "type": "hero",
+   "slots": [
+    {
+     "box": [
+      1560,
+      440,
+      2200,
+      1255
+     ],
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "box": [
+      3000,
+      440,
+      3650,
+      1255
+     ],
+     "size": "n",
+     "stripes": [
+      "H_clem",
+      "K"
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Sergeant",
+   "cost": 30,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    3913,
+    282,
+    4635,
+    960
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "Sergeant",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Offensive Grenades",
+   "cost": 5,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    93,
+    1536,
+    814,
+    2188
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  },
+  {
+   "kind": "option",
+   "name": "Training Paratrooper",
+   "cost": 25,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    648,
+    1540,
+    1404,
+    2192
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X6."
+  }
+ ]
+}

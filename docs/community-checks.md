@@ -75,6 +75,12 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Grenadier-Regiment 1058 | 91. Luftlande-Infanterie-Division | 70 | long: platoon, narrow: platoon or black, narrow: black or platoon |
 | Feldkommando | Major Friedrich August Freiherr von der Heydte | 35 | long: command, narrow: command or black, narrow: black or command |
 | Reino Hamer | The Wall | 40 | no slots |
+| Reserve Gebirgsjäger Regiment I | Reserve Division 157 | 80 | long: platoon, narrow: platoon or black |
+| Sebastian Jakobus | Talkative Fallschirmjager | 40 | narrow: black, narrow: platoon or black |
+| Hermann Goering | Fat Reichsmarschall | 40 | no slots |
+| Panzerzug N32 | Made in France | 0 | long: platoon, narrow: platoon or black, narrow: black or platoon, narrow: black or platoon |
+| Karl von Croc | Shake Lover | 30 | narrow: black or platoon |
+| Steiner Kampfgruppe | Heroic Platoon | 105 | narrow: platoon or black, narrow: platoon or black, narrow: platoon or black, narrow: platoon or black |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
 |---|---|---|---|---|---|
@@ -152,6 +158,27 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | SD KFZ 10/5 | 30 | narrow | black | support | Carentan |
 | Beutepanzer R35 | 80 | long | black | support | Sainte-Mere-Eglise |
 | Beutepanzer R35 | 40 | narrow | black | support | Sainte-Mere-Eglise |
+| Minensucher | 10 | narrow | black | support | Gazette 1 |
+| 10.5 cm LeFH 18 | 40 | narrow | black | support | Gazette 1 |
+| Gebirgsjäger | 50 | long | platoon (WBW) | support | Gazette 8 |
+| Feldwebel | 30 | narrow | black | gear | GE Airborne |
+| Dagger | 15 | narrow | black | gear | GE Airborne |
+| Training Fallschirmjager | 25 | narrow | black | gear | GE Airborne |
+| Goering's Baton of Power | 15 | narrow | platoon (H_goering) | gear | Goering and his Armoured Train |
+| MP40 | 5 | narrow | platoon (H_goering) | gear | Goering and his Armoured Train |
+| Howitzer Turret | 40 | narrow | platoon (KWKZ) | gear | Goering and his Armoured Train |
+| Position Turret | 15 | narrow | platoon (KWKZ) | gear | Goering and his Armoured Train |
+| Pzw-IV Turret | 40 | narrow | platoon (KWKZ) | gear | Goering and his Armoured Train |
+| AA Turret | 35 | narrow | platoon (KWKZ) | gear | Goering and his Armoured Train |
+| Zugpersonal | 60 | long | platoon (KWKZ) | support | Goering and his Armoured Train |
+| Geballte Ladung | 10 | narrow | platoon (H_croc) | gear | Karl von Croc |
+| 8cm Granatwerfer | 20 | narrow | black | gear | Steiner Kampfgruppe |
+| 7.5cm IG 18 Gun | 25 | narrow | black | gear | Steiner Kampfgruppe |
+| Guardian | 10 | narrow | black | order | Steiner Kampfgruppe |
+| Gears | 20 | narrow | black | gear | Steiner Kampfgruppe |
+| Planning | 10 | narrow | black | order | Steiner Kampfgruppe |
+| Veteran | 15 | narrow | black | gear | Steiner Kampfgruppe |
+| Trigger Happy | 10 | narrow | black | gear | Steiner Kampfgruppe |
 
 ### Commonwealth
 
@@ -168,6 +195,10 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | East Yorkshire Regiment | 3rd Inf. Div. 8th Infantry Brigade | 55 | long: platoon, narrow: platoon or black, narrow: black or platoon, long: black or platoon |
 | Royal Winnipeg Rifles | 3rd Inf. Div. 7th Infantry Brigade | 95 | long: platoon, narrow: platoon or black, narrow: black, long: black or platoon |
 | Percy Hobart | Hobart's Funnies | 30 | long: command or black, narrow: black, narrow: black or command |
+| Sir Julian Binus | Technician, not Engineer! | 35 | narrow: platoon or black, narrow: platoon or platoon |
+| Commandos | 1er Bataillon de Fusiliers Marins - N°4 Commandos | 115 | long: platoon, narrow: platoon or platoon, narrow: black or platoon, long: black or platoon |
+| Laurent Duclos | Vieille France | 25 | no slots |
+| Philippe Kieffer | Le Pacha | 40 | narrow: black or command |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
 |---|---|---|---|---|---|
@@ -217,6 +248,16 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Sherman Crab | 75 | long | black | support | Gazette 2 |
 | Churchill Crocodile | 95 | long | black | support | Gazette 2 |
 | Churchill Ark Mark 1 | 25 | long | black | support | Gazette 2 |
+| Container | 20 | narrow | platoon (RR) | gear | CW Airborne |
+| Hawkins Mines | 15 | narrow | platoon (RR) | gear | CW Airborne |
+| Training Paratrooper | 25 | narrow | platoon (RR) | gear | CW Airborne |
+| 75mm Pack Howitzer M8 | 30 | narrow | black | support | Gazette 1 |
+| Minesweepers | 10 | narrow | black | support | Gazette 1 |
+| Commandos | 75 | long | platoon (YBY) | support | Gazette 7 |
+| Section K-Gun | 65 | long | platoon (YBY) | support | Gazette 7 |
+| Section Anti-Tank | 55 | long | platoon (YBY) | support | Gazette 7 |
+| Semper Primum | 25 | narrow | platoon (YBY) | gear | Gazette 7 |
+| Jeep "Youpi Youpi" | 25 | narrow | platoon (YBY) | support | Gazette 7 |
 
 ### United States
 
@@ -248,6 +289,13 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Arthur "Dutch" Schultz | Not the Gangster.. | 30 | no slots |
 | US Paratroopers | 82nd Inf. Div. 505th Inf. Reg. | 85 | long: platoon or black, narrow: platoon or black, narrow: platoon or black |
 | Field Command | Lt Col Benjamin Hayes "Vandy" Vandervoort | 20 | long: command, narrow: black or command, narrow: black or command |
+| Maquisards | Les Héros du Vercors | 55 | long: platoon, narrow: platoon or platoon |
+| Lt Col James Earl Rudder | Badass Coach | 40 | narrow: command or black, narrow: black, narrow: black or command |
+| Joseph Legalec | Odd Lighthouse Keeper | 10 | narrow: platoon |
+| The Creature | Shrimpman | 40 | no slots |
+| Rangers Weapon Platoon | 5th Rangers Battalion | 55 | long: platoon or black, narrow: black, long: black or platoon |
+| Jamie "Clem" Kilmister | Metal Hero | 40 | narrow: black, narrow: platoon or black |
+| James F. Bryan | To Be Saved | 20 | narrow: black or platoon |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
 |---|---|---|---|---|---|
@@ -322,4 +370,18 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Waco Glider | 15 | narrow | black | gear | Sainte-Mere-Eglise |
 | Pathfinders Squad | 80 | narrow | black | support | Sainte-Mere-Eglise |
 | Willys .50 Cal | 25 | narrow | black | support | Sainte-Mere-Eglise |
+| 75mm Pack Howitzer M8 | 30 | narrow | black | support | Gazette 1 |
+| Minesweepers | 10 | narrow | black | support | Gazette 1 |
+| SOE Agents | 85 | long | platoon (BWR) | support | Gazette 8 |
+| Laffly W15 TCC | 20 | narrow | platoon (BWR) | support | Gazette 8 |
+| Garde d'Honneur | 25 | narrow | platoon (RWBWR) | support | Gazette 8 |
+| Mortar Grapnel | 5 | narrow | platoon (RKR) | gear | Pointe-du-Hoc |
+| Trigger Happy | 10 | narrow | platoon (RKR) | gear | Pointe-du-Hoc |
+| Offensive Grenades | 5 | narrow | black | gear | Pointe-du-Hoc |
+| Incendiary Grenades | 10 | narrow | black | gear | Pointe-du-Hoc |
+| Gunners Squad | 80 | long | platoon (RKR) | gear | Pointe-du-Hoc |
+| Artillery | 50 | long | command | gear | Pointe-du-Hoc |
+| Sergeant | 30 | narrow | black | support | US Airborne |
+| Training Paratrooper | 25 | narrow | black | gear | US Airborne |
+| Bazooka | 15 | narrow | platoon (H_bryan) | gear | Private Bryan |
 

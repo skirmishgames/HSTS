@@ -1,0 +1,311 @@
+{
+ "src": "Gazette 7/Gazette 7 Punchboard scan 1.jpg",
+ "nat": "uk",
+ "set": "hon1-gazette-7",
+ "sheet": "Gazette 7",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Commandos",
+   "cost": 115,
+   "rot": 0,
+   "snap": false,
+   "squares": 3,
+   "box": [
+    119,
+    142,
+    2209,
+    683
+   ],
+   "sub": "1er Bataillon de Fusiliers Marins - N°4 Commandos",
+   "type": "platoon",
+   "slots": [
+    {
+     "box": [
+      175,
+      245,
+      600,
+      660
+     ],
+     "size": "w",
+     "stripes": [
+      "YBY"
+     ]
+    },
+    {
+     "box": [
+      614,
+      245,
+      795,
+      660
+     ],
+     "size": "n",
+     "stripes": [
+      "YBY",
+      "RBR"
+     ]
+    },
+    {
+     "box": [
+      1431,
+      245,
+      1765,
+      660
+     ],
+     "size": "n",
+     "stripes": [
+      "K",
+      "RBR"
+     ]
+    },
+    {
+     "box": [
+      1776,
+      245,
+      2205,
+      660
+     ],
+     "size": "w",
+     "stripes": [
+      "K",
+      "YBY"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Alexandre Losi",
+     1,
+     "infantry"
+    ],
+    [
+     "Leader Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Support Team",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Commandos",
+   "cost": 75,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "box": [
+    118,
+    772,
+    545,
+    1105
+   ],
+   "stripes": [
+    "YBY"
+   ],
+   "size": "w",
+   "cat": "support",
+   "units": [
+    [
+     "Fire Team",
+     2,
+     "infantry"
+    ],
+    [
+     "Support Team",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Section K-Gun",
+   "cost": 65,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "box": [
+    545,
+    772,
+    1004,
+    1105
+   ],
+   "stripes": [
+    "YBY"
+   ],
+   "size": "w",
+   "cat": "support",
+   "units": [
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "K-Gun",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Section Anti-Tank",
+   "cost": 55,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "box": [
+    1004,
+    772,
+    1395,
+    1105
+   ],
+   "stripes": [
+    "YBY"
+   ],
+   "size": "w",
+   "cat": "support",
+   "units": [
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "PIAT",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Semper Primum",
+   "cost": 25,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    141,
+    1208,
+    515,
+    1542
+   ],
+   "stripes": [
+    "YBY"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  },
+  {
+   "kind": "option",
+   "name": "Jeep \"Youpi Youpi\"",
+   "cost": 25,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    500,
+    1208,
+    806,
+    1542
+   ],
+   "stripes": [
+    "YBY"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "Jeep",
+     1,
+     "infantry"
+    ],
+    [
+     "Fuel",
+     1,
+     "infantry"
+    ]
+   ],
+   "note": "Markers: X1."
+  },
+  {
+   "kind": "tile",
+   "name": "Laurent Duclos",
+   "cost": 25,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    861,
+    1240,
+    1321,
+    1794
+   ],
+   "sub": "Vieille France",
+   "type": "hero",
+   "slots": [],
+   "units": [
+    [
+     "L. Duclos",
+     1,
+     "character"
+    ],
+    [
+     "Knife",
+     1,
+     "character"
+    ]
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "Philippe Kieffer",
+   "cost": 40,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    1406,
+    1246,
+    2182,
+    1787
+   ],
+   "sub": "Le Pacha",
+   "type": "hero",
+   "slots": [
+    {
+     "box": [
+      1825,
+      1335,
+      2150,
+      1750
+     ],
+     "size": "n",
+     "stripes": [
+      "K",
+      "cmd"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Kieffer",
+     1,
+     "character"
+    ]
+   ]
+  }
+ ]
+}

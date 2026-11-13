@@ -1,0 +1,67 @@
+{
+ "src": "GE Karl von Croc/GE Karl von Croc Punchboard 1 Front.jpg",
+ "nat": "ge",
+ "sheet": "Karl von Croc",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Karl von Croc",
+   "sub": "Shake Lover",
+   "cost": 30,
+   "type": "hero",
+   "box": [
+    280,
+    1355,
+    2025,
+    2665
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [
+    [
+     "Croc",
+     1
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      1198,
+      1659,
+      1907,
+      2472
+     ],
+     "size": "wide",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "white"
+     ]
+    }
+   ],
+   "notes": "Small 'X1' marker with a small Grenade picture next to the cost."
+  },
+  {
+   "kind": "option",
+   "name": "Geballte Ladung",
+   "cost": 10,
+   "box": [
+    975,
+    505,
+    1622,
+    1348
+   ],
+   "rot": 0,
+   "stripes": [
+    "white"
+   ],
+   "name_colour": "white",
+   "markers": "X1",
+   "squares": 0,
+   "units": [],
+   "notes": "Teal card; side bands white blocks.",
+   "snap": false
+  }
+ ]
+}

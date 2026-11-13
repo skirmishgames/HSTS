@@ -1,0 +1,66 @@
+{
+ "src": "GE Karl von Croc/GE Karl von Croc Punchboard 1 Front.jpg",
+ "nat": "ge",
+ "set": "hon1-karl-von-kroc",
+ "sheet": "Karl von Croc",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Karl von Croc",
+   "cost": 30,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    312,
+    1378,
+    2054,
+    2623
+   ],
+   "sub": "Shake Lover",
+   "type": "hero",
+   "slots": [
+    {
+     "box": [
+      1198,
+      1659,
+      1907,
+      2472
+     ],
+     "size": "n",
+     "stripes": [
+      "K",
+      "H_croc"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Croc",
+     1,
+     "character"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Geballte Ladung",
+   "cost": 10,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    975,
+    505,
+    1622,
+    1348
+   ],
+   "stripes": [
+    "H_croc"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X1."
+  }
+ ]
+}

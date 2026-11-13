@@ -1,0 +1,121 @@
+{
+ "src": "US Airborne/US Airborne Punchboard 1 Front.jpg",
+ "nat": "us",
+ "sheet": "US Airborne",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Jamie \"Clem\" Kilmister",
+   "sub": "Metal Hero",
+   "cost": 40,
+   "type": "hero",
+   "box": [
+    1490,
+    225,
+    3715,
+    1335
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [],
+   "slots": [
+    {
+     "box": [
+      1560,
+      440,
+      2200,
+      1255
+     ],
+     "size": "wide",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      3000,
+      440,
+      3650,
+      1255
+     ],
+     "size": "wide",
+     "left": [
+      "white"
+     ],
+     "right": [
+      "black"
+     ]
+    }
+   ],
+   "notes": "X2 marker printed beside cost; small unit picture bottom centre"
+  },
+  {
+   "kind": "option",
+   "name": "Sergeant",
+   "cost": 30,
+   "box": [
+    3945,
+    260,
+    4605,
+    950
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [
+    [
+     "Sergeant",
+     1
+    ]
+   ],
+   "notes": "two black bands each side"
+  },
+  {
+   "kind": "option",
+   "name": "Offensive Grenades",
+   "cost": 5,
+   "box": [
+    100,
+    1530,
+    770,
+    2195
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": "X3",
+   "squares": 0,
+   "units": [],
+   "notes": ""
+  },
+  {
+   "kind": "option",
+   "name": "Training Paratrooper",
+   "cost": 25,
+   "box": [
+    700,
+    1530,
+    1400,
+    2195
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "blue",
+   "markers": "X6",
+   "squares": 0,
+   "units": [],
+   "notes": "name printed in blue (not in spec colour list)"
+  }
+ ]
+}

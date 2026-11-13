@@ -1,0 +1,215 @@
+{
+ "src": "Gazette 1/Gazette 1 Punchboard 1 Front.png",
+ "sheet": "Gazette 1",
+ "nat": "us",
+ "pieces": [
+  {
+   "kind": "option",
+   "name": "57mm AT Gun",
+   "cost": 20,
+   "box": [
+    1356,
+    93,
+    1724,
+    410
+   ],
+   "rot": 270,
+   "nat": "us",
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [
+    [
+     "57mm AT Gun",
+     1
+    ]
+   ],
+   "notes": "",
+   "snap": false
+  },
+  {
+   "kind": "option",
+   "name": "75mm Pack Howitzer M8",
+   "cost": 30,
+   "box": [
+    1356,
+    493,
+    1724,
+    810
+   ],
+   "rot": 270,
+   "nat": "us",
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [
+    [
+     "75mm Pack Howitzer M8",
+     1
+    ]
+   ],
+   "notes": "unit picture badge: white star",
+   "snap": false
+  },
+  {
+   "kind": "option",
+   "name": "75mm Pack Howitzer M8",
+   "cost": 30,
+   "box": [
+    1356,
+    893,
+    1724,
+    1210
+   ],
+   "rot": 270,
+   "nat": "uk",
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [
+    [
+     "75mm Pack Howitzer M8",
+     1
+    ]
+   ],
+   "notes": "unit picture badge: roundel",
+   "snap": false
+  },
+  {
+   "kind": "option",
+   "name": "Minesweepers",
+   "cost": 10,
+   "box": [
+    1356,
+    1295,
+    1724,
+    1612
+   ],
+   "rot": 270,
+   "nat": "uk",
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 2,
+   "units": [
+    [
+     "Minesweepers",
+     2
+    ]
+   ],
+   "notes": "badge: roundel",
+   "snap": false
+  },
+  {
+   "kind": "option",
+   "name": "Minensucher",
+   "cost": 10,
+   "box": [
+    1356,
+    1695,
+    1724,
+    2012
+   ],
+   "rot": 270,
+   "nat": "ge",
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 2,
+   "units": [
+    [
+     "Minensucher",
+     2
+    ]
+   ],
+   "notes": "",
+   "snap": false
+  },
+  {
+   "kind": "option",
+   "name": "10.5 cm LeFH 18",
+   "cost": 40,
+   "box": [
+    1356,
+    2095,
+    1724,
+    2412
+   ],
+   "rot": 270,
+   "nat": "ge",
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [
+    [
+     "10.5 cm LeFH 18",
+     1
+    ]
+   ],
+   "notes": "",
+   "snap": false
+  },
+  {
+   "kind": "option",
+   "name": "Minesweepers",
+   "cost": 10,
+   "box": [
+    2436,
+    1186,
+    2806,
+    1588
+   ],
+   "rot": 0,
+   "nat": "us",
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 2,
+   "units": [
+    [
+     "Minesweepers",
+     2
+    ]
+   ],
+   "notes": "badge: white star",
+   "snap": false
+  },
+  {
+   "kind": "option",
+   "name": "Achtung Minen!",
+   "cost": 50,
+   "box": [
+    1850,
+    1335,
+    2305,
+    1925
+   ],
+   "rot": 0,
+   "nat": "ge",
+   "stripes": [],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "large card, subtitle 'No boots are made for walking on...', 'Minefield x4 (3 mines + 1 decoy)' printed twice; no side stripes visible; may not be a recruitment option; nation guessed from green wing badge with 3 (not a clear nation badge)"
+  }
+ ]
+}

@@ -1,0 +1,110 @@
+{
+ "src": "GE Airborne/GE Airborne Punchboard 1 Front.jpg",
+ "nat": "ge",
+ "set": "hon1-ge-airborne",
+ "sheet": "GE Airborne",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Sebastian Jakobus",
+   "cost": 40,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    1447,
+    232,
+    3712,
+    1313
+   ],
+   "sub": "Talkative Fallschirmjager",
+   "type": "hero",
+   "slots": [
+    {
+     "box": [
+      1500,
+      410,
+      2200,
+      1280
+     ],
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "box": [
+      2950,
+      410,
+      3660,
+      1280
+     ],
+     "size": "n",
+     "stripes": [
+      "H_jakobus",
+      "K"
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Feldwebel",
+   "cost": 30,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "box": [
+    3984,
+    316,
+    4525,
+    960
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Dagger",
+   "cost": 15,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    165,
+    1540,
+    708,
+    2218
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  },
+  {
+   "kind": "option",
+   "name": "Training Fallschirmjager",
+   "cost": 25,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "box": [
+    825,
+    1540,
+    1369,
+    2192
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X6."
+  }
+ ]
+}

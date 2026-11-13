@@ -1,0 +1,304 @@
+{
+ "src": "GE Steiner Kampfgruppe/GE Steiner Kampfgruppe Punchboard 1 Front.jpg",
+ "nat": "ge",
+ "sheet": "Steiner Kampfgruppe",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Steiner Kampfgruppe",
+   "sub": "Heroic Platoon",
+   "cost": 105,
+   "type": "platoon",
+   "box": [
+    150,
+    150,
+    2630,
+    835
+   ],
+   "rot": 0,
+   "squares": 3,
+   "units": [
+    [
+     "Fire Group",
+     2
+    ],
+    [
+     "Steiner",
+     1
+    ],
+    [
+     "Recon Group",
+     1
+    ],
+    [
+     "MG 32",
+     1
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      207,
+      299,
+      594,
+      802
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      620,
+      299,
+      1001,
+      802
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      1781,
+      299,
+      2162,
+      802
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      2180,
+      299,
+      2578,
+      802
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "black"
+     ]
+    }
+   ],
+   "notes": "Scan is low quality. Line under name reads '101.Jager Division I./228.JG.RGT' (tile subtitle is 'Heroic Platoon'). Three red squares down the right of the portrait. Four slots with a bow-and-arrow shield badge, black band across all four. Unit pictures names read from tiny captions (Fire Group x2, Steiner, Recon Group, MG 32), moderately certain.",
+   "snap": false
+  },
+  {
+   "kind": "option",
+   "name": "8cm Granatwerfer",
+   "cost": 20,
+   "box": [
+    175,
+    990,
+    420,
+    1360
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "notes": "Side bands dark across the middle, stripe colours not clearly readable."
+  },
+  {
+   "kind": "option",
+   "name": "MG42 HMG",
+   "cost": 20,
+   "box": [
+    595,
+    990,
+    845,
+    1360
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "notes": "Side bands dark across the middle, stripe colours not clearly readable."
+  },
+  {
+   "kind": "option",
+   "name": "Panzerschreck",
+   "cost": 20,
+   "box": [
+    1018,
+    990,
+    1268,
+    1360
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "notes": "Side bands dark across the middle, stripe colours not clearly readable."
+  },
+  {
+   "kind": "option",
+   "name": "7.5cm IG 18 Gun",
+   "cost": 25,
+   "box": [
+    1445,
+    990,
+    1690,
+    1360
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "notes": "Side bands dark across the middle, stripe colours not clearly readable."
+  },
+  {
+   "kind": "option",
+   "name": "Guardian",
+   "cost": 10,
+   "box": [
+    1870,
+    990,
+    2115,
+    1360
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "yellow",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "Side bands dark across the middle, stripe colours not clearly readable. +1 icon on art."
+  },
+  {
+   "kind": "option",
+   "name": "Gears",
+   "cost": 20,
+   "box": [
+    175,
+    1520,
+    425,
+    1890
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": "X5",
+   "squares": 0,
+   "units": [],
+   "notes": "Name printed in red, legible when zoomed (GEARS)."
+  },
+  {
+   "kind": "option",
+   "name": "Planning",
+   "cost": 10,
+   "box": [
+    600,
+    1520,
+    845,
+    1890
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "yellow",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "Side bands dark across the middle, stripe colours not clearly readable. Yellow star on art."
+  },
+  {
+   "kind": "option",
+   "name": "Veteran",
+   "cost": 15,
+   "box": [
+    1020,
+    1520,
+    1268,
+    1890
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": "X3",
+   "squares": 0,
+   "units": [],
+   "notes": "Side bands dark across the middle, stripe colours not clearly readable. Name partly legible."
+  },
+  {
+   "kind": "option",
+   "name": "Heroic",
+   "cost": 30,
+   "box": [
+    1445,
+    1520,
+    1690,
+    1890
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": "X3",
+   "squares": 0,
+   "units": [],
+   "notes": "Side bands dark across the middle, stripe colours not clearly readable. Name partly legible, reads HEROIC; uncertain."
+  },
+  {
+   "kind": "option",
+   "name": "Trigger Happy",
+   "cost": 10,
+   "box": [
+    1865,
+    1520,
+    2115,
+    1890
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": "X3",
+   "squares": 0,
+   "units": [],
+   "notes": "Side bands dark across the middle, stripe colours not clearly readable. Name partly legible (two lines), uncertain."
+  }
+ ]
+}

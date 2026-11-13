@@ -1,0 +1,114 @@
+{
+ "src": "GE Airborne/GE Airborne Punchboard 1 Front.jpg",
+ "nat": "ge",
+ "sheet": "GE Airborne",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Sebastian Jakobus",
+   "sub": "Talkative Fallschirmjager",
+   "cost": 40,
+   "type": "hero",
+   "box": [
+    1480,
+    200,
+    3715,
+    1350
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [],
+   "slots": [
+    {
+     "box": [
+      1500,
+      410,
+      2200,
+      1280
+     ],
+     "size": "wide",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      2950,
+      410,
+      3660,
+      1280
+     ],
+     "size": "wide",
+     "left": [
+      "white"
+     ],
+     "right": [
+      "black"
+     ]
+    }
+   ],
+   "notes": "Printed 'X2' marker with small icon near cost; right slot left half white band, right half dark."
+  },
+  {
+   "kind": "tile",
+   "name": "Feldwebel",
+   "sub": null,
+   "cost": 30,
+   "type": "platoon",
+   "box": [
+    4050,
+    285,
+    4500,
+    930
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [],
+   "slots": [],
+   "notes": "Small tile with unit card picture, no slots. Classified tile (unit card picture, red square); could be option-style."
+  },
+  {
+   "kind": "option",
+   "name": "Dagger",
+   "cost": 15,
+   "box": [
+    208,
+    1537,
+    657,
+    2194
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": "X3",
+   "squares": 0,
+   "units": [],
+   "notes": "Side bands dark; exact stripe colours not clearly readable."
+  },
+  {
+   "kind": "option",
+   "name": "Training Fallschirmjager",
+   "cost": 25,
+   "box": [
+    873,
+    1537,
+    1322,
+    2194
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": "X6",
+   "squares": 0,
+   "units": [],
+   "notes": "Name text is light blue. Side bands dark; exact stripe colours not clearly readable."
+  }
+ ]
+}

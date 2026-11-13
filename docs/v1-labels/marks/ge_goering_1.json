@@ -1,0 +1,270 @@
+{
+ "src": "GE Goering and his Armored Train/GE Goering and his Armored Train Punchboard 1 Front.jpg",
+ "nat": "ge",
+ "sheet": "Goering and his Armoured Train",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Hermann Goering",
+   "sub": "Fat Reichsmarschall",
+   "cost": 40,
+   "type": "hero",
+   "box": [
+    230,
+    190,
+    1010,
+    1200
+   ],
+   "rot": 90,
+   "squares": 2,
+   "units": [
+    [
+     "Freundin",
+     1
+    ],
+    [
+     "Goering",
+     1
+    ]
+   ],
+   "slots": [],
+   "notes": "Name prints bottom-to-top (rot 90 clockwise makes it upright). One large rounded slot with a red/white Luftwaffe flag badge, vertical stripes white/black/white at its edge as printed; hero portrait and two small unit pictures."
+  },
+  {
+   "kind": "option",
+   "name": "Goering's Baton of Power",
+   "cost": 15,
+   "box": [
+    1600,
+    225,
+    1990,
+    640
+   ],
+   "rot": 0,
+   "stripes": [
+    "white"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "Teal card with yellow star and red arrow marker; side bands white blocks on grey."
+  },
+  {
+   "kind": "option",
+   "name": "MP40",
+   "cost": 5,
+   "box": [
+    1600,
+    750,
+    1990,
+    1175
+   ],
+   "rot": 0,
+   "stripes": [
+    "white"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "Teal card; side bands white blocks on grey."
+  },
+  {
+   "kind": "option",
+   "name": "Howitzer Turret",
+   "cost": 40,
+   "box": [
+    2060,
+    225,
+    2330,
+    640
+   ],
+   "rot": 0,
+   "stripes": [
+    "black",
+    "white",
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "notes": "Red X square at bottom right. Side bands dark with white stripe."
+  },
+  {
+   "kind": "option",
+   "name": "Position Turret",
+   "cost": 15,
+   "box": [
+    2460,
+    225,
+    2735,
+    640
+   ],
+   "rot": 0,
+   "stripes": [
+    "black",
+    "white",
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "notes": "Red X square at bottom right. Side bands dark with white stripe."
+  },
+  {
+   "kind": "option",
+   "name": "Pzw-IV Turret",
+   "cost": 40,
+   "box": [
+    2060,
+    750,
+    2330,
+    1175
+   ],
+   "rot": 0,
+   "stripes": [
+    "black",
+    "white",
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "notes": "Red X square at bottom right. Side bands dark with white stripe."
+  },
+  {
+   "kind": "option",
+   "name": "AA Turret",
+   "cost": 35,
+   "box": [
+    2460,
+    750,
+    2735,
+    1175
+   ],
+   "rot": 0,
+   "stripes": [
+    "black",
+    "white",
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "notes": "Red X square at bottom right. Side bands dark with white stripe."
+  },
+  {
+   "kind": "tile",
+   "name": "Panzerzug N32",
+   "sub": "Made in France",
+   "cost": null,
+   "type": "platoon",
+   "box": [
+    340,
+    1250,
+    2760,
+    2025
+   ],
+   "rot": 0,
+   "squares": 0,
+   "units": [],
+   "slots": [
+    {
+     "box": [
+      455,
+      1452,
+      958,
+      1976
+     ],
+     "size": "wide",
+     "left": [
+      "black",
+      "white"
+     ],
+     "right": [
+      "black",
+      "white"
+     ]
+    },
+    {
+     "box": [
+      995,
+      1452,
+      1387,
+      1976
+     ],
+     "size": "narrow",
+     "left": [
+      "white"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      1835,
+      1452,
+      2227,
+      1976
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "white"
+     ]
+    },
+    {
+     "box": [
+      2255,
+      1452,
+      2646,
+      1976
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "white"
+     ]
+    }
+   ],
+   "notes": "Cost tab prints 'N/A'. Yellow star tab above first slot. Four small train-car pictures in the middle. Stripe colours approximate."
+  },
+  {
+   "kind": "tile",
+   "name": "Zugpersonal",
+   "sub": null,
+   "cost": 60,
+   "type": "platoon",
+   "box": [
+    1670,
+    2590,
+    2055,
+    3000
+   ],
+   "rot": 0,
+   "squares": 2,
+   "units": [
+    [
+     "Fire Group",
+     2
+    ],
+    [
+     "Feldwebel",
+     1
+    ]
+   ],
+   "slots": [],
+   "notes": "No slots; black/white side bands at left and right edges. Could also be read as an option-style card."
+  }
+ ]
+}

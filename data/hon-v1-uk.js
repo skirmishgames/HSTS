@@ -642,6 +642,193 @@ HTS_DATA["hon-v1-uk"] = {
     }
    ],
    "own": []
+  },
+  {
+   "id": "sir_julian_binus",
+   "name": "Sir Julian Binus",
+   "sub": "Technician, not Engineer!",
+   "cost": 35,
+   "type": "hero",
+   "set": "hon1-uk-airborne",
+   "squares": 1,
+   "img": "img/hon/v1/uk/tiles/sir_julian_binus.webp",
+   "w": 2343,
+   "h": 1143,
+   "sheet": "CW Airborne",
+   "units": [
+    [
+     "Binus",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.044,
+     "y": 0.182,
+     "w": 0.2561,
+     "h": 0.7262,
+     "size": "n",
+     "stripes": [
+      "RR",
+      "K"
+     ]
+    },
+    {
+     "x": 0.6628,
+     "y": 0.182,
+     "w": 0.2732,
+     "h": 0.7262,
+     "size": "n",
+     "stripes": [
+      "H_binus",
+      "RR"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "commandos",
+   "name": "Commandos",
+   "sub": "1er Bataillon de Fusiliers Marins - N°4 Commandos",
+   "cost": 115,
+   "type": "platoon",
+   "set": "hon1-gazette-7",
+   "squares": 3,
+   "img": "img/hon/v1/uk/tiles/commandos.webp",
+   "w": 2090,
+   "h": 541,
+   "sheet": "Gazette 7",
+   "units": [
+    [
+     "Alexandre Losi",
+     1,
+     "infantry"
+    ],
+    [
+     "Leader Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Support Team",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.0268,
+     "y": 0.1904,
+     "w": 0.2033,
+     "h": 0.7671,
+     "size": "w",
+     "stripes": [
+      "YBY"
+     ]
+    },
+    {
+     "x": 0.2368,
+     "y": 0.1904,
+     "w": 0.0866,
+     "h": 0.7671,
+     "size": "n",
+     "stripes": [
+      "YBY",
+      "RBR"
+     ]
+    },
+    {
+     "x": 0.6278,
+     "y": 0.1904,
+     "w": 0.1598,
+     "h": 0.7671,
+     "size": "n",
+     "stripes": [
+      "K",
+      "RBR"
+     ]
+    },
+    {
+     "x": 0.7928,
+     "y": 0.1904,
+     "w": 0.2053,
+     "h": 0.7671,
+     "size": "w",
+     "stripes": [
+      "K",
+      "YBY"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "laurent_duclos",
+   "name": "Laurent Duclos",
+   "sub": "Vieille France",
+   "cost": 25,
+   "type": "hero",
+   "set": "hon1-gazette-7",
+   "squares": 1,
+   "img": "img/hon/v1/uk/tiles/laurent_duclos.webp",
+   "w": 460,
+   "h": 554,
+   "sheet": "Gazette 7",
+   "units": [
+    [
+     "L. Duclos",
+     1,
+     "character"
+    ],
+    [
+     "Knife",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
+  },
+  {
+   "id": "philippe_kieffer",
+   "name": "Philippe Kieffer",
+   "sub": "Le Pacha",
+   "cost": 40,
+   "type": "hero",
+   "set": "hon1-gazette-7",
+   "squares": 0,
+   "img": "img/hon/v1/uk/tiles/philippe_kieffer.webp",
+   "w": 776,
+   "h": 541,
+   "sheet": "Gazette 7",
+   "units": [
+    [
+     "Kieffer",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.5399,
+     "y": 0.1645,
+     "w": 0.4188,
+     "h": 0.7671,
+     "size": "n",
+     "stripes": [
+      "K",
+      "cmd"
+     ]
+    }
+   ],
+   "own": []
   }
  ],
  "options": [
@@ -1766,6 +1953,233 @@ HTS_DATA["hon-v1-uk"] = {
      "vehicle"
     ]
    ]
+  },
+  {
+   "id": "container",
+   "name": "Container",
+   "cat": "gear",
+   "cost": 20,
+   "squares": 0,
+   "set": "hon1-uk-airborne",
+   "size": "n",
+   "stripes": [
+    "RR"
+   ],
+   "img": "img/hon/v1/uk/options/container.webp",
+   "w": 625,
+   "h": 750,
+   "sheet": "CW Airborne",
+   "note": "Markers: X1."
+  },
+  {
+   "id": "hawkins_mines",
+   "name": "Hawkins Mines",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-uk-airborne",
+   "size": "n",
+   "stripes": [
+    "RR"
+   ],
+   "img": "img/hon/v1/uk/options/hawkins_mines.webp",
+   "w": 721,
+   "h": 709,
+   "sheet": "CW Airborne",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "training_paratrooper",
+   "name": "Training Paratrooper",
+   "cat": "gear",
+   "cost": 25,
+   "squares": 0,
+   "set": "hon1-uk-airborne",
+   "size": "n",
+   "stripes": [
+    "RR"
+   ],
+   "img": "img/hon/v1/uk/options/training_paratrooper.webp",
+   "w": 723,
+   "h": 657,
+   "sheet": "CW Airborne",
+   "note": "Markers: X6."
+  },
+  {
+   "id": "75mm_pack_howitzer_m8",
+   "name": "75mm Pack Howitzer M8",
+   "cat": "support",
+   "cost": 30,
+   "squares": 1,
+   "set": "hon1-gazette-1",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/uk/options/75mm_pack_howitzer_m8.webp",
+   "w": 317,
+   "h": 368,
+   "sheet": "Gazette 1",
+   "units": [
+    [
+     "75mm Pack Howitzer M8",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "minesweepers",
+   "name": "Minesweepers",
+   "cat": "support",
+   "cost": 10,
+   "squares": 2,
+   "set": "hon1-gazette-1",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/uk/options/minesweepers.webp",
+   "w": 317,
+   "h": 368,
+   "sheet": "Gazette 1",
+   "units": [
+    [
+     "Minesweepers",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "commandos",
+   "name": "Commandos",
+   "cat": "support",
+   "cost": 75,
+   "squares": 2,
+   "set": "hon1-gazette-7",
+   "size": "w",
+   "stripes": [
+    "YBY"
+   ],
+   "img": "img/hon/v1/uk/options/commandos.webp",
+   "w": 427,
+   "h": 333,
+   "sheet": "Gazette 7",
+   "units": [
+    [
+     "Fire Team",
+     2,
+     "infantry"
+    ],
+    [
+     "Support Team",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "section_k_gun",
+   "name": "Section K-Gun",
+   "cat": "support",
+   "cost": 65,
+   "squares": 2,
+   "set": "hon1-gazette-7",
+   "size": "w",
+   "stripes": [
+    "YBY"
+   ],
+   "img": "img/hon/v1/uk/options/section_k_gun.webp",
+   "w": 459,
+   "h": 333,
+   "sheet": "Gazette 7",
+   "units": [
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "K-Gun",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "section_anti_tank",
+   "name": "Section Anti-Tank",
+   "cat": "support",
+   "cost": 55,
+   "squares": 2,
+   "set": "hon1-gazette-7",
+   "size": "w",
+   "stripes": [
+    "YBY"
+   ],
+   "img": "img/hon/v1/uk/options/section_anti_tank.webp",
+   "w": 391,
+   "h": 333,
+   "sheet": "Gazette 7",
+   "units": [
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "PIAT",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "semper_primum",
+   "name": "Semper Primum",
+   "cat": "gear",
+   "cost": 25,
+   "squares": 0,
+   "set": "hon1-gazette-7",
+   "size": "n",
+   "stripes": [
+    "YBY"
+   ],
+   "img": "img/hon/v1/uk/options/semper_primum.webp",
+   "w": 374,
+   "h": 334,
+   "sheet": "Gazette 7",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "jeep_youpi_youpi",
+   "name": "Jeep \"Youpi Youpi\"",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-gazette-7",
+   "size": "n",
+   "stripes": [
+    "YBY"
+   ],
+   "img": "img/hon/v1/uk/options/jeep_youpi_youpi.webp",
+   "w": 306,
+   "h": 334,
+   "sheet": "Gazette 7",
+   "units": [
+    [
+     "Jeep",
+     1,
+     "infantry"
+    ],
+    [
+     "Fuel",
+     1,
+     "infantry"
+    ]
+   ],
+   "note": "Markers: X1."
   }
  ]
 };

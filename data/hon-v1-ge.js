@@ -1082,6 +1082,303 @@ HTS_DATA["hon-v1-ge"] = {
    ],
    "slots": [],
    "own": []
+  },
+  {
+   "id": "reserve_gebirgsj_ger_regiment_i",
+   "name": "Reserve Gebirgsjäger Regiment I",
+   "sub": "Reserve Division 157",
+   "cost": 80,
+   "type": "platoon",
+   "set": "hon1-gazette-8",
+   "squares": 3,
+   "img": "img/hon/v1/ge/tiles/reserve_gebirgsj_ger_regiment_i.webp",
+   "w": 1591,
+   "h": 789,
+   "sheet": "Gazette 8",
+   "units": [
+    [
+     "Fire Group",
+     2,
+     "infantry"
+    ],
+    [
+     "LEGRW 36",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.0717,
+     "y": 0.2446,
+     "w": 0.3143,
+     "h": 0.6261,
+     "size": "w",
+     "stripes": [
+      "WBW"
+     ]
+    },
+    {
+     "x": 0.6889,
+     "y": 0.2446,
+     "w": 0.2432,
+     "h": 0.6261,
+     "size": "n",
+     "stripes": [
+      "H_geb",
+      "K"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "sebastian_jakobus",
+   "name": "Sebastian Jakobus",
+   "sub": "Talkative Fallschirmjager",
+   "cost": 40,
+   "type": "hero",
+   "set": "hon1-ge-airborne",
+   "squares": 1,
+   "img": "img/hon/v1/ge/tiles/sebastian_jakobus.webp",
+   "w": 2265,
+   "h": 1081,
+   "sheet": "GE Airborne",
+   "units": [
+    [
+     "Sebastian Jakobus",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.0234,
+     "y": 0.1647,
+     "w": 0.3091,
+     "h": 0.8048,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.6636,
+     "y": 0.1647,
+     "w": 0.3135,
+     "h": 0.8048,
+     "size": "n",
+     "stripes": [
+      "H_jakobus",
+      "K"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "hermann_goering",
+   "name": "Hermann Goering",
+   "sub": "Fat Reichsmarschall",
+   "cost": 40,
+   "type": "hero",
+   "set": "hon1-goering-and-his-armoured-train",
+   "squares": 2,
+   "img": "img/hon/v1/ge/tiles/hermann_goering.webp",
+   "w": 953,
+   "h": 727,
+   "sheet": "Goering and his Armoured Train",
+   "units": [
+    [
+     "Freundin",
+     1,
+     "character"
+    ],
+    [
+     "Goering",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
+  },
+  {
+   "id": "panzerzug_n32",
+   "name": "Panzerzug N32",
+   "sub": "Made in France",
+   "cost": 0,
+   "type": "platoon",
+   "set": "hon1-goering-and-his-armoured-train",
+   "squares": 0,
+   "img": "img/hon/v1/ge/tiles/panzerzug_n32.webp",
+   "w": 2425,
+   "h": 739,
+   "sheet": "Goering and his Armoured Train",
+   "units": [],
+   "slots": [
+    {
+     "x": 0.0491,
+     "y": 0.2706,
+     "w": 0.2074,
+     "h": 0.7091,
+     "size": "w",
+     "stripes": [
+      "KWKZ"
+     ]
+    },
+    {
+     "x": 0.2718,
+     "y": 0.2706,
+     "w": 0.1616,
+     "h": 0.7091,
+     "size": "n",
+     "stripes": [
+      "KWKZ",
+      "K"
+     ]
+    },
+    {
+     "x": 0.6181,
+     "y": 0.2706,
+     "w": 0.1616,
+     "h": 0.7091,
+     "size": "n",
+     "stripes": [
+      "K",
+      "KWKZ"
+     ]
+    },
+    {
+     "x": 0.7913,
+     "y": 0.2706,
+     "w": 0.1612,
+     "h": 0.7091,
+     "size": "n",
+     "stripes": [
+      "K",
+      "KWKZ"
+     ]
+    }
+   ],
+   "own": [],
+   "note": "The cost tab on the tile prints N/A. Entered as 0 points."
+  },
+  {
+   "id": "karl_von_croc",
+   "name": "Karl von Croc",
+   "sub": "Shake Lover",
+   "cost": 30,
+   "type": "hero",
+   "set": "hon1-karl-von-kroc",
+   "squares": 1,
+   "img": "img/hon/v1/ge/tiles/karl_von_croc.webp",
+   "w": 1742,
+   "h": 1245,
+   "sheet": "Karl von Croc",
+   "units": [
+    [
+     "Croc",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.5086,
+     "y": 0.2257,
+     "w": 0.407,
+     "h": 0.653,
+     "size": "n",
+     "stripes": [
+      "K",
+      "H_croc"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "steiner_kampfgruppe",
+   "name": "Steiner Kampfgruppe",
+   "sub": "Heroic Platoon",
+   "cost": 105,
+   "type": "platoon",
+   "set": "hon1-steiner-kampfgruppe",
+   "squares": 3,
+   "img": "img/hon/v1/ge/tiles/steiner_kampfgruppe.webp",
+   "w": 2480,
+   "h": 685,
+   "sheet": "Steiner Kampfgruppe",
+   "units": [
+    [
+     "Fire Group",
+     2,
+     "infantry"
+    ],
+    [
+     "Steiner",
+     1,
+     "infantry"
+    ],
+    [
+     "Recon Group",
+     1,
+     "infantry"
+    ],
+    [
+     "MG 32",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.023,
+     "y": 0.2175,
+     "w": 0.156,
+     "h": 0.7343,
+     "size": "n",
+     "stripes": [
+      "TKT",
+      "K"
+     ]
+    },
+    {
+     "x": 0.1895,
+     "y": 0.2175,
+     "w": 0.1536,
+     "h": 0.7343,
+     "size": "n",
+     "stripes": [
+      "TKT",
+      "K"
+     ]
+    },
+    {
+     "x": 0.6577,
+     "y": 0.2175,
+     "w": 0.1536,
+     "h": 0.7343,
+     "size": "n",
+     "stripes": [
+      "TKT",
+      "K"
+     ]
+    },
+    {
+     "x": 0.8185,
+     "y": 0.2175,
+     "w": 0.1605,
+     "h": 0.7343,
+     "size": "n",
+     "stripes": [
+      "TKT",
+      "K"
+     ]
+    }
+   ],
+   "own": []
   }
  ],
  "options": [
@@ -2701,6 +2998,381 @@ HTS_DATA["hon-v1-ge"] = {
      "vehicle"
     ]
    ]
+  },
+  {
+   "id": "minensucher",
+   "name": "Minensucher",
+   "cat": "support",
+   "cost": 10,
+   "squares": 2,
+   "set": "hon1-gazette-1",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/minensucher.webp",
+   "w": 317,
+   "h": 368,
+   "sheet": "Gazette 1",
+   "units": [
+    [
+     "Minensucher",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "10_5_cm_lefh_18",
+   "name": "10.5 cm LeFH 18",
+   "cat": "support",
+   "cost": 40,
+   "squares": 1,
+   "set": "hon1-gazette-1",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/10_5_cm_lefh_18.webp",
+   "w": 317,
+   "h": 368,
+   "sheet": "Gazette 1",
+   "units": [
+    [
+     "10.5 cm LeFH 18",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "gebirgsj_ger",
+   "name": "Gebirgsjäger",
+   "cat": "support",
+   "cost": 50,
+   "squares": 2,
+   "set": "hon1-gazette-8",
+   "size": "w",
+   "stripes": [
+    "WBW"
+   ],
+   "img": "img/hon/v1/ge/options/gebirgsj_ger.webp",
+   "w": 515,
+   "h": 505,
+   "sheet": "Gazette 8",
+   "units": [
+    [
+     "MG Group",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "feldwebel",
+   "name": "Feldwebel",
+   "cat": "gear",
+   "cost": 30,
+   "squares": 1,
+   "set": "hon1-ge-airborne",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/feldwebel.webp",
+   "w": 541,
+   "h": 644,
+   "sheet": "GE Airborne"
+  },
+  {
+   "id": "dagger",
+   "name": "Dagger",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-ge-airborne",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/dagger.webp",
+   "w": 543,
+   "h": 678,
+   "sheet": "GE Airborne",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "training_fallschirmjager",
+   "name": "Training Fallschirmjager",
+   "cat": "gear",
+   "cost": 25,
+   "squares": 0,
+   "set": "hon1-ge-airborne",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/training_fallschirmjager.webp",
+   "w": 544,
+   "h": 652,
+   "sheet": "GE Airborne",
+   "note": "Markers: X6."
+  },
+  {
+   "id": "goering_s_baton_of_power",
+   "name": "Goering's Baton of Power",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-goering-and-his-armoured-train",
+   "size": "n",
+   "stripes": [
+    "H_goering"
+   ],
+   "img": "img/hon/v1/ge/options/goering_s_baton_of_power.webp",
+   "w": 426,
+   "h": 434,
+   "sheet": "Goering and his Armoured Train"
+  },
+  {
+   "id": "mp40",
+   "name": "MP40",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "hon1-goering-and-his-armoured-train",
+   "size": "n",
+   "stripes": [
+    "H_goering"
+   ],
+   "img": "img/hon/v1/ge/options/mp40.webp",
+   "w": 426,
+   "h": 479,
+   "sheet": "Goering and his Armoured Train"
+  },
+  {
+   "id": "howitzer_turret",
+   "name": "Howitzer Turret",
+   "cat": "gear",
+   "cost": 40,
+   "squares": 1,
+   "set": "hon1-goering-and-his-armoured-train",
+   "size": "n",
+   "stripes": [
+    "KWKZ"
+   ],
+   "img": "img/hon/v1/ge/options/howitzer_turret.webp",
+   "w": 348,
+   "h": 394,
+   "sheet": "Goering and his Armoured Train"
+  },
+  {
+   "id": "position_turret",
+   "name": "Position Turret",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 1,
+   "set": "hon1-goering-and-his-armoured-train",
+   "size": "n",
+   "stripes": [
+    "KWKZ"
+   ],
+   "img": "img/hon/v1/ge/options/position_turret.webp",
+   "w": 391,
+   "h": 393,
+   "sheet": "Goering and his Armoured Train"
+  },
+  {
+   "id": "pzw_iv_turret",
+   "name": "Pzw-IV Turret",
+   "cat": "gear",
+   "cost": 40,
+   "squares": 1,
+   "set": "hon1-goering-and-his-armoured-train",
+   "size": "n",
+   "stripes": [
+    "KWKZ"
+   ],
+   "img": "img/hon/v1/ge/options/pzw_iv_turret.webp",
+   "w": 348,
+   "h": 393,
+   "sheet": "Goering and his Armoured Train"
+  },
+  {
+   "id": "aa_turret",
+   "name": "AA Turret",
+   "cat": "gear",
+   "cost": 35,
+   "squares": 1,
+   "set": "hon1-goering-and-his-armoured-train",
+   "size": "n",
+   "stripes": [
+    "KWKZ"
+   ],
+   "img": "img/hon/v1/ge/options/aa_turret.webp",
+   "w": 346,
+   "h": 393,
+   "sheet": "Goering and his Armoured Train"
+  },
+  {
+   "id": "zugpersonal",
+   "name": "Zugpersonal",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "hon1-goering-and-his-armoured-train",
+   "size": "w",
+   "stripes": [
+    "KWKZ"
+   ],
+   "img": "img/hon/v1/ge/options/zugpersonal.webp",
+   "w": 437,
+   "h": 362,
+   "sheet": "Goering and his Armoured Train",
+   "units": [
+    [
+     "Fire Group",
+     2,
+     "infantry"
+    ],
+    [
+     "Feldwebel",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "geballte_ladung",
+   "name": "Geballte Ladung",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-karl-von-kroc",
+   "size": "n",
+   "stripes": [
+    "H_croc"
+   ],
+   "img": "img/hon/v1/ge/options/geballte_ladung.webp",
+   "w": 647,
+   "h": 843,
+   "sheet": "Karl von Croc",
+   "note": "Markers: X1."
+  },
+  {
+   "id": "8cm_granatwerfer_steiner_kampfgruppe",
+   "name": "8cm Granatwerfer",
+   "cat": "gear",
+   "cost": 20,
+   "squares": 1,
+   "set": "hon1-steiner-kampfgruppe",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/8cm_granatwerfer_steiner_kampfgruppe.webp",
+   "w": 310,
+   "h": 350,
+   "sheet": "Steiner Kampfgruppe"
+  },
+  {
+   "id": "7_5cm_ig_18_gun_steiner_kampfgruppe",
+   "name": "7.5cm IG 18 Gun",
+   "cat": "gear",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-steiner-kampfgruppe",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/7_5cm_ig_18_gun_steiner_kampfgruppe.webp",
+   "w": 339,
+   "h": 339,
+   "sheet": "Steiner Kampfgruppe"
+  },
+  {
+   "id": "guardian_steiner_kampfgruppe",
+   "name": "Guardian",
+   "cat": "order",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-steiner-kampfgruppe",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/guardian_steiner_kampfgruppe.webp",
+   "w": 311,
+   "h": 349,
+   "sheet": "Steiner Kampfgruppe"
+  },
+  {
+   "id": "gears",
+   "name": "Gears",
+   "cat": "gear",
+   "cost": 20,
+   "squares": 0,
+   "set": "hon1-steiner-kampfgruppe",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/gears.webp",
+   "w": 310,
+   "h": 366,
+   "sheet": "Steiner Kampfgruppe",
+   "note": "Markers: X5."
+  },
+  {
+   "id": "planning_steiner_kampfgruppe",
+   "name": "Planning",
+   "cat": "order",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-steiner-kampfgruppe",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/planning_steiner_kampfgruppe.webp",
+   "w": 310,
+   "h": 349,
+   "sheet": "Steiner Kampfgruppe"
+  },
+  {
+   "id": "veteran",
+   "name": "Veteran",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-steiner-kampfgruppe",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/veteran.webp",
+   "w": 310,
+   "h": 366,
+   "sheet": "Steiner Kampfgruppe",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "trigger_happy",
+   "name": "Trigger Happy",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-steiner-kampfgruppe",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/trigger_happy.webp",
+   "w": 311,
+   "h": 366,
+   "sheet": "Steiner Kampfgruppe",
+   "note": "Markers: X3."
   }
  ]
 };

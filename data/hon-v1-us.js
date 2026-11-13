@@ -1279,6 +1279,319 @@ HTS_DATA["hon-v1-us"] = {
     }
    ],
    "own": []
+  },
+  {
+   "id": "maquisards",
+   "name": "Maquisards",
+   "sub": "Les Héros du Vercors",
+   "cost": 55,
+   "type": "platoon",
+   "set": "hon1-gazette-8",
+   "squares": 3,
+   "img": "img/hon/v1/us/tiles/maquisards.webp",
+   "w": 1591,
+   "h": 790,
+   "sheet": "Gazette 8",
+   "units": [
+    [
+     "Robert",
+     1,
+     "infantry"
+    ],
+    [
+     "Maquisards",
+     2,
+     "infantry"
+    ],
+    [
+     "Maquisards Support",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.0748,
+     "y": 0.2456,
+     "w": 0.3111,
+     "h": 0.6329,
+     "size": "w",
+     "stripes": [
+      "BWR"
+     ]
+    },
+    {
+     "x": 0.6889,
+     "y": 0.2456,
+     "w": 0.2432,
+     "h": 0.6329,
+     "size": "n",
+     "stripes": [
+      "H_maq",
+      "BWR"
+     ]
+    }
+   ],
+   "own": [],
+   "note": "French FFI, filed under United States until there is a French nation."
+  },
+  {
+   "id": "lt_col_james_earl_rudder",
+   "name": "Lt Col James Earl Rudder",
+   "sub": "Badass Coach",
+   "cost": 40,
+   "type": "command",
+   "set": "hon1-pointe-du-hoc",
+   "squares": 0,
+   "img": "img/hon/v1/us/tiles/lt_col_james_earl_rudder.webp",
+   "w": 1570,
+   "h": 542,
+   "sheet": "Pointe-du-Hoc",
+   "units": [
+    [
+     "Rudder",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.0389,
+     "y": 0.1919,
+     "w": 0.2637,
+     "h": 0.7749,
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "K"
+     ]
+    },
+    {
+     "x": 0.5586,
+     "y": 0.1919,
+     "w": 0.2025,
+     "h": 0.7749,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.7771,
+     "y": 0.1919,
+     "w": 0.214,
+     "h": 0.7749,
+     "size": "n",
+     "stripes": [
+      "K",
+      "cmd"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "joseph_legalec",
+   "name": "Joseph Legalec",
+   "sub": "Odd Lighthouse Keeper",
+   "cost": 10,
+   "type": "hero",
+   "set": "hon1-pointe-du-hoc",
+   "squares": 1,
+   "img": "img/hon/v1/us/tiles/joseph_legalec.webp",
+   "w": 778,
+   "h": 564,
+   "sheet": "Pointe-du-Hoc",
+   "units": [
+    [
+     "Joseph",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.5527,
+     "y": 0.2358,
+     "w": 0.4087,
+     "h": 0.6915,
+     "size": "n",
+     "stripes": [
+      "H_legalec"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "the_creature",
+   "name": "The Creature",
+   "sub": "Shrimpman",
+   "cost": 40,
+   "type": "hero",
+   "set": "hon1-pointe-du-hoc",
+   "squares": 1,
+   "img": "img/hon/v1/us/tiles/the_creature.webp",
+   "w": 411,
+   "h": 527,
+   "sheet": "Pointe-du-Hoc",
+   "units": [
+    [
+     "The Creature",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
+  },
+  {
+   "id": "rangers_weapon_platoon",
+   "name": "Rangers Weapon Platoon",
+   "sub": "5th Rangers Battalion",
+   "cost": 55,
+   "type": "platoon",
+   "set": "hon1-pointe-du-hoc",
+   "squares": 3,
+   "img": "img/hon/v1/us/tiles/rangers_weapon_platoon.webp",
+   "w": 1629,
+   "h": 541,
+   "sheet": "Pointe-du-Hoc",
+   "units": [
+    [
+     "Ltd James Harper",
+     1,
+     "infantry"
+    ],
+    [
+     ".30 Cal",
+     1,
+     "infantry"
+    ],
+    [
+     "60mm Mortar",
+     1,
+     "infantry"
+    ],
+    [
+     "Flamer",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.0577,
+     "y": 0.1904,
+     "w": 0.2572,
+     "h": 0.7135,
+     "size": "w",
+     "stripes": [
+      "RKR",
+      "K"
+     ]
+    },
+    {
+     "x": 0.5623,
+     "y": 0.1904,
+     "w": 0.2026,
+     "h": 0.7135,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.7772,
+     "y": 0.1904,
+     "w": 0.2118,
+     "h": 0.7135,
+     "size": "w",
+     "stripes": [
+      "K",
+      "RKR"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "jamie_clem_kilmister",
+   "name": "Jamie \"Clem\" Kilmister",
+   "sub": "Metal Hero",
+   "cost": 40,
+   "type": "hero",
+   "set": "hon1-us-airborne",
+   "squares": 1,
+   "img": "img/hon/v1/us/tiles/jamie_clem_kilmister.webp",
+   "w": 2265,
+   "h": 1081,
+   "sheet": "US Airborne",
+   "units": [
+    [
+     "Jamie \"Clem\" Kilmister",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.0499,
+     "y": 0.1924,
+     "w": 0.2826,
+     "h": 0.7539,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.6857,
+     "y": 0.1924,
+     "w": 0.287,
+     "h": 0.7539,
+     "size": "n",
+     "stripes": [
+      "H_clem",
+      "K"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "james_f_bryan",
+   "name": "James F. Bryan",
+   "sub": "To Be Saved",
+   "cost": 20,
+   "type": "hero",
+   "set": "hon1-private-bryan",
+   "squares": 1,
+   "img": "img/hon/v1/us/tiles/james_f_bryan.webp",
+   "w": 1552,
+   "h": 1082,
+   "sheet": "Private Bryan",
+   "units": [
+    [
+     "James F. Bryan",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.5161,
+     "y": 0.1876,
+     "w": 0.4253,
+     "h": 0.707,
+     "size": "n",
+     "stripes": [
+      "K",
+      "H_bryan"
+     ]
+    }
+   ],
+   "own": []
   }
  ],
  "options": [
@@ -2975,6 +3288,299 @@ HTS_DATA["hon-v1-us"] = {
      "vehicle"
     ]
    ]
+  },
+  {
+   "id": "75mm_pack_howitzer_m8",
+   "name": "75mm Pack Howitzer M8",
+   "cat": "support",
+   "cost": 30,
+   "squares": 1,
+   "set": "hon1-gazette-1",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/75mm_pack_howitzer_m8.webp",
+   "w": 317,
+   "h": 368,
+   "sheet": "Gazette 1",
+   "units": [
+    [
+     "75mm Pack Howitzer M8",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "minesweepers",
+   "name": "Minesweepers",
+   "cat": "support",
+   "cost": 10,
+   "squares": 2,
+   "set": "hon1-gazette-1",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/minesweepers.webp",
+   "w": 370,
+   "h": 402,
+   "sheet": "Gazette 1",
+   "units": [
+    [
+     "Minesweepers",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "soe_agents",
+   "name": "SOE Agents",
+   "cat": "support",
+   "cost": 85,
+   "squares": 3,
+   "set": "hon1-gazette-8",
+   "size": "w",
+   "stripes": [
+    "BWR"
+   ],
+   "img": "img/hon/v1/us/options/soe_agents.webp",
+   "w": 540,
+   "h": 510,
+   "sheet": "Gazette 8",
+   "units": [
+    [
+     "Hoppers",
+     1,
+     "infantry"
+    ],
+    [
+     "SOE Team",
+     3,
+     "infantry"
+    ]
+   ],
+   "note": "French FFI, filed under United States until there is a French nation."
+  },
+  {
+   "id": "laffly_w15_tcc",
+   "name": "Laffly W15 TCC",
+   "cat": "support",
+   "cost": 20,
+   "squares": 1,
+   "set": "hon1-gazette-8",
+   "size": "n",
+   "stripes": [
+    "BWR"
+   ],
+   "img": "img/hon/v1/us/options/laffly_w15_tcc.webp",
+   "w": 410,
+   "h": 490,
+   "sheet": "Gazette 8",
+   "units": [
+    [
+     "Laffly W15 TCC",
+     1,
+     "infantry"
+    ]
+   ],
+   "note": "French FFI, filed under United States until there is a French nation."
+  },
+  {
+   "id": "garde_d_honneur",
+   "name": "Garde d'Honneur",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-gazette-8",
+   "size": "n",
+   "stripes": [
+    "RWBWR"
+   ],
+   "img": "img/hon/v1/us/options/garde_d_honneur.webp",
+   "w": 385,
+   "h": 490,
+   "sheet": "Gazette 8",
+   "units": [
+    [
+     "Garde d'Honneur",
+     1,
+     "infantry"
+    ]
+   ],
+   "note": "French FFI, filed under United States until there is a French nation."
+  },
+  {
+   "id": "mortar_grapnel",
+   "name": "Mortar Grapnel",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "hon1-pointe-du-hoc",
+   "size": "n",
+   "stripes": [
+    "RKR"
+   ],
+   "img": "img/hon/v1/us/options/mortar_grapnel.webp",
+   "w": 346,
+   "h": 310,
+   "sheet": "Pointe-du-Hoc",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "trigger_happy_pointe_du_hoc",
+   "name": "Trigger Happy",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-pointe-du-hoc",
+   "size": "n",
+   "stripes": [
+    "RKR"
+   ],
+   "img": "img/hon/v1/us/options/trigger_happy_pointe_du_hoc.webp",
+   "w": 314,
+   "h": 310,
+   "sheet": "Pointe-du-Hoc",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "offensive_grenades",
+   "name": "Offensive Grenades",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "hon1-pointe-du-hoc",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/offensive_grenades.webp",
+   "w": 357,
+   "h": 310,
+   "sheet": "Pointe-du-Hoc",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "incendiary_grenades",
+   "name": "Incendiary Grenades",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-pointe-du-hoc",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/incendiary_grenades.webp",
+   "w": 498,
+   "h": 307,
+   "sheet": "Pointe-du-Hoc",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "gunners_squad",
+   "name": "Gunners Squad",
+   "cat": "gear",
+   "cost": 80,
+   "squares": 2,
+   "set": "hon1-pointe-du-hoc",
+   "size": "w",
+   "stripes": [
+    "RKR"
+   ],
+   "img": "img/hon/v1/us/options/gunners_squad.webp",
+   "w": 427,
+   "h": 400,
+   "sheet": "Pointe-du-Hoc",
+   "units": [
+    [
+     "Gunners",
+     2,
+     "infantry"
+    ],
+    [
+     "Gunners BAR",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "artillery_pointe_du_hoc",
+   "name": "Artillery",
+   "cat": "gear",
+   "cost": 50,
+   "squares": 0,
+   "set": "hon1-pointe-du-hoc",
+   "size": "w",
+   "stripes": [
+    "cmd"
+   ],
+   "img": "img/hon/v1/us/options/artillery_pointe_du_hoc.webp",
+   "w": 425,
+   "h": 390,
+   "sheet": "Pointe-du-Hoc",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "sergeant",
+   "name": "Sergeant",
+   "cat": "support",
+   "cost": 30,
+   "squares": 1,
+   "set": "hon1-us-airborne",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/sergeant.webp",
+   "w": 722,
+   "h": 678,
+   "sheet": "US Airborne",
+   "units": [
+    [
+     "Sergeant",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "training_paratrooper",
+   "name": "Training Paratrooper",
+   "cat": "gear",
+   "cost": 25,
+   "squares": 0,
+   "set": "hon1-us-airborne",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/training_paratrooper.webp",
+   "w": 756,
+   "h": 652,
+   "sheet": "US Airborne",
+   "note": "Markers: X6."
+  },
+  {
+   "id": "bazooka",
+   "name": "Bazooka",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-private-bryan",
+   "size": "n",
+   "stripes": [
+    "H_bryan"
+   ],
+   "img": "img/hon/v1/us/options/bazooka.webp",
+   "w": 721,
+   "h": 851,
+   "sheet": "Private Bryan",
+   "note": "Markers: X2."
   }
  ]
 };

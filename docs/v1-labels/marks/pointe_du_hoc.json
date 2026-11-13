@@ -1,0 +1,618 @@
+{
+ "src": "Pointe-du-Hoc/PdH Punchboard Front.jpg",
+ "nat": "us",
+ "sheet": "Pointe-du-Hoc",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Lt Col James Earl Rudder",
+   "sub": "Badass Coach",
+   "cost": 40,
+   "type": "hero",
+   "nat": "us",
+   "box": [
+    108,
+    102,
+    1699,
+    708
+   ],
+   "rot": 0,
+   "squares": 0,
+   "units": [
+    [
+     "Rudder",
+     1
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      168,
+      234,
+      582,
+      654
+     ],
+     "size": "wide",
+     "left": [
+      "blue",
+      "white",
+      "red",
+      "white",
+      "blue"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      984,
+      234,
+      1302,
+      654
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      1327,
+      234,
+      1663,
+      654
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "blue",
+      "white",
+      "red",
+      "white",
+      "blue"
+     ]
+    }
+   ],
+   "notes": "Laurel wreath rank icon; red '200+' printed top left; yellow star icon. Three Rangers badge slots."
+  },
+  {
+   "kind": "tile",
+   "name": "Joseph Legalec",
+   "sub": "Odd Lighthouse Keeper",
+   "cost": 10,
+   "type": "hero",
+   "nat": "us",
+   "box": [
+    1798,
+    108,
+    2552,
+    702
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [
+    [
+     "Joseph",
+     1
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      2200,
+      240,
+      2518,
+      630
+     ],
+     "size": "narrow",
+     "left": [
+      "white"
+     ],
+     "right": [
+      "white"
+     ]
+    }
+   ],
+   "notes": "Rooster/lighthouse badge; slot stripes read as a white band, both halves"
+  },
+  {
+   "kind": "tile",
+   "name": "The Creature",
+   "sub": "Shrimpman",
+   "cost": 40,
+   "type": "hero",
+   "nat": "us",
+   "box": [
+    2674,
+    126,
+    3088,
+    684
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [
+    [
+     "The Creature",
+     1
+    ]
+   ],
+   "slots": [],
+   "notes": "no slot; nationality not determinable (monster), default us used"
+  },
+  {
+   "kind": "tile",
+   "name": "Rangers Weapon Platoon",
+   "sub": "5th Rangers Battalion",
+   "cost": 55,
+   "type": "platoon",
+   "nat": "us",
+   "box": [
+    350,
+    800,
+    2000,
+    1400
+   ],
+   "rot": 0,
+   "squares": 3,
+   "units": [
+    [
+     "Ltd James Harper",
+     1
+    ],
+    [
+     ".30 Cal",
+     1
+    ],
+    [
+     "60mm Mortar",
+     1
+    ],
+    [
+     "Flamer",
+     1
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      448,
+      918,
+      867,
+      1304
+     ],
+     "size": "wide",
+     "left": [
+      "red",
+      "black",
+      "red"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      1270,
+      918,
+      1600,
+      1304
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      1620,
+      918,
+      1965,
+      1304
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "red",
+      "black",
+      "red"
+     ]
+    }
+   ],
+   "notes": "two yellow star icons; slot 2 and 3 right/left stripes read from overview, less certain"
+  },
+  {
+   "kind": "option",
+   "name": "Artillery",
+   "cost": null,
+   "box": [
+    68,
+    765,
+    358,
+    975
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "blue",
+    "white",
+    "red",
+    "white",
+    "blue"
+   ],
+   "name_colour": "red",
+   "markers": "3",
+   "squares": 0,
+   "units": [],
+   "notes": "no cost printed",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Artillery",
+   "cost": null,
+   "box": [
+    68,
+    1045,
+    358,
+    1260
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "blue",
+    "white",
+    "red",
+    "white",
+    "blue"
+   ],
+   "name_colour": "red",
+   "markers": "3",
+   "squares": 0,
+   "units": [],
+   "notes": "no cost printed",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Artillery",
+   "cost": null,
+   "box": [
+    68,
+    1330,
+    358,
+    1540
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "blue",
+    "white",
+    "red",
+    "white",
+    "blue"
+   ],
+   "name_colour": "red",
+   "markers": "3",
+   "squares": 0,
+   "units": [],
+   "notes": "no cost printed",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Offensive Grenade",
+   "cost": null,
+   "box": [
+    68,
+    1610,
+    358,
+    1825
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "no cost printed",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Offensive Grenade",
+   "cost": null,
+   "box": [
+    3170,
+    110,
+    3460,
+    325
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "no cost printed",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Mortar Grapnel",
+   "cost": 5,
+   "box": [
+    366,
+    1495,
+    712,
+    1805
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "red",
+    "black",
+    "red"
+   ],
+   "name_colour": "red",
+   "markers": "X3",
+   "squares": 0,
+   "units": [],
+   "notes": "",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Trigger Happy",
+   "cost": 10,
+   "box": [
+    712,
+    1495,
+    1026,
+    1805
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "red",
+    "black",
+    "red"
+   ],
+   "name_colour": "red",
+   "markers": "X3",
+   "squares": 0,
+   "units": [],
+   "notes": "",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Oar",
+   "cost": 5,
+   "box": [
+    1026,
+    1440,
+    1358,
+    1865
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "white"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "cyan card; cost 5 read at bottom; may be a counter rather than an option; stripes are pale white bands",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Offensive Grenades",
+   "cost": 5,
+   "box": [
+    1358,
+    1495,
+    1715,
+    1805
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": "X3",
+   "squares": 0,
+   "units": [],
+   "notes": "",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Incendiary Grenade",
+   "cost": null,
+   "box": [
+    2022,
+    765,
+    2302,
+    975
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "no cost printed",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Incendiary Grenade",
+   "cost": null,
+   "box": [
+    2302,
+    765,
+    2584,
+    975
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "no cost printed",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Incendiary Grenade",
+   "cost": null,
+   "box": [
+    2584,
+    765,
+    2867,
+    975
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "no cost printed",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Offensive Grenade",
+   "cost": null,
+   "box": [
+    2867,
+    765,
+    3153,
+    975
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "notes": "no cost printed",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Incendiary Grenades",
+   "cost": 10,
+   "box": [
+    2790,
+    1010,
+    3140,
+    1380
+   ],
+   "rot": 270,
+   "snap": true,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": "X3",
+   "squares": 0,
+   "units": [],
+   "notes": "card printed rotated 90 degrees clockwise",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Gunners Squad",
+   "cost": 80,
+   "box": [
+    2726,
+    1400,
+    3153,
+    1800
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "red",
+    "black",
+    "red"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 2,
+   "units": [
+    [
+     "Gunners",
+     2
+    ],
+    [
+     "Gunners BAR",
+     1
+    ]
+   ],
+   "notes": "",
+   "nat": "us"
+  },
+  {
+   "kind": "option",
+   "name": "Artillery",
+   "cost": 50,
+   "box": [
+    2730,
+    3090,
+    3155,
+    3480
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "blue",
+    "white",
+    "red",
+    "white",
+    "blue"
+   ],
+   "name_colour": "red",
+   "markers": "X3",
+   "squares": 0,
+   "units": [],
+   "notes": "",
+   "nat": "us"
+  }
+ ]
+}
