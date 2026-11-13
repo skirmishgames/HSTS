@@ -11,7 +11,7 @@
    "rot": 0,
    "snap": false,
    "squares": 3,
-   "nat": "us",
+   "nat": "fr",
    "box": [
     74,
     50,
@@ -63,8 +63,7 @@
      1,
      "infantry"
     ]
-   ],
-   "note": "French FFI, filed under United States until there is a French nation."
+   ]
   },
   {
    "kind": "tile",
@@ -129,7 +128,7 @@
    "rot": 0,
    "snap": false,
    "squares": 3,
-   "nat": "us",
+   "nat": "fr",
    "box": [
     2185,
     580,
@@ -152,8 +151,7 @@
      3,
      "infantry"
     ]
-   ],
-   "note": "French FFI, filed under United States until there is a French nation."
+   ]
   },
   {
    "kind": "option",
@@ -162,7 +160,7 @@
    "rot": 0,
    "snap": false,
    "squares": 1,
-   "nat": "us",
+   "nat": "fr",
    "box": [
     1655,
     1110,
@@ -180,8 +178,7 @@
      1,
      "infantry"
     ]
-   ],
-   "note": "French FFI, filed under United States until there is a French nation."
+   ]
   },
   {
    "kind": "option",
@@ -190,7 +187,7 @@
    "rot": 0,
    "snap": false,
    "squares": 1,
-   "nat": "us",
+   "nat": "fr",
    "box": [
     1945,
     2330,
@@ -208,8 +205,7 @@
      1,
      "infantry"
     ]
-   ],
-   "note": "French FFI, filed under United States until there is a French nation."
+   ]
   },
   {
    "kind": "option",

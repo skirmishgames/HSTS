@@ -1,0 +1,89 @@
+{
+ "src": "FFI Civilians Under Fire/FFI Civilians Under Fire Punchboard 1 Front.png",
+ "nat": "fr",
+ "set": "hon1-civilians-under-fire",
+ "sheet": "Civilians Under Fire",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Alexandre Renaud",
+   "cost": 10,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "fr",
+   "box": [
+    80,
+    120,
+    893,
+    715
+   ],
+   "sub": "Happy Mayor",
+   "type": "hero",
+   "slots": [
+    {
+     "box": [
+      508,
+      252,
+      825,
+      681
+     ],
+     "size": "n",
+     "stripes": [
+      "H_renaud"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Alexandre",
+     1,
+     "character"
+    ]
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "Bernard Ferrand",
+   "cost": 35,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "fr",
+   "box": [
+    1462,
+    120,
+    2259,
+    712
+   ],
+   "sub": "Armoured Priest",
+   "type": "hero",
+   "slots": [
+    {
+     "box": [
+      1880,
+      244,
+      2205,
+      690
+     ],
+     "size": "n",
+     "stripes": [
+      "H_ferrand"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Bernard",
+     1,
+     "character"
+    ],
+    [
+     "Canticle",
+     3,
+     "character"
+    ]
+   ]
+  }
+ ]
+}

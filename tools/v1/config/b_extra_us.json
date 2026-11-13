@@ -1,0 +1,88 @@
+{
+ "src": "Extra Units US-GE/Extra Units US Punchboard.jpg",
+ "nat": "us",
+ "set": "hon1-extra-units-us-and-ge",
+ "sheet": "Extra Units US-GE",
+ "pieces": [
+  {
+   "kind": "option",
+   "name": "Greyhound",
+   "cost": 35,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "us",
+   "box": [
+    758,
+    8,
+    1132,
+    510
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "M16 MGMC",
+   "cost": 35,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "us",
+   "box": [
+    1187,
+    8,
+    1560,
+    510
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "M8 Scott",
+   "cost": 50,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "us",
+   "box": [
+    1598,
+    8,
+    2100,
+    510
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "w",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Willys 60mm Mortar",
+   "cost": 25,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "us",
+   "box": [
+    2362,
+    293,
+    2738,
+    795
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "gear"
+  }
+ ]
+}

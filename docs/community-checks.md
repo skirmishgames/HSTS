@@ -55,12 +55,24 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Tile | Second line | Cost | Slots, left to right |
 |---|---|---|---|
 | Maquisards | Les Héros du Vercors | 55 | long: platoon, narrow: platoon or platoon |
+| Alexandre Renaud | Happy Mayor | 10 | narrow: platoon |
+| Bernard Ferrand | Armoured Priest | 35 | narrow: platoon |
+| FFI | Giselle Luceau "Sandy" | 80 | narrow: platoon, narrow: platoon, narrow: platoon |
+| Ventura |  | 110 | narrow: platoon |
+| Seb "Trouvetou" Delobel | Gearloose Smuggler | 30 | narrow: platoon, narrow: platoon |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
 |---|---|---|---|---|---|
 | SOE Agents | 85 | long | platoon (BWR) | support | Gazette 8 |
 | Laffly W15 TCC | 20 | narrow | platoon (BWR) | support | Gazette 8 |
 | Garde d'Honneur | 25 | narrow | platoon (RWBWR) | support | Gazette 8 |
+| Heroic | 30 | narrow | platoon (BWR) | gear | Civilians Under Fire |
+| FFI Squad | 50 | long | platoon (BWR) | support | Civilians Under Fire |
+| Saboteurs | 40 | long | platoon (BWR) | support | Civilians Under Fire |
+| FFI MG42 | 15 | narrow | platoon (BWR) | support | Civilians Under Fire |
+| FFI Panzerschreck | 20 | narrow | platoon (BWR) | support | Civilians Under Fire |
+| FFI Citroen T23 | 15 | narrow | platoon (BWR) | support | Civilians Under Fire |
+| Sailors | 60 | long | platoon (WG) | support | Ventura and Smugglers |
 
 ### Germany
 
@@ -93,6 +105,8 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Panzerzug N32 | Made in France | 0 | long: platoon, narrow: platoon or black, narrow: black or platoon, narrow: black or platoon |
 | Karl von Croc | Shake Lover | 30 | narrow: black or platoon |
 | Steiner Kampfgruppe | Heroic Platoon | 105 | narrow: platoon or black, narrow: platoon or black, narrow: platoon or black, narrow: platoon or black |
+| Ilda | She Wolf of the SS - Heroic Platoon | 65 | narrow: platoon or black, narrow: platoon or black, narrow: black or platoon |
+| Feldwebel | Field Support | 30 | narrow: platoon, narrow: platoon |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
 |---|---|---|---|---|---|
@@ -191,6 +205,16 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Planning | 10 | narrow | black | order | Steiner Kampfgruppe |
 | Veteran | 15 | narrow | black | gear | Steiner Kampfgruppe |
 | Trigger Happy | 10 | narrow | black | gear | Steiner Kampfgruppe |
+| Hundestaffel | 75 | long | black | support | Civilians Under Fire |
+| Untersuchung | 75 | long | black | support | Civilians Under Fire |
+| Opel Blitz | 10 | narrow | black | support | Civilians Under Fire |
+| Flammpanzerwagen | 40 | narrow | black | gear | Extra Units US-GE |
+| Puma | 40 | narrow | black | gear | Extra Units US-GE |
+| Panzer II Luchs | 50 | long | black | gear | Extra Units US-GE |
+| Flak 38 | 25 | narrow | black | gear | Extra Units US-GE |
+| Feldwebel SS | 5 | narrow | platoon (KO) | gear | Gazette 6 |
+| Feldwebel Fallschirmjager | 5 | narrow | platoon (KO) | gear | Gazette 6 |
+| Feldwebel | 30 | narrow | platoon (KO) | order | Gazette 6 |
 
 ### Commonwealth
 
@@ -211,6 +235,10 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Commandos | 1er Bataillon de Fusiliers Marins - N°4 Commandos | 115 | long: platoon, narrow: platoon or platoon, narrow: black or platoon, long: black or platoon |
 | Laurent Duclos | Vieille France | 25 | no slots |
 | Philippe Kieffer | Le Pacha | 40 | narrow: black or command |
+| Sergeant | Field Support | 30 | narrow: platoon, narrow: platoon |
+| Lord Lovat's Commandos | First Special Service - N°3 Commandos / A Heroic Platoon | 130 | narrow: platoon, narrow: platoon or black, long: black or platoon |
+| Bill Millin | Badass Bagpiper | 20 | no slots |
+| Mad Jack Churchill | Badass Scotsman | 35 | no slots |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
 |---|---|---|---|---|---|
@@ -270,6 +298,14 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Section Anti-Tank | 55 | long | platoon (YBY) | support | Gazette 7 |
 | Semper Primum | 25 | narrow | platoon (YBY) | gear | Gazette 7 |
 | Jeep "Youpi Youpi" | 25 | narrow | platoon (YBY) | support | Gazette 7 |
+| Sergeant Paratrooper | 5 | narrow | platoon (KO) | gear | Gazette 6 |
+| Sergeant | 30 | narrow | platoon (KO) | order | Gazette 6 |
+| Ferocious | 10 | narrow | platoon (NRN) | gear | Lord Lovat's Commandos |
+| Infiltrated | 10 | narrow | platoon (NRN) | gear | Lord Lovat's Commandos |
+| Vickers MG | 20 | narrow | platoon (NRN) | gear | Lord Lovat's Commandos |
+| Bazooka | 15 | narrow | platoon (NRN) | gear | Lord Lovat's Commandos |
+| Knife | 15 | narrow | platoon (NRN) | gear | Lord Lovat's Commandos |
+| Stiky Bomb | 10 | narrow | platoon (NRN) | gear | Lord Lovat's Commandos |
 
 ### United States
 
@@ -307,6 +343,7 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Rangers Weapon Platoon | 5th Rangers Battalion | 55 | long: platoon or black, narrow: black, long: black or platoon |
 | Jamie "Clem" Kilmister | Metal Hero | 40 | narrow: black, narrow: platoon or black |
 | James F. Bryan | To Be Saved | 20 | narrow: black or platoon |
+| Sergeant | Field Support | 30 | narrow: platoon, narrow: platoon |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
 |---|---|---|---|---|---|
@@ -392,4 +429,11 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Sergeant | 30 | narrow | black | support | US Airborne |
 | Training Paratrooper | 25 | narrow | black | gear | US Airborne |
 | Bazooka | 15 | narrow | platoon (H_bryan) | gear | Private Bryan |
+| Greyhound | 35 | narrow | black | gear | Extra Units US-GE |
+| M16 MGMC | 35 | narrow | black | gear | Extra Units US-GE |
+| M8 Scott | 50 | long | black | gear | Extra Units US-GE |
+| Willys 60mm Mortar | 25 | narrow | black | gear | Extra Units US-GE |
+| Sergeant Rangers | 5 | narrow | platoon (KO) | gear | Gazette 6 |
+| Sergeant | 30 | narrow | platoon (KO) | order | Gazette 6 |
+| Sergeant Paratrooper | 5 | narrow | platoon (KO) | gear | Gazette 6 |
 

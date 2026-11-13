@@ -1,0 +1,254 @@
+{
+ "src": "CW Lord Lovat's Commandos/Lord Lovat Punchboard-1.png",
+ "nat": "uk",
+ "set": "hon1-lord-lovat-s-commandos",
+ "sheet": "Lord Lovat's Commandos",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Lord Lovat's Commandos",
+   "cost": 130,
+   "rot": 90,
+   "snap": false,
+   "squares": 3,
+   "nat": "uk",
+   "slots_rel": [
+    [
+     0.02,
+     0.22,
+     0.185,
+     0.73,
+     "n",
+     [
+      "NRN"
+     ]
+    ],
+    [
+     0.21,
+     0.22,
+     0.185,
+     0.73,
+     "n",
+     [
+      "NRN",
+      "K"
+     ]
+    ],
+    [
+     0.795,
+     0.22,
+     0.185,
+     0.73,
+     "w",
+     [
+      "K",
+      "NRN"
+     ]
+    ]
+   ],
+   "box": [
+    135,
+    125,
+    505,
+    1335
+   ],
+   "sub": "First Special Service - N°3 Commandos / A Heroic Platoon",
+   "type": "platoon",
+   "slots": [],
+   "units": [
+    [
+     "Fire Team",
+     2,
+     "infantry"
+    ],
+    [
+     "Support Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Mortar Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Lord Lovat",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "Bill Millin",
+   "cost": 20,
+   "rot": 270,
+   "snap": false,
+   "squares": 1,
+   "nat": "uk",
+   "box": [
+    1558,
+    118,
+    1946,
+    412
+   ],
+   "sub": "Badass Bagpiper",
+   "type": "hero",
+   "slots": [],
+   "units": [
+    [
+     "Millin",
+     1,
+     "character"
+    ]
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "Mad Jack Churchill",
+   "cost": 35,
+   "rot": 270,
+   "snap": false,
+   "squares": 1,
+   "nat": "uk",
+   "box": [
+    1558,
+    490,
+    1946,
+    782
+   ],
+   "sub": "Badass Scotsman",
+   "type": "hero",
+   "slots": [],
+   "units": [
+    [
+     "Mad Jack",
+     1,
+     "character"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Ferocious",
+   "cost": 10,
+   "rot": 270,
+   "snap": false,
+   "squares": 0,
+   "nat": "uk",
+   "box": [
+    585,
+    98,
+    805,
+    320
+   ],
+   "stripes": [
+    "NRN"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Infiltrated",
+   "cost": 10,
+   "rot": 270,
+   "snap": false,
+   "squares": 0,
+   "nat": "uk",
+   "box": [
+    585,
+    318,
+    805,
+    555
+   ],
+   "stripes": [
+    "NRN"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Vickers MG",
+   "cost": 20,
+   "rot": 270,
+   "snap": false,
+   "squares": 0,
+   "nat": "uk",
+   "box": [
+    880,
+    98,
+    1105,
+    320
+   ],
+   "stripes": [
+    "NRN"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Bazooka",
+   "cost": 15,
+   "rot": 270,
+   "snap": false,
+   "squares": 0,
+   "nat": "uk",
+   "box": [
+    880,
+    318,
+    1105,
+    555
+   ],
+   "stripes": [
+    "NRN"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Knife",
+   "cost": 15,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "nat": "uk",
+   "box": [
+    1045,
+    985,
+    1290,
+    1225
+   ],
+   "stripes": [
+    "NRN"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  },
+  {
+   "kind": "option",
+   "name": "Stiky Bomb",
+   "cost": 10,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "nat": "uk",
+   "box": [
+    1045,
+    1295,
+    1290,
+    1535
+   ],
+   "stripes": [
+    "NRN"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  }
+ ]
+}

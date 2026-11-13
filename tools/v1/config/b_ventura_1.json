@@ -1,0 +1,145 @@
+{
+ "src": "Ventura and Smugglers/Ventura and Smugglers Punchboard 1 Front.jpg",
+ "nat": "us",
+ "set": "hon1-the-ventura-and-smugglers",
+ "sheet": "Ventura and Smugglers",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Ventura",
+   "cost": 110,
+   "rot": 0,
+   "snap": false,
+   "squares": 4,
+   "nat": "fr",
+   "box": [
+    555,
+    88,
+    1000,
+    412
+   ],
+   "sub": "",
+   "type": "platoon",
+   "slots": [
+    {
+     "box": [
+      800,
+      165,
+      970,
+      370
+     ],
+     "size": "n",
+     "stripes": [
+      "WG"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Captain",
+     1,
+     "infantry"
+    ],
+    [
+     "First Mate",
+     1,
+     "infantry"
+    ],
+    [
+     "Cook",
+     1,
+     "infantry"
+    ],
+    [
+     "Cabin Boy",
+     1,
+     "infantry"
+    ],
+    [
+     "Sailor",
+     1,
+     "infantry"
+    ],
+    [
+     "Rowboat",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "Seb \"Trouvetou\" Delobel",
+   "cost": 30,
+   "rot": 90,
+   "snap": false,
+   "squares": 1,
+   "nat": "fr",
+   "slots_rel": [
+    [
+     0.05,
+     0.25,
+     0.28,
+     0.66,
+     "n",
+     [
+      "WG"
+     ]
+    ],
+    [
+     0.67,
+     0.25,
+     0.28,
+     0.66,
+     "n",
+     [
+      "WG"
+     ]
+    ]
+   ],
+   "box": [
+    880,
+    950,
+    1205,
+    1565
+   ],
+   "sub": "Gearloose Smuggler",
+   "type": "hero",
+   "slots": [],
+   "units": [
+    [
+     "Seb",
+     1,
+     "character"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Sailors",
+   "cost": 60,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "nat": "fr",
+   "box": [
+    798,
+    708,
+    968,
+    922
+   ],
+   "stripes": [
+    "WG"
+   ],
+   "size": "w",
+   "cat": "support",
+   "units": [
+    [
+     "Sailor",
+     3,
+     "infantry"
+    ]
+   ]
+  }
+ ]
+}

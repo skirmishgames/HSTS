@@ -1,0 +1,95 @@
+{
+ "src": "Extra Units US-GE/Extra Units US Punchboard.jpg",
+ "nat": "us",
+ "sheet": "Extra Units US-GE",
+ "pieces": [
+  {
+   "kind": "option",
+   "name": "Greyhound",
+   "cost": 35,
+   "box": [
+    758,
+    8,
+    1132,
+    510
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "nat": "us",
+   "snap": false,
+   "notes": "Vehicle option; plain black band stripes at sides."
+  },
+  {
+   "kind": "option",
+   "name": "M16 MGMC",
+   "cost": 35,
+   "box": [
+    1187,
+    8,
+    1560,
+    510
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "nat": "us",
+   "snap": false,
+   "notes": "Vehicle option; plain black band stripes at sides."
+  },
+  {
+   "kind": "option",
+   "name": "M8 Scott",
+   "cost": 50,
+   "box": [
+    1598,
+    8,
+    2100,
+    510
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "nat": "us",
+   "snap": false,
+   "notes": "Vehicle option; plain black band stripes at sides."
+  },
+  {
+   "kind": "option",
+   "name": "Willys 60mm Mortar",
+   "cost": 25,
+   "box": [
+    2362,
+    293,
+    2738,
+    795
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "nat": "us",
+   "snap": false,
+   "notes": "Vehicle option; plain black band stripes at sides."
+  }
+ ]
+}

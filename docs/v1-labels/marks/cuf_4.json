@@ -1,0 +1,261 @@
+{
+ "src": "FFI Civilians Under Fire/FFI Civilians Under Fire Punchboard 4 Front.png",
+ "nat": "fr",
+ "sheet": "Civilians Under Fire",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "FFI",
+   "sub": "Giselle Luceau \"Sandy\"",
+   "cost": 80,
+   "type": "hero",
+   "nat": "fr",
+   "snap": false,
+   "box": [
+    447,
+    107,
+    2247,
+    697
+   ],
+   "rot": 0,
+   "squares": 3,
+   "units": [
+    [
+     "Sandy",
+     1
+    ],
+    [
+     "FFI",
+     2
+    ],
+    [
+     "FFI Support",
+     1
+    ],
+    [
+     "Gears",
+     3
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      502,
+      236,
+      923,
+      654
+     ],
+     "size": "wide",
+     "left": [
+      "blue",
+      "white",
+      "red"
+     ],
+     "right": [
+      "blue",
+      "white",
+      "red"
+     ]
+    },
+    {
+     "box": [
+      1527,
+      236,
+      1848,
+      654
+     ],
+     "size": "narrow",
+     "left": [
+      "white"
+     ],
+     "right": [
+      "blue",
+      "white",
+      "red"
+     ]
+    },
+    {
+     "box": [
+      1871,
+      236,
+      2193,
+      654
+     ],
+     "size": "narrow",
+     "left": [
+      "blue",
+      "white",
+      "red"
+     ],
+     "right": [
+      "blue",
+      "white",
+      "red"
+     ]
+    }
+   ],
+   "notes": "Tile titled FFI; Sandy is the named hero (Heroic Platoon, star marker). Slot stripe colours read as blue/white/red with a plain white left half on slot 2"
+  },
+  {
+   "kind": "option",
+   "name": "FFI Squad",
+   "cost": 50,
+   "nat": "fr",
+   "box": [
+    528,
+    802,
+    883,
+    1153
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "blue",
+    "white",
+    "red"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 2,
+   "units": [
+    [
+     "FFI",
+     2
+    ],
+    [
+     "FFI Support",
+     1
+    ]
+   ],
+   "notes": ""
+  },
+  {
+   "kind": "option",
+   "name": "Saboteurs",
+   "cost": 40,
+   "nat": "fr",
+   "box": [
+    994,
+    802,
+    1348,
+    1158
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "blue",
+    "white",
+    "red"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 2,
+   "units": [
+    [
+     "FFI",
+     1
+    ],
+    [
+     "Saboteurs",
+     2
+    ],
+    [
+     "Detonator",
+     2
+    ],
+    [
+     "Explosive",
+     2
+    ]
+   ],
+   "notes": ""
+  },
+  {
+   "kind": "option",
+   "name": "FFI MG42",
+   "cost": 15,
+   "nat": "fr",
+   "box": [
+    135,
+    2028,
+    397,
+    2380
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "blue",
+    "white",
+    "red"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [
+    [
+     "FFI-MG42",
+     1
+    ]
+   ],
+   "notes": ""
+  },
+  {
+   "kind": "option",
+   "name": "FFI Panzerschreck",
+   "cost": 20,
+   "nat": "fr",
+   "box": [
+    497,
+    2028,
+    757,
+    2380
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "blue",
+    "white",
+    "red"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [
+    [
+     "Panzerschreck",
+     1
+    ]
+   ],
+   "notes": ""
+  },
+  {
+   "kind": "option",
+   "name": "FFI Citroen T23",
+   "cost": 15,
+   "nat": "fr",
+   "box": [
+    858,
+    2030,
+    1117,
+    2377
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "blue",
+    "white",
+    "red"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [
+    [
+     "FFI-Citroen T23",
+     1
+    ]
+   ],
+   "notes": ""
+  }
+ ]
+}

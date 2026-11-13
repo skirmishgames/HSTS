@@ -1,0 +1,120 @@
+{
+ "src": "Ventura and Smugglers/Ventura and Smugglers Punchboard 1 Front.jpg",
+ "nat": "us",
+ "sheet": "Ventura and Smugglers",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Ventura",
+   "sub": null,
+   "cost": 110,
+   "type": "platoon",
+   "nat": "us",
+   "box": [
+    555,
+    88,
+    1000,
+    412
+   ],
+   "rot": 0,
+   "squares": 4,
+   "units": [
+    [
+     "Captain",
+     1
+    ],
+    [
+     "First Mate",
+     1
+    ],
+    [
+     "Cook",
+     1
+    ],
+    [
+     "Cabin Boy",
+     1
+    ],
+    [
+     "Sailor",
+     1
+    ],
+    [
+     "Rowboat",
+     1
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      800,
+      165,
+      970,
+      370
+     ],
+     "size": "narrow",
+     "left": [
+      "white"
+     ],
+     "right": [
+      "green"
+     ]
+    }
+   ],
+   "snap": false,
+   "notes": "Anchor badge in the slot. Nation not printed; set to us by default."
+  },
+  {
+   "kind": "tile",
+   "name": "Seb \"Trouvetou\" Delobel",
+   "sub": "Gearloose Smuggler",
+   "cost": 30,
+   "type": "hero",
+   "nat": "us",
+   "box": [
+    880,
+    950,
+    1205,
+    1565
+   ],
+   "rot": 90,
+   "squares": 1,
+   "units": [
+    [
+     "Seb",
+     1
+    ]
+   ],
+   "slots": [],
+   "snap": false,
+   "notes": "Rotated tile. Two narrow slots with a green laurel shield badge, white stripe on one half and green on the other. Nation unclear (smuggler badge); set to us by default."
+  },
+  {
+   "kind": "option",
+   "name": "Sailors",
+   "cost": 60,
+   "nat": "us",
+   "box": [
+    798,
+    708,
+    968,
+    922
+   ],
+   "rot": 0,
+   "stripes": [
+    "white"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 2,
+   "units": [
+    [
+     "Sailor",
+     3
+    ]
+   ],
+   "snap": false,
+   "notes": "White stripes at both sides. Nation not printed; set to us by default."
+  }
+ ]
+}

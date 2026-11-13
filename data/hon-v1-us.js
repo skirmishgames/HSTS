@@ -1537,6 +1537,43 @@ HTS_DATA["hon-v1-us"] = {
     }
    ],
    "own": []
+  },
+  {
+   "id": "sergeant",
+   "name": "Sergeant",
+   "sub": "Field Support",
+   "cost": 30,
+   "type": "command",
+   "set": "hon1-gazette-6",
+   "squares": 1,
+   "img": "img/hon/v1/us/tiles/sergeant.webp",
+   "w": 1075,
+   "h": 650,
+   "sheet": "Gazette 6",
+   "units": [],
+   "slots": [
+    {
+     "x": 0.0558,
+     "y": 0.2538,
+     "w": 0.2995,
+     "h": 0.6062,
+     "size": "n",
+     "stripes": [
+      "KO"
+     ]
+    },
+    {
+     "x": 0.6186,
+     "y": 0.2538,
+     "w": 0.3023,
+     "h": 0.6062,
+     "size": "n",
+     "stripes": [
+      "KO"
+     ]
+    }
+   ],
+   "own": []
   }
  ],
  "options": [
@@ -3449,6 +3486,118 @@ HTS_DATA["hon-v1-us"] = {
    "h": 851,
    "sheet": "Private Bryan",
    "note": "Markers: X2."
+  },
+  {
+   "id": "greyhound",
+   "name": "Greyhound",
+   "cat": "gear",
+   "cost": 35,
+   "squares": 1,
+   "set": "hon1-extra-units-us-and-ge",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/greyhound.webp",
+   "w": 374,
+   "h": 502,
+   "sheet": "Extra Units US-GE"
+  },
+  {
+   "id": "m16_mgmc",
+   "name": "M16 MGMC",
+   "cat": "gear",
+   "cost": 35,
+   "squares": 1,
+   "set": "hon1-extra-units-us-and-ge",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/m16_mgmc.webp",
+   "w": 373,
+   "h": 502,
+   "sheet": "Extra Units US-GE"
+  },
+  {
+   "id": "m8_scott",
+   "name": "M8 Scott",
+   "cat": "gear",
+   "cost": 50,
+   "squares": 1,
+   "set": "hon1-extra-units-us-and-ge",
+   "size": "w",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/m8_scott.webp",
+   "w": 502,
+   "h": 502,
+   "sheet": "Extra Units US-GE"
+  },
+  {
+   "id": "willys_60mm_mortar",
+   "name": "Willys 60mm Mortar",
+   "cat": "gear",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-extra-units-us-and-ge",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/willys_60mm_mortar.webp",
+   "w": 376,
+   "h": 502,
+   "sheet": "Extra Units US-GE"
+  },
+  {
+   "id": "sergeant_rangers",
+   "name": "Sergeant Rangers",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "hon1-gazette-6",
+   "size": "n",
+   "stripes": [
+    "KO"
+   ],
+   "img": "img/hon/v1/us/options/sergeant_rangers.webp",
+   "w": 305,
+   "h": 335,
+   "sheet": "Gazette 6"
+  },
+  {
+   "id": "sergeant_gazette_6",
+   "name": "Sergeant",
+   "cat": "order",
+   "cost": 30,
+   "squares": 1,
+   "set": "hon1-gazette-6",
+   "size": "n",
+   "stripes": [
+    "KO"
+   ],
+   "img": "img/hon/v1/us/options/sergeant_gazette_6.webp",
+   "w": 330,
+   "h": 340,
+   "sheet": "Gazette 6"
+  },
+  {
+   "id": "sergeant_paratrooper",
+   "name": "Sergeant Paratrooper",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "hon1-gazette-6",
+   "size": "n",
+   "stripes": [
+    "KO"
+   ],
+   "img": "img/hon/v1/us/options/sergeant_paratrooper.webp",
+   "w": 305,
+   "h": 340,
+   "sheet": "Gazette 6"
   }
  ]
 };

@@ -829,6 +829,157 @@ HTS_DATA["hon-v1-uk"] = {
     }
    ],
    "own": []
+  },
+  {
+   "id": "sergeant",
+   "name": "Sergeant",
+   "sub": "Field Support",
+   "cost": 30,
+   "type": "command",
+   "set": "hon1-gazette-6",
+   "squares": 1,
+   "img": "img/hon/v1/uk/tiles/sergeant.webp",
+   "w": 1075,
+   "h": 645,
+   "sheet": "Gazette 6",
+   "units": [],
+   "slots": [
+    {
+     "x": 0.0558,
+     "y": 0.2527,
+     "w": 0.2995,
+     "h": 0.6109,
+     "size": "n",
+     "stripes": [
+      "KO"
+     ]
+    },
+    {
+     "x": 0.6186,
+     "y": 0.2527,
+     "w": 0.3023,
+     "h": 0.6109,
+     "size": "n",
+     "stripes": [
+      "KO"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "lord_lovat_s_commandos",
+   "name": "Lord Lovat's Commandos",
+   "sub": "First Special Service - N°3 Commandos / A Heroic Platoon",
+   "cost": 130,
+   "type": "platoon",
+   "set": "hon1-lord-lovat-s-commandos",
+   "squares": 3,
+   "img": "img/hon/v1/uk/tiles/lord_lovat_s_commandos.webp",
+   "w": 1210,
+   "h": 370,
+   "sheet": "Lord Lovat's Commandos",
+   "units": [
+    [
+     "Fire Team",
+     2,
+     "infantry"
+    ],
+    [
+     "Support Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Mortar Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Lord Lovat",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.02,
+     "y": 0.22,
+     "w": 0.185,
+     "h": 0.73,
+     "size": "n",
+     "stripes": [
+      "NRN"
+     ]
+    },
+    {
+     "x": 0.21,
+     "y": 0.22,
+     "w": 0.185,
+     "h": 0.73,
+     "size": "n",
+     "stripes": [
+      "NRN",
+      "K"
+     ]
+    },
+    {
+     "x": 0.795,
+     "y": 0.22,
+     "w": 0.185,
+     "h": 0.73,
+     "size": "w",
+     "stripes": [
+      "K",
+      "NRN"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "bill_millin",
+   "name": "Bill Millin",
+   "sub": "Badass Bagpiper",
+   "cost": 20,
+   "type": "hero",
+   "set": "hon1-lord-lovat-s-commandos",
+   "squares": 1,
+   "img": "img/hon/v1/uk/tiles/bill_millin.webp",
+   "w": 294,
+   "h": 388,
+   "sheet": "Lord Lovat's Commandos",
+   "units": [
+    [
+     "Millin",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
+  },
+  {
+   "id": "mad_jack_churchill",
+   "name": "Mad Jack Churchill",
+   "sub": "Badass Scotsman",
+   "cost": 35,
+   "type": "hero",
+   "set": "hon1-lord-lovat-s-commandos",
+   "squares": 1,
+   "img": "img/hon/v1/uk/tiles/mad_jack_churchill.webp",
+   "w": 292,
+   "h": 388,
+   "sheet": "Lord Lovat's Commandos",
+   "units": [
+    [
+     "Mad Jack",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
   }
  ],
  "options": [
@@ -2180,6 +2331,136 @@ HTS_DATA["hon-v1-uk"] = {
     ]
    ],
    "note": "Markers: X1."
+  },
+  {
+   "id": "sergeant_paratrooper",
+   "name": "Sergeant Paratrooper",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "hon1-gazette-6",
+   "size": "n",
+   "stripes": [
+    "KO"
+   ],
+   "img": "img/hon/v1/uk/options/sergeant_paratrooper.webp",
+   "w": 335,
+   "h": 335,
+   "sheet": "Gazette 6"
+  },
+  {
+   "id": "sergeant",
+   "name": "Sergeant",
+   "cat": "order",
+   "cost": 30,
+   "squares": 1,
+   "set": "hon1-gazette-6",
+   "size": "n",
+   "stripes": [
+    "KO"
+   ],
+   "img": "img/hon/v1/uk/options/sergeant.webp",
+   "w": 335,
+   "h": 340,
+   "sheet": "Gazette 6"
+  },
+  {
+   "id": "ferocious",
+   "name": "Ferocious",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-lord-lovat-s-commandos",
+   "size": "n",
+   "stripes": [
+    "NRN"
+   ],
+   "img": "img/hon/v1/uk/options/ferocious.webp",
+   "w": 222,
+   "h": 220,
+   "sheet": "Lord Lovat's Commandos"
+  },
+  {
+   "id": "infiltrated",
+   "name": "Infiltrated",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-lord-lovat-s-commandos",
+   "size": "n",
+   "stripes": [
+    "NRN"
+   ],
+   "img": "img/hon/v1/uk/options/infiltrated.webp",
+   "w": 237,
+   "h": 220,
+   "sheet": "Lord Lovat's Commandos"
+  },
+  {
+   "id": "vickers_mg_lord_lovat_s_commandos",
+   "name": "Vickers MG",
+   "cat": "gear",
+   "cost": 20,
+   "squares": 0,
+   "set": "hon1-lord-lovat-s-commandos",
+   "size": "n",
+   "stripes": [
+    "NRN"
+   ],
+   "img": "img/hon/v1/uk/options/vickers_mg_lord_lovat_s_commandos.webp",
+   "w": 222,
+   "h": 225,
+   "sheet": "Lord Lovat's Commandos"
+  },
+  {
+   "id": "bazooka",
+   "name": "Bazooka",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-lord-lovat-s-commandos",
+   "size": "n",
+   "stripes": [
+    "NRN"
+   ],
+   "img": "img/hon/v1/uk/options/bazooka.webp",
+   "w": 237,
+   "h": 225,
+   "sheet": "Lord Lovat's Commandos"
+  },
+  {
+   "id": "knife",
+   "name": "Knife",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-lord-lovat-s-commandos",
+   "size": "n",
+   "stripes": [
+    "NRN"
+   ],
+   "img": "img/hon/v1/uk/options/knife.webp",
+   "w": 245,
+   "h": 240,
+   "sheet": "Lord Lovat's Commandos",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "stiky_bomb",
+   "name": "Stiky Bomb",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-lord-lovat-s-commandos",
+   "size": "n",
+   "stripes": [
+    "NRN"
+   ],
+   "img": "img/hon/v1/uk/options/stiky_bomb.webp",
+   "w": 245,
+   "h": 240,
+   "sheet": "Lord Lovat's Commandos",
+   "note": "Markers: X3."
   }
  ]
 };

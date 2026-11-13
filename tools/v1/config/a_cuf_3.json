@@ -1,0 +1,200 @@
+{
+ "src": "FFI Civilians Under Fire/FFI Civilians Under Fire Punchboard 3 Front.png",
+ "nat": "ge",
+ "set": "hon1-civilians-under-fire",
+ "sheet": "Civilians Under Fire",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Ilda",
+   "cost": 65,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "nat": "ge",
+   "box": [
+    457,
+    109,
+    2261,
+    697
+   ],
+   "sub": "She Wolf of the SS - Heroic Platoon",
+   "type": "platoon",
+   "slots": [
+    {
+     "box": [
+      518,
+      238,
+      933,
+      654
+     ],
+     "size": "n",
+     "stripes": [
+      "KWKI",
+      "K"
+     ]
+    },
+    {
+     "box": [
+      1537,
+      238,
+      1861,
+      654
+     ],
+     "size": "n",
+     "stripes": [
+      "KWKI",
+      "K"
+     ]
+    },
+    {
+     "box": [
+      1881,
+      238,
+      2204,
+      654
+     ],
+     "size": "n",
+     "stripes": [
+      "K",
+      "KWKI"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Ilda",
+     1,
+     "infantry"
+    ],
+    [
+     "Leibwächter",
+     1,
+     "infantry"
+    ],
+    [
+     "Mercedes Benz",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Hundestaffel",
+   "cost": 75,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "nat": "ge",
+   "box": [
+    60,
+    1250,
+    440,
+    1620
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "w",
+   "cat": "support",
+   "units": [
+    [
+     "Bluthund",
+     1,
+     "infantry"
+    ],
+    [
+     "Dogs",
+     1,
+     "infantry"
+    ],
+    [
+     "Gestapo",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Untersuchung",
+   "cost": 75,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "nat": "ge",
+   "box": [
+    530,
+    1250,
+    910,
+    1620
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "w",
+   "cat": "support",
+   "units": [
+    [
+     "Inspektor",
+     1,
+     "infantry"
+    ],
+    [
+     "Gestapo",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Opel Blitz",
+   "cost": 10,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "ge",
+   "box": [
+    1581,
+    2041,
+    1838,
+    2395
+   ],
+   "stripes": [
+    "K"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "Opel Blitz",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Heroic",
+   "cost": 30,
+   "rot": 0,
+   "snap": false,
+   "squares": 0,
+   "nat": "fr",
+   "box": [
+    1947,
+    2041,
+    2207,
+    2395
+   ],
+   "stripes": [
+    "BWR"
+   ],
+   "size": "n",
+   "cat": "gear",
+   "note": "Markers: X3."
+  }
+ ]
+}

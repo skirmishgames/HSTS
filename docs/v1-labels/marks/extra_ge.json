@@ -1,0 +1,95 @@
+{
+ "src": "Extra Units US-GE/Extra Units German Punchboard.jpg",
+ "nat": "ge",
+ "sheet": "Extra Units US-GE",
+ "pieces": [
+  {
+   "kind": "option",
+   "name": "Flammpanzerwagen",
+   "cost": 40,
+   "box": [
+    758,
+    8,
+    1132,
+    510
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "nat": "ge",
+   "snap": false,
+   "notes": "Vehicle option; plain black band stripes at sides."
+  },
+  {
+   "kind": "option",
+   "name": "Puma",
+   "cost": 40,
+   "box": [
+    1187,
+    8,
+    1560,
+    510
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "nat": "ge",
+   "snap": false,
+   "notes": "Vehicle option; plain black band stripes at sides."
+  },
+  {
+   "kind": "option",
+   "name": "Panzer II Luchs",
+   "cost": 50,
+   "box": [
+    1598,
+    8,
+    2100,
+    510
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "nat": "ge",
+   "snap": false,
+   "notes": "Vehicle option; plain black band stripes at sides."
+  },
+  {
+   "kind": "option",
+   "name": "Flak 38",
+   "cost": 25,
+   "box": [
+    2362,
+    293,
+    2738,
+    795
+   ],
+   "rot": 0,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "nat": "ge",
+   "snap": false,
+   "notes": "Vehicle option; plain black band stripes at sides."
+  }
+ ]
+}

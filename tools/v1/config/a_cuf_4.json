@@ -1,0 +1,240 @@
+{
+ "src": "FFI Civilians Under Fire/FFI Civilians Under Fire Punchboard 4 Front.png",
+ "nat": "fr",
+ "set": "hon1-civilians-under-fire",
+ "sheet": "Civilians Under Fire",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "FFI",
+   "cost": 80,
+   "rot": 0,
+   "snap": false,
+   "squares": 3,
+   "nat": "fr",
+   "box": [
+    447,
+    107,
+    2247,
+    697
+   ],
+   "sub": "Giselle Luceau \"Sandy\"",
+   "type": "platoon",
+   "slots": [
+    {
+     "box": [
+      502,
+      236,
+      923,
+      654
+     ],
+     "size": "n",
+     "stripes": [
+      "BWR"
+     ]
+    },
+    {
+     "box": [
+      1527,
+      236,
+      1848,
+      654
+     ],
+     "size": "n",
+     "stripes": [
+      "BWR"
+     ]
+    },
+    {
+     "box": [
+      1871,
+      236,
+      2193,
+      654
+     ],
+     "size": "n",
+     "stripes": [
+      "BWR"
+     ]
+    }
+   ],
+   "units": [
+    [
+     "Sandy",
+     1,
+     "infantry"
+    ],
+    [
+     "FFI",
+     2,
+     "infantry"
+    ],
+    [
+     "FFI Support",
+     1,
+     "infantry"
+    ],
+    [
+     "Gears",
+     3,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "FFI Squad",
+   "cost": 50,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "nat": "fr",
+   "box": [
+    528,
+    802,
+    883,
+    1153
+   ],
+   "stripes": [
+    "BWR"
+   ],
+   "size": "w",
+   "cat": "support",
+   "units": [
+    [
+     "FFI",
+     2,
+     "infantry"
+    ],
+    [
+     "FFI Support",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Saboteurs",
+   "cost": 40,
+   "rot": 0,
+   "snap": false,
+   "squares": 2,
+   "nat": "fr",
+   "box": [
+    994,
+    802,
+    1348,
+    1158
+   ],
+   "stripes": [
+    "BWR"
+   ],
+   "size": "w",
+   "cat": "support",
+   "units": [
+    [
+     "FFI",
+     1,
+     "infantry"
+    ],
+    [
+     "Saboteurs",
+     2,
+     "infantry"
+    ],
+    [
+     "Detonator",
+     2,
+     "infantry"
+    ],
+    [
+     "Explosive",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "FFI MG42",
+   "cost": 15,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "fr",
+   "box": [
+    135,
+    2028,
+    397,
+    2380
+   ],
+   "stripes": [
+    "BWR"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "FFI-MG42",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "FFI Panzerschreck",
+   "cost": 20,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "fr",
+   "box": [
+    497,
+    2028,
+    757,
+    2380
+   ],
+   "stripes": [
+    "BWR"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "Panzerschreck",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "FFI Citroen T23",
+   "cost": 15,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "fr",
+   "box": [
+    858,
+    2030,
+    1117,
+    2377
+   ],
+   "stripes": [
+    "BWR"
+   ],
+   "size": "n",
+   "cat": "support",
+   "units": [
+    [
+     "FFI-Citroen T23",
+     1,
+     "infantry"
+    ]
+   ]
+  }
+ ]
+}

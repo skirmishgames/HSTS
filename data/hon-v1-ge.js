@@ -1379,6 +1379,109 @@ HTS_DATA["hon-v1-ge"] = {
     }
    ],
    "own": []
+  },
+  {
+   "id": "ilda",
+   "name": "Ilda",
+   "sub": "She Wolf of the SS - Heroic Platoon",
+   "cost": 65,
+   "type": "platoon",
+   "set": "hon1-civilians-under-fire",
+   "squares": 2,
+   "img": "img/hon/v1/ge/tiles/ilda.webp",
+   "w": 1804,
+   "h": 588,
+   "sheet": "Civilians Under Fire",
+   "units": [
+    [
+     "Ilda",
+     1,
+     "infantry"
+    ],
+    [
+     "Leibwächter",
+     1,
+     "infantry"
+    ],
+    [
+     "Mercedes Benz",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.0338,
+     "y": 0.2194,
+     "w": 0.23,
+     "h": 0.7075,
+     "size": "n",
+     "stripes": [
+      "KWKI",
+      "K"
+     ]
+    },
+    {
+     "x": 0.5987,
+     "y": 0.2194,
+     "w": 0.1796,
+     "h": 0.7075,
+     "size": "n",
+     "stripes": [
+      "KWKI",
+      "K"
+     ]
+    },
+    {
+     "x": 0.7894,
+     "y": 0.2194,
+     "w": 0.179,
+     "h": 0.7075,
+     "size": "n",
+     "stripes": [
+      "K",
+      "KWKI"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "feldwebel",
+   "name": "Feldwebel",
+   "sub": "Field Support",
+   "cost": 30,
+   "type": "command",
+   "set": "hon1-gazette-6",
+   "squares": 1,
+   "img": "img/hon/v1/ge/tiles/feldwebel.webp",
+   "w": 1075,
+   "h": 648,
+   "sheet": "Gazette 6",
+   "units": [],
+   "slots": [
+    {
+     "x": 0.0558,
+     "y": 0.2284,
+     "w": 0.2995,
+     "h": 0.608,
+     "size": "n",
+     "stripes": [
+      "KO"
+     ]
+    },
+    {
+     "x": 0.6186,
+     "y": 0.2284,
+     "w": 0.3023,
+     "h": 0.608,
+     "size": "n",
+     "stripes": [
+      "KO"
+     ]
+    }
+   ],
+   "own": []
   }
  ],
  "options": [
@@ -3373,6 +3476,202 @@ HTS_DATA["hon-v1-ge"] = {
    "h": 366,
    "sheet": "Steiner Kampfgruppe",
    "note": "Markers: X3."
+  },
+  {
+   "id": "hundestaffel",
+   "name": "Hundestaffel",
+   "cat": "support",
+   "cost": 75,
+   "squares": 2,
+   "set": "hon1-civilians-under-fire",
+   "size": "w",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/hundestaffel.webp",
+   "w": 380,
+   "h": 370,
+   "sheet": "Civilians Under Fire",
+   "units": [
+    [
+     "Bluthund",
+     1,
+     "infantry"
+    ],
+    [
+     "Dogs",
+     1,
+     "infantry"
+    ],
+    [
+     "Gestapo",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "untersuchung",
+   "name": "Untersuchung",
+   "cat": "support",
+   "cost": 75,
+   "squares": 2,
+   "set": "hon1-civilians-under-fire",
+   "size": "w",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/untersuchung.webp",
+   "w": 380,
+   "h": 370,
+   "sheet": "Civilians Under Fire",
+   "units": [
+    [
+     "Inspektor",
+     1,
+     "infantry"
+    ],
+    [
+     "Gestapo",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "opel_blitz",
+   "name": "Opel Blitz",
+   "cat": "support",
+   "cost": 10,
+   "squares": 1,
+   "set": "hon1-civilians-under-fire",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/opel_blitz.webp",
+   "w": 257,
+   "h": 354,
+   "sheet": "Civilians Under Fire",
+   "units": [
+    [
+     "Opel Blitz",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "flammpanzerwagen",
+   "name": "Flammpanzerwagen",
+   "cat": "gear",
+   "cost": 40,
+   "squares": 1,
+   "set": "hon1-extra-units-us-and-ge",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/flammpanzerwagen.webp",
+   "w": 374,
+   "h": 502,
+   "sheet": "Extra Units US-GE"
+  },
+  {
+   "id": "puma",
+   "name": "Puma",
+   "cat": "gear",
+   "cost": 40,
+   "squares": 1,
+   "set": "hon1-extra-units-us-and-ge",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/puma.webp",
+   "w": 373,
+   "h": 502,
+   "sheet": "Extra Units US-GE"
+  },
+  {
+   "id": "panzer_ii_luchs",
+   "name": "Panzer II Luchs",
+   "cat": "gear",
+   "cost": 50,
+   "squares": 1,
+   "set": "hon1-extra-units-us-and-ge",
+   "size": "w",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/panzer_ii_luchs.webp",
+   "w": 502,
+   "h": 502,
+   "sheet": "Extra Units US-GE"
+  },
+  {
+   "id": "flak_38",
+   "name": "Flak 38",
+   "cat": "gear",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-extra-units-us-and-ge",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/flak_38.webp",
+   "w": 376,
+   "h": 502,
+   "sheet": "Extra Units US-GE"
+  },
+  {
+   "id": "feldwebel_ss",
+   "name": "Feldwebel SS",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "hon1-gazette-6",
+   "size": "n",
+   "stripes": [
+    "KO"
+   ],
+   "img": "img/hon/v1/ge/options/feldwebel_ss.webp",
+   "w": 350,
+   "h": 335,
+   "sheet": "Gazette 6"
+  },
+  {
+   "id": "feldwebel_fallschirmjager",
+   "name": "Feldwebel Fallschirmjager",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "hon1-gazette-6",
+   "size": "n",
+   "stripes": [
+    "KO"
+   ],
+   "img": "img/hon/v1/ge/options/feldwebel_fallschirmjager.webp",
+   "w": 330,
+   "h": 335,
+   "sheet": "Gazette 6"
+  },
+  {
+   "id": "feldwebel_gazette_6",
+   "name": "Feldwebel",
+   "cat": "order",
+   "cost": 30,
+   "squares": 1,
+   "set": "hon1-gazette-6",
+   "size": "n",
+   "stripes": [
+    "KO"
+   ],
+   "img": "img/hon/v1/ge/options/feldwebel_gazette_6.webp",
+   "w": 350,
+   "h": 340,
+   "sheet": "Gazette 6"
   }
  ]
 };

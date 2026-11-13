@@ -1,0 +1,297 @@
+{
+ "src": "Gazette 6/Gazette 6 Punchboard.jpg",
+ "nat": "ge",
+ "set": "hon1-gazette-6",
+ "sheet": "Gazette 6",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Feldwebel",
+   "cost": 30,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "ge",
+   "box": [
+    90,
+    100,
+    1165,
+    748
+   ],
+   "sub": "Field Support",
+   "type": "command",
+   "slots": [
+    {
+     "box": [
+      150,
+      248,
+      472,
+      642
+     ],
+     "size": "n",
+     "stripes": [
+      "KO"
+     ]
+    },
+    {
+     "box": [
+      755,
+      248,
+      1080,
+      642
+     ],
+     "size": "n",
+     "stripes": [
+      "KO"
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "Sergeant",
+   "cost": 30,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "us",
+   "box": [
+    90,
+    748,
+    1165,
+    1398
+   ],
+   "sub": "Field Support",
+   "type": "command",
+   "slots": [
+    {
+     "box": [
+      150,
+      913,
+      472,
+      1307
+     ],
+     "size": "n",
+     "stripes": [
+      "KO"
+     ]
+    },
+    {
+     "box": [
+      755,
+      913,
+      1080,
+      1307
+     ],
+     "size": "n",
+     "stripes": [
+      "KO"
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "Sergeant",
+   "cost": 30,
+   "rot": 0,
+   "snap": false,
+   "squares": 1,
+   "nat": "uk",
+   "box": [
+    90,
+    1400,
+    1165,
+    2045
+   ],
+   "sub": "Field Support",
+   "type": "command",
+   "slots": [
+    {
+     "box": [
+      150,
+      1563,
+      472,
+      1957
+     ],
+     "size": "n",
+     "stripes": [
+      "KO"
+     ]
+    },
+    {
+     "box": [
+      755,
+      1563,
+      1080,
+      1957
+     ],
+     "size": "n",
+     "stripes": [
+      "KO"
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "option",
+   "name": "Feldwebel SS",
+   "cost": 5,
+   "rot": 270,
+   "snap": false,
+   "squares": 0,
+   "nat": "ge",
+   "box": [
+    95,
+    2050,
+    430,
+    2400
+   ],
+   "stripes": [
+    "KO"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Feldwebel Fallschirmjager",
+   "cost": 5,
+   "rot": 270,
+   "snap": false,
+   "squares": 0,
+   "nat": "ge",
+   "box": [
+    95,
+    2395,
+    430,
+    2725
+   ],
+   "stripes": [
+    "KO"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Sergeant Rangers",
+   "cost": 5,
+   "rot": 270,
+   "snap": false,
+   "squares": 0,
+   "nat": "us",
+   "box": [
+    95,
+    2745,
+    430,
+    3050
+   ],
+   "stripes": [
+    "KO"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Sergeant Paratrooper",
+   "cost": 5,
+   "rot": 270,
+   "snap": false,
+   "squares": 0,
+   "nat": "uk",
+   "box": [
+    95,
+    3060,
+    430,
+    3395
+   ],
+   "stripes": [
+    "KO"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Feldwebel",
+   "cost": 30,
+   "rot": 270,
+   "snap": false,
+   "squares": 1,
+   "nat": "ge",
+   "box": [
+    520,
+    2050,
+    860,
+    2400
+   ],
+   "stripes": [
+    "KO"
+   ],
+   "size": "n",
+   "cat": "order"
+  },
+  {
+   "kind": "option",
+   "name": "Sergeant",
+   "cost": 30,
+   "rot": 270,
+   "snap": false,
+   "squares": 1,
+   "nat": "us",
+   "box": [
+    520,
+    2395,
+    860,
+    2725
+   ],
+   "stripes": [
+    "KO"
+   ],
+   "size": "n",
+   "cat": "order"
+  },
+  {
+   "kind": "option",
+   "name": "Sergeant Paratrooper",
+   "cost": 5,
+   "rot": 270,
+   "snap": false,
+   "squares": 0,
+   "nat": "us",
+   "box": [
+    520,
+    2745,
+    860,
+    3050
+   ],
+   "stripes": [
+    "KO"
+   ],
+   "size": "n",
+   "cat": "gear"
+  },
+  {
+   "kind": "option",
+   "name": "Sergeant",
+   "cost": 30,
+   "rot": 270,
+   "snap": false,
+   "squares": 1,
+   "nat": "uk",
+   "box": [
+    520,
+    3060,
+    860,
+    3395
+   ],
+   "stripes": [
+    "KO"
+   ],
+   "size": "n",
+   "cat": "order"
+  }
+ ]
+}

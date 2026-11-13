@@ -1,0 +1,207 @@
+{
+ "src": "FFI Civilians Under Fire/FFI Civilians Under Fire Punchboard 3 Front.png",
+ "nat": "ge",
+ "sheet": "Civilians Under Fire",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Ilda",
+   "sub": "She Wolf of the SS - Heroic Platoon",
+   "cost": 65,
+   "type": "hero",
+   "nat": "ge",
+   "snap": false,
+   "box": [
+    457,
+    109,
+    2261,
+    697
+   ],
+   "rot": 0,
+   "squares": 2,
+   "units": [
+    [
+     "Ilda",
+     1
+    ],
+    [
+     "Leibw\u00e4chter",
+     1
+    ],
+    [
+     "Mercedes Benz",
+     1
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      518,
+      238,
+      933,
+      654
+     ],
+     "size": "wide",
+     "left": [
+      "black",
+      "white",
+      "black"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      1537,
+      238,
+      1861,
+      654
+     ],
+     "size": "narrow",
+     "left": [
+      "white"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      1881,
+      238,
+      2204,
+      654
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "white"
+     ]
+    }
+   ],
+   "notes": "stripe colours approximate (black/white/grey bands on SD badge slots); Ilda is a heroic platoon, has a star marker"
+  },
+  {
+   "kind": "option",
+   "name": "Hundestaffel",
+   "cost": 75,
+   "nat": "ge",
+   "box": [
+    60,
+    1250,
+    440,
+    1620
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 2,
+   "units": [
+    [
+     "Bluthund",
+     1
+    ],
+    [
+     "Dogs",
+     1
+    ],
+    [
+     "Gestapo",
+     1
+    ]
+   ],
+   "notes": ""
+  },
+  {
+   "kind": "option",
+   "name": "Untersuchung",
+   "cost": 75,
+   "nat": "ge",
+   "box": [
+    530,
+    1250,
+    910,
+    1620
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "black"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 2,
+   "units": [
+    [
+     "Inspektor",
+     1
+    ],
+    [
+     "Gestapo",
+     2
+    ]
+   ],
+   "notes": ""
+  },
+  {
+   "kind": "option",
+   "name": "Opel Blitz",
+   "cost": 10,
+   "nat": "ge",
+   "box": [
+    1581,
+    2041,
+    1838,
+    2395
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "grey",
+    "black",
+    "grey"
+   ],
+   "name_colour": "white",
+   "markers": null,
+   "squares": 1,
+   "units": [
+    [
+     "Opel Blitz",
+     1
+    ]
+   ],
+   "notes": ""
+  },
+  {
+   "kind": "option",
+   "name": "Heroic",
+   "cost": 30,
+   "nat": "fr",
+   "box": [
+    1947,
+    2041,
+    2207,
+    2395
+   ],
+   "rot": 0,
+   "snap": false,
+   "stripes": [
+    "blue",
+    "white",
+    "red"
+   ],
+   "name_colour": "red",
+   "markers": "X3",
+   "squares": 0,
+   "units": [],
+   "notes": "French heroic medal option"
+  }
+ ]
+}

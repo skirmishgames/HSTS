@@ -15,7 +15,7 @@ def snap(g,x0,y0,x1,y1,win=45):
     colx=gx[ys,:].mean(axis=0); rowy=gy[:,xs].mean(axis=1)
     return best(colx,x0,0,W),best(rowy,y0,0,H),best(colx,x1,0,W),best(rowy,y1,0,H)
 data={}
-for n in ('us','ge','uk'):
+for n in ('us','ge','uk','fr'):
     s=open(R+'data/hon-v1-%s.js'%n).read(); data[n]=json.loads(s[s.index('= {')+2:s.rindex(';')])
 dbg=[]
 for f in sorted(glob.glob('manual/*.json')):
@@ -33,6 +33,7 @@ for f in sorted(glob.glob('manual/*.json')):
                 sx0,sy0,sx1,sy1=sl['box']  # sheet coords, only valid for rot 0
                 slots.append({'x':round((sx0-x0)/W,4),'y':round((sy0-y0)/H,4),'w':round((sx1-sx0)/W,4),'h':round((sy1-sy0)/H,4),'size':sl.get('size','n'),'stripes':sl['stripes']})
             if any(t['name']==nm and t['set']==setc for t in D['tiles']): continue
+            for sl in it.get('slots_rel',[]): slots.append({'x':sl[0],'y':sl[1],'w':sl[2],'h':sl[3],'size':sl[4],'stripes':sl[5]})
             tid=slug(nm)
             if any(t['id']==tid for t in D['tiles']): tid+='_'+slug(M['sheet'])
             if any(t['id']==tid for t in D['tiles']): print('skip existing',tid); continue

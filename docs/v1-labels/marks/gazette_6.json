@@ -1,0 +1,358 @@
+{
+ "src": "Gazette 6/Gazette 6 Punchboard.jpg",
+ "nat": "ge",
+ "sheet": "Gazette 6",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Feldwebel",
+   "sub": "Field Support",
+   "cost": 30,
+   "type": "command",
+   "nat": "ge",
+   "box": [
+    90,
+    100,
+    1165,
+    748
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [],
+   "slots": [
+    {
+     "box": [
+      150,
+      248,
+      472,
+      642
+     ],
+     "size": "narrow",
+     "left": [
+      "black",
+      "yellow"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      755,
+      248,
+      1080,
+      642
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "black",
+      "yellow"
+     ]
+    }
+   ],
+   "snap": false,
+   "notes": "Large red '200+' printed at top right; gold star tab top left; Balkenkreuz badge in both slots."
+  },
+  {
+   "kind": "tile",
+   "name": "Sergeant",
+   "sub": "Field Support",
+   "cost": 30,
+   "type": "command",
+   "nat": "us",
+   "box": [
+    90,
+    748,
+    1165,
+    1398
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [],
+   "slots": [
+    {
+     "box": [
+      150,
+      913,
+      472,
+      1307
+     ],
+     "size": "narrow",
+     "left": [
+      "black",
+      "yellow"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      755,
+      913,
+      1080,
+      1307
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "black",
+      "yellow"
+     ]
+    }
+   ],
+   "snap": false,
+   "notes": "Large red '200+' printed at top right; gold star tab top left; US star badge in both slots."
+  },
+  {
+   "kind": "tile",
+   "name": "Sergeant",
+   "sub": "Field Support",
+   "cost": 30,
+   "type": "command",
+   "nat": "uk",
+   "box": [
+    90,
+    1400,
+    1165,
+    2045
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [],
+   "slots": [
+    {
+     "box": [
+      150,
+      1563,
+      472,
+      1957
+     ],
+     "size": "narrow",
+     "left": [
+      "black",
+      "yellow"
+     ],
+     "right": [
+      "black"
+     ]
+    },
+    {
+     "box": [
+      755,
+      1563,
+      1080,
+      1957
+     ],
+     "size": "narrow",
+     "left": [
+      "black"
+     ],
+     "right": [
+      "black",
+      "yellow"
+     ]
+    }
+   ],
+   "snap": false,
+   "notes": "Large red '200+' printed at top right; gold star tab top left; RAF roundel badge in both slots."
+  },
+  {
+   "kind": "option",
+   "name": "Feldwebel SS",
+   "cost": 5,
+   "nat": "ge",
+   "box": [
+    95,
+    2050,
+    430,
+    2400
+   ],
+   "rot": 270,
+   "stripes": [
+    "black",
+    "yellow",
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "snap": false,
+   "notes": "Black bands with orange stripe at top and bottom of the rotated card. "
+  },
+  {
+   "kind": "option",
+   "name": "Feldwebel Fallschirmjager",
+   "cost": 5,
+   "nat": "ge",
+   "box": [
+    95,
+    2395,
+    430,
+    2725
+   ],
+   "rot": 270,
+   "stripes": [
+    "black",
+    "yellow",
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "snap": false,
+   "notes": "Black bands with orange stripe at top and bottom of the rotated card. Printed FALLSCHIRMJAGER (umlaut not legible)."
+  },
+  {
+   "kind": "option",
+   "name": "Sergeant Rangers",
+   "cost": 5,
+   "nat": "us",
+   "box": [
+    95,
+    2745,
+    430,
+    3050
+   ],
+   "rot": 270,
+   "stripes": [
+    "black",
+    "yellow",
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "snap": false,
+   "notes": "Black bands with orange stripe at top and bottom of the rotated card. "
+  },
+  {
+   "kind": "option",
+   "name": "Sergeant Paratrooper",
+   "cost": 5,
+   "nat": "uk",
+   "box": [
+    95,
+    3060,
+    430,
+    3395
+   ],
+   "rot": 270,
+   "stripes": [
+    "black",
+    "yellow",
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "snap": false,
+   "notes": "Black bands with orange stripe at top and bottom of the rotated card. Red Pegasus badge (British airborne)."
+  },
+  {
+   "kind": "option",
+   "name": "Feldwebel",
+   "cost": 30,
+   "nat": "ge",
+   "box": [
+    520,
+    2050,
+    860,
+    2400
+   ],
+   "rot": 270,
+   "stripes": [
+    "black",
+    "yellow",
+    "black"
+   ],
+   "name_colour": "yellow",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "snap": false,
+   "notes": "Black bands with orange stripe at top and bottom of the rotated card. "
+  },
+  {
+   "kind": "option",
+   "name": "Sergeant",
+   "cost": 30,
+   "nat": "us",
+   "box": [
+    520,
+    2395,
+    860,
+    2725
+   ],
+   "rot": 270,
+   "stripes": [
+    "black",
+    "yellow",
+    "black"
+   ],
+   "name_colour": "yellow",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "snap": false,
+   "notes": "Black bands with orange stripe at top and bottom of the rotated card. US flag art."
+  },
+  {
+   "kind": "option",
+   "name": "Sergeant Paratrooper",
+   "cost": 5,
+   "nat": "us",
+   "box": [
+    520,
+    2745,
+    860,
+    3050
+   ],
+   "rot": 270,
+   "stripes": [
+    "black",
+    "yellow",
+    "black"
+   ],
+   "name_colour": "red",
+   "markers": null,
+   "squares": 0,
+   "units": [],
+   "snap": false,
+   "notes": "Black bands with orange stripe at top and bottom of the rotated card. Blue parachute badge (US airborne)."
+  },
+  {
+   "kind": "option",
+   "name": "Sergeant",
+   "cost": 30,
+   "nat": "uk",
+   "box": [
+    520,
+    3060,
+    860,
+    3395
+   ],
+   "rot": 270,
+   "stripes": [
+    "black",
+    "yellow",
+    "black"
+   ],
+   "name_colour": "yellow",
+   "markers": null,
+   "squares": 1,
+   "units": [],
+   "snap": false,
+   "notes": "Black bands with orange stripe at top and bottom of the rotated card. Union flag art."
+  }
+ ]
+}

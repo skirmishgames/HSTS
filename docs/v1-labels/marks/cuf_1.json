@@ -1,0 +1,93 @@
+{
+ "src": "FFI Civilians Under Fire/FFI Civilians Under Fire Punchboard 1 Front.png",
+ "nat": "fr",
+ "sheet": "Civilians Under Fire",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Alexandre Renaud",
+   "sub": "Happy Mayor",
+   "cost": 10,
+   "type": "hero",
+   "nat": "fr",
+   "box": [
+    80,
+    120,
+    893,
+    715
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [
+    [
+     "Alexandre",
+     1
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      508,
+      252,
+      825,
+      681
+     ],
+     "size": "wide",
+     "left": [
+      "white"
+     ],
+     "right": [
+      "white"
+     ]
+    }
+   ],
+   "notes": "slot shows the Gallic-cockerel civilian badge on a white band with grey above and below",
+   "snap": false
+  },
+  {
+   "kind": "tile",
+   "name": "Bernard Ferrand",
+   "sub": "Armoured Priest",
+   "cost": 35,
+   "type": "hero",
+   "nat": "fr",
+   "box": [
+    1462,
+    120,
+    2259,
+    712
+   ],
+   "rot": 0,
+   "squares": 1,
+   "units": [
+    [
+     "Bernard",
+     1
+    ],
+    [
+     "Canticle",
+     3
+    ]
+   ],
+   "slots": [
+    {
+     "box": [
+      1880,
+      244,
+      2205,
+      690
+     ],
+     "size": "wide",
+     "left": [
+      "white"
+     ],
+     "right": [
+      "white"
+     ]
+    }
+   ],
+   "notes": "slot shows the Gallic-cockerel civilian badge on a white band with grey above and below",
+   "snap": false
+  }
+ ]
+}
