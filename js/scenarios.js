@@ -51,11 +51,19 @@
       if (d.part) facts.push(['Part of', d.part.name + (d.part.n ? ', scenario ' + d.part.n + ' of ' + d.part.of : '')]);
       if (d.credit) facts.push(['Credit', d.credit]);
       facts.push(['Length', d.n + (d.n === 1 ? ' page' : ' pages')]);
+      var tl = d.scn && d.scn.tiles && d.scn.tiles.length ? d.scn.tiles.join(', ') : '';
+      if (d.scn) {
+        if (d.scn.sides) facts.push(['Sides', d.scn.sides]);
+        if (d.scn.pts) facts.push(['Army points', d.scn.pts]);
+        if (d.scn.turns) facts.push(['Turns', d.scn.turns]);
+        if (tl) facts.push(['Map tiles', tl]);
+        else if (d.scn.tilesNote) facts.push(['Map tiles', d.scn.tilesNote]);
+      }
       return {
-        id: d.id, title: d.title.replace(/^Contest scenario \d+: /, ''), type: t, pages: String(d.n), date: d.part ? 'Part of ' + d.part.name : '',
+        id: d.id, title: d.title.replace(/^Contest scenario \d+: /, ''), type: t, pages: String(d.n), date: tl ? 'Map tiles: ' + tl : d.part ? 'Part of ' + d.part.name : '',
         summary: d.summary, facts: facts, doc: d, v1: 1,
         badge: fan ? 'Fan made' : hos ? (d.kind === 'Rules and game aids' ? 'Rules' : d.kind === 'Punchboards and tiles' ? 'Tiles' : 'Scenario') :  d.group === 'gazettes' ? 'Story' : isIntro ? 'Pack' : 'Scenario', bcls: fan ? 'c' : hos ? (d.kind === 'Rules and game aids' || d.kind === 'Punchboards and tiles' ? 'r' : 's') : isIntro || d.group === 'gazettes' ? 'r' : 's',
-        text: (d.text || []).join(' ')
+        text: (d.text || []).join(' '), stext: d.scn && window.HTS_FANSCN ? window.HTS_FANSCN.text(d) : ''
       };
     });
     var ORD = hos ? HOSORDER : fan ? FANORDER : V1ORDER;
@@ -68,7 +76,7 @@
     var d = isLib() ? v1load() : window.HTS_SCEN['hon-' + S.b];
     d.entries.forEach(function (e) {
       e.head = norm(e.title);
-      e.hay = norm((e.v1 ? e.text + ' ' + (e.doc.group === 'gazettes' ? 'gazette devil pig news ' : e.doc.group === 'fanmade' ? 'fan made unofficial scenario ' : 'scenario ') + (e.date || '') + ' ' : '') + (e.armies ? 'army builder armies ' : '') + e.title + ' ' + e.type + ' ' + e.date + ' page ' + e.pages + ' ' + e.summary + ' ' + e.facts.map(function (f) { return f[0] + ' ' + f[1]; }).join(' '));
+      e.hay = norm((e.v1 ? e.text + ' ' + (e.stext || '') + ' ' + (e.doc.group === 'gazettes' ? 'gazette devil pig news ' : e.doc.group === 'fanmade' ? 'fan made unofficial scenario ' : 'scenario ') + (e.date || '') + ' ' : '') + (e.armies ? 'army builder armies ' : '') + e.title + ' ' + e.type + ' ' + e.date + ' page ' + e.pages + ' ' + e.summary + ' ' + e.facts.map(function (f) { return f[0] + ' ' + f[1]; }).join(' '));
     });
     d.entries.forEach(function (e) {
       e.kind = e.v1 && (e.doc.ed === 'Community' || e.doc.group === 'fanmade') ? 'fan' : 'official';
@@ -101,6 +109,8 @@
   function armyPts(e) {
     if (e.v1) {
       if (e.bcls === 'r') return null;
+      var sp = e.doc.scn && window.HTS_FANSCN ? window.HTS_FANSCN.maxPts(e.doc) : null;
+      if (sp != null) return sp;
       return maxOf(e.text + ' ' + e.summary, PTS_LIB, true);
     }
     var t = e.facts.filter(function (f) { return f[0] === 'Armies'; }).map(function (f) { return f[1]; }).join(' ');

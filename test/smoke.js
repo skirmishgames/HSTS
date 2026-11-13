@@ -892,9 +892,9 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   for (const [id, n, pdf] of LIB.ids) { for (let k = 1; k <= n; k++) { if (!fs.existsSync(path.join(root, 'img/hon/lib/' + id + '/p' + String(k).padStart(2, '0') + '.webp'))) missingLib.push(id + k); } if (pdf && !fs.existsSync(path.join(root, pdf))) missingLib.push(pdf); }
   ok(missingLib.length === 0, 'documents: every page picture and PDF exists ' + missingLib.slice(0, 5).join(','));
   const FANC = await gp.evaluate(() => { const d = window.HTS_LIB.docs.filter(x => x.group === 'fanmade'); return { n: d.length, pdf: d.filter(x => x.pdf).length, bad: d.filter(x => x.ed !== 'Community' || !x.kind || !/^Fan made|^OPJH/.test(x.credit)).length, big: d.filter(x => x.pdf && /MB/.test(x.pdf.size) && parseFloat(x.pdf.size) > 20).length }; });
-  ok(FANC.n === 42 && FANC.pdf === 33 && FANC.bad === 0 && FANC.big === 0, 'documents: 42 fan made documents, 33 with a PDF, all labelled community and fan made, no PDF over 20 MB ' + JSON.stringify(FANC));
+  ok(FANC.n === 42 && FANC.pdf === 4 && FANC.bad === 0 && FANC.big === 0, 'documents: 42 fan made documents, 4 with a PDF (the campaigns), all labelled community and fan made, no PDF over 20 MB ' + JSON.stringify(FANC));
   await gp.goto(base + 'guides.html?d=fan-the-bunker'); await gp.waitForTimeout(400);
-  ok(/Fan made/.test(await gp.locator('.smeta').innerText()) && /not official/i.test(await gp.locator('.snote').first().innerText()) && await gp.locator('a[download]').count() === 1, 'fan made document: labelled unofficial, has a PDF');
+  ok(/Fan made/.test(await gp.locator('.smeta').innerText()) && /not official/i.test(await gp.locator('.snote').first().innerText()) && await gp.locator('a[download]').count() === 0, 'fan made document: labelled unofficial, rebuilt layout has no PDF');
   await gp.goto(base + 'guides.html?d=fan-t1-encounter-on-the-road'); await gp.waitForTimeout(400);
   ok(await gp.locator('a[download]').count() === 0 && /no PDF to download/i.test(await gp.locator('#out').innerText()), 'fan made document without a good layout: web only, no PDF');
   await gp.goto(base + 'guides.html'); await gp.waitForTimeout(400);

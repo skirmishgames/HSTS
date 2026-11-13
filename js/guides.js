@@ -52,7 +52,24 @@
 
   function paras(t) { return String(t).split(/\n{2,}/).map(function (p) { return '<p>' + esc(p.replace(/\n/g, ' ')) + '</p>'; }).join(''); }
 
+  /* A fan made scenario with a scn object: header, facts, sections, maps, then the original pages in an expander. */
+  function renderScn(dc) {
+    var L = lib(), out = $('out'), F = window.HTS_FANSCN;
+    var same = L.docs.filter(function (x) { return x.group === dc.group; }), i = same.indexOf(dc), prev = same[i - 1], next = same[i + 1];
+    document.title = dc.title + ', Fan made scenario, Heroes System Tactical Scale';
+    $('subtitle').textContent = 'Fan made scenarios';
+    var h = '<nav class="scrumb" aria-label="Breadcrumb"><a href="scenarios.html?b=fan&amp;e=' + dc.id + '">All fan made scenarios</a></nav>';
+    h += '<h1 class="stitle">' + esc(dc.title) + '</h1>';
+    h += '<p class="smeta">' + ['Fan made, unofficial', dc.kind, dc.scn.by ? 'By ' + dc.scn.by : ''].filter(Boolean).map(esc).join(' &middot; ') + '</p>';
+    h += '<aside class="snote">Fan made by players, not published by the publisher and not official. This page was rebuilt from the author\u2019s pages, which are kept at the bottom. Where this differs from the Big Red One (V2) rules, the V2 rules win.</aside>';
+    h += '<p class="htext">' + esc(dc.summary) + '</p>';
+    h += F.body(dc);
+    h += '<nav class="spn" aria-label="Previous and next">' + (prev ? '<a class="btn ghost" href="guides.html?d=' + prev.id + '">&larr; ' + esc(prev.title) + '</a>' : '<span></span>') + (next ? '<a class="btn ghost" href="guides.html?d=' + next.id + '">' + esc(next.title) + ' &rarr;</a>' : '<span></span>') + '</nav>';
+    out.innerHTML = h;
+  }
+
   function renderDoc(dc) {
+    if (dc.scn && window.HTS_FANSCN) return renderScn(dc);
     var L = lib(), out = $('out'), g = grp(dc.group);
     var same = L.docs.filter(function (x) { return x.group === dc.group; }), i = same.indexOf(dc), prev = same[i - 1], next = same[i + 1];
     document.title = dc.title + ', Documents, Heroes System Tactical Scale';
@@ -101,7 +118,7 @@
     lib().docs.forEach(function (dc) {
       if (S.c !== 'all' && dc.group !== S.c) return;
       if (!toks.length) { res.push({ dc: dc, hits: [] }); return; }
-      var head = norm(dc.title + ' ' + dc.summary + ' ' + bgText(dc)), hits = [];
+      var head = norm(dc.title + ' ' + dc.summary + ' ' + bgText(dc) + ' ' + (dc.scn && window.HTS_FANSCN ? window.HTS_FANSCN.text(dc) : '')), hits = [];
       dc.text.forEach(function (t, i) {
         var hay = norm(t);
         if (toks.every(function (k) { return hay.indexOf(k) >= 0; })) hits.push(i + 1);
@@ -191,7 +208,10 @@
       document.documentElement.setAttribute('data-theme', S.theme); $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
     };
     render();
-    if (location.hash) { var t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
+    if (location.hash) {
+      var t = document.getElementById(location.hash.slice(1));
+      if (t) { var od = t.closest('details'); if (od) od.open = true; t.scrollIntoView(); }
+    }
   }
   init();
 })();
