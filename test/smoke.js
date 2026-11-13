@@ -1109,7 +1109,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     await ab.locator('.lcard', { hasText: '502' }).first().locator('[data-add]').click(); await ab.waitForTimeout(200);
     { await ab.locator('.atile').last().locator('.slot').nth(1).click(); await ab.waitForTimeout(200);
       const pa = await ab.locator('.pcard .nm').allInnerTexts();
-      ok(pa.indexOf('Knife') >= 0 && pa.indexOf('Dropped') >= 0 && pa.indexOf('Grenade') >= 0, 'first edition: paratrooper black slot takes airborne and generic black options (' + pa.length + ')');
+      ok(pa.indexOf('Knife') >= 0 && pa.indexOf('Sprinter') >= 0 && pa.indexOf('Grenade') >= 0 && pa.indexOf('Dropped') < 0 && pa.indexOf('Engineers Squad') < 0, 'first edition: paratrooper small black slot takes small airborne and generic black options, not the large Dropped or Engineers Squad (' + pa.length + ')');
       await ab.keyboard.press('Escape'); }
     await ab.close();
     // French (FFI): first edition nation

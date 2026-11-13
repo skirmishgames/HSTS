@@ -2765,7 +2765,7 @@ HTS_DATA["hon-v1-us"] = {
    "cost": 50,
    "squares": 2,
    "set": "hon1-sainte-mere-eglise",
-   "size": "n",
+   "size": "w",
    "stripes": [
     "KA"
    ],
@@ -2882,7 +2882,7 @@ HTS_DATA["hon-v1-us"] = {
    "cost": 90,
    "squares": 3,
    "set": "hon1-sainte-mere-eglise",
-   "size": "n",
+   "size": "w",
    "stripes": [
     "KA"
    ],
@@ -2949,7 +2949,7 @@ HTS_DATA["hon-v1-us"] = {
    "cost": 10,
    "squares": 0,
    "set": "hon1-sainte-mere-eglise",
-   "size": "n",
+   "size": "w",
    "stripes": [
     "KA"
    ],
@@ -3242,7 +3242,7 @@ HTS_DATA["hon-v1-us"] = {
    "cost": 80,
    "squares": 3,
    "set": "hon1-sainte-mere-eglise",
-   "size": "n",
+   "size": "w",
    "stripes": [
     "KA"
    ],

@@ -534,7 +534,7 @@ HTS_DATA["hon-v1-fr"] = {
    "cost": 60,
    "squares": 2,
    "set": "hon1-the-ventura-and-smugglers",
-   "size": "w",
+   "size": "n",
    "stripes": [
     "WG"
    ],

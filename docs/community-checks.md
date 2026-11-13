@@ -74,7 +74,7 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | FFI MG42 | 15 | narrow | platoon (BWR) | support | Civilians Under Fire |
 | FFI Panzerschreck | 20 | narrow | platoon (BWR) | support | Civilians Under Fire |
 | FFI Citroen T23 | 15 | narrow | platoon (BWR) | support | Civilians Under Fire |
-| Sailors | 60 | long | platoon (WG) | support | Ventura and Smugglers |
+| Sailors | 60 | narrow | platoon (WG) | support | Ventura and Smugglers |
 
 ### Germany
 
@@ -399,14 +399,14 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Bangalore | 10 | narrow | platoon (RWRY) | gear | D-Day |
 | Heroic | 30 | narrow | black | gear | D-Day |
 | Grapnel | 5 | narrow | platoon (RWRY) | gear | D-Day |
-| Willys .50 Cal | 50 | narrow | airborne black | support | Sainte-Mere-Eglise |
+| Willys .50 Cal | 50 | long | airborne black | support | Sainte-Mere-Eglise |
 | Paratroopers | 60 | long | platoon (KRKA) | support | Sainte-Mere-Eglise |
 | Bazooka Squad | 65 | long | platoon (KRKA) | support | Sainte-Mere-Eglise |
 | Pathfinders Squad | 60 | long | platoon (KRKA) | support | Sainte-Mere-Eglise |
-| Engineers Squad | 90 | narrow | airborne black | support | Sainte-Mere-Eglise |
+| Engineers Squad | 90 | long | airborne black | support | Sainte-Mere-Eglise |
 | Walking Fire | 10 | narrow | airborne black | gear | Sainte-Mere-Eglise |
 | Knife | 15 | narrow | airborne black | gear | Sainte-Mere-Eglise |
-| Dropped | 10 | narrow | airborne black | gear | Sainte-Mere-Eglise |
+| Dropped | 10 | long | airborne black | gear | Sainte-Mere-Eglise |
 | Paratroopers | 60 | long | platoon (WRW) | support | Sainte-Mere-Eglise |
 | .30 Cal Squad | 60 | long | platoon (WRW) | support | Sainte-Mere-Eglise |
 | Pathfinders Squad | 60 | long | platoon (WRW) | support | Sainte-Mere-Eglise |
@@ -418,7 +418,7 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Weapon Squad | 60 | long | platoon (BWB) | support | Sainte-Mere-Eglise |
 | Heavy Weapons Squad | 55 | long | platoon (BWB) | support | Sainte-Mere-Eglise |
 | Waco Glider | 15 | narrow | airborne black | gear | Sainte-Mere-Eglise |
-| Pathfinders Squad | 80 | narrow | airborne black | support | Sainte-Mere-Eglise |
+| Pathfinders Squad | 80 | long | airborne black | support | Sainte-Mere-Eglise |
 | Willys .50 Cal | 25 | narrow | airborne black | support | Sainte-Mere-Eglise |
 | 75mm Pack Howitzer M8 | 30 | narrow | black | support | Gazette 1 |
 | Minesweepers | 10 | narrow | black | support | Gazette 1 |
