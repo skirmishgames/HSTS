@@ -1264,6 +1264,108 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     await ep.evaluate(() => { try { localStorage.clear(); } catch (e) {} });
     await ep.close();
   }
+  // scenario filters: kind, army size, needs
+  {
+    const vm = require('vm'); const ctx = { window: {} }; vm.createContext(ctx);
+    ['hon-library', 'hon-needs'].forEach(f => vm.runInContext(fs.readFileSync(path.join(root, 'data', f + '.js'), 'utf8'), ctx));
+    const libDocs = ctx.window.HTS_LIB.docs, NEEDS = ctx.window.HTS_NEEDS;
+    const fp = await b.newPage({ viewport: { width: 1280, height: 900 } }); fp.on('dialog', d => d.accept());
+    const fperrs = []; fp.on('pageerror', e => fperrs.push(e.message)); fp.on('console', m => { if (m.type() === 'error') fperrs.push(m.text()); });
+    const go = async qs => { await fp.goto(base + 'scenarios.html' + qs); await fp.waitForTimeout(350); };
+    const rows = () => fp.locator('.hrow').count();
+    const chipN = async sel => { const o = {}; for (const t of await fp.locator(sel + ' .chip').allInnerTexts()) { const m = /^(.*?)\s+(\d+)$/.exec(t.replace(/\n/g, ' ').trim()); o[m[1]] = Number(m[2]); } return o; };
+    await fp.goto(base + 'scenarios.html'); await fp.evaluate(() => { try { localStorage.clear(); } catch (e) {} });
+    await go('?b=bro');
+    ok(await fp.locator('#kinds .chip').count() === 3 && await fp.locator('#sizes .chip').count() === 5 && await fp.locator('#needsSel').count() === 1, 'scenario filters: Kind, Army size and Needs are on the page');
+    let z = await chipN('#sizes');
+    ok(z['Up to 150'] === 0 && z['151 to 300'] === 2 && z['Over 300'] === 6 && z['Not stated'] === 4 && z.All === 12, 'scenario filters: Big Red One sizes read from the Armies line (' + JSON.stringify(z) + ')');
+    await fp.click('[data-fz="le300"]');
+    ok(await rows() === 2 && (await fp.locator('.hrow .ht').allInnerTexts()).join('|') === 'Plain Carnage|Chicken Game', 'scenario filters: 151 to 300 lists Plain Carnage and Chicken Game');
+    await fp.click('[data-fz="none"]');
+    ok(await rows() === 4 && /4 of 12 entries/.test(await fp.locator('#stat').innerText()), 'scenario filters: Not stated holds the four rules entries and the count is shown');
+    await fp.click('[data-fz="all"]');
+    let k = await chipN('#kinds');
+    ok(k.Official === 12 && k['Fan made'] === 0, 'scenario filters: every box scenario is official');
+    await fp.click('[data-fk="fan"]');
+    ok(await rows() === 0 && await fp.locator('.empty2').count() === 1, 'scenario filters: Fan made on a box booklet lists nothing and says so');
+    await fp.click('#btnClear'); ok(await rows() === 12 && await fp.locator('#btnClear').isHidden(), 'scenario filters: Clear filters resets the three filters');
+    // other lists: first edition, fan made, Stalingrad
+    const inList = (g, f) => libDocs.filter(d => g.indexOf(d.group) >= 0).filter(f).length;
+    await go('?b=v1'); k = await chipN('#kinds'); z = await chipN('#sizes');
+    const v1g = ['scenarios', 'single', 'gazettes'], fan1 = inList(v1g, d => d.ed === 'Community');
+    ok(fan1 === 2 && k['Fan made'] === fan1 && k.Official === inList(v1g, () => true) - fan1, 'scenario filters: the first edition list marks its ' + fan1 + ' community documents as fan made (' + JSON.stringify(k) + ')');
+    ok(z['Not stated'] > z['Up to 150'] + z['151 to 300'] + z['Over 300'] && z['Not stated'] + z['Up to 150'] + z['151 to 300'] + z['Over 300'] === z.All, 'scenario filters: first edition entries without a points figure fall under Not stated (' + JSON.stringify(z) + ')');
+    await fp.click('[data-fk="fan"]'); ok(await rows() === fan1, 'scenario filters: Fan made narrows the first edition list to its community documents');
+    await go('?b=fan'); k = await chipN('#kinds'); z = await chipN('#sizes');
+    ok(k['Fan made'] === 42 && k.Official === 0 && z['Up to 150'] === 1 && z['Not stated'] > 0, 'scenario filters: the fan made list is all fan made, with one up to 150 (' + JSON.stringify(z) + ')');
+    await fp.click('[data-fz="le150"]');
+    const two = libDocs.find(d => d.id === 'fan-two-bridges');
+    ok(await rows() === 1 && (await fp.locator('.hrow .ht').innerText()).replace(/…|\.\.\./g, '') === two.title.replace(/…|\.\.\./g, ''), 'scenario filters: the 95 point fan scenario is the one up to 150');
+    await fp.locator('.hhead').first().click();
+    ok(/Army size/.test(await fp.locator('.hbody:not([hidden])').innerText()), 'scenario filters: an opened library entry says where its army size comes from');
+    await go('?b=hos'); k = await chipN('#kinds');
+    ok(k.Official === 25 && k['Fan made'] === 0, 'scenario filters: Stalingrad documents are official');
+    await go('?b=omaha&z=gt300');
+    ok((await fp.locator('.hrow .ht').allInnerTexts()).some(t => /Big River/i.test(t)) && await rows() === 4, 'scenario filters: the Omaha scenario with armies written as (Task Force, 495) is read too');
+    // Needs
+    await go('?b=bro');
+    const opts = async () => fp.locator('#needsSel option').evaluateAll(o => o.map(x => ({ v: x.value, t: x.textContent, d: x.disabled })));
+    let o1 = await opts();
+    ok(o1.length === 2 && o1[1].v === 'CB' && /Big Red One \(8\)/.test(o1[1].t), 'scenario filters: Needs lists only products a listed scenario needs (' + o1.map(x => x.t).join(', ') + ')');
+    let allOk = true, msg = '';
+    for (const bx of ['bro', 'omaha', 'caen', 'ws', 'v1', 'fan', 'hos']) {
+      await go('?b=' + bx);
+      const ol = await opts();
+      const want = new Set(); const ids = await fp.evaluate(() => window.HTS_SCEN_UI.load().entries.map(e => [e.id, !!e.v1]));
+      ids.forEach(([id, v1]) => (NEEDS[(v1 ? 'lib' : bx) + ':' + id] || []).forEach(c => (Array.isArray(c) ? c : [c]).forEach(x => want.add(x))));
+      const got = ol.filter(x => x.v).map(x => x.v);
+      if (got.length !== want.size || got.some(x => !want.has(x))) { allOk = false; msg += bx + ' '; }
+      for (const o of ol.filter(x => x.v && !x.d).slice(0, 3)) {
+        await fp.selectOption('#needsSel', o.v); await fp.waitForTimeout(80);
+        const n = Number(/\((\d+)\)$/.exec(o.t)[1]);
+        if (await rows() !== n || n < 1) { allOk = false; msg += bx + ':' + o.v + ' '; }
+        await fp.selectOption('#needsSel', '');
+      }
+    }
+    ok(allOk, 'scenario filters: on every list Needs offers exactly the products its scenarios need, and each count matches its results ' + msg);
+    // filters combine with each other, the type chips and the search box
+    await go('?b=bro'); await fp.selectOption('#needsSel', 'CB');
+    ok(await rows() === 8 && /4 with no needs tagged are left out/.test(await fp.locator('#stat').innerText()), 'scenario filters: Needs CB lists the 8 tagged scenarios and says 4 untagged ones are left out');
+    await fp.click('[data-type="Campaign"]');
+    ok(await rows() === 6, 'scenario filters: Needs plus the Campaign type chip (6)');
+    await fp.fill('#q', 'caumont'); await fp.waitForTimeout(300);
+    ok(await rows() === 3 && (await fp.locator('.hrow .ht').first().innerText()).startsWith('Caumont'), 'scenario filters: Needs, type and search words combine (the three scenarios that mention Caumont, Caumont first)');
+    await fp.click('[data-fk="fan"]'); ok(await rows() === 0, 'scenario filters: adding Fan made to those gives none');
+    await fp.click('[data-fk="all"]'); await fp.click('[data-fz="le300"]'); ok(await rows() === 0, 'scenario filters: Caumont is over 300, so 151 to 300 gives none');
+    await fp.click('[data-fz="gt300"]'); ok(await rows() === 3, 'scenario filters: and Over 300 gives them');
+    const u = new URL(fp.url());
+    ok(u.searchParams.get('n') === 'CB' && u.searchParams.get('z') === 'gt300' && u.searchParams.get('t') === 'Campaign' && u.searchParams.get('q') === 'caumont' && !u.searchParams.get('k'), 'scenario filters: the filters are kept in the URL like the other state (' + u.search + ')');
+    await fp.goto(fp.url()); await fp.waitForTimeout(350);
+    ok(await rows() === 3 && await fp.locator('#needsSel').inputValue() === 'CB' && await fp.locator('[data-fz="gt300"].on').count() === 1 && await fp.locator('[data-type="Campaign"].on').count() === 1, 'scenario filters: the URL restores the filters');
+    await fp.fill('#q', ''); await fp.waitForTimeout(300);
+    // the box switch keeps what still applies and drops what does not
+    await fp.click('[data-box="caen"]'); await fp.waitForTimeout(250);
+    ok(await fp.locator('#needsSel').inputValue() === 'CB' && /^[1-9]\d* of 8 entries/.test(await fp.locator('#stat').innerText()) && !/[?&]t=/.test(fp.url()), 'scenario filters: switching box drops a type chip the box lacks and keeps Needs CB where it applies');
+    await go('?b=bro&n=ECG'); ok(await fp.locator('#needsSel').inputValue() === '' && await rows() === 12, 'scenario filters: a Needs product that this list does not offer is ignored');
+    // My collection
+    await fp.evaluate(() => { try { localStorage.setItem('hts.hon.own.v1', JSON.stringify({ own: { CB: true }, only: true })); } catch (e) {} });
+    await go('?b=omaha&z=gt300');
+    const hid = async () => { const m = /^(\d+) scenarios? (is|are) hidden/.exec((await fp.locator('#ownnote').innerText()).trim()); return m ? Number(m[1]) : 0; };
+    const nHid = await hid();
+    ok(nHid === 4 && await rows() === 0, 'scenario filters: the collection note counts the 4 Omaha scenarios that My collection hides under Over 300 (' + nHid + ')');
+    await fp.click('[data-fz="none"]'); ok(await hid() === 0 && await rows() === 8, 'scenario filters: under Not stated the collection note counts nothing and 8 entries show');
+    await fp.click('[data-fz="gt300"]'); await fp.click('[data-own-off]'); await fp.waitForTimeout(150);
+    ok(await rows() === nHid, 'scenario filters: "Show everything" adds exactly the number of scenarios the note gave');
+    await fp.evaluate(() => { try { localStorage.clear(); } catch (e) {} });
+    // phone
+    await fp.setViewportSize({ width: 390, height: 844 });
+    for (const th of ['light', 'dark']) {
+      await go('?b=v1&z=le300&k=official'); await fp.evaluate(t => document.documentElement.setAttribute('data-theme', t), th);
+      ok(await fp.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1) && await fp.locator('#needsSel').isVisible(), 'scenario filters: no sideways scroll at 390px in the ' + th + ' theme');
+    }
+    ok(fperrs.length === 0, 'scenario filters: no console errors ' + fperrs.join('|'));
+    await fp.close();
+  }
   // trackers
   const cp = require('child_process');
   let trk = ''; try { trk = cp.execSync('python3 tools/units_tracker.py --strict', { cwd: root }).toString(); } catch (e) { trk = 'FAILED ' + e.stdout; }

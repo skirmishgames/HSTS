@@ -2,7 +2,9 @@
   'use strict';
   var LSK = 'hts.hon.bro.v1';
   var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'omaha', name: 'Bloody Omaha' }, { id: 'caen', name: 'Battle for Caen' }, { id: 'ws', name: 'War Stories' }, { id: 'v1', name: 'First edition (V1)' }, { id: 'fan', name: 'Fan made (unofficial)' }, { id: 'hos', name: 'Heroes of Stalingrad' }];
-  var S = { b: 'bro', q: '', type: 'all', open: {}, theme: 'light' };
+  var S = { b: 'bro', q: '', type: 'all', kind: 'all', size: 'all', needs: '', open: {}, theme: 'light' };
+  var KINDS = [['all', 'All'], ['official', 'Official'], ['fan', 'Fan made']];
+  var SIZES = [['all', 'All'], ['le150', 'Up to 150'], ['le300', '151 to 300'], ['gt300', 'Over 300'], ['none', 'Not stated']];
   var cache = {}, NCOL = 0;
   var SRCN = { bro: 'Scenario Booklet', omaha: 'Bloody Omaha rulebook', caen: 'Battle for Caen booklet V1.4', ws: 'War Stories sheet', v1: 'Library document', fan: 'Library document', hos: 'Library document' };
   function isLib() { return S.b === 'v1' || S.b === 'fan' || S.b === 'hos'; }
@@ -68,16 +70,57 @@
       e.head = norm(e.title);
       e.hay = norm((e.v1 ? e.text + ' ' + (e.doc.group === 'gazettes' ? 'gazette devil pig news ' : e.doc.group === 'fanmade' ? 'fan made unofficial scenario ' : 'scenario ') + (e.date || '') + ' ' : '') + (e.armies ? 'army builder armies ' : '') + e.title + ' ' + e.type + ' ' + e.date + ' page ' + e.pages + ' ' + e.summary + ' ' + e.facts.map(function (f) { return f[0] + ' ' + f[1]; }).join(' '));
     });
+    d.entries.forEach(function (e) {
+      e.kind = e.v1 && (e.doc.ed === 'Community' || e.doc.group === 'fanmade') ? 'fan' : 'official';
+      e.pts = armyPts(e);
+      e.sz = e.pts == null ? 'none' : e.pts <= 150 ? 'le150' : e.pts <= 300 ? 'le300' : 'gt300';
+      var codes = [];
+      (needsOf(e) || []).forEach(function (c) { (Array.isArray(c) ? c : [c]).forEach(function (x) { if (codes.indexOf(x) < 0) codes.push(x); }); });
+      e.nk = codes;
+    });
     cache[S.b] = d;
     return d;
   }
 
-  function renderControls(d) {
+  /* Army size: the largest points figure printed for the scenario. Box booklets print it on the Armies line.
+     Library documents are page text, so the figure is read from the text; packs, books, rules sheets and
+     punchboard documents hold several scenarios or none and are left as Not stated. */
+  var PTS_BOX = /(\d{2,4})\s*(?:army\s+)?points?\b/gi, PTS_ALT = /,\s*(\d{3,4})\)/g;
+  var PTS_LIB = /(?:^|[^\d.,])(\d{2,4})\s*(?:army\s+)?(?:points?|pts)\b/gi;
+  function maxOf(text, rx, bonus) {
+    var best = null, m;
+    rx.lastIndex = 0;
+    while ((m = rx.exec(text))) {
+      var n = Number(m[1]);
+      if (n < 40 || n > 1500) continue;
+      if (bonus && (/bonus\s+of\s*$/i.test(text.slice(Math.max(0, m.index - 14), m.index + 1)) || /^\W*(?:bonus|more|extra)/i.test(text.slice(m.index + m[0].length, m.index + m[0].length + 12)))) continue;
+      if (best == null || n > best) best = n;
+    }
+    return best;
+  }
+  function armyPts(e) {
+    if (e.v1) {
+      if (e.bcls === 'r') return null;
+      return maxOf(e.text + ' ' + e.summary, PTS_LIB, true);
+    }
+    var t = e.facts.filter(function (f) { return f[0] === 'Armies'; }).map(function (f) { return f[1]; }).join(' ');
+    var a = maxOf(t, PTS_BOX, false), b = maxOf(t, PTS_ALT, false);
+    return a == null ? b : b == null ? a : Math.max(a, b);
+  }
+
+  function renderControls(d, F) {
     $('boxes').innerHTML = BOXES.map(function (b) {
       return '<button type="button" data-box="' + b.id + '" class="' + (S.b === b.id ? 'on' : '') + '" aria-pressed="' + (S.b === b.id) + '">' + b.name + '</button>';
     }).join('');
     $('types').innerHTML = '<button type="button" class="chip' + (S.type === 'all' ? ' on' : '') + '" data-type="all">All</button>' +
       d.types.map(function (c) { return '<button type="button" class="chip' + (S.type === c ? ' on' : '') + '" data-type="' + esc(c) + '">' + esc(c) + '</button>'; }).join('');
+    $('kinds').innerHTML = KINDS.map(function (k) { return '<button type="button" class="chip' + (S.kind === k[0] ? ' on' : '') + '" data-fk="' + k[0] + '" aria-pressed="' + (S.kind === k[0]) + '">' + k[1] + ' <span class="count">' + F.kinds[k[0]] + '</span></button>'; }).join('');
+    $('sizes').innerHTML = SIZES.map(function (k) { return '<button type="button" class="chip' + (S.size === k[0] ? ' on' : '') + '" data-fz="' + k[0] + '" aria-pressed="' + (S.size === k[0]) + '">' + k[1] + ' <span class="count">' + F.sizes[k[0]] + '</span></button>'; }).join('');
+    $('needsSel').innerHTML = '<option value="">Any product</option>' + F.needs.map(function (n) {
+      return '<option value="' + esc(n.code) + '"' + (S.needs === n.code ? ' selected' : '') + (!n.n && S.needs !== n.code ? ' disabled' : '') + '>' + esc(OWN.name(n.code)) + ' (' + n.n + ')</option>';
+    }).join('');
+    $('needsSel').value = S.needs;
+    $('btnClear').hidden = S.kind === 'all' && S.size === 'all' && !S.needs;
     $('q').value = S.q;
     var sb = BOXES.filter(function (b) { return b.id === S.b; })[0];
     if ($('subtitle') && sb) $('subtitle').textContent = 'Scenarios index, Heroes of Normandie, ' + sb.name;
@@ -132,7 +175,7 @@
   }
   function body(e) {
     return readLink(e) + '<p class="htext">' + esc(e.summary) + '</p>' +
-      '<dl class="sfacts">' + e.facts.map(function (f) { return '<dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd>'; }).join('') + (needsOf(e) && !e.facts.some(function (f) { return f[0] === 'Required products'; }) ? '<dt>Needs</dt><dd>' + esc(needsText(e)) + '</dd>' : '') + '</dl>' + figs(e) + armies(e) +
+      '<dl class="sfacts">' + e.facts.map(function (f) { return '<dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd>'; }).join('') + (e.v1 && e.pts != null ? '<dt>Army size</dt><dd>Up to ' + e.pts + ' points (the largest figure printed in the text)</dd>' : '') + (needsOf(e) && !e.facts.some(function (f) { return f[0] === 'Required products'; }) ? '<dt>Needs</dt><dd>' + esc(needsText(e)) + '</dd>' : '') + '</dl>' + figs(e) + armies(e) +
       '<p class="hsrc">' + (e.v1 ? 'From the document library, ' + esc(pg(e)) : esc(SRCN[S.b] || 'Scenario Booklet') + ', ' + esc(pg(e))) + '</p>';
   }
   // My collection: what a scenario needs (data/hon-needs.js). No entry means not tagged, and it is never hidden.
@@ -180,29 +223,55 @@
   function render() {
     var d = load();
     NCOL = ncol();
-    renderControls(d);
-    var toks = tokens(S.q), mk = markFn(toks), res = [], hidden = 0, shown = 0;
-    d.entries.forEach(function (e, i) {
-      if (!usable(e)) { hidden++; return; }
-      shown++;
-      if (S.type !== 'all' && e.type !== S.type) return;
+    if (S.type !== 'all' && d.types.indexOf(S.type) < 0) S.type = 'all';
+    var toks = tokens(S.q), mk = markFn(toks);
+    /* one pass for every filter, so each chip and the Needs list can count what it would give with the others as they are */
+    var info = d.entries.map(function (e, i) {
       var score = 0;
       if (toks.length) {
         var padded = ' ' + e.hay + ' ', hp = ' ' + e.head + ' ';
-        if (!toks.every(function (t) { return hit(e.hay, padded, t); })) return;
-        toks.forEach(function (t) { score += countOf(e.hay, t) + (hit(e.head, hp, t) ? 20 : 0); });
+        if (!toks.every(function (t) { return hit(e.hay, padded, t); })) score = -1;
+        else toks.forEach(function (t) { score += countOf(e.hay, t) + (hit(e.head, hp, t) ? 20 : 0); });
       }
-      res.push({ e: e, score: score, i: i });
+      return { e: e, score: score, i: i, own: usable(e) };
     });
+    function ok(x, skip) {
+      var e = x.e;
+      if (skip !== 'own' && !x.own) return false;
+      if (skip !== 'type' && S.type !== 'all' && e.type !== S.type) return false;
+      if (skip !== 'q' && x.score < 0) return false;
+      if (skip !== 'kind' && S.kind !== 'all' && e.kind !== S.kind) return false;
+      if (skip !== 'size' && S.size !== 'all' && e.sz !== S.size) return false;
+      if (skip !== 'needs' && S.needs && e.nk.indexOf(S.needs) < 0) return false;
+      return true;
+    }
+    var F = { kinds: {}, sizes: {}, needs: [] }, byCode = {};
+    /* Needs lists only products that a scenario shown in this list needs; the number is what is left with the other filters on */
+    info.forEach(function (x) { if (x.own) x.e.nk.forEach(function (c) { byCode[c] = 0; }); });
+    if (S.needs && byCode[S.needs] == null) S.needs = '';
+    KINDS.forEach(function (k) { F.kinds[k[0]] = info.filter(function (x) { return ok(x, 'kind') && (k[0] === 'all' || x.e.kind === k[0]); }).length; });
+    SIZES.forEach(function (k) { F.sizes[k[0]] = info.filter(function (x) { return ok(x, 'size') && (k[0] === 'all' || x.e.sz === k[0]); }).length; });
+    info.forEach(function (x) { if (x.own && ok(x, 'needs')) x.e.nk.forEach(function (c) { byCode[c] += 1; }); });
+    var order = OWN ? OWN.products.map(function (p) { return p.code; }) : [];
+    F.needs = Object.keys(byCode).map(function (c) { return { code: c, n: byCode[c] }; }).sort(function (a, b) {
+      var ia = order.indexOf(a.code), ib = order.indexOf(b.code);
+      return (ia < 0 ? 9999 : ia) - (ib < 0 ? 9999 : ib) || a.code.localeCompare(b.code);
+    });
+    renderControls(d, F);
+    var res = info.filter(function (x) { return ok(x); }), shown = info.filter(function (x) { return x.own; }).length;
+    /* My collection: what it alone takes out of the list the other filters leave, so Show everything adds exactly this many */
+    var hidden = info.filter(function (x) { return !x.own && ok(x, 'own'); }).length;
+    var untagged = S.needs ? info.filter(function (x) { return ok(x, 'needs') && !x.e.nk.length; }).length : 0;
     if (toks.length) res.sort(function (a, b) { return (b.score - a.score) || (a.i - b.i); });
     if ($('ownnote')) $('ownnote').innerHTML = OWN ? OWN.note(hidden, hidden === 1 ? 'scenario' : 'scenarios') : '';
     if (!res.length) {
-      $('out').innerHTML = '<p class="empty2">Nothing matches. Try fewer or simpler words, or clear the filter.' + (hidden ? ' Your collection hides ' + hidden + ' here.' : '') + '</p>';
-      $('stat').textContent = '0 entries.';
+      $('out').innerHTML = '<p class="empty2">Nothing matches. Try fewer or simpler words, or clear the filters.' + (hidden ? ' Your collection hides ' + hidden + ' here.' : '') + '</p>';
+      $('stat').textContent = '0 entries.' + (untagged ? ' ' + untagged + ' with no needs tagged are left out while a product is chosen.' : '');
     } else {
       $('out').innerHTML = list(res, mk, toks);
       $('stat').textContent = res.length + ' of ' + shown + ' entries, in ' + (isLib() ? 'library order' : 'booklet page order') + '. Click one to read it.';
       if (toks.length) $('stat').textContent = res.length + ' of ' + shown + ' entries, best match first. Click one to read it.';
+      if (untagged) $('stat').textContent += ' ' + untagged + ' with no needs tagged are left out while a product is chosen.';
     }
     url();
   }
@@ -222,6 +291,7 @@
     try {
       var p = new URLSearchParams(); p.set('b', S.b);
       if (S.q) p.set('q', S.q); if (S.type !== 'all') p.set('t', S.type);
+      if (S.kind !== 'all') p.set('k', S.kind); if (S.size !== 'all') p.set('z', S.size); if (S.needs) p.set('n', S.needs);
       var o = Object.keys(S.open); if (o.length) p.set('e', o.join(','));
       history.replaceState(null, '', location.pathname + '?' + p.toString());
     } catch (e) { /* ignore */ }
@@ -232,9 +302,13 @@
       var t = ev.target, el;
       if ((el = t.closest('[data-box]'))) { S.b = el.dataset.box; render(); return; }
       if ((el = t.closest('[data-type]'))) { S.type = el.dataset.type; render(); return; }
+      if ((el = t.closest('[data-fk]'))) { S.kind = el.dataset.fk; render(); return; }
+      if ((el = t.closest('[data-fz]'))) { S.size = el.dataset.fz; render(); return; }
+      if (t.closest('#btnClear')) { S.kind = 'all'; S.size = 'all'; S.needs = ''; render(); return; }
       if ((el = t.closest('[data-toggle]'))) toggle(el.dataset.toggle);
     });
     window.addEventListener('resize', function () { if (ncol() !== NCOL) render(); });
+    $('needsSel').onchange = function () { S.needs = this.value; render(); };
     var timer;
     $('q').oninput = function () { S.q = this.value; clearTimeout(timer); timer = setTimeout(render, 120); };
     $('btnTheme').onclick = function () {
@@ -252,6 +326,9 @@
     if (p.get('q')) S.q = p.get('q');
     var d = load();
     if (p.get('t') && d.types.indexOf(p.get('t')) >= 0) S.type = p.get('t');
+    if (KINDS.some(function (k) { return k[0] === p.get('k'); })) S.kind = p.get('k');
+    if (SIZES.some(function (k) { return k[0] === p.get('z'); })) S.size = p.get('z');
+    if (p.get('n') && p.get('n').length <= 80) S.needs = p.get('n');
     if (p.get('e')) p.get('e').split(',').forEach(function (id) { if (/^[a-z0-9-]+$/.test(id)) S.open[id] = 1; });
     bind(); render();
     if (OWN) OWN.onChange(render);
