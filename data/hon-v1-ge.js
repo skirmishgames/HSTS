@@ -479,6 +479,609 @@ HTS_DATA["hon-v1-ge"] = {
     }
    ],
    "own": []
+  },
+  {
+   "id": "ludwig",
+   "name": "Ludwig",
+   "sub": "An Eye on You...",
+   "cost": 35,
+   "type": "hero",
+   "set": "hon1-kelly-s-heroes",
+   "squares": 0,
+   "img": "img/hon/v1/ge/tiles/ludwig.webp",
+   "w": 947,
+   "h": 705,
+   "sheet": "Kelly's Heroes",
+   "units": [
+    [
+     "Ludwig",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.5048,
+     "y": 0.1574,
+     "w": 0.4541,
+     "h": 0.766,
+     "size": "n",
+     "stripes": [
+      "HW"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "otto",
+   "name": "Otto",
+   "sub": "Nameless Hero",
+   "cost": 100,
+   "type": "hero",
+   "set": "hon1-kelly-s-heroes",
+   "squares": 0,
+   "img": "img/hon/v1/ge/tiles/otto.webp",
+   "w": 1628,
+   "h": 706,
+   "sheet": "Kelly's Heroes",
+   "units": [
+    [
+     "Otto",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.0264,
+     "y": 0.1856,
+     "w": 0.258,
+     "h": 0.7365,
+     "size": "n",
+     "stripes": [
+      "HW",
+      "K"
+     ]
+    },
+    {
+     "x": 0.6407,
+     "y": 0.1856,
+     "w": 0.3378,
+     "h": 0.7365,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "heinrich_von_kamptz_kelly_s_heroes",
+   "name": "Heinrich von Kamptz",
+   "sub": "The Aryan Plague",
+   "cost": 35,
+   "type": "hero",
+   "set": "hon1-kelly-s-heroes",
+   "squares": 0,
+   "img": "img/hon/v1/ge/tiles/heinrich_von_kamptz_kelly_s_heroes.webp",
+   "w": 1444,
+   "h": 704,
+   "sheet": "Kelly's Heroes",
+   "units": [
+    [
+     "Heinrich von Kamptz",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.027,
+     "y": 0.179,
+     "w": 0.2909,
+     "h": 0.767,
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "K"
+     ]
+    },
+    {
+     "x": 0.6814,
+     "y": 0.179,
+     "w": 0.2909,
+     "h": 0.767,
+     "size": "n",
+     "stripes": [
+      "HW"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "friedrich",
+   "name": "Friedrich",
+   "sub": "Evil Mechanic",
+   "cost": 35,
+   "type": "hero",
+   "set": "hon1-kelly-s-heroes",
+   "squares": 0,
+   "img": "img/hon/v1/ge/tiles/friedrich.webp",
+   "w": 535,
+   "h": 722,
+   "sheet": "Kelly's Heroes",
+   "units": [
+    [
+     "Friedrich",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
+  },
+  {
+   "id": "alexander_von_ballot",
+   "name": "Alexander von Ballot",
+   "sub": "Panzer Rider",
+   "cost": 20,
+   "type": "hero",
+   "set": "hon1-kelly-s-heroes",
+   "squares": 0,
+   "img": "img/hon/v1/ge/tiles/alexander_von_ballot.webp",
+   "w": 980,
+   "h": 706,
+   "sheet": "Kelly's Heroes",
+   "units": [
+    [
+     "Alexander von Ballot",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.5286,
+     "y": 0.1983,
+     "w": 0.4388,
+     "h": 0.7507,
+     "size": "n",
+     "stripes": [
+      "K",
+      "HW"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "festungskompagnie",
+   "name": "Festungskompagnie",
+   "sub": "352nd Infantry Div.-Rgt.916",
+   "cost": 70,
+   "type": "platoon",
+   "set": "hon1-d-day",
+   "squares": 3,
+   "img": "img/hon/v1/ge/tiles/festungskompagnie.webp",
+   "w": 2005,
+   "h": 600,
+   "sheet": "D-Day",
+   "units": [
+    [
+     "OB Dern",
+     1,
+     "officer"
+    ],
+    [
+     "Gunners",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "MG-42 HMG",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.019,
+     "y": 0.19,
+     "w": 0.213,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "KWM"
+     ]
+    },
+    {
+     "x": 0.242,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "KWM",
+      "K"
+     ]
+    },
+    {
+     "x": 0.592,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K",
+      "KWM"
+     ]
+    },
+    {
+     "x": 0.767,
+     "y": 0.19,
+     "w": 0.214,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "K",
+      "KWM"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "fallschirmj_ger",
+   "name": "Fallschirmjäger",
+   "sub": "Fallschirmjäger-Regiment 6 - II. Battalion",
+   "cost": 110,
+   "type": "platoon",
+   "set": "hon1-carentan",
+   "squares": 3,
+   "img": "img/hon/v1/ge/tiles/fallschirmj_ger.webp",
+   "w": 1914,
+   "h": 600,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Hauptmann Rolf Mager",
+     1,
+     "infantry"
+    ],
+    [
+     "Recon Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Sturmfeuer",
+     1,
+     "infantry"
+    ],
+    [
+     "Assault Group",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.019,
+     "y": 0.19,
+     "w": 0.213,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "WGW",
+      "K"
+     ]
+    },
+    {
+     "x": 0.242,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.592,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "WGW",
+      "K"
+     ]
+    },
+    {
+     "x": 0.767,
+     "y": 0.19,
+     "w": 0.214,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "K"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "emil_preischkat",
+   "name": "Emil Preischkat",
+   "sub": "Grumpy Warrior",
+   "cost": 35,
+   "type": "hero",
+   "set": "hon1-carentan",
+   "squares": 1,
+   "img": "img/hon/v1/ge/tiles/emil_preischkat.webp",
+   "w": 811,
+   "h": 600,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Emil",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.524,
+     "y": 0.196,
+     "w": 0.422,
+     "h": 0.77,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "fallschirmj_ger_carentan",
+   "name": "Fallschirmjäger",
+   "sub": "Fallschirmjäger-Regiment 6 - III. Battalion",
+   "cost": 105,
+   "type": "platoon",
+   "set": "hon1-carentan",
+   "squares": 3,
+   "img": "img/hon/v1/ge/tiles/fallschirmj_ger_carentan.webp",
+   "w": 1914,
+   "h": 599,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Hauptmann H. Trebes",
+     1,
+     "infantry"
+    ],
+    [
+     "Recon Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Assault Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Panzerschreck",
+     1,
+     "vehicle"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.019,
+     "y": 0.19,
+     "w": 0.213,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "WYW",
+      "K"
+     ]
+    },
+    {
+     "x": 0.242,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.592,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "WYW",
+      "K"
+     ]
+    },
+    {
+     "x": 0.767,
+     "y": 0.19,
+     "w": 0.214,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "K"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "grenadier_regiment_1058",
+   "name": "Grenadier-Regiment 1058",
+   "sub": "91. Luftlande-Infanterie-Division",
+   "cost": 70,
+   "type": "platoon",
+   "set": "hon1-carentan",
+   "squares": 3,
+   "img": "img/hon/v1/ge/tiles/grenadier_regiment_1058.webp",
+   "w": 1606,
+   "h": 599,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Oberleutnant Hans Bickel",
+     1,
+     "officer"
+    ],
+    [
+     "Fire Group",
+     2,
+     "infantry"
+    ],
+    [
+     "MG42",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.03,
+     "y": 0.225,
+     "w": 0.227,
+     "h": 0.7,
+     "size": "w",
+     "stripes": [
+      "RK"
+     ]
+    },
+    {
+     "x": 0.609,
+     "y": 0.225,
+     "w": 0.174,
+     "h": 0.7,
+     "size": "n",
+     "stripes": [
+      "RK",
+      "K"
+     ]
+    },
+    {
+     "x": 0.794,
+     "y": 0.225,
+     "w": 0.174,
+     "h": 0.7,
+     "size": "n",
+     "stripes": [
+      "K",
+      "RK"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "feldkommando",
+   "name": "Feldkommando",
+   "sub": "Major Friedrich August Freiherr von der Heydte",
+   "cost": 35,
+   "type": "command",
+   "set": "hon1-carentan",
+   "squares": 0,
+   "img": "img/hon/v1/ge/tiles/feldkommando.webp",
+   "w": 1606,
+   "h": 599,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Heydte",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.03,
+     "y": 0.225,
+     "w": 0.227,
+     "h": 0.7,
+     "size": "w",
+     "stripes": [
+      "cmd"
+     ]
+    },
+    {
+     "x": 0.609,
+     "y": 0.225,
+     "w": 0.174,
+     "h": 0.7,
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "K"
+     ]
+    },
+    {
+     "x": 0.794,
+     "y": 0.225,
+     "w": 0.174,
+     "h": 0.7,
+     "size": "n",
+     "stripes": [
+      "K",
+      "cmd"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "reino_hamer",
+   "name": "Reino Hamer",
+   "sub": "The Wall",
+   "cost": 40,
+   "type": "hero",
+   "set": "hon1-sainte-mere-eglise",
+   "squares": 1,
+   "img": "img/hon/v1/ge/tiles/reino_hamer.webp",
+   "w": 459,
+   "h": 599,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Reino",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
   }
  ],
  "options": [
@@ -1374,6 +1977,730 @@ HTS_DATA["hon-v1-ge"] = {
    "h": 364,
    "sheet": "Wittmann's Tigers",
    "note": "Markers: +2."
+  },
+  {
+   "id": "defense_group",
+   "name": "Defense Group",
+   "cat": "support",
+   "cost": 45,
+   "squares": 2,
+   "set": "hon1-d-day",
+   "size": "w",
+   "stripes": [
+    "KWM"
+   ],
+   "img": "img/hon/v1/ge/options/defense_group.webp",
+   "w": 363,
+   "h": 363,
+   "sheet": "D-Day",
+   "units": [
+    [
+     "Gunners",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "MG42-HMG",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "hmg_42_group",
+   "name": "HMG 42 Group",
+   "cat": "support",
+   "cost": 50,
+   "squares": 2,
+   "set": "hon1-d-day",
+   "size": "w",
+   "stripes": [
+    "KWM"
+   ],
+   "img": "img/hon/v1/ge/options/hmg_42_group.webp",
+   "w": 364,
+   "h": 363,
+   "sheet": "D-Day",
+   "units": [
+    [
+     "HMG-42",
+     2,
+     "infantry"
+    ],
+    [
+     "Gunners",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "mortar_group",
+   "name": "Mortar Group",
+   "cat": "support",
+   "cost": 45,
+   "squares": 2,
+   "set": "hon1-d-day",
+   "size": "w",
+   "stripes": [
+    "KWM"
+   ],
+   "img": "img/hon/v1/ge/options/mortar_group.webp",
+   "w": 363,
+   "h": 363,
+   "sheet": "D-Day",
+   "units": [
+    [
+     "Gunners",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "8cm Granatwerfer",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "artillery_spotter",
+   "name": "Artillery Spotter",
+   "cat": "support",
+   "cost": 15,
+   "squares": 1,
+   "set": "hon1-d-day",
+   "size": "n",
+   "stripes": [
+    "KWM"
+   ],
+   "img": "img/hon/v1/ge/options/artillery_spotter.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "D-Day",
+   "units": [
+    [
+     "Spotter",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "ammo_belt",
+   "name": "Ammo Belt",
+   "cat": "gear",
+   "cost": 20,
+   "squares": 0,
+   "set": "hon1-d-day",
+   "size": "n",
+   "stripes": [
+    "KWM"
+   ],
+   "img": "img/hon/v1/ge/options/ammo_belt.webp",
+   "w": 267,
+   "h": 364,
+   "sheet": "D-Day",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "7_5cm_ig_18_gun",
+   "name": "7.5cm iG 18 Gun",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-d-day",
+   "size": "n",
+   "stripes": [
+    "KWM"
+   ],
+   "img": "img/hon/v1/ge/options/7_5cm_ig_18_gun.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "D-Day",
+   "units": [
+    [
+     "7.5cm iG 18 Gun",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "heroic",
+   "name": "Heroic",
+   "cat": "gear",
+   "cost": 30,
+   "squares": 0,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/heroic.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "Carentan",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "camo",
+   "name": "Camo",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/camo.webp",
+   "w": 266,
+   "h": 364,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Camo",
+     3,
+     "infantry"
+    ]
+   ],
+   "note": "Markers: X3."
+  },
+  {
+   "id": "stug_iv_carentan",
+   "name": "Stug IV",
+   "cat": "support",
+   "cost": 65,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "w",
+   "stripes": [
+    "WGW"
+   ],
+   "img": "img/hon/v1/ge/options/stug_iv_carentan.webp",
+   "w": 363,
+   "h": 364,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Stug IV",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "aufkl_rer",
+   "name": "Aufklärer",
+   "cat": "support",
+   "cost": 50,
+   "squares": 2,
+   "set": "hon1-carentan",
+   "size": "w",
+   "stripes": [
+    "WGW"
+   ],
+   "img": "img/hon/v1/ge/options/aufkl_rer.webp",
+   "w": 363,
+   "h": 364,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Recon Group",
+     2,
+     "infantry"
+    ],
+    [
+     "Assault Group",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "panzerschreck",
+   "name": "Panzerschreck",
+   "cat": "support",
+   "cost": 20,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/panzerschreck.webp",
+   "w": 267,
+   "h": 364,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Panzerschreck",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "scharfschutzen",
+   "name": "Scharfschützen",
+   "cat": "support",
+   "cost": 15,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/scharfschutzen.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Scharfschützen",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "8cm_granatwerfer",
+   "name": "8cm Granatwerfer",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/8cm_granatwerfer.webp",
+   "w": 266,
+   "h": 364,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "8cm Granatwerfer",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "puppchen",
+   "name": "Püppchen",
+   "cat": "support",
+   "cost": 20,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/puppchen.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Püppchen",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "10_5_cm_leichtgeschutz_42",
+   "name": "10.5 cm Leichtgeschütz 42",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/10_5_cm_leichtgeschutz_42.webp",
+   "w": 267,
+   "h": 364,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "LG 42",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "mg42_hmg",
+   "name": "MG42 HMG",
+   "cat": "support",
+   "cost": 20,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/mg42_hmg.webp",
+   "w": 266,
+   "h": 364,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "MG42 HMG",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "overwatch",
+   "name": "Overwatch",
+   "cat": "gear",
+   "cost": 20,
+   "squares": 0,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/overwatch.webp",
+   "w": 266,
+   "h": 363,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Overwatch marker",
+     3,
+     "vehicle"
+    ]
+   ],
+   "note": "Markers: X3."
+  },
+  {
+   "id": "fortified",
+   "name": "Fortified",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/fortified.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Fortified marker",
+     3,
+     "vehicle"
+    ]
+   ],
+   "note": "Markers: X3."
+  },
+  {
+   "id": "fallschirmj_ger",
+   "name": "Fallschirmjäger",
+   "cat": "support",
+   "cost": 65,
+   "squares": 2,
+   "set": "hon1-carentan",
+   "size": "w",
+   "stripes": [
+    "WYW"
+   ],
+   "img": "img/hon/v1/ge/options/fallschirmj_ger.webp",
+   "w": 363,
+   "h": 363,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Recon Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Group",
+     1,
+     "infantry"
+    ],
+    [
+     "Sturmfeuer",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "heavy_weapons",
+   "name": "Heavy Weapons",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "hon1-carentan",
+   "size": "w",
+   "stripes": [
+    "WYW"
+   ],
+   "img": "img/hon/v1/ge/options/heavy_weapons.webp",
+   "w": 363,
+   "h": 363,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "MG42 HMG",
+     1,
+     "infantry"
+    ],
+    [
+     "Sturmfeuer",
+     1,
+     "infantry"
+    ],
+    [
+     "8cm Granatwerfer",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "kettenkrad",
+   "name": "Kettenkrad",
+   "cat": "support",
+   "cost": 5,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/kettenkrad.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Kettenkrad",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "pak_40",
+   "name": "Pak 40",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/pak_40.webp",
+   "w": 266,
+   "h": 363,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Pak 40",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "lions_of_carentan",
+   "name": "Lions of Carentan",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/lions_of_carentan.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "Carentan"
+  },
+  {
+   "id": "stug_iv_carentan_65",
+   "name": "Stug IV",
+   "cat": "support",
+   "cost": 65,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/stug_iv_carentan_65.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Stug IV",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "stug_h_42_g",
+   "name": "Stug H 42 G",
+   "cat": "support",
+   "cost": 65,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/stug_h_42_g.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Stug H 42 G",
+     1,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "flak_38_quad",
+   "name": "Flak 38 Quad",
+   "cat": "support",
+   "cost": 30,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/flak_38_quad.webp",
+   "w": 267,
+   "h": 364,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Flak 38 Quad",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "osttruppen_battalion",
+   "name": "Osttruppen Battalion",
+   "cat": "support",
+   "cost": 45,
+   "squares": 2,
+   "set": "hon1-carentan",
+   "size": "w",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/osttruppen_battalion.webp",
+   "w": 482,
+   "h": 600,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Osttruppen",
+     3,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "sd_kfz_10_5",
+   "name": "SD KFZ 10/5",
+   "cat": "support",
+   "cost": 30,
+   "squares": 1,
+   "set": "hon1-carentan",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/sd_kfz_10_5.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "SD KFZ 10/5",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "beutepanzer_r35",
+   "name": "Beutepanzer R35",
+   "cat": "support",
+   "cost": 80,
+   "squares": 2,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "w",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/beutepanzer_r35.webp",
+   "w": 363,
+   "h": 364,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Beutepanzer R35",
+     2,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "beutepanzer_r35_sainte_mere_eglise",
+   "name": "Beutepanzer R35",
+   "cat": "support",
+   "cost": 40,
+   "squares": 1,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/ge/options/beutepanzer_r35_sainte_mere_eglise.webp",
+   "w": 267,
+   "h": 364,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Beutepanzer R35",
+     1,
+     "vehicle"
+    ]
+   ]
   }
  ]
 };

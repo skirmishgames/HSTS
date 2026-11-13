@@ -1,0 +1,9 @@
+{"dir":"out4/carentan","sheet":"Carentan","set":"hon1-carentan",
+ "sheets":{"car1":"Carentan/Carentan Punchboard 1 Front.png","car2":"Carentan/Carentan Punchboard 2 Front.png","car3":"Carentan/Carentan Punchboard 3 Front.png","car4":"Carentan/Carentan Punchboard 4 Front.png","car6":"Carentan/Carentan Punchboard 6 Front.png"},
+ "groups":{"f2":{"nat":"ge","code":"WGW"},"f3":{"nat":"ge","code":"WYW"},"gr":{"nat":"ge","code":"RK"},"cmd":{"nat":"ge","code":"cmd"},"k":{"nat":"ge","code":"K"},"us":{"nat":"us","code":"cmd"}},
+ "group_of":{"car1":"f2","car2":"f3","car3":"gr","car4":"cmd","car6":"k","car2_02.png":"us"},
+ "optcode":{"car1_03.png":"K","car1_04.png":"K","car1_08.png":"K","car1_09.png":"K","car1_10.png":"K","car1_12.png":"K","car1_18.png":"K","car1_19.png":"K","car2_03.png":"K","car2_04.png":"K","car2_08.png":"K","car2_09.png":"K","car2_10.png":"K","car2_12.png":"K","car2_18.png":"K","car2_19.png":"K"},
+ "rotfix":{"car1_03.png":270,"car1_04.png":270,"car2_03.png":270,"car2_04.png":270},
+ "typ":{"Feldkommando":"command","Emil Preischkat":"hero","Lt Col. Robert G. Cole":"hero"},
+ "lay":{"Grenadier-Regiment 1058":"wittmann","Feldkommando":"wittmann","Emil Preischkat":"speirs","Lt Col. Robert G. Cole":"speirs"},
+ "slotfix":{"Emil Preischkat":[["K"]],"Lt Col. Robert G. Cole":[["cmd","K"]],"Grenadier-Regiment 1058":[["RK"],["RK","K"],["K","RK"]],"Feldkommando":[["cmd"],["cmd","K"],["K","cmd"]]}}

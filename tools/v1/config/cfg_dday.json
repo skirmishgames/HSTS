@@ -1,0 +1,6 @@
+{"dir":"out4/dday","sheet":"D-Day","set":"hon1-d-day",
+ "sheets":{"dd1":"D-Day/D-Day Punchboard 1 Front.png","dd2":"D-Day/D-Day Punchboard 2 Front.png","dd3":"D-Day/D-Day Punchboard 3 Front.png"},
+ "groups":{"us":{"nat":"us","code":"RWRY"},"ge":{"nat":"ge","code":"KWM"}},
+ "group_of":{"dd1":"us","dd2":"ge","dd2_28.png":"us"},
+ "rename":{"dd1_08.png":"Explosives M1"},"K":["Heroic"],
+ "slotfix":{"Festungskompagnie":[["KWM"],["KWM","K"],["K","KWM"],["K","KWM"]]}}

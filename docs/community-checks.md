@@ -63,6 +63,18 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | SS-Panzergrenadiere | I. Battalion, Leibstandarte-SS AH | 100 | long: platoon or black, narrow: black, narrow: black, long: platoon |
 | Heinrich von Kamptz | Aryan Plague | 30 | no slots |
 | Hauptsturmführer M. Wittmann | Schwere SS-Panzer-Abteilung 101 | 110 | long: platoon or command, narrow: platoon or command, narrow: platoon or command |
+| Ludwig | An Eye on You... | 35 | narrow: platoon |
+| Otto | Nameless Hero | 100 | narrow: platoon or black, narrow: black |
+| Heinrich von Kamptz | The Aryan Plague | 35 | narrow: command or black, narrow: platoon |
+| Friedrich | Evil Mechanic | 35 | no slots |
+| Alexander von Ballot | Panzer Rider | 20 | narrow: black or platoon |
+| Festungskompagnie | 352nd Infantry Div.-Rgt.916 | 70 | long: platoon, narrow: platoon or black, narrow: black or platoon, long: black or platoon |
+| Fallschirmjäger | Fallschirmjäger-Regiment 6 - II. Battalion | 110 | long: platoon or black, narrow: black, narrow: platoon or black, long: black |
+| Emil Preischkat | Grumpy Warrior | 35 | narrow: black |
+| Fallschirmjäger | Fallschirmjäger-Regiment 6 - III. Battalion | 105 | long: platoon or black, narrow: black, narrow: platoon or black, long: black |
+| Grenadier-Regiment 1058 | 91. Luftlande-Infanterie-Division | 70 | long: platoon, narrow: platoon or black, narrow: black or platoon |
+| Feldkommando | Major Friedrich August Freiherr von der Heydte | 35 | long: command, narrow: command or black, narrow: black or command |
+| Reino Hamer | The Wall | 40 | no slots |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
 |---|---|---|---|---|---|
@@ -110,6 +122,36 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | APC Shell | 10 | narrow | platoon (KRK) | gear | Wittmann's Tigers |
 | HE Shell | 10 | narrow | platoon (KRK) | gear | Wittmann's Tigers |
 | Field Artillery | 25 | long | command | order | Wittmann's Tigers |
+| Defense Group | 45 | long | platoon (KWM) | support | D-Day |
+| HMG 42 Group | 50 | long | platoon (KWM) | support | D-Day |
+| Mortar Group | 45 | long | platoon (KWM) | support | D-Day |
+| Artillery Spotter | 15 | narrow | platoon (KWM) | support | D-Day |
+| Ammo Belt | 20 | narrow | platoon (KWM) | gear | D-Day |
+| 7.5cm iG 18 Gun | 25 | narrow | platoon (KWM) | support | D-Day |
+| Heroic | 30 | narrow | black | gear | Carentan |
+| Camo | 10 | narrow | black | gear | Carentan |
+| Stug IV | 65 | long | platoon (WGW) | support | Carentan |
+| Aufklärer | 50 | long | platoon (WGW) | support | Carentan |
+| Panzerschreck | 20 | narrow | black | support | Carentan |
+| Scharfschützen | 15 | narrow | black | support | Carentan |
+| 8cm Granatwerfer | 25 | narrow | black | support | Carentan |
+| Püppchen | 20 | narrow | black | support | Carentan |
+| 10.5 cm Leichtgeschütz 42 | 25 | narrow | black | support | Carentan |
+| MG42 HMG | 20 | narrow | black | support | Carentan |
+| Overwatch | 20 | narrow | black | gear | Carentan |
+| Fortified | 15 | narrow | black | gear | Carentan |
+| Fallschirmjäger | 65 | long | platoon (WYW) | support | Carentan |
+| Heavy Weapons | 60 | long | platoon (WYW) | support | Carentan |
+| Kettenkrad | 5 | narrow | black | support | Carentan |
+| Pak 40 | 25 | narrow | black | support | Carentan |
+| Lions of Carentan | 10 | narrow | black | gear | Carentan |
+| Stug IV | 65 | narrow | black | support | Carentan |
+| Stug H 42 G | 65 | narrow | black | support | Carentan |
+| Flak 38 Quad | 30 | narrow | black | support | Carentan |
+| Osttruppen Battalion | 45 | long | black | support | Carentan |
+| SD KFZ 10/5 | 30 | narrow | black | support | Carentan |
+| Beutepanzer R35 | 80 | long | black | support | Sainte-Mere-Eglise |
+| Beutepanzer R35 | 40 | narrow | black | support | Sainte-Mere-Eglise |
 
 ### Commonwealth
 
@@ -194,6 +236,18 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Rifle Platoon | 4th Inf. Div. 12nd Inf. Reg. | 70 | long: platoon, narrow: platoon or black, narrow: black, long: black or platoon |
 | US Rangers | 5th Ranger Battalion | 80 | long: platoon, narrow: platoon or black, narrow: black or platoon, long: black or platoon |
 | Cpt. M. Pepper | Heavy Stormer | 25 | no slots |
+| Big Joe | Big Nose | 30 | narrow: black or command |
+| Oddball | Positive Freak | 80 | narrow: black or platoon, narrow: black |
+| Clint | Universal Hero | 35 | narrow: black, narrow: black or platoon |
+| Cowboy | Old School Fangi | 15 | no slots |
+| Crapgame | 24/7 | 35 | narrow: black or platoon |
+| US Combat Engineers | 4th Inf. Div. Engineer Battalion | 100 | long: platoon or black, narrow: black, narrow: platoon, long: platoon |
+| Lt Col. Robert G. Cole | Frenzy Leader | 45 | narrow: command or black |
+| US Paratroopers | 101st Inf. Div. 502nd Inf. Reg. | 105 | long: platoon, narrow: black, narrow: black, long: black or platoon |
+| US Paratroopers | 82nd Inf. Div. 508th Inf. Reg. | 110 | long: platoon, narrow: black, narrow: black, long: black or platoon |
+| Arthur "Dutch" Schultz | Not the Gangster.. | 30 | no slots |
+| US Paratroopers | 82nd Inf. Div. 505th Inf. Reg. | 85 | long: platoon or black, narrow: platoon or black, narrow: platoon or black |
+| Field Command | Lt Col Benjamin Hayes "Vandy" Vandervoort | 20 | long: command, narrow: black or command, narrow: black or command |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
 |---|---|---|---|---|---|
@@ -239,4 +293,33 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Gears | 20 | narrow | platoon (BYB) | gear | US Rangers |
 | Ambush Squad | 50 | long | platoon (BYB) | support | US Rangers |
 | Rangers Squad | 60 | long | platoon (BYB) | support | US Rangers |
+| Support Squad | 50 | long | platoon (RWRY) | support | D-Day |
+| Assault Squad | 50 | long | platoon (RWRY) | support | D-Day |
+| Explosives M1 | 10 | narrow | platoon (RWRY) | gear | D-Day |
+| Position | 10 | narrow | platoon (RWRY) | gear | D-Day |
+| Shovel | 15 | narrow | platoon (RWRY) | gear | D-Day |
+| Bangalore | 10 | narrow | platoon (RWRY) | gear | D-Day |
+| Heroic | 30 | narrow | black | gear | D-Day |
+| Grapnel | 5 | narrow | platoon (RWRY) | gear | D-Day |
+| Willys .50 Cal | 50 | narrow | black | support | Sainte-Mere-Eglise |
+| Paratroopers | 60 | long | platoon (KRKA) | support | Sainte-Mere-Eglise |
+| Bazooka Squad | 65 | long | platoon (KRKA) | support | Sainte-Mere-Eglise |
+| Pathfinders Squad | 60 | long | platoon (KRKA) | support | Sainte-Mere-Eglise |
+| Engineers Squad | 90 | narrow | black | support | Sainte-Mere-Eglise |
+| Walking Fire | 10 | narrow | black | gear | Sainte-Mere-Eglise |
+| Knife | 15 | narrow | black | gear | Sainte-Mere-Eglise |
+| Dropped | 10 | narrow | black | gear | Sainte-Mere-Eglise |
+| Paratroopers | 60 | long | platoon (WRW) | support | Sainte-Mere-Eglise |
+| .30 Cal Squad | 60 | long | platoon (WRW) | support | Sainte-Mere-Eglise |
+| Pathfinders Squad | 60 | long | platoon (WRW) | support | Sainte-Mere-Eglise |
+| Waco Glider | 30 | long | command | gear | Sainte-Mere-Eglise |
+| Sprinter | 5 | narrow | black | gear | Sainte-Mere-Eglise |
+| Hawkins Mines | 15 | narrow | black | gear | Sainte-Mere-Eglise |
+| 57mm AT Gun | 20 | narrow | black | support | Sainte-Mere-Eglise |
+| D-Day Cricket Lore | 15 | narrow | black | gear | Sainte-Mere-Eglise |
+| Weapon Squad | 60 | long | platoon (BWB) | support | Sainte-Mere-Eglise |
+| Heavy Weapons Squad | 55 | long | platoon (BWB) | support | Sainte-Mere-Eglise |
+| Waco Glider | 15 | narrow | black | gear | Sainte-Mere-Eglise |
+| Pathfinders Squad | 80 | narrow | black | support | Sainte-Mere-Eglise |
+| Willys .50 Cal | 25 | narrow | black | support | Sainte-Mere-Eglise |
 

@@ -1,0 +1,99 @@
+{
+ "dir": "out4/sme",
+ "sheet": "Sainte-Mere-Eglise",
+ "set": "hon1-sainte-mere-eglise",
+ "sheets": {
+  "sme1": "Sainte-Mere-Eglise/Sainte-Mere-Eglise Punchboard 1 Front.png",
+  "sme2": "Sainte-Mere-Eglise/Sainte-Mere-Eglise Punchboard 2 Front.png",
+  "sme3": "Sainte-Mere-Eglise/Sainte-Mere-Eglise Punchboard 3 Front.png",
+  "sme4": "Sainte-Mere-Eglise/Sainte-Mere-Eglise Punchboard 4 Front.png",
+  "sme5": "Sainte-Mere-Eglise/Sainte-Mere-Eglise Punchboard 5 Front.png",
+  "sme6": "Sainte-Mere-Eglise/Sainte-Mere-Eglise Punchboard 6 Front.png",
+  "sme7": "Sainte-Mere-Eglise/Sainte-Mere-Eglise Punchboard 7 Front.png"
+ },
+ "groups": {
+  "a": {
+   "nat": "us",
+   "code": "KRKA"
+  },
+  "b": {
+   "nat": "us",
+   "code": "WRW"
+  },
+  "c": {
+   "nat": "us",
+   "code": "BWB"
+  },
+  "cmd": {
+   "nat": "us",
+   "code": "cmd"
+  },
+  "k": {
+   "nat": "us",
+   "code": "K"
+  },
+  "gk": {
+   "nat": "ge",
+   "code": "K"
+  }
+ },
+ "group_of": {
+  "sme1": "a",
+  "sme2": "b",
+  "sme3": "c",
+  "sme4": "k",
+  "sme5": "cmd",
+  "sme6": "k",
+  "sme7": "k",
+  "sme2_21.png": "gk",
+  "sme4_07.png": "gk",
+  "sme7_09.png": "gk"
+ },
+ "K": [
+  "Engineers Squad",
+  "Walking Fire",
+  "Knife",
+  "Dropped",
+  "Sprinter",
+  "Hawkins Mines",
+  "57mm AT Gun",
+  "D-Day Cricket Lore",
+  "Willys .50 Cal",
+  "Beutepanzer R35"
+ ],
+ "CMD": [
+  "Waco Glider"
+ ],
+ "optcode": {
+  "sme1_10.png": "KRKA",
+  "sme2_09.png": "WRW",
+  "sme4_10.png": "K",
+  "sme5_09.png": "K"
+ },
+ "typ": {
+  "Field Command": "command",
+  "Reino Hamer": "hero",
+  "Arthur \"Dutch\" Schultz": "hero"
+ },
+ "lay": {
+  "Field Command": "wittmann"
+ },
+ "slotfix": {
+  "Field Command": [
+   [
+    "cmd"
+   ],
+   [
+    "K",
+    "cmd"
+   ],
+   [
+    "K",
+    "cmd"
+   ]
+  ]
+ },
+ "layfile": {
+  "sme3_04.png": "wittmann"
+ }
+}

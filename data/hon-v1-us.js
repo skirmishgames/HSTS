@@ -677,6 +677,608 @@ HTS_DATA["hon-v1-us"] = {
    ],
    "slots": [],
    "own": []
+  },
+  {
+   "id": "big_joe",
+   "name": "Big Joe",
+   "sub": "Big Nose",
+   "cost": 30,
+   "type": "hero",
+   "set": "hon1-kelly-s-heroes",
+   "squares": 0,
+   "img": "img/hon/v1/us/tiles/big_joe.webp",
+   "w": 985,
+   "h": 706,
+   "sheet": "Kelly's Heroes",
+   "units": [
+    [
+     "Big Joe",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.5249,
+     "y": 0.1572,
+     "w": 0.4365,
+     "h": 0.7649,
+     "size": "n",
+     "stripes": [
+      "K",
+      "cmd"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "oddball",
+   "name": "Oddball",
+   "sub": "Positive Freak",
+   "cost": 80,
+   "type": "hero",
+   "set": "hon1-kelly-s-heroes",
+   "squares": 0,
+   "img": "img/hon/v1/us/tiles/oddball.webp",
+   "w": 1633,
+   "h": 706,
+   "sheet": "Kelly's Heroes",
+   "units": [
+    [
+     "Oddball",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.0294,
+     "y": 0.1856,
+     "w": 0.2572,
+     "h": 0.7365,
+     "size": "n",
+     "stripes": [
+      "K",
+      "HW"
+     ]
+    },
+    {
+     "x": 0.6418,
+     "y": 0.1856,
+     "w": 0.3368,
+     "h": 0.7365,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "clint",
+   "name": "Clint",
+   "sub": "Universal Hero",
+   "cost": 35,
+   "type": "hero",
+   "set": "hon1-kelly-s-heroes",
+   "squares": 0,
+   "img": "img/hon/v1/us/tiles/clint.webp",
+   "w": 1448,
+   "h": 706,
+   "sheet": "Kelly's Heroes",
+   "units": [
+    [
+     "Clint",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.0297,
+     "y": 0.1856,
+     "w": 0.2901,
+     "h": 0.7649,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.6823,
+     "y": 0.1856,
+     "w": 0.2901,
+     "h": 0.7649,
+     "size": "n",
+     "stripes": [
+      "K",
+      "HW"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "cowboy",
+   "name": "Cowboy",
+   "sub": "Old School Fangi",
+   "cost": 15,
+   "type": "hero",
+   "set": "hon1-kelly-s-heroes",
+   "squares": 0,
+   "img": "img/hon/v1/us/tiles/cowboy.webp",
+   "w": 539,
+   "h": 722,
+   "sheet": "Kelly's Heroes",
+   "units": [
+    [
+     "Cowboy",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
+  },
+  {
+   "id": "crapgame",
+   "name": "Crapgame",
+   "sub": "24/7",
+   "cost": 35,
+   "type": "hero",
+   "set": "hon1-kelly-s-heroes",
+   "squares": 0,
+   "img": "img/hon/v1/us/tiles/crapgame.webp",
+   "w": 984,
+   "h": 706,
+   "sheet": "Kelly's Heroes",
+   "units": [
+    [
+     "Crapgame",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.5285,
+     "y": 0.1969,
+     "w": 0.437,
+     "h": 0.7507,
+     "size": "n",
+     "stripes": [
+      "K",
+      "HW"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "us_combat_engineers",
+   "name": "US Combat Engineers",
+   "sub": "4th Inf. Div. Engineer Battalion",
+   "cost": 100,
+   "type": "platoon",
+   "set": "hon1-d-day",
+   "squares": 3,
+   "img": "img/hon/v1/us/tiles/us_combat_engineers.webp",
+   "w": 1901,
+   "h": 599,
+   "sheet": "D-Day",
+   "units": [
+    [
+     "Lt. Ray",
+     1,
+     "officer"
+    ],
+    [
+     "Flamer",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     2,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.019,
+     "y": 0.19,
+     "w": 0.213,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "RWRY",
+      "K"
+     ]
+    },
+    {
+     "x": 0.242,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.592,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "RWRY"
+     ]
+    },
+    {
+     "x": 0.767,
+     "y": 0.19,
+     "w": 0.214,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "RWRY"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "lt_col_robert_g_cole",
+   "name": "Lt Col. Robert G. Cole",
+   "sub": "Frenzy Leader",
+   "cost": 45,
+   "type": "hero",
+   "set": "hon1-carentan",
+   "squares": 1,
+   "img": "img/hon/v1/us/tiles/lt_col_robert_g_cole.webp",
+   "w": 811,
+   "h": 599,
+   "sheet": "Carentan",
+   "units": [
+    [
+     "Cole",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.524,
+     "y": 0.196,
+     "w": 0.422,
+     "h": 0.77,
+     "size": "n",
+     "stripes": [
+      "cmd",
+      "K"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "us_paratroopers_sainte_mere_eglise",
+   "name": "US Paratroopers",
+   "sub": "101st Inf. Div. 502nd Inf. Reg.",
+   "cost": 105,
+   "type": "platoon",
+   "set": "hon1-sainte-mere-eglise",
+   "squares": 3,
+   "img": "img/hon/v1/us/tiles/us_paratroopers_sainte_mere_eglise.webp",
+   "w": 2012,
+   "h": 578,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "1st/Lt. Fred O. Drennan",
+     1,
+     "infantry"
+    ],
+    [
+     "Recon Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Bar Team",
+     1,
+     "infantry"
+    ],
+    [
+     ".30 Cal",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.019,
+     "y": 0.19,
+     "w": 0.213,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "KRKA"
+     ]
+    },
+    {
+     "x": 0.242,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.592,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.767,
+     "y": 0.19,
+     "w": 0.214,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "K",
+      "KRKA"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "us_paratroopers_sainte_mere_eglise_110",
+   "name": "US Paratroopers",
+   "sub": "82nd Inf. Div. 508th Inf. Reg.",
+   "cost": 110,
+   "type": "platoon",
+   "set": "hon1-sainte-mere-eglise",
+   "squares": 3,
+   "img": "img/hon/v1/us/tiles/us_paratroopers_sainte_mere_eglise_110.webp",
+   "w": 2011,
+   "h": 577,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "1st/Lt. Norman Mc Vicar",
+     1,
+     "infantry"
+    ],
+    [
+     "Bazooka",
+     1,
+     "infantry"
+    ],
+    [
+     "Recon Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Bar Team",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.019,
+     "y": 0.19,
+     "w": 0.213,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "WRW"
+     ]
+    },
+    {
+     "x": 0.242,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.592,
+     "y": 0.19,
+     "w": 0.164,
+     "h": 0.76,
+     "size": "n",
+     "stripes": [
+      "K"
+     ]
+    },
+    {
+     "x": 0.767,
+     "y": 0.19,
+     "w": 0.214,
+     "h": 0.76,
+     "size": "w",
+     "stripes": [
+      "K",
+      "WRW"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "arthur_dutch_schultz",
+   "name": "Arthur \"Dutch\" Schultz",
+   "sub": "Not the Gangster..",
+   "cost": 30,
+   "type": "hero",
+   "set": "hon1-sainte-mere-eglise",
+   "squares": 0,
+   "img": "img/hon/v1/us/tiles/arthur_dutch_schultz.webp",
+   "w": 460,
+   "h": 596,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Dutch",
+     1,
+     "character"
+    ]
+   ],
+   "slots": [],
+   "own": []
+  },
+  {
+   "id": "us_paratroopers_sainte_mere_eglise_85",
+   "name": "US Paratroopers",
+   "sub": "82nd Inf. Div. 505th Inf. Reg.",
+   "cost": 85,
+   "type": "platoon",
+   "set": "hon1-sainte-mere-eglise",
+   "squares": 3,
+   "img": "img/hon/v1/us/tiles/us_paratroopers_sainte_mere_eglise_85.webp",
+   "w": 1584,
+   "h": 583,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "1st/Lt. John J. \"Red Dog\" Dolan",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     ".30 Cal",
+     1,
+     "infantry"
+    ],
+    [
+     "Bazooka",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.03,
+     "y": 0.225,
+     "w": 0.227,
+     "h": 0.7,
+     "size": "w",
+     "stripes": [
+      "BWB",
+      "K"
+     ]
+    },
+    {
+     "x": 0.609,
+     "y": 0.225,
+     "w": 0.174,
+     "h": 0.7,
+     "size": "n",
+     "stripes": [
+      "BWB",
+      "K"
+     ]
+    },
+    {
+     "x": 0.794,
+     "y": 0.225,
+     "w": 0.174,
+     "h": 0.7,
+     "size": "n",
+     "stripes": [
+      "BWB",
+      "K"
+     ]
+    }
+   ],
+   "own": []
+  },
+  {
+   "id": "field_command",
+   "name": "Field Command",
+   "sub": "Lt Col Benjamin Hayes \"Vandy\" Vandervoort",
+   "cost": 20,
+   "type": "command",
+   "set": "hon1-sainte-mere-eglise",
+   "squares": 0,
+   "img": "img/hon/v1/us/tiles/field_command.webp",
+   "w": 1599,
+   "h": 580,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Vandy",
+     1,
+     "infantry"
+    ]
+   ],
+   "slots": [
+    {
+     "x": 0.03,
+     "y": 0.225,
+     "w": 0.227,
+     "h": 0.7,
+     "size": "w",
+     "stripes": [
+      "cmd"
+     ]
+    },
+    {
+     "x": 0.609,
+     "y": 0.225,
+     "w": 0.174,
+     "h": 0.7,
+     "size": "n",
+     "stripes": [
+      "K",
+      "cmd"
+     ]
+    },
+    {
+     "x": 0.794,
+     "y": 0.225,
+     "w": 0.174,
+     "h": 0.7,
+     "size": "n",
+     "stripes": [
+      "K",
+      "cmd"
+     ]
+    }
+   ],
+   "own": []
   }
  ],
  "options": [
@@ -1670,6 +2272,707 @@ HTS_DATA["hon-v1-us"] = {
      "Support Team",
      1,
      "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "support_squad_d_day",
+   "name": "Support Squad",
+   "cat": "support",
+   "cost": 50,
+   "squares": 2,
+   "set": "hon1-d-day",
+   "size": "w",
+   "stripes": [
+    "RWRY"
+   ],
+   "img": "img/hon/v1/us/options/support_squad_d_day.webp",
+   "w": 363,
+   "h": 363,
+   "sheet": "D-Day",
+   "units": [
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Bazooka",
+     1,
+     "infantry"
+    ],
+    [
+     ".30 Cal",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "assault_squad",
+   "name": "Assault Squad",
+   "cat": "support",
+   "cost": 50,
+   "squares": 2,
+   "set": "hon1-d-day",
+   "size": "w",
+   "stripes": [
+    "RWRY"
+   ],
+   "img": "img/hon/v1/us/options/assault_squad.webp",
+   "w": 363,
+   "h": 363,
+   "sheet": "D-Day",
+   "units": [
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Flamer Team",
+     1,
+     "infantry"
+    ],
+    [
+     ".30 Cal",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "explosives_m1",
+   "name": "Explosives M1",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-d-day",
+   "size": "n",
+   "stripes": [
+    "RWRY"
+   ],
+   "img": "img/hon/v1/us/options/explosives_m1.webp",
+   "w": 266,
+   "h": 363,
+   "sheet": "D-Day",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "position",
+   "name": "Position",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-d-day",
+   "size": "n",
+   "stripes": [
+    "RWRY"
+   ],
+   "img": "img/hon/v1/us/options/position.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "D-Day",
+   "note": "Markers: X1."
+  },
+  {
+   "id": "shovel",
+   "name": "Shovel",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-d-day",
+   "size": "n",
+   "stripes": [
+    "RWRY"
+   ],
+   "img": "img/hon/v1/us/options/shovel.webp",
+   "w": 266,
+   "h": 363,
+   "sheet": "D-Day",
+   "note": "Markers: X4."
+  },
+  {
+   "id": "bangalore",
+   "name": "Bangalore",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-d-day",
+   "size": "n",
+   "stripes": [
+    "RWRY"
+   ],
+   "img": "img/hon/v1/us/options/bangalore.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "D-Day",
+   "note": "Markers: X6."
+  },
+  {
+   "id": "heroic",
+   "name": "Heroic",
+   "cat": "gear",
+   "cost": 30,
+   "squares": 0,
+   "set": "hon1-d-day",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/heroic.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "D-Day",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "grapnel",
+   "name": "Grapnel",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "hon1-d-day",
+   "size": "n",
+   "stripes": [
+    "RWRY"
+   ],
+   "img": "img/hon/v1/us/options/grapnel.webp",
+   "w": 267,
+   "h": 363,
+   "sheet": "D-Day",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "willys_50_cal",
+   "name": "Willys .50 Cal",
+   "cat": "support",
+   "cost": 50,
+   "squares": 2,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/willys_50_cal.webp",
+   "w": 310,
+   "h": 347,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Willys .50 Cal",
+     2,
+     "vehicle"
+    ]
+   ]
+  },
+  {
+   "id": "paratroopers",
+   "name": "Paratroopers",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "w",
+   "stripes": [
+    "KRKA"
+   ],
+   "img": "img/hon/v1/us/options/paratroopers.webp",
+   "w": 363,
+   "h": 349,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Recon Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Bar Team",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "bazooka_squad_sainte_mere_eglise",
+   "name": "Bazooka Squad",
+   "cat": "support",
+   "cost": 65,
+   "squares": 2,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "w",
+   "stripes": [
+    "KRKA"
+   ],
+   "img": "img/hon/v1/us/options/bazooka_squad_sainte_mere_eglise.webp",
+   "w": 363,
+   "h": 348,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Bar Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Bazooka",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "pathfinders_squad",
+   "name": "Pathfinders Squad",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "w",
+   "stripes": [
+    "KRKA"
+   ],
+   "img": "img/hon/v1/us/options/pathfinders_squad.webp",
+   "w": 363,
+   "h": 348,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Pathfinders Bar Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Pathfinders",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "engineers_squad",
+   "name": "Engineers Squad",
+   "cat": "support",
+   "cost": 90,
+   "squares": 3,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/engineers_squad.webp",
+   "w": 329,
+   "h": 345,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Sergeant Engineer",
+     1,
+     "infantry"
+    ],
+    [
+     "Engineers",
+     2,
+     "infantry"
+    ],
+    [
+     "Engineers Bar Team",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "walking_fire",
+   "name": "Walking Fire",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/walking_fire.webp",
+   "w": 221,
+   "h": 343,
+   "sheet": "Sainte-Mere-Eglise",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "knife",
+   "name": "Knife",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/knife.webp",
+   "w": 221,
+   "h": 342,
+   "sheet": "Sainte-Mere-Eglise",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "dropped",
+   "name": "Dropped",
+   "cat": "gear",
+   "cost": 10,
+   "squares": 0,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/dropped.webp",
+   "w": 324,
+   "h": 340,
+   "sheet": "Sainte-Mere-Eglise"
+  },
+  {
+   "id": "paratroopers_sainte_mere_eglise",
+   "name": "Paratroopers",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "w",
+   "stripes": [
+    "WRW"
+   ],
+   "img": "img/hon/v1/us/options/paratroopers_sainte_mere_eglise.webp",
+   "w": 363,
+   "h": 350,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Recon Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Bar Team",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "30_cal_squad_sainte_mere_eglise",
+   "name": ".30 Cal Squad",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "w",
+   "stripes": [
+    "WRW"
+   ],
+   "img": "img/hon/v1/us/options/30_cal_squad_sainte_mere_eglise.webp",
+   "w": 363,
+   "h": 349,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Fire Team",
+     2,
+     "infantry"
+    ],
+    [
+     ".30 Cal",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "pathfinders_squad_sainte_mere_eglise",
+   "name": "Pathfinders Squad",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "w",
+   "stripes": [
+    "WRW"
+   ],
+   "img": "img/hon/v1/us/options/pathfinders_squad_sainte_mere_eglise.webp",
+   "w": 363,
+   "h": 348,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Pathfinders Bar Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Pathfinders",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "waco_glider",
+   "name": "Waco Glider",
+   "cat": "gear",
+   "cost": 30,
+   "squares": 2,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "w",
+   "stripes": [
+    "cmd"
+   ],
+   "img": "img/hon/v1/us/options/waco_glider.webp",
+   "w": 363,
+   "h": 347,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Waco Glider",
+     2,
+     "infantry"
+    ]
+   ],
+   "note": "Markers: X2."
+  },
+  {
+   "id": "sprinter",
+   "name": "Sprinter",
+   "cat": "gear",
+   "cost": 5,
+   "squares": 0,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/sprinter.webp",
+   "w": 223,
+   "h": 343,
+   "sheet": "Sainte-Mere-Eglise",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "hawkins_mines",
+   "name": "Hawkins Mines",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/hawkins_mines.webp",
+   "w": 220,
+   "h": 342,
+   "sheet": "Sainte-Mere-Eglise",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "57mm_at_gun",
+   "name": "57mm AT Gun",
+   "cat": "support",
+   "cost": 20,
+   "squares": 1,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/57mm_at_gun.webp",
+   "w": 266,
+   "h": 364,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "57mm AT Gun",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "d_day_cricket_lore",
+   "name": "D-Day Cricket Lore",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/d_day_cricket_lore.webp",
+   "w": 221,
+   "h": 341,
+   "sheet": "Sainte-Mere-Eglise",
+   "note": "Markers: X3."
+  },
+  {
+   "id": "weapon_squad",
+   "name": "Weapon Squad",
+   "cat": "support",
+   "cost": 60,
+   "squares": 2,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "w",
+   "stripes": [
+    "BWB"
+   ],
+   "img": "img/hon/v1/us/options/weapon_squad.webp",
+   "w": 363,
+   "h": 349,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Fire Team",
+     1,
+     "infantry"
+    ],
+    [
+     ".30 Cal",
+     1,
+     "infantry"
+    ],
+    [
+     "Bazooka",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "heavy_weapons_squad",
+   "name": "Heavy Weapons Squad",
+   "cat": "support",
+   "cost": 55,
+   "squares": 2,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "w",
+   "stripes": [
+    "BWB"
+   ],
+   "img": "img/hon/v1/us/options/heavy_weapons_squad.webp",
+   "w": 363,
+   "h": 348,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     ".30 Cal",
+     1,
+     "infantry"
+    ],
+    [
+     "60mm Mortar",
+     1,
+     "infantry"
+    ],
+    [
+     "Bazooka",
+     1,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "waco_glider_sainte_mere_eglise",
+   "name": "Waco Glider",
+   "cat": "gear",
+   "cost": 15,
+   "squares": 0,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/waco_glider_sainte_mere_eglise.webp",
+   "w": 221,
+   "h": 342,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Waco Glider",
+     1,
+     "infantry"
+    ]
+   ],
+   "note": "Markers: X1."
+  },
+  {
+   "id": "pathfinders_squad_sainte_mere_eglise_80",
+   "name": "Pathfinders Squad",
+   "cat": "support",
+   "cost": 80,
+   "squares": 3,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/pathfinders_squad_sainte_mere_eglise_80.webp",
+   "w": 325,
+   "h": 348,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Sergeant",
+     1,
+     "infantry"
+    ],
+    [
+     "Pathfinders Bar Team",
+     1,
+     "infantry"
+    ],
+    [
+     "Pathfinders",
+     2,
+     "infantry"
+    ]
+   ]
+  },
+  {
+   "id": "willys_50_cal_sainte_mere_eglise",
+   "name": "Willys .50 Cal",
+   "cat": "support",
+   "cost": 25,
+   "squares": 1,
+   "set": "hon1-sainte-mere-eglise",
+   "size": "n",
+   "stripes": [
+    "K"
+   ],
+   "img": "img/hon/v1/us/options/willys_50_cal_sainte_mere_eglise.webp",
+   "w": 215,
+   "h": 347,
+   "sheet": "Sainte-Mere-Eglise",
+   "units": [
+    [
+     "Willys .50 Cal",
+     1,
+     "vehicle"
     ]
    ]
   }

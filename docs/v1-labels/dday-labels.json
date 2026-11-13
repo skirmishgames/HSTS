@@ -1,0 +1,982 @@
+[
+ {
+  "file": "dd1_01.png",
+  "kind": "tile",
+  "name": "US Combat Engineers",
+  "sub": "4th Inf. Div. Engineer Battalion",
+  "cost": 100,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "white",
+   "red",
+   "yellow"
+  ],
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "red",
+     "white",
+     "red",
+     "yellow"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "red",
+     "white",
+     "red",
+     "yellow"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "red",
+     "white",
+     "red",
+     "yellow"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "yellow",
+     "red",
+     "white",
+     "red",
+     "yellow"
+    ]
+   }
+  ],
+  "special_ability_slot": null,
+  "units": [
+   [
+    "Lt. Ray",
+    1
+   ],
+   [
+    "Flamer",
+    1
+   ],
+   [
+    "Fire Team",
+    2
+   ]
+  ],
+  "breaking_point": 3,
+  "partial": false,
+  "confidence": "high",
+  "notes": "US. All 4 slots look equal width. Separate small tab top right shows 0 (not cost). Lt. Ray has star icon in the composition panel, no star tab on a slot."
+ },
+ {
+  "file": "dd1_02.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd1_03.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_04.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_05.png",
+  "kind": "option",
+  "name": "Support Squad",
+  "sub": null,
+  "cost": 50,
+  "rotation": 0,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "units": [
+   [
+    "Fire Team",
+    1
+   ],
+   [
+    "Bazooka",
+    1
+   ],
+   [
+    ".30 Cal",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "US"
+ },
+ {
+  "file": "dd1_06.png",
+  "kind": "option",
+  "name": "Assault Squad",
+  "sub": null,
+  "cost": 50,
+  "rotation": 0,
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "units": [
+   [
+    "Fire Team",
+    1
+   ],
+   [
+    "Flamer Team",
+    1
+   ],
+   [
+    ".30 Cal",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "US"
+ },
+ {
+  "file": "dd1_07.png",
+  "kind": "unit",
+  "name": "Lt. Ray",
+  "stripes": [
+   "red",
+   "white",
+   "red"
+  ],
+  "notes": "US hero unit counter with stats, no cost."
+ },
+ {
+  "file": "dd1_08.png",
+  "kind": "option",
+  "name": "Explosives MI",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "white",
+   "red",
+   "yellow"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "medium",
+  "notes": "US. Name may be cut off (\"Explosives M1\"/\"MI\" as printed)."
+ },
+ {
+  "file": "dd1_09.png",
+  "kind": "option",
+  "name": "Position",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "white",
+   "red",
+   "yellow"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X1",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "US. Shows foxhole position picture"
+ },
+ {
+  "file": "dd1_10.png",
+  "kind": "option",
+  "name": "Shovel",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "white",
+   "red",
+   "yellow"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X4",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "US"
+ },
+ {
+  "file": "dd1_11.png",
+  "kind": "option",
+  "name": "Bangalore",
+  "sub": null,
+  "cost": 10,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "white",
+   "red",
+   "yellow"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X6",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "US"
+ },
+ {
+  "file": "dd1_12.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_13.png",
+  "kind": "option",
+  "name": "Heroic",
+  "sub": null,
+  "cost": 30,
+  "rotation": 90,
+  "stripes": [
+   "black",
+   "grey"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "medium",
+  "notes": "US. Landscape card, name reads bottom to top so needs 90 CW. Stripe colours at top/bottom hard to judge (black and dark grey-green)."
+ },
+ {
+  "file": "dd1_14.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd1_15.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd1_16.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_17.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_18.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_19.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_20.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_21.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_22.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_23.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_24.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd1_25.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd1_26.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_27.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_28.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd1_29.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd1_30.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_31.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd1_32.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd1_33.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd1_34.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd1_35.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd1_36.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd2_01.png",
+  "kind": "tile",
+  "name": "Festungskompagnie",
+  "sub": "352nd Infantry Div.-Rgt.916",
+  "cost": 70,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red"
+  ],
+  "tile_type": "platoon",
+  "slots": [
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "white",
+     "red"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "white",
+     "red"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "white",
+     "red"
+    ]
+   },
+   {
+    "size": "narrow",
+    "stripes": [
+     "black",
+     "white",
+     "red"
+    ]
+   }
+  ],
+  "special_ability_slot": 0,
+  "units": [
+   [
+    "OB Dern",
+    1
+   ],
+   [
+    "Gunners",
+    1
+   ],
+   [
+    "Fire Group",
+    1
+   ],
+   [
+    "MG-42 HMG",
+    1
+   ]
+  ],
+  "breaking_point": 3,
+  "partial": false,
+  "confidence": "high",
+  "notes": "German. All 4 slots look equal width. Star tab above first slot. Stripe order black, white, dark red/maroon (read as red); stripes in slots 2 and 3 partly look grey where hidden."
+ },
+ {
+  "file": "dd2_02.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_03.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd2_04.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_05.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_06.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_07.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_08.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_09.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd2_10.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_11.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_12.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_13.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_14.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_15.png",
+  "kind": "option",
+  "name": "Defense Group",
+  "sub": null,
+  "cost": 45,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red"
+  ],
+  "units": [
+   [
+    "Gunners",
+    1
+   ],
+   [
+    "Fire Group",
+    1
+   ],
+   [
+    "MG42-HMG",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "German"
+ },
+ {
+  "file": "dd2_16.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd2_17.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_18.png",
+  "kind": "option",
+  "name": "Grapnel",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "white",
+   "red",
+   "yellow"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Cost not printed on this crop (no cost tab). Kind option is inferred from card shape and stripes; could be a marker. Nation unclear (likely US gear)."
+ },
+ {
+  "file": "dd2_19.png",
+  "kind": "option",
+  "name": "Grapnel",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "white",
+   "red",
+   "yellow"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Cost not printed on this crop (no cost tab). Kind option is inferred from card shape and stripes; could be a marker. Nation unclear (likely US gear)."
+ },
+ {
+  "file": "dd2_20.png",
+  "kind": "option",
+  "name": "HMG 42 Group",
+  "sub": null,
+  "cost": 50,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red"
+  ],
+  "units": [
+   [
+    "HMG-42",
+    2
+   ],
+   [
+    "Gunners",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "German"
+ },
+ {
+  "file": "dd2_21.png",
+  "kind": "unit",
+  "name": null
+ },
+ {
+  "file": "dd2_22.png",
+  "kind": "option",
+  "name": "Mortar Group",
+  "sub": null,
+  "cost": 45,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red"
+  ],
+  "units": [
+   [
+    "Gunners",
+    1
+   ],
+   [
+    "Fire Group",
+    1
+   ],
+   [
+    "8cm Granatwerfer",
+    1
+   ]
+  ],
+  "breaking_point": 2,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "German"
+ },
+ {
+  "file": "dd2_23.png",
+  "kind": "option",
+  "name": "Grapnel",
+  "sub": null,
+  "cost": null,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "white",
+   "red",
+   "yellow"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": null,
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "medium",
+  "notes": "Cost not printed (no cost tab). Kind inferred from card shape; could be a marker."
+ },
+ {
+  "file": "dd2_24.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd2_25.png",
+  "kind": "option",
+  "name": "Artillery Spotter",
+  "sub": null,
+  "cost": 15,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red"
+  ],
+  "units": [
+   [
+    "Spotter",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "German"
+ },
+ {
+  "file": "dd2_26.png",
+  "kind": "option",
+  "name": "Ammo Belt",
+  "sub": null,
+  "cost": 20,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "German"
+ },
+ {
+  "file": "dd2_27.png",
+  "kind": "option",
+  "name": "7.5cm iG 18 Gun",
+  "sub": null,
+  "cost": 25,
+  "rotation": 0,
+  "stripes": [
+   "black",
+   "white",
+   "red"
+  ],
+  "units": [
+   [
+    "7.5cm iG 18 Gun",
+    1
+   ]
+  ],
+  "breaking_point": 1,
+  "markers": null,
+  "name_colour": "white",
+  "partial": false,
+  "confidence": "high",
+  "notes": "German"
+ },
+ {
+  "file": "dd2_28.png",
+  "kind": "option",
+  "name": "Grapnel",
+  "sub": null,
+  "cost": 5,
+  "rotation": 0,
+  "stripes": [
+   "yellow",
+   "red",
+   "white",
+   "red",
+   "yellow"
+  ],
+  "units": [],
+  "breaking_point": 0,
+  "markers": "X3",
+  "name_colour": "red",
+  "partial": false,
+  "confidence": "high",
+  "notes": "US (green with red/white stripes)"
+ },
+ {
+  "file": "dd2_29.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd3_01.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_02.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_03.png",
+  "kind": "marker",
+  "name": null
+ },
+ {
+  "file": "dd3_04.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_05.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_06.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_07.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_08.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_09.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_10.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_11.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_12.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_13.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_14.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_15.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_16.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_17.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_18.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_19.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_20.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_21.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_22.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_23.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_24.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_25.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_26.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_27.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_28.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_29.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_30.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_31.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_32.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_33.png",
+  "kind": "other",
+  "name": null
+ },
+ {
+  "file": "dd3_34.png",
+  "kind": "other",
+  "name": null
+ }
+]

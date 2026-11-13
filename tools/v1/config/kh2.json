@@ -1,0 +1,151 @@
+{
+ "src": "Kelly's Heroes/Kelly's Heroes Punchboard 2 Front.png",
+ "nat": "ge",
+ "set": "hon1-kelly-s-heroes",
+ "sheet": "Kelly's Heroes",
+ "pieces": [
+  {
+   "kind": "tile",
+   "name": "Ludwig",
+   "sub": "An Eye on You...",
+   "cost": 35,
+   "box": [
+    300,
+    300,
+    1290,
+    1010
+   ],
+   "rot": 0,
+   "slots": [
+    {
+     "box": [
+      820,
+      420,
+      1250,
+      960
+     ],
+     "stripes": [
+      "HW"
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "Otto",
+   "sub": "Nameless Hero",
+   "cost": 100,
+   "box": [
+    1440,
+    310,
+    3080,
+    1010
+   ],
+   "rot": 0,
+   "slots": [
+    {
+     "box": [
+      1490,
+      440,
+      1910,
+      960
+     ],
+     "stripes": [
+      "HW",
+      "K"
+     ]
+    },
+    {
+     "box": [
+      2490,
+      440,
+      3040,
+      960
+     ],
+     "stripes": [
+      "K"
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "Heinrich von Kamptz",
+   "sub": "The Aryan Plague",
+   "cost": 35,
+   "box": [
+    300,
+    1200,
+    1760,
+    1900
+   ],
+   "rot": 0,
+   "slots": [
+    {
+     "box": [
+      345,
+      1330,
+      765,
+      1870
+     ],
+     "stripes": [
+      "cmd",
+      "K"
+     ]
+    },
+    {
+     "box": [
+      1290,
+      1330,
+      1710,
+      1870
+     ],
+     "stripes": [
+      "HW"
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "tile",
+   "name": "Friedrich",
+   "sub": "Evil Mechanic",
+   "cost": 35,
+   "box": [
+    1930,
+    1220,
+    2660,
+    1770
+   ],
+   "rot": 270,
+   "slots": []
+  },
+  {
+   "kind": "tile",
+   "name": "Alexander von Ballot",
+   "sub": "Panzer Rider",
+   "cost": 20,
+   "box": [
+    2090,
+    1980,
+    3080,
+    2680
+   ],
+   "rot": 0,
+   "slots": [
+    {
+     "box": [
+      2610,
+      2110,
+      3040,
+      2640
+     ],
+     "stripes": [
+      "K",
+      "HW"
+     ]
+    }
+   ]
+  }
+ ]
+}
