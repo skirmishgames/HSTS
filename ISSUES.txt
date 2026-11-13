@@ -524,3 +524,7 @@ Limits: Counter-offensive has no map picture because its map page (page 4 of 1/4
 ISS-092  Heroes of Black Reach removed   [DONE]
 Where: data/expansions.js, README.md, test/smoke.js.
 Detail: the owner asked for all Heroes of Black Reach content to be removed. The only Black Reach content on the site was its game group in the expansions catalogue (20 products). The catalogue now lists 138 products across five games. There were no Black Reach pictures, documents, units or scenarios.
+
+ISS-093  Heroes of the Pacific removed from the catalogue   [DONE]
+Where: data/expansions.js, data/hon-boxes.js, tools/boxes_stats.py, README.md, test/smoke.js.
+Detail: the owner asked for the Heroes of the Pacific products to be removed for now, in line with the rule that no Pacific content goes on the site. The catalogue's Pacific group (7 product names, no pictures or files) is gone, and the Boxes page note no longer mentions Pacific War Stories. The catalogue now lists 131 products across four games. Mentions of the M25 Pacific tank transporter and the Pacific theatre in unit history are real-world names and stay.

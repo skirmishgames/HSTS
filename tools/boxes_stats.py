@@ -74,7 +74,7 @@ boxes.append({'id': 'ws', 'name': 'War Stories', 'full': 'War Stories #0 to #4',
   'blurb': 'Five single scenarios, each on one printed sheet: Hell\'s Fury, Blue and Grey at Moon-sur-Elle, Colombelles Castle, Juno Beach and The Black Baron. Each has its own rules, characters and new tiles, laid out here in full with the original PDF to download. They are played with the Big Red One rules and the battle packs the sheet names.',
   'links': [
     {'id': 'scenarios', 'label': 'Scenarios', 'href': 'scenarios.html?b=ws', 'count': plural(len(scen['ws']['entries']), 'scenario'), 'text': 'Every War Story as a web page with the map, armies, new tiles and the original sheet.'},
-    {'id': 'expansions', 'label': 'Product catalogue', 'href': 'expansions.html?l=hon2&q=War%20Stories', 'count': '5 gazettes', 'text': 'The War Stories entries in the product catalogue, with the Heroes of Stalingrad and Pacific ones.'},
+    {'id': 'expansions', 'label': 'Product catalogue', 'href': 'expansions.html?l=hon2&q=War%20Stories', 'count': '5 gazettes', 'text': 'The War Stories entries in the product catalogue, with the Heroes of Stalingrad ones.'},
     {'id': 'units', 'label': 'Unit index', 'href': None, 'count': 'on each story page', 'text': 'The new tiles are shown on each scenario page. They are not in the unit index or the army builder yet.'}]})
 ex = json.loads(open('data/expansions.js', encoding='utf-8').read().split('=', 1)[1].strip().rstrip(';'))
 v1 = [l for l in ex['lines'] if l['id'] == 'hon1'][0]

@@ -1267,48 +1267,6 @@ window.HTS_EXPANSIONS = {
 ]
 },
 {
-"id": "hop",
-"name": "Heroes of the Pacific",
-"sub": "The same system in the Pacific theatre.",
-"items": [
-{
-"id": "hop-core-box",
-"name": "Core Box",
-"cat": "Big box"
-},
-{
-"id": "hop-battle-pack-1-tokyo-express",
-"name": "Battle Pack #1 - Tokyo Express",
-"cat": "Big box"
-},
-{
-"id": "hop-war-stories-1-edson-s-ridge",
-"name": "War Stories #1 - Edson's Ridge",
-"cat": "Gazette"
-},
-{
-"id": "hop-war-stories-2-carlson-s-patrol",
-"name": "War Stories #2 - Carlson's Patrol",
-"cat": "Gazette"
-},
-{
-"id": "hop-battlefield-stories-1-hostile-environment",
-"name": "Battlefield Stories #1 - Hostile Environment",
-"cat": "Gazette"
-},
-{
-"id": "hop-piggy-surprise-kickstarter",
-"name": "Piggy Surprise (Kickstarter)",
-"cat": "Single punchboard"
-},
-{
-"id": "hop-solo-mode",
-"name": "Solo Mode",
-"cat": "Small box"
-}
-]
-},
-{
 "id": "son",
 "name": "Shadows over Normandie",
 "sub": "Horror and pulp adventure in Normandy, with Cthulhu Mythos themes.",

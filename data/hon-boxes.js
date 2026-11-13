@@ -380,7 +380,7 @@ window.HTS_BOXES = {
      "label": "Product catalogue",
      "href": "expansions.html?l=hon2&q=War%20Stories",
      "count": "5 gazettes",
-     "text": "The War Stories entries in the product catalogue, with the Heroes of Stalingrad and Pacific ones."
+     "text": "The War Stories entries in the product catalogue, with the Heroes of Stalingrad ones."
     },
     {
      "id": "units",
