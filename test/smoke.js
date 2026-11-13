@@ -753,7 +753,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     // merged Germany: Normandie and Stalingrad German tiles and options in one nation
     await sp.click('[data-nation="ge"]');
     const natNames = await sp.locator('#nations button').allInnerTexts();
-    ok(natNames.join('|') === 'United States|Germany|Commonwealth|Soviet Union (Stalingrad)' && await sp.locator('#nations [data-nation="gs"]').count() === 0, 'builder: four nations (' + natNames.join(', ') + ')');
+    ok(natNames.join('|') === 'United States|Germany|Commonwealth|French (FFI)|Soviet Union (Stalingrad)' && await sp.locator('#nations [data-nation="gs"]').count() === 0, 'builder: five nations (' + natNames.join(', ') + ')');
     const rawN = await sp.evaluate(() => ({ ge: window.HTS_DATA['hon-bro-ge'].tiles.length, gs: window.HTS_DATA['hon-hos-gs'].tiles.length, v1: window.HTS_DATA['hon-v1-ge'].tiles.length }));
     ok(await sp.locator('.lcard').count() === rawN.ge + rawN.gs + rawN.v1 && rawN.gs === 12, 'builder Germany: library holds every tile of both German files and the first edition box (' + rawN.ge + ' + ' + rawN.gs + ' + ' + rawN.v1 + ')');
     ok(await sp.locator('.lcard', { hasText: 'Die Geisterabteilung' }).count() === 1 && await sp.locator('.lcard', { hasText: 'Jägermeister' }).count() === 1 && await sp.locator('.lcard', { hasText: 'Brassert' }).count() === 1 && await sp.locator('.lcard', { hasText: 'SS Panzergrenadiere' }).count() >= 1, 'builder Germany: Big Red One German tiles and Die Geisterabteilung are in one library');
@@ -1045,18 +1045,18 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   // first edition (V1) army boxes in the builder
   {
     const vm = require('vm'); const ctx = { window: { HTS_DATA: {} } }; ctx.HTS_DATA = ctx.window.HTS_DATA; vm.createContext(ctx);
-    ['us', 'ge', 'uk'].forEach(n => vm.runInContext(fs.readFileSync(path.join(root, 'data', 'hon-v1-' + n + '.js'), 'utf8'), ctx));
-    const cnt = ['us', 'ge', 'uk'].map(n => ctx.HTS_DATA['hon-v1-' + n].tiles.length + '/' + ctx.HTS_DATA['hon-v1-' + n].options.length).join(' ');
-    ok(cnt === '33/85 27/95 15/56', 'first edition: data holds 33/85 (US), 27/95 (German) and 15/56 (Commonwealth) tiles and options (' + cnt + ')');
+    ['us', 'ge', 'uk', 'fr'].forEach(n => vm.runInContext(fs.readFileSync(path.join(root, 'data', 'hon-v1-' + n + '.js'), 'utf8'), ctx));
+    const cnt = ['us', 'ge', 'uk', 'fr'].map(n => ctx.HTS_DATA['hon-v1-' + n].tiles.length + '/' + ctx.HTS_DATA['hon-v1-' + n].options.length).join(' ');
+    ok(cnt === '32/82 27/95 15/56 1/3', 'first edition: data holds 32/82 (US), 27/95 (German), 15/56 (Commonwealth) and 1/3 (French) tiles and options (' + cnt + ')');
     let missing = [], bad = [];
-    ['us', 'ge', 'uk'].forEach(n => { const D = ctx.HTS_DATA['hon-v1-' + n];
+    ['us', 'ge', 'uk', 'fr'].forEach(n => { const D = ctx.HTS_DATA['hon-v1-' + n];
       D.tiles.concat(D.options).forEach(x => { if (!fs.existsSync(path.join(root, x.img))) missing.push(x.img); if (typeof x.cost !== 'number' || !x.name) bad.push(x.id); });
       D.tiles.forEach(t => t.slots.forEach(sl => { if (['w', 'n'].indexOf(sl.size) < 0 || !sl.stripes.length) bad.push(t.id); })); });
     ok(missing.length === 0 && bad.length === 0, 'first edition: every tile and option has a picture, a name, a cost and valid slots ' + missing.concat(bad).slice(0, 5).join(','));
     const v1p = await b.newPage({ viewport: { width: 1280, height: 900 } }); const v1errs = []; v1p.on('pageerror', e => v1errs.push(e.message)); v1p.on('dialog', d => d.accept());
     await v1p.goto(base + 'builder.html'); await v1p.evaluate(() => { try { localStorage.clear(); } catch (e) {} }); await v1p.reload(); await v1p.waitForTimeout(400);
     await v1p.fill('#search', 'first edition'); await v1p.waitForTimeout(300);
-    ok(await v1p.locator('.lcard').count() === 33 && await v1p.locator('.lcard .v1badge').count() === 33 && await v1p.locator('.lcard', { hasText: 'Sherman Squadron' }).count() === 1, 'first edition: searching "first edition" lists the 33 US first edition tiles, each with the badge');
+    ok(await v1p.locator('.lcard').count() === 32 && await v1p.locator('.lcard .v1badge').count() === 32 && await v1p.locator('.lcard', { hasText: 'Sherman Squadron' }).count() === 1, 'first edition: searching "first edition" lists the 32 US first edition tiles, each with the badge');
     await v1p.fill('#search', ''); await v1p.click('[data-nation="ge"]'); await v1p.fill('#search', 'panzergrenadiere'); await v1p.waitForTimeout(300);
     await v1p.locator('.lcard', { has: v1p.locator('.v1badge') }).filter({ hasText: 'PZGR-LEHR' }).first().locator('[data-add]').click();
     ok((await v1p.textContent('#ptsUsed')) === '65' && await v1p.locator('.atile .slot').count() === 4, 'first edition: Panzergrenadiere costs 65 and has 4 slots');
@@ -1070,6 +1070,26 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     ok((await v1p.textContent('#ptsUsed')) === '70', 'first edition: option cost is added (70)');
     await v1p.reload(); await v1p.waitForTimeout(400);
     ok((await v1p.textContent('#ptsUsed')) === '70', 'first edition: the army survives a reload');
+    // French (FFI): first edition nation
+    await v1p.fill('#search', ''); await v1p.click('[data-nation="fr"]'); await v1p.waitForTimeout(300);
+    ok(await v1p.locator('.lcard').count() === 1 && await v1p.locator('.lcard', { hasText: 'Maquisards' }).locator('.v1badge').count() === 1, 'first edition French: French (FFI) lists the Maquisards tile with the First edition badge');
+    await v1p.locator('.lcard', { hasText: 'Maquisards' }).locator('[data-add]').click(); await v1p.waitForTimeout(200);
+    const frSlots = await v1p.locator('.atile .slot').count(); let frDone = false;
+    for (let i = 0; i < frSlots && !frDone; i++) { await v1p.locator('.atile .slot').nth(i).click(); await v1p.waitForTimeout(150);
+      const c = v1p.locator('.pcard', { hasText: 'SOE Agents' }); if (await c.count()) { await c.first().click(); frDone = true; } else await v1p.keyboard.press('Escape'); }
+    await v1p.waitForTimeout(200);
+    ok(frDone && (await v1p.textContent('#ptsUsed')) === '140', 'first edition French: Maquisards 55 plus SOE Agents 85 totals 140 (' + (await v1p.textContent('#ptsUsed')) + ')');
+    await v1p.reload(); await v1p.waitForTimeout(400);
+    ok((await v1p.textContent('#ptsUsed')) === '140' && await v1p.locator('#nations .on').innerText() === 'French (FFI)', 'first edition French: the army survives a reload');
+    // share link round trip
+    const frSnap = Buffer.from(JSON.stringify({ n: 'fr', l: 250, nm: 'ffi', a: [['v1:maquisards', ['v1:soe_agents', null, null]]] })).toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    await v1p.evaluate(() => { try { localStorage.clear(); } catch (e) {} });
+    await v1p.goto('about:blank'); await v1p.goto(base + 'builder.html#b=' + frSnap); await v1p.waitForTimeout(400);
+    ok((await v1p.textContent('#ptsUsed')) === '140' && await v1p.locator('#nations .on').innerText() === 'French (FFI)', 'first edition French: a share link for the French nation loads');
+    // old saves: a US army holding a French id drops the entry and does not crash
+    await v1p.evaluate(() => { localStorage.setItem('hts.hon.bro.v1', JSON.stringify({ nation: 'us', limit: 250, name: 'old', army: [{ id: 'z1', t: 'v1:maquisards', o: ['v1:soe_agents', null] }], theme: 'light', saved: [] })); });
+    await v1p.reload(); await v1p.waitForTimeout(400);
+    ok((await v1p.textContent('#ptsUsed')) === '0' && await v1p.locator('.atile').count() === 0, 'first edition French: an old US save holding French ids loads with those entries dropped (' + (await v1p.textContent('#ptsUsed')) + ', ' + await v1p.locator('.atile').count() + ', ' + await v1p.locator('#nations .on').innerText() + ')');
     ok(v1errs.length === 0, 'first edition: no console errors ' + v1errs.join('|'));
     await v1p.evaluate(() => { try { localStorage.clear(); } catch (e) {} }); await v1p.close();
   }

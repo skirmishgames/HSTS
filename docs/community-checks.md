@@ -50,6 +50,18 @@ Each item says where to look on the site and what to compare.
 
 Each table comes straight from the site data. Check the name, the cost and the stripes against your tiles. "Platoon" means the tile's own colour stripes, "black" means the black band.
 
+### French (FFI)
+
+| Tile | Second line | Cost | Slots, left to right |
+|---|---|---|---|
+| Maquisards | Les Héros du Vercors | 55 | long: platoon, narrow: platoon or platoon |
+
+| Option | Cost | Shape | Stripes | Filed as | From |
+|---|---|---|---|---|---|
+| SOE Agents | 85 | long | platoon (BWR) | support | Gazette 8 |
+| Laffly W15 TCC | 20 | narrow | platoon (BWR) | support | Gazette 8 |
+| Garde d'Honneur | 25 | narrow | platoon (RWBWR) | support | Gazette 8 |
+
 ### Germany
 
 | Tile | Second line | Cost | Slots, left to right |
@@ -289,7 +301,6 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Arthur "Dutch" Schultz | Not the Gangster.. | 30 | no slots |
 | US Paratroopers | 82nd Inf. Div. 505th Inf. Reg. | 85 | long: platoon or black, narrow: platoon or black, narrow: platoon or black |
 | Field Command | Lt Col Benjamin Hayes "Vandy" Vandervoort | 20 | long: command, narrow: black or command, narrow: black or command |
-| Maquisards | Les Héros du Vercors | 55 | long: platoon, narrow: platoon or platoon |
 | Lt Col James Earl Rudder | Badass Coach | 40 | narrow: command or black, narrow: black, narrow: black or command |
 | Joseph Legalec | Odd Lighthouse Keeper | 10 | narrow: platoon |
 | The Creature | Shrimpman | 40 | no slots |
@@ -372,9 +383,6 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Willys .50 Cal | 25 | narrow | black | support | Sainte-Mere-Eglise |
 | 75mm Pack Howitzer M8 | 30 | narrow | black | support | Gazette 1 |
 | Minesweepers | 10 | narrow | black | support | Gazette 1 |
-| SOE Agents | 85 | long | platoon (BWR) | support | Gazette 8 |
-| Laffly W15 TCC | 20 | narrow | platoon (BWR) | support | Gazette 8 |
-| Garde d'Honneur | 25 | narrow | platoon (RWBWR) | support | Gazette 8 |
 | Mortar Grapnel | 5 | narrow | platoon (RKR) | gear | Pointe-du-Hoc |
 | Trigger Happy | 10 | narrow | platoon (RKR) | gear | Pointe-du-Hoc |
 | Offensive Grenades | 5 | narrow | black | gear | Pointe-du-Hoc |

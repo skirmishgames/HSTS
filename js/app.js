@@ -2,11 +2,11 @@
   'use strict';
 
   var LSK = 'hts.hon.bro.v1';
-  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }, { id: 'ru', name: 'Soviet Union (Stalingrad)' }];
+  var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }, { id: 'fr', name: 'French (FFI)' }, { id: 'ru', name: 'Soviet Union (Stalingrad)' }];
   /* Each builder nation is built from one or more data files. Germany holds both German files.
      Ids from hon-hos-gs are prefixed with HOSP in the merged view because ten option ids
      (veteran, ammo, artillery, ...) also exist in hon-bro-ge. The data files are not changed. */
-  var SOURCES = { us: ['hon-bro-us', 'hon-v1-us'], ge: ['hon-bro-ge', 'hon-hos-gs', 'hon-v1-ge'], uk: ['hon-bro-uk', 'hon-v1-uk'], ru: ['hon-hos-ru'] };
+  var SOURCES = { us: ['hon-bro-us', 'hon-v1-us'], ge: ['hon-bro-ge', 'hon-hos-gs', 'hon-v1-ge'], uk: ['hon-bro-uk', 'hon-v1-uk'], fr: ['hon-v1-fr'], ru: ['hon-hos-ru'] };
   /* First edition (V1) files are merged the same way, with ids prefixed V1P and a First edition tag. */
   var V1P = 'v1:', V1_TAG = 'First edition', V1_WORDS = ' first edition v1';
   var HOSP = 'gs:';
