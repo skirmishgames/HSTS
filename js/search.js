@@ -119,7 +119,7 @@
         var ed = v1 ? 'First edition' : hos ? 'Stalingrad' : 'V2', words = v1 ? ' first edition v1' : hos ? ' stalingrad eastern front' : '';
         d.tiles.forEach(function (t) {
           var name = t.name + (t.sub ? ' ' + t.sub : '');
-          out.push({ t: t.name, sub: t.sub || '', href: 'builder.html?n=' + n + '&q=' + q(name), img: t.img,
+          out.push({ t: t.name, sub: t.sub || '', href: 'builder.html?n=' + n + '&q=' + q(name) + '&ed=' + (v1 ? 'v1' : hos ? 'hos' : 'v2'), img: t.img,
             b: ['Tile', NATS[n], ed, t.cost + ' pts', TYPE_NAME[t.type] || ''].filter(Boolean),
             x: [unitText(t.units), t.note].filter(Boolean).join('. '), hay: norm(name + ' tile ' + unitText(t.units) + ' ' + (TYPE_NAME[t.type] || '') + ' ' + NATS[n] + ' ' + (t.set || '') + words + ' ' + (t.note || '')), head: norm(name) });
         });

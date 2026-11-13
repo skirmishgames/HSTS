@@ -1176,6 +1176,94 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     ok(sperrs.length === 0, 'search: no console errors ' + sperrs.join('|'));
     await sp.close();
   }
+  // edition filter in the builder
+  {
+    const ep = await b.newPage({ viewport: { width: 1280, height: 900 } }); ep.on('dialog', d => d.accept());
+    const eperrs = []; ep.on('pageerror', e => eperrs.push(e.message)); ep.on('console', m => { if (m.type() === 'error') eperrs.push(m.text()); });
+    await ep.goto(base + 'builder.html'); await ep.evaluate(() => { try { localStorage.clear(); } catch (e) {} }); await ep.reload(); await ep.waitForTimeout(400);
+    const chipsText = async () => (await ep.locator('#edChips .chip').allInnerTexts()).join('|');
+    const eds = async () => ep.evaluate(() => { const o = {}; window.HTS.data().d.tiles.forEach(t => { o[t.ed] = (o[t.ed] || 0) + 1; }); return o; });
+    let ecount = await eds();
+    ok(await chipsText() === 'All|V2|First edition' && !(await ep.locator('#edRow').isHidden()), 'edition: United States offers All, V2 and First edition (no Stalingrad)');
+    await ep.click('[data-nation="ge"]'); ecount = await eds();
+    ok(await chipsText() === 'All|V2|Stalingrad|First edition' && ecount.v2 > 0 && ecount.hos === 12 && ecount.v1 === 29, 'edition: Germany offers all four chips (' + JSON.stringify(ecount) + ')');
+    const lib = async () => ep.locator('.lcard').count();
+    const all0 = await lib();
+    ok(all0 === ecount.v2 + ecount.hos + ecount.v1, 'edition: All lists every tile (' + all0 + ')');
+    await ep.click('[data-ed="v2"]');
+    ok(await lib() === ecount.v2 && await ep.locator('.lcard .hosbadge').count() === 0, 'edition: V2 lists only the current edition tiles (' + ecount.v2 + ')');
+    await ep.click('[data-ed="hos"]');
+    ok(await lib() === 12 && await ep.locator('.lcard .hosbadge:not(.v1badge)').count() === 12, 'edition: Stalingrad lists the 12 Stalingrad tiles in Germany');
+    await ep.click('[data-ed="v1"]');
+    ok(await lib() === 29 && await ep.locator('.lcard .v1badge').count() === 29, 'edition: First edition lists the 29 German first edition tiles');
+    ok(await ep.evaluate(() => localStorage.getItem('hts.hon.edition.v1')) === 'v1', 'edition: the choice is saved under its own key');
+    await ep.reload(); await ep.waitForTimeout(400);
+    ok(await ep.locator('#edChips .chip.on').innerText() === 'First edition' && await lib() === 29, 'edition: the saved choice is applied on load');
+    // countries with one edition have no row, and the saved choice does not hide their tiles
+    await ep.click('[data-nation="fr"]');
+    ok(await ep.locator('#edRow').isHidden() && await lib() === 6, 'edition: French (first edition only) has no Edition row and lists its 6 tiles');
+    await ep.click('[data-nation="ru"]');
+    ok(await ep.locator('#edRow').isHidden() && await lib() === 12, 'edition: Soviet Union (Stalingrad only) has no Edition row and lists its 12 tiles');
+    await ep.click('[data-nation="us"]'); await ep.waitForTimeout(100);
+    ok(await ep.locator('#edChips .chip.on').innerText() === 'First edition' && await lib() === (await eds()).v1, 'edition: the saved choice comes back on a country that has that edition');
+    // search words still work, combined with the chip (AND)
+    await ep.click('[data-nation="ge"]'); await ep.click('[data-ed="all"]');
+    await ep.fill('#search', 'stalingrad'); await ep.waitForTimeout(150);
+    ok(await lib() === 12, 'edition: the search word "stalingrad" still finds the Stalingrad tiles');
+    await ep.fill('#search', 'first edition'); await ep.waitForTimeout(150);
+    ok(await lib() === 29, 'edition: the search words "first edition" still find the first edition tiles');
+    await ep.click('[data-ed="v2"]'); await ep.fill('#search', 'stalingrad'); await ep.waitForTimeout(150);
+    ok(await lib() === 0, 'edition: V2 plus the search word "stalingrad" is an AND and lists nothing');
+    await ep.fill('#search', ''); await ep.click('[data-ed="all"]');
+    // tiles in the army stay when the filter changes, and the picker still lists every option that fits
+    await ep.click('[data-nation="us"]');
+    await ep.fill('#search', 'Rifle Platoon'); await ep.waitForTimeout(150);
+    await ep.locator('.lcard', { hasText: 'Rifle Platoon' }).filter({ hasNot: ep.locator('.v1badge') }).first().locator('[data-add]').click();
+    await ep.fill('#search', 'first edition'); await ep.waitForTimeout(150);
+    await ep.locator('.lcard .v1badge').first().locator('xpath=ancestor::div[contains(@class,"lcard")]').locator('[data-add]').click();
+    ok(await ep.locator('.atile').count() === 2, 'edition: a V2 and a first edition tile are in the army');
+    await ep.fill('#search', '');
+    await ep.locator('.atile').first().locator('.slot').first().click(); await ep.waitForTimeout(150);
+    const pickAll = await ep.locator('.pcard').count(); await ep.keyboard.press('Escape');
+    await ep.click('[data-ed="v1"]');
+    ok(await ep.locator('.atile').count() === 2 && await ep.locator('#board .atile h3').first().innerText() !== '', 'edition: the army keeps tiles from the other edition');
+    await ep.locator('.atile').first().locator('.slot').first().click(); await ep.waitForTimeout(150);
+    ok(await ep.locator('.pcard').count() === pickAll && pickAll > 0, 'edition: the option picker still lists every option that fits the slot (' + pickAll + ')');
+    await ep.keyboard.press('Escape');
+    // set chips follow the edition
+    await ep.click('[data-ed="all"]');
+    const setsAll = await ep.locator('#setChips .chip').allInnerTexts();
+    await ep.click('[data-ed="v2"]');
+    const setsV2 = await ep.locator('#setChips .chip').allInnerTexts();
+    ok(setsAll.some(x => /^hon1-/.test(x)) && setsV2.length > 0 && !setsV2.some(x => /^hon1-/.test(x)), 'edition: set chips list only the sets of the chosen edition (' + setsAll.length + ' to ' + setsV2.length + ')');
+    await ep.click('[data-ed="all"]'); await ep.click('#setChips .chip:has-text("hon1-")');
+    const withSet = await lib();
+    await ep.click('[data-ed="v2"]');
+    ok(await ep.locator('#setChips .chip.on').count() === 0 && await lib() > withSet, 'edition: a chosen set that the new edition does not have is dropped, not left filtering');
+    // My collection: the note counts what the collection alone hides
+    await ep.click('[data-ed="all"]');
+    await ep.evaluate(() => { try { localStorage.setItem('hts.hon.own.v1', JSON.stringify({ own: { CB: true }, only: true })); } catch (e) {} });
+    await ep.reload(); await ep.waitForTimeout(400);
+    const noteN = async () => { const t = await ep.locator('#ownnote').innerText(); const m = /^(\d+) tiles? (is|are) hidden/.exec(t.trim()); return m ? Number(m[1]) : 0; };
+    const dataCount = async f => ep.evaluate(f => { const D = window.HTS.data(); return D.d.tiles.filter(t => (f.ed === 'all' || t.ed === f.ed)).length; }, f);
+    const shown = {}, hid = {};
+    for (const e of ['all', 'v2', 'v1']) { await ep.click('[data-ed="' + e + '"]'); shown[e] = await lib(); hid[e] = await noteN(); }
+    const tot = {}; for (const e of ['all', 'v2', 'v1']) tot[e] = await dataCount({ ed: e });
+    ok(['all', 'v2', 'v1'].every(e => shown[e] + hid[e] === tot[e]), 'edition: with My collection on, shown plus hidden equals the tiles of that edition (' + JSON.stringify({ shown, hid, tot }) + ')');
+    ok(shown.all === 6 && hid.v2 === tot.v2 - 6 && shown.v1 === 0 && hid.v1 === tot.v1, 'edition: the collection note does not count tiles that the edition chip already removes');
+    await ep.click('[data-ed="v2"]'); const before = await lib(), nh = await noteN();
+    await ep.click('[data-own-off]'); await ep.waitForTimeout(150);
+    ok(await lib() === before + nh, 'edition: "Show everything" adds exactly the number of tiles the note gave (' + nh + ')');
+    // a link from the search shows its tile whatever edition was saved
+    await ep.evaluate(() => { try { localStorage.clear(); localStorage.setItem('hts.hon.edition.v1', 'v2'); } catch (e) {} });
+    await ep.goto(base + 'builder.html?n=ge&q=PZGR-LEHR&ed=v1'); await ep.waitForTimeout(400);
+    ok(await ep.locator('#edChips .chip.on').innerText() === 'First edition' && await ep.locator('.lcard', { hasText: 'PZGR-LEHR' }).count() >= 1 && await ep.evaluate(() => localStorage.getItem('hts.hon.edition.v1')) === 'v2', 'edition: a search link with ed= shows its tile and leaves the saved choice alone');
+    await ep.goto(base + 'builder.html?n=ge&q=PZGR-LEHR'); await ep.waitForTimeout(400);
+    ok(await ep.locator('#edChips .chip.on').innerText() === 'All' && await ep.locator('.lcard', { hasText: 'PZGR-LEHR' }).count() >= 1, 'edition: a link with no ed= shows its tile too (the saved choice is set aside for that visit)');
+    ok(eperrs.length === 0, 'edition: no console errors ' + eperrs.join('|'));
+    await ep.evaluate(() => { try { localStorage.clear(); } catch (e) {} });
+    await ep.close();
+  }
   // trackers
   const cp = require('child_process');
   let trk = ''; try { trk = cp.execSync('python3 tools/units_tracker.py --strict', { cwd: root }).toString(); } catch (e) { trk = 'FAILED ' + e.stdout; }

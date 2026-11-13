@@ -711,3 +711,5 @@ a.gocard:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .shint .chips{margin-top:.4rem}
 #jump .chip{text-decoration:none;display:inline-flex;align-items:center;gap:.3rem}
 @media (max-width:560px){.sthumb{width:48px;height:36px}.sgroup{padding:.7rem .7rem}}
+.edrow{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .6rem}
+.edrow[hidden]{display:none}

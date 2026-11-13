@@ -2,6 +2,7 @@
   'use strict';
 
   var LSK = 'hts.hon.bro.v1';
+  var EDK = 'hts.hon.edition.v1'; /* the Edition chip choice, kept per device */
   var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }, { id: 'fr', name: 'French (FFI)' }, { id: 'ru', name: 'Soviet Union (Stalingrad)' }];
   /* Each builder nation is built from one or more data files. Germany holds both German files.
      Ids from hon-hos-gs are prefixed with HOSP in the merged view because ten option ids
@@ -18,10 +19,12 @@
   var CATS = [['support', 'Support units'], ['gear', 'Gear'], ['trait', 'Character traits'], ['order', 'Orders'], ['customization', 'Customizations']];
   var CAT_NAME = { support: 'Support', gear: 'Gear', trait: 'Trait', order: 'Order', customization: 'Customization' };
   var SIZE_NAME = { w: 'wide', n: 'narrow' };
+  /* Every tile is V2, Stalingrad (any tile from a hon-hos file) or first edition. */
+  var EDITIONS = [['v2', 'V2'], ['hos', 'Stalingrad'], ['v1', 'First edition']];
 
   var S = {
     nation: 'us', limit: 250, name: '', army: [], theme: 'light', saved: [],
-    type: 'all', sets: {}, q: '', view: 'army', opt: null
+    type: 'all', sets: {}, q: '', view: 'army', opt: null, edition: 'all'
   };
   var P = { uid: null, i: 0, all: false, own: false };
   var OWN = window.HTS_OWN;
@@ -43,7 +46,7 @@
         name = SOURCES[n].length > 1 ? NATIONS.filter(function (x) { return x.id === n; })[0].name : d.name;
         /* copies, so the shared data files stay as they are for the unit index and heroes pages */
         d.tiles.forEach(function (x) {
-          var y = Object.assign({}, x, { id: pre + x.id, own: (x.own || []).map(function (id) { return pre + id; }), hos: merged, v1: v1, un: v1 ? '' : key.split('-')[2] });
+          var y = Object.assign({}, x, { id: pre + x.id, own: (x.own || []).map(function (id) { return pre + id; }), hos: merged, v1: v1, ed: v1 ? 'v1' : hos ? 'hos' : 'v2', un: v1 ? '' : key.split('-')[2] });
           if (v1) y.slots = x.slots.map(function (sl) { return Object.assign({}, sl, { stripes: sl.stripes.map(v1s) }); });
           tiles.push(y); t[y.id] = y;
         });
@@ -297,12 +300,37 @@
   }
 
   /* ---------- library ---------- */
+  /* The editions this country has, in chip order. A country with one edition has no Edition row. */
+  function editions() {
+    var have = {};
+    data().d.tiles.forEach(function (t) { have[t.ed] = 1; });
+    return EDITIONS.filter(function (e) { return have[e[0]]; });
+  }
+  /* The saved choice only applies where the country has that edition (French has only first edition). */
+  function effEd() {
+    return S.edition !== 'all' && editions().some(function (e) { return e[0] === S.edition; }) ? S.edition : 'all';
+  }
+  function saveEdition() { try { localStorage.setItem(EDK, S.edition); } catch (e) { /* storage can be blocked */ } }
+  function loadEdition() {
+    try {
+      var v = localStorage.getItem(EDK);
+      if (v === 'all' || EDITIONS.some(function (e) { return e[0] === v; })) S.edition = v;
+    } catch (e) { /* ignore */ }
+  }
+
   function renderFilters() {
+    var eds = editions(), ed = effEd();
+    $('edRow').hidden = eds.length < 2;
+    $('edChips').innerHTML = eds.length < 2 ? '' : [['all', 'All']].concat(eds).map(function (e) {
+      return '<button type="button" class="chip' + (ed === e[0] ? ' on' : '') + '" data-ed="' + e[0] + '" aria-pressed="' + (ed === e[0]) + '">' + e[1] + '</button>';
+    }).join('');
     $('typeChips').innerHTML = TYPES.map(function (t) {
       return '<button type="button" class="chip' + (S.type === t[0] ? ' on' : '') + '" data-type="' + t[0] + '">' + t[1] + '</button>';
     }).join('');
     var sets = {};
-    data().d.tiles.forEach(function (t) { if (OWN.owns(t.set)) sets[t.set] = 1; });
+    data().d.tiles.forEach(function (t) { if (OWN.owns(t.set) && (ed === 'all' || t.ed === ed)) sets[t.set] = 1; });
+    /* a chosen set that this country or edition does not have must not keep filtering unseen */
+    Object.keys(S.sets).forEach(function (k) { if (!sets[k]) delete S.sets[k]; });
     $('setChips').innerHTML = Object.keys(sets).map(function (k) {
       return '<button type="button" class="chip' + (S.sets[k] ? ' on' : '') + '" data-set="' + esc(k) + '" title="' + esc(OWN.name(k)) + '">' + esc(k) + '</button>';
     }).join('');
@@ -314,20 +342,23 @@
     var opt = S.opt && D.o[S.opt] ? D.o[S.opt] : null;
     if (S.opt && !opt) S.opt = null;
     $('optnote').innerHTML = opt ? '<p class="ownnote" role="status">Showing the tiles that have a slot for <strong>' + esc(opt.name) + '</strong> (' + costLabel(opt.cost) + ' pts). <button type="button" class="linkish" data-opt-clear>Show all tiles</button></p>' : '';
-    var list = D.d.tiles.filter(function (t) {
+    var ed = effEd();
+    /* every filter except My collection; the collection note counts what My collection alone takes out of this list */
+    var base = D.d.tiles.filter(function (t) {
+      if (ed !== 'all' && t.ed !== ed) return false;
       if (S.type !== 'all' && t.type !== S.type) return false;
       if (anySet && !S.sets[t.set]) return false;
-      if (!OWN.owns(t.set)) return false;
       if (opt && !t.slots.some(function (sl) { return !fits(sl, opt).length; })) return false;
       if (q && (t.name + ' ' + (t.sub || '') + (t.hos ? HOS_WORDS : '') + (t.v1 ? V1_WORDS : '')).toLowerCase().indexOf(q) < 0) return false;
       return true;
-    }).sort(function (a, b) {
+    });
+    var list = base.filter(function (t) { return OWN.owns(t.set); }).sort(function (a, b) {
       /* V2 tiles first, then first edition, so the two editions sit in separate runs */
       return ((a.v1 ? 1 : 0) - (b.v1 ? 1 : 0)) || (TYPE_ORDER[a.type] - TYPE_ORDER[b.type]) || (a.cost - b.cost) || a.name.localeCompare(b.name);
     });
-    var hidT = D.d.tiles.filter(function (t) { return !OWN.owns(t.set); }).length;
+    var hidT = base.length - list.length;
     $('ownnote').innerHTML = OWN.note(hidT, hidT === 1 ? 'tile' : 'tiles');
-    if (!list.length) { $('library').innerHTML = '<p class="count">No tiles match.' + (OWN.active() ? ' Your collection filter is on. Open My collection to change it.' : '') + '</p>'; return; }
+    if (!list.length) { $('library').innerHTML = '<p class="count">No tiles match.' + (ed !== 'all' ? ' The Edition filter is set to ' + esc(EDITIONS.filter(function (e) { return e[0] === ed; })[0][1]) + '.' : '') + (OWN.active() ? ' Your collection filter is on. Open My collection to change it.' : '') + '</p>'; return; }
     $('library').innerHTML = list.map(function (t) {
       var n = S.army.filter(function (e) { return e.t === t.id; }).length;
       return '<div class="lcard"><button type="button" class="imgbtn" data-zoom="' + t.img + '" data-cap="' + esc(t.name + ', ' + t.cost + ' pts') + '" aria-label="Zoom ' + esc(t.name) + '"><img src="' + t.img + '" alt="' + esc(t.name) + '" loading="lazy" width="' + t.w + '" height="' + t.h + '"></button>' +
@@ -435,6 +466,7 @@
         }
         return;
       }
+      if ((el = t.closest('[data-ed]'))) { S.edition = el.dataset.ed; saveEdition(); renderFilters(); renderLibrary(); return; }
       if (t.closest('[data-opt-clear]')) { S.opt = null; renderLibrary(); return; }
       if ((el = t.closest('[data-type]'))) { S.type = el.dataset.type; renderFilters(); renderLibrary(); return; }
       if ((el = t.closest('[data-set]'))) { S.sets[el.dataset.set] = !S.sets[el.dataset.set]; renderFilters(); renderLibrary(); return; }
@@ -547,7 +579,7 @@
   /* Links from the site search: builder.html?n=<nation>&q=<tile search>&o=<option id>.
      A different country clears the army, so the person is asked first, as with the country buttons. */
   function deepLink() {
-    var p = new URLSearchParams(location.search), n = p.get('n'), q = p.get('q'), o = p.get('o');
+    var p = new URLSearchParams(location.search), n = p.get('n'), q = p.get('q'), o = p.get('o'), ed = p.get('ed');
     if (!n && !q && !o) return;
     try { history.replaceState(null, '', location.pathname); } catch (e) { /* ignore */ }
     if (n && NATIONS.some(function (x) { return x.id === n; }) && n !== S.nation) {
@@ -556,11 +588,14 @@
     }
     if (q) { S.q = q; $('search').value = q; }
     if (o) S.opt = o;
+    /* the linked tile or option must show, so the saved Edition choice is set aside for this visit (not saved) */
+    S.edition = ed && EDITIONS.some(function (e) { return e[0] === ed; }) ? ed : 'all';
     S.view = 'lib';
   }
 
   function init() {
     restore();
+    loadEdition();
     if (location.hash.indexOf('#b=') === 0) {
       try { applySnapshot(decode(location.hash.slice(3))); persist(); history.replaceState(null, '', location.pathname + location.search); } catch (e) { /* ignore bad link */ }
     } else deepLink();
