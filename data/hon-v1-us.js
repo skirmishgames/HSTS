@@ -379,7 +379,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "w",
      "stripes": [
       "BGB",
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -389,7 +390,8 @@ HTS_DATA["hon-v1-us"] = {
      "h": 0.757,
      "size": "n",
      "stripes": [
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -400,7 +402,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "n",
      "stripes": [
       "K",
-      "BGB"
+      "BGB",
+      "KA"
      ]
     },
     {
@@ -411,7 +414,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "w",
      "stripes": [
       "K",
-      "BGB"
+      "BGB",
+      "KA"
      ]
     }
    ],
@@ -467,7 +471,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "n",
      "stripes": [
       "K",
-      "BGB"
+      "BGB",
+      "KA"
      ]
     }
    ],
@@ -958,7 +963,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "n",
      "stripes": [
       "cmd",
-      "K"
+      "K",
+      "KA"
      ]
     }
    ],
@@ -1021,7 +1027,8 @@ HTS_DATA["hon-v1-us"] = {
      "h": 0.76,
      "size": "n",
      "stripes": [
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -1031,7 +1038,8 @@ HTS_DATA["hon-v1-us"] = {
      "h": 0.76,
      "size": "n",
      "stripes": [
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -1042,7 +1050,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "w",
      "stripes": [
       "K",
-      "KRKA"
+      "KRKA",
+      "KA"
      ]
     }
    ],
@@ -1105,7 +1114,8 @@ HTS_DATA["hon-v1-us"] = {
      "h": 0.76,
      "size": "n",
      "stripes": [
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -1115,7 +1125,8 @@ HTS_DATA["hon-v1-us"] = {
      "h": 0.76,
      "size": "n",
      "stripes": [
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -1126,7 +1137,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "w",
      "stripes": [
       "K",
-      "WRW"
+      "WRW",
+      "KA"
      ]
     }
    ],
@@ -1197,7 +1209,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "w",
      "stripes": [
       "BWB",
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -1208,7 +1221,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "n",
      "stripes": [
       "BWB",
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -1219,7 +1233,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "n",
      "stripes": [
       "BWB",
-      "K"
+      "K",
+      "KA"
      ]
     }
    ],
@@ -1263,7 +1278,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "n",
      "stripes": [
       "K",
-      "cmd"
+      "cmd",
+      "KA"
      ]
     },
     {
@@ -1274,7 +1290,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "n",
      "stripes": [
       "K",
-      "cmd"
+      "cmd",
+      "KA"
      ]
     }
    ],
@@ -1487,7 +1504,8 @@ HTS_DATA["hon-v1-us"] = {
      "h": 0.7539,
      "size": "n",
      "stripes": [
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -1498,7 +1516,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "n",
      "stripes": [
       "H_clem",
-      "K"
+      "K",
+      "KA"
      ]
     }
    ],
@@ -1532,7 +1551,8 @@ HTS_DATA["hon-v1-us"] = {
      "size": "n",
      "stripes": [
       "K",
-      "H_bryan"
+      "H_bryan",
+      "KA"
      ]
     }
    ],
@@ -2747,7 +2767,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-sainte-mere-eglise",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/willys_50_cal.webp",
    "w": 310,
@@ -2864,7 +2884,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-sainte-mere-eglise",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/engineers_squad.webp",
    "w": 329,
@@ -2897,7 +2917,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-sainte-mere-eglise",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/walking_fire.webp",
    "w": 221,
@@ -2914,7 +2934,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-sainte-mere-eglise",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/knife.webp",
    "w": 221,
@@ -2931,7 +2951,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-sainte-mere-eglise",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/dropped.webp",
    "w": 324,
@@ -3060,7 +3080,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-sainte-mere-eglise",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/sprinter.webp",
    "w": 223,
@@ -3077,7 +3097,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-sainte-mere-eglise",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/hawkins_mines.webp",
    "w": 220,
@@ -3094,7 +3114,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-sainte-mere-eglise",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/57mm_at_gun.webp",
    "w": 266,
@@ -3117,7 +3137,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-sainte-mere-eglise",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/d_day_cricket_lore.webp",
    "w": 221,
@@ -3200,7 +3220,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-sainte-mere-eglise",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/waco_glider_sainte_mere_eglise.webp",
    "w": 221,
@@ -3224,7 +3244,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-sainte-mere-eglise",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/pathfinders_squad_sainte_mere_eglise_80.webp",
    "w": 325,
@@ -3257,7 +3277,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-sainte-mere-eglise",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/willys_50_cal_sainte_mere_eglise.webp",
    "w": 215,
@@ -3439,7 +3459,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-us-airborne",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/sergeant.webp",
    "w": 722,
@@ -3462,7 +3482,7 @@ HTS_DATA["hon-v1-us"] = {
    "set": "hon1-us-airborne",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/us/options/training_paratrooper.webp",
    "w": 756,

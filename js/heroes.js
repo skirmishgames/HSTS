@@ -8,7 +8,7 @@
   function boxName(id) { return BOXES.filter(function (b) { return b.id === id; })[0].name; }
   var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }, { id: 'ru', name: 'Soviet Union (Stalingrad)' }, { id: 'gs', name: 'Germany (Stalingrad)' }];
   var CATS = [['customization', 'Customizations'], ['gear', 'Gear'], ['trait', 'Character traits'], ['support', 'Support units'], ['order', 'Orders']];
-  var STRIPE = { R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', WR: 'white and red', KG: 'black and green', BCG: 'blue, cream and green', BRD: 'blue and red', cmd: 'command', custom: 'customization', any: 'common', all: 'any option' };
+  var STRIPE = { R: 'red', Y: 'yellow', B: 'blue', LB: 'light blue', W: 'white', K: 'black', KA: 'black, airborne (paratroopers only)', G: 'green', T: 'tan', O: 'orange', OL: 'olive', CR: 'cream', BL: 'blue', LY: 'pale yellow', WR: 'white and red', KG: 'black and green', BCG: 'blue, cream and green', BRD: 'blue and red', cmd: 'command', custom: 'customization', any: 'common', all: 'any option' };
   var KIND = { officer: 'Officer', character: 'Character', infantry: 'Infantry', weapon: 'Weapon', vehicle: 'Vehicle', marker: 'Marker', aircraft: 'Aircraft' };
   var S = { b: 'all', n: 'us', q: '', open: {}, theme: 'light' };
   var cache = {};

@@ -23,29 +23,30 @@ Each item says where to look on the site and what to compare.
 ## First edition (V1) armies
 
 11. **Slot stripes.** On first edition tiles each slot shows the platoon's colours, a black band, or half of each. A platoon-colour slot takes that platoon's options, a black slot takes black-stripe options, a half-and-half slot takes either. The stripes for each slot were read from the scans by colour. Check them in the tables at the end of this page.
-12. **Categories.** Options are filed by the colour of the name on the card: yellow is an order, red is gear, white is support. Traits such as Veteran, Tricky, Ferocious and Trigger Happy are therefore filed as gear.
-13. **Army size limits.** High Command tiles show "500+" and Field Command tiles "200+". The builder shows this as a note and does not enforce it. What is the exact rule?
-14. **Hero tiles.** First edition hero tiles are entered with no slots. Do any of them have a slot?
-15. **Editions kept apart.** First edition options only fit first edition tiles, and V2 options do not fit first edition tiles. A single army can still hold tiles of both editions. Should that be allowed?
-16. **Unit lists.** The units shown under each tile and option were read from the small pictures, and their kinds (officer, infantry, vehicle) were guessed from the names.
+12. **Airborne black.** US paratrooper option cards (Sainte-Mère-Église and US Airborne, printed on camouflage) carry the same black stripe as generic gear such as Grenade or Veteran. The site treats them as "airborne black": they fit only the black slots of Airborne tiles (the paratrooper platoons, Field Command Vandervoort, Speirs, Cole, Bryan and Kilmister). Generic black options still fit everywhere. Is that the rule? Are any of the 14 airborne options usable by other units?
+13. **Categories.** Options are filed by the colour of the name on the card: yellow is an order, red is gear, white is support. Traits such as Veteran, Tricky, Ferocious and Trigger Happy are therefore filed as gear.
+14. **Army size limits.** High Command tiles show "500+" and Field Command tiles "200+". The builder shows this as a note and does not enforce it. What is the exact rule?
+15. **Hero tiles.** First edition hero tiles are entered with no slots. Do any of them have a slot?
+16. **Editions kept apart.** First edition options only fit first edition tiles, and V2 options do not fit first edition tiles. A single army can still hold tiles of both editions. Should that be allowed?
+17. **Unit lists.** The units shown under each tile and option were read from the small pictures, and their kinds (officer, infantry, vehicle) were guessed from the names.
 
 ## Pictures
 
-17. **Punchboard sides.** Local scan names say Front and Back. They come from the "a" and "b" in the source file names and were not checked against the printed sides.
-18. **Bloody Omaha.** These pictures still use older, smaller cuts because no good scan of the front is held: the Panzergruppe and Panzer Aufklärungs tiles and their options (Kübelwagen, Recon Group, Stummel Group, Panzerschreck, StuG IV, Panther, German Tank Gear and Tank Ammo), the four aircraft tiles, the minefields, M10, M3A1 Halftrack, Bazooka, Bangalore, Explosive M1, Rangers Gear, Mobile Fire, Urban Fighter, Carbine M1 and Guardian. Better scans are welcome.
-19. **Promos.** The KS-9 and SOLO promo tiles and options, and the Knife option, have no better scan. The FFI Colonel Bastien sheet held is a small, heavily compressed proof and is not on the site.
-20. **Icons.** The icon pictures come from the rulebook PDFs at small size. Sharper versions are welcome.
+18. **Punchboard sides.** Local scan names say Front and Back. They come from the "a" and "b" in the source file names and were not checked against the printed sides.
+19. **Bloody Omaha.** These pictures still use older, smaller cuts because no good scan of the front is held: the Panzergruppe and Panzer Aufklärungs tiles and their options (Kübelwagen, Recon Group, Stummel Group, Panzerschreck, StuG IV, Panther, German Tank Gear and Tank Ammo), the four aircraft tiles, the minefields, M10, M3A1 Halftrack, Bazooka, Bangalore, Explosive M1, Rangers Gear, Mobile Fire, Urban Fighter, Carbine M1 and Guardian. Better scans are welcome.
+20. **Promos.** The KS-9 and SOLO promo tiles and options, and the Knife option, have no better scan. The FFI Colonel Bastien sheet held is a small, heavily compressed proof and is not on the site.
+21. **Icons.** The icon pictures come from the rulebook PDFs at small size. Sharper versions are welcome.
 
 ## Scenarios and My collection
 
-21. **What each scenario needs.** 59 scenarios are tagged with the boxes they need. Colombelles Castle and Juno Beach are assumed to draw their Commonwealth units from Epsom, Charnwood & Goodwood. The rest say "Needs not tagged" and are never hidden. Corrections and missing tags are welcome.
-22. **Fan scenarios.** Only fan scenarios that name their map tiles are kept. If one is missing and does name its tiles, say so.
-23. **Rebuilt fan scenarios.** 38 fan scenarios were rebuilt as web pages from the original text and pictures. Please check the tile codes, army points and rules on each against your copy. Also say if the removed general tournament rules post, or one of the fan documents left on page pictures, does name its map tiles.
+22. **What each scenario needs.** 59 scenarios are tagged with the boxes they need. Colombelles Castle and Juno Beach are assumed to draw their Commonwealth units from Epsom, Charnwood & Goodwood. The rest say "Needs not tagged" and are never hidden. Corrections and missing tags are welcome.
+23. **Fan scenarios.** Only fan scenarios that name their map tiles are kept. If one is missing and does name its tiles, say so.
+24. **Rebuilt fan scenarios.** 38 fan scenarios were rebuilt as web pages from the original text and pictures. Please check the tile codes, army points and rules on each against your copy. Also say if the removed general tournament rules post, or one of the fan documents left on page pictures, does name its map tiles.
 
 ## Archive
 
-24. **Editions of documents.** Unofficial Expansions, Unofficial Scenarios and the Realism Variant are filed as first edition. Full Throttle (light vehicles, 2020) is filed under Big Red One. The unit bibles are all filed as first edition.
-25. **First edition rules.** The first edition core rules were removed because the Big Red One rules override them. Four expansion rules stay (Mines, Commonwealth army, British Commandos, FFI recruitment). Say if any of these is also replaced by a V2 rule.
+25. **Editions of documents.** Unofficial Expansions, Unofficial Scenarios and the Realism Variant are filed as first edition. Full Throttle (light vehicles, 2020) is filed under Big Red One. The unit bibles are all filed as first edition.
+26. **First edition rules.** The first edition core rules were removed because the Big Red One rules override them. Four expansion rules stay (Mines, Commonwealth army, British Commandos, FFI recruitment). Say if any of these is also replaced by a V2 rule.
 
 ## First edition tiles and options to check
 
@@ -319,9 +320,9 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Recon Squadron | 4th Ar.Div. 3D Cavalry Group | 60 | narrow: platoon or black, narrow: platoon or black, long: black or platoon |
 | Kowalski | The Snake | 15 | no slots |
 | Sherman Squadron | 4th Ar.Div. 37th Ar.Regt | 125 | narrow: platoon or black, narrow: platoon or black, long: black or platoon |
-| US Paratroopers | 101st Inf. Div. 506th Inf. Reg. 2nd Bat. | 130 | long: platoon or black, narrow: black, narrow: black or platoon, long: black or platoon |
+| US Paratroopers | 101st Inf. Div. 506th Inf. Reg. 2nd Bat. | 130 | long: platoon or black or airborne black, narrow: black or airborne black, narrow: black or platoon or airborne black, long: black or platoon or airborne black |
 | William "Wild Bill" Guarnere | Young Hero | 30 | no slots |
-| Lt. Ronald Speirs | Crazy Runner | 40 | narrow: black or platoon |
+| Lt. Ronald Speirs | Crazy Runner | 40 | narrow: black or platoon or airborne black |
 | Eugene G. "Doc" Roe Sr. | Smart Medic | 20 | no slots |
 | Rifle Platoon | 4th Inf. Div. 12nd Inf. Reg. | 70 | long: platoon, narrow: platoon or black, narrow: black, long: black or platoon |
 | US Rangers | 5th Ranger Battalion | 80 | long: platoon, narrow: platoon or black, narrow: black or platoon, long: black or platoon |
@@ -332,18 +333,18 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Cowboy | Old School Fangi | 15 | no slots |
 | Crapgame | 24/7 | 35 | narrow: black or platoon |
 | US Combat Engineers | 4th Inf. Div. Engineer Battalion | 100 | long: platoon or black, narrow: black, narrow: platoon, long: platoon |
-| Lt Col. Robert G. Cole | Frenzy Leader | 45 | narrow: command or black |
-| US Paratroopers | 101st Inf. Div. 502nd Inf. Reg. | 105 | long: platoon, narrow: black, narrow: black, long: black or platoon |
-| US Paratroopers | 82nd Inf. Div. 508th Inf. Reg. | 110 | long: platoon, narrow: black, narrow: black, long: black or platoon |
+| Lt Col. Robert G. Cole | Frenzy Leader | 45 | narrow: command or black or airborne black |
+| US Paratroopers | 101st Inf. Div. 502nd Inf. Reg. | 105 | long: platoon, narrow: black or airborne black, narrow: black or airborne black, long: black or platoon or airborne black |
+| US Paratroopers | 82nd Inf. Div. 508th Inf. Reg. | 110 | long: platoon, narrow: black or airborne black, narrow: black or airborne black, long: black or platoon or airborne black |
 | Arthur "Dutch" Schultz | Not the Gangster.. | 30 | no slots |
-| US Paratroopers | 82nd Inf. Div. 505th Inf. Reg. | 85 | long: platoon or black, narrow: platoon or black, narrow: platoon or black |
-| Field Command | Lt Col Benjamin Hayes "Vandy" Vandervoort | 20 | long: command, narrow: black or command, narrow: black or command |
+| US Paratroopers | 82nd Inf. Div. 505th Inf. Reg. | 85 | long: platoon or black or airborne black, narrow: platoon or black or airborne black, narrow: platoon or black or airborne black |
+| Field Command | Lt Col Benjamin Hayes "Vandy" Vandervoort | 20 | long: command, narrow: black or command or airborne black, narrow: black or command or airborne black |
 | Lt Col James Earl Rudder | Badass Coach | 40 | narrow: command or black, narrow: black, narrow: black or command |
 | Joseph Legalec | Odd Lighthouse Keeper | 10 | narrow: platoon |
 | The Creature | Shrimpman | 40 | no slots |
 | Rangers Weapon Platoon | 5th Rangers Battalion | 55 | long: platoon or black, narrow: black, long: black or platoon |
-| Jamie "Clem" Kilmister | Metal Hero | 40 | narrow: black, narrow: platoon or black |
-| James F. Bryan | To Be Saved | 20 | narrow: black or platoon |
+| Jamie "Clem" Kilmister | Metal Hero | 40 | narrow: black or airborne black, narrow: platoon or black or airborne black |
+| James F. Bryan | To Be Saved | 20 | narrow: black or platoon or airborne black |
 | Sergeant | Field Support | 30 | narrow: platoon, narrow: platoon |
 
 | Option | Cost | Shape | Stripes | Filed as | From |
@@ -398,27 +399,27 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Bangalore | 10 | narrow | platoon (RWRY) | gear | D-Day |
 | Heroic | 30 | narrow | black | gear | D-Day |
 | Grapnel | 5 | narrow | platoon (RWRY) | gear | D-Day |
-| Willys .50 Cal | 50 | narrow | black | support | Sainte-Mere-Eglise |
+| Willys .50 Cal | 50 | narrow | airborne black | support | Sainte-Mere-Eglise |
 | Paratroopers | 60 | long | platoon (KRKA) | support | Sainte-Mere-Eglise |
 | Bazooka Squad | 65 | long | platoon (KRKA) | support | Sainte-Mere-Eglise |
 | Pathfinders Squad | 60 | long | platoon (KRKA) | support | Sainte-Mere-Eglise |
-| Engineers Squad | 90 | narrow | black | support | Sainte-Mere-Eglise |
-| Walking Fire | 10 | narrow | black | gear | Sainte-Mere-Eglise |
-| Knife | 15 | narrow | black | gear | Sainte-Mere-Eglise |
-| Dropped | 10 | narrow | black | gear | Sainte-Mere-Eglise |
+| Engineers Squad | 90 | narrow | airborne black | support | Sainte-Mere-Eglise |
+| Walking Fire | 10 | narrow | airborne black | gear | Sainte-Mere-Eglise |
+| Knife | 15 | narrow | airborne black | gear | Sainte-Mere-Eglise |
+| Dropped | 10 | narrow | airborne black | gear | Sainte-Mere-Eglise |
 | Paratroopers | 60 | long | platoon (WRW) | support | Sainte-Mere-Eglise |
 | .30 Cal Squad | 60 | long | platoon (WRW) | support | Sainte-Mere-Eglise |
 | Pathfinders Squad | 60 | long | platoon (WRW) | support | Sainte-Mere-Eglise |
 | Waco Glider | 30 | long | command | gear | Sainte-Mere-Eglise |
-| Sprinter | 5 | narrow | black | gear | Sainte-Mere-Eglise |
-| Hawkins Mines | 15 | narrow | black | gear | Sainte-Mere-Eglise |
-| 57mm AT Gun | 20 | narrow | black | support | Sainte-Mere-Eglise |
-| D-Day Cricket Lore | 15 | narrow | black | gear | Sainte-Mere-Eglise |
+| Sprinter | 5 | narrow | airborne black | gear | Sainte-Mere-Eglise |
+| Hawkins Mines | 15 | narrow | airborne black | gear | Sainte-Mere-Eglise |
+| 57mm AT Gun | 20 | narrow | airborne black | support | Sainte-Mere-Eglise |
+| D-Day Cricket Lore | 15 | narrow | airborne black | gear | Sainte-Mere-Eglise |
 | Weapon Squad | 60 | long | platoon (BWB) | support | Sainte-Mere-Eglise |
 | Heavy Weapons Squad | 55 | long | platoon (BWB) | support | Sainte-Mere-Eglise |
-| Waco Glider | 15 | narrow | black | gear | Sainte-Mere-Eglise |
-| Pathfinders Squad | 80 | narrow | black | support | Sainte-Mere-Eglise |
-| Willys .50 Cal | 25 | narrow | black | support | Sainte-Mere-Eglise |
+| Waco Glider | 15 | narrow | airborne black | gear | Sainte-Mere-Eglise |
+| Pathfinders Squad | 80 | narrow | airborne black | support | Sainte-Mere-Eglise |
+| Willys .50 Cal | 25 | narrow | airborne black | support | Sainte-Mere-Eglise |
 | 75mm Pack Howitzer M8 | 30 | narrow | black | support | Gazette 1 |
 | Minesweepers | 10 | narrow | black | support | Gazette 1 |
 | Mortar Grapnel | 5 | narrow | platoon (RKR) | gear | Pointe-du-Hoc |
@@ -427,8 +428,8 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Incendiary Grenades | 10 | narrow | black | gear | Pointe-du-Hoc |
 | Gunners Squad | 80 | long | platoon (RKR) | gear | Pointe-du-Hoc |
 | Artillery | 50 | long | command | gear | Pointe-du-Hoc |
-| Sergeant | 30 | narrow | black | support | US Airborne |
-| Training Paratrooper | 25 | narrow | black | gear | US Airborne |
+| Sergeant | 30 | narrow | airborne black | support | US Airborne |
+| Training Paratrooper | 25 | narrow | airborne black | gear | US Airborne |
 | Bazooka | 15 | narrow | platoon (H_bryan) | gear | Private Bryan |
 | Greyhound | 35 | narrow | black | gear | Extra Units US-GE |
 | M16 MGMC | 35 | narrow | black | gear | Extra Units US-GE |

@@ -1096,6 +1096,22 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     ok((await v1p.textContent('#ptsUsed')) === '70', 'first edition: option cost is added (70)');
     await v1p.reload(); await v1p.waitForTimeout(400);
     ok((await v1p.textContent('#ptsUsed')) === '70', 'first edition: the army survives a reload');
+    // airborne black (ISS-094): paratrooper options stay off non-airborne tiles
+    const ab = await b.newPage({ viewport: { width: 1280, height: 900 } }); ab.on('pageerror', e => v1errs.push(e.message));
+    await ab.goto(base + 'builder.html'); await ab.evaluate(() => { try { localStorage.clear(); } catch (e) {} }); await ab.reload(); await ab.waitForTimeout(400);
+    await ab.click('[data-nation="us"]'); await ab.fill('#search', 'Sherman Squadron'); await ab.waitForTimeout(300);
+    await ab.locator('.lcard', { hasText: '37th' }).first().locator('[data-add]').click(); await ab.waitForTimeout(200);
+    { const shSlot = ab.locator('.atile').last().locator('.slot').first(); await shSlot.click(); await ab.waitForTimeout(200);
+      const sh = await ab.locator('.pcard .nm').allInnerTexts();
+      ok(sh.indexOf('Grenade') >= 0 && sh.indexOf('Ace Driver') >= 0 && sh.indexOf('Knife') < 0 && sh.indexOf('Dropped') < 0 && sh.indexOf('Training Paratrooper') < 0, 'first edition: Sherman Squadron small slot takes generic black and its own options, no airborne ones (' + sh.length + ')');
+      await ab.keyboard.press('Escape'); }
+    await ab.fill('#search', 'US Paratroopers'); await ab.waitForTimeout(300);
+    await ab.locator('.lcard', { hasText: '502' }).first().locator('[data-add]').click(); await ab.waitForTimeout(200);
+    { await ab.locator('.atile').last().locator('.slot').nth(1).click(); await ab.waitForTimeout(200);
+      const pa = await ab.locator('.pcard .nm').allInnerTexts();
+      ok(pa.indexOf('Knife') >= 0 && pa.indexOf('Dropped') >= 0 && pa.indexOf('Grenade') >= 0, 'first edition: paratrooper black slot takes airborne and generic black options (' + pa.length + ')');
+      await ab.keyboard.press('Escape'); }
+    await ab.close();
     // French (FFI): first edition nation
     await v1p.fill('#search', ''); await v1p.click('[data-nation="fr"]'); await v1p.waitForTimeout(300);
     ok(await v1p.locator('.lcard').count() === 6 && await v1p.locator('.lcard', { hasText: 'Maquisards' }).locator('.v1badge').count() === 1, 'first edition French: French (FFI) lists the Maquisards tile with the First edition badge');

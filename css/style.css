@@ -138,7 +138,7 @@ select,input[type=text],input[type=number],input[type=search]{background:var(--p
 .slot.filled img{width:100%;height:100%;object-fit:contain;display:block}
 .dot{display:inline-block;width:12px;height:12px;border-radius:50%;border:1px solid rgba(0,0,0,.6)}
 .dot.R{background:#c62828}.dot.Y{background:#f2c200}.dot.B{background:#1f4fa3}.dot.LB{background:#4aa8e0}
-.dot.W{background:#f5f5f5}.dot.K{background:#141414;border-color:#bbb}.dot.G{background:#8bc34a}
+.dot.W{background:#f5f5f5}.dot.K{background:#141414;border-color:#bbb}.dot.KA{background:linear-gradient(180deg,#141414 0 60%,#55703a 60%);border-color:#bbb}.dot.G{background:#8bc34a}
 .dot.T{background:#d8c79b}.dot.OL{background:#5b5a3a}.dot.CR{background:#d2c09a}.dot.BL{background:#3c6ea8}.dot.LY{background:#ecdf9a}.dot.O{background:#e8650d}.dot.custom{background:#3aa6a0}
 .dot.WR{background:linear-gradient(135deg,#f5f5f5 50%,#c62828 50%)}.dot.KG{background:linear-gradient(135deg,#141414 50%,#4c8c3a 50%);border-color:#bbb}.dot.BCG{background:linear-gradient(135deg,#3c6ea8 34%,#ecdf9a 34% 67%,#5a9a4a 67%)}.dot.BRD{background:linear-gradient(135deg,#3c6ea8 50%,#c62828 50%)}
 .dot.cmd{background:linear-gradient(90deg,#c62828 0 33%,#fff 33% 66%,#1f4fa3 66%)}
