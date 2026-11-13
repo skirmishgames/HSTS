@@ -21,7 +21,7 @@
 
   var S = {
     nation: 'us', limit: 250, name: '', army: [], theme: 'light', saved: [],
-    type: 'all', sets: {}, q: '', view: 'army'
+    type: 'all', sets: {}, q: '', view: 'army', opt: null
   };
   var P = { uid: null, i: 0, all: false, own: false };
   var OWN = window.HTS_OWN;
@@ -311,10 +311,14 @@
   function renderLibrary() {
     var D = data(), q = S.q.trim().toLowerCase();
     var anySet = Object.keys(S.sets).some(function (k) { return S.sets[k]; });
+    var opt = S.opt && D.o[S.opt] ? D.o[S.opt] : null;
+    if (S.opt && !opt) S.opt = null;
+    $('optnote').innerHTML = opt ? '<p class="ownnote" role="status">Showing the tiles that have a slot for <strong>' + esc(opt.name) + '</strong> (' + costLabel(opt.cost) + ' pts). <button type="button" class="linkish" data-opt-clear>Show all tiles</button></p>' : '';
     var list = D.d.tiles.filter(function (t) {
       if (S.type !== 'all' && t.type !== S.type) return false;
       if (anySet && !S.sets[t.set]) return false;
       if (!OWN.owns(t.set)) return false;
+      if (opt && !t.slots.some(function (sl) { return !fits(sl, opt).length; })) return false;
       if (q && (t.name + ' ' + (t.sub || '') + (t.hos ? HOS_WORDS : '') + (t.v1 ? V1_WORDS : '')).toLowerCase().indexOf(q) < 0) return false;
       return true;
     }).sort(function (a, b) {
@@ -427,10 +431,11 @@
       if ((el = t.closest('[data-nation]'))) {
         if (el.dataset.nation !== S.nation) {
           if (S.army.length && !window.confirm('Switching country clears the current army. Continue?')) return;
-          S.nation = el.dataset.nation; S.army = []; persist(); renderAll();
+          S.nation = el.dataset.nation; S.army = []; S.opt = null; persist(); renderAll();
         }
         return;
       }
+      if (t.closest('[data-opt-clear]')) { S.opt = null; renderLibrary(); return; }
       if ((el = t.closest('[data-type]'))) { S.type = el.dataset.type; renderFilters(); renderLibrary(); return; }
       if ((el = t.closest('[data-set]'))) { S.sets[el.dataset.set] = !S.sets[el.dataset.set]; renderFilters(); renderLibrary(); return; }
       if ((el = t.closest('[data-add]'))) {
@@ -539,11 +544,26 @@
     $('zoom').hidden = false;
   }
 
+  /* Links from the site search: builder.html?n=<nation>&q=<tile search>&o=<option id>.
+     A different country clears the army, so the person is asked first, as with the country buttons. */
+  function deepLink() {
+    var p = new URLSearchParams(location.search), n = p.get('n'), q = p.get('q'), o = p.get('o');
+    if (!n && !q && !o) return;
+    try { history.replaceState(null, '', location.pathname); } catch (e) { /* ignore */ }
+    if (n && NATIONS.some(function (x) { return x.id === n; }) && n !== S.nation) {
+      if (S.army.length && !window.confirm('Switching country clears the current army. Continue?')) return;
+      S.nation = n; S.army = []; persist();
+    }
+    if (q) { S.q = q; $('search').value = q; }
+    if (o) S.opt = o;
+    S.view = 'lib';
+  }
+
   function init() {
     restore();
     if (location.hash.indexOf('#b=') === 0) {
       try { applySnapshot(decode(location.hash.slice(3))); persist(); history.replaceState(null, '', location.pathname + location.search); } catch (e) { /* ignore bad link */ }
-    }
+    } else deepLink();
     var f = document.querySelector('.foot');
     if (f) f.insertAdjacentHTML('beforeend', '<p>Corrections and feedback: <a href="mailto:games@staroversky.com">games@staroversky.com</a></p>');
     bind();

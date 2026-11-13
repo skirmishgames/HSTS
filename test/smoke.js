@@ -850,7 +850,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     await sp.close();
   }
   // look and feel: self-hosted fonts and nav icons on every page
-  const navPages = ['index', 'box', 'builder', 'units', 'rules', 'scenarios', 'scenario', 'tokens', 'icons', 'heroes', 'cards', 'maps', 'expansions', 'history', 'guides'];
+  const navPages = ['index', 'box', 'builder', 'units', 'rules', 'scenarios', 'scenario', 'tokens', 'icons', 'heroes', 'cards', 'maps', 'expansions', 'history', 'guides', 'search'];
   const np = await b.newPage({ viewport: { width: 1100, height: 800 } });
   for (const pgName of navPages) {
     await np.goto(base + pgName + '.html' + (pgName === 'scenario' ? '?b=bro&s=night' : '')); await np.waitForTimeout(400);
@@ -1105,6 +1105,76 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     const shown = await stp.evaluate(() => Array.from(document.querySelectorAll('.pcard')).map(c => c.getAttribute('data-pick') || c.getAttribute('data-opt') || ''));
     ok(names.length >= 3 && subs.length > 0 && subs.every(id => shown.indexOf(id) < 0), 'stripes: the 16th Inf. Reg. A slot does not list options that share only one stripe colour (' + subs.slice(0, 4).join(', ') + ')');
     await stp.close();
+  }
+  // site-wide search
+  {
+    const sp = await b.newPage({ viewport: { width: 1100, height: 900 } }); sp.on('dialog', d => d.accept());
+    const sperrs = []; sp.on('pageerror', e => sperrs.push(e.message)); sp.on('console', m => { if (m.type() === 'error') sperrs.push(m.text()); });
+    const dataReqs = []; sp.on('request', r => { if (/\/data\//.test(r.url())) dataReqs.push(r.url().split('/data/')[1].split('?')[0]); });
+    await sp.goto(base + 'search.html'); await sp.waitForTimeout(500);
+    ok(dataReqs.join(',') === 'hon-products.js' && await sp.locator('.sgroup').count() === 0, 'search: opening the page loads no search data until the first search (' + dataReqs.join(',') + ')');
+    for (const pn of ['index', 'builder', 'scenarios', 'guides', 'search']) {
+      await sp.goto(base + pn + '.html'); await sp.waitForTimeout(150);
+      const lk = sp.locator('.top-actions > a[href="search.html"]');
+      ok(await lk.count() === 1 && (await lk.innerText()).trim() === 'Search', 'search: the header has a plain Search link on ' + pn + '.html');
+    }
+    await sp.goto(base + 'search.html?q=' + encodeURIComponent('sticky bomb')); await sp.waitForTimeout(2500);
+    ok(await sp.inputValue('#q') === 'sticky bomb', 'search: ?q= fills the box and runs the search');
+    const gTitles = await sp.locator('.sgroup h2').allInnerTexts();
+    ok(['ARMY BUILDER', 'RULES', 'DOCUMENTS', 'HEROES AND EQUIPMENT'].every(t => gTitles.some(g => g.toUpperCase().startsWith(t))), 'search: sticky bomb is found in builder, rules, documents and heroes groups (' + gTitles.join('|') + ')');
+    const cnts = await sp.locator('.sgroup .hcount').allInnerTexts();
+    ok(cnts.length === gTitles.length && cnts.every(c => /^\d+$/.test(c.trim())) && /^\d+ results? in \d+ groups?\./.test(await sp.locator('#stat').innerText()), 'search: each group shows a count and the total is stated');
+    ok(await sp.locator('.sgroup mark').count() >= 4, 'search: matched words are highlighted');
+    const swap = async w => { await sp.fill('#q', w); await sp.waitForTimeout(500); return sp.locator('#stat').innerText(); };
+    const a1 = await swap('sticky bomb'), a2 = await swap('bomb sticky'), a3 = await swap('sticky bomb qqzzxx');
+    ok(a1 === a2 && /results? in/.test(a1) && /^0 results/.test(a3) && await sp.locator('.empty2').count() === 1, 'search: several words are ANDed (word order does not matter, one missing word gives no results)');
+    ok(/[?&]q=sticky%20bomb%20qqzzxx/.test(sp.url()), 'search: the URL follows the box (replaceState)');
+    // cap and show all
+    await sp.fill('#q', 'carentan'); await sp.waitForTimeout(500);
+    const bn = Number(await sp.locator('#g-builder .hcount').innerText());
+    ok(bn > 8 && await sp.locator('#g-builder .sres').count() === 8 && await sp.locator('#g-builder [data-all]').innerText() === 'Show all ' + bn, 'search: a group shows 8 results and a "Show all N" control');
+    await sp.click('#g-builder [data-all]');
+    ok(await sp.locator('#g-builder .sres').count() === bn, 'search: Show all lists every result in the group');
+    // links go to the right page
+    const hrefsOf = async g => sp.locator('#g-' + g + ' .sres a.sname').evaluateAll(a => a.map(x => x.getAttribute('href')));
+    await sp.fill('#q', 'suppressed marker'); await sp.waitForTimeout(600);
+    const h = {}; for (const g of ['scenarios', 'rules', 'documents', 'tokens', 'icons', 'cards']) h[g] = await hrefsOf(g);
+    ok(h.scenarios.every(x => /^scenarios\.html\?b=(bro|omaha|caen|ws|v1|fan|hos)&q=/.test(x)) && h.rules.every(x => /^rules\.html\?b=(bro|omaha|caen)&s=[\d.a-z-]+&k=\d+&q=/.test(x)) && h.documents.every(x => /^guides\.html\?[dg]=/.test(x)) && h.tokens.every(x => /^tokens\.html\?b=/.test(x)) && h.icons.every(x => /^icons\.html\?b=/.test(x)) && h.cards.every(x => /^cards\.html\?s=(us|ge)&q=/.test(x)), 'search: result links use each page\'s own parameters');
+    const opened = async (href, sel, msg) => { await sp.goto(base + href); await sp.waitForTimeout(500); ok(await sp.locator(sel).count() >= 1, 'search: ' + msg + ' (' + href.slice(0, 60) + ')'); };
+    await opened(h.rules[0], '#rmodal:not([hidden]) .rchunk', 'a rules link opens that section');
+    await opened(h.tokens[0], '.hrow.open, .hrow', 'a tokens link lists the token');
+    await opened(h.cards[0], '.cgrid .ccard, .cgrid > *', 'a cards link lists the card');
+    await opened(h.scenarios.find(x => /b=bro/.test(x)) || h.scenarios[0], '.hrow.open', 'a scenarios link opens the entry');
+    // builder links: tile and option, first edition included
+    await sp.goto(base + 'search.html?q=' + encodeURIComponent('Maquisards')); await sp.waitForTimeout(1500);
+    const mq = await hrefsOf('builder');
+    ok(mq.some(x => /^builder\.html\?n=fr&q=Maquisards/.test(x)), 'search: a first edition French tile links to the French builder with the search prefilled (' + mq.slice(0, 2).join(' ') + ')');
+    await sp.goto(base + mq.find(x => /n=fr&q=/.test(x))); await sp.waitForTimeout(500);
+    ok(await sp.locator('#nations .on').innerText() === 'French (FFI)' && await sp.locator('.lcard', { hasText: 'Maquisards' }).count() === 1 && await sp.inputValue('#search') !== '' && !/\?/.test(sp.url()), 'search: builder.html?n=&q= opens that country with the search box filled and the URL cleaned');
+    await sp.goto(base + 'search.html?q=' + encodeURIComponent('SOE Agents')); await sp.waitForTimeout(1500);
+    const soe = (await hrefsOf('builder')).find(x => /o=v1%3Asoe_agents/.test(x));
+    ok(!!soe, 'search: an option result links with its builder option id (' + soe + ')');
+    await sp.goto(base + soe); await sp.waitForTimeout(500);
+    ok(/SOE Agents/.test(await sp.locator('#optnote').innerText()) && await sp.locator('.lcard').count() >= 1 && await sp.locator('.lcard').count() < 6, 'search: an option link lists only the tiles with a slot for it');
+    await sp.click('[data-opt-clear]');
+    ok(await sp.locator('.lcard').count() === 6 && await sp.locator('#optnote').innerText() === '', 'search: the option filter can be cleared');
+    // a link for another country asks before it clears an army (the test accepts)
+    await sp.goto(base + 'builder.html'); await sp.evaluate(() => { try { localStorage.clear(); } catch (e) {} }); await sp.reload(); await sp.waitForTimeout(300);
+    await sp.locator('.lcard').first().locator('[data-add]').click();
+    let asked = 0; sp.removeAllListeners('dialog'); sp.on('dialog', d => { asked++; d.dismiss(); });
+    await sp.goto(base + 'builder.html?n=ge&q=Feldkommando'); await sp.waitForTimeout(500);
+    ok(asked === 1 && await sp.locator('#nations .on').innerText() === 'United States' && await sp.locator('.atile').count() === 1, 'search: a builder link for another country keeps the army if the person says no');
+    sp.removeAllListeners('dialog'); sp.on('dialog', d => d.accept());
+    await sp.evaluate(() => { try { localStorage.clear(); } catch (e) {} });
+    // phone width, light and dark
+    await sp.setViewportSize({ width: 390, height: 844 });
+    for (const th of ['light', 'dark']) {
+      await sp.goto(base + 'search.html?q=' + encodeURIComponent('sticky bomb')); await sp.evaluate(t => document.documentElement.setAttribute('data-theme', t), th); await sp.waitForTimeout(2000);
+      const m = await sp.evaluate(() => ({ x: document.documentElement.scrollWidth > document.documentElement.clientWidth, bg: getComputedStyle(document.querySelector('.sgroup')).backgroundColor, ink: getComputedStyle(document.querySelector('.sname')).color }));
+      ok(!m.x && m.bg !== m.ink, 'search: no sideways scroll at 390px in the ' + th + ' theme');
+    }
+    ok(sperrs.length === 0, 'search: no console errors ' + sperrs.join('|'));
+    await sp.close();
   }
   // trackers
   const cp = require('child_process');

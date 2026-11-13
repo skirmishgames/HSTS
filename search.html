@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-CA" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heroes System Tactical Scale search</title>
+<meta name="description" content="Search the whole Heroes System Tactical Scale site at once: army builder tiles and options, scenarios, rules, documents, heroes, tokens, icons, cards, maps, history and the product catalogue.">
+<link rel="stylesheet" href="css/style.css?v=hts-v34">
+</head>
+<body class="upage hpage">
+<header class="top">
+  <div class="brand">
+    <h1>Heroes System Tactical Scale</h1>
+    <p class="sub" id="subtitle">Search the whole site</p>
+  </div>
+  <div class="top-actions">
+    <a class="btn ghost" href="index.html">Home</a>
+    <a class="btn ghost" href="builder.html">Army builder</a>
+    <a class="btn ghost" href="units.html">Unit index</a>
+    <a class="btn ghost" href="rules.html">Rules</a>
+    <a class="btn ghost" href="scenarios.html">Scenarios</a>
+    <a class="btn ghost" href="tokens.html">Tokens</a>
+    <a class="btn ghost" href="icons.html">Icons</a>
+    <a class="btn ghost" href="heroes.html">Heroes</a>
+    <a class="btn ghost" href="cards.html">Cards</a>
+    <a class="btn ghost" href="maps.html">Maps</a>
+    <a class="btn ghost" href="expansions.html">Archive</a>
+    <a class="btn ghost" href="history.html">History</a>
+    <a class="btn ghost" href="guides.html">Guides</a>
+    <a class="btn ghost" href="search.html" aria-current="page">Search</a>
+    <button id="btnTheme" class="ghost" type="button" aria-label="Switch light or dark mode">Dark</button>
+  </div>
+</header>
+
+<section class="setup" aria-label="Search">
+  <div class="field grow">
+    <label class="label" for="q">Search the whole site</label>
+    <input id="q" type="search" placeholder="Try: sticky bomb, Carentan, suppressed, Panzerfaust" autocomplete="off" autofocus>
+  </div>
+</section>
+<nav id="jump" class="filters2 setup" aria-label="Jump to a group" hidden>
+  <div class="field"><span class="label">Groups</span><div id="chips" class="chips"></div></div>
+</nav>
+<p id="stat" class="ustat" aria-live="polite"></p>
+
+<main id="out" class="umain hmain search-main"></main>
+
+<footer class="foot">
+  <p>Every word you type must appear in a result. The data for each group loads the first time you search, so the page opens fast.</p>
+  <p>Corrections and feedback: <a href="mailto:games@staroversky.com">games@staroversky.com</a></p>
+</footer>
+
+<script src="data/hon-products.js?v=hts-v34"></script>
+<script src="js/collection.js?v=hts-v34"></script>
+<script src="js/nav.js?v=hts-v34"></script>
+<script src="js/search.js?v=hts-v34"></script>
+</body>
+</html>
