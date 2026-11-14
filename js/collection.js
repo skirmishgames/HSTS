@@ -104,7 +104,7 @@
 
   document.addEventListener('change', function (ev) {
     var t = ev.target;
-    if (t.matches && t.matches('[data-own]')) { st.own[t.dataset.own] = t.checked; save(); updateLabel(); }
+    if (t.matches && t.matches('[data-own]')) { st.own[t.dataset.own] = t.checked; save(); updateLabel(); groupCount(t); }
     else if (t.id === 'ownOnly') { st.only = t.checked; save(); updateLabel(); }
   });
   document.addEventListener('click', function (ev) {
@@ -119,6 +119,14 @@
       save(); render(document.getElementById('own')); updateLabel();
     }
   });
+  /* keep the group's "n of N" heading in step with its ticks */
+  function groupCount(input) {
+    var sec = input.closest && input.closest('details.ownsec'); if (!sec) return;
+    var c = sec.querySelector('summary .count'); if (!c) return;
+    var boxes = sec.querySelectorAll('input[data-own]');
+    var n = Array.prototype.filter.call(boxes, function (b) { return b.checked; }).length;
+    c.textContent = n + ' of ' + boxes.length;
+  }
   function updateLabel() {
     var l = document.getElementById('ownState'); if (l) l.textContent = label();
     var b = document.getElementById('btnOwn');

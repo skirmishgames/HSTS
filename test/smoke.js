@@ -372,6 +372,8 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await tp.click('.ccard'); await tp.waitForTimeout(200);
   ok(await tp.evaluate(() => !document.getElementById('lbx').hidden && /Burst/.test(document.getElementById('lbxCap').textContent) && document.getElementById('lbxDl').getAttribute('href').endsWith('.webp')), 'cards: full size view opens with a download link');
   await tp.click('#lbxClose');
+  { const ordr = await tp.evaluate(() => [...new Set(window.HTS_CARDS['hon-bro'].entries.filter(e => e.phase === 'Order').map(e => e.name))].sort().join(','));
+    ok(ordr === 'Communications Scrambled,Confusion,Dynamic,High Command,Ready!,Tactician', 'cards: the Order group holds the cards that act on Order Tokens (' + ordr + ')'); }
 
   // My collection filter in the builder
   await tp.goto(base + 'builder.html'); await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); } catch (e) {} }); await tp.reload(); await tp.waitForTimeout(400);
@@ -381,7 +383,9 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(await tp.locator('details.ownsec').count() >= 5 && await tp.locator('details.ownsec[open]').count() === 0, 'collection: every group starts collapsed');
   await tp.click('summary:has-text("HoN: Big Red One")'); await tp.check('[data-own="CB"]'); await tp.click('#ownNone'); await tp.waitForTimeout(100);
   ok(await tp.locator('details.ownsec[open]').count() === 1 && await tp.locator('[data-own="CB"]').isVisible(), 'collection: Clear keeps the open group open');
-  await tp.check('[data-own="CB"]'); await tp.click('#ownClose'); await tp.waitForTimeout(200);
+  await tp.check('[data-own="CB"]');
+  ok(/^1 of \d+$/.test(await tp.locator('details.ownsec[open] summary .count').textContent()), 'collection: the group count updates as soon as a box is ticked');
+  await tp.click('#ownClose'); await tp.waitForTimeout(200);
   const own1 = await tp.locator('.lcard').count();
   ok(own0 > own1 && own1 === 6, 'collection: only Big Red One tiles after ticking CB (' + own0 + ' to ' + own1 + ')');
   ok(/\(1\)/.test(await tp.textContent('#btnOwn')) && /hidden because of My collection/.test(await tp.locator('#ownnote').innerText()), 'collection: header button shows the count and the builder says how many tiles are hidden');
