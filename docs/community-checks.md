@@ -439,3 +439,13 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Sergeant | 30 | narrow | platoon (KO) | order | Gazette 6 |
 | Sergeant Paratrooper | 5 | narrow | platoon (KO) | gear | Gazette 6 |
 
+## Films and TV page (films.html)
+
+These links to films are our reading of the tile names. The publisher never confirmed them. Please check:
+
+- Sam Fueller (Big Red One, 18th Infantry Regiment): read as a nod to Samuel Fuller, who made the film The Big Red One.
+- Cdt J. Marvin field command (first edition core set): read as a nod to Lee Marvin, the sergeant in The Big Red One.
+- Clint (Big Red One and first edition): read as a nod to Clint Eastwood in Kelly's Heroes. The Kelly's Heroes tie for Oddball, Big Joe and Crapgame is confirmed by the Heroes and gold introduction.
+- Steiner, Good Old Feldwebel (Heroes of Stalingrad) and the Steiner Kampfgruppe (first edition): read as a nod to Feldwebel Steiner in Cross of Iron (1977).
+- Tania Chernova, Danilov, Papa Koulikov and Major König (Heroes of Stalingrad): read as the characters from Enemy at the Gates (2001).
+- James F. Bryan, To Be Saved (first edition): read as a nod to Private Ryan.

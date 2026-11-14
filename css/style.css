@@ -55,6 +55,7 @@ select,input[type=text],input[type=number],input[type=search]{background:var(--p
 .top-actions a[href="expansions.html"]::before{background-image:url(../img/nav/expansions.svg)}
 .top-actions a[href="history.html"]::before{background-image:url(../img/nav/history.svg)}
 .top-actions a[href="guides.html"]::before{background-image:url(../img/nav/guides.svg)}
+.top-actions a[href^="films.html"]::before{background-image:url(../img/nav/films.svg)}
 .top-actions a[href^="search.html"]::before{background-image:url(../img/nav/search.svg)}
 .top-actions #btnHelp::before{background-image:url(../img/nav/help.svg)}
 .top-actions #btnOwn::before{background-image:url(../img/nav/collection.svg)}
@@ -744,3 +745,11 @@ a.gocard:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
   body.sreadpage{background:#fff}
   .sread{max-width:none;padding:0}
 }
+/* Films and TV page */
+.filmspage .ffront h2{font-size:1.3rem;margin:1.6rem 0 .4rem;padding-bottom:.25rem;border-bottom:2px solid var(--line)}
+.fcard .fh{margin:0;font-size:1.12rem}
+.fcard .fy{font-weight:400;color:var(--muted)}
+.fcard .fabout{margin:.2rem 0;line-height:1.55}
+.flinks summary{cursor:pointer;font-weight:600;min-height:32px;display:flex;align-items:center}
+.flinks ul{margin:.3rem 0 .2rem;padding-left:1.1rem;line-height:1.5}
+.flinks li{margin:.35rem 0}

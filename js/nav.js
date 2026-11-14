@@ -5,7 +5,7 @@
   var GROUPS = [
     { id: 'play', name: 'Play', pages: ['builder.html', 'maps.html', 'scenarios.html'] },
     { id: 'ref', name: 'Reference', pages: ['units.html', 'heroes.html', 'cards.html', 'tokens.html', 'icons.html', 'rules.html'] },
-    { id: 'arc', name: 'Archive', pages: ['expansions.html', 'guides.html', 'history.html'] }
+    { id: 'arc', name: 'Archive', pages: ['expansions.html', 'guides.html', 'history.html', 'films.html'] }
   ];
   function page(a) { return (a.getAttribute('href') || '').split(/[?#]/)[0]; }
   function mount() {

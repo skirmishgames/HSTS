@@ -274,6 +274,18 @@
     return out;
   }
 
+  function filmItems() {
+    var out = [], F = window.HTS_FILMS;
+    if (F) F.fronts.forEach(function (fr) {
+      fr.items.forEach(function (it) {
+        var links = it.links.map(function (l) { return l.l + ' ' + l.n; }).join(' ');
+        out.push({ t: it.t + ' (' + it.y + ')', href: 'films.html?f=' + fr.id + '#' + it.id, b: [fr.title, it.kind], s: it.about, x: it.about + ' ' + links,
+          hay: norm(it.t + ' ' + it.y + ' ' + it.kind + ' ' + fr.title + ' ' + it.about + ' ' + (it.note || '') + ' ' + links + ' film movie tv'), head: norm(it.t) });
+      });
+    });
+    return out;
+  }
+
   var LIBF = ['hon-library'];
   var GROUPS = [
     { id: 'builder', title: 'Army builder tiles and options', files: ['hon-bro-us', 'hon-bro-ge', 'hon-bro-uk', 'hon-hos-ru', 'hon-hos-gs', 'hon-v1-us', 'hon-v1-ge', 'hon-v1-uk', 'hon-v1-fr'], build: builderItems },
@@ -286,7 +298,8 @@
     { id: 'cards', title: 'Cards', files: ['hon-bro-cards'], build: cardItems },
     { id: 'products', title: 'Archive products', files: ['expansions'], build: productItems },
     { id: 'maps', title: 'Maps', files: ['maps'], build: mapItems },
-    { id: 'history', title: 'History', files: ['hon-bro-history', 'hon-caen-history', 'hon-hos-history'], build: historyItems }
+    { id: 'history', title: 'History', files: ['hon-bro-history', 'hon-caen-history', 'hon-hos-history'], build: historyItems },
+    { id: 'films', title: 'Films and TV', files: ['hon-films'], build: filmItems }
   ];
   GROUPS.forEach(function (g) { g.state = 'idle'; g.items = null; });
 
