@@ -373,7 +373,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   ok(await tp.evaluate(() => !document.getElementById('lbx').hidden && /Burst/.test(document.getElementById('lbxCap').textContent) && document.getElementById('lbxDl').getAttribute('href').endsWith('.webp')), 'cards: full size view opens with a download link');
   await tp.click('#lbxClose');
   { const ordr = await tp.evaluate(() => [...new Set(window.HTS_CARDS['hon-bro'].entries.filter(e => e.phase === 'Order').map(e => e.name))].sort().join(','));
-    ok(ordr === 'Communications Scrambled,Confusion,Dynamic,High Command,Ready!,Tactician', 'cards: the Order group holds the cards that act on Order Tokens (' + ordr + ')'); }
+    ok(ordr === 'Communications Scrambled,Confusion,Dynamic,High Command,Ready!,Repairs,Tactician', 'cards: the Order group holds the cards that act on Order Tokens, plus Repairs (' + ordr + ')'); }
 
   // My collection filter in the builder
   await tp.goto(base + 'builder.html'); await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); } catch (e) {} }); await tp.reload(); await tp.waitForTimeout(400);

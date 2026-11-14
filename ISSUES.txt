@@ -542,7 +542,7 @@ Limits: first edition units have no stat lines or counter pictures, only name ch
 
 ISS-096  Collection count and card groups (community feedback)   [DONE]
 Where: js/collection.js, data/hon-bro-cards.js, cards.html, README.md, test/smoke.js.
-Detail: 1) Ticking a product in My collection did not change the group's "n of N" heading until the pop-up was reopened. The heading now updates on every tick. 2) The Cards filter was labelled "When it is played" but grouped some cards by effect (Dynamic, Confusion, Panzerfaust, Go! Go! Go!) and others by phase. Report: Repairs and The Fury of the Fuhrer were under Order, and Ready! was not. The filter is now "What it does": Ready! (both decks) moved to Order, Repairs (both decks) and The Fury of the Fuhrer to Combat. Order now holds the six cards that act on Order Tokens. Every card still shows its printed "Play ..." line.
+Detail: 1) Ticking a product in My collection did not change the group's "n of N" heading until the pop-up was reopened. The heading now updates on every tick. 2) The Cards filter was labelled "When it is played" but grouped some cards by effect (Dynamic, Confusion, Panzerfaust, Go! Go! Go!) and others by phase. Report: Repairs and The Fury of the Fuhrer were under Order, and Ready! was not. The filter is now "What it does": Ready! (both decks) moved to Order and The Fury of the Fuhrer to Combat. Repairs (both decks) stays in Order, as the owner decided. Order holds the six cards that act on Order Tokens plus Repairs. Every card still shows its printed "Play ..." line.
 
 ISS-097  V2 generic options in first edition black slots   [DONE]
 Where: js/app.js, test/smoke.js, tools/community-checks-head.md, docs/community-checks.md, README.md.
