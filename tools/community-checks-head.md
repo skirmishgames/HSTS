@@ -27,7 +27,7 @@ Each item says where to look on the site and what to compare.
 13. **Categories.** Options are filed by the colour of the name on the card: yellow is an order, red is gear, white is support. Traits such as Veteran, Tricky, Ferocious and Trigger Happy are therefore filed as gear.
 14. **Army size limits.** High Command tiles show "500+" and Field Command tiles "200+". The builder shows this as a note and does not enforce it. What is the exact rule?
 15. **Hero tiles.** First edition hero tiles are entered with no slots. Do any of them have a slot?
-16. **Editions kept apart.** First edition options only fit first edition tiles, and V2 options do not fit first edition tiles. A single army can still hold tiles of both editions. Should that be allowed?
+16. **Mixing editions.** A black slot on a first edition tile takes generic US Army (or German, Commonwealth) options, so it also takes the generic V2 options, the ones with no platoon colour (M4 Sherman, M5 Stuart, Grenade and so on), when the shape matches. First edition platoon-colour and command slots take only first edition options. First edition options do not go on V2 tiles. A single army can hold tiles of both editions. Is that right?
 17. **Unit lists.** The units shown under each tile and option were read from the small pictures, and their kinds (officer, infantry, vehicle) were guessed from the names.
 
 ## Pictures

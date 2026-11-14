@@ -1105,7 +1105,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     ok(s0.length === 3 && s0.indexOf('Support Group') >= 0, 'first edition: a platoon-stripe slot lists only that platoon\'s long options (' + s0.join(', ') + ')');
     await v1p.keyboard.press('Escape'); await v1p.locator('.atile .slot').nth(1).click(); await v1p.waitForTimeout(200);
     const s1 = await v1p.locator('.pcard .nm').allInnerTexts();
-    ok(s1.indexOf('Grenade') >= 0 && s1.indexOf('MG 42') < 0 && s1.indexOf('Support Group') < 0, 'first edition: a black slot lists only first edition black-stripe options, no V2 options (' + s1.join(', ') + ')');
+    ok(s1.indexOf('Grenade') >= 0 && s1.indexOf('MG 42') >= 0 && s1.indexOf('Support Group') < 0, 'first edition: a black slot lists generic black options of both editions (MG 42 from V2), not platoon options (' + s1.length + ')');
     await v1p.locator('.pcard', { hasText: 'Grenade' }).first().click(); await v1p.waitForTimeout(200);
     ok((await v1p.textContent('#ptsUsed')) === '70', 'first edition: option cost is added (70)');
     await v1p.reload(); await v1p.waitForTimeout(400);
@@ -1118,6 +1118,10 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     { const shSlot = ab.locator('.atile').last().locator('.slot').first(); await shSlot.click(); await ab.waitForTimeout(200);
       const sh = await ab.locator('.pcard .nm').allInnerTexts();
       ok(sh.indexOf('Grenade') >= 0 && sh.indexOf('Ace Driver') >= 0 && sh.indexOf('Knife') < 0 && sh.indexOf('Dropped') < 0 && sh.indexOf('Training Paratrooper') < 0, 'first edition: Sherman Squadron small slot takes generic black and its own options, no airborne ones (' + sh.length + ')');
+      await ab.keyboard.press('Escape'); }
+    { await ab.locator('.atile').last().locator('.slot').last().click(); await ab.waitForTimeout(200);
+      const lg = await ab.locator('.pcard .nm').allInnerTexts();
+      ok(['M4 Sherman', 'M5 Stuart', 'M10 Tank Destroyer', 'M8 Scott', 'Sherman (76)W', 'M10 A1'].every(x => lg.indexOf(x) >= 0) && lg.length === 7, 'first edition: Sherman Squadron large slot takes the large generic V2 tanks and its own options (' + lg.join(', ') + ')');
       await ab.keyboard.press('Escape'); }
     await ab.fill('#search', 'US Paratroopers'); await ab.waitForTimeout(300);
     await ab.locator('.lcard', { hasText: '502' }).first().locator('[data-add]').click(); await ab.waitForTimeout(200);

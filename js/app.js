@@ -104,7 +104,7 @@
     if (slot.stripes.indexOf('all') >= 0) return opt.v1 ? ['stripes'] : why; // Support tile: takes any V2 option, not first edition ones
     if (slot.size !== opt.size) why.push('size');
     var ok;
-    if (opt.stripes.indexOf('any') >= 0) ok = !slot.stripes.some(function (x) { return String(x).indexOf('v1_') === 0; }); /* V2 any-stripe options do not go on first edition tiles */
+    if (opt.stripes.indexOf('any') >= 0) ok = !slot.stripes.some(function (x) { return String(x).indexOf('v1_') === 0; }) || slot.stripes.indexOf('v1_K') >= 0 || slot.stripes.indexOf('v1_KA') >= 0; /* V2 generic (any-stripe) options fit V2 slots and the black (generic) slots of first edition tiles, not first edition platoon-colour or command slots */
     /* every stripe colour on the option must be on the slot: one shared colour is not a match */
     else ok = opt.stripes.length > 0 && opt.stripes.every(function (s) { return slot.stripes.indexOf(s) >= 0; });
     if (!ok) why.push('stripes');
