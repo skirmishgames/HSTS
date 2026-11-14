@@ -669,7 +669,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const hmerrs = []; hm.on('pageerror', e => hmerrs.push(e.message)); hm.on('console', m => { if (m.type() === 'error') hmerrs.push(m.text()); });
   await hm.goto(base + 'index.html'); await hm.waitForTimeout(300);
   ok(await hm.locator('#boxGrid .boxcard').count() === 5 && await hm.locator('#boxGrid .boxcard[href="box.html?b=hos"]').count() === 1 && await hm.locator('#boxGrid .boxcard[href="box.html?b=ws"]').count() === 1 && await hm.locator('#boxGrid .boxcard[href="box.html?b=hon1"]').count() === 1 && await hm.locator('.hero-link[href="box.html?b=bro"]').count() === 1, 'landing: Big Red One as the main box, two battle packs, War Stories, Heroes of Stalingrad and the first edition as option tiles');
-  ok(await hm.locator('.gocard').count() === 12, 'landing: twelve shortcuts');
+  ok(await hm.locator('.gocard').count() === 13, 'landing: thirteen shortcuts (Films and TV added)');
   await hm.waitForFunction(() => Array.from(document.querySelectorAll('.boxcard img, .hero-art')).every(i => i.complete && i.naturalWidth > 0), null, { timeout: 8000 }).catch(() => {});
   ok((await hm.locator('.boxcard img').evaluateAll(a => a.every(i => i.complete && i.naturalWidth > 0))) && (await hm.locator('.hero-art').evaluate(i => i.complete && i.naturalWidth > 0)), 'landing: box art loads');
   ok(await hm.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1), 'landing: no sideways scroll on a phone');
