@@ -413,7 +413,7 @@ null
 "pts": 360
 },
 "ge": {
-"limit": 255,
+"limit": 260,
 "printed": 255,
 "tiles": [
 [
@@ -426,7 +426,7 @@ null
 ]
 ],
 [
-"panzergrenadiere_1",
+"panzergrenadiere_2",
 [
 null,
 "puma",
@@ -441,8 +441,8 @@ null
 ]
 ]
 ],
-"note": "",
-"pts": 255
+"note": "The booklet prints 255, but the tiles it shows add up to 260: the second platoon is Panzergrenadiere II. Bataillon, which costs 70.",
+"pts": 260
 }
 }
 },

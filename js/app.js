@@ -118,6 +118,24 @@
     if (!ok) why.push('stripes');
     return why;
   }
+  /* One copy of each platoon card: every platoon option entry is one physical card (a box with two copies has two entries).
+     Common cards (generic, first edition black or airborne black, command, hero equipment) are not limited:
+     the box holds several copies (the Omaha booklet armies use two Grenades and two Aircraft x1). */
+  var COMMON = { any: 1, K: 1, KA: 1, cmd: 1, custom: 1, KO: 1, all: 1 };
+  function limited(o) { return !!o && o.stripes.length > 0 && !o.stripes.some(function (x) { return COMMON[String(x).replace(/^v1_/, '')]; }); }
+  function usedElsewhere(optId, uid, i) {
+    var o = data().o[optId];
+    if (!limited(o)) return false;
+    return S.army.some(function (e) { return e.o.some(function (id, j) { return id === optId && !(e.id === uid && j === i); }); });
+  }
+  /* true for the second and later uses of the same card, in army order */
+  function isDupe(e, i) {
+    var id = e.o[i], seen = false, me = false;
+    if (!limited(data().o[id])) return false;
+    S.army.some(function (x) { return x.o.some(function (y, j) { if (x === e && j === i) { me = true; return true; } if (y === id) seen = true; return false; }); });
+    return me && seen;
+  }
+  function tileInArmy(tid) { return S.army.some(function (e) { return e.t === tid; }); }
   function cost(n) { return typeof n === 'number' ? n : 0; }
   function entryCost(e) {
     var D = data(), t = D.t[e.t];
@@ -194,12 +212,14 @@
     left.textContent = diff >= 0 ? diff + ' left' : Math.abs(diff) + ' over';
     left.className = 'left' + (diff < 0 ? ' over' : '');
 
-    var D = data(), warn = [], mismatch = 0, sp = 0;
+    var D = data(), warn = [], mismatch = 0, sp = 0, dupes = [], dupT = [], seenT = {};
     S.army.forEach(function (e) {
       var t = D.t[e.t];
+      if (seenT[e.t]) dupT.push(t.name); seenT[e.t] = 1;
       e.o.forEach(function (id, i) {
         if (!id) return;
         var o = D.o[id];
+        if (isDupe(e, i)) dupes.push(o.name);
         if (fits(t.slots[i], o).length) mismatch += 1;
         if (o.cost == null) sp += 1;
       });
@@ -224,6 +244,8 @@
     if (hasOrd) warn.push('<p class="info">Order tokens: ' + ord + '. This counts officer stars, fixed tile stars and star slots that hold an option. Command options that add orders are not counted.' + (S.army.some(function (e) { return D.t[e.t].orders == null; }) ? ' Tiles from Heroes of Normandie have no order tokens in the builder.' : '') + '</p>');
     if (diff < 0) warn.push('<p class="bad">The army is ' + Math.abs(diff) + ' points over the limit.</p>');
     if (mismatch) warn.push('<p>' + mismatch + ' option' + (mismatch > 1 ? 's are' : ' is') + ' in a slot of the wrong size or stripes. Check your physical tiles.</p>');
+    if (dupes.length) warn.push('<p>' + esc(dupes.join(', ')) + (dupes.length > 1 ? ' are' : ' is') + ' used more than once. The box has one copy of each platoon option card.</p>');
+    if (dupT.length) warn.push('<p>' + esc(dupT.join(', ')) + (dupT.length > 1 ? ' are' : ' is') + ' in the army more than once. The box has one copy of each tile.</p>');
     if (sp) warn.push('<p>' + sp + ' option' + (sp > 1 ? 's show' : ' shows') + ' SP instead of a cost. Those are counted as 0 points. Check your scenario.</p>');
     $('warnings').innerHTML = warn.join('');
   }
@@ -243,7 +265,7 @@
         var pos = 'left:' + (s.x * 100) + '%;top:' + (s.y * 100) + '%;width:' + (s.w * 100) + '%;height:' + (s.h * 100) + '%';
         var id = e.o[i], o = id && D.o[id];
         if (o) {
-          var bad = fits(s, o).length > 0;
+          var bad = fits(s, o).length > 0 || isDupe(e, i);
           var st = t.starSlots && t.starSlots.indexOf(i) >= 0 ? ' star' : '';
           return '<button type="button" class="slot filled' + (bad ? ' mismatch' : '') + st + '" style="' + pos + '" data-slot="' + e.id + ':' + i + '" aria-label="Slot ' + (i + 1) + ': ' + esc(o.name) + '. Change"><img src="' + o.img + '" alt="' + esc(o.name) + '"></button>';
         }
@@ -252,8 +274,8 @@
       }).join('');
       var lines = e.o.map(function (id, i) {
         if (!id) return '';
-        var o = D.o[id], bad = fits(t.slots[i], o).length > 0;
-        return '<li><span class="ol"><span' + (bad ? ' class="bad"' : '') + '>' + esc(o.name) + (bad ? ' (does not fit)' : '') + '</span>' + unitChips(o.units) + (o.note ? '<small class="note">' + esc(o.note) + '</small>' : '') + '</span><span>' + costLabel(o.cost) + '</span></li>';
+        var o = D.o[id], dup = isDupe(e, i), bad = fits(t.slots[i], o).length > 0;
+        return '<li><span class="ol"><span' + (bad || dup ? ' class="bad"' : '') + '>' + esc(o.name) + (bad ? ' (does not fit)' : dup ? ' (already used)' : '') + '</span>' + unitChips(o.units) + (o.note ? '<small class="note">' + esc(o.note) + '</small>' : '') + '</span><span>' + costLabel(o.cost) + '</span></li>';
       }).join('');
       var sub = t.sub ? '<small>' + esc(t.sub) + '</small>' : '';
       return '<article class="atile" data-uid="' + e.id + '">' +
@@ -375,7 +397,7 @@
         '<div class="info"><span class="nm">' + esc(t.name) + '</span><span class="sb">' + esc(t.sub || '') + '</span>' + hosBadge(t) +
         (t.units ? '<span class="lu">' + esc(unitLine(t.units)) + '</span>' : '') +
         '<span class="count">' + t.slots.length + ' slot' + (t.slots.length === 1 ? '' : 's') + (n ? ', ' + n + ' in army' : '') + '</span>' +
-        '<div class="row"><span class="pts">' + t.cost + ' pts</span><span class="lrow-btns">' + '<a class="btn ghost" href="' + esc(unitsHref(t)) + '">Units</a>' + '<button type="button" class="add" data-add="' + t.id + '">Add</button></span></div></div></div>';
+        '<div class="row"><span class="pts">' + t.cost + ' pts</span><span class="lrow-btns">' + '<a class="btn ghost" href="' + esc(unitsHref(t)) + '">Units</a>' + (n ? '<button type="button" class="add" disabled title="The box has one copy of this tile">In army</button>' : '<button type="button" class="add" data-add="' + t.id + '">Add</button>') + '</span></div></div></div>';
     }).join('');
   }
 
@@ -408,7 +430,7 @@
     $('pickClear').disabled = !e.o[P.i];
     var html = '';
     CATS.forEach(function (c) {
-      var items = D.d.options.filter(function (o) { return o.cat === c[0] && (P.own || OWN.owns(o.set)); }).map(function (o) { return { o: o, why: fits(slot, o) }; });
+      var items = D.d.options.filter(function (o) { return o.cat === c[0] && (P.own || OWN.owns(o.set)); }).map(function (o) { var w = fits(slot, o); if (usedElsewhere(o.id, P.uid, P.i)) w = w.concat(['copy']); return { o: o, why: w }; });
       if (!P.all) items = items.filter(function (x) { return !x.why.length; });
       items.sort(function (a, b) { return (a.why.length - b.why.length) || (cost(a.o.cost) - cost(b.o.cost)) || a.o.name.localeCompare(b.o.name); });
       if (!items.length) return;
@@ -420,7 +442,7 @@
           '<span class="nm">' + esc(o.name) + '</span>' + hosBadge(o) +
           (o.units ? '<span class="nt">Includes: ' + esc(unitLine(o.units)) + '</span>' : '') +
           (o.note ? '<span class="nt">' + esc(o.note) + '</span>' : '') +
-          (x.why.length ? '<span class="fl">Wrong ' + x.why.join(' and ') + '</span>' : '') +
+          (x.why.length ? '<span class="fl">' + (x.why.filter(function (w) { return w !== 'copy'; }).length ? 'Wrong ' + x.why.filter(function (w) { return w !== 'copy'; }).join(' and ') + (x.why.indexOf('copy') >= 0 ? ', already used' : '') : 'Already used in this army') + '</span>' : '') +
           '<span class="pc"><span class="pts">' + costLabel(o.cost) + ' pts</span><span>' + dots(o.stripes) + '</span></span></button>';
       }).join('');
     });

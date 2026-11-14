@@ -23,7 +23,7 @@ Each item says where to look on the site and what to compare.
 ## First edition (V1) armies
 
 11. **Slot stripes.** On first edition tiles each slot shows the platoon's colours, a black band, or half of each. A platoon-colour slot takes that platoon's options, a black slot takes black-stripe options, a half-and-half slot takes either. The stripes for each slot were read from the scans by colour. Check them in the tables at the end of this page.
-12. **Airborne black.** US paratrooper option cards (Sainte-Mère-Église and US Airborne, printed on camouflage) carry the same black stripe as generic gear such as Grenade or Veteran. The site treats them as "airborne black": they fit only the black slots of Airborne tiles (the paratrooper platoons, Field Command Vandervoort, Speirs, Cole, Bryan and Kilmister). Generic black options still fit everywhere. Is that the rule? Are any of the 14 airborne options usable by other units?
+12. **Airborne black.** US paratrooper option cards (Sainte-Mère-Église and US Airborne, printed on camouflage) carry the same black stripe as generic gear such as Grenade or Veteran. The site treats them as "airborne black": they fit only the black slots of Airborne tiles (the paratrooper platoons, Field Command Vandervoort, Speirs, Cole, Bryan and Kilmister). Generic black options still fit everywhere. The German side works the same way: the Fallschirmjager cards (Carentan cards whose counters carry the paratrooper badge, Lions of Carentan, and the German Airborne cards) fit only the Fallschirmjager platoons, Emil Preischkat and Sebastian Jakobus. Carentan gear with no badge (Heroic, Camo, Overwatch, Fortified) stays generic. Is that the rule? Are any of these airborne options usable by other units?
 13. **Categories.** Options are filed by the colour of the name on the card: yellow is an order, red is gear, white is support. Traits such as Veteran, Tricky, Ferocious and Trigger Happy are therefore filed as gear.
 14. **Army size limits.** High Command tiles show "500+" and Field Command tiles "200+". The builder shows this as a note and does not enforce it. What is the exact rule?
 15. **Hero tiles.** First edition hero tiles are entered with no slots. Do any of them have a slot?
@@ -95,14 +95,14 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Friedrich | Evil Mechanic | 35 | no slots |
 | Alexander von Ballot | Panzer Rider | 20 | narrow: black or platoon |
 | Festungskompagnie | 352nd Infantry Div.-Rgt.916 | 70 | long: platoon, narrow: platoon or black, narrow: black or platoon, long: black or platoon |
-| Fallschirmjäger | Fallschirmjäger-Regiment 6 - II. Battalion | 110 | long: platoon or black, narrow: black, narrow: platoon or black, long: black |
-| Emil Preischkat | Grumpy Warrior | 35 | narrow: black |
-| Fallschirmjäger | Fallschirmjäger-Regiment 6 - III. Battalion | 105 | long: platoon or black, narrow: black, narrow: platoon or black, long: black |
+| Fallschirmjäger | Fallschirmjäger-Regiment 6 - II. Battalion | 110 | long: platoon or black or airborne black, narrow: black or airborne black, narrow: platoon or black or airborne black, long: black or airborne black |
+| Emil Preischkat | Grumpy Warrior | 35 | narrow: black or airborne black |
+| Fallschirmjäger | Fallschirmjäger-Regiment 6 - III. Battalion | 105 | long: platoon or black or airborne black, narrow: black or airborne black, narrow: platoon or black or airborne black, long: black or airborne black |
 | Grenadier-Regiment 1058 | 91. Luftlande-Infanterie-Division | 70 | long: platoon, narrow: platoon or black, narrow: black or platoon |
 | Feldkommando | Major Friedrich August Freiherr von der Heydte | 35 | long: command, narrow: command or black, narrow: black or command |
 | Reino Hamer | The Wall | 40 | no slots |
 | Reserve Gebirgsjäger Regiment I | Reserve Division 157 | 80 | long: platoon, narrow: platoon or black |
-| Sebastian Jakobus | Talkative Fallschirmjager | 40 | narrow: black, narrow: platoon or black |
+| Sebastian Jakobus | Talkative Fallschirmjager | 40 | narrow: black or airborne black, narrow: platoon or black or airborne black |
 | Hermann Goering | Fat Reichsmarschall | 40 | no slots |
 | Panzerzug N32 | Made in France | 0 | long: platoon, narrow: platoon or black, narrow: black or platoon, narrow: black or platoon |
 | Karl von Croc | Shake Lover | 30 | narrow: black or platoon |
@@ -166,21 +166,21 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Camo | 10 | narrow | black | gear | Carentan |
 | Stug IV | 65 | long | platoon (WGW) | support | Carentan |
 | Aufklärer | 50 | long | platoon (WGW) | support | Carentan |
-| Panzerschreck | 20 | narrow | black | support | Carentan |
-| Scharfschützen | 15 | narrow | black | support | Carentan |
-| 8cm Granatwerfer | 25 | narrow | black | support | Carentan |
-| Püppchen | 20 | narrow | black | support | Carentan |
-| 10.5 cm Leichtgeschütz 42 | 25 | narrow | black | support | Carentan |
-| MG42 HMG | 20 | narrow | black | support | Carentan |
+| Panzerschreck | 20 | narrow | airborne black | support | Carentan |
+| Scharfschützen | 15 | narrow | airborne black | support | Carentan |
+| 8cm Granatwerfer | 25 | narrow | airborne black | support | Carentan |
+| Püppchen | 20 | narrow | airborne black | support | Carentan |
+| 10.5 cm Leichtgeschütz 42 | 25 | narrow | airborne black | support | Carentan |
+| MG42 HMG | 20 | narrow | airborne black | support | Carentan |
 | Overwatch | 20 | narrow | black | gear | Carentan |
 | Fortified | 15 | narrow | black | gear | Carentan |
 | Fallschirmjäger | 65 | long | platoon (WYW) | support | Carentan |
 | Heavy Weapons | 60 | long | platoon (WYW) | support | Carentan |
-| Kettenkrad | 5 | narrow | black | support | Carentan |
-| Pak 40 | 25 | narrow | black | support | Carentan |
-| Lions of Carentan | 10 | narrow | black | gear | Carentan |
-| Stug IV | 65 | narrow | black | support | Carentan |
-| Stug H 42 G | 65 | narrow | black | support | Carentan |
+| Kettenkrad | 5 | narrow | airborne black | support | Carentan |
+| Pak 40 | 25 | narrow | airborne black | support | Carentan |
+| Lions of Carentan | 10 | narrow | airborne black | gear | Carentan |
+| Stug IV | 65 | narrow | airborne black | support | Carentan |
+| Stug H 42 G | 65 | narrow | airborne black | support | Carentan |
 | Flak 38 Quad | 30 | narrow | black | support | Carentan |
 | Osttruppen Battalion | 45 | long | black | support | Carentan |
 | SD KFZ 10/5 | 30 | narrow | black | support | Carentan |
@@ -189,9 +189,9 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Minensucher | 10 | narrow | black | support | Gazette 1 |
 | 10.5 cm LeFH 18 | 40 | narrow | black | support | Gazette 1 |
 | Gebirgsjäger | 50 | long | platoon (WBW) | support | Gazette 8 |
-| Feldwebel | 30 | narrow | black | gear | GE Airborne |
-| Dagger | 15 | narrow | black | gear | GE Airborne |
-| Training Fallschirmjager | 25 | narrow | black | gear | GE Airborne |
+| Feldwebel | 30 | narrow | airborne black | gear | GE Airborne |
+| Dagger | 15 | narrow | airborne black | gear | GE Airborne |
+| Training Fallschirmjager | 25 | narrow | airborne black | gear | GE Airborne |
 | Goering's Baton of Power | 15 | narrow | platoon (H_goering) | gear | Goering and his Armoured Train |
 | MP40 | 5 | narrow | platoon (H_goering) | gear | Goering and his Armoured Train |
 | Howitzer Turret | 40 | narrow | platoon (KWKZ) | gear | Goering and his Armoured Train |
@@ -439,13 +439,3 @@ Each table comes straight from the site data. Check the name, the cost and the s
 | Sergeant | 30 | narrow | platoon (KO) | order | Gazette 6 |
 | Sergeant Paratrooper | 5 | narrow | platoon (KO) | gear | Gazette 6 |
 
-## Films and TV page (films.html)
-
-These links to films are our reading of the tile names. The publisher never confirmed them. Please check:
-
-- Sam Fueller (Big Red One, 18th Infantry Regiment): read as a nod to Samuel Fuller, who made the film The Big Red One.
-- Cdt J. Marvin field command (first edition core set): read as a nod to Lee Marvin, the sergeant in The Big Red One.
-- Clint (Big Red One and first edition): read as a nod to Clint Eastwood in Kelly's Heroes. The Kelly's Heroes tie for Oddball, Big Joe and Crapgame is confirmed by the Heroes and gold introduction.
-- Steiner, Good Old Feldwebel (Heroes of Stalingrad) and the Steiner Kampfgruppe (first edition): read as a nod to Feldwebel Steiner in Cross of Iron (1977).
-- Tania Chernova, Danilov, Papa Koulikov and Major König (Heroes of Stalingrad): read as the characters from Enemy at the Gates (2001).
-- James F. Bryan, To Be Saved (first edition): read as a nod to Private Ryan.

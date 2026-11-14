@@ -786,7 +786,8 @@ HTS_DATA["hon-v1-ge"] = {
      "size": "w",
      "stripes": [
       "WGW",
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -796,7 +797,8 @@ HTS_DATA["hon-v1-ge"] = {
      "h": 0.76,
      "size": "n",
      "stripes": [
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -807,7 +809,8 @@ HTS_DATA["hon-v1-ge"] = {
      "size": "n",
      "stripes": [
       "WGW",
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -817,7 +820,8 @@ HTS_DATA["hon-v1-ge"] = {
      "h": 0.76,
      "size": "w",
      "stripes": [
-      "K"
+      "K",
+      "KA"
      ]
     }
    ],
@@ -850,7 +854,8 @@ HTS_DATA["hon-v1-ge"] = {
      "h": 0.77,
      "size": "n",
      "stripes": [
-      "K"
+      "K",
+      "KA"
      ]
     }
    ],
@@ -904,7 +909,8 @@ HTS_DATA["hon-v1-ge"] = {
      "size": "w",
      "stripes": [
       "WYW",
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -914,7 +920,8 @@ HTS_DATA["hon-v1-ge"] = {
      "h": 0.76,
      "size": "n",
      "stripes": [
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -925,7 +932,8 @@ HTS_DATA["hon-v1-ge"] = {
      "size": "n",
      "stripes": [
       "WYW",
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -935,7 +943,8 @@ HTS_DATA["hon-v1-ge"] = {
      "h": 0.76,
      "size": "w",
      "stripes": [
-      "K"
+      "K",
+      "KA"
      ]
     }
    ],
@@ -1159,7 +1168,8 @@ HTS_DATA["hon-v1-ge"] = {
      "h": 0.8048,
      "size": "n",
      "stripes": [
-      "K"
+      "K",
+      "KA"
      ]
     },
     {
@@ -1170,7 +1180,8 @@ HTS_DATA["hon-v1-ge"] = {
      "size": "n",
      "stripes": [
       "H_jakobus",
-      "K"
+      "K",
+      "KA"
      ]
     }
    ],
@@ -2636,7 +2647,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-carentan",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/panzerschreck.webp",
    "w": 267,
@@ -2659,7 +2670,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-carentan",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/scharfschutzen.webp",
    "w": 267,
@@ -2682,7 +2693,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-carentan",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/8cm_granatwerfer.webp",
    "w": 266,
@@ -2705,7 +2716,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-carentan",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/puppchen.webp",
    "w": 267,
@@ -2728,7 +2739,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-carentan",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/10_5_cm_leichtgeschutz_42.webp",
    "w": 267,
@@ -2751,7 +2762,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-carentan",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/mg42_hmg.webp",
    "w": 266,
@@ -2888,7 +2899,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-carentan",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/kettenkrad.webp",
    "w": 267,
@@ -2911,7 +2922,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-carentan",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/pak_40.webp",
    "w": 266,
@@ -2934,7 +2945,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-carentan",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/lions_of_carentan.webp",
    "w": 267,
@@ -2950,7 +2961,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-carentan",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/stug_iv_carentan_65.webp",
    "w": 267,
@@ -2973,7 +2984,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-carentan",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/stug_h_42_g.webp",
    "w": 267,
@@ -3180,7 +3191,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-ge-airborne",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/feldwebel.webp",
    "w": 541,
@@ -3196,7 +3207,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-ge-airborne",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/dagger.webp",
    "w": 543,
@@ -3213,7 +3224,7 @@ HTS_DATA["hon-v1-ge"] = {
    "set": "hon1-ge-airborne",
    "size": "n",
    "stripes": [
-    "K"
+    "KA"
    ],
    "img": "img/hon/v1/ge/options/training_fallschirmjager.webp",
    "w": 544,

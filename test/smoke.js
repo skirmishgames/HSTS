@@ -1142,7 +1142,28 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
       const pa = await ab.locator('.pcard .nm').allInnerTexts();
       ok(pa.indexOf('Knife') >= 0 && pa.indexOf('Sprinter') >= 0 && pa.indexOf('Grenade') >= 0 && pa.indexOf('Dropped') < 0 && pa.indexOf('Engineers Squad') < 0, 'first edition: paratrooper small black slot takes small airborne and generic black options, not the large Dropped or Engineers Squad (' + pa.length + ')');
       await ab.keyboard.press('Escape'); }
+    // one copy of each platoon card and tile (community report: two Rangers Squads on the 5th Rangers tile)
+    await ab.fill('#search', 'US Rangers'); await ab.waitForTimeout(300);
+    await ab.locator('.lcard', { has: ab.locator('.v1badge') }).filter({ hasText: 'US Rangers' }).first().locator('[data-add]').click(); await ab.waitForTimeout(200);
+    ok(await ab.locator('.lcard', { has: ab.locator('.v1badge') }).filter({ hasText: 'US Rangers' }).first().locator('button.add[disabled]').count() === 1, 'one copy: a tile already in the army cannot be added again');
+    { const rt = ab.locator('.atile').last(); await rt.locator('.slot').first().click(); await ab.waitForTimeout(200);
+      await ab.locator('.pcard', { hasText: 'Rangers Squad' }).first().click(); await ab.waitForTimeout(200);
+      await rt.locator('.slot').last().click(); await ab.waitForTimeout(200);
+      const rs = await ab.locator('.pcard .nm').allInnerTexts();
+      ok(rs.indexOf('Rangers Squad') < 0 && rs.indexOf('Support Squad') >= 0, 'one copy: the Rangers Squad leaves the picker once it is used (' + rs.join(', ') + ')');
+      await ab.check('#pickAll'); await ab.waitForTimeout(150);
+      ok(await ab.locator('.pcard.nofit', { hasText: 'Rangers Squad' }).locator('.fl', { hasText: 'Already used' }).count() === 1, 'one copy: show-all lists it as already used');
+      await ab.keyboard.press('Escape'); }
     await ab.close();
+    // German paratrooper cards stay on Fallschirmjager tiles
+    const gp = await b.newPage({ viewport: { width: 1280, height: 900 } }); gp.on('pageerror', e => v1errs.push(e.message)); gp.on('dialog', d => d.accept());
+    await gp.goto(base + 'builder.html'); await gp.evaluate(() => { try { localStorage.clear(); } catch (e) {} }); await gp.reload(); await gp.waitForTimeout(400);
+    await gp.click('[data-nation="ge"]'); await gp.fill('#search', 'Panzergrenadiere'); await gp.waitForTimeout(300);
+    await gp.locator('.lcard', { has: gp.locator('.v1badge') }).filter({ hasText: 'PZGR-LEHR' }).first().locator('[data-add]').click(); await gp.waitForTimeout(200);
+    await gp.locator('.atile .slot').nth(1).click(); await gp.waitForTimeout(200);
+    { const pg2 = await gp.locator('.pcard:has(.v1badge) .nm').allInnerTexts();
+      ok(['Kettenkrad', 'Lions of Carentan', 'Dagger', 'Feldwebel', 'Püppchen'].every(x => pg2.indexOf(x) < 0) && pg2.indexOf('Flak 38 Quad') >= 0, 'first edition: Fallschirmjager cards stay off a Panzergrenadiere black slot, generic Carentan cards remain (' + pg2.length + ')'); }
+    await gp.close();
     // French (FFI): first edition nation
     await v1p.fill('#search', ''); await v1p.click('[data-nation="fr"]'); await v1p.waitForTimeout(300);
     ok(await v1p.locator('.lcard').count() === 6 && await v1p.locator('.lcard', { hasText: 'Maquisards' }).locator('.v1badge').count() === 1, 'first edition French: French (FFI) lists the Maquisards tile with the First edition badge');
