@@ -4,7 +4,7 @@
   var BOXES = [{ id: 'bro', name: 'Big Red One' }];
   var SIDES = [{ id: 'all', name: 'Both' }, { id: 'us', name: 'US' }, { id: 'ge', name: 'German' }];
   var SIDENAME = { us: 'United States', ge: 'Germany' };
-  var S = { b: 'bro', side: 'all', q: '', ph: 'all', theme: 'light' };
+  var S = { b: 'bro', side: 'all', q: '', ph: 'all', tag: 'all', theme: 'light' };
   var shown = [], cur = -1, zoomed = false;
 
   function $(id) { return document.getElementById(id); }
@@ -27,7 +27,7 @@
   var D = window.HTS_CARDS['hon-' + S.b];
   D.entries.forEach(function (e) {
     e.head = norm(e.name);
-    e.hay = norm(e.name + ' ' + e.phase + ' ' + e.when + ' ' + e.text + ' ' + (SIDENAME[e.nation] || ''));
+    e.hay = norm(e.name + ' ' + e.phase + ' ' + (e.on || []).join(' ') + ' ' + e.when + ' ' + e.text + ' ' + (SIDENAME[e.nation] || ''));
   });
 
   function renderControls() {
@@ -39,6 +39,11 @@
     }).join('');
     $('phases').innerHTML = '<button type="button" class="chip' + (S.ph === 'all' ? ' on' : '') + '" data-phase="all">All</button>' +
       D.phases.map(function (c) { return '<button type="button" class="chip' + (S.ph === c ? ' on' : '') + '" data-phase="' + esc(c) + '">' + esc(c) + '</button>'; }).join('');
+    /* Works on: what the card acts on; a card can carry several tags. Each chip shows how many different cards it holds. */
+    var seen = {}, cnt = {};
+    D.entries.forEach(function (e) { if (seen[e.name]) return; seen[e.name] = 1; (e.on || []).forEach(function (t) { cnt[t] = (cnt[t] || 0) + 1; }); });
+    $('tags').innerHTML = '<button type="button" class="chip' + (S.tag === 'all' ? ' on' : '') + '" data-tag="all">All</button>' +
+      (D.tags || []).map(function (c) { return '<button type="button" class="chip' + (S.tag === c ? ' on' : '') + '" data-tag="' + esc(c) + '">' + esc(c) + ' <small>' + (cnt[c] || 0) + '</small></button>'; }).join('');
     $('q').value = S.q;
     $('srcnote').textContent = 'Card text is typed from the ' + D.source + '.';
     document.documentElement.setAttribute('data-theme', S.theme);
@@ -59,6 +64,7 @@
     D.entries.forEach(function (e, i) {
       if (S.side !== 'all' && e.nation !== S.side) return;
       if (S.ph !== 'all' && e.phase !== S.ph) return;
+      if (S.tag !== 'all' && (e.on || []).indexOf(S.tag) < 0) return;
       var score = 0;
       if (toks.length) {
         var padded = ' ' + e.hay + ' ', hp = ' ' + e.head + ' ';
@@ -97,7 +103,7 @@
     $('lbxCap').textContent = e.name + ', ' + SIDENAME[e.nation] + ', ' + e.copies + (e.copies > 1 ? ' copies' : ' copy') + ' (' + e.ref + ')';
     $('lbxDl').href = e.img; $('lbxDl').setAttribute('download', e.id + '.webp');
     $('lbxText').innerHTML = '<h3>' + esc(e.name) + '</h3><p class="ltag">' + esc(SIDENAME[e.nation]) + ' &middot; ' + esc(e.phase) + ' &middot; ' + e.copies + (e.copies > 1 ? ' copies' : ' copy') + '</p>' +
-      '<p class="lwhen">' + esc(e.when) + '</p><p>' + esc(e.text) + '</p><p class="ltag">Card ' + esc(e.ref) + '</p>';
+      '<p class="lwhen">' + esc(e.when) + '</p><p>' + esc(e.text) + '</p>' + (e.on && e.on.length ? '<p class="ltag">Works on: ' + esc(e.on.join(', ')) + '</p>' : '') + '<p class="ltag">Card ' + esc(e.ref) + '</p>';
     $('lbxBody').scrollTop = 0;
   }
   function openBox(i) {
@@ -109,7 +115,7 @@
   function url() {
     try {
       var p = new URLSearchParams(); p.set('b', S.b);
-      if (S.side !== 'all') p.set('s', S.side); if (S.q) p.set('q', S.q); if (S.ph !== 'all') p.set('p', S.ph);
+      if (S.side !== 'all') p.set('s', S.side); if (S.q) p.set('q', S.q); if (S.ph !== 'all') p.set('p', S.ph); if (S.tag !== 'all') p.set('t', S.tag);
       history.replaceState(null, '', location.pathname + '?' + p.toString());
     } catch (e) { /* ignore */ }
   }
@@ -119,6 +125,7 @@
       var t = ev.target, el;
       if ((el = t.closest('[data-side]'))) { S.side = el.dataset.side; render(); return; }
       if ((el = t.closest('[data-phase]'))) { S.ph = el.dataset.phase; render(); return; }
+      if ((el = t.closest('[data-tag]'))) { S.tag = el.dataset.tag; render(); return; }
       if ((el = t.closest('[data-open]'))) openBox(+el.dataset.open);
     });
     $('lbxClose').onclick = closeBox;
@@ -147,6 +154,7 @@
     if (SIDES.some(function (s) { return s.id === p.get('s'); })) S.side = p.get('s');
     if (p.get('q')) S.q = p.get('q');
     if (D.phases.indexOf(p.get('p')) >= 0) S.ph = p.get('p');
+    if ((D.tags || []).indexOf(p.get('t')) >= 0) S.tag = p.get('t');
     bind(); render();
   }
   init();

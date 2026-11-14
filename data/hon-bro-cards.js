@@ -17,6 +17,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Burst into Action",
    "copies": 4,
    "phase": "Activation",
+   "on": [
+    "Firing and assault"
+   ],
    "when": "Play before activating one of your units.",
    "text": "During this activation, your unit gains the Fire on the Move special ability. Ignore the Combat Value penalty if your unit already has the Fire on the Move special ability.",
    "ref": "HoN-US-EN-1 to 4",
@@ -31,6 +34,12 @@ HTS_CARDS["hon-bro"] = {
    "name": "Don't Stop",
    "copies": 1,
    "phase": "Movement",
+   "on": [
+    "Vehicles",
+    "Movement",
+    "Suppressed markers",
+    "Dice"
+   ],
    "when": "Play before moving one of your vehicles.",
    "text": "You can move through any Difficult Passage square as long as your Movement Value is sufficient to completely exit that Terrain Element. Roll a die: on a 1-2 your unit receives 1 Suppressed Marker at the end of its Movement Action.",
    "ref": "HoN-US-EN-5",
@@ -45,6 +54,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Communications Scrambled",
    "copies": 2,
    "phase": "Order",
+   "on": [
+    "Order tokens"
+   ],
    "when": "Play at the end of the Order Phase.",
    "text": "Remove an Order Token from an enemy unit without revealing it.",
    "ref": "HoN-US-EN-6 to 7",
@@ -58,7 +70,12 @@ HTS_CARDS["hon-bro"] = {
    "nation": "us",
    "name": "Confusion",
    "copies": 1,
-   "phase": "Order",
+   "phase": "Combat",
+   "on": [
+    "Order tokens",
+    "Suppressed markers",
+    "Infantry"
+   ],
    "when": "Play when an enemy infantry unit receives a Suppressed Marker.",
    "text": "Remove any Order Token from the target unit.",
    "ref": "HoN-US-EN-8",
@@ -73,6 +90,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Courage",
    "copies": 2,
    "phase": "Any time",
+   "on": [
+    "Suppressed markers"
+   ],
    "when": "Play at any time.",
    "text": "Remove a Suppressed Marker from one of your units.",
    "ref": "HoN-US-EN-9 to 10",
@@ -87,6 +107,11 @@ HTS_CARDS["hon-bro"] = {
    "name": "Bogged Down",
    "copies": 1,
    "phase": "Movement",
+   "on": [
+    "Vehicles",
+    "Movement",
+    "Suppressed markers"
+   ],
    "when": "Play during the Movement Action of any enemy unit except an infantry unit.",
    "text": "Stop the unit at any point in its Movement Action, as long as it is not on a Terrain Element which is normally prohibited. Place a Suppressed Marker on it. The unit can move again on the following turn.",
    "ref": "HoN-US-EN-11",
@@ -101,6 +126,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Speed Setup",
    "copies": 2,
    "phase": "Activation",
+   "on": [
+    "Movement"
+   ],
    "when": "Play during the Activation Phase.",
    "text": "You can immediately flip a unit with the Tripod special ability. This Change of State does not count as a Movement Action.",
    "ref": "HoN-US-EN-12 to 13",
@@ -114,7 +142,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "us",
    "name": "Go! Go! Go!",
    "copies": 1,
-   "phase": "Movement",
+   "phase": "Activation",
+   "on": [
+    "Activation",
+    "Movement"
+   ],
    "when": "Play before activating one of your units.",
    "text": "Two units situated 1 or 2 squares from one of your officers (yellow outline) can immediately move 2 squares. Either of those units are free to act in this Phase if they still have an Order Token.",
    "ref": "HoN-US-EN-14",
@@ -129,6 +161,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "High Command",
    "copies": 1,
    "phase": "Order",
+   "on": [
+    "Order tokens"
+   ],
    "when": "Play at the start of the Order Phase.",
    "text": "For this turn, you have an additional Special Order Token.",
    "ref": "HoN-US-EN-15",
@@ -143,6 +178,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "Initiative",
    "copies": 2,
    "phase": "Activation",
+   "on": [
+    "Order tokens",
+    "Activation"
+   ],
    "when": "Play before the activation of an enemy unit.",
    "text": "If you do not have Initiative, you can activate your unit before your opponent's, providing the number of their Order Token is the same as yours. This Battle Event does not enable you to take the Initiative on a Special Order.",
    "ref": "HoN-US-EN-16 to 17",
@@ -157,6 +196,11 @@ HTS_CARDS["hon-bro"] = {
    "name": "Thank the Helmet!",
    "copies": 2,
    "phase": "Combat",
+   "on": [
+    "Infantry",
+    "Suppressed markers",
+    "Firing and assault"
+   ],
    "when": "Play when one of your infantry units suffers a Hit (or would be Destroyed) by a Firing Action.",
    "text": "Ignore that Hit and place a Suppressed Marker on your unit instead. This card cannot be used during an assault.",
    "ref": "HoN-US-EN-18 to 19",
@@ -171,6 +215,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "No!",
    "copies": 2,
    "phase": "Any time",
+   "on": [
+    "Action cards"
+   ],
    "when": "Play at any time.",
    "text": "Cancel an Action Card your opponent just played. That Action Card is returned to your opponent's hand and can be played again next turn.",
    "ref": "HoN-US-EN-20 to 21",
@@ -184,7 +231,12 @@ HTS_CARDS["hon-bro"] = {
    "nation": "us",
    "name": "Hit and Run",
    "copies": 1,
-   "phase": "Movement",
+   "phase": "Activation",
+   "on": [
+    "Vehicles",
+    "Movement",
+    "Infantry"
+   ],
    "when": "Play before activating one of your vehicles.",
    "text": "Your vehicle can attempt to run over a single infantry unit during its Movement Action. Each player rolls 1 die and adds the result to their unit's Movement Value. If your result is higher, you inflict 1 Hit to the infantry unit. Otherwise, nothing happens.",
    "ref": "HoN-US-EN-22",
@@ -198,7 +250,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "us",
    "name": "Weak Point",
    "copies": 2,
-   "phase": "Combat",
+   "phase": "Activation",
+   "on": [
+    "Firing and assault",
+    "Vehicles"
+   ],
    "when": "Play before activating one of your units.",
    "text": "If your unit shoots at a heavy vehicle, choose the lowest Defense Value of that vehicle when resolving the Firing Action.",
    "ref": "HoN-US-EN-23 to 24",
@@ -213,6 +269,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Precision",
    "copies": 1,
    "phase": "Combat",
+   "on": [
+    "Firing and assault"
+   ],
    "when": "Play after a scattering roll for Indirect Fire.",
    "text": "The scattering distance is reduced by 1 interspace.",
    "ref": "HoN-US-EN-25",
@@ -226,7 +285,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "us",
    "name": "Ready!",
    "copies": 2,
-   "phase": "Order",
+   "phase": "Activation",
+   "on": [
+    "Order tokens",
+    "Activation"
+   ],
    "when": "Play during the Activation Phase.",
    "text": "Remove an Order Token or Activated Marker from one of your units. That unit can act again this turn, either with the aid of a card, through a special ability, or during the Supply Phase.",
    "ref": "HoN-US-EN-26 to 27",
@@ -240,7 +303,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "us",
    "name": "Dynamic",
    "copies": 2,
-   "phase": "Order",
+   "phase": "Activation",
+   "on": [
+    "Order tokens",
+    "Destroyed units"
+   ],
    "when": "Play during the Activation Phase.",
    "text": "Reassign an unrevealed Order Token from one of your units to another unit without an Order Token or Activated Marker. That Order Token can even be salvaged from a unit right after it was Destroyed.",
    "ref": "HoN-US-EN-28 to 29",
@@ -255,6 +322,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "It Bounced Right Off",
    "copies": 1,
    "phase": "Combat",
+   "on": [
+    "Vehicles",
+    "Suppressed markers"
+   ],
    "when": "Play when one of your vehicles (light or heavy) takes a Hit or would be Destroyed.",
    "text": "Ignore that Hit result and place 2 Suppressed Markers on your unit. This Action Card must be played before any Damage location roll.",
    "ref": "HoN-US-EN-30",
@@ -269,6 +340,12 @@ HTS_CARDS["hon-bro"] = {
    "name": "Return to Sender",
    "copies": 1,
    "phase": "Combat",
+   "on": [
+    "Order tokens",
+    "Activation",
+    "Infantry",
+    "Firing and assault"
+   ],
    "when": "Play when your opponent launches any grenade (with a maximum range of 3 interspaces).",
    "text": "If one of your Unactivated infantry units is under the explosion template, move the template 1 interspace away from that unit. Put an Activated Marker on the unit, and remove its Order Token if it has one.",
    "ref": "HoN-US-EN-31",
@@ -283,6 +360,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "Repairs",
    "copies": 1,
    "phase": "Order",
+   "on": [
+    "Vehicles",
+    "Suppressed markers"
+   ],
    "when": "Play during the Order Phase.",
    "text": "Replace 1 Damage Marker on one of your heavy vehicles with 1 Suppressed Marker.",
    "ref": "HoN-US-EN-32",
@@ -297,6 +378,12 @@ HTS_CARDS["hon-bro"] = {
    "name": "Fall Back",
    "copies": 2,
    "phase": "Combat",
+   "on": [
+    "Infantry",
+    "Suppressed markers",
+    "Firing and assault",
+    "Movement"
+   ],
    "when": "Play when one of your infantry units suffers a Hit (or would be Destroyed) by an Assault.",
    "text": "Ignore that Hit and, if your unit has the Change of State special ability, flip it to the side with the highest Movement Value. Your unit must retreat 2 squares, regardless of its Movement Value, and then receives a Suppressed Marker. If you were the defender, the attacking unit must move into the square your unit vacated.",
    "ref": "HoN-US-EN-33 to 34",
@@ -311,6 +398,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Second Chance",
    "copies": 3,
    "phase": "Any time",
+   "on": [
+    "Dice"
+   ],
    "when": "Play this card to alter the result of a die roll.",
    "text": "Reroll, or make someone reroll, all dice for a given result and apply the new result instead.",
    "ref": "HoN-US-EN-35 to 37",
@@ -325,6 +415,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "Surprise!",
    "copies": 2,
    "phase": "Movement",
+   "on": [
+    "Infantry",
+    "Movement"
+   ],
    "when": "Play before the Movement Action of one of your infantry units.",
    "text": "Your unit can enter or leave a building through a window (white arrows) unless that would move them in or out of an Elevated Position.",
    "ref": "HoN-US-EN-38 to 39",
@@ -339,6 +433,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Tactician",
    "copies": 2,
    "phase": "Order",
+   "on": [
+    "Order tokens"
+   ],
    "when": "Play at the start of the Order Phase.",
    "text": "For this turn, you have an additional Numbered Order Token.",
    "ref": "HoN-US-EN-40 to 41",
@@ -352,7 +449,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "us",
    "name": "Opportunity Fire",
    "copies": 2,
-   "phase": "Combat",
+   "phase": "Activation",
+   "on": [
+    "Firing and assault",
+    "Activation"
+   ],
    "when": "Play during the activation of an enemy unit.",
    "text": "During this activation, one of your units can take a Firing Action as if it has the Opportunity Fire special ability.",
    "ref": "HoN-US-EN-42 to 43",
@@ -367,6 +468,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "All-Terrain",
    "copies": 2,
    "phase": "Movement",
+   "on": [
+    "Infantry",
+    "Movement"
+   ],
    "when": "Play before the Movement Action of one of your infantry units.",
    "text": "Your unit ignores the restrictions tied to Difficult Passage.",
    "ref": "HoN-US-EN-44 to 45",
@@ -381,6 +486,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "Desertion",
    "copies": 1,
    "phase": "Combat",
+   "on": [
+    "Infantry",
+    "Suppressed markers"
+   ],
    "when": "Play when an enemy infantry unit receives a second Suppressed Marker.",
    "text": "The unit immediately suffers 1 Hit. It can be Destroyed this way.",
    "ref": "HoN-US-EN-46",
@@ -395,6 +504,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "American Way of Life",
    "copies": 1,
    "phase": "Any time",
+   "on": [
+    "Dice"
+   ],
    "when": "Play before any die roll.",
    "text": "Roll one extra die. Choose the best result.",
    "ref": "HoN-US-EN-47",
@@ -409,6 +521,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "Uncle Sam",
    "copies": 1,
    "phase": "Activation",
+   "on": [
+    "Activation",
+    "Infantry"
+   ],
    "when": "Play after activating one of your infantry units.",
    "text": "Reactivate the same unit so it can act a second time.",
    "ref": "HoN-US-EN-48",
@@ -422,7 +538,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "us",
    "name": "Panzerfaust",
    "copies": 1,
-   "phase": "Combat",
+   "phase": "Activation",
+   "on": [
+    "Infantry",
+    "Firing and assault"
+   ],
    "when": "Play before activating one of your infantry units.",
    "text": "That unit can fire a Panzerfaust. Execute an Alternate Firing Action with the Combat Values printed on the card: +1, +5 and +4, range 4, blast 2.",
    "ref": "HoN-US-EN-49",
@@ -437,6 +557,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Resupply",
    "copies": 1,
    "phase": "Supply",
+   "on": [
+    "Gear markers"
+   ],
    "when": "Play during the Supply Phase.",
    "text": "Recover up to 3 spent Gear markers and put them back on their Recruitment Options. Your choice may include various types of Gear markers.",
    "ref": "HoN-US-EN-50",
@@ -451,6 +574,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Burst into Action",
    "copies": 4,
    "phase": "Activation",
+   "on": [
+    "Firing and assault"
+   ],
    "when": "Play before activating one of your units.",
    "text": "During this activation, your unit gains the Fire on the Move special ability. Ignore the Combat Value penalty if your unit already has the Fire on the Move special ability.",
    "ref": "HoN-GE-EN-1 to 4",
@@ -465,6 +591,12 @@ HTS_CARDS["hon-bro"] = {
    "name": "Don't Stop",
    "copies": 1,
    "phase": "Movement",
+   "on": [
+    "Vehicles",
+    "Movement",
+    "Suppressed markers",
+    "Dice"
+   ],
    "when": "Play before moving one of your vehicles.",
    "text": "You can move through any Difficult Passage square as long as your Movement Value is sufficient to completely exit that Terrain Element. Roll a die: on a 1-2 your unit receives 1 Suppressed Marker at the end of its Movement Action.",
    "ref": "HoN-GE-EN-5",
@@ -479,6 +611,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Communications Scrambled",
    "copies": 2,
    "phase": "Order",
+   "on": [
+    "Order tokens"
+   ],
    "when": "Play at the end of the Order Phase.",
    "text": "Remove an Order Token from an enemy unit without revealing it.",
    "ref": "HoN-GE-EN-6 to 7",
@@ -492,7 +627,12 @@ HTS_CARDS["hon-bro"] = {
    "nation": "ge",
    "name": "Confusion",
    "copies": 1,
-   "phase": "Order",
+   "phase": "Combat",
+   "on": [
+    "Order tokens",
+    "Suppressed markers",
+    "Infantry"
+   ],
    "when": "Play when an enemy infantry unit receives a Suppressed Marker.",
    "text": "Remove any Order Token from the target unit.",
    "ref": "HoN-GE-EN-8",
@@ -507,6 +647,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Courage",
    "copies": 2,
    "phase": "Any time",
+   "on": [
+    "Suppressed markers"
+   ],
    "when": "Play at any time.",
    "text": "Remove a Suppressed Marker from one of your units.",
    "ref": "HoN-GE-EN-9 to 10",
@@ -521,6 +664,11 @@ HTS_CARDS["hon-bro"] = {
    "name": "Bogged Down",
    "copies": 1,
    "phase": "Movement",
+   "on": [
+    "Vehicles",
+    "Movement",
+    "Suppressed markers"
+   ],
    "when": "Play during the Movement Action of any enemy unit except an infantry unit.",
    "text": "Stop the unit at any point in its Movement Action, as long as it is not on a Terrain Element which is normally prohibited. Place a Suppressed Marker on it. The unit can move again on the following turn.",
    "ref": "HoN-GE-EN-11",
@@ -535,6 +683,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Speed Setup",
    "copies": 2,
    "phase": "Activation",
+   "on": [
+    "Movement"
+   ],
    "when": "Play during the Activation Phase.",
    "text": "You can immediately flip a unit with the Tripod special ability. This Change of State does not count as a Movement Action.",
    "ref": "HoN-GE-EN-12 to 13",
@@ -548,7 +699,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "ge",
    "name": "Schnell!",
    "copies": 1,
-   "phase": "Movement",
+   "phase": "Activation",
+   "on": [
+    "Activation",
+    "Movement"
+   ],
    "when": "Play before activating one of your units.",
    "text": "Two units situated 1 or 2 squares from one of your officers (yellow outline) can immediately move 2 squares. Either of those units are free to act in this Phase if they still have an Order Token.",
    "ref": "HoN-GE-EN-14",
@@ -563,6 +718,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "High Command",
    "copies": 1,
    "phase": "Order",
+   "on": [
+    "Order tokens"
+   ],
    "when": "Play at the start of the Order Phase.",
    "text": "For this turn, you have an additional Special Order Token.",
    "ref": "HoN-GE-EN-15",
@@ -577,6 +735,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "Initiative",
    "copies": 2,
    "phase": "Activation",
+   "on": [
+    "Order tokens",
+    "Activation"
+   ],
    "when": "Play before the activation of an enemy unit.",
    "text": "If you do not have Initiative, you can activate your unit before your opponent's, providing the number of their Order Token is the same as yours. This Battle Event does not enable you to take the Initiative on a Special Order.",
    "ref": "HoN-GE-EN-16 to 17",
@@ -591,6 +753,11 @@ HTS_CARDS["hon-bro"] = {
    "name": "Thank the Helmet!",
    "copies": 2,
    "phase": "Combat",
+   "on": [
+    "Infantry",
+    "Suppressed markers",
+    "Firing and assault"
+   ],
    "when": "Play when one of your infantry units suffers a Hit (or would be Destroyed) by a Firing Action.",
    "text": "Ignore that Hit and place a Suppressed Marker on your unit instead. This card cannot be used during an assault.",
    "ref": "HoN-GE-EN-18 to 19",
@@ -605,6 +772,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Nein!",
    "copies": 2,
    "phase": "Any time",
+   "on": [
+    "Action cards"
+   ],
    "when": "Play at any time.",
    "text": "Cancel an Action Card your opponent just played. That Action Card is returned to your opponent's hand and can be played again next turn.",
    "ref": "HoN-GE-EN-20 to 21",
@@ -618,7 +788,12 @@ HTS_CARDS["hon-bro"] = {
    "nation": "ge",
    "name": "Hit and Run",
    "copies": 1,
-   "phase": "Movement",
+   "phase": "Activation",
+   "on": [
+    "Vehicles",
+    "Movement",
+    "Infantry"
+   ],
    "when": "Play before activating one of your vehicles.",
    "text": "Your vehicle can attempt to run over a single infantry unit during its Movement Action. Each player rolls 1 die and adds the result to their unit's Movement Value. If your result is higher, you inflict 1 Hit to the infantry unit. Otherwise, nothing happens.",
    "ref": "HoN-GE-EN-22",
@@ -632,7 +807,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "ge",
    "name": "Weak Point",
    "copies": 2,
-   "phase": "Combat",
+   "phase": "Activation",
+   "on": [
+    "Firing and assault",
+    "Vehicles"
+   ],
    "when": "Play before activating one of your units.",
    "text": "If your unit shoots at a heavy vehicle, choose the lowest Defense Value of that vehicle when resolving the Firing Action.",
    "ref": "HoN-GE-EN-23 to 24",
@@ -647,6 +826,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Precision",
    "copies": 1,
    "phase": "Combat",
+   "on": [
+    "Firing and assault"
+   ],
    "when": "Play after a scattering roll for Indirect Fire.",
    "text": "The scattering distance is reduced by 1 interspace.",
    "ref": "HoN-GE-EN-25",
@@ -660,7 +842,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "ge",
    "name": "Ready!",
    "copies": 2,
-   "phase": "Order",
+   "phase": "Activation",
+   "on": [
+    "Order tokens",
+    "Activation"
+   ],
    "when": "Play during the Activation Phase.",
    "text": "Remove an Order Token or Activated Marker from one of your units. That unit can act again this turn, either with the aid of a card, through a special ability, or during the Supply Phase.",
    "ref": "HoN-GE-EN-26 to 27",
@@ -674,7 +860,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "ge",
    "name": "Dynamic",
    "copies": 2,
-   "phase": "Order",
+   "phase": "Activation",
+   "on": [
+    "Order tokens",
+    "Destroyed units"
+   ],
    "when": "Play during the Activation Phase.",
    "text": "Reassign an unrevealed Order Token from one of your units to another unit without an Order Token or Activated Marker. That Order Token can even be salvaged from a unit right after it was Destroyed.",
    "ref": "HoN-GE-EN-28 to 29",
@@ -689,6 +879,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "It Bounced Right Off",
    "copies": 1,
    "phase": "Combat",
+   "on": [
+    "Vehicles",
+    "Suppressed markers"
+   ],
    "when": "Play when one of your vehicles (light or heavy) takes a Hit or would be Destroyed.",
    "text": "Ignore that Hit result and place 2 Suppressed Markers on your unit. This Action Card must be played before any Damage location roll.",
    "ref": "HoN-GE-EN-30",
@@ -703,6 +897,12 @@ HTS_CARDS["hon-bro"] = {
    "name": "Return to Sender",
    "copies": 1,
    "phase": "Combat",
+   "on": [
+    "Order tokens",
+    "Activation",
+    "Infantry",
+    "Firing and assault"
+   ],
    "when": "Play when your opponent launches any grenade (with a maximum range of 3 interspaces).",
    "text": "If one of your Unactivated infantry units is under the explosion template, move the template 1 interspace away from that unit. Put an Activated Marker on the unit, and remove its Order Token if it has one.",
    "ref": "HoN-GE-EN-31",
@@ -717,6 +917,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "Repairs",
    "copies": 1,
    "phase": "Order",
+   "on": [
+    "Vehicles",
+    "Suppressed markers"
+   ],
    "when": "Play during the Order Phase.",
    "text": "Replace 1 Damage Marker on one of your heavy vehicles with 1 Suppressed Marker.",
    "ref": "HoN-GE-EN-32",
@@ -731,6 +935,12 @@ HTS_CARDS["hon-bro"] = {
    "name": "Fall Back",
    "copies": 2,
    "phase": "Combat",
+   "on": [
+    "Infantry",
+    "Suppressed markers",
+    "Firing and assault",
+    "Movement"
+   ],
    "when": "Play when one of your infantry units suffers a Hit (or would be Destroyed) by an Assault.",
    "text": "Ignore that Hit and, if your unit has the Change of State special ability, flip it to the side with the highest Movement Value. Your unit must retreat 2 squares, regardless of its Movement Value, and then receives a Suppressed Marker. If you were the defender, the attacking unit must move into the square your unit vacated.",
    "ref": "HoN-GE-EN-33 to 34",
@@ -745,6 +955,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Second Chance",
    "copies": 3,
    "phase": "Any time",
+   "on": [
+    "Dice"
+   ],
    "when": "Play this card to alter the result of a die roll.",
    "text": "Reroll, or make someone reroll, all dice for a given result and apply the new result instead.",
    "ref": "HoN-GE-EN-35 to 37",
@@ -759,6 +972,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "Surprise!",
    "copies": 2,
    "phase": "Movement",
+   "on": [
+    "Infantry",
+    "Movement"
+   ],
    "when": "Play before the Movement Action of one of your infantry units.",
    "text": "Your unit can enter or leave a building through a window (white arrows) unless that would move them in or out of an Elevated Position.",
    "ref": "HoN-GE-EN-38 to 39",
@@ -773,6 +990,9 @@ HTS_CARDS["hon-bro"] = {
    "name": "Tactician",
    "copies": 2,
    "phase": "Order",
+   "on": [
+    "Order tokens"
+   ],
    "when": "Play at the start of the Order Phase.",
    "text": "For this turn, you have an additional Numbered Order Token.",
    "ref": "HoN-GE-EN-40 to 41",
@@ -786,7 +1006,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "ge",
    "name": "Opportunity Fire",
    "copies": 2,
-   "phase": "Combat",
+   "phase": "Activation",
+   "on": [
+    "Firing and assault",
+    "Activation"
+   ],
    "when": "Play during the activation of an enemy unit.",
    "text": "During this activation, one of your units can take a Firing Action as if it has the Opportunity Fire special ability.",
    "ref": "HoN-GE-EN-42 to 43",
@@ -801,6 +1025,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "All-Terrain",
    "copies": 2,
    "phase": "Movement",
+   "on": [
+    "Infantry",
+    "Movement"
+   ],
    "when": "Play before the Movement Action of one of your infantry units.",
    "text": "Your unit ignores the restrictions tied to Difficult Passage.",
    "ref": "HoN-GE-EN-44 to 45",
@@ -815,6 +1043,11 @@ HTS_CARDS["hon-bro"] = {
    "name": "Hitlerjugend",
    "copies": 1,
    "phase": "Supply",
+   "on": [
+    "Infantry",
+    "Destroyed units",
+    "Movement"
+   ],
    "when": "Play at the start of the Supply Phase.",
    "text": "Put one of your Destroyed infantry units back in play in your deployment zone. It can immediately take a Movement Action.",
    "ref": "HoN-GE-EN-46",
@@ -828,7 +1061,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "ge",
    "name": "The Fury of the Führer",
    "copies": 1,
-   "phase": "Combat",
+   "phase": "Order",
+   "on": [
+    "Infantry",
+    "Firing and assault"
+   ],
    "when": "Play at the end of the Order Phase.",
    "text": "For this turn, all your infantry units gain the Assault +2 special ability.",
    "ref": "HoN-GE-EN-47",
@@ -843,6 +1080,11 @@ HTS_CARDS["hon-bro"] = {
    "name": "Mine",
    "copies": 1,
    "phase": "Movement",
+   "on": [
+    "Infantry",
+    "Movement",
+    "Dice"
+   ],
    "when": "Play during the Movement Action of an enemy infantry unit.",
    "text": "This unit steps on a mine. Roll a die and apply the result: 1-4 nothing happens. 5-6 the unit suffers a Hit.",
    "ref": "HoN-GE-EN-48",
@@ -857,6 +1099,10 @@ HTS_CARDS["hon-bro"] = {
    "name": "Booby-Trapped",
    "copies": 1,
    "phase": "Movement",
+   "on": [
+    "Infantry",
+    "Dice"
+   ],
    "when": "Play when an enemy infantry unit enters a building.",
    "text": "The unit triggers a trap. Roll a die and apply the result: 1-2 nothing happens. 3-4 the unit suffers a Hit. 5-6 the unit suffers a Hit and the building receives a 1-point Destruction Marker.",
    "ref": "HoN-GE-EN-49",
@@ -870,7 +1116,11 @@ HTS_CARDS["hon-bro"] = {
    "nation": "ge",
    "name": "Geballte Ladung",
    "copies": 1,
-   "phase": "Combat",
+   "phase": "Activation",
+   "on": [
+    "Infantry",
+    "Firing and assault"
+   ],
    "when": "Play before activating one of your infantry units.",
    "text": "That unit can fire a Geballte Ladung (grenade). Execute an Alternate Firing Action with the Combat Values printed on the card: +4, +3 and +1, range 2.",
    "ref": "HoN-GE-EN-50",
@@ -879,5 +1129,18 @@ HTS_CARDS["hon-bro"] = {
    "w": 685,
    "h": 1039
   }
+ ],
+ "tags": [
+  "Order tokens",
+  "Activation",
+  "Movement",
+  "Firing and assault",
+  "Suppressed markers",
+  "Vehicles",
+  "Infantry",
+  "Dice",
+  "Action cards",
+  "Destroyed units",
+  "Gear markers"
  ]
 };

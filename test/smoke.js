@@ -372,8 +372,12 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   await tp.click('.ccard'); await tp.waitForTimeout(200);
   ok(await tp.evaluate(() => !document.getElementById('lbx').hidden && /Burst/.test(document.getElementById('lbxCap').textContent) && document.getElementById('lbxDl').getAttribute('href').endsWith('.webp')), 'cards: full size view opens with a download link');
   await tp.click('#lbxClose');
-  { const ordr = await tp.evaluate(() => [...new Set(window.HTS_CARDS['hon-bro'].entries.filter(e => e.phase === 'Order').map(e => e.name))].sort().join(','));
-    ok(ordr === 'Communications Scrambled,Confusion,Dynamic,High Command,Ready!,Repairs,Tactician', 'cards: the Order group holds the cards that act on Order Tokens, plus Repairs (' + ordr + ')'); }
+  { const grp = await tp.evaluate(() => { const u = {}; window.HTS_CARDS['hon-bro'].entries.forEach(e => { u[e.name] = e; }); const v = Object.values(u);
+      return { ph: v.filter(e => e.phase === 'Order').map(e => e.name).sort().join(','), ot: v.filter(e => (e.on || []).indexOf('Order tokens') >= 0).map(e => e.name).sort().join(','), untagged: v.filter(e => !(e.on || []).length).length }; });
+    ok(grp.ph === 'Communications Scrambled,High Command,Repairs,Tactician,The Fury of the Führer', 'cards: When it is played follows the printed line (Order phase: ' + grp.ph + ')');
+    ok(grp.ot === 'Communications Scrambled,Confusion,Dynamic,High Command,Initiative,Ready!,Return to Sender,Tactician' && grp.untagged === 0, 'cards: Works on Order tokens lists the cards that act on Order Tokens, every card has a tag (' + grp.ot + ')'); }
+  await tp.goto(base + 'cards.html?p=Order&t=Vehicles'); await tp.waitForTimeout(300);
+  ok((await tp.locator('.ccard .cn').allInnerTexts()).every(n => n === 'Repairs') && await tp.locator('.ccard').count() === 2, 'cards: Order phase and Vehicles together find the two Repairs cards');
 
   // My collection filter in the builder
   await tp.goto(base + 'builder.html'); await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.own.v1'); } catch (e) {} }); await tp.reload(); await tp.waitForTimeout(400);
