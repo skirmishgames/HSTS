@@ -3,6 +3,7 @@
 
   var LSK = 'hts.hon.bro.v1';
   var EDK = 'hts.hon.edition.v1'; /* the Edition chip choice, kept per device */
+  var MXK = 'hts.hon.mix.v1'; /* Mix editions switch in the option picker, kept per device */
   var NATIONS = [{ id: 'us', name: 'United States' }, { id: 'ge', name: 'Germany' }, { id: 'uk', name: 'Commonwealth' }, { id: 'fr', name: 'French (FFI)' }, { id: 'ru', name: 'Soviet Union (Stalingrad)' }];
   /* Each builder nation is built from one or more data files. Germany holds both German files.
      Ids from hon-hos-gs are prefixed with HOSP in the merged view because ten option ids
@@ -24,7 +25,7 @@
 
   var S = {
     nation: 'us', limit: 250, name: '', army: [], theme: 'light', saved: [],
-    type: 'all', sets: {}, q: '', view: 'army', opt: null, edition: 'all'
+    type: 'all', sets: {}, q: '', view: 'army', opt: null, edition: 'all', mix: true
   };
   var P = { uid: null, i: 0, all: false, own: false };
   var OWN = window.HTS_OWN;
@@ -101,10 +102,17 @@
   /* ---------- rules ---------- */
   function fits(slot, opt) {
     var why = [];
-    if (slot.stripes.indexOf('all') >= 0) return opt.v1 ? ['stripes'] : why; // Support tile: takes any V2 option, not first edition ones
+    /* generic options: V2 any-stripe, and first edition plain black (v1_K). Airborne black (v1_KA) stays on airborne tiles. */
+    var generic = opt.stripes.indexOf('any') >= 0 || (opt.v1 && opt.stripes.length === 1 && opt.stripes[0] === 'v1_K');
+    var slotV1 = slot.stripes.some(function (x) { return String(x).indexOf('v1_') === 0; });
+    /* Mix editions off: first edition options only on first edition tiles, V2 options only on V2 tiles */
+    if (!S.mix && !!opt.v1 !== slotV1) return ['edition'];
+    if (slot.stripes.indexOf('all') >= 0) return opt.v1 && !generic ? ['stripes'] : why; // Support tile: takes any V2 option and first edition generic ones
     if (slot.size !== opt.size) why.push('size');
     var ok;
-    if (opt.stripes.indexOf('any') >= 0) ok = !slot.stripes.some(function (x) { return String(x).indexOf('v1_') === 0; }) || slot.stripes.indexOf('v1_K') >= 0 || slot.stripes.indexOf('v1_KA') >= 0; /* V2 generic (any-stripe) options fit V2 slots and the black (generic) slots of first edition tiles, not first edition platoon-colour or command slots */
+    /* a generic option fits any V2 slot, and the black (generic) slots of first edition tiles; not first edition platoon-colour or command slots.
+       First edition generic options stay out of V2 command slots. */
+    if (generic) ok = (!slotV1 && !(opt.v1 && slot.stripes.indexOf('cmd') >= 0)) || slot.stripes.indexOf('v1_K') >= 0 || slot.stripes.indexOf('v1_KA') >= 0;
     /* every stripe colour on the option must be on the slot: one shared colour is not a match */
     else ok = opt.stripes.length > 0 && opt.stripes.every(function (s) { return slot.stripes.indexOf(s) >= 0; });
     if (!ok) why.push('stripes');
@@ -310,6 +318,8 @@
   function effEd() {
     return S.edition !== 'all' && editions().some(function (e) { return e[0] === S.edition; }) ? S.edition : 'all';
   }
+  function saveMix() { try { localStorage.setItem(MXK, S.mix ? '1' : '0'); } catch (e) { /* storage can be blocked */ } }
+  function loadMix() { try { var v = localStorage.getItem(MXK); if (v === '0') S.mix = false; } catch (e) { /* ignore */ } }
   function saveEdition() { try { localStorage.setItem(EDK, S.edition); } catch (e) { /* storage can be blocked */ } }
   function loadEdition() {
     try {
@@ -383,6 +393,8 @@
   function openPicker(entryId, i) {
     P.uid = entryId; P.i = i; P.all = false; P.own = false;
     $('pickAll').checked = false; $('pickOwn').checked = false; $('pickOwnWrap').hidden = !OWN.active();
+    var eds = editions().map(function (x) { return x[0]; });
+    $('pickMix').checked = S.mix; $('pickMixWrap').hidden = !(eds.indexOf('v1') >= 0 && eds.some(function (x) { return x !== 'v1'; }));
     renderPicker();
     $('picker').hidden = false;
   }
@@ -514,6 +526,7 @@
     $('btnHelp').onclick = function () { $('help').hidden = false; };
     $('pickAll').onchange = function () { P.all = this.checked; renderPicker(); };
     $('pickOwn').onchange = function () { P.own = this.checked; renderPicker(); };
+    $('pickMix').onchange = function () { S.mix = this.checked; saveMix(); renderPicker(); renderBoard(); renderPoints(); };
     $('pickClear').onclick = function () {
       var e = S.army.filter(function (x) { return x.id === P.uid; })[0];
       if (e) { e.o[P.i] = null; refresh(); }
@@ -595,7 +608,7 @@
 
   function init() {
     restore();
-    loadEdition();
+    loadEdition(); loadMix();
     if (location.hash.indexOf('#b=') === 0) {
       try { applySnapshot(decode(location.hash.slice(3))); persist(); history.replaceState(null, '', location.pathname + location.search); } catch (e) { /* ignore bad link */ }
     } else deepLink();

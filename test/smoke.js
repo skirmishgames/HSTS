@@ -1122,6 +1122,19 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     { await ab.locator('.atile').last().locator('.slot').last().click(); await ab.waitForTimeout(200);
       const lg = await ab.locator('.pcard .nm').allInnerTexts();
       ok(['M4 Sherman', 'M5 Stuart', 'M10 Tank Destroyer', 'M8 Scott', 'Sherman (76)W', 'M10 A1'].every(x => lg.indexOf(x) >= 0) && lg.length === 7, 'first edition: Sherman Squadron large slot takes the large generic V2 tanks and its own options (' + lg.join(', ') + ')');
+      ok(await ab.isVisible('#pickMix') && await ab.isChecked('#pickMix'), 'first edition: Mix editions switch shows in the picker and starts on');
+      await ab.uncheck('#pickMix'); await ab.waitForTimeout(200);
+      const lgOff = await ab.locator('.pcard .nm').allInnerTexts();
+      ok(lgOff.length === 4 && lgOff.indexOf('M4 Sherman') < 0 && lgOff.indexOf('M8 Scott') >= 0, 'first edition: with Mix editions off the large slot keeps only first edition options (' + lgOff.join(', ') + ')');
+      ok(await ab.evaluate(() => localStorage.getItem('hts.hon.mix.v1')) === '0', 'first edition: the Mix editions choice is saved');
+      await ab.check('#pickMix'); await ab.waitForTimeout(100);
+      await ab.keyboard.press('Escape'); }
+    // both directions: first edition generic black options fit V2 tiles, airborne and platoon ones do not
+    await ab.fill('#search', 'Rifle Platoon'); await ab.waitForTimeout(300);
+    await ab.locator('.lcard', { hasText: '16th Inf. Reg. A' }).filter({ hasNot: ab.locator('.v1badge') }).first().locator('[data-add]').click(); await ab.waitForTimeout(200);
+    { await ab.locator('.atile').last().locator('.slot').nth(1).click(); await ab.waitForTimeout(200);
+      const v2s = await ab.locator('.pcard:has(.v1badge) .nm').allInnerTexts();
+      ok(v2s.indexOf('Ammo Belt') >= 0 && v2s.indexOf('Veteran') >= 0 && v2s.indexOf('Knife') < 0 && v2s.indexOf('Ace Driver') < 0, 'first edition: a V2 tile takes first edition generic black options, not airborne or platoon ones (' + v2s.length + ')');
       await ab.keyboard.press('Escape'); }
     await ab.fill('#search', 'US Paratroopers'); await ab.waitForTimeout(300);
     await ab.locator('.lcard', { hasText: '502' }).first().locator('[data-add]').click(); await ab.waitForTimeout(200);
