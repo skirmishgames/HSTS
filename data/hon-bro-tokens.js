@@ -5,6 +5,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "title": "Tokens and markers",
 "source": "Rulebook V4.1 and Scenario Booklet V2.4",
 "groups": [
+"Order tokens",
 "Objectives",
 "Tactical bonuses",
 "Turn chart",
@@ -13,6 +14,89 @@ window.HTS_TOKENS["hon-bro"] = {
 "Gear markers"
 ],
 "entries": [
+{
+"id": "order-numbered",
+"name": "Numbered Order Tokens",
+"group": "Order tokens",
+"summary": "Numbered 1 to 10. They set the order your units act in the Activation Phase.",
+"text": [
+"Each Game Turn you take Numbered Order Tokens from 1 up to your Order total: the sum of the order stars from officers, Personal Orders, Order Options and tile Special Abilities.",
+"Place them with the number facing you. The back shows your army symbol, so your opponent does not know which unit acts when. Units act in numerical order, and a unit can never have more than one Order Token.",
+"If you have no Numbered or Special Order Tokens to assign, you lose the game at once."
+],
+"faces": [
+{
+"img": "img/hon/bro/tokens/order-numbered.webp",
+"w": 530,
+"h": 124,
+"label": "US and German tokens, front",
+"tall": false
+}
+],
+"facts": [
+[
+"Limit",
+"10 Numbered Order Tokens"
+]
+],
+"links": [],
+"src": "Big Red One rulebook V4.1, p.8"
+},
+{
+"id": "order-bluff",
+"name": "Bluff Order Tokens",
+"group": "Order tokens",
+"summary": "No number on the front. Placed with your real orders to mislead your opponent.",
+"text": [
+"When you place your Order Tokens, you also place one Bluff Order Token. It has no number on its front but looks the same as the others from the back.",
+"It does not activate the unit. It only tricks your opponent into thinking that unit will act."
+],
+"faces": [
+{
+"img": "img/hon/bro/tokens/order-bluff.webp",
+"w": 264,
+"h": 120,
+"label": "US and German tokens",
+"tall": false
+}
+],
+"facts": [
+[
+"Limit",
+"2 Bluff Order Tokens"
+]
+],
+"links": [],
+"src": "Big Red One rulebook V4.1, p.8"
+},
+{
+"id": "order-special",
+"name": "Special Order Tokens",
+"group": "Order tokens",
+"summary": "Act as Order #0: before or after any other Order Token, but never mid-activation.",
+"text": [
+"You get Special Order Tokens from the High Command Action Card, the Battle Plan Order Option or a Special Ability.",
+"A Special Order Token can be activated before or after any other Order Token, so it can be played as Order #0. It cannot interrupt an ongoing activation. If both players want to use one at the same time, the player with the Initiative goes first.",
+"For some rules, a Special Order Token counts as the same value as the last Numbered Order Token revealed."
+],
+"faces": [
+{
+"img": "img/hon/bro/tokens/order-special.webp",
+"w": 264,
+"h": 120,
+"label": "US and German tokens",
+"tall": false
+}
+],
+"facts": [
+[
+"Limit",
+"2 Special Order Tokens"
+]
+],
+"links": [],
+"src": "Big Red One rulebook V4.1, p.8"
+},
 {
 "id": "primary",
 "name": "Primary objective",

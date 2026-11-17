@@ -80,6 +80,33 @@ HTS_TOKENS["hon-hos"] = {
 "src": "Heroes of Stalingrad rulebook, p.3, p.25, p.26"
 },
 {
+"id": "order-special",
+"name": "Special Order Tokens",
+"group": "Order tokens",
+"summary": "Act as Order #0: before or after any other Order Token, but never mid-activation.",
+"text": [
+"You get Special Order Tokens from the High Command Action Card, the Battle Plan Order Option or a Special Ability.",
+"A Special Order Token can be activated before or after any other Order Token, so it can be played as Order number 0. It cannot interrupt an ongoing activation. If both players want to use one at the same time, the player with the Initiative goes first."
+],
+"faces": [
+{
+"img": "img/hon/hos/tokens/order-special.webp",
+"w": 488,
+"h": 272,
+"label": "German and Soviet tokens",
+"tall": false
+}
+],
+"facts": [
+[
+"Limit",
+"2 Special Order Tokens"
+]
+],
+"links": [],
+"src": "Heroes of Stalingrad rulebook, p.4"
+},
+{
 "id": "objective",
 "name": "Objective markers",
 "group": "Objectives",
