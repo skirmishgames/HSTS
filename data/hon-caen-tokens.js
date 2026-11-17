@@ -8,6 +8,7 @@ HTS_TOKENS["hon-caen"] = {
   "Objectives",
   "Turn chart",
   "Combat markers",
+  "Templates",
   "Gear markers",
   "Defences",
   "Customizations",
@@ -242,7 +243,7 @@ HTS_TOKENS["hon-caen"] = {
   {
    "id": "template",
    "name": "Yellow explosion template",
-   "group": "Combat markers",
+   "group": "Templates",
    "summary": "Round blast template. Printed values at the foot: +2, +2 and X.",
    "text": [
     "Explosion templates are used by Artillery Support markers and other Template attacks. Place the template on an Interspace on the board. Artillery scatters 3 Interspaces, smoke scatters 1.",

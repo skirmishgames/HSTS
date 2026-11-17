@@ -8,7 +8,9 @@ window.HTS_TOKENS["hon-bro"] = {
 "Objectives",
 "Tactical bonuses",
 "Turn chart",
-"Combat markers"
+"Combat markers",
+"Templates",
+"Gear markers"
 ],
 "entries": [
 {
@@ -542,7 +544,7 @@ window.HTS_TOKENS["hon-bro"] = {
 {
 "id": "flamer",
 "name": "Flamethrower template",
-"group": "Combat markers",
+"group": "Templates",
 "summary": "Long template for a flamethrower attack. Everything it touches gets a Suppressed marker.",
 "text": [
 "Flamethrower is an alternate firing action. The firing unit has Fire on the Move (-1) and uses the Combat Values printed on the template. Put the narrow end at the centre of the firing counter's square, or on the red dot on the counter, and point the template in any direction your firing arc allows.",
@@ -575,6 +577,73 @@ window.HTS_TOKENS["hon-bro"] = {
 }
 ],
 "src": "Rulebook V4.1, page 22"
+},
+{
+"id": "explosion",
+"name": "Explosion template",
+"group": "Templates",
+"summary": "Blast circle for Howitzer (grenade, mortar, artillery) and Indirect Fire. The back has the scatter chart.",
+"text": [
+"Take the explosion Template and put it on the target Interspace. You need a clear or obscured line of sight to it. Use the Combat Values that match the colour of the Special Ability icon, and resolve each attack on its own.",
+"Every unit and structure under the Template, even partly, is affected. Units inside a building are not affected by a Template outside it, concealed units ignore it, and a Heavy Vehicle uses its side Defense Value.",
+"You may not place a Template inside a building. For Indirect Fire, the scatter chart on the back shows where a missed shot lands."
+],
+"faces": [
+{
+"img": "img/hon/bro/tokens/explosion-a.webp",
+"w": 400,
+"h": 400,
+"label": "Combat Values side",
+"tall": false
+},
+{
+"img": "img/hon/bro/tokens/explosion-b.webp",
+"w": 400,
+"h": 400,
+"label": "Scatter chart side",
+"tall": false
+}
+],
+"facts": [],
+"links": [],
+"src": "Big Red One rulebook V4.1, Howitzer and Indirect Fire"
+},
+{
+"id": "gear",
+"name": "Gear markers",
+"group": "Gear markers",
+"summary": "One-use markers that come with a Gear Option, such as Grenade, Ammo and Veteran.",
+"text": [
+"If your army includes a Gear Option, take the number of markers it shows (x3 and so on) and put them on the option. Each marker can be used once in the game. When they run out, the option no longer works.",
+"Declare a marker before the dice are rolled. Unless the option is an Alternate Firing Action, you may use up to 3 identical markers on the same action. Only units with the stripes of the tile that holds the option can use it.",
+"Both armies have their own Grenade, Ammo and Veteran markers. The Resupply card recovers spent markers."
+],
+"faces": [
+{
+"img": "img/hon/bro/tokens/gear-grenade.webp",
+"w": 276,
+"h": 297,
+"label": "Grenade",
+"tall": false
+},
+{
+"img": "img/hon/bro/tokens/gear-ammo.webp",
+"w": 290,
+"h": 297,
+"label": "Ammo",
+"tall": false
+},
+{
+"img": "img/hon/bro/tokens/gear-veteran.webp",
+"w": 269,
+"h": 260,
+"label": "Veteran",
+"tall": false
+}
+],
+"facts": [],
+"links": [],
+"src": "Big Red One rulebook V4.1, Gear Options"
 }
 ]
 };

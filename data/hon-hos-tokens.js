@@ -6,11 +6,10 @@ HTS_TOKENS["hon-hos"] = {
 "source": "Heroes of Stalingrad rulebook and Core Set punchboards",
 "groups": [
 "Order tokens",
+"Objectives",
 "Turn chart",
-"Effect markers",
-"Damage and destruction",
-"Templates",
-"Objective markers"
+"Combat markers",
+"Templates"
 ],
 "entries": [
 {
@@ -79,6 +78,41 @@ HTS_TOKENS["hon-hos"] = {
 ],
 "links": [],
 "src": "Heroes of Stalingrad rulebook, p.3, p.25, p.26"
+},
+{
+"id": "objective",
+"name": "Objective markers",
+"group": "Objectives",
+"summary": "Mark ground the scenario tells you to take or hold.",
+"text": [
+"Objective markers show a position the scenario cares about. The yellow X with the red star is the Soviet marker, the one with the iron cross is the German marker, and the plain one carries no army symbol. The scenario says what each one earns or proves."
+],
+"faces": [
+{
+"img": "img/hon/hos/tokens/objective-soviet.webp",
+"w": 195,
+"h": 210,
+"label": "Soviet",
+"tall": false
+},
+{
+"img": "img/hon/hos/tokens/objective-german.webp",
+"w": 210,
+"h": 203,
+"label": "German",
+"tall": false
+},
+{
+"img": "img/hon/hos/tokens/objective-neutral.webp",
+"w": 210,
+"h": 196,
+"label": "Neutral",
+"tall": false
+}
+],
+"facts": [],
+"links": [],
+"src": "Core Set punchboard 5 and 6; scenario setup"
 },
 {
 "id": "initiative",
@@ -195,7 +229,7 @@ HTS_TOKENS["hon-hos"] = {
 {
 "id": "suppressed",
 "name": "Suppressed Marker",
-"group": "Effect markers",
+"group": "Combat markers",
 "summary": "A unit under stress. Each marker is -2 to its die rolls and its Movement Value.",
 "text": [
 "A Suppressed Marker shows a unit caught by suppressive fire, shaken, or simply in dire straits. Each marker inflicts a -2 penalty to all of the unit's die rolls, except scattering and Destruction, and -2 to its Movement Value. If its Movement Value drops to 0 or less, the unit is immobilised. The markers are cumulative.",
@@ -227,7 +261,7 @@ HTS_TOKENS["hon-hos"] = {
 {
 "id": "activated",
 "name": "Activated marker",
-"group": "Effect markers",
+"group": "Combat markers",
 "summary": "Shows a unit has been activated without an Order Token.",
 "text": [
 "Action Cards and special abilities such as Opportunity Fire can activate a unit with no Order Token. Put an Activated marker on it when that happens.",
@@ -249,7 +283,7 @@ HTS_TOKENS["hon-hos"] = {
 {
 "id": "damage",
 "name": "Damage markers",
-"group": "Damage and destruction",
+"group": "Combat markers",
 "summary": "Show where a Heavy Vehicle has been hit. Numbered 1 to 6.",
 "text": [
 "When you score a Hit on a Heavy Vehicle, roll one die and place the Damage Marker that matches the number. Its symbol shows the effect.",
@@ -305,7 +339,7 @@ HTS_TOKENS["hon-hos"] = {
 {
 "id": "destruction",
 "name": "Destruction markers",
-"group": "Damage and destruction",
+"group": "Combat markers",
 "summary": "Count damage to a structure. 1 point on one side, 2 on the other.",
 "text": [
 "A unit with the Destruction special ability rolls as many dice as the value shows. Each 4 or more lets you place a new marker on its 1 point side, or turn a placed marker to its 2 point side.",
@@ -401,41 +435,6 @@ HTS_TOKENS["hon-hos"] = {
 ],
 "links": [],
 "src": "Heroes of Stalingrad rulebook, p.16, p.24, p.25"
-},
-{
-"id": "objective",
-"name": "Objective markers",
-"group": "Objective markers",
-"summary": "Mark ground the scenario tells you to take or hold.",
-"text": [
-"Objective markers show a position the scenario cares about. The yellow X with the red star is the Soviet marker, the one with the iron cross is the German marker, and the plain one carries no army symbol. The scenario says what each one earns or proves."
-],
-"faces": [
-{
-"img": "img/hon/hos/tokens/objective-soviet.webp",
-"w": 195,
-"h": 210,
-"label": "Soviet",
-"tall": false
-},
-{
-"img": "img/hon/hos/tokens/objective-german.webp",
-"w": 210,
-"h": 203,
-"label": "German",
-"tall": false
-},
-{
-"img": "img/hon/hos/tokens/objective-neutral.webp",
-"w": 210,
-"h": 196,
-"label": "Neutral",
-"tall": false
-}
-],
-"facts": [],
-"links": [],
-"src": "Core Set punchboard 5 and 6; scenario setup"
 }
 ]
 };

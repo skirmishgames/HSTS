@@ -255,7 +255,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const tp = await b.newPage({ viewport: { width: 1100, height: 900 } });
   const terrs = []; tp.on('pageerror', e => terrs.push(e.message)); tp.on('console', m => { if (m.type() === 'error') terrs.push(m.text()); });
   await tp.goto(base + 'tokens.html');
-  ok(await tp.locator('.hrow').count() === 11, 'tokens page lists 11 entries');
+  ok(await tp.locator('.hrow').count() === 13, 'tokens page lists 13 entries (explosion template and gear markers added)');
   ok(await tp.locator('.hbody p').count() === 0, 'token text not loaded until opened');
   await tp.locator('.hhead', { hasText: 'Vehicle damage' }).click();
   ok(await tp.locator('.hrow.open .tface').count() === 5, 'vehicle damage shows 5 marker faces');

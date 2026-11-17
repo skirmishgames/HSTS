@@ -5,13 +5,68 @@ HTS_TOKENS["hon-omaha"] = {
 "title": "Tokens and markers",
 "source": "Bloody Omaha rulebook V7.1",
 "groups": [
+"Templates",
 "Gear markers",
 "Mines",
 "Haystacks",
-"Smoke and fire support",
+"Fire support",
 "Hero markers"
 ],
 "entries": [
+{
+"id": "smoke",
+"name": "Smoke template",
+"group": "Templates",
+"summary": "Blocks fire with a -4 side that turns into a -2 side.",
+"text": [
+"The Smoke orders option gives you 3 Smoke templates. Assign a Numbered or Special Order Token to a template to use it, or place a Bluff Order Token. When Activated, place the template on any Interspace, roll for scattering (smoke scatters 1 Interspace), then put it on its -4 side.",
+"At the end of the Supply Phase remove the templates already on their -2 side, then turn the -4 templates over to their -2 side. Any Firing Action into, through or out of a covered square suffers the printed penalty."
+],
+"faces": [
+{
+"img": "img/hon/omaha/tokens/smoke-a.webp",
+"w": 420,
+"h": 372,
+"label": "Side A",
+"tall": false
+},
+{
+"img": "img/hon/omaha/tokens/smoke-b.webp",
+"w": 388,
+"h": 420,
+"label": "Side B",
+"tall": false
+},
+{
+"img": "img/hon/omaha/tokens/smoke-option.webp",
+"w": 256,
+"h": 352,
+"label": "Smoke option",
+"tall": true
+}
+],
+"facts": [
+[
+"Option cost",
+"10 points"
+],
+[
+"Templates",
+"3 per option"
+],
+[
+"Scatter",
+"1 Interspace"
+]
+],
+"links": [
+{
+"href": "rules.html?b=omaha&q=smoke",
+"label": "Rules for smoke template"
+}
+],
+"src": "Bloody Omaha rulebook V7.1, p.11"
+},
 {
 "id": "bangalore",
 "name": "Bangalore",
@@ -493,63 +548,9 @@ HTS_TOKENS["hon-omaha"] = {
 "src": "Bloody Omaha rulebook V7.1, p.7"
 },
 {
-"id": "smoke",
-"name": "Smoke template",
-"group": "Smoke and fire support",
-"summary": "Blocks fire with a -4 side that turns into a -2 side.",
-"text": [
-"The Smoke orders option gives you 3 Smoke templates. Assign a Numbered or Special Order Token to a template to use it, or place a Bluff Order Token. When Activated, place the template on any Interspace, roll for scattering (smoke scatters 1 Interspace), then put it on its -4 side.",
-"At the end of the Supply Phase remove the templates already on their -2 side, then turn the -4 templates over to their -2 side. Any Firing Action into, through or out of a covered square suffers the printed penalty."
-],
-"faces": [
-{
-"img": "img/hon/omaha/tokens/smoke-a.webp",
-"w": 420,
-"h": 372,
-"label": "Side A",
-"tall": false
-},
-{
-"img": "img/hon/omaha/tokens/smoke-b.webp",
-"w": 388,
-"h": 420,
-"label": "Side B",
-"tall": false
-},
-{
-"img": "img/hon/omaha/tokens/smoke-option.webp",
-"w": 256,
-"h": 352,
-"label": "Smoke option",
-"tall": true
-}
-],
-"facts": [
-[
-"Option cost",
-"10 points"
-],
-[
-"Templates",
-"3 per option"
-],
-[
-"Scatter",
-"1 Interspace"
-]
-],
-"links": [
-{
-"href": "rules.html?b=omaha&q=smoke",
-"label": "Rules for smoke template"
-}
-],
-"src": "Bloody Omaha rulebook V7.1, p.11"
-},
-{
 "id": "artillery",
 "name": "Artillery support markers",
-"group": "Smoke and fire support",
+"group": "Fire support",
 "summary": "Off-board shelling dropped with an explosion template.",
 "text": [
 "The Artillery orders option gives you 3 Artillery Support markers. To use one, place a Numbered or Special Order Token on its tile. When you activate the option, put an explosion Template on any Interspace on the battlefield. The scattering distance is 3 Interspaces. You may place a Bluff Order Token as a ruse."
@@ -595,7 +596,7 @@ HTS_TOKENS["hon-omaha"] = {
 {
 "id": "bombs",
 "name": "500 lb and SC-500 bombs",
-"group": "Smoke and fire support",
+"group": "Fire support",
 "summary": "Aircraft bombs for Alternate Firing Actions.",
 "text": [
 "Bomb or rocket markers shown on an Aircraft's Recruitment Tile are used for Alternate Firing Actions. The German Focke-Wulf has 2 SC-500 bombs. It can use them in an Alternate Firing Action with the Howitzer Special Ability, using the explosion template with the black Combat Values."
