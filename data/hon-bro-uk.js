@@ -1024,7 +1024,7 @@ HTS_DATA["hon-bro-uk"] = {
     }
    ],
    "own": [],
-   "note": "Support tile for scenarios. Cost 0. One slot that takes any option (Caen booklet V1.4, p.11)."
+   "note": "Support tile for scenarios. Cost 0. One slot that takes any option (Caen booklet (final), p.11)."
   }
  ],
  "options": [

@@ -3,7 +3,7 @@ HTS_SCEN["hon-omaha"] = {
 "game": "hon",
 "box": "omaha",
 "title": "Scenarios",
-"source": "Bloody Omaha rulebook V7.1",
+"source": "Bloody Omaha rulebook V8.0",
 "types": [
 "Single scenarios",
 "Booklet rules and reference"
@@ -24,7 +24,7 @@ HTS_SCEN["hon-omaha"] = {
 ],
 [
 "Solo mode",
-"The Solo Mode expansion is required for games in Solo Mode."
+"The Solo Mode product is required for games in Solo Mode."
 ]
 ]
 },
@@ -315,7 +315,7 @@ HTS_SCEN["hon-omaha"] = {
 ],
 [
 "Setup",
-"9 terrain boards: C1-B, C3-A and C2-A at the back, OB1-A to OB3-A in the middle and OB4-A to OB6-A on the beach. American initiative, 2 secondary objectives, 2 tactical bonuses, 4 action cards each. Arrange the 8 mine counters face down and draw 4 without revealing them, then place them face down on the board. The Germans deploy first."
+"9 terrain boards: C5-B, C3-A and C6-A at the back, OB1-A to OB3-A in the middle and OB4-A to OB6-A on the beach. American initiative, 2 secondary objectives, 2 tactical bonuses, 4 action cards each. Arrange the 8 mine counters face down and draw 4 without revealing them, then place them face down on the board. The Germans deploy first."
 ],
 [
 "Length",
@@ -327,7 +327,7 @@ HTS_SCEN["hon-omaha"] = {
 ],
 [
 "How to win",
-"The Americans must control both secondary objectives at the end of a Supply Phase. Otherwise the Germans win at the end of turn 8."
+"The Americans must capture both secondary objectives. Otherwise the Germans win at the end of turn 8."
 ]
 ],
 "armies": {
@@ -510,7 +510,7 @@ null
 ],
 [
 "How to win",
-"The Americans must win an Assault against Kraiss to capture him. A captured general cannot be liberated and is removed from the game. Major American victory: Kraiss captured plus the primary and one secondary objective. American victory: Kraiss captured and one objective. Minor American victory: primary plus one secondary, no capture. Major German victory: no capture and no objective. German victory: only one objective held. Minor German victory: Kraiss captured but no objectives held, or other partial results."
+"The Americans must win an Assault against Kraiss to apprehend him. An apprehended general cannot be liberated and is removed from the game. Major American victory: Kraiss apprehended plus the primary objective and at least one secondary objective. American victory: Kraiss apprehended and one objective. Minor American victory: primary objective plus at least one secondary objective, Kraiss not apprehended. Major German victory: Kraiss not apprehended and no objective. German victory: only one objective held. Minor German victory: Kraiss apprehended but no objectives held, or Kraiss not apprehended but at least the primary objective held, or both secondary objectives only."
 ]
 ],
 "armies": {
@@ -610,7 +610,7 @@ null
 ],
 [
 "Armies",
-"American Group A (Task Force, 495) and Group B (1st Infantry Division, 550) against German Group A (2. Panzer Division, 415) and Group B (352. Infanterie Division, 470)."
+"American Group A (Task Force, 495) and Group B (1st Infantry Division, 555) against German Group A (2. Panzer Division, 415) and Group B (352. Infanterie Division, 470)."
 ],
 [
 "Setup",
@@ -622,7 +622,7 @@ null
 ],
 [
 "How to win",
-"Capture rules and victory levels are the same as Little River of No Return. Players also keep score: capturing Kraiss is worth 50 victory points, the primary objective 30 and a secondary objective 20. The winning side compares scores and the top scorer is the elite commander."
+"Apprehension rules and victory levels are the same as Little River of No Return. Players also keep score: apprehending Kraiss is worth 50 victory points, the primary objective 30 and a secondary objective 20. The winning side compares scores and the top scorer is the elite commander."
 ]
 ],
 "armies": {
@@ -661,15 +661,15 @@ null
 },
 "us2": {
 "side": "us",
-"limit": 550,
-"printed": 550,
+"limit": 555,
+"printed": 555,
 "tiles": [
 [
 "field_command_taylor",
 [
-"m5_stuart",
-"aircraft_x1",
-"aircraft_x1"
+"aircraft_x2",
+null,
+null
 ]
 ],
 [
@@ -685,9 +685,9 @@ null
 ]
 ],
 [
-"rifle_platoon_1id_16a",
+"rifle_platoon_1id_18c",
 [
-"bazooka_squad_16a",
+"bazooka_squad_18c",
 "grenade",
 "veteran",
 "m4_sherman"
@@ -702,8 +702,8 @@ null
 []
 ]
 ],
-"note": "The Thunderbolt (55) and Mustang (50) tiles are counted. The total comes to 5 points above the printed 550, see ISS-023.",
-"pts": 555,
+"note": "Follows the V8.0 recruitment picture: Field Command Taylor holds one Aircraft x2 card, and the Rifle Platoon is 1st Inf. Div. 18th Inf. Reg. C. The picture also shows an M5 Stuart (50) on its own, outside any tile; the builder has no slot for it, so the army here comes to 505. Add the Stuart to reach the printed 555.",
+"pts": 505,
 "label": "American Group B",
 "sub": "1st Infantry Division"
 },

@@ -1,9 +1,12 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXES = [{ id: 'bro', name: 'Big Red One' }];
-  var SIDES = [{ id: 'all', name: 'Both' }, { id: 'us', name: 'US' }, { id: 'ge', name: 'German' }];
-  var SIDENAME = { us: 'United States', ge: 'Germany' };
+  var BOXES = [{ id: 'bro', name: 'Big Red One' }, { id: 'caen', name: 'Battle for Caen' }].filter(function (b) { return window.HTS_CARDS['hon-' + b.id]; });
+  /* sides per box: the Big Red One file predates the sides field */
+  var BOXSIDES = { bro: [{ id: 'us', name: 'US' }, { id: 'ge', name: 'German' }] };
+  var SIDENAME = { us: 'United States', ge: 'Germany', cw: 'Commonwealth', ss: 'German SS' };
+  var SIDES;
+  function sidesFor(b) { var d = window.HTS_CARDS['hon-' + b]; return [{ id: 'all', name: 'Both' }].concat(d.sides || BOXSIDES[b] || []); }
   var S = { b: 'bro', side: 'all', q: '', ph: 'all', tag: 'all', theme: 'light' };
   var shown = [], cur = -1, zoomed = false;
 
@@ -24,15 +27,21 @@
     return function (s) { return esc(s).replace(re, '<mark>$1</mark>'); };
   }
 
-  var D = window.HTS_CARDS['hon-' + S.b];
-  D.entries.forEach(function (e) {
-    e.head = norm(e.name);
-    e.hay = norm(e.name + ' ' + e.phase + ' ' + (e.on || []).join(' ') + ' ' + e.when + ' ' + e.text + ' ' + (SIDENAME[e.nation] || ''));
-  });
+  var D;
+  function useBox(b) {
+    S.b = b; D = window.HTS_CARDS['hon-' + b]; SIDES = sidesFor(b);
+    if (!SIDES.some(function (x) { return x.id === S.side; })) S.side = 'all';
+    if (S.ph !== 'all' && D.phases.indexOf(S.ph) < 0) S.ph = 'all';
+    if (S.tag !== 'all' && (D.tags || []).indexOf(S.tag) < 0) S.tag = 'all';
+    D.entries.forEach(function (e) {
+      e.head = norm(e.name);
+      e.hay = norm(e.name + ' ' + e.phase + ' ' + (e.on || []).join(' ') + ' ' + e.when + ' ' + e.text + ' ' + (SIDENAME[e.nation] || '') + ' ' + (e.note || ''));
+    });
+  }
 
   function renderControls() {
     $('boxes').innerHTML = BOXES.map(function (b) {
-      return '<button type="button" data-box="' + b.id + '" class="on" aria-pressed="true">' + b.name + '</button>';
+      return '<button type="button" data-box="' + b.id + '" class="' + (S.b === b.id ? 'on' : '') + '" aria-pressed="' + (S.b === b.id) + '">' + b.name + '</button>';
     }).join('');
     $('sides').innerHTML = SIDES.map(function (s) {
       return '<button type="button" data-side="' + s.id + '" class="' + (S.side === s.id ? 'on' : '') + '" aria-pressed="' + (S.side === s.id) + '">' + s.name + '</button>';
@@ -43,9 +52,10 @@
     var seen = {}, cnt = {};
     D.entries.forEach(function (e) { if (seen[e.name]) return; seen[e.name] = 1; (e.on || []).forEach(function (t) { cnt[t] = (cnt[t] || 0) + 1; }); });
     $('tags').innerHTML = '<button type="button" class="chip' + (S.tag === 'all' ? ' on' : '') + '" data-tag="all">All</button>' +
-      (D.tags || []).map(function (c) { return '<button type="button" class="chip' + (S.tag === c ? ' on' : '') + '" data-tag="' + esc(c) + '">' + esc(c) + ' <small>' + (cnt[c] || 0) + '</small></button>'; }).join('');
+      (D.tags || []).filter(function (c) { return cnt[c] || S.tag === c; }).map(function (c) { return '<button type="button" class="chip' + (S.tag === c ? ' on' : '') + '" data-tag="' + esc(c) + '">' + esc(c) + ' <small>' + (cnt[c] || 0) + '</small></button>'; }).join('');
     $('q').value = S.q;
     $('srcnote').textContent = 'Card text is typed from the ' + D.source + '.';
+    $('subtitle').textContent = 'Battle Event cards, Heroes of Normandie, ' + BOXES.filter(function (b) { return b.id === S.b; })[0].name;
     document.documentElement.setAttribute('data-theme', S.theme);
     $('btnTheme').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
   }
@@ -103,7 +113,7 @@
     $('lbxCap').textContent = e.name + ', ' + SIDENAME[e.nation] + ', ' + e.copies + (e.copies > 1 ? ' copies' : ' copy') + ' (' + e.ref + ')';
     $('lbxDl').href = e.img; $('lbxDl').setAttribute('download', e.id + '.webp');
     $('lbxText').innerHTML = '<h3>' + esc(e.name) + '</h3><p class="ltag">' + esc(SIDENAME[e.nation]) + ' &middot; ' + esc(e.phase) + ' &middot; ' + e.copies + (e.copies > 1 ? ' copies' : ' copy') + '</p>' +
-      '<p class="lwhen">' + esc(e.when) + '</p><p>' + esc(e.text) + '</p>' + (e.on && e.on.length ? '<p class="ltag">Works on: ' + esc(e.on.join(', ')) + '</p>' : '') + '<p class="ltag">Card ' + esc(e.ref) + '</p>';
+      '<p class="lwhen">' + esc(e.when) + '</p><p>' + esc(e.text) + '</p>' + (e.note ? '<p class="ltag">' + esc(e.note) + '</p>' : '') + (e.on && e.on.length ? '<p class="ltag">Works on: ' + esc(e.on.join(', ')) + '</p>' : '') + '<p class="ltag">Card ' + esc(e.ref) + '</p>';
     $('lbxBody').scrollTop = 0;
   }
   function openBox(i) {
@@ -123,6 +133,7 @@
   function bind() {
     document.addEventListener('click', function (ev) {
       var t = ev.target, el;
+      if ((el = t.closest('[data-box]'))) { useBox(el.dataset.box); render(); return; }
       if ((el = t.closest('[data-side]'))) { S.side = el.dataset.side; render(); return; }
       if ((el = t.closest('[data-phase]'))) { S.ph = el.dataset.phase; render(); return; }
       if ((el = t.closest('[data-tag]'))) { S.tag = el.dataset.tag; render(); return; }
@@ -151,6 +162,7 @@
   function init() {
     try { var j = JSON.parse(localStorage.getItem(LSK) || '{}'); if (j.theme) S.theme = j.theme; } catch (e) { /* ignore */ }
     var p = new URLSearchParams(location.search);
+    useBox(BOXES.some(function (b) { return b.id === p.get('b'); }) ? p.get('b') : 'bro');
     if (SIDES.some(function (s) { return s.id === p.get('s'); })) S.side = p.get('s');
     if (p.get('q')) S.q = p.get('q');
     if (D.phases.indexOf(p.get('p')) >= 0) S.ph = p.get('p');

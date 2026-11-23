@@ -3,7 +3,7 @@ HTS_SCEN["hon-caen"] = {
  "game": "hon",
  "box": "caen",
  "title": "Scenarios",
- "source": "Battle for Caen booklet V1.4 (work in progress)",
+ "source": "Battle Pack 2 rules and scenarios booklet (final) and The Creel scenario sheet",
  "types": [
   "Campaign scenarios",
   "Bonus scenario",
@@ -14,8 +14,8 @@ HTS_SCEN["hon-caen"] = {
    "id": "tradingblows",
    "title": "Trading Blows (Campaign 1/6)",
    "type": "Campaign scenarios",
-   "pages": "14 to 15",
-   "start": 14,
+   "pages": "16 to 17",
+   "start": 16,
    "date": "June 26, 1944",
    "summary": "Saint-Manvieu, first of six linked campaign scenarios. The Royal Scots Fusiliers storm the SS command post, then hold the village against the SS counterattack and a FLAK 88 firing from Rauray ridge.",
    "facts": [
@@ -41,11 +41,11 @@ HTS_SCEN["hon-caen"] = {
     ],
     [
      "Special rules",
-     "A FLAK 88 Support tile gives the Germans 3 shots from the red dot, in an elevated position. German reinforcements arrive on turn 4, CW reinforcements the turn after the primary objective falls. Artillery Orders on the CW Support tile."
+     "A FLAK 88 Support tile gives the Germans 3 shots from the red dot, in an elevated position. The two German secondary objectives and the German reinforcements arrive at the end of the Supply Phase of turn 3, and the Germans enter on turn 4. German recruitment follows the normal rules. CW reinforcements arrive the turn after the CW player controls the primary objective. Artillery Orders on the CW Support tile."
     ],
     [
      "How to win",
-     "The CW player takes the primary objective before the counterattack on turn 4, then stops the Germans from taking the two German secondary objectives. German major victory: both secondaries before the end of turn 6 or 7."
+     "The CW player controls the primary objective before the counterattack on turn 4, then stops the Germans from controlling the two German secondary objectives. German major victory: both secondaries at the end of turn 6 or 7."
     ],
     [
      "Campaign",
@@ -132,7 +132,7 @@ HTS_SCEN["hon-caen"] = {
      "img": "img/hon/caen/scenfig/tb-map.webp",
      "w": 1100,
      "h": 711,
-     "cap": "Battlefield and deployment, booklet p.14"
+     "cap": "Battlefield and deployment, booklet p.16"
     }
    ]
   },
@@ -140,8 +140,8 @@ HTS_SCEN["hon-caen"] = {
    "id": "lightbrigade",
    "title": "Charge of the Light Brigade (Campaign 2/6)",
    "type": "Campaign scenarios",
-   "pages": "16 to 17",
-   "start": 16,
+   "pages": "18 to 19",
+   "start": 18,
    "date": "June 29, 1944",
    "summary": "The 129th Brigade crosses the Odon and races to outflank the defenders of Baron-sur-Odon before the German 88s on Hill 113 can spot it.",
    "facts": [
@@ -167,11 +167,11 @@ HTS_SCEN["hon-caen"] = {
     ],
     [
      "Special rules",
-     "A FLAK 88 on Hill 113 joins the Germans from turn 5, 3 shots from the red dot. The CW primary objective appears when both CW secondaries are held."
+     "A FLAK 88 on Hill 113 joins the Germans from turn 5, 3 shots from the red dot. The CW primary objective appears when the CW player captures both CW secondaries."
     ],
     [
      "How to win",
-     "Take both CW secondary objectives, then the primary, before the end of turn 6. Major victory also needs the neutral secondary."
+     "Capture both CW secondary objectives, then control the primary at the end of turn 6. Major victory also needs the neutral secondary captured."
     ],
     [
      "Campaign",
@@ -256,7 +256,7 @@ HTS_SCEN["hon-caen"] = {
      "img": "img/hon/caen/scenfig/clb-map.webp",
      "w": 1100,
      "h": 686,
-     "cap": "Battlefield and deployment, booklet p.16"
+     "cap": "Battlefield and deployment, booklet p.18"
     }
    ]
   },
@@ -264,8 +264,8 @@ HTS_SCEN["hon-caen"] = {
    "id": "beavertails",
    "title": "Beaver Tails with Sauerkraut (Campaign 3/6)",
    "type": "Campaign scenarios",
-   "pages": "18 to 19",
-   "start": 18,
+   "pages": "20 to 21",
+   "start": 20,
    "date": "July 8, 1944",
    "summary": "The 9th Canadian Brigade defends Buron against the 12. SS. Both sides have a different goal: the SS must retake the village, the Canadians must hold two objectives.",
    "facts": [
@@ -279,7 +279,7 @@ HTS_SCEN["hon-caen"] = {
     ],
     [
      "Armies",
-     "3rd Canadian Infantry Division, 505 points, against 12. SS Panzer-Division, 535 points."
+     "3rd Canadian Infantry Division, 500 points, against 12. SS Panzer-Division, 535 points."
     ],
     [
      "Setup",
@@ -291,22 +291,22 @@ HTS_SCEN["hon-caen"] = {
     ],
     [
      "Special rules",
-     "The game can end early at the end of a Supply Phase once a player has finished his objective. If both have, the END marker moves down one turn, and past turn 8 it is a draw."
+     "The game can end early at the end of a Supply Phase once a player has completed his goal. If both have, the END marker moves down one turn, and past turn 8 it is a draw."
     ],
     [
      "How to win",
-     "The Germans take their primary objective. The Commonwealth holds both CW secondary objectives."
+     "The Germans control their primary objective. The Commonwealth controls both CW secondary objectives, all at the end of the game."
     ],
     [
      "Campaign",
-     "Scenario 3 of 6. A Commonwealth win gives 8 turns in scenario 4, a German win makes the CW take both secondaries there."
+     "Scenario 3 of 6. A Commonwealth win gives 8 turns in scenario 4, a German win makes the CW capture both secondaries there."
     ]
    ],
    "armies": {
     "uk": {
      "side": "uk",
      "limit": 505,
-     "printed": 505,
+     "printed": 500,
      "tiles": [
       [
        "field_command_mathieu",
@@ -340,7 +340,7 @@ HTS_SCEN["hon-caen"] = {
      ],
      "pts": 470,
      "sub": "3rd Canadian Infantry Division",
-     "note": "Not in the builder: Lowe's Overwatch (10 points, no UK version of it exists yet) and an extra unit card beside the Field Command tile. That card shows no cost, 25 points are needed to reach the printed 505 and it may be a Universal Carrier. Check it against the booklet.",
+     "note": "Not in the builder: Lowe's Overwatch (10 points, no UK version of it exists yet) and an extra unit card beside the Field Command tile. That card shows no cost. The final booklet prints 500 points (V1.4 printed 505), so 30 points are needed to reach it and the card may be a Universal Carrier. Check it against the booklet.",
      "label": "Commonwealth army"
     },
     "ge": {
@@ -381,7 +381,7 @@ HTS_SCEN["hon-caen"] = {
      "img": "img/hon/caen/scenfig/bt-map.webp",
      "w": 1100,
      "h": 786,
-     "cap": "Battlefield and deployment, booklet p.18"
+     "cap": "Battlefield and deployment, booklet p.20"
     }
    ]
   },
@@ -389,8 +389,8 @@ HTS_SCEN["hon-caen"] = {
    "id": "zuruck",
    "title": "Zurück! (Campaign 4/6)",
    "type": "Campaign scenarios",
-   "pages": "20 to 21",
-   "start": 20,
+   "pages": "22 to 23",
+   "start": 22,
    "date": "July 9, 1944",
    "summary": "Caen is nearly lost. The Germans withdraw behind the Orne and the Canadians must stop the 16. Luftwaffen-Feld Division from getting 6 infantry units and 2 heavy vehicles off the board.",
    "facts": [
@@ -416,11 +416,11 @@ HTS_SCEN["hon-caen"] = {
     ],
     [
      "Special rules",
-     "The Germans score by exiting units through the arrow squares. After a German win in scenario 3, the CW player must hold both secondaries."
+     "The Germans score by exiting units through the arrow squares. After a German win in scenario 3, the CW player must capture both secondaries."
     ],
     [
      "How to win",
-     "The Germans exit 6 infantry units and 2 heavy vehicles. The Commonwealth takes one of its two secondaries first. Major CW victory: the Germans cannot get enough units out."
+     "The Germans exit 6 infantry units and 2 heavy vehicles. The Commonwealth captures one of its two secondaries first. Major CW victory: the Germans cannot get enough units out."
     ],
     [
      "Campaign",
@@ -497,7 +497,7 @@ HTS_SCEN["hon-caen"] = {
      "img": "img/hon/caen/scenfig/zu-map.webp",
      "w": 1100,
      "h": 711,
-     "cap": "Battlefield and deployment, booklet p.20"
+     "cap": "Battlefield and deployment, booklet p.22"
     }
    ]
   },
@@ -505,8 +505,8 @@ HTS_SCEN["hon-caen"] = {
    "id": "charon",
    "title": "Charon the Ferryman (Campaign 5/6)",
    "type": "Campaign scenarios",
-   "pages": "22 to 23",
-   "start": 22,
+   "pages": "24 to 25",
+   "start": 24,
    "date": "July 18, 1944",
    "summary": "Goodwood. The British must cross the Orne into Caen and take a primary objective plus a secondary, while a tough 16. Luftwaffen-Feld Division holds the city.",
    "facts": [
@@ -520,7 +520,7 @@ HTS_SCEN["hon-caen"] = {
     ],
     [
      "Armies",
-     "3rd Infantry Division and 11th Armoured Division, 685 points, against 16. Luftwaffen-Feld-Division, 520 points."
+     "3rd Infantry Division and 11th Armoured Division, 690 points, against 16. Luftwaffen-Feld-Division, 520 points."
     ],
     [
      "Setup",
@@ -536,7 +536,7 @@ HTS_SCEN["hon-caen"] = {
     ],
     [
      "How to win",
-     "The CW player takes his primary objective and at least one secondary. The game ends early when he does."
+     "The CW player controls his primary objective and captures at least one secondary. The game ends early when he does."
     ],
     [
      "Campaign",
@@ -547,7 +547,7 @@ HTS_SCEN["hon-caen"] = {
     "uk": {
      "side": "uk",
      "limit": 685,
-     "printed": 685,
+     "printed": 690,
      "tiles": [
       [
        "high_command_dempsey",
@@ -588,7 +588,7 @@ HTS_SCEN["hon-caen"] = {
      ],
      "pts": 675,
      "sub": "3rd Infantry Division and 11th Armoured Division",
-     "note": "Not in the builder: the Initiative Orders option (10 points) that joins the army at the start of turn 5. Every slot on the High Command tile is already used. It brings the total to the printed 685.",
+     "note": "Not in the builder: the Initiative Orders option (10 points) that joins the army at the start of turn 5. Every slot on the High Command tile is already used. It brings the total to 685. The final booklet prints 690 (V1.4 printed 685), so 5 points are unaccounted for. Check the army against the booklet.",
      "label": "Commonwealth army"
     },
     "ge": {
@@ -638,7 +638,7 @@ HTS_SCEN["hon-caen"] = {
      "img": "img/hon/caen/scenfig/ch-map.webp",
      "w": 1100,
      "h": 721,
-     "cap": "Battlefield and deployment, booklet p.22"
+     "cap": "Battlefield and deployment, booklet p.24"
     }
    ]
   },
@@ -646,8 +646,8 @@ HTS_SCEN["hon-caen"] = {
    "id": "operationstack",
    "title": "Operation Stack (Campaign 6/6)",
    "type": "Campaign scenarios",
-   "pages": "24 to 25",
-   "start": 24,
+   "pages": "26 to 27",
+   "start": 26,
    "date": "July 20, 1944",
    "summary": "Final campaign scenario. Canadians must take two objectives in the steel works and then bring down the chimney the German spotters use, before the 12. SS stops them.",
    "facts": [
@@ -661,7 +661,7 @@ HTS_SCEN["hon-caen"] = {
     ],
     [
      "Armies",
-     "3rd Canadian Infantry Division, 545 points, against 12. SS Panzer-Division, 470 points."
+     "3rd Canadian Infantry Division, 535 points, against 12. SS Panzer-Division, 470 points."
     ],
     [
      "Setup",
@@ -677,7 +677,7 @@ HTS_SCEN["hon-caen"] = {
     ],
     [
      "How to win",
-     "The CW player takes both secondary objectives (one after a CW win in scenario 5), then destroys the chimney before the end of turn 6. If he holds no secondary at the end of turn 4 it is a German major victory."
+     "The CW player captures both secondary objectives (one after a CW win in scenario 5), then destroys the chimney before the end of turn 6. If he has not captured the required secondaries at the end of turn 4 (turn 3 after a German win in scenario 5) it is a German major victory."
     ],
     [
      "Campaign",
@@ -688,7 +688,7 @@ HTS_SCEN["hon-caen"] = {
     "uk": {
      "side": "uk",
      "limit": 545,
-     "printed": 545,
+     "printed": 535,
      "tiles": [
       [
        "field_command_mathieu",
@@ -726,7 +726,7 @@ HTS_SCEN["hon-caen"] = {
      ],
      "pts": 545,
      "sub": "3rd Canadian Infantry Division",
-     "note": "The 60-point Royal Winnipeg Rifles card is read as Howitzer Support.",
+     "note": "The 60-point Royal Winnipeg Rifles card is read as Howitzer Support. The builder total is 545, 10 above the 535 printed in the final booklet (V1.4 printed 545). Check the army against the booklet.",
      "label": "Commonwealth army"
     },
     "ge": {
@@ -787,16 +787,16 @@ HTS_SCEN["hon-caen"] = {
      "img": "img/hon/caen/scenfig/st-map.webp",
      "w": 1100,
      "h": 889,
-     "cap": "Battlefield and deployment, booklet p.24"
+     "cap": "Battlefield and deployment, booklet p.26"
     }
    ]
   },
   {
    "id": "safari",
-   "title": "Bonus: Safari in Normandy",
+   "title": "Safari in Normandy (Scenario A)",
    "type": "Bonus scenario",
-   "pages": "26 to 27",
-   "start": 26,
+   "pages": "14 to 15",
+   "start": 14,
    "date": "June 25, 1944",
    "summary": "Bonus scenario outside the campaign. The 49th Division and the Shermans of the 24th Lancers hit La Grande Ferme, held by SS Panzergrenadiers and a handful of Panthers-sized cats.",
    "facts": [
@@ -826,7 +826,7 @@ HTS_SCEN["hon-caen"] = {
     ],
     [
      "How to win",
-     "The CW player takes the primary objective before the end of turn 6. The game can end early at the end of a Supply Phase once he holds it."
+     "The CW player controls the primary objective at the end of turn 6. The game can end early at the end of a Supply Phase once he controls it."
     ],
     [
      "Campaign",
@@ -916,7 +916,7 @@ HTS_SCEN["hon-caen"] = {
      "img": "img/hon/caen/scenfig/sf-map.webp",
      "w": 1100,
      "h": 631,
-     "cap": "Battlefield and deployment, booklet p.26"
+     "cap": "Battlefield and deployment, booklet p.14"
     }
    ]
   },
@@ -947,7 +947,7 @@ HTS_SCEN["hon-caen"] = {
     ],
     [
      "Scenario titles",
-     "The report lists scenario 1 as \"You go first, I'll go second...\" and scenario 3 as \"Sausages in maple syrup\". The scenario pages call them Trading Blows and Beaver Tails with Sauerkraut."
+     "The report uses the same titles as the scenario pages, Trading Blows and Beaver Tails with Sauerkraut."
     ]
    ],
    "figs": []

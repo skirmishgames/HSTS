@@ -3,7 +3,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "game": "hon",
 "box": "bro",
 "title": "Tokens and markers",
-"source": "Rulebook V4.1 and Scenario Booklet V2.4",
+"source": "Rulebook V4.3 and Scenario Booklet V3.0",
 "groups": [
 "Order tokens",
 "Objectives",
@@ -40,7 +40,7 @@ window.HTS_TOKENS["hon-bro"] = {
 ]
 ],
 "links": [],
-"src": "Big Red One rulebook V4.1, p.8"
+"src": "Big Red One rulebook V4.3, p.8"
 },
 {
 "id": "order-bluff",
@@ -67,7 +67,7 @@ window.HTS_TOKENS["hon-bro"] = {
 ]
 ],
 "links": [],
-"src": "Big Red One rulebook V4.1, p.8"
+"src": "Big Red One rulebook V4.3, p.8"
 },
 {
 "id": "order-special",
@@ -95,7 +95,7 @@ window.HTS_TOKENS["hon-bro"] = {
 ]
 ],
 "links": [],
-"src": "Big Red One rulebook V4.1, p.8"
+"src": "Big Red One rulebook V4.3, p.8"
 },
 {
 "id": "primary",
@@ -151,7 +151,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "href": "scenarios.html?e=rules"
 }
 ],
-"src": "Scenario Booklet V2.4, page 3"
+"src": "Scenario Booklet V3.0, page 3"
 },
 {
 "id": "secondary",
@@ -206,7 +206,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "href": "scenarios.html?e=rules"
 }
 ],
-"src": "Scenario Booklet V2.4, pages 3 and 4"
+"src": "Scenario Booklet V3.0, pages 3 and 4"
 },
 {
 "id": "bonus",
@@ -311,7 +311,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "href": "scenarios.html?e=rules"
 }
 ],
-"src": "Scenario Booklet V2.4, page 4"
+"src": "Scenario Booklet V3.0, page 4"
 },
 {
 "id": "initiative",
@@ -350,7 +350,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "href": "scenarios.html?e=rules"
 }
 ],
-"src": "Rulebook V4.1, page 16; Scenario Booklet V2.4, page 4"
+"src": "Rulebook V4.3, page 16; Scenario Booklet V3.0, page 4"
 },
 {
 "id": "turn",
@@ -377,7 +377,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "href": "scenarios.html?e=rules"
 }
 ],
-"src": "Scenario Booklet V2.4, page 4"
+"src": "Scenario Booklet V3.0, page 4"
 },
 {
 "id": "event",
@@ -452,7 +452,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "href": "scenarios.html?e=rules"
 }
 ],
-"src": "Scenario Booklet V2.4, page 4"
+"src": "Scenario Booklet V3.0, page 4"
 },
 {
 "id": "end",
@@ -478,7 +478,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "href": "scenarios.html?e=rules"
 }
 ],
-"src": "Scenario Booklet V2.4, page 4"
+"src": "Scenario Booklet V3.0, page 4"
 },
 {
 "id": "suppressed",
@@ -513,7 +513,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "href": "rules.html?q=suppressed"
 }
 ],
-"src": "Rulebook V4.1, pages 16 and 24"
+"src": "Rulebook V4.3, pages 16 and 24"
 },
 {
 "id": "damage",
@@ -589,7 +589,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "href": "rules.html?q=damage"
 }
 ],
-"src": "Rulebook V4.1, page 15"
+"src": "Rulebook V4.3, page 15"
 },
 {
 "id": "destruction",
@@ -623,7 +623,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "href": "rules.html?q=destruction"
 }
 ],
-"src": "Rulebook V4.1, page 22"
+"src": "Rulebook V4.3, page 22"
 },
 {
 "id": "flamer",
@@ -632,7 +632,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "summary": "Long template for a flamethrower attack. Everything it touches gets a Suppressed marker.",
 "text": [
 "Flamethrower is an alternate firing action. The firing unit has Fire on the Move (-1) and uses the Combat Values printed on the template. Put the narrow end at the centre of the firing counter's square, or on the red dot on the counter, and point the template in any direction your firing arc allows.",
-"Any unit even partly under the template is affected, and each attack is resolved on its own. The template is affected by obstacles, and stops once it passes through the centre of a square holding a vehicle. Every unit hit, infantry or vehicle, also gets a Suppressed marker.",
+"Any unit even partly under the template is affected. The template is affected by obstacles, and stops once it passes through the centre of a square holding a vehicle. Every unit under it, vehicles included, first gets a Suppressed marker, then the attack is resolved against each one on its own.",
 "An infantry unit with the flamethrower ability is removed from the game if it loses an Assault, but it is turned over if a Firing Action destroys it."
 ],
 "faces": [
@@ -660,7 +660,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "href": "heroes.html"
 }
 ],
-"src": "Rulebook V4.1, page 22"
+"src": "Rulebook V4.3, page 22"
 },
 {
 "id": "explosion",
@@ -670,7 +670,7 @@ window.HTS_TOKENS["hon-bro"] = {
 "text": [
 "Take the explosion Template and put it on the target Interspace. You need a clear or obscured line of sight to it. Use the Combat Values that match the colour of the Special Ability icon, and resolve each attack on its own.",
 "Every unit and structure under the Template, even partly, is affected. Units inside a building are not affected by a Template outside it, concealed units ignore it, and a Heavy Vehicle uses its side Defense Value.",
-"You may not place a Template inside a building. For Indirect Fire, the scatter chart on the back shows where a missed shot lands."
+"You may not place a Template inside a building. For Indirect Fire, the scatter chart on the back shows where a missed shot lands. The scatter distance is one square shorter if the firing unit has a clear line of sight to the target Interspace."
 ],
 "faces": [
 {
@@ -690,7 +690,7 @@ window.HTS_TOKENS["hon-bro"] = {
 ],
 "facts": [],
 "links": [],
-"src": "Big Red One rulebook V4.1, Howitzer and Indirect Fire"
+"src": "Big Red One rulebook V4.3, Howitzer and Indirect Fire"
 },
 {
 "id": "gear",
@@ -727,7 +727,7 @@ window.HTS_TOKENS["hon-bro"] = {
 ],
 "facts": [],
 "links": [],
-"src": "Big Red One rulebook V4.1, Gear Options"
+"src": "Big Red One rulebook V4.3, Gear Options"
 }
 ]
 };

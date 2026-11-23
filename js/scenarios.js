@@ -6,7 +6,7 @@
   var KINDS = [['all', 'All'], ['official', 'Official'], ['fan', 'Fan made']];
   var SIZES = [['all', 'All'], ['le150', 'Up to 150'], ['le300', '151 to 300'], ['gt300', 'Over 300'], ['none', 'Not stated']];
   var cache = {}, NCOL = 0;
-  var SRCN = { bro: 'Scenario Booklet', omaha: 'Bloody Omaha rulebook', caen: 'Battle for Caen booklet V1.4', ws: 'War Stories sheet', v1: 'Library document', fan: 'Library document', hos: 'Library document' };
+  var SRCN = { bro: 'Scenario Booklet', omaha: 'Bloody Omaha rulebook', caen: 'Battle for Caen booklet', ws: 'War Stories sheet', v1: 'Library document', fan: 'Library document', hos: 'Library document' };
   function isLib() { return S.b === 'v1' || S.b === 'fan' || S.b === 'hos'; }
 
   function $(id) { return document.getElementById(id); }

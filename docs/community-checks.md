@@ -11,7 +11,7 @@ Each item says where to look on the site and what to compare.
 3. **Beavertails (Battle for Caen), German army.** The booklet's army puts a Magnetic Mine (black and white stripes) in a black and yellow SS-Panzergrenadiere slot. The builder shows a warning for it. Is the booklet right, or is it a printing slip?
 4. **Bluff.** The German Bluff option costs 5 in Heroes of Normandie and 10 in Heroes of Stalingrad. Both are offered under Germany. Are both costs right?
 5. **Mixed German armies.** Germany holds tiles from Heroes of Normandie and Heroes of Stalingrad together. The order token line counts Stalingrad tiles only. Is there an official rule for mixing the two games?
-6. **Support tile.** It takes any V2 option, whatever its shape or stripes (Battle for Caen booklet V1.4, p.11). First edition options are kept off it. Is that right?
+6. **Support tile.** It takes any V2 option, whatever its shape or stripes (Battle for Caen booklet (final), p.11). First edition options are kept off it. Is that right?
 
 7. **Battle Event card tags.** On the Cards page, "When it is played" follows each card's printed line. "Works on" is our reading of what each card acts on (Order tokens, Vehicles, Suppressed markers and so on). Say if a card is missing from a tag or has one it should not.
 

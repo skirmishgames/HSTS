@@ -3,7 +3,7 @@ HTS_TOKENS["hon-caen"] = {
  "game": "hon",
  "box": "caen",
  "title": "Tokens and markers",
- "source": "Battle for Caen booklet V1.4",
+ "source": "Battle for Caen booklet (final)",
  "groups": [
   "Objectives",
   "Turn chart",
@@ -53,7 +53,7 @@ HTS_TOKENS["hon-caen"] = {
      "href": "scenarios.html?b=caen"
     }
    ],
-   "src": "Battle for Caen booklet V1.4, scenarios"
+   "src": "Battle for Caen booklet (final), scenarios"
   },
   {
    "id": "secondary",
@@ -92,7 +92,7 @@ HTS_TOKENS["hon-caen"] = {
      "href": "scenarios.html?b=caen"
     }
    ],
-   "src": "Battle for Caen booklet V1.4, scenarios"
+   "src": "Battle for Caen booklet (final), scenarios"
   },
   {
    "id": "initiative",
@@ -131,7 +131,7 @@ HTS_TOKENS["hon-caen"] = {
      "href": "rules.html?b=caen&q=initiative"
     }
    ],
-   "src": "Battle for Caen booklet V1.4, p.11"
+   "src": "Battle for Caen booklet (final), p.11"
   },
   {
    "id": "event",
@@ -165,7 +165,7 @@ HTS_TOKENS["hon-caen"] = {
      "href": "scenarios.html?b=caen"
     }
    ],
-   "src": "Battle for Caen booklet V1.4, scenarios"
+   "src": "Battle for Caen booklet (final), scenarios"
   },
   {
    "id": "destruction",
@@ -199,7 +199,7 @@ HTS_TOKENS["hon-caen"] = {
      "href": "rules.html?b=caen&q=breach"
     }
    ],
-   "src": "Battle for Caen booklet V1.4, p.9"
+   "src": "Battle for Caen booklet (final), p.9"
   },
   {
    "id": "breach",
@@ -238,7 +238,7 @@ HTS_TOKENS["hon-caen"] = {
      "href": "rules.html?b=caen&q=breach"
     }
    ],
-   "src": "Battle for Caen booklet V1.4, p.9"
+   "src": "Battle for Caen booklet (final), p.9"
   },
   {
    "id": "template",
@@ -270,7 +270,7 @@ HTS_TOKENS["hon-caen"] = {
      "href": "rules.html?b=caen&q=template"
     }
    ],
-   "src": "Battle for Caen booklet V1.4, pp.7 and 11"
+   "src": "Battle for Caen booklet (final), pp.7 and 11"
   },
   {
    "id": "wjgear-ge",

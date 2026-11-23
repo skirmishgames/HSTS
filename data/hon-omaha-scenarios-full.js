@@ -2,13 +2,13 @@ window.HTS_SCEN_FULL = window.HTS_SCEN_FULL || {};
 window.HTS_SCEN_FULL["hon-omaha"] = {
 "book": {
 "title": "Heroes of Normandie: Bloody Omaha, Rules and Scenarios",
-"version": "V7.1",
+"version": "V8.0",
 "pdfs": [
 {
-"label": "Download the book (V7.1, PDF)",
-"href": "pdf/hon-omaha-rules-and-scenarios-v7.1.pdf",
-"size": "10 MB",
-"note": "All 24 pages: rules, scenarios and icon summary. Reduced in size for the web. The text layer comes from OCR, so it may contain small errors."
+"label": "Download the book (V8.0, PDF)",
+"href": "pdf/hon-omaha-rules-and-scenarios-v8.0.pdf",
+"size": "9 MB",
+"note": "All 24 pages: rules, scenarios and icon summary, from the designers' file. Pictures reduced for the web; the text is searchable."
 }
 ],
 "pages": {
@@ -149,7 +149,7 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 },
 {
 "k": "note",
-"t": "**Solo mode:** The Heroes of Normandie Solo Mode expansion is required for games in Solo Mode. The scenario entries on the contents page that carry the gear icon and an asterisk can be played that way."
+"t": "**Solo mode:** The Heroes of Normandie Solo Mode product is required for games in Solo Mode. The scenario entries on the contents page that carry the gear icon and an asterisk can be played that way."
 },
 {
 "k": "h",
@@ -157,7 +157,7 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 },
 {
 "k": "p",
-"t": "**Authors:** Yann and Clem. **Illustrations:** Maxime Simoneau, Pixel Vengeur, Olivier Derouetteau, Yann and Clem. **Layout:** Jules Kanou and Clem. **Proofreading and translation:** Bart De Vuyst, Bob King and Moomer. Thanks to Thia, Renaud and the entire Community."
+"t": "**Authors:** Yann and Clem. **Illustrations:** Maxime Simoneau, Ruben Megido, Pixel Vengeur, Olivier Derouetteau, Yann and Clem. **Layout:** Jules Kanou and Clem. **Proofreading and translation:** Bart De Vuyst, Bob King, Mark Dekker and Moomer. Thanks to Thia, Renaud and the entire Community."
 },
 {
 "k": "p",
@@ -281,7 +281,7 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 },
 {
 "k": "p",
-"t": "This Terrain Element unsettles nearby units. Put a Suppressed Marker on any unit that either: ends its Movement Action within a number of squares equal to the value printed in the icon, or has a clear Line of Sight to the element."
+"t": "This Terrain Element unsettles nearby units. Put a Suppressed Marker on any unit that either ends its Movement Action within a number of squares equal to the value printed in the icon, and has a clear Line of Sight to at least 1 stressful element."
 },
 {
 "k": "p",
@@ -674,7 +674,7 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 },
 {
 "k": "p",
-"t": "If a Heavy Vehicle ends its Movement Action on a small haystack, discard it and reveal the Infantry Unit hidden there. Apply the **Running Over Infantry** rule described in the 3.2.1 Movement Action chapter of the rulebook, p.10."
+"t": "If a Heavy Vehicle ends its Movement Action on a small haystack, discard it and reveal the Infantry Unit hidden there. Apply the **Running Over Infantry** rule described in the 3.2.1 Movement Action chapter of the rulebook, p.09."
 }
 ]
 },
@@ -797,7 +797,7 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 },
 {
 "k": "p",
-"t": "This unit has an NCO among its members or is itself an NCO. As long as you have an NCO on the board, you always have at least one Order Token. When Activated, before Firing or Moving, an NCO may instantly remove **1** Suppressed Marker from a friendly unit within 3 squares and in clear LoS."
+"t": "This unit has an NCO among its members or is itself an NCO. As long as you have an NCO on the board, you always have at least one Order Token. When Activated, before Firing or Moving, If this unit receives an Order Token during the Order Phase it may immediately remove **1** Suppressed Marker from another unit within 3 squares but must have a clear LoS on that unit."
 },
 {
 "k": "h3",
@@ -1104,7 +1104,7 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 },
 {
 "k": "p",
-"t": "__Restricted to Heavy and Light vehicles__"
+"t": "__Restricted to Heavy vehicles__"
 },
 {
 "k": "p",
@@ -1789,8 +1789,8 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 "img": "img/hon/omaha/scenfig/part2-setup.webp",
 "w": 1100,
 "h": 1233,
-"cap": "Boards C1-B, C3-A and C2-A (the inland fields, top), OB1-A, OB2-A and OB3-A (the bluffs and seawall), OB4-A, OB5-A and OB6-A (the beach, bottom). The German deployment zone covers the top two rows. The American deployment zone is the orange strip along the seawall and the beach; the 29th Division badge marks the 29th's landing craft and zone, the 1st Division badge the 1st's. Buildings B-01 and C-01 hold the Secondary Objectives.",
-"alt": "Boards C1-B, C3-A and C2-A (the inland fields, top), OB1-A, OB2-A and OB3-A (the bluffs and seawall), OB4-A, OB5-A and OB6-A (the beach, bottom). The German deployment zone covers the top two rows. The American deployment zone is the orange strip along the seawall and the beach; the 29th Division badge marks the 29th's landing craft and zone, the 1st Division badge the 1st's. Buildings B-01 and C-01 hold the Secondary Objectives."
+"cap": "Boards C5-B, C3-A and C6-A (the inland fields, top), OB1-A, OB2-A and OB3-A (the bluffs and seawall), OB4-A, OB5-A and OB6-A (the beach, bottom). The German deployment zone covers the top two rows. The American deployment zone is the orange strip along the seawall and the beach; the 29th Division badge marks the 29th's landing craft and zone, the 1st Division badge the 1st's. Buildings B-01 and C-01 hold the Secondary Objectives.",
+"alt": "Boards C5-B, C3-A and C6-A (the inland fields, top), OB1-A, OB2-A and OB3-A (the bluffs and seawall), OB4-A, OB5-A and OB6-A (the beach, bottom). The German deployment zone covers the top two rows. The American deployment zone is the orange strip along the seawall and the beach; the 29th Division badge marks the 29th's landing craft and zone, the 1st Division badge the 1st's. Buildings B-01 and C-01 hold the Secondary Objectives."
 },
 {
 "k": "pg",
@@ -1831,7 +1831,7 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 },
 {
 "k": "p",
-"t": "**The Americans must control both Objectives.**"
+"t": "**The Americans must capture both Objectives.**"
 },
 {
 "k": "p",
@@ -1839,13 +1839,13 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 },
 {
 "k": "p",
-"t": "The game ends at the end of **Turn 8** or if the American player(s) control both **Secondary Objectives** at the end of a Supply phase."
+"t": "The game ends at the end of **Turn 8** or if the Americans have captured both **Secondary Objectives**."
 },
 {
 "k": "ul",
 "items": [
-"**AMERICAN VICTORY:** The Americans control both Secondary Objectives.",
-"**GERMAN VICTORY:** The Americans fail to control both Secondary Objectives."
+"**AMERICAN VICTORY:** The Americans captured both Secondary Objectives.",
+"**GERMAN VICTORY:** The Americans failed to capture both Secondary Objectives."
 ]
 }
 ]
@@ -1942,7 +1942,7 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 },
 {
 "k": "p",
-"t": "**The German player** deploys first. He places the **defensive positions** and **haystacks** anywhere in his **deployment zone.**"
+"t": "**The Germans** deploy first, placing the **defensive positions** and **haystacks** anywhere in their **deployment zone.**"
 },
 {
 "k": "p",
@@ -1954,17 +1954,17 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 },
 {
 "k": "p",
-"t": "**Catch me if you can!** The Americans must win an **Assault** against **Kraiss**, as attacker or defender, in order to capture him. Once the general is captured, he cannot be liberated and his counter is removed from the game."
+"t": "**Catch me if you can!** The Americans must win an **Assault** against **Kraiss**, as attacker or defender, in order to apprehend him. Once the general is apprehended, he cannot be liberated and his counter is removed from the game."
 },
 {
 "k": "ul",
 "items": [
-"**MINOR AMERICAN VICTORY:** The Americans control the Primary Objective and one Secondary Objective.",
-"**AMERICAN VICTORY:** The Americans have captured **Kraiss** but control only one Objective, be it Primary or Secondary.",
-"**MAJOR AMERICAN VICTORY:** The Americans have captured **Kraiss** but also control the Primary and one Secondary Objective.",
-"**MINOR GERMAN VICTORY:** The Americans have captured **Kraiss** but control none of the Objectives OR failed to capture the general and control at least the Primary Objective, OR only control both Secondary Objectives.",
+"**MINOR AMERICAN VICTORY:** The Americans control the Primary Objective and at least one Secondary Objective.",
+"**AMERICAN VICTORY:** The Americans have apprehended **Kraiss** but control only one Objective, be it Primary or Secondary.",
+"**MAJOR AMERICAN VICTORY:** The Americans have apprehended **Kraiss** but also control the Primary Objective and at least one Secondary Objective.",
+"**MINOR GERMAN VICTORY:** The Americans have apprehended **Kraiss** but control none of the Objectives OR failed to apprehend **Kraiss** but control at least the Primary Objective, OR only control both Secondary Objectives.",
 "**GERMAN VICTORY:** The Americans control only one Objective, Primary or Secondary.",
-"**MAJOR GERMAN VICTORY:** The Americans failed to capture **Kraiss** AND control none of the Objectives."
+"**MAJOR GERMAN VICTORY:** The Americans failed to apprehend **Kraiss** AND control none of the Objectives."
 ]
 }
 ]
@@ -2033,8 +2033,8 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 "img": "img/hon/omaha/scenfig/big-recruit.webp",
 "w": 1095,
 "h": 1050,
-"cap": "American Group A, 495 points (Tank Platoon with M4A3 (105) Sherman 60, Smoke x3, Ammo x3, M10 Tank Destroyer 60; US Rangers with Support Squad 60, Veteran x3, Urban Fighter 15; Sgt. Horvath with Bazooka 15). American Group B, 550 points (Thunderbolt 55; Field Command with M5 Stuart 50 and two Aircraft x1; Mustang 50; Sam Fueller with Willys 25; Oddball with M8 AC Greyhound 35; Rifle Platoon with Bazooka Squad 55, Grenade x3, Veteran x3, M4 Sherman 60). German Group A, 415 points (Divisionsstab with Artillery x3, Tank Ambush 15, Ammo x3, Panzer IV 65; Panzer-Aufklarungs with Sturmgruppe 70, Panzerschreck 15; Helmut with Pak 40 25; defensive position tiles A and B). German Group B, 470 points (Feldkommando with Panzer II Luchs 50, MG Nest 25, Concealed 5; Festungskompanie with Pak 40 Group 50, Panzerfaust x3, Grenade x3, 7.5cm Group 50; Ludwig with Flak 38 25; Otto with SdKfz 234/2 Puma 40).",
-"alt": "American Group A, 495 points (Tank Platoon with M4A3 (105) Sherman 60, Smoke x3, Ammo x3, M10 Tank Destroyer 60; US Rangers with Support Squad 60, Veteran x3, Urban Fighter 15; Sgt. Horvath with Bazooka 15). American Group B, 550 points (Thunderbolt 55; Field Command with M5 Stuart 50 and two Aircraft x1; Mustang 50; Sam Fueller with Willys 25; Oddball with M8 AC Greyhound 35; Rifle Platoon with Bazooka Squad 55, Grenade x3, Veteran x3, M4 Sherman 60). German Group A, 415 points (Divisionsstab with Artillery x3, Tank Ambush 15, Ammo x3, Panzer IV 65; Panzer-Aufklarungs with Sturmgruppe 70, Panzerschreck 15; Helmut with Pak 40 25; defensive position tiles A and B). German Group B, 470 points (Feldkommando with Panzer II Luchs 50, MG Nest 25, Concealed 5; Festungskompanie with Pak 40 Group 50, Panzerfaust x3, Grenade x3, 7.5cm Group 50; Ludwig with Flak 38 25; Otto with SdKfz 234/2 Puma 40)."
+"cap": "American Group A, 495 points (Tank Platoon with M4A3 (105) Sherman 60, Smoke x3, Ammo x3, M10 Tank Destroyer 60; US Rangers with Support Squad 60, Veteran x3, Urban Fighter 15; Sgt. Horvath with Bazooka 15). American Group B, 555 points (Thunderbolt 55; Field Command with M5 Stuart 50 and two Aircraft x1; Mustang 50; Sam Fueller with Willys 25; Oddball with M8 AC Greyhound 35; Rifle Platoon with Bazooka Squad 55, Grenade x3, Veteran x3, M4 Sherman 60). German Group A, 415 points (Divisionsstab with Artillery x3, Tank Ambush 15, Ammo x3, Panzer IV 65; Panzer-Aufklarungs with Sturmgruppe 70, Panzerschreck 15; Helmut with Pak 40 25; defensive position tiles A and B). German Group B, 470 points (Feldkommando with Panzer II Luchs 50, MG Nest 25, Concealed 5; Festungskompanie with Pak 40 Group 50, Panzerfaust x3, Grenade x3, 7.5cm Group 50; Ludwig with Flak 38 25; Otto with SdKfz 234/2 Puma 40).",
+"alt": "American Group A, 495 points (Tank Platoon with M4A3 (105) Sherman 60, Smoke x3, Ammo x3, M10 Tank Destroyer 60; US Rangers with Support Squad 60, Veteran x3, Urban Fighter 15; Sgt. Horvath with Bazooka 15). American Group B, 555 points (Thunderbolt 55; Field Command with M5 Stuart 50 and two Aircraft x1; Mustang 50; Sam Fueller with Willys 25; Oddball with M8 AC Greyhound 35; Rifle Platoon with Bazooka Squad 55, Grenade x3, Veteran x3, M4 Sherman 60). German Group A, 415 points (Divisionsstab with Artillery x3, Tank Ambush 15, Ammo x3, Panzer IV 65; Panzer-Aufklarungs with Sturmgruppe 70, Panzerschreck 15; Helmut with Pak 40 25; defensive position tiles A and B). German Group B, 470 points (Feldkommando with Panzer II Luchs 50, MG Nest 25, Concealed 5; Festungskompanie with Pak 40 Group 50, Panzerfaust x3, Grenade x3, 7.5cm Group 50; Ludwig with Flak 38 25; Otto with SdKfz 234/2 Puma 40)."
 },
 {
 "k": "note",
@@ -2068,7 +2068,7 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 },
 {
 "k": "p",
-"t": "**Victory conditions and rules for capturing Kraiss are the same as in \"Little River of No Return\".**"
+"t": "**Victory conditions and rules for apprehending Kraiss are the same as in \"Little River of No Return\".**"
 },
 {
 "k": "h3",
@@ -2081,7 +2081,7 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 {
 "k": "ul",
 "items": [
-"**THE CAPTURE OF DIETRICH KRAISS** is worth **50 victory points.**",
+"**THE APPREHENSION OF DIETRICH KRAISS** is worth **50 victory points.**",
 "**CONTROL OF THE PRIMARY OBJECTIVE** is worth **30 victory points.**",
 "**CONTROL OF A SECONDARY OBJECTIVE** is worth **20 victory points.**"
 ]
@@ -2108,11 +2108,11 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 },
 {
 "k": "note",
-"t": "The numbering and several page references on this page do not match the rules chapters: it is numbered 5.1 and 6 to 6.6, and gives \"P.18-19\" for the terrain effects, which are on pages 4 to 5. The text below is as printed. The rules entries have the full wording."
+"t": "The numbering and several page references on this page do not match the rules chapters: it is numbered 6 to 6.6 for the special abilities, which are rules chapter 3. The text below is as printed. The rules entries have the full wording."
 },
 {
 "k": "h3",
-"t": "5.1 Terrain effects (P.18-19)"
+"t": "1.1 Terrain effects (P.04)"
 },
 {
 "k": "ul",
@@ -2170,7 +2170,7 @@ window.HTS_SCEN_FULL["hon-omaha"] = {
 "k": "ul",
 "items": [
 "**Barrage order (P.08):** Instead of activating this unit, you may activate up to 3 Heavy Weapon units within 3 squares that have the exact same name. It must have a clear or reduced LoS to each of them.",
-"**NCO (P.08):** When Activated in the Order Phase, this unit may immediately remove 1 Suppressed Marker from another unit within 3 squares. It must have a clear LoS to the unit it is helping.",
+"**NCO (P.08):** If this unit receives an Order Token during the Order Phase it may immediately remove 1 Suppressed Marker from another unit within 3 squares. It must have a clear LoS to the unit it's helping.",
 "**Smart (P.07):** This unit increases your hand size by 1 Action Card. (The rules chapter gives this one on page 8.)"
 ]
 },

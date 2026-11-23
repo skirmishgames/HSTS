@@ -230,10 +230,13 @@
   }
 
   function cardItems() {
-    var d = window.HTS_CARDS && window.HTS_CARDS['hon-bro'], out = [];
-    if (d) d.entries.forEach(function (e) {
-      out.push({ t: e.name, href: 'cards.html?s=' + e.nation + '&q=' + q(e.name), img: e.thumb, b: [e.nation === 'us' ? 'US deck' : 'German deck', e.phase, e.copies + (e.copies === 1 ? ' copy' : ' copies')].filter(Boolean),
-        s: e.when, x: e.when + ' ' + e.text, hay: norm(e.name + ' ' + e.phase + ' ' + e.when + ' ' + e.text + ' ' + (e.nation === 'us' ? 'american us' : 'german')), head: norm(e.name) });
+    var out = [], DECK = { us: 'US deck', ge: 'German deck', cw: 'Commonwealth deck', ss: 'German SS cards' }, WORDS = { us: 'american us', ge: 'german', cw: 'commonwealth british canadian', ss: 'german ss' };
+    [['bro', 'Big Red One'], ['caen', 'Battle for Caen']].forEach(function (bx) {
+      var d = window.HTS_CARDS && window.HTS_CARDS['hon-' + bx[0]];
+      if (d) d.entries.forEach(function (e) {
+        out.push({ t: e.name, href: 'cards.html?b=' + bx[0] + '&s=' + e.nation + '&q=' + q(e.name), img: e.thumb, b: [DECK[e.nation] || e.nation, e.phase, e.copies + (e.copies === 1 ? ' copy' : ' copies')].filter(Boolean),
+          s: e.when, x: e.when + ' ' + e.text, hay: norm(e.name + ' ' + e.phase + ' ' + e.when + ' ' + e.text + ' ' + (WORDS[e.nation] || '') + ' ' + bx[1]), head: norm(e.name) });
+      });
     });
     return out;
   }
@@ -295,7 +298,7 @@
     { id: 'heroes', title: 'Heroes and equipment', files: ['hon-bro-us', 'hon-bro-ge', 'hon-bro-uk', 'hon-hos-ru', 'hon-hos-gs', 'hon-bro-heroes'], build: heroItems },
     { id: 'tokens', title: 'Tokens', files: ['hon-bro-tokens', 'hon-omaha-tokens', 'hon-caen-tokens', 'hon-hos-tokens'], build: tokenItems },
     { id: 'icons', title: 'Icons', files: ['hon-icons'], build: iconItems },
-    { id: 'cards', title: 'Cards', files: ['hon-bro-cards'], build: cardItems },
+    { id: 'cards', title: 'Cards', files: ['hon-bro-cards', 'hon-caen-cards'], build: cardItems },
     { id: 'products', title: 'Archive products', files: ['expansions'], build: productItems },
     { id: 'maps', title: 'Maps', files: ['maps'], build: mapItems },
     { id: 'history', title: 'History', files: ['hon-bro-history', 'hon-caen-history', 'hon-hos-history'], build: historyItems },

@@ -3,7 +3,7 @@ HTS_TOKENS["hon-omaha"] = {
 "game": "hon",
 "box": "omaha",
 "title": "Tokens and markers",
-"source": "Bloody Omaha rulebook V7.1",
+"source": "Bloody Omaha rulebook V8.0",
 "groups": [
 "Templates",
 "Gear markers",
@@ -65,7 +65,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for smoke template"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.11"
+"src": "Bloody Omaha rulebook V8.0, p.11"
 },
 {
 "id": "bangalore",
@@ -112,7 +112,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for bangalore"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.8"
+"src": "Bloody Omaha rulebook V8.0, p.8"
 },
 {
 "id": "explosive",
@@ -158,7 +158,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for explosive m1"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.10"
+"src": "Bloody Omaha rulebook V8.0, p.10"
 },
 {
 "id": "position",
@@ -204,7 +204,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for forward position"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.10"
+"src": "Bloody Omaha rulebook V8.0, p.10"
 },
 {
 "id": "shovel",
@@ -250,7 +250,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for shovel"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.10"
+"src": "Bloody Omaha rulebook V8.0, p.10"
 },
 {
 "id": "ammo-belt",
@@ -285,7 +285,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for ammo belt"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.8"
+"src": "Bloody Omaha rulebook V8.0, p.8"
 },
 {
 "id": "tank-gear",
@@ -293,7 +293,7 @@ HTS_TOKENS["hon-omaha"] = {
 "group": "Gear markers",
 "summary": "Tank gear: more movement, or more armour.",
 "text": [
-"Restricted to Heavy and Light vehicles. The Tank Gear option gives you 3 markers chosen from Fuel and Additional Shielding, with the same colour stripes as the option. You may not take more than 2 identical markers.",
+"Restricted to Heavy vehicles. The Tank Gear option gives you 3 markers chosen from Fuel and Additional Shielding, with the same colour stripes as the option. You may not take more than 2 identical markers.",
 "Fuel: each marker increases the Movement Value of a vehicle by 1 square. Additional shielding: each marker grants a +1 Defensive Bonus."
 ],
 "faces": [
@@ -332,7 +332,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for fuel and additional shielding"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.10"
+"src": "Bloody Omaha rulebook V8.0, p.10"
 },
 {
 "id": "shells",
@@ -378,7 +378,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for he shells and apc shells"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.10"
+"src": "Bloody Omaha rulebook V8.0, p.10"
 },
 {
 "id": "mines",
@@ -439,7 +439,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for mine counters"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.9"
+"src": "Bloody Omaha rulebook V8.0, p.9"
 },
 {
 "id": "haystack",
@@ -493,7 +493,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for haystack"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.7"
+"src": "Bloody Omaha rulebook V8.0, p.7"
 },
 {
 "id": "haystack-markers",
@@ -545,7 +545,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for haystack and tank ambush markers"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.7"
+"src": "Bloody Omaha rulebook V8.0, p.7"
 },
 {
 "id": "artillery",
@@ -591,7 +591,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for artillery support markers"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.11"
+"src": "Bloody Omaha rulebook V8.0, p.11"
 },
 {
 "id": "bombs",
@@ -633,7 +633,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for 500 lb and sc-500 bombs"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.13"
+"src": "Bloody Omaha rulebook V8.0, p.13"
 },
 {
 "id": "heroic",
@@ -668,7 +668,7 @@ HTS_TOKENS["hon-omaha"] = {
 "label": "Rules for heroic marker"
 }
 ],
-"src": "Bloody Omaha rulebook V7.1, p.11"
+"src": "Bloody Omaha rulebook V8.0, p.11"
 }
 ]
 };

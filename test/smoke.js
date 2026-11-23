@@ -376,6 +376,8 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
       return { ph: v.filter(e => e.phase === 'Order').map(e => e.name).sort().join(','), ot: v.filter(e => (e.on || []).indexOf('Order tokens') >= 0).map(e => e.name).sort().join(','), untagged: v.filter(e => !(e.on || []).length).length }; });
     ok(grp.ph === 'Communications Scrambled,High Command,Repairs,Tactician,The Fury of the Führer', 'cards: When it is played follows the printed line (Order phase: ' + grp.ph + ')');
     ok(grp.ot === 'Communications Scrambled,Confusion,Dynamic,High Command,Initiative,Ready!,Return to Sender,Tactician' && grp.untagged === 0, 'cards: Works on Order tokens lists the cards that act on Order Tokens, every card has a tag (' + grp.ot + ')'); }
+  await tp.goto(base + 'cards.html?b=caen'); await tp.waitForTimeout(400);
+  ok((await tp.textContent('#stat')).startsWith('36 different cards (57 in the box)') && (await tp.locator('#sides button').allInnerTexts()).join('|') === 'Both|Commonwealth|German SS', 'cards: Battle for Caen box lists the Commonwealth deck, Eileen Nearne and the SS cards');
   await tp.goto(base + 'cards.html?p=Order&t=Vehicles'); await tp.waitForTimeout(300);
   ok((await tp.locator('.ccard .cn').allInnerTexts()).every(n => n === 'Repairs') && await tp.locator('.ccard').count() === 2, 'cards: Order phase and Vehicles together find the two Repairs cards');
 
@@ -1237,7 +1239,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     const hrefsOf = async g => sp.locator('#g-' + g + ' .sres a.sname').evaluateAll(a => a.map(x => x.getAttribute('href')));
     await sp.fill('#q', 'suppressed marker'); await sp.waitForTimeout(600);
     const h = {}; for (const g of ['scenarios', 'rules', 'documents', 'tokens', 'icons', 'cards']) h[g] = await hrefsOf(g);
-    ok(h.scenarios.every(x => /^scenarios\.html\?b=(bro|omaha|caen|ws|v1|fan|hos)&q=/.test(x)) && h.rules.every(x => /^rules\.html\?b=(bro|omaha|caen)&s=[\d.a-z-]+&k=\d+&q=/.test(x)) && h.documents.every(x => /^guides\.html\?[dg]=/.test(x)) && h.tokens.every(x => /^tokens\.html\?b=/.test(x)) && h.icons.every(x => /^icons\.html\?b=/.test(x)) && h.cards.every(x => /^cards\.html\?s=(us|ge)&q=/.test(x)), 'search: result links use each page\'s own parameters');
+    ok(h.scenarios.every(x => /^scenarios\.html\?b=(bro|omaha|caen|ws|v1|fan|hos)&q=/.test(x)) && h.rules.every(x => /^rules\.html\?b=(bro|omaha|caen)&s=[\d.a-z-]+&k=\d+&q=/.test(x)) && h.documents.every(x => /^guides\.html\?[dg]=/.test(x)) && h.tokens.every(x => /^tokens\.html\?b=/.test(x)) && h.icons.every(x => /^icons\.html\?b=/.test(x)) && h.cards.every(x => /^cards\.html\?b=(bro|caen)&s=(us|ge|cw|ss)&q=/.test(x)), 'search: result links use each page\'s own parameters');
     const opened = async (href, sel, msg) => { await sp.goto(base + href); await sp.waitForTimeout(500); ok(await sp.locator(sel).count() >= 1, 'search: ' + msg + ' (' + href.slice(0, 60) + ')'); };
     await opened(h.rules[0], '#rmodal:not([hidden]) .rchunk', 'a rules link opens that section');
     await opened(h.tokens[0], '.hrow.open, .hrow', 'a tokens link lists the token');

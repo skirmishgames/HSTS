@@ -2,19 +2,13 @@ window.HTS_SCEN_FULL = window.HTS_SCEN_FULL || {};
 window.HTS_SCEN_FULL["hon-bro"] = {
 "book": {
 "title": "Heroes of Normandie: Big Red One, Scenario Booklet",
-"version": "V2.5 (file names read V2.4 UPDATE)",
+"version": "V3.0",
 "pdfs": [
 {
-"label": "Download the booklet (V2.5, PDF)",
-"href": "pdf/hon-bro-scenario-booklet-v2.5.pdf",
-"size": "17 MB",
-"note": "The latest version, as page images."
-},
-{
-"label": "Download the earlier booklet (V2.4, PDF)",
-"href": "pdf/hon-bro-scenario-booklet-v2.4.pdf",
-"size": "8 MB",
-"note": "The earlier text version. Some army lists differ."
+"label": "Download the booklet (V3.0, PDF)",
+"href": "pdf/hon-bro-scenario-booklet-v3.0.pdf",
+"size": "12 MB",
+"note": "All 28 pages, from the designers' file. Pictures reduced for the web; the text is searchable."
 }
 ],
 "pages": {
@@ -39,7 +33,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "Pick a scenario to play from either one of the scenarios presented in this booklet, a published scenario sheet, or from among the PDFs of the publisher. You could instead try your hand at creating your own mission using the **Free Battle Mode** (see the Free battle mode chapter), where you assemble your forces by spending **army points** agreed upon by all players participating. There are many options available. **Do note that if a scenario has a rule that contradicts the general rules or the rules in this chapter, those scenario-specific rules take precedence. Such rules are designed specifically for that scenario.**"
+"t": "Pick a scenario to play from either one of the scenarios presented in this booklet, a published scenario sheet, or perhaps from among the PDFs presented on the publisher's website. You could instead try your hand at creating your own mission using the **Free Battle Mode** (see the Free battle mode chapter), where you assemble your forces by spending **army points** agreed upon by all players involved. **Do note that if a scenario has a rule that contradicts the general rules or the rules in this chapter, those scenario-specific rules take precedence. Such rules are designed specifically for that scenario.**"
 },
 {
 "k": "h",
@@ -48,10 +42,9 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 {
 "k": "ul",
 "items": [
-"Your deck is composed of **Action Cards** that belong to your **faction**.",
+"Your deck is composed of **Action Cards** that belong to your **faction**. (Check the symbol on the back of your cards.)",
 "Each player draws a **full hand**, up to the maximum hand size indicated in the scenario.",
-"You may never have more **Action Cards** in hand than your **maximum** hand size.",
-"Unless otherwise indicated, the maximum hand size is **4 Action Cards**."
+"You may not have more cards in your hand than the scenario total without a **Tactical Bonus** or **Recruitment Option**."
 ]
 },
 {
@@ -72,7 +65,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "note",
-"t": "**Warning:** Orders provided by units deployed off the map are available on the first turn."
+"t": "**Warning:** Orders provided by off-map units are available to their player from the start of the game whether said units have entered the board yet or not."
 },
 {
 "k": "h",
@@ -108,7 +101,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "These **victory points** are won by **controlling objectives** (Primary or Secondary, see below) and by **inflicting losses** (see Breaking point, below)."
+"t": "These **victory points** are won by **securing objectives** (Primary or Secondary, see below) and by **inflicting losses** (see Breaking point, below)."
 },
 {
 "k": "note",
@@ -124,7 +117,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "note",
-"t": "**Important:** If your opponent also has a unit in one of those squares, the objective remains neutral. It is not necessary to leave a unit adjacent to an objective to keep control of it."
+"t": "**Important:** It is not necessary to leave a unit adjacent to an objective to keep control of it."
 },
 {
 "k": "h3",
@@ -132,11 +125,11 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "If the marker displays a **faction's symbol**, it means only one of the two armies can benefit from controlling the **objective**. Units of the opposing army can still prevent an enemy unit from controlling the objective by merely being present in one of the adjacent squares or in the Terrain Element where the objective is placed. Once the objective is controlled, leave the marker on the board and turn it over onto its 'controlled' side (with the symbol of its faction displayed). It shows the objective has been met, but can still be taken back by the enemy."
+"t": "If the marker displays a **faction's symbol**, it means only one of the two armies can benefit from controlling the **objective**. Units of the opposing army can still prevent an enemy unit from controlling the objective by merely being present in one of the adjacent squares or in the Terrain Element where the objective is placed. Once the objective is controlled, leave the marker on the board and turn it over onto its 'controlled' side (with the brighter side displayed). It shows the objective has been secured, but can still be taken back by the enemy."
 },
 {
 "k": "p",
-"t": "If the marker is **neutral**, whichever army controls it benefits from it. **Temporarily** replace it with an Objective marker that displays the symbol of that army. **You will replace it again if control changes sides.**"
+"t": "If the marker is **neutral**, whichever army controls it benefits from it. **Temporarily** replace it with an Objective marker that displays the symbol of that army. **You will replace it if control changes sides.**"
 },
 {
 "k": "pg",
@@ -243,7 +236,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "You can create your own armies by spending a set number of **army points**. The cost for each tile is printed on the tile."
+"t": "You can create your own armies by spending a set number of **army points**. The cost of each tile is printed on the bottom centre of the tile."
 },
 {
 "k": "p",
@@ -420,7 +413,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "note",
-"t": "**Tip:** When playing a championship game, use **250 army points** and a maximum of **4 Orders Tokens** per army."
+"t": "**Tip:** When playing a championship game, use **250 army points** and a maximum of **4 Order Tokens** per army."
 },
 {
 "k": "h",
@@ -436,13 +429,13 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "The number of **Objectives** and **Objective's value** depends on the size of the battle. Place them within equal distance of either army's deployment zone so that no player gets an advantage."
+"t": "The number and value of **Objectives** depend on the size of the battle. Place them within equal distance of either army's deployment zone so that no player gets an advantage."
 },
 {
 "k": "ul",
 "items": [
 "Place the **Primary Objectives** on their **dark side**.",
-"**Secondary Objectives** can be neutral or specific to each army."
+"**Secondary Objectives** can be neutral or specific to each army, but are **always captured**."
 ]
 },
 {
@@ -463,7 +456,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "note",
-"t": "These victory points are won by controlling primary and secondary objectives and by inflicting losses."
+"t": "These victory points are won by controlling Primary Objectives, capturing Secondary Objectives and by inflicting losses."
 },
 {
 "k": "h",
@@ -588,7 +581,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "The defender gets **75%** of his total available army points but takes all of the terrain tiles as indicated in the Battlefield column and places them in his deployment zone."
+"t": "The defender gets **75%** of his total available army points, takes all the terrain tiles as indicated in the Battlefield column and places them in his deployment zone."
 },
 {
 "k": "p",
@@ -660,15 +653,11 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "The alliance can purchase a single High Command Tile (Recruitment Tiles that have no units but only squares for Recruitment Options). The total cost of this High Command Tile and its selected options is split between all the players in the alliance any way they want, shares need not be equal. The Recruitment Options of the High Command Tile may be used by all of the alliance's players."
-},
-{
-"k": "p",
-"t": "Regarding **recruitment options** that involve markers and tokens (such as **Battle Plan**), put markers on them from all the armies in the alliance."
+"t": "The alliance can purchase a single High Command Tile (Recruitment Tiles that have no units but only squares for Recruitment Options). The total cost of this High Command Tile and its selected options is split between all the players in the alliance any way they want, shares need not be equal. The Recruitment Options of the High Command Tile may be used by all of the alliance's players. Instead, options from a Field Command or Feldkommando only benefit Units managed by the player who bought such a tile."
 },
 {
 "k": "note",
-"t": "**Warning:** This does not allow more than the standard number of tokens or markers to be used, it just allows each player a matching token for their faction."
+"t": "**Warning:** Players in an alliance decide which army or armies provide the markers and tokens for Recruitment options that require them (such as **Battle Plan**). The standard allowed number to be allocated may NOT be exceeded."
 },
 {
 "k": "p",
@@ -710,7 +699,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 "items": [
 "Allied players may show each other their Action Cards.",
 "During the Supply Phase only, players can move Action Cards from one player to the other.",
-"The players can target the enemy with their Action Cards, but cannot target an allied unit. Any army wide bonuses (such as **Fury of the Fuhrer**) thus only affect the forces of the one who played the Action Card."
+"The players can target the enemy with their Action Cards, but cannot target an allied unit. Army wide bonuses (such as **Fury of the Fuhrer**) only affect the forces of the one who played the Action Card."
 ]
 },
 {
@@ -759,7 +748,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "Recruitment options that concern nearby units are applied to both owned units and allied units, provided the allied player accepts. The Initiative Orders option enables the alliance who owns it to keep the Initiative."
+"t": "Recruitment options that concern nearby units are applied to both owned units and allied units, provided the allied player approves. The Initiative Orders option enables the alliance who owns it to keep the Initiative."
 },
 {
 "k": "h3",
@@ -767,7 +756,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "Any **Special Ability** that affects one's own units (such as **Transport**) also affects allied units, provided the allied player accepts. Similarly, any Special Ability requiring the presence of or the LoS from one's units (such as **Substitute** or **Artillery Spotter**) can call on an allied unit, provided the owner accepts."
+"t": "Any **Special Ability** that affects one's own units (such as **Transport**) also affects allied units, provided the allied player approves. Similarly, any Special Ability requiring the presence of or the LoS from one's units (such as **Substitute** or **Artillery Spotter**) can call on an allied unit, provided the owner agrees."
 },
 {
 "k": "h3",
@@ -891,12 +880,12 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "**The goal for both players is to control the Secondary Objective.** A player controls this objective if he is the only one to have an Infantry Unit in one of the **4 squares** adjacent to the primary objective at the end of any Supply Phase."
+"t": "**The goal for both players is to control the Secondary Objective.** A player controls this objective if he is the only one to have an Infantry Unit in one of the **4 squares** adjacent to the Secondary Objective at the end of any Supply Phase."
 },
 {
 "k": "ul",
 "items": [
-"**Mind your opponent's Supply Phase movement, especially if you have Initiative.** Do not grant him the opportunity to simply move up and capture the Objective at the end of a **Turn.**",
+"**Mind your opponent's Supply Phase movement, especially if you have Initiative.** Do not grant him the opportunity to simply move up and seize the Objective at the end of a **Turn.**",
 "Heavy vehicles can deny access to an objective if they are positioned on the adjacent squares.",
 "Do not hesitate to put your Heavy vehicles to good use in keeping the enemy at bay."
 ]
@@ -915,7 +904,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "Want to see a battle in action? We're going to guide you through the **first two turns** of the scenario to help you learn the basic principles of **Heroes of Normandie**. Set up the terrain boards and place the Unit counters as shown in the setup diagram, and get ready for battle!"
+"t": "Want to see a battle in action? We're going to guide you through the **first two turns** of the scenario to help you learn the basic principles of **Heroes of Normandie**. Set up the terrain boards and place the Unit counters as shown in the setup diagram. Then start the fight!"
 },
 {
 "k": "h3",
@@ -923,7 +912,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "The American player has the initiative. He places his **3** Order Tokens along with his Bluff Order Token. Then the German player does the same."
+"t": "The American player has the Initiative. He places his **3** Order Tokens along with his Bluff Order Token. Then the German player does the same."
 },
 {
 "k": "fig",
@@ -1015,7 +1004,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "The German player has the initiative. He places his **3** Order Tokens along with his Bluff Order Token. Then the American player does the same."
+"t": "The German player has the Initiative. He places his **3** Order Tokens along with his Bluff Order Token. Then the American player does the same."
 },
 {
 "k": "fig",
@@ -1031,7 +1020,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "The German player reveals his Order Token and takes two Firing Actions. One for the Primary, the other one for the Secondary Weapon. Targeting the .30 cal with his Panzer II, he takes a **Suppressive Fire** action (see p.23). He doubles the Panzer II's Secondary Weapon Combat Value (+4) and adds them to the die roll (3), getting a total of 11. Since the result is higher than the target's Defense Value (5 + 2 from the Terrain Element Defense Bonus), the target gets 1 Suppressed Marker. He takes a second Firing Action, targeting the M5 Stuart rear square, to take advantage of a lower Defense Value (6). He rolls a die, and fails..."
+"t": "The German player reveals his Order Token and takes two Firing Actions. One Firing Action for the Primary, another one for the Secondary Weapon. Targeting the .30 cal with his Panzer II, he takes a **Suppressive Fire** action (see p.23). He doubles the Panzer II's Secondary Weapon Combat Value (+4) and adds them to the die roll (3), getting a total of 11. Since the result is higher than the target's Defense Value (5 + 2 from the Terrain Element Defense Bonus), the target gets 1 Suppressed Marker. He takes a second Firing Action, targeting the M5 Stuart side square, to take advantage of a lower Defense Value (6), rolls a die and fails."
 },
 {
 "k": "fig",
@@ -1047,11 +1036,11 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "The American player reveals his Order Token. He reveals the Bazooka and takes a Firing Action, targeting the Panzer II. He plays his \"Weak Point\" Action Card to take advantage of the Panzer II lowest Defense Value (6). He rolls a die (5), and adds the Combat Value +3, for a total of 8."
+"t": "The American player reveals his Order Token. He reveals the Bazooka and takes a Firing Action, targeting the Panzer II. He plays his \"Weak Point\" Action Card to take advantage of the Panzer II lowest Defense Value (6, rear). He rolls a die (5), and adds the Combat Value +3, for a total of 8."
 },
 {
 "k": "p",
-"t": "As his result is higher than the Panzer II's front Defense Value, he rolls for **location** (see p.15), getting a result of 5, adding 1 for the Piercing bonus. The German player plays the \"It Bounces Right Off\" Action Card, but his opponent cancels it by playing the \"NO!\" Action Card. The Primary Weapon is destroyed and the Primary weapon Damage Marker is placed on the Panzer II."
+"t": "As his result is higher than the Panzer II's rear Defense Value, he rolls for **location** (see p.15), getting a result of 5, adding 1 for the Piercing bonus. The German player plays the \"It Bounces Right Off\" Action Card, but his opponent cancels it by playing the \"NO!\" Action Card. The Primary Weapon is destroyed and the Primary weapon Damage Marker is placed on the Panzer II."
 },
 {
 "k": "fig",
@@ -2013,7 +2002,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "**Players must control their Primary Objective before the end of Turn 8.**"
+"t": "**Players must control their Primary Objective by the end of Turn 8.**"
 },
 {
 "k": "note",
@@ -2041,12 +2030,12 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "The game ends at the end of **Turn 8** or at the end of any **Supply Phase** if a player controls his **Primary Objective.**"
+"t": "The game ends at the end of **Turn 8** or at the end of any **Supply Phase** if only one player controls his **Primary Objective.**"
 },
 {
 "k": "ul",
 "items": [
-"**VICTORY:** For the player who controls his Primary Objective."
+"**VICTORY:** For the player who controls his Primary Objective if his enemy does not. Otherwise it is a draw."
 ]
 },
 {
@@ -2308,11 +2297,11 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 ],
 "rows": [
 [
-"22nd Infantry Regiment (US)",
+"8th Infantry Regiment (US)",
 "16th Infantry Regiment"
 ],
 [
-"8th Infantry Regiment (US)",
+"22nd Infantry Regiment (US)",
 "18th Infantry Regiment"
 ],
 [
@@ -2321,11 +2310,11 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 ],
 [
 "I Battalion, Regiment 901 (German)",
-"II Battalion, Regiment 304"
+"I Battalion, Regiment 304"
 ],
 [
 "I Battalion, Regiment 902 (German)",
-"I Battalion, Regiment 304"
+"II Battalion, Regiment 304"
 ],
 [
 "Major Hans Gruber (German)",
@@ -2351,7 +2340,7 @@ window.HTS_SCEN_FULL["hon-bro"] = {
 },
 {
 "k": "p",
-"t": "When a scenario calls for an **Aviation card** to be played, the side concerned takes the **Thunderbolt** or **Focke-Wulf** Recruitment Tile and can assign it an Order Token. **He discards it at the end of the Turn.** Destroying the Aviation Unit does not prevent the owning side from reusing the Recruitment Tile if the scenario specifies it. If you don't have an Aviation Unit in your collection, do a Firing Action against any unit on the battlefield, except those placed in a building, using these Combat Values: +4, +3, +2."
+"t": "When a scenario calls for an **Aircraft card** to be played, the side concerned takes the **Thunderbolt** or **Focke-Wulf** Recruitment Tile and can assign it an Order Token. **He discards it at the end of the Turn.** Destroying the Aircraft Unit does not prevent the owning side from reusing the Recruitment Tile if the scenario specifies it. If you don't have an Aircraft Unit in your collection, do a Firing Action against any unit on the battlefield, except those placed in a building, using these Combat Values: +4, +3, +2."
 },
 {
 "k": "h3",

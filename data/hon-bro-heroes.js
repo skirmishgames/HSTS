@@ -1,6 +1,6 @@
 window.HTS_HEROES = {
 "title": "Heroes and equipment",
-"source": "Big Red One rulebook V4.1 page 31, Bloody Omaha rulebook V7.1 page 11, Battle for Caen booklet V1.4 page 9",
+"source": "Big Red One rulebook V4.3 page 31, Bloody Omaha rulebook V8.0 page 11, Battle for Caen booklet (final) page 9",
 "equipment": [
 {
 "id": "bazooka",
@@ -380,7 +380,7 @@ window.HTS_HEROES = {
 "facts": [
 [
 "Source",
-"Big Red One rulebook V4.1, page 30"
+"Big Red One rulebook V4.3, page 30"
 ]
 ],
 "links": [
@@ -413,7 +413,7 @@ window.HTS_HEROES = {
 "facts": [
 [
 "Source",
-"Big Red One rulebook V4.1, page 28"
+"Big Red One rulebook V4.3, page 28"
 ]
 ],
 "links": [
@@ -446,7 +446,7 @@ window.HTS_HEROES = {
 "facts": [
 [
 "Source",
-"Big Red One rulebook V4.1, pages 28 to 29"
+"Big Red One rulebook V4.3, pages 28 to 29"
 ]
 ],
 "links": [
@@ -473,7 +473,7 @@ window.HTS_HEROES = {
 "facts": [
 [
 "Source",
-"Big Red One rulebook V4.1, page 28"
+"Big Red One rulebook V4.3, page 28"
 ]
 ],
 "links": [
@@ -500,7 +500,7 @@ window.HTS_HEROES = {
 "facts": [
 [
 "Source",
-"Big Red One rulebook V4.1, page 29"
+"Big Red One rulebook V4.3, page 29"
 ]
 ],
 "links": [
@@ -527,7 +527,7 @@ window.HTS_HEROES = {
 "facts": [
 [
 "Source",
-"Big Red One rulebook V4.1, page 28"
+"Big Red One rulebook V4.3, page 28"
 ]
 ],
 "links": [
@@ -673,7 +673,7 @@ window.HTS_HEROES = {
 ],
 [
 "Source",
-"Battle for Caen booklet V1.4, page 9"
+"Battle for Caen booklet (final), page 9"
 ]
 ],
 "links": [

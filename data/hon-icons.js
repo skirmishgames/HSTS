@@ -2,7 +2,7 @@ window.HTS_ICONS = window.HTS_ICONS || {};
 HTS_ICONS["hon-bro"] = {
 "box": "bro",
 "name": "Big Red One",
-"source": "Rulebook V4.1, icon summary (p.36)",
+"source": "Rulebook V4.3, icon summary (p.36)",
 "groups": [
 "Terrain effects",
 "Changes of state",
@@ -635,7 +635,7 @@ HTS_ICONS["hon-bro"] = {
 HTS_ICONS["hon-omaha"] = {
 "box": "omaha",
 "name": "Bloody Omaha",
-"source": "Bloody Omaha rulebook V7.1, icon summary (p.24)",
+"source": "Bloody Omaha rulebook V8.0, icon summary (p.24)",
 "groups": [
 "Terrain effects",
 "Movement abilities",
@@ -898,7 +898,7 @@ HTS_ICONS["hon-omaha"] = {
 HTS_ICONS["hon-caen"] = {
  "box": "caen",
  "name": "Battle for Caen",
- "source": "Battle for Caen booklet V1.4, icon summary (p.28)",
+ "source": "Battle for Caen booklet (final), icon summary (p.28)",
  "groups": [
   "Terrain effects",
   "Changes of state",

@@ -3,7 +3,7 @@ window.HTS_SCEN["hon-bro"] = {
 "game": "hon",
 "box": "bro",
 "title": "Scenarios index",
-"source": "Scenario Booklet V2.4",
+"source": "Scenario Booklet V3.0",
 "types": [
 "Single scenarios",
 "Campaign",
@@ -25,7 +25,7 @@ window.HTS_SCEN["hon-bro"] = {
 ],
 [
 "Objectives",
-"Primary, secondary and tactical objectives, turn chart markers, creating armies and the breaking point."
+"Primary, secondary and tactical bonuses, turn chart markers, creating armies and the breaking point."
 ],
 [
 "Key rule",
@@ -264,7 +264,7 @@ null,
 ],
 [
 "Setup",
-"6 terrain boards. German initiative, 1 German primary objective, 3 tactical bonuses, 4 action cards each. The American deploys first, putting Lt. Blean in the house."
+"6 terrain boards. German initiative, 1 German primary objective, 2 tactical bonuses, 4 action cards each. The American deploys first, putting Lt. Blean in the house."
 ],
 [
 "Length",
@@ -700,7 +700,7 @@ null,
 ],
 [
 "How to win",
-"Control your primary objective. The game ends at the end of turn 8, or at the end of any Supply Phase if a player controls his primary objective."
+"Control your primary objective by the end of turn 8. The game ends at the end of turn 8, or at the end of any Supply Phase if only one player controls his primary objective. If both or neither do, it is a draw."
 ],
 [
 "Special rules",

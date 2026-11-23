@@ -154,7 +154,7 @@ HTS_RULES["hon-omaha"] = {
 "sec": "1.1",
 "sub": "Stress",
 "page": 4,
-"text": "This Terrain Element unsettles nearby units. Put a Suppressed Marker on any unit that either ends its Movement Action within a number of squares equal to the value printed in the icon, or has a clear Line of Sight to the element.\nAs long as the unit stays within range of the stressful element and has a LoS to it, it cannot discard Suppressed Markers.",
+"text": "This Terrain Element unsettles nearby units. Put a Suppressed Marker on any unit that either ends its Movement Action within a number of squares equal to the value printed in the icon, and has a clear Line of Sight to at least 1 stressful element.\nAs long as the unit stays within range of the stressful element and has a LoS to it, it cannot discard Suppressed Markers.",
 "term": null,
 "id": 3
 },
@@ -315,7 +315,7 @@ HTS_RULES["hon-omaha"] = {
 "sec": "2",
 "sub": null,
 "page": 6,
-"text": "There are two types of Landing Craft: large and small. They are placed at the beginning of the game, either on the Attacking side or as indicated by the scenario. The back of the counter must touch the edge of the terrain tile. The units can exit through one of the three squares in front of the Landing Crafts. The Landing Crafts thus become the deployment zone for the attacker.\nYou may deploy units into these squares at the beginning of the game or at the end of any Supply Phase, provided you follow the rules of the Transport Special Ability (here, Transport 7).\nA landing craft has a Transport capacity of 7\nCharacters as well as Infantry Units that have the symbol equal 1 point of Transport capacity.\nAll other Infantry Units equal 2 points.\nLight or Heavy Vehicles occupying 2 squares take up all 7 points of Transport capacity.\n1-square Light Vehicles equal 5 points.\nATTENTION: A vehicle can use its transport capacity\nwhile it is on board a landing craft.\nUnits that you deploy from a landing craft at the end of a Supply Phase must wait until the next turn to enter play, either during the Activation Phase by means of an Order Token or during the next Supply Phase.\nYou may not deploy new units onto a Landing Craft while there is still a unit on it.\nYou must always leave at least 1 Landing Craft empty.\nUnits inside Landing Craft cannot be targeted.\nA 2-square Landing Craft can take a Firing Action if it receives an Order Token.\nDestroying a Landing Craft:\nA Landing Craft can be Destroyed and is then removed from the battlefield. Units on the craft suffer no Hit, but must be redeployed to unoccupied adjacent squares or to squares previously occupied by the landing craft. This is a Forced Move, and the player who owns the units chooses on where to redeploy them. Put a Suppressed Marker on each redeployed unit. If there are no unoccupied squares, the unit drowns and is Destroyed.\nAt the beginning of a Supply Phase, the Attacking player can attempt to recover a Destroyed landing craft by rolling a die. If the result of the roll is equal to a number printed on one of the Destroyed Landing Craft, the player can put it back in play in any sea square, with the back of the craft touching the edge of the board.",
+"text": "There are two types of Landing Craft: large and small. They are placed at the beginning of the game, either on the Attacking side or as indicated by the scenario. The back of the counter must touch the edge of the terrain tile. The units can exit through one of the three squares in front of the Landing Crafts. The Landing Crafts thus become the deployment zone for the attacker.\nYou may deploy units into these squares at the beginning of the game or at the end of any Supply Phase, provided you follow the rules of the Transport Special Ability (here, Transport 7).\nA landing craft has a Transport capacity of 7\nCharacters as well as Infantry Units that have the symbol equal 1 point of Transport capacity.\nAll other Infantry Units equal 2 points.\nLight or Heavy Vehicles occupying 2 squares take up all 7 points of Transport capacity.\n1-square Light Vehicles equal 5 points.\nATTENTION: A vehicle can use its transport capacity\nwhile it is on board a landing craft.\nUnits that you deploy from a landing craft at the end of a Supply Phase must wait until the next turn to enter play, either during the Activation Phase by means of an Order Token or during the next Supply Phase.\nYou may not deploy new units onto a Landing Craft while there is still a unit on it.\nYou must always leave at least 1 Landing Craft empty.\nUnits inside Landing Craft cannot be targeted.\nA 2-square Landing Craft can take a Firing Action if it receives an Order Token.\nDestroying a Landing Craft:\nA Landing Craft can be Destroyed and is then removed from the battlefield. Units on the craft suffer no Hit, but must be redeployed to unoccupied adjacent squares or to squares previously occupied by the landing craft. This is a Forced Move, and the player who owns the units chooses where to redeploy them. Put a Suppressed Marker on each redeployed unit. If there are no unoccupied squares, the unit drowns and is Destroyed.\nAt the beginning of a Supply Phase, the Attacking player can attempt to recover a Destroyed landing craft by rolling a die. If the result of the roll is equal to a number printed on one of the Destroyed Landing Craft, the player can put it back in play in any sea square, with the back of the craft touching the edge of the board.",
 "term": null,
 "id": 16,
 "figs": [
@@ -369,7 +369,7 @@ HTS_RULES["hon-omaha"] = {
 "sec": "2",
 "sub": "Boom in the hay",
 "page": 7,
-"text": "If a Heavy Vehicle passes over a small haystack, discard it and reveal the Infantry Unit that was hidden there.\nIf a Heavy Vehicle end its Movement Action on a small haystack, discard it and reveal the Infantry Unit hidden there. Apply the Running Over Infantry rule described in the 3.2.1 - Movement Action Chapter of the rulebook p.10.",
+"text": "If a Heavy Vehicle passes over a small haystack, discard it and reveal the Infantry Unit that was hidden there.\nIf a Heavy Vehicle end its Movement Action on a small haystack, discard it and reveal the Infantry Unit hidden there. Apply the Running Over Infantry rule described in the 3.2.1 - Movement Action Chapter of the rulebook p.09.",
 "term": null,
 "id": 21
 },
@@ -425,7 +425,7 @@ HTS_RULES["hon-omaha"] = {
 "sec": "3.4",
 "sub": "NCO",
 "page": 8,
-"text": "This unit has an NCO among its members or is itself an NCO. As long as you have an NCO on the board, you always have at least one Order Token.\nWhen Activated, before Firing or Moving, an NCO may instantly remove 1 Suppressed Marker from a friendly unit within 3 squares and in clear LoS.",
+"text": "This unit has an NCO among its members or is itself an NCO. As long as you have an NCO on the board, you always have at least one Order Token.\nIf this unit receives an Order Token during the Order Phase it may immediately remove 1 Suppressed Marker from another unit within 3 squares but must have a clear LoS on that unit.",
 "term": null,
 "id": 28
 },
@@ -503,7 +503,7 @@ HTS_RULES["hon-omaha"] = {
 "sec": "4.2",
 "sub": "Explosive charges",
 "page": 10,
-"text": "Restricted to infantry - Engineer\nThis option gives you 3 explosive Charge markers. Only units with the Engineer Special Ability can use them..\nAt any point of its Movement Action, either during the Activation Phase or the Supply Phase, a unit may place a single marker on a target in its ZoC. You may use several units or have a unit act twice (for example, with the Heroic character trait) to place several markers. The target can be a structure or a non-infantry unit. If a mobile target moves, it takes the marker with it.\nThe explosion happens at the end of the Supply Phase and has no area of effect.\nIf more than one marker of any type is placed on the same target, total the Combat Values or and make a single roll. Destruction values\nUse the side Defense Value of a Heavy Vehicle. Once the explosion occurs, discard the marker(s).",
+"text": "Restricted to infantry - Engineer\nThis option gives you 3 explosive Charge markers. Only units with the Engineer Special Ability can use them..\nAt any point of its Movement Action, either during the Activation Phase or the Supply Phase, a unit may place a single marker on a target in its ZoC. You may use several units or have a unit act twice (for example, with the Heroic character trait) to place several markers. The target can be a structure or a non-infantry unit. If a mobile target moves, it takes the marker with it.\nThe explosion happens at the end of the Supply Phase and has no area of effect.\nIf more than one marker of any type is placed on the same target, total the Combat Values or Destruction values and make a single roll.\nUse the side Defense Value of a Heavy Vehicle. Once the explosion occurs, discard the marker(s).",
 "term": null,
 "id": 36
 },
@@ -566,7 +566,7 @@ HTS_RULES["hon-omaha"] = {
 "sec": "4.2",
 "sub": "Tank gear",
 "page": 10,
-"text": "Restricted to Heavy and Light vehicles\nThis option gives you 3 markers. You must select them at the beginning of the game from the Fuel and Additional Shielding markers that have the same colour stripes as the Tank Gear recruitment option. You may not take more than 2 identical markers.\nFuel: Each marker increases the Movement Value of a vehicle by 1 square.\nAdditional shielding: Each marker grants you a +1 Defensive Bonus.",
+"text": "Restricted to Heavy vehicles\nThis option gives you 3 markers. You must select them at the beginning of the game from the Fuel and Additional Shielding markers that have the same colour stripes as the Tank Gear recruitment option. You may not take more than 2 identical markers.\nFuel: Each marker increases the Movement Value of a vehicle by 1 square.\nAdditional shielding: Each marker grants you a +1 Defensive Bonus.",
 "term": null,
 "id": 43
 },
@@ -713,7 +713,7 @@ HTS_RULES["hon-omaha"] = {
 "sec": "5",
 "sub": "Other units taking a firing action",
 "page": 12,
-"text": "• Units without Anti-Aircraft Special Abilities can only target Aircraft Units with a Numbered, or Special Order Token placed on their Recruitment Tile.\n• Only units with the Machine Gunner and/or Anti-Aircraft Special Abilities can take a Firing Action against Aircraft Units.\n• A Heavy Vehicle cannot use its Primary Weapon (red outline) for a Firing Action against Aircraft Units, unless that Primary Weapon has the Anti-Aircraft Special Ability. Only if the vehicle has a Secondary Weapon Special (yellow outline) with the Machine Gunner Ability can the vehicle shoot at Aircraft Units.\nSpecial Ability, as • Units with the Limited Range well as Units with a Special Ability that makes use of, cannot fire at Aircraft Units. any Template\n• Units with a Limited Firing Arc cannot fire at Aircraft Units, unless these Units have the Anti-Aircraft Special Ability. In this case, the Limited Firing Arc is ignored.\n• All Units, not in Buildings, have a Clear Line of Sight to any Aircraft Units except those “in the clouds”.",
+"text": "• Units without Anti-Aircraft Special Abilities can only target Aircraft Units with a Numbered, or Special Order Token placed on their Recruitment Tile.\n• Only units with the Machine Gunner and/or Anti-Aircraft Special Abilities can take a Firing Action against Aircraft Units.\n• A Heavy Vehicle cannot use its Primary Weapon (red outline) for a Firing Action against Aircraft Units, unless that Primary Weapon has the Anti-Aircraft Special Ability. Only if the vehicle has a Secondary Weapon (yellow outline) with the Machine Gunner Special Ability can the vehicle shoot at Aircraft Units.\n• Units with the Limited Range Special Ability, as well as Units with a Special Ability that makes use of any Template, cannot fire at Aircraft Units.\n• Units with a Limited Firing Arc cannot fire at Aircraft Units, unless these Units have the Anti-Aircraft Special Ability. In this case, the Limited Firing Arc is ignored.\n• All Units, not in Buildings, have a Clear Line of Sight to any Aircraft Units except those “in the clouds”.",
 "term": null,
 "id": 57
 },
