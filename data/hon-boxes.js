@@ -41,7 +41,7 @@ window.HTS_BOXES = {
     {
      "id": "cards",
      "label": "Cards",
-     "href": "cards.html",
+     "href": "cards.html?b=bro",
      "count": "62 cards",
      "text": "The Battle Event card decks, both sides."
     },
@@ -49,7 +49,7 @@ window.HTS_BOXES = {
      "id": "tokens",
      "label": "Tokens",
      "href": "tokens.html?b=bro",
-     "count": "11 markers",
+     "count": "16 markers",
      "text": "The markers and what each one does."
     },
     {
@@ -84,7 +84,7 @@ window.HTS_BOXES = {
      "id": "guides",
      "label": "Guides",
      "href": "guides.html",
-     "count": "6 guides, 85 documents",
+     "count": "7 guides, 205 documents",
      "text": "Buying advice, strategy tips, the people behind the heroes, and the first edition documents."
     }
    ]
@@ -268,42 +268,42 @@ window.HTS_BOXES = {
    "sides": "Commonwealth and Germany",
    "when": "June and July 1944",
    "art": "img/boxes/caen.webp",
-   "blurb": "Commonwealth forces against the German defence of Caen, with campaign scenarios for operations Epsom, Charnwood and Goodwood. Battle Pack #3, Windsor & Jupiter, is an expansion for this box and is covered here too.",
+   "blurb": "Commonwealth forces against the German defence of Caen, with campaign scenarios for operations Epsom, Charnwood and Goodwood, the Safari bonus scenario and The Creel scenario sheet. Battle Pack #3, Windsor & Jupiter, is an expansion for this box and has its own page.",
    "links": [
     {
      "id": "rules",
      "label": "Rules",
      "href": "rules.html?b=caen",
-     "count": "53 rule entries",
+     "count": "54 rule entries",
      "text": "The rulebook split into searchable entries, with the pictures."
     },
     {
      "id": "scenarios",
      "label": "Scenarios",
      "href": "scenarios.html?b=caen",
-     "count": "7 scenarios",
+     "count": "8 scenarios",
      "text": "Every scenario as a web page with maps and recruitment pictures, plus the booklet PDF."
     },
     {
      "id": "units",
      "label": "Unit index",
      "href": "units.html?b=caen&n=uk",
-     "count": "26 tiles, 75 options",
+     "count": "17 tiles, 48 options",
      "text": "Every recruitment tile and option, with costs and the units on them."
     },
     {
      "id": "heroes",
      "label": "Heroes",
      "href": "heroes.html?b=caen-ecg",
-     "count": "6 hero tiles",
+     "count": "4 hero tiles",
      "text": "Hero tiles, what fits their slots, and the equipment cards."
     },
     {
      "id": "cards",
      "label": "Cards",
-     "href": null,
-     "count": "not archived yet",
-     "text": "The Battle Event cards for this box are not in the files yet."
+     "href": "cards.html?b=caen&s=cw",
+     "count": "32 cards",
+     "text": "The Commonwealth Battle Event deck and the Eileen Nearne special card."
     },
     {
      "id": "tokens",
@@ -340,39 +340,91 @@ window.HTS_BOXES = {
      "count": "",
      "text": "Build an army from the real tiles and options."
     }
-   ],
-   "expansion": {
-    "name": "Battle Pack #3: Windsor & Jupiter",
-    "text": "Operations Windsor and Jupiter, an expansion for Battle for Caen. Its units are in the unit index and the army builder with the box.",
-    "links": [
-     {
-      "label": "Heroes",
-      "href": "heroes.html?b=caen-wj",
-      "count": "2 hero tiles"
-     },
-     {
-      "label": "Maps",
-      "href": "maps.html?b=caen-wj",
-      "count": "17 pieces"
-     }
-    ]
-   }
+   ]
+  },
+  {
+   "id": "wj",
+   "name": "Windsor & Jupiter",
+   "full": "Battle for Caen: Windsor & Jupiter",
+   "kind": "Battle Pack #3",
+   "sides": "Commonwealth and Germany",
+   "when": "July 1944",
+   "art": "img/boxes/wj.webp",
+   "blurb": "Operations Windsor and Jupiter: the Canadian attack on Carpiquet airfield and the British push on Hill 112 and Maltot. An expansion for Battle for Caen, with new terrain, aircraft rules, two mini-campaigns, a bonus scenario, three scenario sheets and the German SS cards.",
+   "links": [
+    {
+     "id": "rules",
+     "label": "Rules",
+     "href": "rules.html?b=wj",
+     "count": "46 rule entries",
+     "text": "The booklet rules split into searchable entries, with the pictures."
+    },
+    {
+     "id": "scenarios",
+     "label": "Scenarios",
+     "href": "scenarios.html?b=wj",
+     "count": "8 scenarios",
+     "text": "Every scenario and scenario sheet as a web page with maps and recruitment pictures, plus the PDFs."
+    },
+    {
+     "id": "units",
+     "label": "Unit index",
+     "href": "units.html?b=caen&n=uk",
+     "count": "9 tiles, 27 options",
+     "text": "Its recruitment tiles and options are listed with Battle for Caen."
+    },
+    {
+     "id": "heroes",
+     "label": "Heroes",
+     "href": "heroes.html?b=caen-wj",
+     "count": "2 hero tiles",
+     "text": "Hero tiles, what fits their slots, and the equipment cards."
+    },
+    {
+     "id": "cards",
+     "label": "Cards",
+     "href": "cards.html?b=caen&s=ss",
+     "count": "4 cards",
+     "text": "The German SS cards a recruitment option adds to the deck."
+    },
+    {
+     "id": "maps",
+     "label": "Maps",
+     "href": "maps.html?b=caen-wj",
+     "count": "17 pieces",
+     "text": "Boards and terrain pieces, and a map maker."
+    },
+    {
+     "id": "history",
+     "label": "History",
+     "href": "history.html?b=caen",
+     "count": "51 entries, shared with Battle for Caen",
+     "text": "The real units, weapons and vehicles behind the game."
+    },
+    {
+     "id": "builder",
+     "label": "Army builder",
+     "href": "builder.html",
+     "count": "",
+     "text": "Build an army from the real tiles and options."
+    }
+   ]
   },
   {
    "id": "ws",
    "name": "War Stories",
-   "full": "War Stories #0 to #4",
+   "full": "War Stories #0 to #4 and Pulp Stories #1",
    "kind": "Scenario sheets",
    "sides": "United States, Commonwealth and Germany",
    "when": "June 1944 to April 1945",
    "art": "img/boxes/ws.webp",
-   "blurb": "Five single scenarios, each on one printed sheet: Hell's Fury, Blue and Grey at Moon-sur-Elle, Colombelles Castle, Juno Beach and The Black Baron. Each has its own rules, characters and new tiles, laid out here in full with the original PDF to download. They are played with the Big Red One rules and the battle packs the sheet names.",
+   "blurb": "Six single scenarios, each on its own printed sheet: Hell's Fury, Blue and Grey at Moon-sur-Elle, Colombelles Castle, Juno Beach, The Black Baron and the Halloween Pulp Stories #1, Pumpkin's Revenge. Each has its own rules, characters and new tiles, laid out here in full with the original PDF to download. They are played with the Big Red One rules and the battle packs the sheet names.",
    "links": [
     {
      "id": "scenarios",
      "label": "Scenarios",
      "href": "scenarios.html?b=ws",
-     "count": "5 scenarios",
+     "count": "6 scenarios",
      "text": "Every War Story as a web page with the map, armies, new tiles and the original sheet."
     },
     {
@@ -413,42 +465,42 @@ window.HTS_BOXES = {
      "id": "rules",
      "label": "Rules",
      "href": "guides.html?c=rules",
-     "count": "13 documents",
+     "count": "6 documents",
      "text": "First edition rules sheets, special abilities, mines, Commandos, errata (including the Big Red One errata) and the FAQ. The core rulebook itself is not in the files yet."
     },
     {
      "id": "scenarios",
      "label": "Scenarios",
      "href": "guides.html?c=scenarios",
-     "count": "13 scenario packs",
+     "count": "15 scenario packs",
      "text": "The Core Set scenario book, the D-Day, Carentan and Pegasus Bridge packs, mini campaigns and the unofficial rewrite, as pages you can read online with a PDF each."
     },
     {
      "id": "single",
      "label": "Single scenarios",
      "href": "guides.html?c=single",
-     "count": "21 scenarios",
+     "count": "63 scenarios",
      "text": "Web, Kickstarter and publisher scenarios, and the Scenario Contest Compilation (Winter 2015) split into its twelve entries."
     },
     {
      "id": "gazettes",
      "label": "Gazettes",
      "href": "guides.html?c=gazettes",
-     "count": "4 issues",
+     "count": "7 issues",
      "text": "The Devil Pig News: Gazettes 0, 6, 7 and 8 with their stories and scenarios."
     },
     {
      "id": "units",
      "label": "Unit index",
      "href": "guides.html?c=units",
-     "count": "15 unit references",
+     "count": "21 unit references",
      "text": "Unit bibles for every first edition box. They are pictures of the tiles, not the searchable unit index yet."
     },
     {
      "id": "guides",
      "label": "Guides",
      "href": "guides.html?g=v1-to-v2",
-     "count": "6 guides, 85 documents",
+     "count": "7 guides, 205 documents",
      "text": "How to play the old scenario packs with Big Red One platoons, a buying guide, strategy tips, and all the first edition documents."
     }
    ]

@@ -15,11 +15,12 @@ def tiles(sets, typ=None):
     return [t for n in nat.values() for t in n['tiles'] if t.get('set') in sets and (typ is None or t['type'] == typ)]
 def options(sets):
     return [o for n in nat.values() for o in n['options'] if o.get('set') in sets]
-rules = {b: L('data/hon-%s-rules.js' % b) for b in ('bro', 'omaha', 'caen')}
-scen = {b: L('data/hon-%s-scenarios.js' % b) for b in ('bro', 'omaha', 'caen', 'ws')}
+rules = {b: L('data/hon-%s-rules.js' % b) for b in ('bro', 'omaha', 'caen', 'wj')}
+scen = {b: L('data/hon-%s-scenarios.js' % b) for b in ('bro', 'omaha', 'caen', 'wj', 'ws')}
 toks = {b: L('data/hon-%s-tokens.js' % b) for b in ('bro', 'omaha', 'caen')}
 hist = {b: L('data/hon-%s-history.js' % b) for b in ('bro', 'caen')}
 cards = L('data/hon-bro-cards.js')
+cards_caen = L('data/hon-caen-cards.js')
 maps = {b['id']: b for b in json.loads(open('data/maps.js', encoding='utf-8').read().split('=', 1)[1].strip().rstrip(';'))['boxes']}
 icons = {}
 s = open('data/hon-icons.js', encoding='utf-8').read()
@@ -41,7 +42,9 @@ def links(b, sets, nation, heroes_box, maps_box, hist_box, extra=None):
     out.append({'id': 'units', 'label': 'Unit index', 'href': 'units.html?b=' + b + '&n=' + nation, 'count': '%d tiles, %d options' % (len(tiles(sets)), len(options(sets))), 'text': 'Every recruitment tile and option, with costs and the units on them.'})
     out.append({'id': 'heroes', 'label': 'Heroes', 'href': 'heroes.html?b=' + heroes_box, 'count': plural(len(tiles(sets, 'hero')), 'hero tile'), 'text': 'Hero tiles, what fits their slots, and the equipment cards.'})
     if b == 'bro':
-        out.append({'id': 'cards', 'label': 'Cards', 'href': 'cards.html', 'count': plural(len(cards['entries']), 'card'), 'text': 'The Battle Event card decks, both sides.'})
+        out.append({'id': 'cards', 'label': 'Cards', 'href': 'cards.html?b=bro', 'count': plural(len(cards['entries']), 'card'), 'text': 'The Battle Event card decks, both sides.'})
+    elif b == 'caen':
+        out.append({'id': 'cards', 'label': 'Cards', 'href': 'cards.html?b=caen&s=cw', 'count': plural(len([e for e in cards_caen['entries'] if e['nation'] == 'cw']), 'card'), 'text': 'The Commonwealth Battle Event deck and the Eileen Nearne special card.'})
     else:
         out.append({'id': 'cards', 'label': 'Cards', 'href': None, 'count': 'not archived yet', 'text': 'The Battle Event cards for this box are not in the files yet.'})
     out.append({'id': 'tokens', 'label': 'Tokens', 'href': 'tokens.html?b=' + b, 'count': plural(len(toks[b]['entries']), 'marker'), 'text': 'The markers and what each one does.'})
@@ -63,15 +66,24 @@ boxes = [
   'links': links('omaha', ['BO'], 'us', 'omaha', 'omaha', 'bro')},
  {'id': 'caen', 'name': 'Battle for Caen', 'full': 'Battle for Caen: Epsom, Charnwood & Goodwood', 'kind': 'Battle Pack #2', 'sides': 'Commonwealth and Germany', 'when': 'June and July 1944',
   'art': 'img/boxes/caen.webp',
-  'blurb': 'Commonwealth forces against the German defence of Caen, with campaign scenarios for operations Epsom, Charnwood and Goodwood. Battle Pack #3, Windsor & Jupiter, is an expansion for this box and is covered here too.',
-  'links': links('caen', ['ECG', 'BP3'], 'uk', 'caen-ecg', 'caen-ecg', 'caen'),
-  'expansion': {'name': 'Battle Pack #3: Windsor & Jupiter', 'text': 'Operations Windsor and Jupiter, an expansion for Battle for Caen. Its units are in the unit index and the army builder with the box.', 'links': [
-     {'label': 'Heroes', 'href': 'heroes.html?b=caen-wj', 'count': plural(len(tiles(['BP3'], 'hero')), 'hero tile')},
-     {'label': 'Maps', 'href': 'maps.html?b=caen-wj', 'count': plural(len(maps['caen-wj']['pieces']), 'piece')}]}},
+  'blurb': 'Commonwealth forces against the German defence of Caen, with campaign scenarios for operations Epsom, Charnwood and Goodwood, the Safari bonus scenario and The Creel scenario sheet. Battle Pack #3, Windsor & Jupiter, is an expansion for this box and has its own page.',
+  'links': links('caen', ['ECG'], 'uk', 'caen-ecg', 'caen-ecg', 'caen')},
+ {'id': 'wj', 'name': 'Windsor & Jupiter', 'full': 'Battle for Caen: Windsor & Jupiter', 'kind': 'Battle Pack #3', 'sides': 'Commonwealth and Germany', 'when': 'July 1944',
+  'art': 'img/boxes/wj.webp',
+  'blurb': 'Operations Windsor and Jupiter: the Canadian attack on Carpiquet airfield and the British push on Hill 112 and Maltot. An expansion for Battle for Caen, with new terrain, aircraft rules, two mini-campaigns, a bonus scenario, three scenario sheets and the German SS cards.',
+  'links': [
+    {'id': 'rules', 'label': 'Rules', 'href': 'rules.html?b=wj', 'count': plural(len(rules['wj']['chunks']), 'rule entry', 'rule entries'), 'text': 'The booklet rules split into searchable entries, with the pictures.'},
+    {'id': 'scenarios', 'label': 'Scenarios', 'href': 'scenarios.html?b=wj', 'count': plural(n_scen('wj'), 'scenario'), 'text': 'Every scenario and scenario sheet as a web page with maps and recruitment pictures, plus the PDFs.'},
+    {'id': 'units', 'label': 'Unit index', 'href': 'units.html?b=caen&n=uk', 'count': '%d tiles, %d options' % (len(tiles(['BP3'])), len(options(['BP3']))), 'text': 'Its recruitment tiles and options are listed with Battle for Caen.'},
+    {'id': 'heroes', 'label': 'Heroes', 'href': 'heroes.html?b=caen-wj', 'count': plural(len(tiles(['BP3'], 'hero')), 'hero tile'), 'text': 'Hero tiles, what fits their slots, and the equipment cards.'},
+    {'id': 'cards', 'label': 'Cards', 'href': 'cards.html?b=caen&s=ss', 'count': plural(len([e for e in cards_caen['entries'] if e['nation'] == 'ss']), 'card'), 'text': 'The German SS cards a recruitment option adds to the deck.'},
+    {'id': 'maps', 'label': 'Maps', 'href': 'maps.html?b=caen-wj', 'count': plural(len(maps['caen-wj']['pieces']), 'piece'), 'text': 'Boards and terrain pieces, and a map maker.'},
+    {'id': 'history', 'label': 'History', 'href': 'history.html?b=caen', 'count': plural(len(hist['caen']['entries']), 'entry', 'entries') + ', shared with Battle for Caen', 'text': 'The real units, weapons and vehicles behind the game.'},
+    {'id': 'builder', 'label': 'Army builder', 'href': 'builder.html', 'count': '', 'text': 'Build an army from the real tiles and options.'}]},
 ]
-boxes.append({'id': 'ws', 'name': 'War Stories', 'full': 'War Stories #0 to #4', 'kind': 'Scenario sheets', 'sides': 'United States, Commonwealth and Germany', 'when': 'June 1944 to April 1945',
+boxes.append({'id': 'ws', 'name': 'War Stories', 'full': 'War Stories #0 to #4 and Pulp Stories #1', 'kind': 'Scenario sheets', 'sides': 'United States, Commonwealth and Germany', 'when': 'June 1944 to April 1945',
   'art': 'img/boxes/ws.webp',
-  'blurb': 'Five single scenarios, each on one printed sheet: Hell\'s Fury, Blue and Grey at Moon-sur-Elle, Colombelles Castle, Juno Beach and The Black Baron. Each has its own rules, characters and new tiles, laid out here in full with the original PDF to download. They are played with the Big Red One rules and the battle packs the sheet names.',
+  'blurb': 'Six single scenarios, each on its own printed sheet: Hell\'s Fury, Blue and Grey at Moon-sur-Elle, Colombelles Castle, Juno Beach, The Black Baron and the Halloween Pulp Stories #1, Pumpkin\'s Revenge. Each has its own rules, characters and new tiles, laid out here in full with the original PDF to download. They are played with the Big Red One rules and the battle packs the sheet names.',
   'links': [
     {'id': 'scenarios', 'label': 'Scenarios', 'href': 'scenarios.html?b=ws', 'count': plural(len(scen['ws']['entries']), 'scenario'), 'text': 'Every War Story as a web page with the map, armies, new tiles and the original sheet.'},
     {'id': 'expansions', 'label': 'Product catalogue', 'href': 'expansions.html?l=hon2&q=War%20Stories', 'count': '5 gazettes', 'text': 'The War Stories entries in the product catalogue, with the Heroes of Stalingrad ones.'},
@@ -94,6 +106,15 @@ boxes[0]['links'].append({'id': 'guides', 'label': 'Guides', 'href': 'guides.htm
 for b in boxes:
     if b['id'] == 'hon1':
         b['links'].append({'id': 'guides', 'label': 'Guides', 'href': 'guides.html?g=v1-to-v2', 'count': plural(len(gd['guides']), 'guide') + ', ' + plural(len(lib['docs']), 'document'), 'text': 'How to play the old scenario packs with Big Red One platoons, a buying guide, strategy tips, and all the first edition documents.'})
+# boxes kept by hand in data/hon-boxes.js (Heroes of Stalingrad) stay where they were
+try:
+    old = json.loads(open('data/hon-boxes.js', encoding='utf-8').read().split('=', 1)[1].strip().rstrip(';'))['boxes']
+except (OSError, ValueError):
+    old = []
+made = {b['id'] for b in boxes}
+for i, b in enumerate(old):
+    if b['id'] not in made:
+        boxes.insert(min(i, len(boxes)), b)
 out = 'window.HTS_BOXES = ' + json.dumps({'boxes': boxes}, ensure_ascii=False, indent=1) + ';\n'
 if '--write' in sys.argv:
     open('data/hon-boxes.js', 'w', encoding='utf-8').write(out); print('wrote data/hon-boxes.js')
