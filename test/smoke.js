@@ -423,7 +423,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const m10 = JSON.parse(await tp.evaluate(() => JSON.stringify(window.HTS_DATA['hon-bro-us'].options.filter(o => o.id === 'm10_a1').map(o => [o.cost, o.size]))));
   ok(m10.length === 1 && m10[0][0] === 60, 'builder: M10 Tank Destroyer option (60) is in the US data');
   const air = JSON.parse(await tp.evaluate(() => JSON.stringify(['us', 'ge', 'uk'].map(n => window.HTS_DATA['hon-bro-' + n].tiles.filter(t => t.type === 'aircraft').map(t => t.cost)))));
-  ok(JSON.stringify(air) === '[[55,50],[60,40],[50,50]]', 'builder: aircraft costs ' + JSON.stringify(air));
+  ok(JSON.stringify(air) === '[[55,50],[60,40],[40,55]]', 'builder: aircraft costs ' + JSON.stringify(air));
   await tp.evaluate(() => { try { localStorage.removeItem('hts.hon.bro.v1'); } catch (e) {} });
 
   // Battle Pack #3 (Windsor & Jupiter) units
@@ -435,7 +435,11 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
 
   // Battle for Caen scenarios and armies
   await sp.goto(base + 'scenarios.html?b=caen'); await sp.waitForTimeout(300);
-  ok(await sp.locator('.hrow').count() === 8, 'caen scenarios: 8 entries');
+  ok(await sp.locator('.hrow').count() === 9, 'caen scenarios: 9 entries (The Creel sheet added)');
+  await sp.goto(base + 'scenarios.html?b=wj'); await sp.waitForTimeout(400);
+  ok(await sp.locator('.hrow').count() === 10, 'Windsor & Jupiter scenarios: 7 booklet entries and 3 sheets');
+  await sp.goto(base + 'rules.html?b=wj'); await sp.waitForTimeout(400);
+  ok((await sp.textContent('body')).includes('Windsor'), 'Windsor & Jupiter rules page loads');
   const cInfo = JSON.parse(await sp.evaluate(() => JSON.stringify(window.HTS_SCEN['hon-caen'].entries.filter(e => e.armies).map(e => [e.id, e.armies]))));
   ok(cInfo.length === 7, 'caen: seven scenarios carry armies');
   let cArmies = 0;
@@ -453,7 +457,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   }
   ok(cArmies === 16, 'caen: 16 armies loaded');
   const cImgs = JSON.parse(await sp.evaluate(() => JSON.stringify(window.HTS_SCEN['hon-caen'].entries.reduce((a, e) => a.concat((e.figs || []).map(f => f.img)), []))));
-  ok(cImgs.length === 7 && cImgs.every(f => fs.existsSync(path.join(root, f))), 'every caen scenario figure exists (' + cImgs.length + ')');
+  ok(cImgs.length >= 8 && cImgs.every(f => fs.existsSync(path.join(root, f))), 'every caen scenario figure exists (' + cImgs.length + ')');
 
   // expansions page
   const xp = await b.newPage({ viewport: { width: 1100, height: 900 } });
@@ -733,8 +737,8 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
   const wsp = await b.newPage({ viewport: { width: 1100, height: 900 } });
   const wserrs = []; wsp.on('pageerror', e => wserrs.push(e.message)); wsp.on('console', m => { if (m.type() === 'error') wserrs.push(m.text()); });
   await wsp.goto(base + 'scenarios.html?b=ws'); await wsp.waitForTimeout(400);
-  ok(await wsp.locator('.hrow').count() === 5, 'war stories: five scenarios listed');
-  for (const sid of ['hells-fury', 'blue-and-grey', 'colombelles-castle', 'juno-beach', 'black-baron']) {
+  ok(await wsp.locator('.hrow').count() === 6, 'war stories: six sheets listed (Pulp Stories #1 added)');
+  for (const sid of ['hells-fury', 'blue-and-grey', 'colombelles-castle', 'juno-beach', 'black-baron', 'pulp-stories-1']) {
     await wsp.goto(base + 'scenario.html?b=ws&s=' + sid); await wsp.waitForTimeout(500);
     const info = await wsp.evaluate(async () => {
       const imgs = Array.from(document.querySelectorAll('.sbody img'));
@@ -743,9 +747,9 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
       const dl = Array.from(document.querySelectorAll('.sdl a')).map(a => a.getAttribute('href'));
       return { h1: (document.querySelector('.stitle') || {}).textContent, n: document.querySelectorAll('.sbody h2').length, imgs: imgs.length, bad: imgs.filter(i => !i.naturalWidth).length, dl, gal: document.querySelectorAll('.sgal li').length, x: document.documentElement.scrollWidth > innerWidth + 1 };
     });
-    ok(/War Stories #/.test(info.h1) && info.n >= 6 && info.imgs >= 3 && info.bad === 0 && !info.x, 'war stories ' + sid + ': full page, ' + info.imgs + ' pictures load, no sideways scroll (' + info.bad + ' broken)');
+    ok(/(War|Pulp) Stories #/.test(info.h1) && info.n >= 6 && info.imgs >= 3 && info.bad === 0 && !info.x, 'war stories ' + sid + ': full page, ' + info.imgs + ' pictures load, no sideways scroll (' + info.bad + ' broken)');
     ok(info.dl.length === 1 && fs.existsSync(path.join(root, info.dl[0])), 'war stories ' + sid + ': PDF download exists ' + info.dl.join(','));
-    ok(sid === 'colombelles-castle' ? info.gal === 0 : info.gal >= 15, 'war stories ' + sid + ': tile gallery ' + info.gal);
+    ok(sid === 'colombelles-castle' || sid === 'pulp-stories-1' ? info.gal === 0 : info.gal >= 15, 'war stories ' + sid + ': tile gallery ' + info.gal);
   }
   await wsp.goto(base + 'scenario.html?b=ws&s=juno-beach'); await wsp.waitForTimeout(300);
   await wsp.locator('.sgalb').first().click(); await wsp.waitForTimeout(150);
@@ -1446,7 +1450,7 @@ function ok(c, m) { if (!c) { console.error('FAIL: ' + m); process.exitCode = 1;
     await fp.fill('#q', ''); await fp.waitForTimeout(300);
     // the box switch keeps what still applies and drops what does not
     await fp.click('[data-box="caen"]'); await fp.waitForTimeout(250);
-    ok(await fp.locator('#needsSel').inputValue() === 'CB' && /^[1-9]\d* of 8 entries/.test(await fp.locator('#stat').innerText()) && !/[?&]t=/.test(fp.url()), 'scenario filters: switching box drops a type chip the box lacks and keeps Needs CB where it applies');
+    ok(await fp.locator('#needsSel').inputValue() === 'CB' && /^[1-9]\d* of 9 entries/.test(await fp.locator('#stat').innerText()) && !/[?&]t=/.test(fp.url()), 'scenario filters: switching box drops a type chip the box lacks and keeps Needs CB where it applies');
     await go('?b=bro&n=ECG'); ok(await fp.locator('#needsSel').inputValue() === '' && await rows() === 12, 'scenario filters: a Needs product that this list does not offer is ignored');
     // My collection
     await fp.evaluate(() => { try { localStorage.setItem('hts.hon.own.v1', JSON.stringify({ own: { CB: true }, only: true })); } catch (e) {} });

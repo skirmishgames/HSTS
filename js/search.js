@@ -106,7 +106,7 @@
   var SRC = { us: ['hon-bro-us', 'hon-v1-us'], ge: ['hon-bro-ge', 'hon-hos-gs', 'hon-v1-ge'], uk: ['hon-bro-uk', 'hon-v1-uk'], fr: ['hon-v1-fr'], ru: ['hon-hos-ru'] };
   var TYPE_NAME = { platoon: 'Platoon', command: 'Command tile', hero: 'Hero', landing: 'Landing', aircraft: 'Aircraft', support: 'Support tile', special: 'Other' };
   var CAT_NAME = { support: 'Support', gear: 'Gear', trait: 'Trait', order: 'Order', customization: 'Customization' };
-  var BOXN = { bro: 'Big Red One', omaha: 'Bloody Omaha', caen: 'Battle for Caen', ws: 'War Stories', hos: 'Heroes of Stalingrad' };
+  var BOXN = { bro: 'Big Red One', omaha: 'Bloody Omaha', caen: 'Battle for Caen', wj: 'Windsor & Jupiter', ws: 'War Stories', hos: 'Heroes of Stalingrad' };
 
   function builderItems() {
     var out = [];
@@ -154,7 +154,7 @@
 
   function rulesItems() {
     var out = [];
-    ['bro', 'omaha', 'caen'].forEach(function (b) {
+    ['bro', 'omaha', 'caen', 'wj'].forEach(function (b) {
       var d = window.HTS_RULES && window.HTS_RULES['hon-' + b];
       if (!d) return;
       var secs = {};
@@ -292,8 +292,8 @@
   var LIBF = ['hon-library'];
   var GROUPS = [
     { id: 'builder', title: 'Army builder tiles and options', files: ['hon-bro-us', 'hon-bro-ge', 'hon-bro-uk', 'hon-hos-ru', 'hon-hos-gs', 'hon-v1-us', 'hon-v1-ge', 'hon-v1-uk', 'hon-v1-fr'], build: builderItems },
-    { id: 'scenarios', title: 'Scenarios', files: ['hon-bro-scenarios', 'hon-omaha-scenarios', 'hon-caen-scenarios', 'hon-ws-scenarios'].concat(LIBF), build: scenarioItems },
-    { id: 'rules', title: 'Rules', files: ['hon-bro-rules', 'hon-omaha-rules', 'hon-caen-rules'], build: rulesItems },
+    { id: 'scenarios', title: 'Scenarios', files: ['hon-bro-scenarios', 'hon-omaha-scenarios', 'hon-caen-scenarios', 'hon-wj-scenarios', 'hon-ws-scenarios'].concat(LIBF), build: scenarioItems },
+    { id: 'rules', title: 'Rules', files: ['hon-bro-rules', 'hon-omaha-rules', 'hon-caen-rules', 'hon-wj-rules'], build: rulesItems },
     { id: 'documents', title: 'Documents', files: ['hon-guides'].concat(LIBF), build: documentItems },
     { id: 'heroes', title: 'Heroes and equipment', files: ['hon-bro-us', 'hon-bro-ge', 'hon-bro-uk', 'hon-hos-ru', 'hon-hos-gs', 'hon-bro-heroes'], build: heroItems },
     { id: 'tokens', title: 'Tokens', files: ['hon-bro-tokens', 'hon-omaha-tokens', 'hon-caen-tokens', 'hon-hos-tokens'], build: tokenItems },

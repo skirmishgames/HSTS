@@ -950,7 +950,7 @@ HTS_DATA["hon-bro-uk"] = {
    "id": "spitfire",
    "name": "Spitfire",
    "sub": "Mk IX",
-   "cost": 50,
+   "cost": 40,
    "type": "aircraft",
    "set": "ECG",
    "squares": 0,
@@ -970,13 +970,13 @@ HTS_DATA["hon-bro-uk"] = {
    },
    "slots": [],
    "own": [],
-   "note": "Aircraft tile. Recruited with an Aircraft Orders option, and its cost is the cost printed on the tile."
+   "note": "Aircraft tile. Recruited with an Aircraft Orders option. The cost is the one in the final Battle Pack 2 booklet; the tile picture is from the earlier print and shows 50 and older combat values."
   },
   {
    "id": "hawker_typhoon",
    "name": "Hawker Typhoon",
    "sub": "Mk IB",
-   "cost": 50,
+   "cost": 55,
    "type": "aircraft",
    "set": "ECG",
    "squares": 0,
@@ -996,7 +996,7 @@ HTS_DATA["hon-bro-uk"] = {
    },
    "slots": [],
    "own": [],
-   "note": "Aircraft tile. Recruited with an Aircraft Orders option, and its cost is the cost printed on the tile."
+   "note": "Aircraft tile. Recruited with an Aircraft Orders option. The cost is the one in the final Battle Pack 2 booklet; the tile picture is from the earlier print and shows 50 and older combat values."
   },
   {
    "id": "support_tile",

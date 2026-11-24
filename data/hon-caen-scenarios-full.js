@@ -1178,7 +1178,14 @@ HTS_SCEN_FULL["hon-caen"] = {
    ]
   },
   "creel": {
-   "pdfs": [],
+   "pdfs": [
+    {
+     "label": "Download The Creel sheet (PDF)",
+     "href": "pdf/hon-caen-the-creel.pdf",
+     "size": "0.9 MB",
+     "note": "Both sides of the sheet, from the designers' file."
+    }
+   ],
    "blocks": [
     {
      "k": "facts",

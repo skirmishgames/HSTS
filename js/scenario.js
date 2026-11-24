@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var LSK = 'hts.hon.bro.v1';
-  var BOXN = { bro: 'Big Red One', omaha: 'Bloody Omaha', caen: 'Battle for Caen', ws: 'War Stories' };
+  var BOXN = { bro: 'Big Red One', omaha: 'Bloody Omaha', caen: 'Battle for Caen', wj: 'Battle for Caen: Windsor & Jupiter', ws: 'War Stories' };
   var S = { b: 'bro', s: '', theme: 'light' };
 
   function $(id) { return document.getElementById(id); }
@@ -69,7 +69,7 @@
     if (!e) {
       var list = d.entries.map(function (x) {
         var has = (window.HTS_SCEN_FULL['hon-' + S.b] || { entries: {} }).entries[x.id];
-        return '<li><a href="scenario.html?b=' + S.b + '&amp;s=' + x.id + '">' + esc(x.title) + '</a> <span class="hsnip">' + (S.b === 'ws' ? 'sheet' : 'p.' + esc(x.pages.replace(' to ', '-'))) + (has ? '' : ', not yet laid out') + '</span></li>';
+        return '<li><a href="scenario.html?b=' + S.b + '&amp;s=' + x.id + '">' + esc(x.title) + '</a> <span class="hsnip">' + (S.b === 'ws' || x.sheet ? 'sheet' : 'p.' + esc(x.pages.replace(' to ', '-'))) + (has ? '' : ', not yet laid out') + '</span></li>';
       }).join('');
       out.innerHTML = '<h1 class="stitle">Scenario reader, ' + esc(BOXN[S.b]) + '</h1><ul class="slist">' + list + '</ul>';
       document.title = 'Heroes System Tactical Scale scenario reader';
@@ -81,7 +81,7 @@
     $('srcnote').textContent = f && f.book.sheets ? 'Text and pictures come from the original War Stories sheet, which you can also download as a PDF below.' : 'Text and pictures come from the ' + (f ? f.book.title + ' ' + f.book.version : 'original book') + ', pages ' + e.pages.replace(' to ', ' to ') + '.';
     var h = '<nav class="scrumb" aria-label="Breadcrumb"><a href="scenarios.html?b=' + S.b + '&amp;e=' + e.id + '">All ' + esc(BOXN[S.b]) + ' scenarios</a></nav>';
     h += '<h1 class="stitle">' + esc(e.title) + '</h1>';
-    h += '<p class="smeta">' + [e.type === 'Single scenarios' || e.type === 'Bonus scenario' ? 'Scenario' : /^Campaign/.test(e.type) ? 'Campaign scenario' : 'Rules', e.date, (S.b === 'ws' ? 'Original sheet, PDF' : 'Booklet p.' + e.pages.replace(' to ', '-'))].filter(Boolean).map(esc).join(' &middot; ') + '</p>';
+    h += '<p class="smeta">' + [e.type === 'Single scenarios' || e.type === 'Bonus scenario' ? 'Scenario' : /^Campaign/.test(e.type) ? 'Campaign scenario' : 'Rules', e.date, (S.b === 'ws' || e.sheet ? 'Original sheet, PDF' : 'Booklet p.' + e.pages.replace(' to ', '-'))].filter(Boolean).map(esc).join(' &middot; ') + '</p>';
     if (!fe) {
       h += '<p class="htext">The full text of this entry is not laid out yet. Here is the summary.</p><p class="htext">' + esc(e.summary) + '</p><dl class="sfacts">' + e.facts.map(function (x) { return '<dt>' + esc(x[0]) + '</dt><dd>' + esc(x[1]) + '</dd>'; }).join('') + '</dl>' + armies(e);
     } else {

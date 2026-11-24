@@ -3,7 +3,7 @@ HTS_SCEN["hon-ws"] = {
  "game": "hon",
  "box": "ws",
  "title": "Scenarios",
- "source": "War Stories sheets",
+ "source": "War Stories and Pulp Stories sheets",
  "types": [
   "Single scenarios"
  ],
@@ -110,10 +110,10 @@ HTS_SCEN["hon-ws"] = {
    "id": "colombelles-castle",
    "title": "War Stories #2: Colombelles Castle",
    "type": "Single scenarios",
-   "pages": "1",
+   "pages": "2",
    "start": 3,
    "date": "July 1944",
-   "summary": "Canadian infantry and tanks must take the castle of Colombelles, held by Luftwaffe field troops and the 21. Panzer Division. The sheet also carries a short portrait of Eugène Aubin.",
+   "summary": "Canadian infantry and tanks must take the castle of Colombelles, held by Luftwaffe field troops and the 21. Panzer Division. The sheet also carries a short portrait of Eugène Aubin and a Mortar Carrier rule.",
    "facts": [
     [
      "Front",
@@ -121,7 +121,7 @@ HTS_SCEN["hon-ws"] = {
     ],
     [
      "Armies",
-     "Canadian (CW) / German"
+     "CW / German (Canadian and German)"
     ],
     [
      "Date",
@@ -129,7 +129,7 @@ HTS_SCEN["hon-ws"] = {
     ],
     [
      "Players",
-     "1 to 2. Solo mode: the AI may play both sides."
+     "1 to 2. Solo mode: the AI may play either side."
     ],
     [
      "Armies",
@@ -137,7 +137,7 @@ HTS_SCEN["hon-ws"] = {
     ],
     [
      "Setup",
-     "6 boards: C3-A, C4-A and C2-A on top, C0-A, C1-A and C5-A below. The castle sits in the middle. Canadian initiative, 1 primary objective, 3 tactical bonuses, 4 action cards each. The Germans deploy first in their zone; the Canadians enter through the arrow squares."
+     "6 boards: C3-A, C4-A and C2-A on top, C6-A, C1-A and C5-A below. The castle sits in the middle. Canadian initiative, 1 primary objective, 3 tactical bonuses, 4 action cards each. The Germans deploy first in their zone; the Canadians enter through the arrow squares."
     ],
     [
      "Length",
@@ -145,7 +145,7 @@ HTS_SCEN["hon-ws"] = {
     ],
     [
      "Special rules",
-     "The Tower has 2 levels (ground floor and roof) and follows the Chimney rules from Battle Pack #2 (p.06). Line of sight from the roof is measured from the red point in the middle of the ground floor, and ignores the walls of the Tower."
+     "The Tower has 2 levels (ground floor and roof) and follows the Chimney rules from Battle Pack #2 (p.06). Line of sight from the roof is traced from the Red Dot in the middle of the ground floor, and ignores the walls of the Tower. Mortar Carrier: units with Indirect Fire in the Mortar Carrier's ZoC use their Indirect Fire Combat Values instead."
     ],
     [
      "How to win",
@@ -157,10 +157,10 @@ HTS_SCEN["hon-ws"] = {
    "id": "juno-beach",
    "title": "War Stories #3: Juno Beach",
    "type": "Single scenarios",
-   "pages": "1",
+   "pages": "4",
    "start": 4,
    "date": "June 6, 1944",
-   "summary": "The Canadians land on the beach under fire and need heavy support. Landing Craft Tanks, Kangaroos and Royal Canadian Engineers push inland against the 352. Infanterie-Division.",
+   "summary": "The Canadians land on the beach under fire and need heavy support. Landing Craft Tanks, Churchill AVREs and Royal Canadian Engineers push inland against the 352. Infanterie-Division, with air support on call.",
    "facts": [
     [
      "Front",
@@ -168,7 +168,7 @@ HTS_SCEN["hon-ws"] = {
     ],
     [
      "Armies",
-     "Canadian (CW) / German"
+     "CW / German (Canadian and German)"
     ],
     [
      "Date",
@@ -176,27 +176,27 @@ HTS_SCEN["hon-ws"] = {
     ],
     [
      "Players",
-     "1 to 2. Solo mode: the AI may play both sides."
+     "1 to 2. Solo mode: the AI may play either side."
     ],
     [
      "Armies",
-     "3rd Canadian Infantry Division, 960 points, against 352. Infanterie-Division, 555 points."
+     "3rd Canadian Infantry Division, 965 points, against 352. Infanterie-Division, 675 points."
     ],
     [
      "Setup",
-     "9 boards in a 3 by 3 block: OB6-A, OB5-A and OB4-A (the beach), OB2-A, OB3-A and OB1-A (the bluffs), EC6-B, EC4-B and EC5-B (the town), with narrow strips between the columns. The Canadians land on the left edge in landing craft. The Germans deploy first in zones 1 and 2."
+     "9 boards in a 3 by 3 block: OB6-A, OB5-A and OB4-A (the beach), OB2-A, OB3-A and OB1-A (the bluffs), EC6-B, EC4-B and EC5-B (the town), with narrow strips between the columns. 1 CW primary objective, 2 CW secondary objectives, 2 tactical bonuses, 2 of the 8 Mine Field markers drawn at random and placed unseen, 4 action cards each. The Canadians land on the left edge in landing craft. The Germans deploy first in zones 1 and 2."
     ],
     [
      "Length",
-     "4 to 8 turns, ended by the END markers on the turn track"
+     "4, 6 or 8 turns: the END marker starts on turn 4 and moves down two spaces each time the Canadians capture a secondary objective."
     ],
     [
      "Special rules",
-     "Minesweeper and Heavy Transport abilities, Engineer Gear, Gammon Grenade, Hawkins Mine and Mechanics options, and the Precision rule for markers. The tokens for Miles Dempsey and Dietrich Kraiss do not take part."
+     "Minesweeper and Heavy Transport abilities, Engineer Gear, Gammon Grenade, Hawkins Mine and Mechanics options, and the Precision rule. Heavy Vehicles cannot be deployed via Landing Crafts. The tokens for Miles Dempsey and Dietrich Kraiss do not take part."
     ],
     [
      "How to win",
-     "The Canadian player captures the primary objective. Each secondary objective he holds moves a marker along the arrow trail and places a tactical bonus. The game ends at the end of the turn shown by the marker or at the end of any Supply Phase if the Canadians control the main objective."
+     "The Canadian player must control the primary objective at the end of the game. The game ends at the end of the turn shown by the END marker or at the end of any Supply Phase if the Canadians control it. Otherwise the Germans win."
     ]
    ]
   },
@@ -248,6 +248,53 @@ HTS_SCEN["hon-ws"] = {
     [
      "How to win",
      "Score the most victory points by destroying the opposing units (see Breaking Point, p.05 of the Scenario Booklet, Big Red One Edition). The player with more points at the end of the game wins."
+    ]
+   ]
+  },
+  {
+   "id": "pulp-stories-1",
+   "title": "Pulp Stories #1: Pumpkin's Revenge",
+   "type": "Single scenarios",
+   "pages": "2",
+   "start": 6,
+   "date": "Halloween 1944",
+   "summary": "A haunted Stuart tank and its pumpkin-headed soldiers return for Halloween. German chaplain Father Leonhard must carry the Chalice to the sanctified chapel of Saint Gothard, near Cologne, and perform an exorcism before the end of turn 6.",
+   "facts": [
+    [
+     "Front",
+     "Germany"
+    ],
+    [
+     "Armies",
+     "US / German"
+    ],
+    [
+     "Date",
+     "Halloween 1944"
+    ],
+    [
+     "Players",
+     "The sheet does not print a player count. Solo mode: the AI cannot play the German side. It considers the unit carrying the Chalice as a priority target."
+    ],
+    [
+     "Armies",
+     "Pumpkins, 335 points, against 2. Panzer-Division, 300 points."
+    ],
+    [
+     "Setup",
+     "6 boards, 3 wide: C2-B, C5-B and C4-B on top, C6-B, C1-A and C3-A below, with the building tile C-01. German initiative, 1 German primary objective, 2 tactical bonuses, 4 action cards each. The American player deploys first on the right edge, then the German player on the left edge. The Chalice marker starts on the chaplain or on either one of the Ahnenerbe agents."
+    ],
+    [
+     "Length",
+     "6 turns"
+    ],
+    [
+     "Special rules",
+     "Aggressive, Seeding (Seed counters), Monolithic, Unshakable, Support, Life Points, and Rugby (a unit carrying the Chalice may pass it to an adjacent unit at the end of its Movement Action). The Chalice is a light object."
+    ],
+    [
+     "How to win",
+     "The German player must activate, in the Order Phase or Supply Phase, a unit that carries the Chalice and stands on the primary objective square at the start of its activation. The game ends as soon as this happens. If it does not happen before the end of turn 6, the Americans win. A German win that also destroys the Pumpkin Tank is a major German victory."
     ]
    ]
   }

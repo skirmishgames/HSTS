@@ -212,9 +212,10 @@ HTS_SCEN["hon-caen"] = {
        []
       ]
      ],
-     "pts": 475,
+     "pts": 465,
      "sub": "43rd Infantry Division",
-     "label": "Commonwealth army"
+     "label": "Commonwealth army",
+     "note": "The final booklet still prints 475, but with the Spitfire at its new cost of 40 the army it shows comes to 465."
     },
     "ge": {
      "side": "ge",
@@ -305,7 +306,7 @@ HTS_SCEN["hon-caen"] = {
    "armies": {
     "uk": {
      "side": "uk",
-     "limit": 505,
+     "limit": 500,
      "printed": 500,
      "tiles": [
       [
@@ -338,7 +339,7 @@ HTS_SCEN["hon-caen"] = {
        []
       ]
      ],
-     "pts": 470,
+     "pts": 465,
      "sub": "3rd Canadian Infantry Division",
      "note": "Not in the builder: Lowe's Overwatch (10 points, no UK version of it exists yet) and an extra unit card beside the Field Command tile. That card shows no cost. The final booklet prints 500 points (V1.4 printed 505), so 30 points are needed to reach it and the card may be a Universal Carrier. Check it against the booklet.",
      "label": "Commonwealth army"
@@ -546,7 +547,7 @@ HTS_SCEN["hon-caen"] = {
    "armies": {
     "uk": {
      "side": "uk",
-     "limit": 685,
+     "limit": 690,
      "printed": 690,
      "tiles": [
       [
@@ -586,7 +587,7 @@ HTS_SCEN["hon-caen"] = {
        []
       ]
      ],
-     "pts": 675,
+     "pts": 680,
      "sub": "3rd Infantry Division and 11th Armoured Division",
      "note": "Not in the builder: the Initiative Orders option (10 points) that joins the army at the start of turn 5. Every slot on the High Command tile is already used. It brings the total to 685. The final booklet prints 690 (V1.4 printed 685), so 5 points are unaccounted for. Check the army against the booklet.",
      "label": "Commonwealth army"
@@ -687,7 +688,7 @@ HTS_SCEN["hon-caen"] = {
    "armies": {
     "uk": {
      "side": "uk",
-     "limit": 545,
+     "limit": 535,
      "printed": 535,
      "tiles": [
       [
@@ -724,9 +725,9 @@ HTS_SCEN["hon-caen"] = {
        []
       ]
      ],
-     "pts": 545,
+     "pts": 535,
      "sub": "3rd Canadian Infantry Division",
-     "note": "The 60-point Royal Winnipeg Rifles card is read as Howitzer Support. The builder total is 545, 10 above the 535 printed in the final booklet (V1.4 printed 545). Check the army against the booklet.",
+     "note": "The 60-point Royal Winnipeg Rifles card is read as Howitzer Support. The total matches the 535 printed in the final booklet, where the Spitfire costs 40 (it was 50 in V1.4, which printed 545). Check the army against the booklet.",
      "label": "Commonwealth army"
     },
     "ge": {
@@ -917,6 +918,62 @@ HTS_SCEN["hon-caen"] = {
      "w": 1100,
      "h": 631,
      "cap": "Battlefield and deployment, booklet p.14"
+    }
+   ]
+  },
+  {
+   "id": "creel",
+   "title": "The Creel (single scenario)",
+   "type": "Bonus scenario",
+   "pages": "1 to 2",
+   "start": 15,
+   "sheet": true,
+   "date": "July 1944",
+   "summary": "Solo scenario sheet outside the campaign. The Worcestershire Regiment must dislodge the 12. SS-Panzer-Division from a ruined factory in the suburbs of Caen, where the rubble hinders the attackers and covers the defenders. Needs Battle Pack #2.",
+   "facts": [
+    [
+     "Front",
+     "Normandy, suburbs of Caen"
+    ],
+    [
+     "Players",
+     "1. Solo mode: the AI can play either side. You choose the faction the AI plays and keep the initiative every turn."
+    ],
+    [
+     "Armies",
+     "Commonwealth, 43rd Infantry Division, 425 points, against 12. SS-Panzer-Division, 370 points."
+    ],
+    [
+     "Required products",
+     "Battle Pack #2 Epsom, Charnwood, Goodwood"
+    ],
+    [
+     "Setup",
+     "4 boards: EC6-A and EC1-A on top, EC5-A and EC4-A below, with a street strip between the two columns, and the Chimney. 1 Commonwealth primary objective, 2 German secondary objectives, 4 solo mode tactical bonuses, 4 action cards. The sheet gives the full solo mode set up for both factions."
+    ],
+    [
+     "Length",
+     "7 turns"
+    ],
+    [
+     "Special rules",
+     "None beyond the standard rules and the solo mode. The AI attitude is Aggressive if it plays the CW and Defensive if it plays the Germans (Balanced is also allowed). A die roll in the Order Phase of turns 3 and 5 gives the AI a Danger tile effect."
+    ],
+    [
+     "How to win",
+     "The Commonwealth controls its primary objective at the end of turn 7. The Germans win by controlling both secondary objectives at the end of any Supply Phase. If neither side has done it at the end of turn 7, the game is a draw."
+    ],
+    [
+     "Campaign",
+     "Single scenario, outside the six campaign scenarios."
+    ]
+   ],
+   "figs": [
+    {
+     "img": "img/hon/caen/scenfig/creel-map.webp",
+     "w": 1120,
+     "h": 803,
+     "cap": "Battlefield and deployment, sheet page 1"
     }
    ]
   },
